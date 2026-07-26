@@ -1,25 +1,25 @@
-# Contributing to OGDIL
+# OGDIL 贡献指南
 
-Thank you for your interest in contributing to the **Online Gaming Decision Intelligence Lab**.
+感谢你对**在线游戏决策智能实验室（Online Gaming Decision Intelligence Lab）**的关注与贡献意愿。
 
-## How to Contribute
+## 如何贡献
 
-1. Fork the repository
-2. Create a feature branch (`feature/your-feature-name`)
-3. Follow the Development Standards
-4. Write tests where applicable
-5. Submit a Pull Request to `develop`
+1. Fork 本仓库
+2. 创建功能分支（`feature/你的功能名称`）
+3. 遵循开发规范
+4. 在适用的情况下编写测试
+5. 向 `develop` 分支提交 Pull Request
 
-## Code of Conduct
+## 行为准则
 
-- Be respectful and constructive
-- Prioritize reproducibility and scientific rigor
-- Document your work clearly
+- 保持尊重与建设性
+- 优先保证可复现性与科学严谨性
+- 清晰地记录你的工作
 
-## Development Setup
+## 开发环境设置
 
-See `docs/01_Project/Development_Standards.md` and `ROADMAP.md`.
+参见 `docs/01_Project/Development_Standards.md` 与 `ROADMAP.md`。
 
-## Questions
+## 提问
 
-Open an Issue with the `question` label.
+请开一个带有 `question` 标签的 Issue。

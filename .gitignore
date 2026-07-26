@@ -20,7 +20,10 @@ venv/
 .mypy_cache/
 .ruff_cache/
 
-# Data & Models (large files)
+# 数据与模型（大文件）
+# 如需将特定 CSV 纳入版本控制（例如数据字典），须使用 git add -f 并按照
+# docs/04_Metadata_Governance/DATA_CLASSIFICATION_STANDARD.md 的要求完成
+# 分类判定与脱敏后，在 PR 描述中说明理由。
 *.csv
 *.xlsx
 *.rds
@@ -42,7 +45,7 @@ models/*.pkl
 *.swo
 .DS_Store
 
-# Logs & Temp
+# 日志与临时文件
 *.log
 tmp/
 temp/
@@ -51,7 +54,7 @@ temp/
 # Docker
 docker-compose.override.yml
 
-# Secrets
+# 密钥与凭据
 .env
 *.pem
 secrets/

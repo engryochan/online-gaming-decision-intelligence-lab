@@ -1,100 +1,100 @@
-# OGDIL Charter
-**Online Gaming Decision Intelligence Lab**
+# OGDIL 章程
+**在线游戏决策智能实验室**
 
-Version: 0.1.0  
-Date: 2026-07-26  
-Status: Active
+版本：0.1.0
+日期：2026-07-26
+状态：生效中
 
 ---
 
-## 1. Mission
+## 1. 使命
 
 建立一个以**统计科学、人工智能、因果推断、决策智能**为核心的开放式研究实验室，开发可验证、可部署、可持续迭代的数据科学方法与平台，服务在线游戏平台，并可迁移至电商、金融科技、SaaS 等领域的决策支持。
 
-## 2. Vision
+## 2. 愿景
 
-**五年目标**：建立世界级 **Online Decision Intelligence Research Platform**。
+**五年目标**：建立世界级**在线决策智能研究平台**。
 
 核心能力包括：
 
-- **Customer360**：完整会员画像与生命周期
-- **Decision Intelligence**：可落地的决策支持系统
-- **Bayesian AI**：贝叶斯统计与不确定性量化
-- **Causal AI**：因果推断与干预效果评估
-- **Survival AI**：生存分析与流失预测
-- **Experiment Platform**：科学实验注册与管理系统
-- **Knowledge Graph**：实体关系与知识推理
+- **客户360（Customer360）**：完整会员画像与生命周期
+- **决策智能（Decision Intelligence）**：可落地的决策支持系统
+- **贝叶斯智能（Bayesian AI）**：贝叶斯统计与不确定性量化
+- **因果智能（Causal AI）**：因果推断与干预效果评估
+- **生存智能（Survival AI）**：生存分析与流失预测
+- **实验平台（Experiment Platform）**：科学实验注册与管理系统
+- **知识图谱（Knowledge Graph）**：实体关系与知识推理
 
-## 3. Scientific Principles
+## 3. 科学原则
 
 所有研究与工程必须严格遵循：
 
-| Principle | Description |
+| 原则 | 说明 |
 |-----------|-------------|
-| **Reproducible** | 任何结果必须可被他人完整复现 |
-| **Explainable** | 模型与决策过程必须可解释 |
-| **Testable** | 代码与假设必须可测试 |
-| **Deployable** | 研究成果必须能部署到生产环境 |
-| **Scalable** | 架构与方法必须支持规模扩展 |
+| **可复现** | 任何结果必须可被他人完整复现 |
+| **可解释** | 模型与决策过程必须可解释 |
+| **可测试** | 代码与假设必须可测试 |
+| **可部署** | 研究成果必须能部署到生产环境 |
+| **可扩展** | 架构与方法必须支持规模扩展 |
 
-## 4. Data Architecture Principle
+## 4. 数据架构原则
 
-**ODS is the Truth Layer.**
+**ODS 是真相层。**
 
 ```
-Source → ODS (Truth) → DWD → DWS → ADS → Applications
+源系统 → ODS（真相层） → DWD → DWS → ADS → 应用层
 ```
 
 - 所有分析、AI、Dashboard、Positron **只允许读取 ADS**
 - 禁止直接查询原始业务表（如 `bet01`）
-- 每张 ADS 表必须有完整 Data Contract
+- 每张 ADS 表必须有完整数据契约（Data Contract）
 
-## 5. Research Workflow
+## 5. 研究流程
 
 每一个科学实验必须遵循：
 
 ```
-Experiment ID
+实验编号
     ↓
-Question
+问题
     ↓
-Hypothesis
+假设
     ↓
-SQL / Data Extraction
+SQL / 数据抽取
     ↓
-EDA
+探索性数据分析（EDA）
     ↓
-Statistics
+统计分析
     ↓
-Machine Learning
+机器学习
     ↓
-Bayesian / Causal Analysis
+贝叶斯 / 因果分析
     ↓
-Validation
+验证
     ↓
-Conclusion
+结论
     ↓
-Deployment
+部署
 ```
 
-## 6. Governance
+## 6. 治理
 
-- 使用 Semantic Versioning
-- 采用 GitHub 企业级分支策略（main / develop / feature/*）
-- 强制 Code Review
+- 使用语义化版本（Semantic Versioning）
+- 采用企业级 Git 分支策略（main / develop / feature/*）
+- 强制代码评审（Code Review）
 - 强制文档与测试覆盖
 
-## 7. Scope
+## 7. 范围
 
-**In Scope**：
+**范围内**：
 - 在线游戏决策智能
 - 可迁移至电商、金融科技、SaaS 的方法
 
-**Out of Scope**（初期）：
+**范围外**（初期）：
 - 纯前端产品开发
 - 非数据驱动的运营工具
 
 ---
 
-**This Charter is the foundational document of OGDIL.**  
-All contributors must adhere to its principles.
+**本章程是 OGDIL 的基础文件。**
+所有贡献者都必须遵守其中的原则。

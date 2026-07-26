@@ -1,6 +1,4 @@
-# Online Gaming Decision Intelligence Lab (OGDIL)
-
-**World-class Online Decision Intelligence Research Platform**
+# OGDIL —— 在线游戏决策智能实验室
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-green.svg)]()
@@ -8,33 +6,33 @@
 
 ---
 
-## Mission
+## 使命
 
 建立一个以**统计科学、人工智能、因果推断、决策智能**为核心的开放式研究实验室，开发可验证、可部署、可持续迭代的数据科学方法与平台，服务在线游戏平台，并可迁移至电商、金融科技、SaaS 等领域的决策支持。
 
-## Vision (5-Year Goal)
+## 愿景（五年目标）
 
-建立世界级 **Online Decision Intelligence Research Platform**，包含：
+建立世界级**在线决策智能研究平台**，包含：
 
-- Customer360
-- Decision Intelligence
-- Bayesian AI
-- Causal AI
-- Survival AI
-- Experiment Platform
-- Knowledge Graph
+- **客户360（Customer360）**：完整会员画像与生命周期
+- **决策智能（Decision Intelligence）**：可落地的决策支持系统
+- **贝叶斯智能（Bayesian AI）**：贝叶斯统计与不确定性量化
+- **因果智能（Causal AI）**：因果推断与干预效果评估
+- **生存智能（Survival AI）**：生存分析与流失预测
+- **实验平台（Experiment Platform）**：科学实验注册与管理系统
+- **知识图谱（Knowledge Graph）**：实体关系与知识推理
 
-## Scientific Principles
+## 科学原则
 
 所有代码与研究必须符合：
 
-- ✅ **Reproducible**（可复现）
-- ✅ **Explainable**（可解释）
-- ✅ **Testable**（可测试）
-- ✅ **Deployable**（可部署）
-- ✅ **Scalable**（可扩展）
+- ✅ **可复现**
+- ✅ **可解释**
+- ✅ **可测试**
+- ✅ **可部署**
+- ✅ **可扩展**
 
-## Repository Structure
+## 仓库结构
 
 ```
 online-gaming-decision-intelligence-lab
@@ -49,54 +47,54 @@ online-gaming-decision-intelligence-lab
 │       ├── OGDIL_Charter.md
 │       └── Development_Standards.md
 ├── sql/                  # ODS → DWD → DWS → ADS
-├── R/                    # Statistical modeling
-├── python/               # AI / ML / Feature engineering
+├── R/                    # 统计建模
+├── python/               # AI / 机器学习 / 特征工程
 ├── dashboards/           # Superset / Shiny / Positron
-├── experiments/          # Scientific Experiment Registry
-├── feature_store/        # Feature Dictionary & Store
-├── models/               # Trained models
-├── notebooks/            # Exploratory analysis
-├── tests/                # Unit & integration tests
-├── deployment/           # CI/CD & deployment configs
-├── docker/               # Containerization
+├── experiments/          # 科学实验注册表
+├── feature_store/        # 特征字典与特征存储
+├── models/               # 已训练模型
+├── notebooks/            # 探索性分析
+├── tests/                # 单元测试与集成测试
+├── deployment/           # CI/CD 与部署配置
+├── docker/               # 容器化
 └── website/              # GitHub Pages
 ```
 
-## Data Architecture
+## 数据架构
 
 ```
-Source Systems
+源系统
       ↓
-     ODS   (Truth Layer)
+     ODS   （真相层）
       ↓
-     DWD   (Detail Warehouse)
+     DWD   （明细数据仓库）
       ↓
-     DWS   (Summary Warehouse)
+     DWS   （汇总数据仓库）
       ↓
-     ADS   (Application Data Service)
+     ADS   （应用数据服务）
       ↓
-  AI / Dashboard / Positron / Decision Platform
+  AI / 仪表盘 / Positron / 决策平台
 ```
 
-**Rule**: All analysis, AI, and dashboards **must only read from ADS**.
+**规则**：所有分析、AI 与仪表盘**只允许读取 ADS**。
 
-## Quick Start
+## 快速开始
 
-1. Clone the repository
-2. Read `docs/01_Project/OGDIL_Charter.md`
-3. Follow `ROADMAP.md`
-4. Start with `ads_customer360` module
+1. 克隆本仓库
+2. 阅读 `docs/01_Project/OGDIL_Charter.md`
+3. 按照 `ROADMAP.md` 执行
+4. 从 `ads_customer360` 模块开始
 
-## Development Workflow
+## 开发流程
 
-- `main` → Stable production
-- `develop` → Daily integration
-- `feature/*` → Feature branches
+- `main` → 稳定生产分支
+- `develop` → 日常集成分支
+- `feature/*` → 功能分支
 
-## Contact & Contribution
+## 联系与贡献
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+参见 [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
-**OGDIL v0.1.0** | Built with scientific rigor and engineering excellence.
+**OGDIL v0.1.0** | 以科学的严谨与工程的卓越构建。

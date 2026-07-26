@@ -1,106 +1,106 @@
-# OGDIL Development Standards
+# OGDIL 开发规范
 
-Version: 0.1.0
+版本：0.1.0
 
 ---
 
-## 1. Branch Strategy
+## 1. 分支策略
 
-| Branch | Purpose |
+| 分支 | 用途 |
 |--------|---------|
-| `main` | Stable production-ready code |
-| `develop` | Daily integration branch |
-| `feature/customer360` | Customer360 module |
-| `feature/feature-store` | Feature Store |
-| `feature/statistics` | Statistical modeling |
-| `feature/ml` | Machine Learning |
-| `feature/dashboard` | Visualization |
-| `feature/api` | API services |
+| `main` | 稳定的生产就绪代码 |
+| `develop` | 日常集成分支 |
+| `feature/customer360` | 客户360（Customer360）模块 |
+| `feature/feature-store` | 特征存储 |
+| `feature/statistics` | 统计建模 |
+| `feature/ml` | 机器学习 |
+| `feature/dashboard` | 可视化 |
+| `feature/api` | API 服务 |
 
-**Rules**:
-- Never commit directly to `main`
-- All features must go through Pull Request
-- Require at least one review before merge
+**规则**：
+- 禁止直接向 `main` 提交
+- 所有功能必须通过 Pull Request 合并
+- 合并前至少需要一次评审
 
 ---
 
-## 2. Language Standards
+## 2. 语言规范
 
 ### R
-- Style: `styler`
-- Linting: `lintr`
-- Package structure preferred for reusable code
-- Always use `renv` or `pak` for dependency management
+- 风格规范：`styler`
+- 静态检查：`lintr`
+- 可复用代码优先采用 Package 结构
+- 依赖管理统一使用 `renv` 或 `pak`
 
 ### Python
-- Formatter: `black` + `ruff`
-- Testing: `pytest`
-- Type hints encouraged
-- Use `uv` or `poetry` for dependency management
+- 格式化工具：`black` + `ruff`
+- 测试框架：`pytest`
+- 鼓励使用类型标注（Type Hints）
+- 依赖管理统一使用 `uv` 或 `poetry`
 
 ### SQL
-- Naming: `snake_case`
-- Layer prefix: `ods_`, `dwd_`, `dws_`, `ads_`
-- Every ADS table must have a Data Contract
-- Comments required for complex logic
+- 命名规范：`snake_case`
+- 分层前缀：`ods_`、`dwd_`、`dws_`、`ads_`
+- 每张 ADS 表必须有数据契约（Data Contract）
+- 复杂逻辑必须添加注释
 
 ---
 
-## 3. Documentation Standards
+## 3. 文档规范
 
-- All public functions must have documentation
-- Use Markdown + Mermaid for architecture diagrams
-- Every major module must have a `README.md`
-- Data Contracts are mandatory for ADS tables
-
----
-
-## 4. Testing Requirements
-
-- Unit tests for core functions
-- Integration tests for data pipelines
-- Statistical models must have validation reports
-- Minimum coverage target: to be defined per module
+- 所有公开函数必须有文档说明
+- 架构图统一使用 Markdown + Mermaid
+- 每个主要模块必须有一份 `README.md`
+- ADS 表必须提供数据契约（Data Contract）
 
 ---
 
-## 5. Versioning
+## 4. 测试要求
 
-Follow **Semantic Versioning**:
-
-- `MAJOR.MINOR.PATCH`
-- Example: `v0.1.0` → `v0.2.0` → `v1.0.0`
+- 核心函数必须有单元测试
+- 数据管道必须有集成测试
+- 统计模型必须提供验证报告
+- 最低覆盖率目标：按模块另行制定
 
 ---
 
-## 6. Commit Message Convention
+## 5. 版本管理
+
+采用**语义化版本**（Semantic Versioning）：
+
+- `主版本号.次版本号.修订号`
+- 示例：`v0.1.0` → `v0.2.0` → `v1.0.0`
+
+---
+
+## 6. 提交信息规范
 
 ```
-type(scope): description
+类型(范围): 描述
 
-feat: new feature
-fix: bug fix
-docs: documentation
-style: formatting
-refactor: code restructuring
-test: adding tests
-chore: maintenance
+feat: 新功能
+fix: 缺陷修复
+docs: 文档变更
+style: 代码格式调整
+refactor: 代码重构
+test: 新增测试
+chore: 日常维护
 ```
 
 ---
 
-## 7. Data Contract Template (ADS)
+## 7. 数据契约模板（ADS）
 
-Every ADS table must define:
+每张 ADS 表必须定义：
 
-- **Owner**
-- **Description**
-- **Primary Key**
-- **Refresh Frequency**
-- **Quality Rules**
-- **Business Rules**
-- **Statistic Rules**
+- **责任人（Owner）**
+- **说明（Description）**
+- **主键（Primary Key）**
+- **刷新频率（Refresh Frequency）**
+- **质量规则（Quality Rules）**
+- **业务规则（Business Rules）**
+- **统计规则（Statistic Rules）**
 
 ---
 
-**These standards are mandatory for all OGDIL contributions.**
+**以上规范为 OGDIL 所有贡献的强制要求。**

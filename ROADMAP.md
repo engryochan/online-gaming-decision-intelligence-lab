@@ -1,79 +1,79 @@
-# OGDIL Roadmap
+# OGDIL 路线图
 
-## Versioning Strategy
+## 版本策略
 
-We follow **Semantic Versioning**: `v0.1.0 → v1.0.0`
+采用**语义化版本**（Semantic Versioning）：`v0.1.0 → v1.0.0`
 
 ---
 
-## Phase Overview
+## 阶段总览
 
-| Phase | Focus | Estimated Duration | Target Version |
+| 阶段 | 重点 | 预计周期 | 目标版本 |
 |-------|-------|--------------------|----------------|
-| Phase 1 | Data Foundation | 4 weeks | v0.3 |
-| Phase 2 | Feature Store | 4 weeks | v0.4 |
-| Phase 3 | Statistics Lab | 6 weeks | v0.5 |
-| Phase 4 | Machine Learning | 6 weeks | v0.6 |
-| Phase 5 | Decision Intelligence | 8 weeks | v1.0 |
+| 第一阶段 | 数据底座建设 | 4 周 | v0.3 |
+| 第二阶段 | 特征存储 | 4 周 | v0.4 |
+| 第三阶段 | 统计实验室 | 6 周 | v0.5 |
+| 第四阶段 | 机器学习 | 6 周 | v0.6 |
+| 第五阶段 | 决策智能 | 8 周 | v1.0 |
 
 ---
 
-## Detailed Roadmap
+## 详细路线图
 
-### Phase 1 — Data Foundation (v0.2 → v0.3)
-- [ ] Complete ODS → DWD → DWS → ADS architecture
-- [ ] Implement `ads_customer360`
-- [ ] Data Quality Rules & Contracts
-- [ ] Basic ETL pipelines
+### 第一阶段 —— 数据底座建设（v0.2 → v0.3）
+- [ ] 完成 ODS → DWD → DWS → ADS 架构
+- [ ] 实现 `ads_customer360`
+- [ ] 数据质量规则与数据契约
+- [ ] 基础 ETL 管道
 
-### Phase 2 — Feature Store (v0.4)
-- [ ] Feature Dictionary (≥300 features initially, target 500+)
-- [ ] Feature Store implementation
-- [ ] Point-in-time correct features
-- [ ] Feature documentation & ownership
+### 第二阶段 —— 特征存储（v0.4）
+- [ ] 特征字典（初期不少于 300 个特征，目标 500+）
+- [ ] 特征存储实现
+- [ ] 时点正确（Point-in-time correct）特征
+- [ ] 特征文档与责任归属
 
-### Phase 3 — Statistics Laboratory (v0.5)
-- [ ] Bayesian Models (brms / Stan)
-- [ ] Survival Analysis (Cox, RSF, Joint Models)
-- [ ] Hierarchical Linear Models (HLM / GLMM)
-- [ ] Time Series
-- [ ] Causal Inference
-- [ ] A/B Testing Framework
+### 第三阶段 —— 统计实验室（v0.5）
+- [ ] 贝叶斯模型（brms / Stan）
+- [ ] 生存分析（Cox 模型、随机生存森林 RSF、联合模型）
+- [ ] 分层线性模型（HLM / GLMM）
+- [ ] 时间序列
+- [ ] 因果推断
+- [ ] A/B 测试框架
 
-### Phase 4 — Machine Learning Laboratory (v0.6)
+### 第四阶段 —— 机器学习实验室（v0.6）
 - [ ] XGBoost / LightGBM / CatBoost
-- [ ] Deep Learning baselines
-- [ ] Graph Neural Networks (GNN)
-- [ ] AutoML pipelines
-- [ ] Model Registry & Monitoring
+- [ ] 深度学习基线模型
+- [ ] 图神经网络（GNN）
+- [ ] AutoML 管道
+- [ ] 模型注册与监控
 
-### Phase 5 — Decision Intelligence Platform (v1.0)
-- [ ] Shiny / Positron Decision Platform
-- [ ] Experiment Registry (full scientific workflow)
-- [ ] Knowledge Graph
-- [ ] Docker one-click deployment
-- [ ] GitHub Pages official website
-- [ ] API services
-- [ ] Production-ready monitoring
-
----
-
-## OGDIL v1.0 Success Criteria
-
-- ✅ Enterprise-grade Data Warehouse (ODS → ADS)
-- ✅ Customer360
-- ✅ Feature Store (≥500 features)
-- ✅ R Package + Python SDK
-- ✅ Positron Project
-- ✅ Shiny Decision Platform
-- ✅ Docker deployment
-- ✅ Experiment Management System
-- ✅ Decision Intelligence capabilities
+### 第五阶段 —— 决策智能平台（v1.0）
+- [ ] Shiny / Positron 决策平台
+- [ ] 实验注册表（完整科学实验流程）
+- [ ] 知识图谱
+- [ ] Docker 一键部署
+- [ ] GitHub Pages 官方网站
+- [ ] API 服务
+- [ ] 生产级监控
 
 ---
 
-## Current Status
+## OGDIL v1.0 成功标准
 
-**v0.1.0** — Project initialization & Charter (Current)
+- ✅ 企业级数据仓库（ODS → ADS）
+- ✅ 客户360（Customer360）
+- ✅ 特征存储（不少于 500 个特征）
+- ✅ R 包 + Python SDK
+- ✅ Positron 项目
+- ✅ Shiny 决策平台
+- ✅ Docker 部署
+- ✅ 实验管理系统
+- ✅ 决策智能能力
 
-Next: **v0.2** — Full project infrastructure + Development Standards + CI skeleton.
+---
+
+## 当前状态
+
+**v0.1.0** —— 项目初始化与章程（当前阶段）
+
+下一步：**v0.2** —— 完整项目基础设施 + 开发规范 + CI 骨架。
