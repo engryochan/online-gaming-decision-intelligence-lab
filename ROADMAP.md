@@ -21,7 +21,15 @@ We follow **Semantic Versioning**: `v0.1.0 → v1.0.0`
 ## Detailed Roadmap
 
 ### Phase 1 — Data Foundation (v0.2 → v0.3)
-- [ ] Complete ODS → DWD → DWS → ADS architecture
+- [x] Establish ODS Truth Layer governance
+- [x] Define ODS → DWD → DWS → ADS architecture
+- [x] Define initial ODS subject domains
+- [x] Define ADS Data Contract template
+- [ ] Import and validate `01_ODS_TABLE_LIST.csv`
+- [ ] Import and validate `02_ODS_FULL_DATA_DICTIONARY.csv`
+- [ ] Generate ODS table/column catalog automatically
+- [ ] Generate sensitive-field catalog
+- [ ] Generate ODS → DWD lineage mapping
 - [ ] Implement `ads_customer360`
 - [ ] Data Quality Rules & Contracts
 - [ ] Basic ETL pipelines
@@ -74,6 +82,14 @@ We follow **Semantic Versioning**: `v0.1.0 → v1.0.0`
 
 ## Current Status
 
-**v0.1.0** — Project initialization & Charter (Current)
+**v0.2.0 — ODS Data Foundation initiated.**
 
-Next: **v0.2** — Full project infrastructure + Development Standards + CI skeleton.
+Completed in the current foundation branch:
+
+- ODS Truth Layer governance
+- ODS → DWD → DWS → ADS architecture specification
+- Initial ODS subject-domain map
+- ADS Data Contract template
+- Data foundation documentation entry point
+
+Next priority: **import and validate the two authoritative ODS dictionary assets, then generate machine-readable catalogs, lineage templates, sensitive-field inventory, and the first `ads_customer360` contract.**
