@@ -1,4 +1,6 @@
-# OGDIL —— 在线游戏决策智能实验室
+# 在线游戏决策智能实验室 Online Gaming Decision Intelligence Lab (OGDIL)
+
+Foundation v2.0.1
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-green.svg)]()
