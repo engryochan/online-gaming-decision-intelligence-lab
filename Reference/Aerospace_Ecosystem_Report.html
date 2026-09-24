@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ryo Eng（雷欧）">
-<meta name="dcterms.date" content="2026-07-30">
 
 <title>全球宇航与国防生态链数据栈对比研究报告</title>
 <style>
@@ -48,34 +47,36 @@ ul.task-list li input[type="checkbox"] {
 
 <body class="quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">目錄</h2>
    
   <ul>
-  <li><a href="#摘要" id="toc-摘要" class="nav-link active" data-scroll-target="#摘要">摘要</a></li>
-  <li><a href="#一核心结论五个工具在航天军事的采用" id="toc-一核心结论五个工具在航天军事的采用" class="nav-link" data-scroll-target="#一核心结论五个工具在航天军事的采用">一、核心结论：五个工具在航天/军事的采用</a></li>
-  <li><a href="#二全球宇航产业链三段论---教科书划分" id="toc-二全球宇航产业链三段论---教科书划分" class="nav-link" data-scroll-target="#二全球宇航产业链三段论---教科书划分">二、全球宇航产业链三段论 - 教科书划分</a>
+  <li><a href="#摘要" id="toc-摘要" class="nav-link active" data-scroll-target="#摘要"><span class="header-section-number">1</span> 摘要</a></li>
+  <li><a href="#一核心结论五个工具在航天军事的采用" id="toc-一核心结论五个工具在航天军事的采用" class="nav-link" data-scroll-target="#一核心结论五个工具在航天军事的采用"><span class="header-section-number">2</span> 一、核心结论：五个工具在航天/军事的采用</a></li>
+  <li><a href="#二全球宇航产业链三段论---教科书划分" id="toc-二全球宇航产业链三段论---教科书划分" class="nav-link" data-scroll-target="#二全球宇航产业链三段论---教科书划分"><span class="header-section-number">3</span> 二、全球宇航产业链三段论 - 教科书划分</a>
   <ul class="collapse">
-  <li><a href="#上游设计与仿真---不可能用starrocks" id="toc-上游设计与仿真---不可能用starrocks" class="nav-link" data-scroll-target="#上游设计与仿真---不可能用starrocks">2.1 上游：设计与仿真 - 不可能用StarRocks</a></li>
-  <li><a href="#中游制造与供应链---你们那套能进去的地方" id="toc-中游制造与供应链---你们那套能进去的地方" class="nav-link" data-scroll-target="#中游制造与供应链---你们那套能进去的地方">2.2 中游：制造与供应链 - 你们那套能进去的地方</a></li>
-  <li><a href="#下游发射与在轨运营---毫秒级时序" id="toc-下游发射与在轨运营---毫秒级时序" class="nav-link" data-scroll-target="#下游发射与在轨运营---毫秒级时序">2.3 下游：发射与在轨运营 - 毫秒级时序</a></li>
+  <li><a href="#上游设计与仿真---不可能用starrocks" id="toc-上游设计与仿真---不可能用starrocks" class="nav-link" data-scroll-target="#上游设计与仿真---不可能用starrocks"><span class="header-section-number">3.1</span> 2.1 上游：设计与仿真 - 不可能用StarRocks</a></li>
+  <li><a href="#中游制造与供应链---你们那套能进去的地方" id="toc-中游制造与供应链---你们那套能进去的地方" class="nav-link" data-scroll-target="#中游制造与供应链---你们那套能进去的地方"><span class="header-section-number">3.2</span> 2.2 中游：制造与供应链 - 你们那套能进去的地方</a></li>
+  <li><a href="#下游发射与在轨运营---毫秒级时序" id="toc-下游发射与在轨运营---毫秒级时序" class="nav-link" data-scroll-target="#下游发射与在轨运营---毫秒级时序"><span class="header-section-number">3.3</span> 2.3 下游：发射与在轨运营 - 毫秒级时序</a></li>
   </ul></li>
-  <li><a href="#三军事航天专有平台与palantir生态" id="toc-三军事航天专有平台与palantir生态" class="nav-link" data-scroll-target="#三军事航天专有平台与palantir生态">三、军事航天：专有平台与Palantir生态</a>
+  <li><a href="#三军事航天专有平台与palantir生态" id="toc-三军事航天专有平台与palantir生态" class="nav-link" data-scroll-target="#三军事航天专有平台与palantir生态"><span class="header-section-number">4</span> 三、军事航天：专有平台与Palantir生态</a>
   <ul class="collapse">
-  <li><a href="#美国太空军---warp-core" id="toc-美国太空军---warp-core" class="nav-link" data-scroll-target="#美国太空军---warp-core">3.1 美国太空军 - Warp Core</a></li>
-  <li><a href="#时序数据库---航天第一公民" id="toc-时序数据库---航天第一公民" class="nav-link" data-scroll-target="#时序数据库---航天第一公民">3.2 时序数据库 - 航天第一公民</a></li>
+  <li><a href="#美国太空军---warp-core" id="toc-美国太空军---warp-core" class="nav-link" data-scroll-target="#美国太空军---warp-core"><span class="header-section-number">4.1</span> 3.1 美国太空军 - Warp Core</a></li>
+  <li><a href="#时序数据库---航天第一公民" id="toc-时序数据库---航天第一公民" class="nav-link" data-scroll-target="#时序数据库---航天第一公民"><span class="header-section-number">4.2</span> 3.2 时序数据库 - 航天第一公民</a></li>
   </ul></li>
-  <li><a href="#四更优平台---按场景的降维打击" id="toc-四更优平台---按场景的降维打击" class="nav-link" data-scroll-target="#四更优平台---按场景的降维打击">四、更优平台 - 按场景的降维打击</a>
+  <li><a href="#四更优平台---按场景的降维打击" id="toc-四更优平台---按场景的降维打击" class="nav-link" data-scroll-target="#四更优平台---按场景的降维打击"><span class="header-section-number">5</span> 四、更优平台 - 按场景的降维打击</a>
   <ul class="collapse">
-  <li><a href="#军事决策霸主---palantir" id="toc-军事决策霸主---palantir" class="nav-link" data-scroll-target="#军事决策霸主---palantir">4.1 军事决策霸主 - Palantir</a></li>
-  <li><a href="#商业航天霸主---spacex" id="toc-商业航天霸主---spacex" class="nav-link" data-scroll-target="#商业航天霸主---spacex">4.2 商业航天霸主 - SpaceX</a></li>
+  <li><a href="#军事决策霸主---palantir" id="toc-军事决策霸主---palantir" class="nav-link" data-scroll-target="#军事决策霸主---palantir"><span class="header-section-number">5.1</span> 4.1 军事决策霸主 - Palantir</a></li>
+  <li><a href="#商业航天霸主---spacex" id="toc-商业航天霸主---spacex" class="nav-link" data-scroll-target="#商业航天霸主---spacex"><span class="header-section-number">5.2</span> 4.2 商业航天霸主 - SpaceX</a></li>
   </ul></li>
-  <li><a href="#五全球10地宇航国防生态链对比" id="toc-五全球10地宇航国防生态链对比" class="nav-link" data-scroll-target="#五全球10地宇航国防生态链对比">五、全球10地宇航国防生态链对比</a></li>
-  <li><a href="#六最终结论与ogdil建议" id="toc-六最终结论与ogdil建议" class="nav-link" data-scroll-target="#六最终结论与ogdil建议">六、最终结论与OGDIL建议</a></li>
+  <li><a href="#五全球10地宇航国防生态链对比" id="toc-五全球10地宇航国防生态链对比" class="nav-link" data-scroll-target="#五全球10地宇航国防生态链对比"><span class="header-section-number">6</span> 五、全球10地宇航国防生态链对比</a></li>
+  <li><a href="#六最终结论与ogdil建议" id="toc-六最终结论与ogdil建议" class="nav-link" data-scroll-target="#六最终结论与ogdil建议"><span class="header-section-number">7</span> 六、最终结论与OGDIL建议</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Aerospace_Ecosystem_Report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>其他格式</h2><ul><li><a href="Aerospace_Ecosystem_Report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -90,16 +91,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">作者</div>
     <div class="quarto-title-meta-contents">
              <p>Ryo Eng（雷欧） </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">发布于</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 30, 2026</p>
+      <p class="date">2026年7月30日（农历丙午马年六月十七，乙未月・乙巳日）</p>
     </div>
   </div>
   
@@ -111,12 +112,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="摘要" class="level2">
-<h2 class="anchored" data-anchor-id="摘要">摘要</h2>
+<section id="摘要" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="摘要"><span class="header-section-number">1</span> 摘要</h2>
 <p>本报告系统对比全球宇航产业链与军事宇航产业链的数据基础设施。核心结论：<strong>StarRocks、Superset、Airflow、DolphinScheduler、Echarts在通用商业航天地面数仓中有应用，但在星载高频遥测、飞控、军事指挥等核心层，存在维度更高的专用平台</strong>。</p>
 </section>
-<section id="一核心结论五个工具在航天军事的采用" class="level2">
-<h2 class="anchored" data-anchor-id="一核心结论五个工具在航天军事的采用">一、核心结论：五个工具在航天/军事的采用</h2>
+<section id="一核心结论五个工具在航天军事的采用" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="一核心结论五个工具在航天军事的采用"><span class="header-section-number">2</span> 一、核心结论：五个工具在航天/军事的采用</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -162,8 +163,8 @@ ul.task-list li input[type="checkbox"] {
 <p>一句话总结：航天核心数据形态是<strong>高频时序遥测（每秒百万点）</strong>，上述五工具中只有Airflow渗透较深，其余非主流。</p>
 </blockquote>
 </section>
-<section id="二全球宇航产业链三段论---教科书划分" class="level2">
-<h2 class="anchored" data-anchor-id="二全球宇航产业链三段论---教科书划分">二、全球宇航产业链三段论 - 教科书划分</h2>
+<section id="二全球宇航产业链三段论---教科书划分" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="二全球宇航产业链三段论---教科书划分"><span class="header-section-number">3</span> 二、全球宇航产业链三段论 - 教科书划分</h2>
 <pre class="mermaid"><code>flowchart LR
     A[上游 设计与仿真] --&gt; B[中游 制造与供应链]
     B --&gt; C[下游 发射与在轨运营]
@@ -171,42 +172,42 @@ ul.task-list li input[type="checkbox"] {
     A --&gt; A1[CATIA/NX + Ansys/NASTRAN + Teamcenter/Windchill + OpenMDAO + PBS]
     B --&gt; B1[SAP + Palantir Foundry + Airflow/Dagster + Snowflake Gov + Plotly]
     C --&gt; C1[InfluxDB/TimescaleDB/QuestDB + Kafka/Flink + Grafana + cFS/COSMOS + K8s]</code></pre>
-<section id="上游设计与仿真---不可能用starrocks" class="level3">
-<h3 class="anchored" data-anchor-id="上游设计与仿真---不可能用starrocks">2.1 上游：设计与仿真 - 不可能用StarRocks</h3>
+<section id="上游设计与仿真---不可能用starrocks" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="上游设计与仿真---不可能用starrocks"><span class="header-section-number">3.1</span> 2.1 上游：设计与仿真 - 不可能用StarRocks</h3>
 <ul>
 <li><strong>民企</strong>：SpaceX, Blue Origin, Rocket Lab, Airbus, Boeing</li>
 <li><strong>软件</strong>：CATIA / Siemens NX，Ansys / NASTRAN，Teamcenter / Windchill。开源用 <strong>NASA OpenMDAO</strong> 做多学科优化。</li>
 <li><strong>调度</strong>：Altair PBS 这类HPC调度器，非Airflow。</li>
 </ul>
 </section>
-<section id="中游制造与供应链---你们那套能进去的地方" class="level3">
-<h3 class="anchored" data-anchor-id="中游制造与供应链---你们那套能进去的地方">2.2 中游：制造与供应链 - 你们那套能进去的地方</h3>
+<section id="中游制造与供应链---你们那套能进去的地方" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="中游制造与供应链---你们那套能进去的地方"><span class="header-section-number">3.2</span> 2.2 中游：制造与供应链 - 你们那套能进去的地方</h3>
 <ul>
 <li><strong>民企</strong>：上千家二级供应商</li>
 <li><strong>软件</strong>：<code>SAP + Palantir Foundry</code> 管供应链，<code>Airflow/Dagster</code> 做ETL标配。NASA VEDA用Airflow做卫星数据入湖。</li>
 <li><strong>合规</strong>：因ITAR/CMMC，中国起源的StarRocks/Dolphin/Echarts进不去白名单，用Snowflake GovCloud + Databricks + PowerBI/Tableau + Plotly。</li>
 </ul>
 </section>
-<section id="下游发射与在轨运营---毫秒级时序" class="level3">
-<h3 class="anchored" data-anchor-id="下游发射与在轨运营---毫秒级时序">2.3 下游：发射与在轨运营 - 毫秒级时序</h3>
+<section id="下游发射与在轨运营---毫秒级时序" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="下游发射与在轨运营---毫秒级时序"><span class="header-section-number">3.3</span> 2.3 下游：发射与在轨运营 - 毫秒级时序</h3>
 <ul>
 <li><strong>软件</strong>：<code>InfluxDB / TimescaleDB / QuestDB</code> 存遥测，<code>Grafana</code> 看大屏，<code>NASA cFS / COSMOS</code> 做飞控，<code>Kafka + Flink</code> 实时流。StarRocks秒级OLAP太慢。</li>
 <li><strong>SpaceX Starlink案例</strong>：<code>.NET 5 + Kafka + HBase + HDFS + Docker + K8s</code>，招聘要求Kafka/Spark/Flink。</li>
 </ul>
 </section>
 </section>
-<section id="三军事航天专有平台与palantir生态" class="level2">
-<h2 class="anchored" data-anchor-id="三军事航天专有平台与palantir生态">三、军事航天：专有平台与Palantir生态</h2>
-<section id="美国太空军---warp-core" class="level3">
-<h3 class="anchored" data-anchor-id="美国太空军---warp-core">3.1 美国太空军 - Warp Core</h3>
+<section id="三军事航天专有平台与palantir生态" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="三军事航天专有平台与palantir生态"><span class="header-section-number">4</span> 三、军事航天：专有平台与Palantir生态</h2>
+<section id="美国太空军---warp-core" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="美国太空军---warp-core"><span class="header-section-number">4.1</span> 3.1 美国太空军 - Warp Core</h3>
 <ul>
 <li><strong>核心</strong>：<strong>Palantir Warp Core</strong> 作为ATLAS系统数据管理层，替代SPADOC。</li>
 <li><strong>合同</strong>：2023年太空军18家供应商9亿美元IDIQ合同，包括Palantir, C3 AI, Oracle, BAE Systems等，无Airflow/Superset/StarRocks/Dolphin。</li>
 <li><strong>UDL统一数据图书馆</strong>：2000+政府账户，1700+商业账户，125个盟国，每天2亿条记录被70个应用拉取。</li>
 </ul>
 </section>
-<section id="时序数据库---航天第一公民" class="level3">
-<h3 class="anchored" data-anchor-id="时序数据库---航天第一公民">3.2 时序数据库 - 航天第一公民</h3>
+<section id="时序数据库---航天第一公民" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="时序数据库---航天第一公民"><span class="header-section-number">4.2</span> 3.2 时序数据库 - 航天第一公民</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -245,8 +246,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
-<section id="四更优平台---按场景的降维打击" class="level2">
-<h2 class="anchored" data-anchor-id="四更优平台---按场景的降维打击">四、更优平台 - 按场景的降维打击</h2>
+<section id="四更优平台---按场景的降维打击" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="四更优平台---按场景的降维打击"><span class="header-section-number">5</span> 四、更优平台 - 按场景的降维打击</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -295,15 +296,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<section id="军事决策霸主---palantir" class="level3">
-<h3 class="anchored" data-anchor-id="军事决策霸主---palantir">4.1 军事决策霸主 - Palantir</h3>
+<section id="军事决策霸主---palantir" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="军事决策霸主---palantir"><span class="header-section-number">5.1</span> 4.1 军事决策霸主 - Palantir</h3>
 <ul>
 <li><strong>Gotham国防版</strong>：数字战场操作系统，融合间谍卫星、无人机、雷达，毫秒级三维数字孪生。</li>
 <li><strong>Foundry工业版</strong>：Airbus Skywise，全球几千架飞机发动机震动数据实时预测。</li>
 </ul>
 </section>
-<section id="商业航天霸主---spacex" class="level3">
-<h3 class="anchored" data-anchor-id="商业航天霸主---spacex">4.2 商业航天霸主 - SpaceX</h3>
+<section id="商业航天霸主---spacex" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="商业航天霸主---spacex"><span class="header-section-number">5.2</span> 4.2 商业航天霸主 - SpaceX</h3>
 <ul>
 <li><strong>WARPDRIVE</strong>：自研ERP神经系统，从CAD到发射到财务闭环，拒绝SAP。</li>
 <li><strong>遥测</strong>：自研超高吞吐时序存储 + 流式绘图引擎，毫秒级刷新。</li>
@@ -311,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="五全球10地宇航国防生态链对比" class="level2">
-<h2 class="anchored" data-anchor-id="五全球10地宇航国防生态链对比">五、全球10地宇航国防生态链对比</h2>
+<section id="五全球10地宇航国防生态链对比" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="五全球10地宇航国防生态链对比"><span class="header-section-number">6</span> 五、全球10地宇航国防生态链对比</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -376,8 +377,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="六最终结论与ogdil建议" class="level2">
-<h2 class="anchored" data-anchor-id="六最终结论与ogdil建议">六、最终结论与OGDIL建议</h2>
+<section id="六最终结论与ogdil建议" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="六最终结论与ogdil建议"><span class="header-section-number">7</span> 六、最终结论与OGDIL建议</h2>
 <blockquote class="blockquote">
 <p><strong>直接回答</strong>：StarRocks、Superset、Dolphin、Echarts在全球宇航产业链中非主流。Airflow是唯一重度重叠工具。航天核心是时序库(InfluxDB/IoTDB)+流处理(Kafka/Flink)+专有平台(Palantir/STK/MATLAB)+自研系统。</p>
 </blockquote>
@@ -417,12 +418,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "已複製");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "已複製");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
