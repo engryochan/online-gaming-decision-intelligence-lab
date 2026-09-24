@@ -51,6 +51,7 @@ online-gaming-decision-intelligence-lab
 ├── python/               # AI / 机器学习 / 特征工程
 ├── dashboards/           # Superset / Shiny / Positron
 ├── experiments/          # 科学实验注册表
+├── feature/
 ├── feature_store/        # 特征字典与特征存储
 ├── models/               # 已训练模型
 ├── notebooks/            # 探索性分析
