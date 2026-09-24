@@ -1,0 +1,60 @@
+# R
+.Rhistory
+.RData
+.Rproj.user
+renv/library/
+renv/staging/
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.env
+.venv
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 数据与模型（大文件）
+# 如需将特定 CSV 纳入版本控制（例如数据字典），须使用 git add -f 并按照
+# docs/04_Metadata_Governance/DATA_CLASSIFICATION_STANDARD.md 的要求完成
+# 分类判定与脱敏后，在 PR 描述中说明理由。
+*.csv
+*.xlsx
+*.rds
+*.parquet
+*.feather
+*.h5
+*.pkl
+*.joblib
+data/
+raw_data/
+processed_data/
+models/*.rds
+models/*.pkl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# 日志与临时文件
+*.log
+tmp/
+temp/
+.cache/
+
+# Docker
+docker-compose.override.yml
+
+# 密钥与凭据
+.env
+*.pem
+secrets/
