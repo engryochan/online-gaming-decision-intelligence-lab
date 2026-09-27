@@ -12573,6 +12573,7 @@ $$
 ---
 
 #### actionplan/
+
 **合法行动方案：**
 
 1. **立即停止**任何面向中国大陆的在线百家乐开发、推广、代理、支付、客服和技术支持计划。
@@ -12696,102 +12697,106 @@ $$
 
 从你提供的资料看，你的关注重点其实已经越来越偏向：
 
-真人百家乐生态
-Live Casino Studio
-风控与量化
-数据中台
-StarRocks / Superset / DolphinScheduler
-Gaming Risk Intelligence
-Dealer Analytics
-Player Analytics
+- 真人百家乐生态
+- Live Casino Studio
+- 风控与量化
+- 数据中台
+- StarRocks / Superset / DolphinScheduler
+- Gaming Risk Intelligence
+- Dealer Analytics
+- Player Analytics
 
 这些比单纯做一家赌场网站更有护城河。
 
-Red Team
+#### Red Team
 
 假设我是 Evolution、Pragmatic Play Live、SA Gaming、Dream Gaming、WM 等成熟供应商。
 
 我会从以下维度攻击你的平台：
 
-产品层
-真人桌太少
+##### 产品层
+
+**真人桌太少**
 
 常见问题：
 
-只有百家乐
-龙虎桌不足
-无多币种桌
-无 VIP 桌
-无极速百家乐
+- 只有百家乐
+- 龙虎桌不足
+- 无多币种桌
+- 无 VIP 桌
+- 无极速百家乐
 
 对策：
 
-低门槛大众桌
-中层 VIP 桌
-高额桌
-多语言桌
-荷官质量不稳定
+- 低门槛大众桌
+- 中层 VIP 桌
+- 高额桌
+- 多语言桌
+
+**荷官质量不稳定**
 
 用户投诉：
 
-发牌慢
-语言能力差
-直播延迟
+- 发牌慢
+- 语言能力差
+- 直播延迟
 
 对策：
 
 建立：
-
+```
 Dealer KPI
 Dealer Quality Score
 Dealer Retention
 Dealer Error Rate
 Dealer Latency
+```
 
-无差异化
+**无差异化**
 
 很多平台：
-
+```
 百家乐
 龙虎
 轮盘
 骰宝
-
+```
 
 全部一样。
 
 用户没有迁移理由。
 
-Critic
+#### Critic
 
 很多运营商认为：
-
+```
 多开发功能
 =
 更强竞争力
-
+```
 
 实际上不一定。
 
 玩家真正关心：
-
+```
 稳定
 公平
 流畅
 提现快
-
+```
 
 而不是：
-
+```
 AI聊天
 NFT
 元宇宙
+```
 
-Kill Critic
+#### Kill Critic
 
 很多公司会说：
 
-我们功能比 Evolution 多。
+> 我们功能比 Evolution 多。
 
 这通常不是胜负手。
 
@@ -12800,134 +12805,141 @@ Evolution 之所以强：
 并非功能最多。
 
 而是：
-
+```
 运营成熟
 数据成熟
 风控成熟
 直播成熟
 渠道成熟
-
+```
 
 所以：
 
 不要追求：
-
+```
 100个功能
-
+```
 
 应该追求：
-
+```
 10个功能做到极致
+```
 
-Blindspot
+#### Blindspot
 
 这是大量亚洲真人平台最容易忽视的。
 
-Blindspot 1
+**Blindspot 1**
 
 Dealer Analytics
 
 你资料里其实已经在研究：
-
+```
 Dealer
 Table
 Round
 Player
 Bet
 Outcome
-
+```
 
 方向是对的。
 
 大多数平台只统计：
-
+```
 输赢
 流水
 利润
-
+```
 
 没有统计：
-
+```
 荷官表现
+```
 
-Blindspot 2
+**Blindspot 2**
 
 Table Analytics
 
 例如：
-
+```
 哪张桌最受欢迎
 哪张桌活跃最高
 哪张桌留存最好
+```
 
-Blindspot 3
+**Blindspot 3**
 
 Player Journey
 
 很多平台不知道：
-
+```
 玩家从哪里来
 为何离开
 什么时候流失
+```
 
-Blindspot 4
+**Blindspot 4**
 
 风控解释能力
 
 很多模型只能输出：
-
+```
 Risk=0.92
-
+```
 
 但无法解释：
-
+```
 为何0.92
-
+```
 
 你资料里的思路：
-
+```
 Risk
 ↓
 Evidence
 ↓
 Decision Gate
-
+```
 
 反而是正确方向。
 
-顶级竞争分析清单
+#### 顶级竞争分析清单
 
 建议建立一张表：
 
-领域	检查点UI	首页加载速度
-Studio	真人桌数量
-Dealer	荷官质量
-Video	直播延迟
-Mobile	手机体验
-Wallet	钱包速度
-AML	反洗钱
-KYC	身份验证
-Risk	风控能力
-BI	数据平台
-AI	智能分析
-CRM	玩家运营
-VIP	高价值用户管理
-Security	安全
-API	第三方接入
-最值得你研究的部分
+| 领域     | 检查点          |
+|:--------:|:---------------:|
+| UI       | 首页加载速度    |
+| Studio   | 真人桌数量      |
+| Dealer   | 荷官质量        |
+| Video    | 直播延迟        |
+| Mobile   | 手机体验        |
+| Wallet   | 钱包速度        |
+| AML      | 反洗钱          |
+| KYC      | 身份验证        |
+| Risk     | 风控能力        |
+| BI       | 数据平台        |
+| AI       | 智能分析        |
+| CRM      | 玩家运营        |
+| VIP      | 高价值用户管理  |
+| Security | 安全            |
+| API      | 第三方接入      |
+
+#### 最值得你研究的部分
 
 结合你现有资料，我认为真正的竞争力不是：
-
+```
 百家乐网站
-
+```
 
 而是：
-
+```
 Gaming Intelligence Platform
-
+```
 
 即：
-
+```
 Player Analytics
 +
 Dealer Analytics
@@ -12937,21 +12949,21 @@ Risk Intelligence
 Fraud Detection
 +
 Decision Intelligence
-
+```
 
 这条路与你目前研究的：
 
-StarRocks
-DolphinScheduler
-风控模型
-HF9e/HF9f体系
-Quantitative Risk Intelligence
+- StarRocks
+- DolphinScheduler
+- 风控模型
+- HF9e/HF9f体系
+- Quantitative Risk Intelligence
 
 实际上更加契合。
 
 一句话总结：
 
-不要把目标定成“超过某家百家乐网站”；应把目标定成“建立比多数亚洲真人平台更强的数据、风控和决策系统”，因为那才是最难复制的核心竞争力。
+> 不要把目标定成“超过某家百家乐网站”；应把目标定成“建立比多数亚洲真人平台更强的数据、风控和决策系统”，因为那才是最难复制的核心竞争力。
 
 ### Meta AI
 
@@ -12961,7 +12973,7 @@ Quantitative Risk Intelligence
 
 我按你说的框架，给你一套合法合规的 RedTeam 竞争分析模型，你用这个模型去测任何一家对手，都能找出优化点：
 
-### 1. RedTeam / 红队视角 - 如果我是黑产和挑剔的玩家，我怎么攻击你？
+#### 1. RedTeam / 红队视角 - 如果我是黑产和挑剔的玩家，我怎么攻击你？
 
 红队不找代码漏洞，找的是信任链条的断裂点。所有顶级平台在这里都失分：
 
@@ -12969,7 +12981,7 @@ Quantitative Risk Intelligence
 **B. 延迟与纠纷:** 线上百家乐都有0.5-1.5秒延迟。红队会故意在网络抖动时下注，然后投诉“我明明点了庄，怎么算我没下”。顶尖公司的断线重连、投注确认回执、争议录像回放机制都做得很差。
 **C. 假台泛滥:** Evolution、AG、SA都被大量盗播。玩家分不清你是用正版API还是盗的视频流，这是整个行业最大的信任漏洞。
 
-### 2. Critic / 批判视角 - 从用户体验看，所有对手的通病
+#### 2. Critic / 批判视角 - 从用户体验看，所有对手的通病
 
 **网站与服务层:**
 1.  **KYC又慢又蠢:** 注册快，提款时才要你提供3天前的地址证明，这是所有平台被骂最多的点。
@@ -12982,7 +12994,7 @@ Quantitative Risk Intelligence
 2.  **不负责任:** 没有强制的冷静期、限额、自我排除工具。顶尖公司为了流水，故意把“再玩一局”做得最顺滑。
 3.  **数据不开放:** 玩家拿不到自己的完整投注历史CSV，无法做自我复盘。
 
-### 3. KillCritic / 反批判 - 如何让你的网站杀死所有批评
+#### 3. KillCritic / 反批判 - 如何让你的网站杀死所有批评
 
 你不需要去攻击别人，你只需要把别人被骂的地方，做成你的卖点。
 
@@ -12992,13 +13004,13 @@ Quantitative Risk Intelligence
 3.  **体验反人性:** 别人让玩家一直玩，你做“强制清醒”：每30分钟弹窗盈亏，强制提供一键设置当日亏损上限，提款KYC在注册时就做完，提款10分钟内到账。
 4.  **专业度碾压:** 荷官不是花瓶，是持证荷官，公开培训流程。客服团队必须能看懂大路、大眼仔、小强路，能调取争议对局的3机位录像。
 
-### 4. Blindspot / 盲点 - 所有竞争者都看不到的地方
+#### 4. Blindspot / 盲点 - 所有竞争者都看不到的地方
 
 1.  **法律盲点:** 90%的所谓前沿平台，都没有解决多司法管辖区合规。你在巴统合法，不代表你在德国、荷兰、美国合法。想做大，必须做地理围栏和牌照矩阵，否则随时被封。
 2.  **成瘾盲点:** 行业默认玩家会输完再回来。你如果反过来做“健康游戏”模型，主动识别追损行为并强制冷却，长期留存反而更高，但没人敢做。
 3.  **技术盲点:** 所有平台都在卷4K，但没人卷“可验证随机”。未来的方向是区块链哈希预承诺洗牌，让玩家可以事后验证牌序没有被操纵。
 
-### 5. ActionPlan / 行动计划 - 如果你真要做
+#### 5. ActionPlan / 行动计划 - 如果你真要做
 
 **第一步：别做网站，先做牌照。** 没有MGA或Isle of Man这类一级牌照，你投入的技术都是在为黑市做嫁衣，拿不到正经的支付通道和Evolution正版API。
 **第二步：别自建，先审计。** 找GLI做系统审计，找四大做资金审计，报告公开。这是你和所有盗版台拉开差距的唯一护城河。
