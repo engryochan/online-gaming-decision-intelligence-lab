@@ -7861,3 +7861,1652 @@ Backend：FP64/FP32/BF16/FP16/INT8/FP8/Ternary/LNS/RNS/Posit challenger。
 > **治理方面**：Champion 永远存在，Challenger 永远可以挑战，但未经 Gate 不得篡位。  
 >
 > 此即本轮“**禁止退化，只能优化并强化**”的工程化含义。
+
+---
+
+# 37. 文明母体 × 寰宇地理 × 百业生态：大秦统一世界模型与产业图谱（2026-10-01）
+
+> **本章定位**：本章是在 §36 的 OS Factory、DAQIN-UCS、DANF、DAQIN-IR、Daqin Spatial Shell 基础上，进一步把“历史策略游戏的系统设计精髓、真实地球/空间数字孪生、士农工商与现代产业生态、人工智能与高保证性工程”纳入同一套可验证坐标。原则仍为：**只增不减，冲突留账，UNKNOWN 不猜；任何性能/安全/兼容性结论均须以实测升级 LO。**
+>
+> **文化优先但证据分层**：先秦—两汉古典、中国古代制度史、文言/繁体/篆体视觉风格可作为产品文明母体、命名与交互风格；现代性能、地理真值、物理可行性、监管与安全结论必须由现代证据与实测裁决。
+
+## 37.1 四域强制隔离：史实、现实、仿真、科幻不得混账
+
+本项目所有“世界内容”先进入以下四域之一：
+
+| 域 | 英文 | 定义 | 可进入真实决策？ | 典型来源 | 红线 |
+|---|---|---|---|---|---|
+| `HISTORY` | Historical Canon | 有史料、考古、学术或可信数字人文来源支撑的历史事实/文本 | 仅用于历史知识与文化设计 | 先秦典籍、正史、考古资料、学术数据库 | 游戏设定不得反写成史实 |
+| `REAL-TWIN` | Real-world Digital Twin | 当代真实世界位置、基础设施、遥测、资产或地理空间数据 | 可，但必须带来源、时间、精度、权限 | GIS、遥感、IoT、BIM、公开/授权 API | 视觉逼真 ≠ 法律地籍/测绘真值 |
+| `SIM` | Simulation / What-if | 数学模型、游戏机制、政策/城市/经济/资源模拟 | 只作为推演，不可冒充现实 | 策略游戏、OR、系统动力学、Agent-Based Model | 模拟结果不得无证据外推 |
+| `FICTION` | Speculative / Fiction | 科幻、未来城市、人工岛、星际文明、世界观 | 不直接进入现实结论 | 高达/科幻、原创设定 | 必须清楚标识为构想 |
+
+**统一字段**：`WORLD_DOMAIN ∈ {HISTORY, REAL-TWIN, SIM, FICTION}`。任何对象若跨域，必须显式建立 `DERIVED_FROM` / `INSPIRED_BY` 边，不得静默覆盖。
+
+---
+
+## 37.2 “秦式统一”的工程解释：统一轨道，不消灭百工
+
+把文化叙事转化为工程原则：
+
+| 古典母题 | 工程映射 | 本项目实施 |
+|---|---|---|
+| 书同文 | 统一语义与对象身份 | DAQIN-IR、统一 Entity ID、统一字段词典 |
+| 车同轨 | 统一接口/协议/坐标 | ABI/FFI/API/事件总线/CRS/时间基准 |
+| 度量衡一 | 统一指标与测试口径 | DAQIN-UCS、Benchmark Contract、P×M×LO |
+| 郡县分治 | 模块自治但中央治理 | capability、namespace、service boundary、policy-as-code |
+| 驿传/秦直道 | 信息与物流骨干网 | event bus、stream、network fabric、routing |
+| 律令 | 可执行规则 | policy-as-code、schema contract、admission gate、audit |
+| 百家争鸣 | 多模型/多组件竞优 | Champion–Challenger、Pareto Frontier |
+| 孙子“先计” | 先评估再行动 | baseline → hypothesis → experiment → deploy |
+| 墨家守御 | 防御纵深、最小可信面 | least privilege、fault containment、rollback |
+| 道家“少扰”工程类比 | 降低系统耦合与不必要变更 | minimal change、graceful degradation |
+
+> **裁定**：文化负责“为何如此组织与呈现”；工程证据负责“是否真的更快、更稳、更安全”。两者互补，不互相冒充。
+
+---
+
+# 37.3 文明/策略游戏统一坐标：不是抄玩法，而是抽象可复用机制
+
+新增游戏机制坐标：
+
+`DAQIN-CIV::<TITLE>/<MECHANIC>/<ERA>#<WORLD_DOMAIN>#<EVIDENCE>`
+
+统一维度：
+
+- `HIST`：史实/考据密度（Historical Grounding）
+- `CHAR`：人物生命周期与关系网（Character Graph）
+- `GOV`：治理制度（Governance）
+- `ECON`：经济/资源（Economy）
+- `DIP`：外交/联盟（Diplomacy）
+- `POP`：人口/阶层（Population）
+- `LOG`：物流/地形/补给（Logistics）
+- `TECH`：技术/制度演化（Technology/Culture Progression）
+- `EVENT`：动态事件/叙事（Event System）
+- `GEO`：地图与空间（Geospatial Model）
+- `SIM`：系统仿真深度（Simulation Depth）
+- `MOD`：可扩展性/模组（Moddability）
+- `UX`：信息呈现/交互（UX）
+- `NET`：多人/长期世界（Online/Persistence）
+- `AI`：NPC/Agent 决策（AI）
+- `TRANSFER`：可移植至《大秦赋算筹》的机制
+- `LIMIT`：局限与不可照搬处
+
+**评分仍使用 `0–5/U/NA`，无证据不得给分；本章不预设“天下第一总分”。**
+
+## 37.3.1 第一批已核实的策略游戏基准集
+
+| 作品 | 当前核实状态（截至 2026-10-01） | 核心机制精髓 | 最适合移植至《大秦赋算筹》 | 主要局限 |
+|---|---|---|---|---|
+| 《大周列国志》 | TapTap 官方入驻页显示 2026-09 仍持续热更新，官方定位西周—春秋—战国历史策略模拟 | 国族/制度/政策、人物、城邑、历史时期演化、中华先秦文化包装 | **先秦制度树、礼制/官制/学派/人物事件、文言叙事、时代推演** | 属游戏仿真；具体数值/事件不可当史实；移动端性能/界面深度受限制 |
+| 《三國志8 REMAKE / with Power Up Kit》 | 光荣特库摩官方资料；2026-01-29 推出 `with Power Up Kit`，系列强调“全武将扮演/全时期” | 武将个体视角、关系网、身份/官职、事件、势力演化 | **“人物即 Agent”与身份生命周期、从个人到组织再到天下的多尺度视角** | 三国叙事/机制不能直接套先秦；AI 与经济模型需现代化 |
+| 《太閤立志伝V DX》 | KOEI TECMO 官方 IR 记载 2022 DX 重制版 | 多职业人生、个人成长、技能/身份转换、地图探索 | **士农工商/百业身份路线、职业树、个人履历与声望** | 历史跨度与模拟颗粒度有限；现代产业链远超游戏职业分类 |
+| 《信长之野望·新生 / Awakening》 | KOEI TECMO 官方产品/手册体系 | 家臣/领地、势力治理、地图行政、人物委任 | **组织层级、属地治理、代理人委任、局部自治** | 日本战国制度不可无缝移植中国史；军事玩法须与现实高保证性系统隔离 |
+| Total War: THREE KINGDOMS | Creative Assembly 官方 Academy 仍提供朝廷、外交、郡国、人物、军团等系统说明 | 战役层战略 + 战斗层实时模拟、人物派系、外交/郡国管理 | **“宏观地图 + 微观场景”双层渲染、状态切换、人物关系可视化** | 游戏平衡优先于史实/现实；战斗模拟不进入现实军工决策 |
+| Europa Universalis V | Paradox 官方称其为最新一代，强调数百政体、人口、资源、气候、外交、经济、军事与物流的深层世界模拟 | 人口、资源、外交、制度、经济、物流、长期历史演化 | **宏观国家/区域“活世界”数据模型、时间跨度、资源网络与情境策略改变** | 模型抽象极强；现实政策与历史因果不可由游戏机制替代 |
+| Crusader Kings III | Paradox 官方持续维护；角色/家族/信仰/文化/领地/继承是核心 | 人物关系图、家族世代、角色特质、动态事件、文化/宗教 | **人—家—组织—地的图谱、代际身份、社会关系、事件驱动** | 中世纪欧洲封建机制不可直接照搬华夏制度；敏感社会属性需治理 |
+| Stellaris | Paradox 官方 2026 仍发布 4.x 更新；程序化银河、文明自定义、外交、空间探索 | 多星体、多文明、程序生成、科技树、空间层级 | **Daqin Spatial Shell 的“星系→星体→区域→设施”多尺度 UI、未来 FICTION 域** | 高度科幻；不得冒充现实宇航物理/工程可行性 |
+| Civilization VII | 2K/Firaxis 官方；2025 发布并持续更新，采用分时代文明演化 | 时代系统、文明/领袖拆分、科技/文化、城市、外交 | **跨时代 schema 迁移、文明/制度版本化、科技—文化双树** | 4X 抽象浓度高；史实与游戏胜利条件不可混同 |
+| Age of Empires IV | 官方支持站 2026 仍维护多平台版本 | 资源采集、科技时代、实时生产与单位调度 | **实时生产/资源循环、操作反馈、短周期调度可视化** | RTS 微操并不等同真实经济/生产系统 |
+
+### 37.3.2 取其精髓后的“大秦文明模拟内核”
+
+不做十款游戏简单拼盘，而抽象成八个引擎：
+
+1. **人物/身份引擎（Person & Role Engine）**：人物、家族、师承、职业、组织、官职、技能、声望、生命周期。
+2. **制度/政策引擎（Institution & Policy Engine）**：规则、法律、组织制度、税费、资源配置、政策版本。
+3. **地域/资产引擎（Territory & Asset Engine）**：国/州/郡/县/城/村/建筑/设施/设备/虚拟资产。
+4. **人口/社会引擎（Population & Society Engine）**：人口、职业、教育、迁徙、组织；敏感属性须最小化、去身份化、用途隔离。
+5. **经济/资源引擎（Economy & Resource Engine）**：生产、库存、贸易、物流、价格、金融、能源、水、粮、计算资源。
+6. **事件/因果引擎（Event & Causal Engine）**：事件溯源、时间线、状态转移、因果假设、反事实模拟。
+7. **外交/协作引擎（Coordination Engine）**：跨组织协议、合同、合作、议价、声誉；现实世界严格遵守法律与授权。
+8. **空间/寰宇引擎（Spatial Engine）**：地球/地下/海洋/空域/轨道/天体/虚构空间的统一 frame graph。
+
+**游戏机制一律作为 `SIM`/`FICTION` inspiration；真实业务对象必须重新绑定 P×M×LO 与来源。**
+
+---
+
+# 37.4 地球、地图、空间数字孪生：统一坐标比较
+
+新增空间产品坐标：
+
+`DAQIN-GEO::<PROVIDER>/<PRODUCT>@<VERSION>#<DATA_DOMAIN>#<DEPLOYMENT>`
+
+统一维度：
+
+`GLOBE / 2D / 3D / IMAGERY / TERRAIN / BUILDING / STREET / ROUTING / POI / GEOCODE / CRS / VERTICAL / TIME / ANALYTICS / STREAM / OFFLINE / OPEN / SELFHOST / API / LICENSE / PRIVACY / UPDATE / LOD / PRECISION / EVIDENCE`
+
+## 37.4.1 已核实的地球/地图/数字孪生技术基准
+
+| 系统 | 已核实能力 | 可取精髓 | 局限/治理 |
+|---|---|---|---|
+| Google Earth / Earth Pro | 高分辨率卫星影像、3D 地形/建筑、Street View；Pro 支持 GIS 导入导出与历史影像 | **“地球即主界面”**、时序影像、全球→局部自然缩放、故事化地理浏览 | 商业授权/数据许可；不可把视觉影像当法律地籍或测量真值 |
+| Google Maps Platform / Map Tiles API | 2D Tiles、Street View Tiles、Photorealistic 3D Tiles；3D 数据采用 OGC 3D Tiles，可由兼容 renderer 渲染 | 高质量现实底图、3D 城市、POI/导航生态、Google 数据与自家引擎解耦 | API 计费、授权/归属要求、区域政策与缓存限制；核心数据非自有 |
+| Google Earth Engine | PB 级公开地理数据目录、云端计算、JavaScript/Python/REST API、行星尺度地理分析 | **地球级时序计算层**：遥感、气候、土地利用、变化检测、地理 AI | 依赖云服务/配额；分析结果仍受源数据分辨率、偏差与许可影响 |
+| Cesium Platform / CesiumJS / Cesium ion | WGS84 高精度全球球体、3D Tiles、地形/影像/BIM/点云/摄影测量；Web/Unreal/Unity/Omniverse/O3DE；SaaS 与 Self-Hosted | **Daqin Spatial Shell 最适合的开放 3D runtime 候选**；LOD、流式巨量 3D、游戏引擎结合、私有部署 | 商业 ion 服务成本；高质量底图/影像仍可能依赖第三方许可 |
+| Esri ArcGIS Urban / ArcGIS | 3D 城市数字孪生、分区/土地利用/发展情景、GIS 分析、协作 | 城市/乡村规划、现实政策情景与项目管理；强 GIS 数据治理 | 商业生态与授权复杂；避免全栈锁定 |
+| OpenStreetMap | 全球社区协作开放地图数据、道路/POI 等，开放许可 | **主权/开放底图层**、本地知识、可自行托管/派生 | 完整度/一致性随地区变化；需质量评估与 attribution/license 管理 |
+| Overture Maps Foundation | 开放基础地图数据、统一 schema、GERS 稳定 ID；官方数据分发于 S3/Azure，也可用 DuckDB/GeoParquet | **统一实体 ID 与跨源 conflation**，非常适合 DAQIN Entity Registry | 不是所有地理数据的替代品；版本、上游许可与 schema 变化需锁定 |
+| QGIS | 开源桌面 GIS；跨 Windows/macOS/Linux/BSD，支持大量 raster/vector/database 格式 | **离线研究/验证工作台**、开放插件、数据检查/编辑 | 桌面 GIS 不等于全球实时服务；大规模流式 3D 需配合其它引擎 |
+| Bentley iTwin | 基建数字孪生 API；融合 CAD/BIM、GIS、reality mesh、IoT、企业数据、4D/变更追踪 | **基础设施资产生命周期数字孪生**、传感器→现实资产→维护/预测 | 企业商业平台；需要权限/数据主权/成本治理 |
+
+## 37.4.2 Daqin Spatial Shell 应采用“多源拼装”，而非单厂商一统
+
+推荐层次：
+
+```text
+L0  Coordinate / Time Truth
+    EPSG/PROJ | WGS84/ECEF/ENU | vertical datum | time scale | uncertainty
+
+L1  Open Base Data
+    OSM | Overture | public DEM | public imagery/catalog
+
+L2  Premium Reality Data (optional)
+    Google Photorealistic 3D Tiles | commercial imagery | local survey
+
+L3  3D Runtime
+    CesiumJS / Cesium Native / Unreal / Unity / O3DE
+
+L4  GIS & Analysis
+    QGIS | PostGIS | DuckDB Spatial | GeoArrow | GDAL | Earth Engine (external)
+
+L5  Infrastructure Twin
+    IFC/BIM | iTwin-compatible adapters | IoT | time-series | asset registry
+
+L6  Simulation
+    traffic | energy | water | population | logistics | economy | environment
+
+L7  Cultural & Narrative Skin
+    先秦/秦汉审美 | 文言/繁体 | 篆体视觉主题 | 游戏化任务/事件
+```
+
+> **关键设计**：Google Earth/Maps 可作为数据/体验 benchmark，不应成为不可替换的唯一底座；核心坐标、Entity ID、事件账、权限与用户数据应由自有层掌握。
+
+---
+
+# 37.5 士农工商 × 现代百业：统一产业生态坐标
+
+新增产业坐标：
+
+`DAQIN-ECO::<DOMAIN>/<SUBDOMAIN>/<ENTITY>@<STATE>#<ROLE>#<EVIDENCE>`
+
+统一字段：
+
+- `DOMAIN`：士/农/工/商/讯/宇/医/教/研/金/社/文/宗/安/基建等
+- `ROLE`：标准组织 / 数据源 / 基础设施 / 软件平台 / 市场 / 终端 / 研究机构
+- `CORE`：核心公开能力
+- `INTERFACE`：API/协议/标准/数据格式
+- `REALTIME`：实时性等级
+- `AI`：AI/自动化角色
+- `SEC`：公开安全/保证性机制
+- `OPEN`：开放性/可迁移性
+- `SELFHOST`：是否可自托管
+- `LOCKIN`：供应商锁定风险
+- `TRANSFER`：可移植机制
+- `LIMIT`：局限/不可照搬项
+- `P/M/LO`：证据与成熟度；本机未测的一律 `LO∅`
+
+## 37.5.1 文化、古籍、武术与宗教/习俗文化层
+
+| 实体/体系 | 核实角色 | 可取精髓 | 边界 |
+|---|---|---|---|
+| Chinese Text Project（中国哲学书电子化计划） | 大规模先秦/汉及以后古籍开放数字库；支持繁/简/英文、结构化 Data Wiki、检索；2026 已加入 AI 对齐翻译并明确提示 AI 会出错 | **古籍 canonical source graph、人物/官名/典籍实体、文言检索、句级对齐** | AI 翻译不可当原典；不同版本/校勘异文需保存来源 |
+| UNESCO Intangible Cultural Heritage | 非遗保护国际框架与名录/周期报告 | 把礼仪、技艺、传统、饮食、音乐、服饰等作为**文化资产而非装饰品**管理：来源、传承、地域、版本、保护状态 | 文化保护 ≠ 商业 IP 所有权；避免把宗教/族群文化工具化 |
+| International Wushu Federation (IWUF) | 全球武术体育组织；有正式竞赛规则、反兴奋剂、隐私与战略计划 | 武术动作 taxonomy、训练记录、赛事规范、裁判数据、运动科学接口 | 竞技规则不等同传统门派史；门派谱系需另证 |
+| 诸子百家原典/正史/考古资料 | HISTORY 主体 | 法/墨/儒/道/兵/名/阴阳等思想的**文本证据—人物—时代—地点—概念图谱** | 不把后世附会或现代网络文章直接升级为先秦事实 |
+
+**宗教与门派层采用“文化知识图谱”而不是优劣排行榜**。宗教信仰、民族、个人信念属于敏感属性；产品设计应尊重信仰自由，不以“评分”裁判宗教优劣，也不得用信仰数据做差别待遇。
+
+## 37.5.2 通信生态产业链
+
+| 基准实体 | 已核实能力/方向 | 可移植至《大秦赋算筹》 |
+|---|---|---|
+| ITU IMT-2030 | 2026 已形成 6G 技术性能要求草案；场景包含沉浸通信、超可靠低时延、大规模通信、泛在连接、AI+通信、通信感知一体化 | **全球统一通信指标框架**；把 latency/reliability/coverage/energy/security/sensing/AI 作为统一坐标 |
+| 3GPP | 移动通信规范体系；6G 工作从 Release 19 需求/研究逐步推进 | 版本化标准、互操作测试、能力协商（capability negotiation） |
+| Ericsson | 6G “intelligent fabric”、AI-native、开放接口、云/AI/移动融合，强调平滑演进与互操作 | **通信—计算—AI 统一资源调度**；不推翻现网而渐进升级 |
+| Nokia | 2026 公开 AI-native RAN 等 6G/网络智能方向 | RAN 自动化、边缘智能、网络可观测与闭环控制 |
+| Huawei | 6G 愿景强调通信、感知、计算与 native AI 融合 | 通感算智一体化作为未来研究坐标；具体性能仍需标准/实测 |
+
+## 37.5.3 人工智能与异构计算生态
+
+| 基准 | 可取精髓 | 《大秦赋算筹》采用方式 |
+|---|---|---|
+| Frontier hosted AI（OpenAI / Anthropic / Google / DeepSeek 等） | 推理、代理、工具调用、代码、研究、视觉/语音/多模态 | **Scout/Analyst/RedTeam/Reproducer/Judge** 多角色；供应商不得拥有 production deploy 权 |
+| Google Gemini API | 2026 官方模型线已有 agent、Deep Research、computer use、multimodal embedding、robotics | Agent/具身/空间推理/多模态 Challenger；版本锁定与独立 eval |
+| DeepSeek API | 2026-09 官方 changelog 持续发布新架构/模型并更新 API | 中国 AI Challenger；以 benchmark/成本/安全/私有化需求实测，不因榜单直接晋级 |
+| NVIDIA / AMD | GPU、混合精度、可重构 FPGA、互联/加速器 | DANF 数值织构、Triton/TVM autotune、FPGA DFX；先 FPGA 后 ASIC |
+| 本地/开源模型 | 隐私、离线、可控、自托管 | 敏感数据优先；模型卡、权重来源、license、SBOM、eval 全登记 |
+
+## 37.5.4 基建、工程与城市数字孪生
+
+| 基准 | 已核实方向 | 可取精髓 |
+|---|---|---|
+| Bentley iTwin | 开放 API 的基础设施数字孪生；融合 engineering/reality/GIS/IoT/enterprise data | **资产从设计→施工→运维→传感器→预测维护的一生一档** |
+| Esri ArcGIS Urban | 城市 3D 情景、土地利用/规划、数字孪生、数据分析与公众协作 | 城市/乡村规划的多情景比较；政策模拟与真实审批隔离 |
+| Siemens / Schneider / ABB 类工业数字化 | 数字孪生、工业自动化、能源/电气、边缘控制 | 设备 registry、OPC UA/MQTT 类接口、实时状态、维护闭环；具体产品逐项 P1 核实后接入 |
+| BIM/IFC/OpenBIM | 建筑/设施数字模型与交换 | 建筑/道路/桥梁/园区进入空间壳层的标准接口 |
+
+## 37.5.5 金融、量化、支付与招聘
+
+| 基准 | 已核实能力 | 可取精髓/红线 |
+|---|---|---|
+| BlackRock Aladdin | “common data language”、全组合投资管理、风险/收益分析、跨资产流程与生态集成 | **统一金融对象/风险因子语言、全组合视角、压力测试**；不把厂商模型输出当投资保证 |
+| Visa Tokenization | 用 token 替代敏感支付凭据，降低敏感数据暴露、支持凭据生命周期 | **令牌化身份/支付别名、降低 PCI/敏感数据传播面**；真实效果数字按 Visa 厂商口径，不直接当 SLA |
+| Stripe Payments | 全球支付、125+ 支付方式、API/SDK、Radar/AI、Billing/Tax/Data Pipeline | **统一支付抽象层 + 本地支付 adapter + 风险引擎**；避免把支付基础设施绑死在单一供应商 |
+| LinkedIn Talent | 搜索、人才匹配、InMail、候选 pipeline | 士/人才图谱、技能 ontology、职业路径；个人数据须合法取得、目的限定 |
+| Indeed Employer | 职位发布、匹配、筛选与 AI 建议 | 招聘事件流、岗位—技能—地点匹配；任何就业高影响决策必须人工监督/公平性评估 |
+
+## 37.5.6 教育、学术与科研生态
+
+| 基准 | 已核实能力 | 可取精髓 |
+|---|---|---|
+| Crossref | 开放研究元数据、DOI 关系网络、REST/OAI-PMH、Research Nexus | **科研对象统一 ID + metadata lineage + 引文/资助/机构关系图** |
+| ORCID | 全球研究者持久身份标识 | 研究者身份与贡献解耦；不要依姓名字符串匹配 |
+| Semantic Scholar | 2 亿+论文级 AI 检索/学术图谱（官方自述）、开放 API/数据 | AI 文献发现 Challenger；摘要/AI 提取不替代原论文审读 |
+| arXiv / preprint ecosystems | 前沿预印本快速发布 | 科研雷达的“早期信号”；未同行评审必须标识 |
+| Chinese Text Project | 古典人文学术/数字文本 | 把华夏古典学也纳入现代 research object/identifier/lineage 体系 |
+
+## 37.5.7 社交、社区、商业与士农工商的扩展原则
+
+本轮不制造“全球所有公司穷举清单”，而建立**可扩展注册表**：
+
+- `士`：教育、科研、人才、治理、知识生产；
+- `农`：农业、食品、水、土壤、气象、遥感、供应链；
+- `工`：制造、能源、矿业、建筑、机器人、工业互联网；
+- `商`：零售、电商、物流、支付、金融、广告、客户服务；
+- `讯`：通信、云、边缘、卫星互联网、身份；
+- `宇`：空间、遥感、导航、轨道、地球观测；
+- `医`：医疗、药品、生命科学（另行按高风险规范）；
+- `社`：社交、协作、社区、消息；
+- `文/宗/武`：文化、宗教、传统、武术、艺术；
+- `安`：零信任、身份、密码、供应链、高保证性；
+- `基建`：交通、水务、电网、建筑、城市数字孪生。
+
+每新增公司/组织时，**必须**先登记：官方主体、官方域名、产品/标准、国家/地区、数据许可、API、隐私、版本、P/M/LO、`TRANSFER` 与 `LIMIT`。没有这些字段就只进入 `CANDIDATE`，不得写成“已验证顶尖”。
+
+---
+
+# 37.6 百业统一世界对象模型（Unified World Object Model, UWOM）
+
+为避免每个产业各自一套 ID，定义所有现实/历史/仿真对象的母对象：
+
+```text
+Entity {
+  entity_id
+  entity_type
+  world_domain        // HISTORY | REAL-TWIN | SIM | FICTION
+  canonical_name
+  aliases[]
+  valid_time
+  transaction_time
+  spatial_frame
+  geometry
+  owner_or_steward
+  jurisdiction
+  provenance[]
+  confidence
+  sensitivity
+  policy_tags[]
+  relations[]
+  state
+  version
+}
+```
+
+统一 `entity_type` 示例：
+
+```text
+Person | Family | Organization | SchoolOfThought | Religion | MartialArt
+Place | Parcel | Building | Road | Bridge | Utility | Vehicle | Satellite
+Product | Service | Device | Software | Dataset | Model | Policy | Contract
+Job | Skill | Course | Paper | Patent | Payment | Account | Asset | Event
+```
+
+所有产业只是**UWOM 的不同视图（views）**，不是互相无法连接的数据库孤岛。
+
+---
+
+# 37.7 “寰宇启动界面”从游戏视觉升级为真实系统壳层
+
+启动后不直接把整个宇宙塞进 kernel，而采用：
+
+```text
+Secure / Measured Boot
+        ↓
+Minimal OS + Identity + Policy
+        ↓
+Spatial Shell Service
+        ↓
+Universe / Solar System / Earth / Region / Site / Building / Room / Asset
+        ↓
+Contextual Apps & Data Layers
+```
+
+### 37.7.1 Level of Detail / Level of Truth 双层机制
+
+传统游戏只有 LOD；本项目增加 **Level of Truth (LOT)**：
+
+| 级别 | 含义 |
+|---|---|
+| `LOT0` | 纯视觉/占位符 |
+| `LOT1` | 单一来源、未经交叉核实 |
+| `LOT2` | 多来源一致/有更新时间 |
+| `LOT3` | 官方/权威数据 + 版本 + 精度 |
+| `LOT4` | 本地实测/授权现场数据 |
+| `LOT5` | 关键系统校准/认证/审计通过 |
+
+因此画面可以非常漂亮，但 UI 必须让使用者知道：**“我看到的对象有多真实”**。
+
+### 37.7.2 地下/海底/室内/轨道统一坐标
+
+空间对象至少带：
+
+`BODY / FRAME / CRS / X / Y / Z / T / VX / VY / VZ / ORIENTATION / VERTICAL_DATUM / UNCERTAINTY / SOURCE`
+
+- 地球表面：WGS84/geodetic；
+- 地心：ECEF；
+- 局部：ENU/NED；
+- 建筑：local BIM frame；
+- 地下/海底：vertical datum + depth；
+- 卫星/天体：SPICE-compatible frame/ephemeris；
+- FICTION 人工岛/殖民地：自定义 frame，但必须标 `FICTION`/`SIM`。
+
+---
+
+# 37.8 从“游戏玩法”到“真实数字社会”的防退化门闸
+
+以下任何情况直接 VETO：
+
+1. **游戏内数值/事件被当成历史事实。**
+2. **商业地图的视觉 3D 被当成法律地籍/工程测量精度。**
+3. **实时地图/社交数据未经授权进入人物画像。**
+4. **宗教、族群、信仰被评分或用于差别待遇。**
+5. **招聘/金融/医疗等高影响决定由游戏式“属性分数”自动裁决。**
+6. **军事/国安层把游戏机制转成现实进攻流程。** 本项目仅迁移公开的高保证性工程、仿真、数字孪生、供应链、可靠性与防御性安全方法。
+7. **单一厂商地图/AI/支付/云形成不可退出锁定。**
+8. **“实时”优先于正确性/安全性/可回滚性。**
+9. **FICTION 层的人工磁浮岛/星际设定被写成当前物理可行事实。**
+10. **生态注册表把厂商营销自述自动升级成 SLA。**
+
+---
+
+# 37.9 RedTeam：文化—地理—产业融合后的新攻击面
+
+| 攻击/失效面 | 风险 | 对策 |
+|---|---|---|
+| 世界模型数据投毒 | 错误地图/人物/组织关系进入知识图 | provenance、签名、版本、异常检测、人工复核 |
+| “逼真即真实”认知攻击 | 3D 画面导致过度信任 | LOT 显示、误差椭球、来源/日期常显 |
+| 跨域身份拼接 | 地图+支付+招聘+社交形成过度画像 | domain separation、purpose limitation、privacy budget、最小化 |
+| 文化误读 | 游戏化、后世附会覆盖原典 | HISTORY 与 SIM 分域、原典/校勘/学术来源分层 |
+| 供应商锁定 | Google/Esri/单云/单 AI 不可替换 | open standards、adapter、data export、self-host baseline |
+| 事件风暴 | “万物实时”压垮系统 | event priority、backpressure、sampling、cold path |
+| AI 自主越权 | Agent 自动改生产世界模型/策略 | tool capability、two-person approval、signed artifact、rollback |
+| 版权/许可污染 | 游戏素材/地图影像/数据授权不清 | license registry、attribution、asset allowlist |
+| 数字孪生反向泄密 | 设施/人员/安防细节过度集中 | tiered access、redaction、need-to-know、air-gap/one-way export where appropriate |
+
+---
+
+# 37.10 Critic：本轮真正值得“取其精髓”的不是画面，而是系统结构
+
+**策略游戏贡献**：角色/关系/制度/经济/事件/地图/时代演化的交互设计。
+
+**Google Earth/Maps/Cesium/Esri 贡献**：全球坐标、LOD、现实数据、3D 流式、空间分析、城市数字孪生。
+
+**产业平台贡献**：真实 API、身份、支付、通信、资产、科研、招聘、风险、合规与版本治理。
+
+**《大秦赋算筹》要做的不是复制它们，而是把它们共同缺少的“统一世界对象、证据等级、可切换供应商、历史/现实/仿真/科幻分域”补齐。**
+
+---
+
+# 37.11 KillCritic：五个“看似宏大、实则退化”的方向
+
+### KC-37-01：一开始就做完整元宇宙
+
+否决。先做 2D/3D 地球壳层最小闭环：`Entity → Map → Timeline → Event → Source → Permission`。
+
+### KC-37-02：一次接入所有产业实时 API
+
+否决。先做 adapter contract 与 synthetic/mock；生产 API 按授权逐域接入。
+
+### KC-37-03：把古代官制硬套现代公司/政府
+
+否决。文化名称可作 UI/模块别名，现实权限仍使用现代 RBAC/ABAC/capability 与法律职责。
+
+### KC-37-04：以游戏“好玩度”决定现实模拟模型
+
+否决。真实模型按预测/解释/校准/误差/因果/稳定性验收。
+
+### KC-37-05：把“顶尖公司列表”当成永久真理
+
+否决。实体必须进入 Tech Radar，定时复核产品状态、版本、许可、重大安全/架构变化。
+
+---
+
+# 37.12 Blindspot：当前仍为 UNKNOWN / 待实测
+
+- Google Photorealistic 3D Tiles、Cesium、Unreal/Unity/O3DE 在**用户实际 Windows 11 GPU**上的 FPS、VRAM、网络流量、缓存、功耗：`UNKNOWN / LO∅`。
+- OSM/Overture/Google 在用户目标地区的数据完整性差异：`UNKNOWN / LO∅`。
+- 大规模人物/组织/地点图谱使用 Neo4j/ArangoDB/PostgreSQL+AGE/GraphRAG 的最佳方案：`UNKNOWN / 待 benchmark`。
+- 3D 世界与实时事件并行时的最大可承载 entity/event 数：`UNKNOWN / 待 stress`。
+- 文言/繁体 UI 对使用效率、可读性、国际化的真实影响：`UNKNOWN / 待 usability A/B`。
+- 策略游戏机制迁入教育/城市/经济仿真的增益：`UNKNOWN / 只能实验验证`。
+
+---
+
+# 37.13 Cheatsheet：本章 20 条不退化铁则
+
+1. 华夏古典文化为文明母体；工程事实必须现代验证。
+2. HISTORY / REAL-TWIN / SIM / FICTION 四域分账。
+3. 所有对象必须有 canonical ID、时间、空间、来源与版本。
+4. 地图视觉精度不得偷换测量/法律精度。
+5. 真实空间与游戏空间使用同一 frame API，但不同 WORLD_DOMAIN。
+6. 游戏取“机制”，不取“数值真理”。
+7. 世界模型先做 LOT，再做华丽渲染。
+8. 开放坐标、开放格式、可导出数据优先。
+9. Google/Esri/Cesium 等作为可替换数据/能力供应商。
+10. OSM/Overture 建立开放底图与稳定实体 ID 基线。
+11. PROJ/EPSG/SPICE 负责现实坐标/时间，不自行拍脑袋。
+12. 3D Tiles/LOD 负责海量 3D 流式，不一次装入内存。
+13. 产业平台先统一 adapter/interface，再接生产 API。
+14. 支付采用 tokenization/最小敏感数据传播。
+15. 科研采用 DOI/ORCID/开放 metadata lineage。
+16. 招聘/金融/医疗高影响决策保留人工监督与审计。
+17. 宗教/信仰/族群不做优劣评分。
+18. 军工/国安只迁移公开高保证性、防御性与仿真方法。
+19. 任何实时控制必须有 backpressure、fallback、rollback。
+20. 新实体/新公司/新游戏/新地图均先进入 Challenger Registry，不自动晋级。
+
+---
+
+# 37.14 Blueprint：大秦“文明—地球—百业”最终母架构
+
+```text
+                    ┌────────────────────────────┐
+                    │ 华夏文明母体 / Cultural OS │
+                    │ 先秦原典·历史·文言·礼俗·艺术 │
+                    └──────────────┬─────────────┘
+                                   │ semantic skin / ontology
+                                   ▼
+┌─────────────────────────────────────────────────────────────────┐
+│             Unified World Object Model (UWOM)                   │
+│ Entity ID | Time | Space | Provenance | Policy | WORLD_DOMAIN   │
+└───────────────┬─────────────────────┬───────────────────────────┘
+                │                     │
+        ┌───────▼────────┐    ┌───────▼───────────┐
+        │ Knowledge Graph │    │ Event / State Log │
+        │ people/org/text │    │ realtime/history │
+        └───────┬────────┘    └───────┬───────────┘
+                │                     │
+                └──────────┬──────────┘
+                           ▼
+             ┌─────────────────────────────┐
+             │      Daqin Spatial Shell    │
+             │ Globe / City / BIM / Space │
+             │ LOT + LOD + Timeline       │
+             └───────┬───────────┬────────┘
+                     │           │
+         ┌───────────▼───┐   ┌──▼─────────────────┐
+         │ REAL-TWIN      │   │ SIM / FICTION      │
+         │ GIS/IoT/BIM/API│   │ Game/What-if/Story │
+         └───────┬────────┘   └─────────┬──────────┘
+                 │                      │
+                 └──────────┬───────────┘
+                            ▼
+                 ┌─────────────────────┐
+                 │ 百业 Adapter Fabric │
+                 │ 讯/宇/农/工/商/金/ │
+                 │ 教/研/社/医/文/安  │
+                 └──────────┬──────────┘
+                            ▼
+                 ┌─────────────────────┐
+                 │ AI / OR / Statistics│
+                 │ Rules→ML→Causal→RL │
+                 └──────────┬──────────┘
+                            ▼
+                 ┌─────────────────────┐
+                 │ Governance & Gates  │
+                 │ P×M×LO / LOT / RBAC│
+                 │ human / audit / RB │
+                 └─────────────────────┘
+```
+
+---
+
+# 37.15 ActionPlan：先实测代码，再进入自研 OS
+
+## A37-0 — 文件/证据冻结
+
+- 当前 v1.3.0 + 本章签发 hash；
+- 所有网页来源记录 `source_url/source_date/retrieved_at/evidence_grade`；
+- 游戏/厂商宣传数字默认不进入 SLA。
+
+## A37-1 — `world-registry` 最小原型
+
+先做 PostgreSQL/DuckDB schema：
+
+```text
+entity
+entity_alias
+entity_relation
+source
+spatial_frame
+geometry_ref
+state_event
+world_domain
+policy_tag
+```
+
+以 **100 个 HISTORY 实体 + 100 个 REAL-TWIN 地点 + 100 个 SIM 游戏对象**验证四域隔离。
+
+## A37-2 — `spatial-shell-bench`
+
+在 Windows 11 / WSL2：
+
+- CesiumJS；
+- Google Photorealistic 3D Tiles（若有合法 API key）；
+- OSM/Overture；
+- 本地 terrain/3D Tiles；
+
+测：
+
+`FPS / frametime p95/p99 / VRAM / RAM / network MB / tile cache / startup / LOD transition / CPU / GPU / power`。
+
+## A37-3 — `game-mechanic-lab`
+
+**不抓取受版权保护的游戏资产**；只用人工编码的机制模型与公开说明，做：
+
+- Character Graph；
+- Institution Tree；
+- Event Engine；
+- Territory Graph；
+- Economy/Resource Loop；
+- Timeline；
+- 2D/3D map linking。
+
+## A37-4 — 文化语料与文言层
+
+- 先秦原典来源以 CText/可靠校勘资料为起点；
+- 保存原文、版本、章节、异文、现代释义、AI 译文的独立层；
+- 文言 UI 做可切换皮肤，不阻碍现代中文/英文可访问性；
+- 篆体作为视觉字体层，不作为 canonical token。
+
+## A37-5 — 百业 Adapter SDK
+
+统一：
+
+```text
+discover()
+get_schema()
+get_entity()
+get_events()
+get_state()
+health()
+capabilities()
+provenance()
+```
+
+先用 mock/synthetic adapter 验证，之后才逐个授权接入真实服务。
+
+## A37-6 — 图谱/时序/空间数据库优选
+
+Challenger：
+
+- PostgreSQL + PostGIS；
+- DuckDB Spatial；
+- graph extension / dedicated graph DB；
+- Parquet/GeoParquet；
+- object store；
+- time-series engine。
+
+按同一 workload 评估：正确性、空间查询、图遍历、写入、并发、恢复、体积、成本。
+
+## A37-7 — AI World Model
+
+Agent 只可：
+
+- 读来源；
+- 生成候选 link；
+- 提出冲突；
+- 生成模拟情景；
+- 建议测试。
+
+Agent 不可：
+
+- 自动把 SIM 升格 HISTORY；
+- 自动改生产权限；
+- 自动发布高影响决定。
+
+## A37-8 — OS Integration
+
+只有当世界模型/空间壳层在 Windows/Linux 上稳定通过：
+
+`IQ → OQ → PQ → MQ`
+
+再把它作为 DaqinOS user-space shell/image profile 的默认组件。
+
+**不得为了“开机即寰宇”把 GIS/游戏/AI 依赖塞进 kernel。**
+
+---
+
+# 37.16 本章已核实来源登记（2026-10-01）
+
+## 策略/历史游戏
+
+- KOEI TECMO — Romance of the Three Kingdoms 8 REMAKE / series information: https://www.koeitecmoamerica.com/news/koei-tecmos-romance-of-the-three-kingdoms-8-remake-now-available-with-the-most-officers-and-scenarios-to-date/
+- KOEI TECMO — 2026 series/business information（含 `三國志8 REMAKE with パワーアップキット`）: https://www.koeitecmo.co.jp/business/entertainment/
+- KOEI TECMO IR — `太閤立志伝V DX`: https://www.koeitecmo.co.jp/ir/docs/ir3_20220725.pdf
+- Total War Academy — THREE KINGDOMS: https://academy.totalwar.com/three-kingdoms/
+- Paradox — Europa Universalis V: https://www.paradoxinteractive.com/games/europa-universalis-v/about
+- Paradox — Crusader Kings III: https://www.paradoxinteractive.com/games/crusader-kings-iii/about
+- Paradox — Stellaris: https://www.paradoxinteractive.com/games/stellaris/about
+- 2K/Firaxis — Civilization VII: https://civilization.2k.com/seven/
+- Age of Empires official support — Age of Empires IV: https://support.ageofempires.com/hc/en-us/articles/360057044272-How-do-I-download-Age-of-Empires-IV
+- TapTap 官方入驻 — 《大周列国志》（P2：平台官方入驻账号/版本页，不等同开发商自有域名）: https://www.taptap.cn/app/190784
+
+## 地图 / GIS / 数字孪生
+
+- Google Earth: https://www.google.com/earth/about/download/
+- Google Maps Tile API: https://developers.google.com/maps/documentation/tile/
+- Google Photorealistic 3D Tiles: https://developers.google.com/maps/documentation/tile/3d-tiles-overview
+- Google Earth Engine: https://developers.google.com/earth-engine/
+- Cesium Platform: https://cesium.com/platform/
+- Cesium ion: https://cesium.com/platform/cesium-ion/
+- Esri ArcGIS Urban: https://www.esri.com/en-us/arcgis/products/arcgis-urban/overview
+- OpenStreetMap: https://www.openstreetmap.org/about
+- Overture Maps Foundation: https://overturemaps.org/about/who-we-are/
+- Overture Docs: https://docs.overturemaps.org/
+- QGIS: https://www.qgis.org/
+- Bentley iTwin Platform: https://developer.bentley.com/itwinplatform/
+
+## 文化 / 学术 / 武术
+
+- Chinese Text Project: https://ctext.org/
+- Chinese Text Project introduction: https://ctext.org/introduction/ens
+- UNESCO Intangible Cultural Heritage — China: https://ich.unesco.org/en-state/china-CN
+- International Wushu Federation: https://www.iwuf.org/en/about-iwuf/index.html
+- IWUF Documents: https://www.iwuf.org/en/about-iwuf/documents/index.html
+- Crossref: https://www.crossref.org/about
+- Crossref metadata: https://www.crossref.org/documentation/retrieve-metadata/
+- ORCID: https://info.orcid.org/what-is-orcid/
+- Semantic Scholar: https://www.semanticscholar.org/about
+
+## 通信 / AI / 金融 / 支付 / 人才
+
+- OpenAI Agents API / Agents platform（2026-09 官方）: https://openai.com/index/introducing-the-agents-api/
+- Anthropic enterprise AI services（2026 官方）: https://www.anthropic.com/news/enterprise-ai-services-company
+- ITU IMT-2030 2026 technical requirements: https://www.itu.int/hub/2026/03/imt-2030-technical-requirements-for-the-6g-future/
+- ITU-R M.2160: https://www.itu.int/rec/R-REC-M.2160/en
+- Ericsson 6G: https://www.ericsson.com/en/6g
+- Nokia 6G newsroom: https://www.nokia.com/newsroom/?h=1&t=6G
+- Huawei 6G: https://www.huawei.com/en/huaweitech/future-technologies/6g-white-paper
+- Google Gemini models: https://ai.google.dev/gemini-api/docs/models
+- DeepSeek API changelog: https://api-docs.deepseek.com/updates/
+- BlackRock Aladdin: https://www.blackrock.com/aladdin
+- Visa Tokenization: https://www.visa.com/en-us/solutions/tokenization
+- Stripe Payments: https://stripe.com/payments
+- LinkedIn Talent: https://www.linkedin.com/business/talent/recruitment
+- Indeed for Employers: https://www.indeed.com/hire
+
+---
+
+# 37.17 本章收束
+
+本章不把《大秦赋算筹》定义成“历史游戏”“Google Earth 克隆”“超级 App”或“元宇宙”中的任何单一类别，而定义为：
+
+> **以华夏古典文明为文化母体，以统一世界对象/时空坐标/证据治理为骨架，以策略模拟与数字孪生为交互，以百业 adapter 为经络，以统计/运筹/AI 为算筹，以现代安全与高保证性工程为法度，最终运行于可验证、可回滚、可演进的 DaqinOS user-space 之上的“文明计算与世界模型平台”。**
+
+真正进入自研操作系统前，必须先在现有 Windows 11 + WSL2/VM 上完成：
+
+`world-registry → spatial-shell-bench → game-mechanic-lab → adapter-sdk → graph/spatial benchmark → AI world-model → IQ/OQ/PQ/MQ`。
+
+**先证实，再内建；先 user-space，再 kernel-space；先开放标准，再厂商特性；先真相分域，再沉浸体验。**
+
+---
+
+# 38. 文明策略母体 × 万物能力谱 × 科幻目标现实映射：从“人物五维”升级为可验证世界模型（2026-10-01）
+
+> **本章定位**：在 §37 的 `HISTORY / REAL-TWIN / SIM / FICTION` 四域隔离、`DAQIN-CIV`、`UWOM`、`P × M × LO` 基础上，补齐三件事：
+>
+> 1. 将春秋战国、秦汉、三国及同类策略游戏进一步扩展为可比较的“文明机制实验库”；
+> 2. 建立“所有生物/实体都可登记，但绝不强迫共用单一总分”的统一能力谱；
+> 3. 将《七龙珠》等科幻目标拆成“现有科学可行部分 / 实验室原型 / 尚无证据”三类研究任务。
+>
+> **铁律继续有效**：历史叙事不是工程证据；游戏数值不是现实测量；文化身份自述可以作为项目叙事元数据，但不是历史谱系的独立证据；科幻构想不得因“未来可能”而冒充已经实现。
+
+## 38.1 非退化前置：本章只扩展，不覆盖 §0–§37
+
+本章不修改既有：
+
+- `DAQIN-UCS`；
+- `UWOM`；
+- `P × M × LO`；
+- `HISTORY / REAL-TWIN / SIM / FICTION` 四域隔离；
+- `OS Catalog / Benchmark Contract / OS Factory`；
+- `SEARCH-01 / RADIX-01 / DANF / DAQIN-IR`；
+- 生产博彩系统禁连、禁实测红线。
+
+`Rmodel`、旧赔率论文、140 张数据表与 `registry_risk_topology` 在本章只作为**方法血统和离线架构范式**使用，不连接任何旧生产服务器，也不直接把博彩风控标签迁移成现实人物“好坏分数”。
+
+---
+
+# 38.2 文明策略游戏第二批基准：从“好不好玩”转成机制抽取
+
+## 38.2.1 标题辨识铁律
+
+用户提到的“《春秋战国》”目前不能在公开资料中唯一解析为一款仍持续运营、且名称就叫《春秋战国》的标准策略游戏，因此本件登记：
+
+`TITLE::<春秋战国> = AMBIGUOUS / UNKNOWN`。
+
+不猜具体作品，改用**已经核实、明确以春秋战国为题材或包含该时期的作品**作为代表：
+
+- 《大周列国志》；
+- 《大秦帝国之帝国烽烟》；
+- 《无悔华夏》（含“春秋战国”“春秋”“三家分晋”“吴楚越”“横扫六合”“长平之战”等）；
+- 《猫话列国》（春秋战国题材，作为轻量策略/阵型机制参考，不作为历史仿真基准）。
+
+## 38.2.2 已核实文明/策略游戏机制矩阵
+
+| 作品 | 核实状态 | 主要可迁移机制 | 主要局限 / 不可照抄 | 《大秦赋算筹》迁移方向 |
+|---|---|---|---|---|
+| **《大周列国志》** | P2：TapTap 官方入驻页与更新记录 | 西周—春秋—战国时代框架、国策、人物、城邑、外交、事件、华夏文化表现 | 游戏平衡与历史事实并非同一层；数值是玩法参数 | `HISTORY` 史料层与 `SIM` 仿真层分离；国策/事件/人物关系进入文明模拟器 |
+| **《大秦帝国之帝国烽烟》** | P2：TapTap 官方入驻；2026-09 仍有更新 | 七雄大地图、同图城建/野战/行军、联盟/世族、攻城器械、兵种、实时多人沙盘 | 商业手游养成/充值和平衡机制不可当史实；“万人争霸”等属于产品设计 | 借鉴“同一世界地图上的多人异步状态”“世族/联盟组织层级”“战争空间 UI”，不复制商业数值 |
+| **《无悔华夏》** | P2：TapTap 官方入驻；春秋战国及多朝代剧本已核实 | 多时代 schema、名臣、政策、势力、历史支线、战役、人物传记、跨时代内容迁移 | 剧本戏剧化与玩法简化不可替代史料 | 借鉴 `Era/Scenario/Event/Policy/Minister` 对象模型和历史版本迁移 |
+| **《猫话列国》** | P2：TapTap 官方入驻 | 春秋战国武将、三兵种克制、阵型、天气/地形；强调阵容容错而非单一稀有度 | “猫化”属创作层；不能作严肃史学基准 | 可用于 `FICTION/SIM` 的角色皮肤与轻量战斗规则，不进入史实账 |
+| **《三國志8 REMAKE》** | P1：KOEI TECMO 官方 | 1000+ 武将、“全武将扮演”、君主/都督/太守/军师/一般/头领/同志/在野等身份，关系图、季度评定、任务分派；五维能力 `LEA/STR/INT/POL/CHA` | 五维能力是游戏设计，不是科学人格量表；人物属性含艺术化判断 | 借鉴“人物作为主角”“身份状态机”“关系图”“能力→任务效果”框架；能力值必须改为可实测模型 |
+| **《三国志·战略版》** | P2：TapTap 官方入驻；2026-09 更新 | 大地图、真实地形/关卡/码头、四季自然变量、联盟、大规模多人、剧本赛季、兵种/战法组合 | 赛季化商业 SLG；属性/武将平衡不可直接迁移 | 借鉴 terrain-aware simulation、season/event schema、联盟协同、动态剧本 |
+| **《太閤立志伝V DX》** | P1/P2：KOEI TECMO 官方产品资料 | 多职业/多人生路径、个人成长、技能、身份迁移、非君主中心叙事 | 日本战国制度与华夏制度不可硬套；技能数值属游戏机制 | 借鉴 `PersonCareerGraph`、职业转移、个人事件、能力成长 |
+| **《信长之野望·新生 / Awakening》** | P1：KOEI TECMO 官方 manual | 领地分封、家臣自律、郡/城/领主/军团、政策、威信、外交、建议系统 | 日本封建制度不等于周秦郡县/封建结构 | 借鉴“中心治理范围有限→区域授权”“属臣自主执行”“政策有维护成本” |
+| **Total War: THREE KINGDOMS** | P1：Creative Assembly / Total War Academy | 战略地图 + 实时战斗双层、人物/派系/外交/间谍、郡国经济、军队管理 | 战斗 AI 与历史事件按游戏性调整 | 借鉴“宏观规划→微观场景切换”“战场/政务不同时间尺度” |
+| **Crusader Kings III** | P1：Paradox | 人物中心、家族/继承、文化/宗教、关系、人格特质、长时段动态世界 | 中世纪欧洲制度与华夏制度不可直接映射；人格特质不是心理学诊断 | 借鉴世代/亲缘/关系图与事件生成；现实人物不得复制其“性格标签化”方式 |
+| **Europa Universalis V** | P1：Paradox，2025 公告/当前产品页 | `pop` 人口、文化/宗教/阶层、资源、气候、生产/贸易、道路港口、外交、物流、长期政策演化 | 宏观抽象会掩盖个体；历史参数仍为游戏化 | 借鉴 `Population Cohort`、资源流、生产链、物流、政策与社会长期演化 |
+| **Stellaris** | P1：Paradox；2026 仍持续更新 | 程序生成星系、物种 traits、伦理/政体、领袖、科技、舰船设计、外交、跨星系空间层级 | 科幻设定不作现实科技证据 | 只进入 `FICTION/SIM`；借鉴宇宙层级、物种 schema、程序生成与空间壳层 |
+| **Civilization VII** | P1：2K/Firaxis 官方 | 文明时代演化、领袖、科技/文化路线、时代切换、跨平台/VR | 文明被压缩为游戏对象；不可作为历史评价 | 借鉴 `AgeTransition`、科技/文化双轨、历史 schema migration |
+| **Age of Empires IV** | P1：官方产品体系 | 资源采集、单位生产、科技树、实时反馈、文明差异化 | RTS 时间尺度极度压缩 | 借鉴“资源→产能→技术→单位”的实时闭环；不采用其历史时间尺度 |
+
+### 38.2.3 DAQIN-CIV-2 统一坐标
+
+以后每款策略产品不再用“总评分”判断，而登记：
+
+```text
+DAQIN-CIV-2::<TITLE>@<VERSION>
+  ERA              历史时期 / Historical Era
+  HIST             史实约束 / Historical Grounding
+  CHAR             人物系统 / Character Model
+  REL              关系图谱 / Relationship Graph
+  GOV              治理制度 / Governance
+  ECON             经济系统 / Economy
+  POP              人口社会 / Population
+  DIP              外交 / Diplomacy
+  LOG              物流 / Logistics
+  GEO              空间地理 / Geospatial
+  WAR              战争仿真 / Conflict Simulation
+  TECH             科技树 / Technology
+  CULT             文化宗教 / Culture & Belief
+  EVENT            事件引擎 / Event Engine
+  CAREER           职业生命周期 / Career & Life-course
+  AI               Agent/AI Depth
+  MOD              Mod/API/Extensibility
+  UX               Information Architecture / UX
+  NET              Multiplayer/Distributed World
+  PROV             来源与血统 / Provenance
+  P / M / LO        证据、成熟度、本机实证
+```
+
+任何一项没有证据：`U`；不适用：`NA`。禁止把 `U` 当 0，禁止自动生成“天下第一游戏”。
+
+---
+
+# 38.3 从《三國志》五维能力到“万物统一能力谱”：必须升级而不能照抄
+
+KOEI TECMO 的《三國志8 REMAKE》官方手册公开五种武将能力：
+
+- `LEA` Leadership：统率；
+- `STR` Strength：武力；
+- `INT` Intelligence：智力；
+- `POL` Politics：政治；
+- `CHA` Charisma：魅力。
+
+这些维度非常适合作为**文化/UI 祖型**，但不适合作为现实世界“所有人、所有生物、所有 AI、所有设备”的统一科学评分。
+
+理由：
+
+1. 维度过少；
+2. 不同实体类型的能力空间不同；
+3. 游戏值多由设计者手工设定；
+4. 缺少情境、时间、样本量、误差、可解释证据；
+5. 若用于现实人物，“魅力/忠诚/德性”等主观值容易产生偏见和 Goodhart；
+6. 人、动物、AI、机器人、组织、道路、卫星不可能用同一张五维表有效比较。
+
+因此新增：
+
+# **大秦万物统一能力谱（Daqin Universal Entity Capability Graph, DUECG）**
+
+---
+
+## 38.3.1 “统一”统一什么？
+
+统一的是：
+
+- ID；
+- 类型；
+- 时间；
+- 空间；
+- 任务定义；
+- 指标单位；
+- 来源；
+- 证据等级；
+- 不确定度；
+- 版本；
+- 关系；
+- 能力模块接口。
+
+**不是**统一成一个“天下万物总分”。
+
+### 通用主键
+
+```text
+DUECG::<WORLD_DOMAIN>/<ENTITY_TYPE>/<ENTITY_ID>@<VALID_TIME>#<SPATIAL_FRAME>
+```
+
+### 通用事实结构
+
+```text
+entity_id
+entity_type
+world_domain            # HISTORY / REAL-TWIN / SIM / FICTION
+valid_time
+transaction_time
+spatial_frame
+geometry_ref
+source_ref
+provenance_hash
+consent_policy           # 现实个人数据适用
+sensitivity_class
+observation_id
+task_id
+context_id
+metric_id
+metric_value
+metric_unit
+sample_n
+uncertainty
+P
+M
+LO
+model_version
+```
+
+---
+
+## 38.3.2 实体类型：开放世界，不穷举所有个体
+
+“分析目前元宇宙所有生物”在工程上不应解释成预先列出宇宙所有生命体，而应解释成：
+
+> **建立 open-world schema，使任何后来出现/发现/模拟的实体都能登记，而不必改数据库核心。**
+
+一级类型：
+
+```text
+BIOLOGICAL
+  HUMAN
+  ANIMAL
+  PLANT
+  MICROBE
+  ECOSYSTEM
+
+ARTIFICIAL
+  AI_AGENT
+  ROBOT
+  VEHICLE
+  DEVICE
+  SOFTWARE
+  MODEL
+
+SOCIAL
+  FAMILY
+  CLAN
+  ORGANIZATION
+  COMPANY
+  SCHOOL_OF_THOUGHT
+  RELIGIOUS_OR_CULTURAL_INSTITUTION
+
+INFRASTRUCTURE
+  BUILDING
+  ROAD
+  BRIDGE
+  GRID
+  NETWORK
+  SATELLITE
+  SPACECRAFT
+
+GEOSPATIAL
+  PARCEL
+  CITY
+  REGION
+  CELESTIAL_BODY
+
+FICTIONAL
+  CHARACTER
+  SPECIES
+  ARTIFACT
+  FACTION
+```
+
+每种类型通过模块组合，而不是重新发明一套数据库。
+
+---
+
+# 38.4 能力模块：模块化，不适用即 NA
+
+## 38.4.1 通用能力模块（Universal Capability Modules）
+
+| 模块 | 中文 | English | 适用实体 | 典型可观测量 |
+|---|---|---|---|---|
+| `COG` | 认知/推理 | Cognition & Reasoning | 人、AI、部分动物 | 任务正确率、推理延迟、学习曲线 |
+| `KNW` | 知识 | Knowledge | 人、AI、组织 | 经校验知识覆盖、检索命中、考试/任务证据 |
+| `PHY` | 物理执行 | Physical Capability | 生物、机器人、车辆 | 力、速度、耐力、负载、精度 |
+| `MOB` | 机动 | Mobility | 生物、车辆、机器人、航天器 | 速度、航程、通过性、能耗 |
+| `OPS` | 任务执行 | Operational Execution | 人、AI、组织、设备 | throughput、成功率、尾延迟、任务完成率 |
+| `TEC` | 技术/工艺 | Technical & Craft | 人、组织、AI | 经验证技能、工程产出、缺陷率 |
+| `SCI` | 科研学习 | Scientific & Learning | 人、AI、组织 | 实验质量、复现率、学习速度、论文/成果但不以数量代质量 |
+| `GOV` | 治理/协调 | Governance & Coordination | 人、组织、群体 | 资源调度、任务分派、冲突解决、SLA |
+| `COM` | 通信/协作 | Communication & Collaboration | 人、AI、组织 | 信息损失、响应时间、协议兼容、协作成功率 |
+| `ECO` | 资源经济 | Economic/Resource Efficiency | 组织、系统、区域 | 资源产出、成本、资本/能耗效率 |
+| `SEC` | 安全/保密 | Security & Confidentiality | 人、AI、组织、系统 | 漏洞率、策略符合、密钥/访问违规、恢复能力 |
+| `RES` | 韧性/恢复 | Resilience & Recovery | 所有动态系统 | MTTR、故障恢复、退化曲线、冗余 |
+| `ENV` | 环境适应 | Environmental Adaptation | 生物、机器人、设施 | 温度/地形/环境容忍范围 |
+| `DIG` | 数字计算 | Digital Compute | AI、设备、软件 | FLOPS、tokens/s、memory、latency、accuracy |
+| `CRE` | 创造/生成 | Creativity & Generativity | 人、AI、组织 | 新颖性需结合外部任务评分与可用性，不用主观单一分数 |
+| `HLT` | 生物健康状态 | Biological Health State | 仅生物且需合法/授权 | 临床/生理测量；属于高敏感资料，默认不公开 |
+
+### 铁律
+
+- 机器人没有 `HLT`：`NA`，不是 0；
+- 卫星没有“魅力”：`NA`；
+- 现实人物的健康、宗教、族群等敏感属性不得为了“能力画像”而擅自推断；
+- 文化人物可以有史料记载的“行为事实”，但现代模型不得反向诊断其心理/疾病；
+- FICTION 角色的能力值只在该作品 canon / simulator 内成立。
+
+---
+
+# 38.5 能力值不再手填：从观测 → 任务 → 潜在能力 → 置信区间
+
+## 38.5.1 第一层：原始观测账（Observation Ledger）
+
+所有能力推断必须保留原始证据：
+
+```text
+Observation(entity, task, context, value, unit, timestamp, source, quality)
+```
+
+例：
+
+```text
+Entity = SIM::Officer_Qin_A
+Task   = LogisticsScenario_07
+Metric = completion_time
+Value  = 83.2
+Unit   = minute
+```
+
+不允许只保存最终“统率 92”而丢弃来源。
+
+## 38.5.2 第二层：任务基准（Task Benchmark）
+
+能力必须依赖“能完成什么任务”，而不是抽象名望。
+
+每个任务登记：
+
+```text
+task_id
+domain
+difficulty
+required_capabilities
+success_definition
+measurement_error
+reference_population
+```
+
+## 38.5.3 第三层：多维项目反应模型（Multidimensional Item Response Theory, MIRT）
+
+对于成功/失败型任务，可用：
+
+```math
+P(Y_{e,j}=1)=\operatorname{logit}^{-1}(a_j^T\theta_e-b_j+\beta^T c)
+```
+
+其中：
+
+- `θ_e`：实体潜在能力向量；
+- `a_j`：任务对各能力的辨别度；
+- `b_j`：任务难度；
+- `c`：环境、工具、协作者等情境变量。
+
+这比“某人物固定智力 95”严谨得多。
+
+## 38.5.4 第四层：时间变化状态（State-Space / HMM / Kalman / Survival）
+
+能力不是永远不变：
+
+```math
+\theta_t = A\theta_{t-1}+Bu_t+\epsilon_t
+```
+
+观测：
+
+```math
+y_t = H\theta_t+\eta_t
+```
+
+对离散状态可使用 HMM：
+
+```text
+学习中 → 稳定 → 熟练 → 疲劳/退化 → 恢复
+```
+
+对设备：
+
+```text
+健康 → 轻度退化 → 降频 → 故障风险 → 维修恢复
+```
+
+对组织：
+
+```text
+扩张 → 稳态 → 超载 → 重组 → 恢复
+```
+
+## 38.5.5 第五层：图谱能力（Graph Capability）
+
+很多“能力”不是个体所有，而来自网络：
+
+```text
+个人能力
++ 团队互补
++ 工具
++ 供应链
++ 信息网络
++ 地理位置
+= 系统实际能力
+```
+
+因此 DUECG 必须同时保存：
+
+```text
+RELATES_TO
+MEMBER_OF
+USES
+DEPENDS_ON
+TRUSTS
+SUPPLIES
+LOCATED_AT
+TRAINED_BY
+DERIVED_FROM
+```
+
+---
+
+# 38.6 分数展示：允许 UI 0–100，但绝不能丢掉后验与置信区间
+
+内部模型保存：
+
+```text
+posterior_mean
+posterior_sd
+credible_interval
+sample_n
+reference_group
+model_version
+```
+
+UI 若必须显示 0–100，可做单调变换：
+
+```math
+Score_{0-100}=100\cdot \sigma(z)
+```
+
+但必须同时显示：
+
+```text
+Score 78
+95% CI [69, 84]
+N = 42 tasks
+Reference = same task family / same entity class
+Freshness = 12 days
+```
+
+禁止：
+
+```text
+刘某 88 > 李某 86
+```
+
+就直接推导“刘某整体更优秀”。
+
+正确表述：
+
+```text
+在 Task Family X、Context Y、当前模型版本 V 下，
+实体 A 的后验任务能力高于实体 B；
+其它领域不能外推。
+```
+
+---
+
+# 38.7 与旧著、140 表、`registry_risk_topology` 的真实血统关系
+
+## 38.7.1 `Rmodel` 可继承什么
+
+旧 `Rmodel::compileIndex()` 已有：
+
+- 时间排序；
+- `xi` 衰减参数；
+- `exp(-abs(xi) * Δt)` 指数时间权重；
+- likelihood/loglikelihood；
+- 攻击/防御等潜在参数；
+- 对赛果/赔率进行样本外评价的思想。
+
+可迁移为：
+
+```text
+旧：team offence / defence
+新：entity latent capabilities
+
+旧：match date decay
+新：evidence freshness / skill drift
+
+旧：odds model vs market
+新：model estimate vs observed task outcome
+```
+
+但旧模型不能直接承担现代“万物能力谱”；必须升级为多层贝叶斯、MIRT、状态空间、图模型、序列模型与可校准不确定性。
+
+## 38.7.2 “140 张表”可继承的是 feature-mart 思想，不是固定数字
+
+博彩研究的：
+
+```text
+7 windows × 20 modules = 140 daily tables
+           ↓
+registry_risk_topology
+```
+
+在 DUECG 中升级成：
+
+```text
+Entity Event Ledger
+       ↓
+Domain Feature Marts
+       ↓
+Capability Evidence Tables
+       ↓
+registry_entity_capability_topology
+       ↓
+Task-specific Models
+       ↓
+Capability Posterior + CI
+```
+
+不同实体类型使用不同窗口，不强迫全部采用 3/7/14/30/60/90/ALL：
+
+- 实时机器人：ms / s / min / hour；
+- 人类技能：day / week / month / year；
+- 公司：week / quarter / year；
+- 恒星/行星：完全不同时间尺度。
+
+这比固定 140 表更具有普适性。
+
+## 38.7.3 新注册表
+
+```text
+registry_entity_capability_topology
+```
+
+最小字段：
+
+```text
+registry_id
+entity_type
+capability_module
+task_family
+feature_set
+window_policy
+model_family
+champion_model
+challenger_models
+calibration_method
+uncertainty_method
+minimum_sample_gate
+fairness_or_bias_gate
+security_class
+P
+M
+LO
+status
+rollback_version
+```
+
+---
+
+# 38.8 模型进阶梯：传统统计不删除，神经网络不能无条件取代
+
+正确路线：
+
+```text
+L0  Descriptive / robust statistics
+L1  GLM / hierarchical Bayes / MIRT
+L2  HMM / Kalman / survival / state-space
+L3  GBDT / Random Forest
+L4  Graph models / GNN
+L5  Transformer / sequence foundation models
+L6  World Models / multimodal models
+L7  Offline RL / constrained policy optimization
+```
+
+晋级条件：
+
+```text
+新模型必须在严格 OOT / rolling / stress / calibration / cost / interpretability gate
+上对当前 Champion 产生稳定增量。
+```
+
+因此：
+
+> 神经网络是 Challenger，不是“年代更新所以自动胜出”。
+
+对于任务样本很少、需要可信区间或强解释的场景，Bayesian / MIRT / state-space 可能比大型神经网络更适合。
+
+---
+
+# 38.9 “元宇宙所有生物能力”必须有三套不同真相账
+
+## 38.9.1 现实生物（REAL-TWIN）
+
+只使用：
+
+- 合法获得；
+- 有明确用途；
+- 可追溯；
+- 必要且最小化；
+- 对敏感属性有更强保护；
+- 高影响决策保留人工复核与申诉。
+
+不得把社交媒体文本、族群、宗教、外貌等未经授权信息自动推断成“忠诚”“能力”“健康”分。
+
+## 38.9.2 历史人物（HISTORY）
+
+记录：
+
+```text
+SourceClaim
+EventParticipation
+Office
+Relationship
+Date
+Location
+Primary/Secondary Evidence
+Disagreement
+```
+
+“白起统率 100”只能属于 `SIM`，不能写入 `HISTORY` 真相表。
+
+## 38.9.3 虚构角色（FICTION）
+
+能力可依据：
+
+- 原作 canon；
+- 官方设定；
+- 明确出现的行为/战绩；
+- 不同作品宇宙分开版本；
+- 同人/二创不得覆盖官方 canon。
+
+因此《七龙珠》人物可以有 `FICTION::DRAGONBALL` 能力卡，但不得与现实人类能力值直接同一尺度比较。
+
+---
+
+# 38.10 《七龙珠》终极目标：从“愿景”拆成现实科技任务，不夸大已实现程度
+
+本节不讨论剧情优劣，只建立**公开科学/工程对应表**。
+
+| 科幻目标 | 2026 现实最接近技术 | 当前裁定（本项目 M0–M5） | 关键差距 |
+|---|---|---|---|
+| **瞬间转移** | 量子态传态（Quantum Teleportation）、量子网络、远程状态传输 | **M2–M3（量子信息）** | 已传的是量子态/量子信息，不是人体、质量或宏观物体；不能超光速传递可用信息 |
+| **万能胶囊/万能胶囊公司** | 可展开结构、模块化机器人、数字制造、折叠机构、按需 3D 制造 | **M3–M5（分项技术）** | 没有把汽车/房屋物质压缩进微型胶囊再无损释放的公开物理机制 |
+| **“普鲁/布鲁兹光线”类设定** | 若指作品中的特殊辐射/变身机制：现实仅有各种已知电磁辐射、生物光刺激研究 | **FICTION / UNKNOWN 对应** | 没有证据证明存在作品中的特殊变身辐射；名称需按原作版本再核典 |
+| **龟波气功** | 高功率激光、微波、等离子体/粒子束等定向能研究（仅高层概念） | **M2–M5（不同技术）** | 不等于人体“气”能量束；生物体无证据能产生作品级定向高能束 |
+| **时间房** | 高倍实时仿真、VR、AI tutor、数字孪生；相对论时间膨胀为真实物理 | **M5（仿真训练）；M2+（精密相对论测量）** | 没有“一天外界=一年室内”的可居住房间；如此巨大时间差需要极端速度/重力条件 |
+| **次元空间** | VR/AR/数字孪生、数学高维空间、理论物理中的额外维 | **M5（虚拟空间）；M0–M1（可访问额外维概念）** | 没有公开证据可制造可进入的独立口袋维度 |
+| **穿越时空** | 相对论向未来的时间膨胀已实证；原子钟可测量极小差异 | **M2–M5（测量/航天效应）** | 没有实证可控回到过去；宏观“时间机器”无工程路径 |
+| **仙豆** | 高密度营养、急救、止血、再生医学、细胞/基因治疗 | **M3–M5（分项）** | 不存在一粒食物瞬间治愈重伤并恢复全部体能的临床技术 |
+| **细胞/自动修复** | 再生医学、组织工程、干细胞、基因编辑、器官芯片、自修复材料 | **M2–M5（分项）** | 人体全身快速无疤自修复、任意器官再生仍远未达到 |
+| **人造人** | Humanoid robotics、Physical AI、仿生义肢、脑机接口、biohybrid research | **M3–M5（机器人）；M2–M4（人体增强分项）** | 不等于作品级人工生命体/无限能源/超人性能 |
+| **龙珠雷达** | GNSS/UWB/RF/SAR/LiDAR/视觉/传感器融合、加密 beacon、资产追踪 | **M5（已知信标/可感测目标）** | 只能探测具有物理可观测特征的对象，不能搜索没有已知可测信号的“魔法龙珠” |
+| **七颗龙珠/宇宙龙珠** | 可作为分布式任务对象、数字孪生 artifact、加密 token/locator 的 `FICTION/SIM` 原型 | **FICTION → SIM 可实现** | 实体本身为虚构；只能实现游戏/数字对象或物理信标版本 |
+| **超级赛亚人变身** | 外骨骼、增强训练、药物/营养、神经接口、机器人辅助 | **M3–M5（分项）** | 没有证据可实现作品级瞬间生理变身与能量指数跃迁 |
+| **飞行** | 飞机、eVTOL、喷气装备、翼装、个人飞行器 | **M3–M5** | 人体无装备自由悬停飞行仍无已知生理机制 |
+
+### 38.10.1 关键现实锚（截至 2026-10-01）
+
+- 2025 `Nature` 已报道通过光子互联模块实现可重复的量子门传态/分布式量子计算；2025–2026 还有都市光纤/自由空间量子态传态实验。**这仍是“量子状态”，不是人体瞬移。**
+- NIST 的原子钟长期实验证明相对论时间膨胀真实存在，甚至可在很小高度差上检测；2026 NIST 仍在研究量子时钟中的 proper-time 效应。**这支持时间物理，不支持任意穿越过去。**
+- NIH 2025–2029 再生医学战略明确推进干细胞、工程生物材料、基因编辑、组织修复；2025 建立标准化 organoid 中心，2026 继续推进长期类器官与组织芯片。**这是真实“修复”路线，但离仙豆/瞬间再生很远。**
+- NVIDIA 2026 已发布/更新 GR00T、Cosmos、Isaac Lab 等 Physical AI 平台，并与多家 humanoid/industrial robot 企业推进现实部署。**这是“人造人”最接近的公开工程路线之一，但本质仍是机器人。**
+- FAA 2026 已开展 eVTOL 现实任务/集成试验。**人类飞行正在工程化，但依赖航空器。**
+
+---
+
+# 38.11 “马斯克如秦非子”只能作为文化隐喻，不作为事实分类
+
+若将某现代企业家比作秦非子，这可以存为：
+
+```text
+SIM::CULTURAL_ANALOGY
+```
+
+不能写成：
+
+```text
+HISTORY::IDENTITY_EQUIVALENCE
+```
+
+同理，用户对自身“秦人/华夏盛族/赢家黄氏江夏堂”等文化身份、自我叙事与项目使命，可作为：
+
+```text
+PROJECT_NARRATIVE / SELF_ATTESTED_IDENTITY
+```
+
+若要升级为可引用的历史谱系事实，需要独立族谱、档案、碑刻、地方志等来源链。
+
+这并不削弱文化母体，反而使文化叙事与史学证据各安其位。
+
+---
+
+# 38.12 RedTeam：能力谱与文明世界模型的新攻击面
+
+1. **把游戏属性当现实真相**：`LEA=90` 不是心理测量。
+2. **一个总分统治所有领域**：引发 Goodhart、歧视与错误资源分配。
+3. **用缺失值惩罚实体**：UNKNOWN/NA 被错误变成 0。
+4. **样本数量幻觉**：任务多不等于测量独立，相关题目会虚增置信度。
+5. **跨物种/跨类别伪比较**：人类语言任务和机器人负载任务不能直接同尺排名。
+6. **把关系资源算成个人天赋**：团队强不等于某个成员单独强。
+7. **历史胜者偏差**：史料留存度高的人物更容易获得“高能力证据”。
+8. **现代价值反投射古人**：禁止用现代心理/政治标签简单诊断历史人物。
+9. **敏感资料画像**：健康、宗教、族群等现实个人资料必须最小化且合法。
+10. **AI 自循环评分**：模型生成的评分再作为下一代模型训练真值，导致自证。
+11. **实时权重振荡**：所有能力阈值持续改动造成排名跳变。
+12. **科幻 TRL 膨胀**：量子态传态偷换成人体瞬移；机器人偷换成人造生命。
+
+---
+
+# 38.13 Critic：能力值真正应该优化什么？
+
+不是追求“一个数字最像游戏”。
+
+应该优化：
+
+```text
+Predictive validity
+Calibration
+Uncertainty quality
+Task transferability
+Temporal stability
+Sample efficiency
+Interpretability
+Fairness/bias robustness
+Security/privacy
+Reproducibility
+Cost
+```
+
+例如两个模型：
+
+```text
+Model A: Accuracy 92%, calibration poor, no CI
+Model B: Accuracy 90%, calibrated, CI reliable, stable OOT
+```
+
+对于高影响决策，Model B 可能更有工程价值。
+
+---
+
+# 38.14 KillCritic：八条一票否决
+
+**VETO-CAP-01**：现实人物只有一个永久综合“能力值”。
+
+**VETO-CAP-02**：用宗教、族群、籍贯、外貌等敏感/身份属性推断现实人物忠诚、智力或能力。
+
+**VETO-CAP-03**：把游戏官方属性写入 HISTORY 真相表。
+
+**VETO-CAP-04**：把历史人物的传说、演义、游戏形象与史料混表。
+
+**VETO-CAP-05**：用 140 表固定结构强迫所有实体类型。
+
+**VETO-CAP-06**：AI 评分没有 uncertainty / sample_n / model_version 仍进入高影响决策。
+
+**VETO-SCI-01**：量子传态 = 人体瞬移。
+
+**VETO-SCI-02**：科幻作品出现的能力因“物理学没证明不可能”就标记为可实现。
+
+---
+
+# 38.15 Blindspot：本章仍未完成的实证
+
+以下保持 `LO∅`：
+
+- DUECG 数据库真实吞吐与图查询性能；
+- MIRT / hierarchical Bayes / Transformer 在统一任务集上的对比；
+- 多实体类型共用 ontology 的 schema evolution 成本；
+- 图数据库 vs PostgreSQL/PostGIS/pgvector vs DuckDB/Parquet 的真实成本；
+- 文言/繁体/篆体 UI 对学习效率、错误率、可访问性的 A/B；
+- “游戏人物五维→任务型能力谱”的用户理解提升幅度；
+- 任何人体增强、量子、再生医学、机器人技术在本项目实验室中的实际能力。
+
+---
+
+# 38.16 Cheatsheet：能力卡标准输出
+
+任何实体能力卡至少显示：
+
+```text
+实体：<entity_id>
+域：HISTORY / REAL-TWIN / SIM / FICTION
+类型：<entity_type>
+能力模块：<capability>
+任务族：<task_family>
+后验均值：<mean>
+95% 区间：<interval>
+样本量：N=<n>
+时间：<valid_time>
+情境：<context>
+来源：<provenance>
+P/M/LO：<evidence>
+模型：<model_version>
+状态：CHAMPION / CHALLENGER / HOLD
+```
+
+没有这些字段的“能力值”不得进入正式 DUECG。
+
+---
+
+# 38.17 Blueprint：从文明游戏到 DaqinOS 的“世界—实体—能力”母架构
+
+```text
+古籍 / 史料 / 考古 / 地理事实
+           │
+           ▼
+     HISTORY Ledger
+           │
+           ├────────────┐
+           │            │
+           ▼            ▼
+    REAL-TWIN        FICTION Canon
+现实传感 / GIS          游戏/小说/动画
+           │            │
+           └──────┬─────┘
+                  ▼
+                UWOM
+        Unified World Object Model
+                  │
+                  ▼
+                DUECG
+       Universal Capability Graph
+                  │
+      ┌───────────┼────────────┐
+      ▼           ▼            ▼
+ Observation   Task Lab     Relation Graph
+      │           │            │
+      └───────────┼────────────┘
+                  ▼
+    Bayesian / MIRT / HMM / GNN / Transformer
+                  │
+                  ▼
+        Capability Posterior + CI
+                  │
+       Hard Gate → Pareto → Policy
+                  │
+                  ▼
+          Daqin Spatial Shell
+                  │
+                  ▼
+               DaqinOS
+```
+
+---
+
+# 38.18 ActionPlan：先在现有电脑把“能力系统”证实，再进内核
+
+## Phase A：游戏/文化机制抽取
+
+1. 建 `game_mechanic_registry.parquet`；
+2. 将 §38.2 每款产品按 `DAQIN-CIV-2` 落表；
+3. 每个机制必须记录 `source_url / source_date / P / copyright_notes`；
+4. 游戏设定与历史事实独立表；
+5. 用 Chinese Text Project/正史/学术资料对关键史实做 separate provenance。
+
+## Phase B：DUECG synthetic prototype
+
+先只用**模拟实体**：
+
+```text
+1000 fictional persons
+100 AI agents
+100 robots
+100 organizations
+100 places/devices
+```
+
+禁止先拿现实个人数据测试。
+
+## Phase C：能力模型基准
+
+同一合成任务集比较：
+
+```text
+simple weighted score
+robust z/quantile score
+MIRT
+hierarchical Bayes
+HMM/state-space
+GBDT
+Transformer
+GNN
+```
+
+评价：
+
+```text
+MAE / log loss / Brier
+calibration
+CI coverage
+OOT stability
+sample efficiency
+latency
+memory
+explainability
+```
+
+## Phase D：`registry_entity_capability_topology`
+
+实现 Champion–Challenger、版本、回滚、最小样本门槛和适用域。
+
+## Phase E：Spatial Shell 联动
+
+点击地图/星球/建筑/人物时，不直接显示“总战力”，而显示：
+
+```text
+Entity Card
+├ identity / provenance
+├ current state
+├ capabilities by domain
+├ confidence
+├ relationships
+├ location/time
+└ evidence drill-down
+```
+
+## Phase F：现实数据
+
+只有在：
+
+- 法律基础明确；
+- 数据授权明确；
+- 用途明确；
+- 权限/审计/删除策略明确；
+- 偏差与申诉机制明确；
+
+之后，才进入现实个人/组织数据。
+
+## Phase G：DaqinOS
+
+只有 DUECG / UWOM / Spatial Shell 在 Windows 11 + WSL2/VM 通过 IQ/OQ/PQ/MQ，才考虑把其必要系统服务内建 DaqinOS。
+
+---
+
+# 38.19 本章一手/准一手来源（2026-10-01 核验）
+
+## 华夏/东亚文明策略游戏
+
+- KOEI TECMO — ROMANCE OF THE THREE KINGDOMS 8 REMAKE System: https://www.koeitecmoamerica.com/rtk8-remake/system.html
+- KOEI TECMO — RTK8 Officer Abilities: https://www.koeitecmoamerica.com/manual/rtk8-remake/en/3300.html
+- KOEI TECMO — RTK8 Game Overview: https://www.koeitecmoamerica.com/manual/rtk8-remake/en/3100.html
+- KOEI TECMO — NOBUNAGA'S AMBITION: Awakening System: https://www.koeitecmoamerica.com/nobunaga/awakening/system/
+- KOEI TECMO — Awakening Game Outline: https://www.koeitecmoamerica.com/manual/nobunaga/awakening/en/3200.html
+- TapTap 官方入驻 — 《大秦帝国之帝国烽烟》: https://www.taptap.cn/app/166665
+- TapTap 官方入驻 — 《无悔华夏》: https://www.taptap.cn/app/176581
+- TapTap 官方入驻 — 《三国志·战略版》: https://www.taptap.cn/app/139546
+- TapTap 官方入驻 — 《猫话列国》: https://www.taptap.cn/app/234249
+- TapTap 官方入驻 — 《大周列国志》: https://www.taptap.cn/app/190784
+- Total War Academy — THREE KINGDOMS: https://academy.totalwar.com/three-kingdoms/
+
+## 全球策略/世界模拟
+
+- Paradox — Europa Universalis V: https://www.paradoxinteractive.com/games/europa-universalis-v/about
+- Paradox — Crusader Kings III: https://www.paradoxinteractive.com/games/crusader-kings-iii/about
+- Paradox — Stellaris: https://www.paradoxinteractive.com/games/stellaris/about
+- 2K/Firaxis — Civilization VII: https://civilization.2k.com/seven/
+
+## 科学与未来技术现实锚
+
+- Nature (2025) — Distributed quantum computing across an optical network link: https://www.nature.com/articles/s41586-024-08404-x
+- Nature Communications (2025) — Quantum teleportation over hybrid quantum network: https://www.nature.com/articles/s41467-025-65911-9
+- NIST — Relativity and Optical Clocks: https://www.nist.gov/publications/relativity-and-optical-clocks
+- NIST (2026) — Quantum signatures of proper time in optical ion clocks: https://www.nist.gov/publications/quantum-signatures-proper-time-optical-ion-clocks
+- NIH — Regenerative Medicine: https://www.nih.gov/about-nih/nih-turning-discovery-into-health/transformative-technologies/regenerative-medicine
+- NIAMS 2025–2029 — Regenerative Medicine priority: https://www.niams.nih.gov/about/strategic-plan-fiscal-years-2025-2029/strategic-goals-priorities/research-priorities/regenerative-medicine
+- NIH (2025) — Standardized Organoid Modeling Center: https://www.nih.gov/news-events/news-releases/nih-establishes-nations-first-dedicated-organoid-development-center-reduce-reliance-animal-modeling
+- NVIDIA (2026) — Physical AI / GR00T / Cosmos / robots: https://nvidianews.nvidia.com/news/nvidia-releases-new-physical-ai-models-as-global-partners-unveil-next-generation-robots
+- FAA (2026) — eVTOL integration milestone: https://www.faa.gov/newsroom/faa-announces-major-milestone-evtol-technology-use
+
+---
+
+# 38.20 本章收束
+
+将《三國志》的“统率/武力/智力/政治/魅力”直接扩大成“宇宙万物五维评分”，会退化；将其视为**文化化的人物 UI 原型**，再用现代统计、测量理论、状态空间、图模型、AI 与证据治理改造成 DUECG，则可以真正落地。
+
+因此本阶段总纲为：
+
+> **文化作魂，史料作经，实测作法，统计作尺，AI 作辅，证据作印，安全作城，世界对象作籍，能力后验作簿；不以传说代实验，不以总分断万物。**
+
+工程顺序继续坚持：
+
+`史料/游戏机制登记 → 合成实体 → 任务基准 → 能力后验 → 图谱关系 → Spatial Shell → 现实授权数据 → DaqinOS`。
