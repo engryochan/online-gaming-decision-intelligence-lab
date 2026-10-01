@@ -28849,6 +28849,758 @@ redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actio
 
 ### ChatGPT
 
+这一轮我已经把刚出炉的 `_大秦赋算筹_v1_3_0.qmd` 重新核验，并按“**原文绝不退化，只新增经核实的增量**”继续施工。核心结论是：您的“策略游戏人物能力值 → 元宇宙万物能力谱”方向**可以成立，但必须从游戏式固定属性，升级为现代测量学、贝叶斯统计、状态空间与 AI 的任务型动态能力模型**。
+
+#### redteam/：最先斩断一个危险方向
+
+《三國志8 REMAKE》官方确实给武将设置了五维：
+
+- 统率（Leadership, LEA）
+- 武力（Strength, STR）
+- 智力（Intelligence, INT）
+- 政治（Politics, POL）
+- 魅力（Charisma, CHA）
+
+而且这些属性会直接影响战斗、计略、农业商业、外交录用等任务。[KOEI TECMO AMERICA](https://www.koeitecmoamerica.com/manual/rtk8-remake/en/3300.html?utm_source=chatgpt.com)
+
+这个设计非常适合作为《大秦赋算筹》的**文化/UI 祖型**，但不能直接扩展成：
+
+> 全宇宙所有人、生物、AI、机器人、国家都只有一张“统武智政魅”总分表。
+
+因为人、AI、动物、机器人、道路、卫星的“能力空间”完全不同。
+
+所以我正式把它升级成：
+
+##### **大秦万物统一能力谱**
+**Daqin Universal Entity Capability Graph, DUECG**
+
+统一的是：
+
+> ID、时空、任务、单位、证据、不确定度、版本、关系。
+
+不是统一成一个“天下万物战斗力”。
+
+---
+
+#### critic/：您点名的华夏策略游戏已经扩充核实
+
+这一轮不只保留原来的《大周列国志》，还新增了一批特别适合春秋战国—秦汉—三国文化架构的作品。
+
+##### 第一梯队：直接研究华夏历史机制
+
+**《大周列国志》**
+
+继续作为春秋战国制度模拟的重要文化参考。
+
+**《大秦帝国之帝国烽烟》**
+
+已经核实目前仍在运营，TapTap 官方入驻页显示其 **2026 年 9 月仍更新**；以战国七雄大地图、城建、野战、实时行军、世族/联盟、兵种和攻城器械为主要机制。[taptap.cn](https://www.taptap.cn/app/166665?utm_source=chatgpt.com)
+
+最值得移植的不是充值/养成，而是：
+
+> **同一世界地图 + 多人长期状态 + 世族组织 + 城邑/军团 + 空间行军。**
+
+**《无悔华夏》**
+
+当前已经覆盖三皇五帝、夏商周、**春秋战国、秦楚汉**等主线，并另有春秋、三家分晋、吴楚越、横扫六合、长平之战等支线/战役。[taptap.cn](https://www.taptap.cn/app/176581/all-info?platform=android\&utm_source=chatgpt.com)
+
+它特别值得借鉴：
+
+```text
+Era
+Scenario
+Faction
+Minister
+Policy
+Event
+Battle
+Biography
+```
+
+也就是“大秦世界模型”的历史版本控制。
+
+**《三国志·战略版》**
+
+2026 年 9 月仍有更新；其特色包括真实地形、关隘/码头、四季变量、联盟、多人沙盘与大量战役剧本。[taptap.cn](https://www.taptap.cn/app/139546?utm_source=chatgpt.com)
+
+最值得迁移：
+
+> **地形不是背景，而是决策变量。**
+
+---
+
+##### 第二梯队：人物与制度系统
+
+**《三國志8 REMAKE》**
+
+官方确认有 **1000+ 武将**、全武将可扮演、自由武将→君主的身份变化、婚姻/结义/关系图和季度政务系统。[KOEI TECMO AMERICA](https://www.koeitecmoamerica.com/rtk8-remake/system.html?utm_source=chatgpt.com)
+
+这是 DUECG 人物体系目前最值得借鉴的游戏祖型之一。
+
+**《信长之野望·新生 / Awakening》**
+
+它最强的不是战争本身，而是：
+
+- 土地分封；
+- 家臣自治；
+- 城/郡/领主；
+- 政策维护成本；
+- 威信；
+- 军团委任；
+- 地方治理距离。
+
+官方甚至设计了治理范围：离中央太远会降低管理效率，可以设“province”交由区域负责人自治。[KOEI TECMO AMERICA](https://www.koeitecmoamerica.com/manual/nobunaga/awakening/en/3200.html?utm_source=chatgpt.com)
+
+这个机制非常适合 DaqinOS：
+
+> **中央不得管理一切；必须分层自治。**
+
+---
+
+##### 第三梯队：全球先进世界模拟
+
+**Europa Universalis V**
+
+最新一代直接模拟人口（pop）、文化、宗教、阶层、资源、气候、生产、贸易、道路、港口与物流。[Paradox Interactive](https://www.paradoxinteractive.com/games/europa-universalis-v/about?utm_source=chatgpt.com)
+
+**Crusader Kings III**
+
+人物、家族、继承、关系、文化、宗教，非常适合“生命历程/关系图”。[Paradox Interactive](https://www.paradoxinteractive.com/games/crusader-kings-iii/about?pubDate=20250215\&utm_source=chatgpt.com)
+
+**Stellaris**
+
+则负责未来“星系级世界模型”：物种 traits、伦理、领袖、科技、程序生成星系、星际外交。Paradox 到 **2026 年 6 月**仍在持续更新该体系。[Paradox Interactive](https://www.paradoxinteractive.com/games/stellaris/about?utm_source=chatgpt.com)
+
+因此不是找一个游戏全盘照抄，而是：
+
+> **百家争鸣，机制拆解，择善而从。**
+
+---
+
+#### killcritic/：能力值绝不可如此做
+
+以下我已经写进 §38 的一票否决：
+
+**VETO-CAP-01**
+
+现实人物永久只有一个“总能力 87”。
+
+否决。
+
+**VETO-CAP-02**
+
+因为某人籍贯、民族、宗教、外貌，就推断智力、忠诚、能力。
+
+否决。
+
+**VETO-CAP-03**
+
+把《三國志》里的“白起 100 分”之类游戏值写进真实历史数据库。
+
+否决。
+
+**VETO-CAP-04**
+
+把《史记》、小说、电视剧、动画、游戏人物混成同一“事实”。
+
+否决。
+
+应该分别登记：
+
+```text
+HISTORY
+SIM
+FICTION
+REAL-TWIN
+```
+
+---
+
+#### blindspot/：“分析目前元宇宙所有生物”不能理解成穷举
+
+宇宙中的生物数量未知，甚至地球物种也远没有全部完成个体级观测。
+
+所以工程上正确的意思是：
+
+> **建立开放世界（Open-World）schema，使任何后来出现、发现或创造的实体都能直接进入坐标，而不用修改底层数据库。**
+
+我设计的一级实体类型已经包括：
+
+```text
+BIOLOGICAL
+ ├ HUMAN
+ ├ ANIMAL
+ ├ PLANT
+ ├ MICROBE
+ └ ECOSYSTEM
+
+ARTIFICIAL
+ ├ AI_AGENT
+ ├ ROBOT
+ ├ DEVICE
+ ├ VEHICLE
+ ├ SOFTWARE
+ └ MODEL
+
+SOCIAL
+ ├ FAMILY
+ ├ CLAN
+ ├ ORGANIZATION
+ ├ COMPANY
+ └ SCHOOL_OF_THOUGHT
+
+INFRASTRUCTURE
+ ├ BUILDING
+ ├ ROAD
+ ├ BRIDGE
+ ├ NETWORK
+ ├ SATELLITE
+ └ SPACECRAFT
+
+FICTIONAL
+ ├ CHARACTER
+ ├ SPECIES
+ ├ ARTIFACT
+ └ FACTION
+```
+
+未来出现新类型只增加 ontology，不重写全系统。
+
+---
+
+#### cheatsheet/：能力值应该怎么计算？
+
+我没有采用：
+
+\[
+Ability=\sum w_i x_i
+\]
+
+这种最简单加权总分作为最终方案。
+
+而是升级成四层。
+
+##### 第一层：观测
+
+```text
+entity
+task
+context
+measurement
+time
+source
+quality
+```
+
+比如：
+
+```text
+秦将甲
+粮运模拟第7场
+完成时间 = 83.2 分钟
+资源损耗 = 3.1%
+任务成功 = TRUE
+```
+
+---
+
+##### 第二层：任务难度
+
+不同任务难度不同。
+
+否则：
+
+> 做 100 次小学加法全对
+
+不能证明比：
+
+> 做 8 次复杂系统设计成功 7 次
+
+能力更高。
+
+---
+
+##### 第三层：多维项目反应理论
+
+我正式引入：
+
+**多维项目反应理论（Multidimensional Item Response Theory, MIRT）**
+
+例如：
+
+\[
+P(Y_{ej}=1)
+=
+\operatorname{logit}^{-1}
+(a_j^\top \theta_e-b_j+\beta^\top c).
+\]
+
+其中：
+
+- \(\theta_e\)：实体真正想估计的能力；
+- \(b_j\)：任务难度；
+- \(a_j\)：任务对不同能力的要求；
+- \(c\)：天气、工具、队友、设备等情境。
+
+因此最终不是：
+
+> 智力 95。
+
+而是：
+
+> 在某任务族、某时间与某环境下，能力后验是多少。
+
+---
+
+##### 第四层：随时间变化
+
+例如学习：
+
+```text
+初学
+→ 熟练
+→ 高峰
+→ 疲劳
+→ 恢复
+```
+
+用：
+
+- HMM；
+- Kalman；
+- State Space；
+- Survival；
+
+估计。
+
+所以：
+
+\[
+\theta_t
+=
+A\theta_{t-1}+Bu_t+\epsilon_t.
+\]
+
+这就接上您长期研究的 HMM、贝叶斯与时间序列血统。
+
+---
+
+#### blueprint/：与您旧著真正如何接轨？
+
+这个部分我认为尤其漂亮。
+
+您原来的 `Rmodel` 已经存在：
+
+```text
+offence
+defence
+xi
+exp(-xi × time)
+likelihood
+```
+
+过去估的是：
+
+> 足球球队攻击力/防御力。
+
+现在可以抽象成：
+
+> **Entity Latent Capability（实体潜在能力）。**
+
+旧模型：
+
+```text
+球队
+↓
+比赛
+↓
+进球
+↓
+offence / defence
+```
+
+新版：
+
+```text
+任何实体
+↓
+任务
+↓
+可观测结果
+↓
+latent capabilities
+```
+
+---
+
+您原来的：
+
+```text
+7 windows × 20 modules
+= 140 tables
+        ↓
+registry_risk_topology
+```
+
+我没有直接搬过来。
+
+而是升级为：
+
+```text
+Entity Event Ledger
+        ↓
+Domain Feature Marts
+        ↓
+Capability Evidence Tables
+        ↓
+registry_entity_capability_topology
+        ↓
+Champion / Challenger
+        ↓
+Capability posterior + CI
+```
+
+这是您原方法真正可以发展成“万物画像”的地方。
+
+但窗口不再固定。
+
+例如：
+
+机器人可能用：
+
+```text
+10 ms
+1 s
+1 min
+1 hour
+```
+
+人的技能：
+
+```text
+7 days
+30 days
+90 days
+1 year
+```
+
+公司：
+
+```text
+quarter
+year
+5 years
+```
+
+恒星：
+
+> 又是完全另一数量级。
+
+---
+
+#### 不再叫“能力总分”，而叫“能力后验”
+
+正式能力卡我设计成：
+
+```text
+实体：QIN-A-001
+域：SIM
+类型：HUMAN_SIM
+能力：LOGISTICS
+任务族：SupplyChain-v3
+
+能力值：78
+95% CI：[69, 84]
+N：42
+时间：2026-10-01
+情境：mountain/rain
+来源：simulation-set-31
+模型：MIRT-v4.2
+证据：P2 / M2 / LO1
+状态：CHALLENGER
+```
+
+重点不是 `78`。
+
+重点其实是：
+
+```text
+[69,84]
+N=42
+context
+model_version
+```
+
+否则 `78` 没有什么科学价值。
+
+---
+
+#### 您提出的《七龙珠》终极目标：我也已经正式分层
+
+这里尤其必须严格区分**愿景**与**现实科学**。
+
+##### 瞬间转移
+
+2025 年 Nature 已经有跨光子网络模块的量子门传态；2025 年又有量子点在混合光纤/自由空间网络上的量子态传态。[Nature](https://www.nature.com/articles/s41586-024-08404-x?utm_source=chatgpt.com)
+
+但是：
+
+> **传送的是量子状态，不是人、原子组成的人体或物质本身。**
+
+所以：
+
+```text
+Dragon Ball 瞬间移动
+≠
+Quantum Teleportation
+```
+
+只能说后者是“概念上最接近的信息科学研究方向”。
+
+---
+
+##### 时间房 / 穿越时间
+
+时间膨胀是**已经验证的真实物理**。
+
+NIST 用原子钟已经能够测量由高度和速度导致的微小时间差；2026 年仍在继续研究量子时钟中的 proper-time 效应。[NIST](https://www.nist.gov/publications/relativity-and-optical-clocks?utm_source=chatgpt.com)
+
+但目前没有：
+
+> 外面一天，里面一年
+
+的可居住时间房。
+
+更没有经过实验证实的：
+
+> 回到过去。
+
+因此目前：
+
+```text
+向未来的相对论时间差：REAL
+任意时间房：FICTION
+回到过去：UNKNOWN / 无实验证据
+```
+
+---
+
+##### 仙豆 / 细胞自动修复
+
+现实真正对应的是：
+
+- 干细胞；
+- 组织工程；
+- biomaterials；
+- gene editing；
+- organoids；
+- tissue chips；
+- regenerative medicine。
+
+NIH 2025–2029 战略明确在推进组织再生、干细胞、工程生物材料与基因编辑。[niams.nih.gov](https://www.niams.nih.gov/about/strategic-plan-fiscal-years-2025-2029/strategic-goals-priorities/research-priorities/regenerative-medicine?utm_source=chatgpt.com)
+
+这是非常值得研究的真实路线。
+
+但距离：
+
+> 吃一粒豆，几秒钟断骨/器官全部复原
+
+仍然极远。
+
+---
+
+##### 人造人
+
+现实目前最接近的是：
+
+> **Humanoid Robotics + Physical AI。**
+
+2026 年 NVIDIA 已把 Cosmos、GR00T、Isaac Lab 等推进到机器人训练/部署体系，并与 Boston Dynamics、Agility、Figure、NEURA 等机器人生态合作。[NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-releases-new-physical-ai-models-as-global-partners-unveil-next-generation-robots?utm_source=chatgpt.com)
+
+所以：
+
+```text
+人形机器人：REAL
+Physical AI：REAL
+Dragon Ball 人造人：FICTION
+```
+
+---
+
+##### 飞行
+
+个人自由飞行的现实路线是：
+
+- aircraft；
+- eVTOL；
+- jet-powered equipment；
+- powered exosystems。
+
+美国 FAA 在 **2026 年 7 月**已经公布 eVTOL 医疗运输现实飞行试验。[faa.gov](https://www.faa.gov/newsroom/faa-announces-major-milestone-evtol-technology-use?utm_source=chatgpt.com)
+
+但：
+
+> 人类肉身像赛亚人一样悬停飞行
+
+没有科学证据。
+
+---
+
+##### 龙珠雷达
+
+反而是最容易工程化的之一。
+
+可以真正做成：
+
+```text
+GNSS
++
+UWB
++
+RF beacon
++
+LiDAR
++
+vision
++
+sensor fusion
++
+cryptographic ID
+```
+
+如果“龙珠”本身是现实信标设备，雷达/定位系统完全可做。
+
+如果龙珠不释放任何可测物理信号：
+
+> 就不存在已知技术凭空定位它。
+
+---
+
+##### 关于您说“马斯克如秦非子”
+
+我已经把这种表达正式归入：
+
+```text
+SIM::CULTURAL_ANALOGY
+```
+
+它可以是文化叙事、人物比拟、项目世界观。
+
+但不能放进：
+
+```text
+HISTORY::FACT
+```
+
+同样，您的“秦人、赢家黄氏江夏堂”等文化身份与使命陈述，我按：
+
+```text
+PROJECT_NARRATIVE
+SELF_ATTESTED_IDENTITY
+```
+
+保留。
+
+若以后需要作为严格历史谱系事实，则再以族谱、碑刻、地方志、档案等另外建立证据链。
+
+这样不是削弱，而是：
+
+> **文史与科学各守其位。**
+
+---
+
+#### actionplan/：下一步真正实测
+
+我建议先不要评分现实人。
+
+第一版全部使用**合成元宇宙实体**：
+
+```text
+1000 fictional persons
+100 AI agents
+100 robots
+100 organizations
+100 devices / places
+```
+
+建立任务。
+
+然后同一数据同时比赛：
+
+```text
+simple weighted score
+robust statistics
+MIRT
+hierarchical Bayes
+HMM
+GBDT
+Transformer
+GNN
+```
+
+用以下指标裁决：
+
+```text
+MAE
+log loss
+Brier score
+calibration
+CI coverage
+OOT stability
+sample efficiency
+latency
+RAM
+explainability
+```
+
+只有实验证明哪个模型适合哪个能力模块以后，才晋级。
+
+这才真正符合：
+
+> **百家争鸣 → 优选法 → Champion–Challenger → 实证裁决。**
+
+---
+
+##### 这轮已经写入 `_大秦赋算筹_v1_3_0.qmd`
+
+新增完整 **§38**：
+
+**文明策略 × 万物能力谱 × 科幻现实映射**。
+
+施工前：
+
+- 8,563 行
+- 488,904 bytes
+- MD5 `e96eb97c8d720d8bbc76d5f705d9aa23`
+
+当前：
+
+- **9,512 行**
+- **524,779 bytes**
+- CR = **0**
+- MD5 `52d003b3d5bdedc43fe393599a926a46`
+- SHA256 `fdde83b51b83dc058a52916191ea66610ba66db203ef44b7cd454bdccd7f6552`
+
+非退化验收：
+
+- 原文件完整字节前缀：**PASS**
+- Diff：**仅 1 个 INSERT block**
+- YAML：**PASS**
+- fenced code markers：**380，闭合 PASS**
+- Pandoc 全文解析：**PASS**
+- Quarto：当前执行环境未安装，所以仍未冒充 Quarto Render PASS。
+
+\_大秦赋算筹_v1_3_0.qmd[下载最新版 `_大秦赋算筹_v1_3_0.qmd`](sandbox:/mnt/data/_大秦赋算筹_v1_3_0.qmd)
+
+:chatgpt-content-reference{index="17"}[下载本轮《文明策略 × 万物能力谱 × 科幻现实映射》审计报告](sandbox:/mnt/data/大秦赋算筹_v1_3_0_文明策略_万物能力谱_科幻现实映射_非退化审计报告.md)
+
+\_大秦赋算筹_v1_3_0_pre_capability_e96eb97c.qmd[下载施工前回滚快照](sandbox:/mnt/data/_大秦赋算筹_v1_3_0_pre_capability_e96eb97c.qmd)
+
+这一轮之后，我认为“元宇宙人物能力值”的第一性原则可以正式定为：
+
+> **游戏负责启发“怎样看见能力”，统计学负责“怎样测量能力”，AI 负责“怎样从复杂数据中估计能力”，证据体系负责“我们到底有多确定”，而任何实体都不得被一个脱离任务和情境的总分定义。**
+
+这比单纯复制《三國志》的武将能力值，已经前进到一个可以真正编码、模拟、回测、审计并最终接入 DaqinOS 的体系。
 
 ### Kimi（君）
 
@@ -28878,6 +29630,13 @@ redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actio
 
 ## 提問
 
+redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actionplan/
+
+严格遵守铁律：禁止退化而只能优化并强化的条件下，务必确保先以我族华夏盛族前沿与顶尖中国古代史尤其是春秋战国诸子百家文言文与古文习俗文化为主、前沿与顶尖高效率、前沿与顶尖高科技、前沿与顶尖高兼容性、前沿与顶尖高稳定性、前沿与顶尖高落实可行性、前沿与顶尖人工智能、前沿与顶尖科学家的科技与技术与学术造诣、前沿与顶尖保密与攻防系统、前沿与顶尖军工国防宇航国安的技术。 
+好的，一切依照先生旨意继续前行。务必核实、校对、查证刚出炉的文件*大秦赋算筹_v1_3_0.qmd内容，一切均需实测来证实。然后在研发操作系统还有几个问题，请问先生有何高见与良策呢？倘若有更好的方案请不吝指出。*
+
+- *以此提问中附件`a168_SQL总包_v12_0_0_HF9g-P5D*版_六层商业版_OPT.sql`三件套模拟数据为例，分析咱们人类衣食住行、生活起居、工作旅游等等的信息来分析出特征、画像、各领域能力值并非不可能。*
+- 请先生查证目前天下各国各前沿与顶尖企业通过大数据来分析百姓、用户、员工、公务员等等。一些前沿与顶尖电商、风控、金融、社交网等等已经通过分析数据并使用多胺巴操纵算法多年。请先生务必将那些前沿与顶尖的技术一一列出并纳入《大秦赋算筹》。
 
 ## 解答
 
@@ -28886,6 +29645,677 @@ redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actio
 
 ### ChatGPT
 
+这一轮已经按“**禁止退化，只增不减**”继续完成，并把您本轮提出的“现实人类衣食住行/工作旅游画像 + 全球企业大数据技术 + 所谓多巴胺算法”正式并入 `_大秦赋算筹_v1_3_0.qmd`，新增为 **§39**。
+
+先给最重要的裁定：**您的 a168 三件套非常适合当“通用实体分析工程祖型”，但不应该把博彩风险字段直接改名后用于现实人物评分。** 附件自身已经体现一个非常成熟的原则：统一的是语义、单位、分母、证据等级，而不是强迫所有实体拥有同一组指标；`NULL ≠ 0`、`UNKNOWN ≠ FAIL`，而且事实、统计证据与决策层必须分开。a168_SQL总包_v12_0_0_HF9g-P5D_分批作…
+
+三件套当前都已经是 **140 模块 / 140 CSV** 体系；同时区分 `PRIMARY / BRIDGE / SCREENING / SUPPORT / REFERENCE / NOT_FOR_DECISION`，这套“**某项信息能否进入决策**”的治理结构，正是最值得迁移到现实人物/元宇宙实体体系的部分。a168_SQL总包_v12_0_0_HF9g-P5D_分批作…
+
+#### redteam/
+
+我先纠正一个重要事实：您这次上传的三件附件**不是模拟人物数据本身**，而是 SQL 查询、导出和审计代码。
+
+本轮静态实测三件源码均为：
+
+```text
+INSERT INTO  = 0
+CREATE TABLE = 0
+VALUES (...) = 0
+LOAD DATA    = 0
+```
+
+也就是说，没有内嵌一批“模拟人类记录”供直接计算。
+
+它们真正提供的是：
+
+> **怎么从事实事件 → 形成不同粒度 → 生成特征 → 形成画像 → 建立证据 → 决定哪些字段可用于决策。**
+
+10 万分批版和 1 万分批版，本质上主要区别之一就是导出批宽；1 万版文件头也明确标为“1 万行/批”。a168_SQL总包_v12_0_0_HF9g-P5D_分批作…
+
+而原版审计版仍然保留同一 140 模块母体系。a168_SQL总包_v12_0_0_HF9g-P5D_原版审…
+
+因此以后真正实验时应另造：
+
+```text
+Synthetic Human-World Dataset
+```
+
+再让三件 SQL 的工程思想迁移过去，而不是说这些 SQL 已经包含模拟现实人生数据。
+
+---
+
+#### critic/：人类现实世界完全可以做“大数据画像”，但必须分帐
+
+我已经把现实人物信息正式拆成五账。
+
+##### 描述状态
+
+例如：
+
+```text
+出行
+设备
+工作时段
+消费类别
+学习事件
+环境
+```
+
+这里只回答：
+
+> 发生了什么。
+
+##### 偏好
+
+例如饮食、交通、内容、旅游方式。
+
+应尽量由：
+
+> 明确选择 + 可撤销反馈
+
+获得，而不是秘密推断。
+
+##### 任务能力
+
+这是您真正可以建立“能力值”的地方。
+
+例如：
+
+```text
+SQL 调试
+Python 数据处理
+语言翻译
+机械维护
+研究设计
+驾驶模拟
+项目管理
+```
+
+必须具有：
+
+```text
+任务
+难度
+结果
+时间
+情境
+样本量
+置信区间
+```
+
+所以不是：
+
+> 此人“智力 88”。
+
+而是：
+
+> 在 SQL Debug v3 任务族、2026Q4、N=48 条任务证据下，能力后验 0.81，95% CI=[0.74,0.87]。
+
+这才有科学意义。
+
+##### 风险
+
+风险一定要特定：
+
+```text
+fraud probability
+account takeover probability
+system fault probability
+data quality risk
+```
+
+不能把风险分数偷换成：
+
+> 人品分。
+
+##### 敏感资料
+
+健康、宗教、族裔、政治意见、工会、性取向、生物识别等必须隔离。
+
+技术上能推断：
+
+> 不等于应该推断。
+
+---
+
+#### 全球企业确实已经做到非常深的用户画像
+
+但真正公开可核实的技术名称，并不是笼统的“多巴胺算法”。
+
+##### Meta
+
+Facebook Feed 的公开工程系统已经使用：
+
+- 多任务学习（Multitask Learning）；
+- 神经网络；
+- embeddings；
+- offline learning；
+- 大规模个性化 ranking。
+
+目标是预测不同内容对不同用户的相关性和价值。[Engineering at Meta](https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/?utm_source=chatgpt.com)
+
+值得迁移：
+
+```text
+候选生成
+→ 多目标预测
+→ 排序
+→ 内容资格/安全
+```
+
+---
+
+##### TikTok
+
+TikTok 官方说明其推荐依据：
+
+- 用户互动；
+- 内容信息；
+- 用户信息；
+
+并且这些信号权重并不一样。例如完整观看长视频属于较强兴趣信号，其权重可以高于简单地域一致之类弱信号。[newsroom.tiktok.com](https://newsroom.tiktok.com/how-we-recommend-videos?lang=en-IE\&utm_source=chatgpt.com)
+
+这个机制可迁移成：
+
+```text
+event
+→ signal
+→ weight
+→ rank
+→ feedback
+```
+
+但不能直接把：
+
+> watch time 最大化
+
+当成人类福祉最大化。
+
+---
+
+##### YouTube
+
+Google 的经典工业研究已经公开“两阶段”结构：
+
+```text
+Candidate Generation
+        ↓
+Deep Ranking
+```
+
+历史论文甚至明确建模 expected watch time。[research.google](https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/?utm_source=chatgpt.com)
+
+这套结构对《大秦赋算筹》很有价值，因为面对亿级世界实体，不可能全部做昂贵模型：
+
+> 先粗召回，再精排序。
+
+---
+
+##### Amazon
+
+Amazon Personalize 当前直接支持：
+
+- real-time personalization；
+- exploration；
+- Personalized Ranking；
+- Next-Best-Action；
+- 实时互动更新；
+- 部分自动更新模型。 [AWS 文档](https://docs.aws.amazon.com/personalize/latest/dg/recommendations.html?utm_source=chatgpt.com)
+
+
+这和您所说：
+
+> 实时挂机 → 观察新行为 → 更新阈值/权重
+
+其实已经非常接近。
+
+---
+
+##### Adobe
+
+Adobe Real-Time Customer Profile 已经可以把：
+
+```text
+online
+offline
+CRM
+third-party
+```
+
+数据合并成统一人物画像，并拥有：
+
+- Identity Graph；
+- Merge Policy；
+- time-series events；
+- streaming segmentation；
+- 实时 profile；
+- propensity score。 [Experience League](https://experienceleague.adobe.com/en/docs/experience-platform/profile/home?utm_source=chatgpt.com)
+
+
+其 Customer AI 目前公开支持：
+
+> churn / conversion propensity + influential factors。 [Experience League](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/customer-ai?utm_source=chatgpt.com)
+
+
+这与我们设计的：
+
+```text
+UWOM
++
+DUECG
++
+registry_entity_capability_topology
+```
+
+有很明显的工程同源性。
+
+---
+
+#### 金融风控更接近您的 a168 祖型
+
+##### Visa
+
+Visa 2026 官方资料说明，欺诈评分可以：
+
+- 将当前交易与数十亿历史网络交易比较；
+- 使用 device intelligence；
+- geolocation；
+- history；
+- behavioral pattern；
+- 毫秒级产生风险评分。
+
+其 Adaptive Behavioral Analytics 强调建立个人“正常行为”基线，再寻找偏离。[Visa](https://www.visa.com/en-us/thought-leadership/risk-fraud/what-is-fraud-scoring?utm_source=chatgpt.com)
+
+这很像：
+
+```text
+individual baseline
++
+population baseline
++
+current event
+→ anomaly posterior
+```
+
+---
+
+##### Mastercard
+
+Decision Intelligence Pro 目前公开采用：
+
+- transaction context；
+- cardholder behavior；
+- merchant relationships；
+- graph techniques；
+- GenAI models；
+- real-time scoring。 [Mastercard](https://www.mastercard.com/global/en/business/cybersecurity-fraud-prevention/risk-decisioning/decision-intelligence.html?utm_source=chatgpt.com)
+
+
+这一点尤其值得移植。
+
+因为您的 a168 本来就不是只研究会员本人，而有：
+
+```text
+会员
+IP
+荷官
+桌台
+代理
+配对
+```
+
+即：
+
+> **关系风险（Relational Risk）**
+
+这比只看个人属性成熟得多。
+
+---
+
+#### 员工大数据分析也已经很成熟，但这里必须守界
+
+##### Microsoft Viva Insights
+
+Microsoft 已经可以分析：
+
+- email/calendar metadata；
+- Teams 通话/聊天信号；
+- meeting load；
+- focus time；
+- collaboration network；
+- organizational data。 [Microsoft Learn](https://learn.microsoft.com/en-us/viva/insights/introduction?culture=en-us\&utm_source=chatgpt.com)
+
+
+而 Microsoft 同时明确写明：
+
+> Viva Insights 并非设计用于员工评价、跟踪、自动化决策、画像或监控。
+
+并提供：
+
+- aggregation；
+- de-identification；
+- minimum group size；
+- privacy settings；
+- opt-in/out。 [Microsoft Learn](https://learn.microsoft.com/en-us/viva/insights/introduction?culture=en-us\&utm_source=chatgpt.com)
+
+
+这是很重要的工程启示：
+
+> **能分析，不代表分析结果有权进入人事处置。**
+
+---
+
+##### Workday
+
+Workday People Analytics 目前已经用于分析：
+
+- hiring；
+- attrition；
+- leadership；
+- skills；
+- workforce KPI；
+- underlying drivers。 [doc.workday.com](https://doc.workday.com/user-guide/en-us/workday-people-analytics/people-analytics.html?utm_source=chatgpt.com)
+
+
+所以“员工画像”确实早已工业化。
+
+但招聘、解雇、晋升、工资等属于高影响决定，与“推荐一件衣服”不是同一个治理等级。
+
+---
+
+#### killcritic/：“多巴胺操纵算法”不能直接这样写进科研事实
+
+这一点我已经在 §39 做了正式斧正。
+
+公开工业技术是：
+
+```text
+recommendation
+ranking
+watch-time prediction
+propensity
+next-best-action
+reinforcement learning
+contextual bandit
+retention/churn
+A/B testing
+```
+
+不是有一个统一学科叫：
+
+> `dopamine manipulation algorithm`
+
+而且现代神经科学对多巴胺的解释也比“快乐按钮”复杂很多。
+
+2024 年 Nature Neuroscience 的综述指出 reward-prediction-error 理论虽然极重要，却不足以解释所有 dopamine activity。[Nature](https://www.nature.com/articles/s41593-024-01705-4?utm_source=chatgpt.com)
+
+2025 年 Nature Reviews Neuroscience 更进一步指出 dopamine transient 还可能编码超越单一 integrated value 的信息。[Nature](https://www.nature.com/articles/s41583-024-00898-8?utm_source=chatgpt.com)
+
+所以正确写法是：
+
+> 平台会通过反馈、预测与强化学习优化行为结果；这种计算与 reward-learning 理论存在类比，但若没有神经测量与因果实验，不能声称平台算法“直接控制了某人的多巴胺”。
+
+---
+
+#### blindspot/：真正危险的是把所有生活资料汇成“社会总分”
+
+您提出：
+
+> 衣食住行、工作、旅游、消费、通讯……
+
+这些资料技术上确实可以形成非常完整的 profile。
+
+但如果最终变成：
+
+```text
+Citizen Score = 83
+```
+
+就会严重退化。
+
+欧盟当前 AI Act 已明确把：
+
+- harmful manipulation；
+- exploitation of vulnerabilities；
+- **social scoring**；
+- workplace emotion recognition；
+
+等列入禁止实践。[Digital Strategy](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai?utm_source=chatgpt.com)
+
+就业管理、信贷、部分公共服务等又属于高风险用途，需要更严格的：
+
+```text
+data quality
+logging
+documentation
+human oversight
+robustness
+cybersecurity
+accuracy
+``` :chatgpt-content-reference{index="19"}
+
+
+Digital Services Act 则明确限制/禁止 dark patterns，并要求更高的推荐系统透明度与用户控制。:chatgpt-content-reference{index="20"}
+
+所以《大秦赋算筹》的竞争优势反而应该是：
+
+> **比商业推荐系统多一层“反操纵治理”。**
+
+---
+
+#### cheatsheet/：a168 怎么迁移到“人类世界模型”
+
+我已经在 §39 建了如下对应关系：
+
+| a168 祖型 | 人类/元宇宙版本 |
+|---|---|
+| `member_id` | `entity_id` |
+| 注单事件 | activity/event |
+| 会员×日 | entity×time |
+| IP/荷官/桌台 | device/place/agent/relation |
+| 140 modules | domain feature registry |
+| M-code | mechanism taxonomy |
+| UCC | semantic/evidence coordinate |
+| PRIMARY | direct task evidence |
+| SCREENING | hypothesis |
+| SUPPORT | context |
+| REFERENCE | baseline |
+| NOT_FOR_DECISION | evidence-only |
+| `evidence_flag` | sample sufficiency |
+| percentile | population position |
+| treatment ledger | intervention ledger |
+| causal modules | effect estimation |
+| `registry_risk_topology` | **`registry_entity_capability_topology`** |
+
+其中最值得保留的并不是百家乐本身，而是您 SQL 里已经明确建立的：
+
+> **SCREENING 不等于 DECISION。**
+
+例如附件明确把 IP、网段、配对等部分标为 screening，而不少错误粒度表直接标成 `NOT_FOR_DECISION`。:chatgpt-content-reference{index="21"}
+
+这个观念拿到现实社会尤其重要。
+
+---
+
+#### blueprint/：最终的人类世界智能架构
+
+现在正式变成：
+
+```text
+        Consent / Legal Basis / Purpose
+                    │
+                    ▼
+             Identity Firewall
+                    │
+                    ▼
+         Human-World Event Ledger
+                    │
+       ┌────────────┼─────────────┐
+       ▼            ▼             ▼
+     Personal     Spatial    Organizational
+      Events       Events         Events
+       │            │             │
+       └────────────┼─────────────┘
+                    ▼
+              Feature Registry
+                    │
+                    ▼
+          ┌─────────┼──────────┐
+          ▼         ▼          ▼
+      Preference  Capability   Risk
+                   Posterior   Anomaly
+          │         │          │
+          └─────────┼──────────┘
+                    ▼
+             Policy / Rights Gate
+                    │
+          ┌─────────┼─────────┐
+          ▼         ▼         ▼
+    Recommendation Review   No Action
+          │
+          ▼
+       Outcome Ledger
+          │
+          ▼
+  Causal / OOT / Calibration
+          │
+          ▼
+ Champion–Challenger Registry
+```
+
+这就把：
+
+> 您的 a168 数据工程  
+> + 万物能力谱 DUECG  
+> + UWOM  
+> + Spatial Shell  
+> + DaqinOS
+
+真正接成一条线。
+
+---
+
+#### actionplan/
+
+第一轮不要采现实人物。
+
+我建议直接生成：
+
+```text
+10,000 synthetic persons
+365 days
+8 domains
+50–200 events/person/day
+```
+
+八域：
+
+```text
+衣
+食
+住
+行
+工作
+学习
+财务
+数字互动
+```
+
+而且由于是模拟数据，我们知道“隐藏真实能力参数”，因此能够真正验证：
+
+> 模型算出的能力有没有接近真值。
+
+第一轮同时比较：
+
+```text
+weighted score
+MIRT
+hierarchical Bayes
+HMM/state-space
+GBDT
+Transformer
+GNN
+```
+
+用：
+
+```text
+parameter recovery
+CI coverage
+calibration
+OOT stability
+sample efficiency
+latency
+memory
+```
+
+来裁决。
+
+推荐算法再单独比赛：
+
+```text
+Popularity
+Collaborative Filtering
+Two-Tower
+Multi-task Ranking
+Contextual Bandit
+```
+
+但 reward 不采用：
+
+```text
+session_length
+```
+
+而采用：
+
+```text
+task success
+explicit satisfaction
+diversity
+low regret
+user control
+```
+
+这才符合“禁止退化”。
+
+---
+
+##### 本轮文件已经落盘
+
+施工前 `_大秦赋算筹_v1_3_0.qmd`：
+
+- **9,512 LF**
+- 524,779 bytes
+- MD5 `52d003b3d5bdedc43fe393599a926a46`
+
+施工后：
+
+- **10,862 LF**
+- **558,765 bytes**
+- UTF-8 无 BOM
+- CR = 0
+- §39 唯一
+- fenced code markers = **496，闭合 PASS**
+- YAML = **PASS**
+- Pandoc 全文解析 = **PASS**
+- 原文件完整字节前缀 = **PASS**
+- MD5 `656a038b66b73f1116cd93665639ffeb`
+- SHA256 `7ca8f6bdd54e998a532e6a822d5dca65ebf0b3cb75f6d543e476f6127872c79c`
+
+Quarto 仍未在当前执行环境发现，因此没有冒充 Quarto Render PASS。
+
+\_大秦赋算筹_v1_3_0.qmd[下载最新 `_大秦赋算筹_v1_3_0.qmd`](sandbox:/mnt/data/_大秦赋算筹_v1_3_0.qmd)
+
+:chatgpt-content-reference{index="24"}[下载本轮《人类世界画像 × 守正个性化》非退化审计报告](sandbox:/mnt/data/大秦赋算筹_v1_3_0_人类世界画像_守正个性化_非退化审计报告.md)
+
+\_大秦赋算筹_v1_3_0_pre_humanintel_52d003b3.qmd[下载施工前完整回滚快照](sandbox:/mnt/data/_大秦赋算筹_v1_3_0_pre_humanintel_52d003b3.qmd)
+
+这一轮我认为可以正式把一句铁律写在整个“人物画像体系”之上：
+
+> **因人而察，不因人而役；据事而量，不据身而断；算法可荐，不可诱；模型可疑，不可判；其证不足，则书 UNKNOWN。**
+
+这样《大秦赋算筹》既能吸收当前全球最强的推荐、风控、画像、员工分析、关系图与实时学习技术，又不会退化成“收集越多、操纵越深就越先进”的系统。
 
 ### Kimi（君）
 

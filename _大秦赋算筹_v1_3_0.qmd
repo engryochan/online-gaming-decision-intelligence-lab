@@ -9510,3 +9510,1353 @@ Entity Card
 工程顺序继续坚持：
 
 `史料/游戏机制登记 → 合成实体 → 任务基准 → 能力后验 → 图谱关系 → Spatial Shell → 现实授权数据 → DaqinOS`。
+
+
+---
+
+# 39. 人类生活世界事件账本 × 画像/能力后验 × 守正个性化 × 反操纵治理（2026-10-01）
+
+> **本章铁律**：文化作魂，证据作尺；可测者测之，不可测者标 `UNKNOWN`；现实人物不是游戏武将，不以敏感身份推断能力，不以一个总分断人生，不以“提高停留时长/成瘾”作为优化目标。  
+> 本章只迁移用户本轮上传三件 `a168 SQL 总包` 的**数据工程结构与审计思想**，不迁移博彩业务判断，不连接 Superset / StarRocks / DolphinScheduler / 任何生产网站，不接触未授权生产原始数据。
+
+## 39.0 本轮输入与静态实测边界
+
+本轮直接读取并静态审计三件附件：
+
+1. `a168_SQL总包_v12_0_0_HF9g-P5D_分批作业版_六层商业版_OPT.sql`
+2. `a168_SQL总包_v12_0_0_HF9g-P5D_分批作业版1万_六层商业版_OPT(2).sql`
+3. `a168_SQL总包_v12_0_0_HF9g-P5D_原版审计版_六层商业版_OPT.sql`
+
+### 39.0.1 三件套源码指纹（本轮本地静态实测）
+
+| 文件 | 字节 | LF 行数 | MD5 | SHA256 |
+|---|---:|---:|---|---|
+| 10 万分批作业版 | 4,656,939 | 51,014 | `1e8ac527ef6470e4df6fcb3d6ab08815` | `26e8e67a9727a505f92e9bfe19d5eb16e150c6f77ee6cecc3f4709447fec28be` |
+| 1 万分批作业版 | 4,656,057 | 51,127 | `356d1911692fa543f232a8e4d69c9506` | `8a95db84928cc8d27c037b80f3f14fc5ff5e0a176c68c58f2a80415bb50fe786` |
+| 原版审计版 | 4,259,453 | 45,858 | `4b6e3c965eabedd2e1ba16cceef7843d` | `41ba1543d048a920122ce2d47968c33da74f9f36588e24fce5ca6468ed80331a` |
+
+### 39.0.2 关键结构核验
+
+三件都声明同一 **140 模块 / 140 CSV** 母体系；1 万版把导出批宽改为 `10,000`，默认分批版为 `100,000`，原版审计版不切片。源码自身已经斧正：`batch_size` 只是**导出参数**，不应作为业务事实宇宙的身份锚。
+
+本轮静态搜索还得到：
+
+```text
+INSERT INTO   = 0
+CREATE TABLE  = 0
+VALUES (...)  = 0
+LOAD DATA     = 0
+COPY          = 0
+WITH CTE      = 79  （三件均同量级）
+```
+
+**裁定**：
+
+> 三件附件是查询、导出、审计与语义契约代码，不是内嵌了模拟人物记录的“模拟数据库”。  
+> 因此可以从源码验证**数据工程方法**，但不能在没有实际模拟记录时声称“已算出某现实人的能力值”。
+
+### 39.0.3 最值得迁移的 UCC 铁律
+
+附件中的统一判据坐标（Unified Criteria Coordinate, UCC）有三条极具普适性：
+
+1. 统一的是**语义、符号、单位、分母、方向、证据等级**，不是强迫所有表拥有同一组列；
+2. 模型评价/统计检验属于证据层，不能与主体事实字段混层；
+3. `NULL ≠ 0`、`UNKNOWN ≠ FAIL`、`NOT_RUN ≠ PASS`、缺件不等于缺算。
+
+这三条直接升级为本章的现实世界画像宪法。
+
+---
+
+# 39.1 从“140 表风险体系”迁移为“人类生活世界事件体系”
+
+博彩领域的实体与风险机理不能原封不动迁移到现实社会；真正可迁移的是：
+
+```text
+事实事件
+→ 身份/实体解析
+→ 多时间尺度聚合
+→ 特征证据表
+→ 关系拓扑
+→ 模型后验
+→ 决策/推荐
+→ 因果回测
+→ 审计/回滚
+```
+
+现实世界版本定义为：
+
+```text
+DAQIN Human-World Event Ledger
+        │
+        ├─ clothing / consumption
+        ├─ food / nutrition
+        ├─ housing / environment
+        ├─ mobility / travel
+        ├─ work / task
+        ├─ learning / research
+        ├─ finance / payment
+        ├─ communication / social
+        ├─ device / software
+        └─ voluntary wellness
+        │
+        ▼
+Domain Feature Marts
+        │
+        ▼
+Capability Evidence Tables
+        │
+        ▼
+registry_entity_capability_topology
+        │
+        ▼
+Bayes / MIRT / State-Space / GBDT / Transformer / Graph
+        │
+        ▼
+Capability Posterior + CI
+        │
+        ▼
+Safe Recommendation / Human Review
+```
+
+**不沿用“7×20=140”作为宇宙常数。**
+
+140 表结构可作为一个优秀工程祖型，但现实人的不同信号具有完全不同的自然时间尺度：
+
+| 领域 | 候选窗口 |
+|---|---|
+| 设备/交互延迟 | ms / sec / min |
+| 出行/通勤 | 小时 / 日 / 周 |
+| 工作任务 | 日 / 周 / 月 |
+| 学习技能 | 周 / 月 / 季 |
+| 消费偏好 | 日 / 月 / 季 |
+| 职业能力 | 月 / 季 / 年 |
+| 城市/基础设施 | 月 / 季 / 年 |
+| 长期人口/社会研究 | 年 / 多年 |
+
+窗口必须通过**任务目标 + walk-forward + OOT + 稳定性**实测，而不是先验规定。
+
+---
+
+# 39.2 “人的画像”与“人的能力”必须分帐
+
+现实个人数据至少拆成五类，禁止混成单一人物总分：
+
+### A. 描述性状态（Descriptive State）
+
+```text
+location context
+device context
+calendar context
+observed activity
+declared preferences
+```
+
+只描述“当前发生了什么”。
+
+### B. 偏好（Preference）
+
+例如：
+
+```text
+preferred cuisine
+preferred travel mode
+preferred content
+preferred work hours
+```
+
+应尽量来自用户主动选择/可撤销反馈，而不是秘密推断。
+
+### C. 技能/任务能力（Task Capability）
+
+必须有：
+
+```text
+task
+difficulty
+outcome
+context
+sample_n
+time
+uncertainty
+```
+
+例如：
+
+```text
+SQL debugging
+Python data cleaning
+R survival modelling
+translation
+machine maintenance
+driving simulator
+```
+
+### D. 风险/异常（Risk / Anomaly）
+
+只能回答特定、明确定义的问题，例如：
+
+```text
+transaction fraud probability
+account takeover probability
+system fault probability
+data quality risk
+```
+
+不能把“风险分数”偷换成“人品”。
+
+### E. 高敏感/受保护域（Sensitive / Protected）
+
+现实世界中健康、精确生物识别、宗教、族裔、政治意见、工会、性取向等必须单独隔离；不得因为技术上能推断就自动推断，更不得拿这些属性给一般能力、忠诚、信用或就业价值打分。
+
+---
+
+# 39.3 大秦现实实体统一坐标（DAQIN-HUMAN）
+
+定义：
+
+```text
+DAQIN-HUMAN::<DOMAIN>/<ENTITY_TYPE>/<ENTITY_ID>/<SIGNAL>/<TASK>@<TIME>#<CONTEXT>#<EVIDENCE>
+```
+
+任何画像/能力记录至少携带：
+
+```text
+entity_id
+entity_type
+world_domain
+purpose
+legal_basis_or_consent
+data_source
+event_time
+valid_time
+transaction_time
+context
+feature_family
+task_family
+measurement_unit
+model_version
+posterior_or_score
+uncertainty_interval
+sample_n
+provenance
+P
+M
+LO
+sensitivity
+retention_class
+human_override
+appeal_or_correction
+```
+
+> **没有 `purpose / context / uncertainty / provenance` 的人物分数，禁止进入正式能力拓扑。**
+
+---
+
+# 39.4 全球前沿企业已公开证明的“画像/预测/决策”技术
+
+“全世界所有企业”无法在一个静态文档内穷举；本章采用工程定义：
+
+> **类别全覆盖 + 前沿代表系统 + 可持续 Registry。**
+
+## 39.4.1 社交与内容推荐
+
+| 企业/系统 | 公开可核实技术 | 可借鉴 | 不应照搬 |
+|---|---|---|---|
+| Meta / Facebook Feed | 多任务神经网络、embeddings、offline learning、个性化 ranking | 多目标排序、候选→预测→排序 | 单纯最大化互动 |
+| TikTok For You | 用户互动、内容信息、用户信息；信号按预测价值动态加权，完整观看等强互动信号可获更高权重 | sequence/event weighting、在线兴趣更新 | 把停留时长当福祉 |
+| YouTube 推荐研究 | 两阶段 candidate generation + deep ranking；历史工业论文直接建模 expected watch time | 大规模 retrieval/ranking 分层 | 把 watch time 直接等同满意度 |
+
+### 对《大秦赋算筹》的迁移
+
+```text
+Candidate Generation
+        ↓
+Constraint / Eligibility
+        ↓
+Multi-objective Ranking
+        ↓
+Diversity / Novelty
+        ↓
+Safety / Wellbeing Gate
+        ↓
+User Control / Explanation
+```
+
+不是：
+
+```text
+maximize(clicks + minutes)
+```
+
+---
+
+# 39.5 电商、客户画像与“下一最佳动作”
+
+## 39.5.1 Amazon Personalize
+
+AWS 当前公开支持：
+
+- 实时个性化（real-time personalization）；
+- Personalized Ranking；
+- exploration；
+- Next-Best-Action；
+- 新互动对推荐实时产生影响；
+- 部分 recommender 自动更新。
+
+这说明“行为事件→动态画像→下一动作”的工业模式已经非常成熟。
+
+对大秦体系最值得迁移的是：
+
+```text
+interaction event
+→ user/item embeddings
+→ context
+→ ranking
+→ exploration
+→ feedback
+```
+
+但必须加入本章的守正约束。
+
+## 39.5.2 Adobe Experience Platform / Real-Time CDP
+
+Adobe 2026 文档明确支持：
+
+- online / offline / CRM / third-party 数据合并；
+- identity graph；
+- timestamped interaction history；
+- merge policy；
+- streaming segmentation；
+- 实时统一客户画像；
+- Customer AI 的 churn / conversion propensity；
+- influential factors；
+- audience segmentation。
+
+它与 `registry_entity_capability_topology` 的思想非常接近：
+
+```text
+fragments
+→ identity resolution
+→ union profile
+→ time-series events
+→ model-driven features
+→ segment/action
+```
+
+**值得直接借鉴其“身份图 + merge policy + profile guardrail”。**
+
+---
+
+# 39.6 金融风控：实时行为画像已经是成熟产业
+
+## Visa
+
+Visa 2026 官方资料明确描述：
+
+- 当前交易与**数十亿历史网络交易**比较；
+- device intelligence、geolocation、history 等可进入风险评分；
+- Visa Advanced Authorization 在授权阶段产生 risk score；
+- Featurespace Adaptive Behavioral Analytics 以个体正常行为模式识别异常。
+
+迁移价值：
+
+```text
+individual baseline
++
+population baseline
++
+current context
++
+network intelligence
+→ risk posterior
+```
+
+而不是简单静态规则。
+
+## Mastercard Decision Intelligence Pro
+
+Mastercard 当前公开：
+
+- 实时 transaction context；
+- cardholder behavior；
+- merchant relationships；
+- graphing；
+- GenAI 驱动模型；
+- authorization-time risk score。
+
+最值得迁移的是：
+
+> **关系风险（Relational Risk）**：单个事件不能解释风险时，把实体之间的关系图一起建模。
+
+这与本项目长期研究的 IP、账户、代理、荷官、桌台等多实体拓扑具有方法论同源性，但现实人类社会使用时必须加隐私与用途限制。
+
+---
+
+# 39.7 员工/组织分析：能分析，但“能”不等于“可以随意监控”
+
+## Microsoft Viva Insights
+
+Microsoft 2026 官方文档显示其可以基于：
+
+- email/calendar metadata；
+- Teams chat/call signals；
+- organizational/HR data；
+- meeting load；
+- focus time；
+- collaboration network；
+
+做个人、团队与组织层的工作方式分析和 Organizational Network Analysis（ONA）。
+
+但 Microsoft 同一份文档明确强调：
+
+> Viva Insights **不是为 employee evaluation、tracking、automated decision making、profiling 或 monitoring 设计的**。
+
+并提供：
+
+- aggregated / de-identified organization insights；
+- minimum group size；
+- opt in/out；
+- role-based access；
+- privacy controls。
+
+这比单纯“员工大数据评分”更值得《大秦赋算筹》学习：
+
+> **分析能力与使用权限必须分开设计。**
+
+## Workday People Analytics
+
+Workday 当前公开 People Analytics 可分析：
+
+- hiring；
+- attrition；
+- leadership；
+- skills；
+- workforce KPI；
+- underlying drivers；
+
+并以 augmented analytics / AI 提供 prioritized insights。
+
+可迁移：
+
+```text
+workforce event
+→ KPI
+→ driver analysis
+→ skill evidence
+→ aggregate trend
+```
+
+但个体招聘、解雇、晋升、薪酬等属于高影响用途，必须比普通营销画像采用更严格的证据和人工复核。
+
+---
+
+# 39.8 “公务员/百姓画像”必须与商业推荐分轨
+
+公共部门可使用数据做：
+
+```text
+交通流量
+公共服务容量
+税务/支付异常
+设施维护
+公共卫生聚合统计
+资源调度
+政策效果评估
+```
+
+但不得把“所有生活资料”汇成一个决定居民社会价值、忠诚或资格的单一分数。
+
+本章把真实世界用途分四级：
+
+| 等级 | 用途 | 自动化权限 |
+|---|---|---|
+| H0 | 聚合统计、容量规划 | 可自动 |
+| H1 | 个人建议、可撤销个性化 | 可自动 + 用户控制 |
+| H2 | 风险筛查/人工队列排序 | 模型只能辅助 |
+| H3 | 就业、信贷、保险、福利、执法、教育录取等高影响 | 强制人工/法律/申诉/审计 |
+| HX | 有害操纵、社会评分、敏感特征歧视等 | 禁止 |
+
+---
+
+# 39.9 “多巴胺操纵算法”术语斧正
+
+## 39.9.1 技术事实
+
+目前公开企业系统真正采用的术语是：
+
+```text
+recommendation
+ranking
+engagement prediction
+watch-time prediction
+propensity
+next-best-action
+reinforcement learning
+contextual bandit
+retention/churn
+A/B testing
+uplift modelling
+```
+
+不是一个正式技术类别叫：
+
+```text
+dopamine manipulation algorithm
+```
+
+## 39.9.2 神经科学事实
+
+多巴胺与 reward prediction error（奖励预测误差）和强化学习有重要关系，但现代研究指出其信号功能比“快乐/奖励一个标量”复杂得多，也涉及状态不确定性、感觉/动作特征和多时间尺度学习。
+
+因此：
+
+> **“算法让人点击更多”不能被直接等同为“算法精准操纵了多巴胺”。**
+
+若无神经测量与严谨因果证据，这种说法只能作为通俗隐喻，不得进入科学事实层。
+
+## 39.9.3 本项目反目标
+
+《大秦赋算筹》明确不把以下目标设为生产 KPI：
+
+```text
+maximize compulsive session length
+maximize loss of user control
+exploit vulnerability
+induce addictive behaviour
+hide opt-out
+dark pattern
+sensitive-trait targeting
+```
+
+允许研究这些机制用于：
+
+> **识别风险、设计防护、限制过度推荐、改善用户自主权。**
+
+---
+
+# 39.10 从“Engagement Optimization”升级为“守正多目标个性化”
+
+推荐目标定义为：
+
+\[
+\max_\pi \quad
+U =
+w_r R_{\text{relevance}}
++w_q Q_{\text{quality}}
++w_s S_{\text{satisfaction}}
++w_d D_{\text{diversity}}
++w_l L_{\text{long-term utility}}
+-\lambda_f F_{\text{fatigue}}
+-\lambda_h H_{\text{harm}}
+-\lambda_c C_{\text{switch}}
+\]
+
+subject to：
+
+```text
+privacy = PASS
+safety = PASS
+sensitive_targeting = FALSE
+minor_guard = PASS
+frequency_cap = PASS
+user_control = TRUE
+explanation = AVAILABLE
+opt_out = AVAILABLE
+```
+
+**速度/转化不能抵消基本权利。**
+
+---
+
+# 39.11 可迁移到“衣食住行、工作旅游”的特征体系
+
+以下仅用于**模拟、用户自愿授权、或合法明确用途**。
+
+## 衣（Clothing）
+
+```text
+size preference
+material preference
+seasonality
+price elasticity
+style interaction
+return history
+```
+
+用途：
+
+- 推荐；
+- 库存预测；
+- 尺码匹配。
+
+禁止：
+
+- 用外貌推断人格/就业能力。
+
+## 食（Food）
+
+```text
+declared dietary preference
+purchase/menu sequence
+time-of-day pattern
+allergy flag (explicit only)
+budget range
+cuisine diversity
+```
+
+健康/过敏属于更敏感信息，须用途最小化。
+
+## 住（Housing）
+
+```text
+space usage
+energy consumption
+maintenance events
+environment sensors
+commute distance
+```
+
+用途：
+
+- 节能；
+- 维修；
+- 空间配置。
+
+## 行（Mobility / Travel）
+
+```text
+origin-destination
+travel time
+mode choice
+delay tolerance
+route preference
+seasonality
+```
+
+精确位置属于高敏感度数据，默认短保留、细粒度权限。
+
+## 工作（Work）
+
+```text
+task type
+task difficulty
+completion
+quality
+latency
+rework
+collaboration context
+tool usage
+```
+
+能力值必须来自任务证据，不得从族群、宗教、政治或健康属性推断。
+
+## 学习/科研（Learning / Research）
+
+```text
+problem difficulty
+attempt history
+accuracy
+retention
+transfer
+research output provenance
+reproducibility
+```
+
+可使用 IRT/MIRT、Bayesian Knowledge Tracing、state-space。
+
+## 财务/支付（Finance）
+
+```text
+transaction context
+cashflow volatility
+merchant graph
+device/geo consistency
+fraud anomalies
+```
+
+高影响信用决策须独立治理，不能把商业推荐 profile 直接拿来决定贷款/保险。
+
+---
+
+# 39.12 从 140 表迁移成“现实人物多域模块注册表”
+
+不建议生成“140 张现实人物表”再硬拼。
+
+建议 registry-driven：
+
+```text
+registry_domain
+registry_entity
+registry_event
+registry_feature
+registry_capability
+registry_relation
+registry_model
+registry_policy
+registry_intervention
+registry_outcome
+registry_evidence
+```
+
+其中：
+
+```text
+registry_entity_capability_topology
+```
+
+只存：
+
+```text
+entity_type
+capability_family
+feature_sources
+task_family
+eligible_models
+minimum_evidence
+update_frequency
+uncertainty_method
+decision_scope
+forbidden_uses
+```
+
+**不存“永久人格判决”。**
+
+---
+
+# 39.13 模型梯队：从描述到决策
+
+```text
+L0 descriptive statistics
+   ↓
+L1 RFM / quantile / robust z
+   ↓
+L2 GLM / GAM / survival / BG-NBD
+   ↓
+L3 GBDT / calibrated classifier
+   ↓
+L4 Bayesian hierarchical / MIRT / state-space / HMM
+   ↓
+L5 sequence model / Transformer
+   ↓
+L6 graph ML / GNN
+   ↓
+L7 causal uplift / heterogeneous treatment effect
+   ↓
+L8 contextual bandit
+   ↓
+L9 constrained RL
+```
+
+晋级原则：
+
+> 更复杂模型必须在 OOT、calibration、uncertainty、latency、fairness、cost 中产生可复现增益，否则不得取代简单 Champion。
+
+---
+
+# 39.14 特别值得迁移的前沿技术总表
+
+| 技术 | 现实用途 | 大秦迁移 |
+|---|---|---|
+| Identity Graph / Entity Resolution | 跨设备/渠道统一实体 | UWOM identity layer |
+| Event Streaming | 实时行为事件 | Human-World Event Ledger |
+| Feature Store | 在线/离线一致 | Capability Feature Registry |
+| Embedding | 用户/内容/实体表示 | DUECG representation |
+| Candidate Retrieval | 百万→千级候选 | 推荐/任务匹配 |
+| Multi-task Ranking | 同时优化多个行为 | 守正多目标排序 |
+| Sequence Model | 行为次序/阶段变化 | 生命周期与学习轨迹 |
+| Survival / Hazard | churn/time-to-event | 流失、故障、技能保持 |
+| Graph ML | 关系/团伙/交易拓扑 | Entity Relation Graph |
+| Causal Uplift | 谁因干预而真正改善 | 个性化干预而非相关性 |
+| Contextual Bandit | 探索/利用 | 低风险个性化 |
+| Constrained RL | 长期策略 | 仅仿真/保护性目标后晋级 |
+| Calibration | 评分与真实概率一致 | 能力/风险后验可信 |
+| Uncertainty | CI/posterior | 禁“裸分数” |
+| Differential Privacy | 聚合隐私 | 人群洞察 |
+| Federated Learning | 数据不集中 | 多端学习候选 |
+| Secure Enclave / Confidential Computing | 使用中数据保护 | 高敏感计算 |
+| SBOM / signed model | 供应链血统 | 模型/软件完整性 |
+| Feature Lineage | 可追溯 | P×M×LO provenance |
+
+---
+
+# 39.15 人的“能力值”只允许由任务证据推断
+
+沿用 §38 DUECG：
+
+\[
+P(Y_{ej}=1)
+=
+\sigma(a_j^\top\theta_e-b_j+\beta^\top c)
+\]
+
+能力卡：
+
+```text
+实体：<entity_id>
+能力域：<capability>
+任务：<task_family>
+后验：<mean>
+95% CI：<interval>
+样本：<n>
+情境：<context>
+时间：<valid_time>
+来源：<provenance>
+模型：<version>
+P/M/LO：<evidence>
+```
+
+禁止：
+
+```text
+消费多 → 能力高
+加班多 → 忠诚高
+社交多 → 领导力高
+收入高 → 智力高
+```
+
+这些都是典型 proxy fallacy。
+
+---
+
+# 39.16 企业“画像技术”统一坐标
+
+```text
+DAQIN-INTEL::<SECTOR>/<ENTITY>/<SIGNAL>/<MODEL>/<ACTION>#<RIGHTS>#<EVIDENCE>
+```
+
+建议字段：
+
+```text
+sector
+vendor
+system
+purpose
+signal_family
+identity_resolution
+model_family
+online_or_batch
+objective
+action
+latency
+human_in_loop
+privacy_control
+opt_out
+explanation
+appeal
+sensitive_data_policy
+evidence_source
+P
+M
+LO
+```
+
+这样以后新增：
+
+```text
+Meta
+TikTok
+Amazon
+Adobe
+Microsoft
+Workday
+Visa
+Mastercard
+...
+```
+
+只新增 Registry 行，不改母架构。
+
+---
+
+# 39.17 RedTeam：人类大数据画像的新攻击面
+
+1. **目的漂移（Purpose Creep）**：购物推荐资料被拿去招聘/信贷。
+2. **Proxy discrimination**：邮编、设备、行为间接代理受保护属性。
+3. **Identity stitching error**：两个人错误合并成一个 profile。
+4. **Feedback loop**：模型少推荐某类机会 → 用户更少接触 → 模型“证明”用户不感兴趣。
+5. **Goodhart**：员工为了 KPI 改行为而不是提高真实产出。
+6. **Surveillance chilling effect**：过度员工监测改变正常协作。
+7. **Re-identification**：聚合数据组太小仍可识别个人。
+8. **Reward hacking**：RL 找到伤害用户但提高 KPI 的策略。
+9. **Dark pattern**：退出、拒绝、关闭提醒被故意隐藏。
+10. **Sensitive inference**：从非敏感行为推断宗教、健康、政治等。
+11. **Automation bias**：管理者把模型概率当事实。
+12. **Uncertainty erasure**：报一个 0.82 而不报样本和 CI。
+13. **Historical bias**：旧制度偏差被模型继承。
+14. **Cross-domain social scoring**：购物、出行、社交、工作混成社会价值总分。
+15. **Data breach blast radius**：建立“全息画像”后泄漏代价指数上升。
+
+---
+
+# 39.18 Critic：真正的“前沿”不是收集最多资料
+
+最高级的数据系统应能回答：
+
+```text
+Why do we need this field?
+Can we infer the outcome without it?
+How long must it be retained?
+Who can see it?
+Can the user correct it?
+Can the action be reversed?
+What uncertainty remains?
+What harm follows from a false positive?
+```
+
+所以一个“字段更少、可解释、可删除”的系统，可能比“收集所有生活数据”的系统更先进。
+
+---
+
+# 39.19 KillCritic：现实人物画像十条一票否决
+
+**VETO-HUMAN-01**：全社会统一“个人总分”。
+
+**VETO-HUMAN-02**：基于族裔、宗教、政治、工会、性取向等敏感属性推断一般能力/忠诚/价值。
+
+**VETO-HUMAN-03**：把“多巴胺最大化/成瘾”作为产品目标。
+
+**VETO-HUMAN-04**：现实员工隐藏监控后自动决定解雇/晋升。
+
+**VETO-HUMAN-05**：高影响决策只有模型分数而无人工复核/申诉。
+
+**VETO-HUMAN-06**：把广告/推荐 profile 直接复用为信用/保险/公共福利资格。
+
+**VETO-HUMAN-07**：工作场所情绪识别作为常规绩效输入。
+
+**VETO-HUMAN-08**：UNKNOWN/缺数据自动变负分。
+
+**VETO-HUMAN-09**：模拟数据效果冒充现实部署效果。
+
+**VETO-HUMAN-10**：AI 直接向生产人物档案写不可逆标签。
+
+---
+
+# 39.20 法规/治理现实锚
+
+截至 2026-10-01，欧盟 AI Act 官方说明已经明确把以下用途列入禁止实践：
+
+- harmful AI manipulation/deception；
+- exploit vulnerabilities；
+- social scoring；
+- certain individual criminal-risk prediction；
+- workplace / education emotion recognition（医疗/安全等有限例外）；
+- 从生物特征推断特定受保护属性等。
+
+就业管理、信用、部分公共服务等用途属于高风险类别，需要更严格的：
+
+```text
+risk management
+data quality
+logging
+documentation
+human oversight
+robustness
+cybersecurity
+accuracy
+```
+
+Digital Services Act（DSA）也明确限制/禁止 dark patterns，并要求大型平台提供推荐系统透明度与用户控制。
+
+因此《大秦赋算筹》的技术目标应是：
+
+> **比最低法规要求更早内建用途隔离、透明度、可撤销、申诉、删除与反操纵。**
+
+---
+
+# 39.21 Blindspot：当前仍未实测
+
+本章下列项目全部维持 `LO∅`：
+
+- 三件 SQL 在真实模拟人类事件数据上的运行性能；
+- “7窗口/20模块”在人类数据上的最优性；
+- `registry_entity_capability_topology` 的真实 schema evolution 成本；
+- MIRT/HMM/Transformer/GNN 对现实多域能力估计的 OOT 表现；
+- differential privacy 对能力估计精度的代价；
+- federated learning 的网络/电量成本；
+- 多源 identity resolution 的误合并率；
+- 两机 Champion–Challenger 的实时切换成本；
+- 任何现实个人的“全生活画像”。
+
+因此不得写成已证明生产能力。
+
+---
+
+# 39.22 Cheatsheet：从 SQL 总包迁移到现实世界的对应关系
+
+| A168 祖型 | 人类世界母架构 |
+|---|---|
+| member_id | entity_id |
+| bet event | activity/event |
+| member/day | entity/time |
+| table/dealer/IP | place/device/agent/relation |
+| 140 modules | domain feature registry |
+| M-code | mechanism taxonomy |
+| risk_usage | decision admissibility |
+| UCC | semantic/evidence coordinate |
+| PRIMARY | direct task evidence |
+| SCREENING | hypothesis/screening |
+| SUPPORT | context |
+| REFERENCE | baseline |
+| NOT_FOR_DECISION | evidence-only |
+| evidence_flag | sample sufficiency |
+| pr/quantile | descriptive population position |
+| action_priority | policy output（须另层） |
+| treatment ledger | intervention ledger |
+| causal module | effect estimation |
+| registry_risk_topology | registry_entity_capability_topology |
+
+最重要的迁移不是字段名，而是：
+
+> **“事实 → 证据 → 模型 → 决策”不得混层。**
+
+---
+
+# 39.23 Blueprint：守正世界智能平台（Human-World Intelligence Plane）
+
+```text
+                    ┌──────────────────────┐
+                    │ Consent / Legal Basis│
+                    │ Purpose / Rights     │
+                    └──────────┬───────────┘
+                               ▼
+                      Identity Firewall
+                               │
+                               ▼
+                     Human-World Event Ledger
+                               │
+              ┌────────────────┼────────────────┐
+              ▼                ▼                ▼
+          Personal          Spatial         Organization
+           Events            Events            Events
+              │                │                │
+              └────────────────┼────────────────┘
+                               ▼
+                       Feature Registry
+                               │
+                 Point-in-time / lineage
+                               │
+         ┌─────────────────────┼─────────────────────┐
+         ▼                     ▼                     ▼
+      Profile               Capability             Risk
+    preference           task posterior          anomaly
+         │                     │                     │
+         └─────────────────────┼─────────────────────┘
+                               ▼
+                      Policy / Rights Gate
+                               │
+                ┌──────────────┼───────────────┐
+                ▼              ▼               ▼
+          Recommendation   Human Review    No Action
+                │
+                ▼
+            Outcome Ledger
+                │
+                ▼
+       Causal / OOT / Calibration
+                │
+                ▼
+       Champion–Challenger Registry
+```
+
+---
+
+# 39.24 实测服务器方案
+
+## Server A — Challenger / 实验
+
+只使用：
+
+```text
+synthetic
+de-identified
+authorized
+```
+
+数据。
+
+运行：
+
+```text
+feature experiment
+model training
+causal analysis
+fairness probe
+privacy probe
+red team
+load test
+```
+
+## Server B — Stable / Champion
+
+只接受：
+
+```text
+signed model
+signed policy
+SBOM
+evaluation report
+versioned schema
+rollback package
+```
+
+晋级路径：
+
+```text
+Lab
+→ Offline Backtest
+→ Shadow
+→ Limited Canary
+→ Human Sign-off
+→ Champion
+```
+
+严禁：
+
+```text
+AI → direct production profile mutation
+```
+
+---
+
+# 39.25 ActionPlan：第一轮现实世界模拟实验
+
+先造完全合成数据，不采现实个人。
+
+建议：
+
+```text
+10,000 synthetic persons
+365 days
+8 domains
+50–200 events/person/day
+```
+
+域：
+
+```text
+clothing
+food
+housing
+mobility
+work
+learning
+finance
+digital interaction
+```
+
+每个 synthetic entity 有**隐藏真实能力参数**，用于检验模型能否恢复。
+
+### Benchmark 1：画像
+
+比较：
+
+```text
+RFM
+k-means/GMM
+embeddings
+sequence model
+Transformer
+```
+
+评价：
+
+```text
+cluster stability
+next-event prediction
+calibration
+memory
+latency
+```
+
+### Benchmark 2：能力
+
+比较：
+
+```text
+weighted score
+MIRT
+hierarchical Bayes
+state-space/HMM
+GBDT
+Transformer
+```
+
+评价：
+
+```text
+parameter recovery
+CI coverage
+OOT
+sample efficiency
+```
+
+### Benchmark 3：关系
+
+比较：
+
+```text
+SQL joins
+graph features
+GNN
+```
+
+评价：
+
+```text
+link prediction
+false association
+latency
+memory
+```
+
+### Benchmark 4：推荐
+
+比较：
+
+```text
+popularity
+collaborative filtering
+two-tower
+multi-task ranking
+contextual bandit
+```
+
+目标不是 session time，而是：
+
+```text
+task success
+explicit satisfaction
+diversity
+low regret
+user control
+```
+
+### Benchmark 5：隐私
+
+逐级加入：
+
+```text
+aggregation
+pseudonymization
+k-anonymity baseline
+differential privacy
+federated candidate
+confidential computing candidate
+```
+
+测 accuracy/privacy/cost Pareto。
+
+---
+
+# 39.26 文化治理包装：诸子百家不是皮肤，而是决策分工
+
+为了保持《大秦赋算筹》的华夏文明母体，可把技术治理映射为：
+
+```text
+儒家：仁恕 / 人本 / 不以人作纯对象
+墨家：节用 / 兼爱 / 防御 / 最小权限
+道家：少扰动 / 少采集 / 最小化
+法家：规则、审计、责任、Policy-as-Code
+名家：定义、名称、语义一致性
+阴阳家：状态、周期、时序，但必须接受现代统计验证
+兵家：RedTeam / 对抗测试 / 未战先算
+纵横家：多方案、多系统互操作
+农家：资源、粮食、土地与真实生产约束
+杂家：跨域组合但不混淆证据层
+```
+
+这是一种**现代系统工程的文化表达层**，不是用古典哲学替代统计、法律或安全标准。
+
+文言总纲可写：
+
+> **凡察民物，先正名实，次辨时地，复审所据，而后计其能；所不知者阙之，不以阙为罪，不以一数断终身。算法可辅人，不可夺人之志；数据可明事，不可役人之心。**
+
+---
+
+# 39.27 本章一手/高可信公开来源（2026-10-01 核验）
+
+## 推荐 / 个性化
+
+- Meta Engineering — News Feed ranking, machine learning:  
+  https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/
+- TikTok — How TikTok recommends content:  
+  https://support.tiktok.com/en/using-tiktok/exploring-videos/how-tiktok-recommends-content
+- Google Research — Deep Neural Networks for YouTube Recommendations:  
+  https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/
+- AWS — Amazon Personalize real-time recommendations:  
+  https://docs.aws.amazon.com/personalize/latest/dg/recommendations.html
+- AWS — Amazon Personalize use-case/recipe features:  
+  https://docs.aws.amazon.com/personalize/latest/dg/use-case-recipe-features.html
+
+## 客户画像
+
+- Adobe — Real-Time Customer Profile:  
+  https://experienceleague.adobe.com/en/docs/experience-platform/profile/home
+- Adobe — Customer AI:  
+  https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/customer-ai
+
+## 员工/组织分析
+
+- Microsoft — Viva Insights Introduction:  
+  https://learn.microsoft.com/en-us/viva/insights/introduction
+- Microsoft — Viva Privacy:  
+  https://learn.microsoft.com/en-us/viva/viva-privacy
+- Workday — People Analytics:  
+  https://doc.workday.com/user-guide/en-us/workday-people-analytics/people-analytics.html
+
+## 支付 / 风控
+
+- Visa — Fraud scoring explained (2026):  
+  https://www.visa.com/en-us/thought-leadership/risk-fraud/what-is-fraud-scoring
+- Mastercard — Decision Intelligence Pro:  
+  https://www.mastercard.com/global/en/business/cybersecurity-fraud-prevention/risk-decisioning/decision-intelligence.html
+
+## 神经科学
+
+- Nature Neuroscience (2024) — Explaining dopamine through prediction errors and beyond:  
+  https://www.nature.com/articles/s41593-024-01705-4
+- Nature Reviews Neuroscience (2025) — Dopaminergic prediction errors beyond value:  
+  https://www.nature.com/articles/s41583-024-00898-8
+
+## AI / 平台治理
+
+- European Commission — AI Act:  
+  https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- European Commission — Navigating the AI Act:  
+  https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act
+- European Commission — Digital Services Act Q&A / dark patterns:  
+  https://digital-strategy.ec.europa.eu/en/faqs/digital-services-act-questions-and-answers
+
+---
+
+# 39.28 本章收束
+
+从本轮三件 SQL 可以严谨继承的，不是“把百家乐 140 表改名成人类 140 表”，而是这套工程纪律：
+
+> **实体有粒度，字段有语义，事实有时间，特征有血统，评分有证据，模型有适用域，决策有闸门，干预有因果，结果可回滚。**
+
+全球前沿企业已经证明：
+
+> **统一画像、实时事件、embedding、深度排序、关系图、行为基线、倾向预测、下一最佳动作、组织网络分析**都具有生产价值。
+
+但《大秦赋算筹》必须进一步比商业平台多一层：
+
+> **反操纵、反社会评分、反敏感推断、反目的漂移、反模型独断。**
+
+故本章总纲：
+
+> **因人而察，不因人而役；据事而量，不据身而断；算法可荐，不可诱；模型可疑，不可判；其证不足，则书 UNKNOWN。**
+
+下一阶段工程顺序：
+
+```text
+三件 SQL schema/逻辑静态审计
+→ synthetic Human-World Event Ledger
+→ registry_entity_capability_topology
+→ 多模型 benchmark
+→ privacy/fairness/red-team
+→ two-server Champion–Challenger
+→ Spatial Shell 展示
+→ IQ/OQ/PQ/MQ
+→ 才评估 DaqinOS 内建服务
+```
