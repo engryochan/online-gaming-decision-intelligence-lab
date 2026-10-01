@@ -10860,3 +10860,1004 @@ confidential computing candidate
 → IQ/OQ/PQ/MQ
 → 才评估 DaqinOS 内建服务
 ```
+
+
+# 40. 秦式统一人机社会操作系统：权限阶层 × 仓颉路线 × 高保证安全监测 × 真实能力竞技场（2026-10-01）
+
+> **本章定位**：在 §33–§39 已有 `DAQIN-UCS / OS Factory / DAQIN-IR / UWOM / DUECG / HISTORY-REAL-TWIN-SIM-FICTION / Human-World Intelligence Plane` 基础上，继续完成“策略游戏文化母体 → 操作系统实测 → 编程语言统一轨道 → 身份与权限 → 守正安全监测 → 个人职业/资产/能力世界模型”的闭环。  
+> **铁律不变**：只增不减；冲突留账；`UNKNOWN` 不猜；性能、安全、兼容、稳定、可行性均须实测升级 `LO`。  
+> **现实边界**：国防、国安、公安/执法、军事等只吸收公开的高保证性安全、身份、审计、韧性、数字孪生与数据治理方法；不实现秘密监控、违法侵入、绕过授权、针对现实个人的隐蔽操纵或未经授权的武装/强制权力。
+
+---
+
+## 40.1 秦式“统一”的工程正解：统一法度，不灭百工
+
+《大秦赋算筹》之“秦式统一”不应解释为“天下只能剩一个 OS、一个语言、一个分数”，而应解释为**标准统一、身份统一、度量统一、接口统一、证据统一、权限可验证**。
+
+| 华夏/先秦文化隐喻 | 现代工程对应 | 可验证对象 | 禁止误读 |
+|---|---|---|---|
+| 书同文 | 统一语义、类型、Schema、`DAQIN-IR` | Parser/TypeCheck/IR round-trip | 不等于强迫所有源码只剩一种语法 |
+| 车同轨 | ABI、FFI、RPC、事件协议、包格式 | compatibility test / conformance | 不等于所有硬件必须相同 |
+| 度量衡一 | 单位、分母、时钟、坐标、Benchmark Contract | unit test / calibration / metrology | 不等于把异质对象压成一个总分 |
+| 郡县/分治 | 分域自治、最小权限、责任边界 | RBAC/ABAC/capability policy | 文化称谓不能替代现代权限模型 |
+| 驰道 | 网络/消息/数据运输骨干 | latency/throughput/loss/replay | 不等于“网络越开放越好” |
+| 长城/守御 | Defense-in-Depth、边界防护、故障隔离 | red team / fault injection | 不能成为秘密攻击工具的借口 |
+| 虎符 | 高影响授权、双人审批、Break-Glass | dual-control / immutable audit | 不等于个人永久持有超级权限 |
+| 御史 | 独立审计、追责、证据留痕 | immutable logs / attestation | 审计者不得兼任被审计操作员 |
+| 百家争鸣 | Champion–Challenger | A/B、OOT、Pareto、IQ/OQ/PQ/MQ | 新技术不得仅凭“新”自动晋级 |
+| 孙子“先计” | 部署前仿真、风险演算、假设检验 | pre-deploy test / scenario | 不把兵法当现实攻击步骤 |
+| 墨家守御 | 节用、冗余、最小可信基座、故障容忍 | TCB size / failover / recovery | 不神化古代器械为现代科技 |
+| 名实之辨 | 字段名必须与语义一致 | schema registry / semantic lint | 禁止“字段名像风险就当风险” |
+
+> **总原则**：文化负责文明表达、命名、Ontology 与系统哲学；现代科学、工程、法律与实测负责裁决现实效果。
+
+---
+
+## 40.2 策略游戏不是“皮肤”：升级为操作系统世界模型的机制库
+
+沿用 §37–§38 的 `DAQIN-CIV`，本章进一步规定：任何游戏机制必须拆成“状态变量—事件—规则—资源—主体—空间—时间—证据”八元组，才能进入操作系统原型。
+
+### 40.2.1 核心机制映射
+
+| 游戏/体系 | 应抽取的核心机制 | 映射至《大秦赋算筹》 | 现实边界 |
+|---|---|---|---|
+| 《大周列国志》 | 诸侯、国策、制度、人物、事件、先秦文化表现 | `CivilizationPolicyGraph`、制度树、学派/人物事件 | 游戏数值不得写入史实表 |
+| 《三國志》系列 | 人物 Agent、能力、关系、官职、势力、身份迁移 | `PersonAgent`、`CapabilityPosterior`、`RelationGraph` | 武将属性仅为 SIM UI 原型 |
+| 《太閤立志傳》系列 | 个人为主、多职业、技能、交易、身份变迁 | `PersonCareerGraph`、技能树、履历、市场行为 | 日本战国制度不可硬套华夏制度 |
+| 《信长之野望》 | 领地、委任、中央/地方治理、家臣自治 | 分域治理、资源 scope、委任权限 | 权限必须现代化、最小化 |
+| CK3 | 家族、宗教、继承、社会关系 | 家族/组织图谱、事件流 | 现实敏感属性不得据此评分 |
+| EU | 人口、经济、贸易、外交、长期国家演化 | 国家级公开数据孪生 | 不生成政治立场或“优劣国家”总评 |
+| Total War | 世界层 ↔ 局部场景层 | 多尺度 spatial drill-down | 战术娱乐规则不等于现实军事模型 |
+| AoE | 资源、生产、建筑、人口、实时调度 | 实时生产/基建仿真 | 不把简化资源经济当现实经济 |
+| Stellaris | 星系、星球、文明、科技、物种 | 宇宙/空间实体 Ontology | 属 FICTION/SIM，须与 REAL 分离 |
+
+### 40.2.2 世界模型的统一状态机
+
+```text
+World
+  ├─ Civilization / State / Organization
+  ├─ Person / Agent / AI / Robot
+  ├─ Place / Parcel / Building / Road / Infrastructure
+  ├─ Asset / Product / Contract / Currency
+  ├─ Knowledge / Skill / Paper / Technology
+  ├─ Event / Transaction / Communication / Observation
+  └─ Space Object / Satellite / Spacecraft
+
+Every Entity
+  = identity
+  + world_domain
+  + spatial_state
+  + temporal_state
+  + ownership/control rights
+  + relations
+  + capabilities
+  + resources
+  + evidence/provenance
+  + policy tags
+  + version
+```
+
+游戏机制只有经过上述 schema 化，才允许进入 DaqinOS user-space；不得将游戏世界规则直接下沉为 kernel privilege。
+
+---
+
+## 40.3 “综合所有 OS 优势”的正确实测方法：不是拼贴，而是组件级 Champion–Challenger
+
+沿用 §33/§36 的 OS Factory，操作系统对比必须拆至组件层。
+
+### 40.3.1 OS 组件坐标
+
+```text
+BOOT        Secure Boot / bootloader / recovery
+KERNEL      scheduler / VM / IPC / syscall / driver
+SECURITY    identity / sandbox / MAC / capability / signing
+FILESYSTEM  VFS / ext4 / btrfs / APFS / NTFS / ZFS ...
+NETWORK     TCP/IP / firewall / VPN / namespace / eBPF-like observability
+SERVICE     systemd / SCM / launchd / init
+PACKAGE     apt / rpm / nix / winget / store / image mode
+CONTAINER   OCI / containerd / Podman / Docker / sandbox
+GUI         compositor / windowing / spatial shell
+AI          accelerator runtime / model runtime / compiler
+DATA        DB / OLAP / stream / filesystem / object store
+OBSERVE     trace / metrics / logs / profiler
+UPDATE      atomic update / A-B / rollback / snapshot
+RECOVERY    rescue / checkpoint / restore / FDIR
+```
+
+### 40.3.2 实测规则
+
+对 Windows、Linux 各代表分布、Android、Apple 平台、BSD、RTOS/高保证内核，禁止只用一个 Geekbench 类数字裁决。每个组件至少测：
+
+```text
+correctness
+reproducibility
+compatibility
+p50 / p95 / p99 latency
+throughput
+memory
+storage I/O
+network
+energy / thermal
+failure recovery
+update / rollback
+security isolation
+supply-chain provenance
+maintenance effort
+TCO
+```
+
+### 40.3.3 晋级公式
+
+先 Hard Gate：
+
+```text
+Correctness == PASS
+Security == PASS
+Rollback == PASS
+Reproducibility == PASS
+RequiredCompatibility == PASS
+```
+
+再进入 Pareto Frontier；最后才按 workload 计算情境效用：
+
+\[
+U(c\mid x_t)=\sum_j w_j(x_t)s_j(c)-\lambda_s C_{switch}-\lambda_r R(c)
+\]
+
+禁止为了 1% 速度提升而牺牲安全、正确性或兼容性。
+
+---
+
+## 40.4 编程语言统一路线：仓颉可以做重要主线，但不宜一开始“翻译天下源码”
+
+### 40.4.1 当前裁定
+
+仓颉（Cangjie）可进入《大秦赋算筹》的 **Application/Service Champion-Challenger** 线，但现阶段不应直接替代 C/Rust/C++ 成为全部 kernel/driver 的唯一语言。
+
+公开官方文档可核实：
+
+- 仓颉拥有 `CJNative` 原生后端与 `CJVM` 后端；
+- 支持多范式；
+- 官方支持 C 互操作，调用 C 时通过 `foreign` / `unsafe` 等机制明确越过安全边界；
+- 官方提供 Python 互操作，但当前文档明确有限定：Linux + `cjnative`，且 Python/GIL/线程与 native 栈存在现实约束。
+
+因此正确路线不是：
+
+```text
+C/C++/Rust/Python/R
+        ↓ 自动全文翻译
+      Cangjie
+        ↓
+      DaqinOS
+```
+
+而应是：
+
+```text
+Existing mature implementation
+        │
+        ├─ keep stable C ABI / Rust / native library
+        │
+        ├─ build Cangjie binding / safe wrapper
+        │
+        ├─ re-implement selected component in Cangjie
+        │
+        └─ differential test
+                 ↓
+        correctness + perf + fuzz + memory + security
+                 ↓
+           Champion–Challenger
+```
+
+### 40.4.2 建议语言分工
+
+| 层 | Champion/Challenger | 理由 |
+|---|---|---|
+| boot/arch | C + 少量汇编；Rust Challenger | 硬件/ABI/生态与最低层控制 |
+| kernel 新组件 | Rust Challenger + C compatibility | 内存安全与 Linux/现代系统趋势 |
+| high-assurance | Rust + capability systems + formal methods | safety/security critical |
+| service/backend | **Cangjie + Rust + Go** | 并发、服务、现代语言生态 |
+| AI/data | Python + R + SQL + Rust acceleration | 生态与统计/AI 生产力 |
+| GPU/HPC | C++/CUDA/HIP/Triton/MLIR dialect | 现有加速器工具链 |
+| culture DSL | QinWen / 文言前端 | 华夏文化表达，不承担底层 ABI |
+| UI/Spatial | modern UI language + native renderer | 平台兼容与高性能图形 |
+
+### 40.4.3 “统一语言”的真正核心：DAQIN-IR
+
+```text
+QinWen / Cangjie / Rust / C / Python DSL / R DSL
+                  ↓
+              Typed AST
+                  ↓
+              DAQIN-IR
+     semantics + units + capabilities
+                  ↓
+               verifier
+                  ↓
+                MLIR
+    affine / vector / gpu / llvm / rocdl / nvgpu ...
+                  ↓
+               LLVM IR
+                  ↓
+       x86 / ARM / RISC-V / GPU / FPGA
+```
+
+MLIR 的 dialect 与 progressive lowering 机制本来就是为多层抽象与多硬件 lowering 设计；因此应“统一 IR 与验证”，而不是先重复发明所有 backend。
+
+---
+
+## 40.5 用户≠管理员：二层权限模型必须淘汰
+
+现代 OS 的权限现实已经证明“会员/管理员”二分过粗：
+
+- Windows 有 Standard/Elevated user 与 Low/Medium/High/System Integrity；还区分 LocalService、NetworkService、LocalSystem 等服务身份；
+- Linux 已将传统 root 超级权限拆成独立 capabilities，可按功能授予；
+- Android 每个 App 默认独立 UID/进程沙盒；
+- seL4 的 capability 是不可伪造的访问权令牌，并可形式化推理哪些组件能接触哪些资源。
+
+《大秦赋算筹》应使用 **身份 × 角色 × scope × capability × assurance × purpose** 六轴，而不是“等级越高权力越大”的单轴。
+
+### 40.5.1 人类身份角色（Canonical Role）
+
+| Canonical | 文化显示别名（仅 UI） | 用途 | 默认权限 |
+|---|---|---|---|
+| `GUEST` | 游宾 | 未登录浏览 | 只读公开内容 |
+| `USER` | 主籍 | 普通个人账户 | 私人空间 + 明确授权功能 |
+| `VERIFIED` | 士证 | 已完成更高身份保证 | 需要身份保证的服务；不自动增系统权限 |
+| `PROFESSIONAL` | 百工 | 专业/创作者/开发者 | 可发布、调用受控 API、建私有项目 |
+| `ORG_OPERATOR` | 行署 | 组织范围运营 | 仅限本组织 scope |
+| `MODERATOR` | 司理 | 内容/社区治理 | 有限处置权，可申诉/回滚 |
+| `AUDITOR` | 御史 | 独立审计 | 读审计证据；默认无生产修改权 |
+| `ADMIN` | 守令 | 平台管理 | JIT/JEA、强 MFA、最小时间窗 |
+| `BREAK_GLASS` | 虎符 | 灾难恢复/重大事故 | 双人审批、一次性、强审计、自动失效 |
+
+> **文化别名不是法律身份，也不是社会等级。** `VERIFIED` 不代表“比 USER 更有价值”；只是身份保证强度不同。
+
+### 40.5.2 机器身份必须独立
+
+```text
+SERVICE_IDENTITY
+WORKLOAD_IDENTITY
+DEVICE_IDENTITY
+MODEL_IDENTITY
+ROBOT_IDENTITY
+SYSTEM_IDENTITY
+KERNEL_IDENTITY
+```
+
+机器不可借普通人的登录凭据长期运行。
+
+### 40.5.3 权限不是阶级：六轴授权
+
+```text
+WHO      identity assurance
+WHAT     capability/action
+WHERE    resource scope
+WHY      declared purpose
+WHEN     time window / session
+PROOF    policy / approval / attestation
+```
+
+例如：
+
+```text
+AUDITOR
+can read audit evidence
+cannot modify business state
+cannot deploy code
+cannot alter its own audit trail
+```
+
+这比“管理员什么都能做”安全得多。
+
+---
+
+## 40.6 从国安/国防/公安/金融/电商“监控”吸收什么：只取公开、合法、高保证防御能力
+
+“监控”一词过宽。本系统正式拆为：
+
+1. **安全可观测性（Security Observability）**：系统是否遭攻击/异常；
+2. **业务遥测（Operational Telemetry）**：性能与故障；
+3. **反欺诈/风控（Fraud/Risk Analytics）**：经授权的交易与账户风险；
+4. **合规审计（Compliance Audit）**：谁在何时做过什么；
+5. **用户自有数字孪生（Personal Twin）**：用户主动掌握自己的数据；
+6. **禁止项**：秘密摄像/麦克风/键盘记录、凭据窃取、未经授权的跨域追踪、以敏感身份做社会评分、隐蔽操纵行为。
+
+### 40.6.1 可公开借鉴的高保证架构
+
+NIST Zero Trust 的核心不是“监控所有人”，而是“不因网络位置或资产归属自动信任”，每次访问都重新做主体/设备身份认证与授权。
+
+NSA 2026 已将公开 Zero Trust Implementation Guidelines 集中为可交互资源，并围绕多柱能力持续发布实践指南；DoD 的公开 ZT 战略同样强调最小所需访问、持续验证、快速隔离与恢复。
+
+《大秦赋算筹》只吸收以下防御性能力：
+
+```text
+Identity + MFA + device posture
+PAM / JIT / JEA
+Endpoint telemetry / EDR-like detection
+Network telemetry / segmentation
+Application/workload identity
+Data classification / DLP
+Immutable audit
+SIEM / correlation
+UEBA-like anomaly detection (security-only)
+Threat intelligence
+SOAR-like approved playbooks
+FDIR / automatic safe degradation
+Signed artifacts / SBOM / supply-chain verification
+```
+
+### 40.6.2 七柱安全织构（DAQIN-ZT7）
+
+```text
+USER
+DEVICE
+APPLICATION & WORKLOAD
+DATA
+NETWORK & ENVIRONMENT
+VISIBILITY & ANALYTICS
+AUTOMATION & ORCHESTRATION
+```
+
+每一柱都必须有：
+
+```text
+identity
+policy
+telemetry
+baseline
+anomaly
+response
+rollback
+human oversight
+```
+
+### 40.6.3 国防/宇航技术的安全迁移边界
+
+可迁移：
+
+- Zero Trust；
+- secure/measured boot；
+- HSM/TPM；
+- FDIR；
+- redundancy / diversity；
+- capability isolation；
+- formal verification；
+- digital twin / HIL；
+- deterministic logging；
+- time synchronization；
+- fault injection；
+- supply-chain assurance。
+
+不迁移：
+
+- 未公开情报收集拓扑；
+- 攻击/渗透武器化细节；
+- 真实军事目标选择；
+- 未授权个体追踪；
+- 私人武装指挥与现实强制权。
+
+---
+
+## 40.7 “人人知道自己天下能力值”：建立自有能力仪表盘，不建立社会总分
+
+### 40.7.1 个人能力模型
+
+个人端可主动维护/验证：
+
+```text
+Knowledge        学科知识
+TechnicalSkill   技术/工具能力
+Language         语言
+Research         研究/实验
+Creative         创作
+Management       组织/项目
+TradeCraft       工艺/职业技能
+Financial        财务素养
+Communication    沟通协作
+Physical         自愿测量的体能/运动能力
+Navigation       空间/驾驶/操作技能
+Safety           安全规范执行
+```
+
+每项必须绑定 TaskFamily：
+
+```text
+ability != personality judgement
+ability != wealth
+ability != nationality
+ability != religion
+```
+
+### 40.7.2 能力卡
+
+```yaml
+entity_id: PERSON-...
+capability: SQL_DEBUGGING
+task_family: SQL-DIAG-v4
+posterior: 0.82
+credible_interval_95: [0.76, 0.87]
+n: 71
+reference_population: consenting_SQL_analysts_2026Q4
+context: Windows11+WSL2+DuckDB
+model: MIRT-HB-v3
+provenance: ...
+evidence: P2/M2/LO2
+valid_from: ...
+expires_at: ...
+```
+
+### 40.7.3 “天下百分位”只有满足六个条件才可显示
+
+```text
+Comparable task definition
+Same measurement scale
+Sufficient N
+Defined reference population
+Time/version aligned
+Privacy/legal basis satisfied
+```
+
+否则显示：
+
+```text
+NOT_COMPARABLE
+```
+
+而不是伪造 `Top 1%`。
+
+---
+
+## 40.8 《太閤立志傳》式“个人一生”升级为 Person Career Graph
+
+### 40.8.1 个人不是固定职业
+
+```text
+Person
+  ├─ Skills
+  ├─ Education
+  ├─ Credentials
+  ├─ Projects
+  ├─ Jobs
+  ├─ Businesses
+  ├─ Assets
+  ├─ Contracts
+  ├─ Research
+  ├─ Reputation-by-domain
+  ├─ Goals
+  └─ CapabilityPosterior
+```
+
+### 40.8.2 职业推荐不是“算法替人决定命运”
+
+推荐输出：
+
+```text
+fit
+skill gaps
+required credential
+salary/risk range
+location/remote constraint
+training path
+confidence
+why recommended
+```
+
+用户可以：
+
+```text
+accept
+reject
+hide criterion
+change goal
+request explanation
+delete personal evidence
+```
+
+### 40.8.3 资产/不动产
+
+系统可支持：
+
+- 房产/土地 listings；
+- 公开地籍/产权资料（依法可用时）；
+- 价格与现金流模型；
+- 税费/贷款/保险情景；
+- 位置/通勤/气候/基础设施分析；
+- ownership provenance。
+
+但“可以买到”必须服从当地法律、产权与交易系统，不能由 OS 自己宣布产权。
+
+### 40.8.4 “拥兵自重 / 自立为王”严格分域
+
+```text
+HISTORY   历史研究对象
+SIM       策略游戏/文明仿真可建军团、爵位、王国、领地
+FICTION   科幻/元宇宙角色设定
+REAL      不提供私人武装、非法强制、现实主权篡夺功能
+```
+
+现实世界可对应的是：
+
+```text
+team
+company
+community
+guild
+research group
+project organization
+```
+
+而非私人现实军权。
+
+“名垂前史”可以工程化为**可验证贡献履历**：论文、代码、企业、公益、艺术、专利、项目、教育、社区贡献等形成 provenance graph，而非由平台自封历史地位。
+
+---
+
+## 40.9 国家→组织→个人的“真实比赛”：DECA 分赛道而非总榜
+
+### 40.9.1 国家级公开指标赛道
+
+仅使用公开、可比、版本化指标，例如：
+
+```text
+Population / human capital
+Economic output / productivity
+Science / R&D
+Innovation
+ICT / telecom
+Energy
+Food/agriculture
+Infrastructure/logistics
+Education
+Public health
+Space/open science
+Publicly disclosed military expenditure (high-level only)
+Resilience / disaster preparedness
+```
+
+数据入口候选：
+
+- World Bank Indicators API：约 16,000 个时间序列指标；
+- ITU DataHub：约 200 economies 的电信/ICT 指标；
+- WIPO Global Innovation Index；
+- UNESCO/OECD 等教育、科研数据；
+- NASA/ESA 等公开空间数据；
+- SIPRI：公开来源的国家军事支出时间序列，只作宏观资源指标，不推断机密战力或弱点。
+
+> 禁止把上述指标压成“哪个国家整体最好”的政治性总评；只做可审计的维度比较、趋势、Pareto 与任务型能力分析。
+
+### 40.9.2 组织级赛道
+
+```text
+reliability
+research output
+capital efficiency
+security maturity
+supply-chain resilience
+service quality
+innovation conversion
+human-capital development
+```
+
+### 40.9.3 个人级赛道
+
+只比较同一任务族，禁止由社会身份推断能力。
+
+---
+
+## 40.10 “仓颉为主”第一轮真实实验（LANG-CJ-01）
+
+### 40.10.1 同任务六实现
+
+```text
+C
+C++
+Rust
+Cangjie
+Python
+Go
+```
+
+任务：
+
+```text
+JSON parse
+hash/map
+binary serialization
+network echo
+SQLite client
+compression
+matrix multiply
+file traversal
+IPC
+concurrent queue
+```
+
+### 40.10.2 指标
+
+```text
+correctness
+compile time
+startup
+binary size
+RSS
+throughput
+p50/p95/p99
+CPU cycles
+allocations
+energy
+fuzz crashes
+FFI overhead
+maintenance LOC
+build reproducibility
+```
+
+### 40.10.3 晋级
+
+Cangjie 若在某组件满足：
+
+```text
+correctness PASS
+security PASS
+interop PASS
+performance non-regression
+maintenance benefit demonstrable
+```
+
+才晋级该组件 Champion。
+
+禁止因为“中文语言/文化亲和”而跳过实测。
+
+---
+
+## 40.11 权限系统真实实验（AUTH-01）
+
+构造合成世界：
+
+```text
+10,000 users
+1,000 service identities
+100 organizations
+10 privilege domains
+1,000,000 access attempts
+```
+
+比较：
+
+```text
+RBAC
+ABAC
+RBAC+ABAC
+Capability-based
+Policy-as-Code
+```
+
+指标：
+
+```text
+unauthorized_access_rate
+false_denial_rate
+policy_eval_latency p99
+policy_complexity
+blast_radius
+revocation_latency
+audit_completeness
+break-glass recovery
+```
+
+目标不是“层级最多”，而是：
+
+> **最小权限、最低爆炸半径、最快撤权、最高可审计性。**
+
+---
+
+## 40.12 安全监测真实实验（ZT-OBS-01）
+
+只在授权实验环境/模拟数据运行：
+
+```text
+normal login
+credential misuse simulation
+abnormal device posture
+unexpected service access
+malformed package
+supply-chain hash mismatch
+network anomaly
+resource exhaustion
+```
+
+比较：
+
+```text
+rule-only
+statistical baseline
+Isolation Forest/GBDT
+sequence model
+hybrid rule+ML
+```
+
+指标：
+
+```text
+precision
+recall
+false positive budget
+detection delay
+containment time
+rollback success
+operator workload
+privacy cost
+```
+
+严禁测试真实第三方系统或绕过授权。
+
+---
+
+# 40.13 RedTeam：本轮新增攻击面
+
+1. 把“秦式统一”做成单点技术垄断，任何一个组件失败即全系统失败；
+2. 把文化 UI 角色误当真实社会阶级；
+3. 把 `VERIFIED` 误解释为“人更高等”；
+4. 让 Admin 长期保持 root/System 权限；
+5. 服务进程复用真人账户；
+6. 认为跨语言边界本身就是安全边界；
+7. 把仓颉 FFI `unsafe` 包装后误称“内存安全已闭合”；
+8. 自动源码翻译后没有 differential/fuzz test 就替换生产组件；
+9. 把国家公开资源数据外推为真实战争能力；
+10. 用一个“国力总分”掩盖维度冲突与数据可比性；
+11. 把个人能力与财富、家族、宗教、族群绑定；
+12. 为“个性化职业”构建不可申诉的命运分配器；
+13. 将安全 telemetry 扩张成秘密员工/公民监控；
+14. 安全模型 reward 追求“抓到越多人越好”，导致 false positive 激增；
+15. 让 AI 自动取得 `ADMIN/BREAK_GLASS` 权限；
+16. 以“国安/军工”名义跳过审计与授权；
+17. 把 SIM 王国/军团机制泄漏进 REAL 权限域；
+18. 因地图/游戏界面崩溃拖死 kernel；
+19. 将能力百分位当永恒身份标签；
+20. 未知/不适用被填 0，形成永久性歧视。
+
+---
+
+# 40.14 Critic：真正该“一统”的五件事
+
+1. **Entity Identity**：任何对象有稳定身份与版本；
+2. **Semantic Coordinate**：字段意义、单位、粒度一致；
+3. **Capability & Rights**：任何访问都可证明为何被允许；
+4. **Evidence & Uncertainty**：任何能力/风险结论带证据与不确定度；
+5. **Experiment & Rollback**：任何升级都能 A/B、回滚、审计。
+
+> 如果这五项没统一，即使把所有源代码翻译成同一语言，也不叫真正统一。
+
+---
+
+# 40.15 KillCritic：十五条一票否决
+
+**K40-01** 单一总分决定个人/国家价值 → `VETO`  
+**K40-02** 族群/宗教/家族推断能力 → `VETO`  
+**K40-03** AI 自动授予永久 Admin/Root → `VETO`  
+**K40-04** 安全监测无目的/授权/审计 → `VETO`  
+**K40-05** SIM 军团能力进入 REAL 权限 → `VETO`  
+**K40-06** 公开军事支出推断秘密战力/弱点 → `VETO`  
+**K40-07** Cangjie 未测即全栈替换 C/Rust/C++ → `VETO`  
+**K40-08** 自动翻译代码未做语义等价性验证 → `VETO`  
+**K40-09** 语言 FFI 当强隔离边界 → `VETO`  
+**K40-10** 文化称谓替代 RBAC/ABAC/capability → `VETO`  
+**K40-11** p50 快但 p99/rollback/security 退化仍晋级 → `VETO`  
+**K40-12** 地图/Spatial Shell 进入 kernel TCB → `VETO`  
+**K40-13** 未定义 reference population 就给天下百分位 → `VETO`  
+**K40-14** `UNKNOWN/NA` 强填 0 → `VETO`  
+**K40-15** 未经授权实测真实第三方网络/系统 → `VETO`
+
+---
+
+# 40.16 Blindspot：本章当前仍为 LO∅/UNKNOWN 的项目
+
+- 当前 Windows 11 主机实际 CPU/GPU/RAM/SSD 与 WSL2 精确版本；
+- 仓颉在本机相对 Rust/C++/Go 的真实 p99、RSS、功耗与 FFI 成本；
+- `DAQIN-IR` 自定义 dialect 的真实 compile-time / codegen 维护成本；
+- capability/RBAC/ABAC 混合策略在百万级 policy evaluation 的延迟；
+- DUECG/DECA 在亿级 entity/event 的存储/图查询吞吐；
+- Cesium/Google 3D Tiles/本地 3D Tiles 在本机 GPU 的真实 VRAM/FPS；
+- 国家指标跨来源版本、PPP/nominal、人口规模、统计制度差异的可比性；
+- 个人能力 task bank 的真实信度/效度/公平性；
+- `BREAK_GLASS` 双人审批在离线灾难情境下的可用性；
+- 文化 UI 对不同用户的可读性、学习成本与无障碍影响。
+
+---
+
+# 40.17 Cheatsheet：大秦式统一的最小实现
+
+```text
+文化       → QinWen / UI / ontology
+语言       → 多前端 → DAQIN-IR → MLIR/LLVM
+操作系统   → Stable + Challenger + Research
+身份       → human / service / workload / device / model
+权限       → RBAC + ABAC + capability + JIT + scope
+安全       → ZT7 + immutable audit + FDIR
+世界       → UWOM + Spatial Shell
+能力       → DUECG posterior + CI
+竞技       → DECA task-specific benchmark
+职业       → PersonCareerGraph
+资产       → provenance + legal registry adapters
+国家       → public multidimensional indicators
+军权/王国  → HISTORY/SIM/FICTION only
+升级       → IQ/OQ/PQ/MQ + Champion–Challenger + rollback
+```
+
+---
+
+# 40.18 Blueprint：秦式文明计算操作系统
+
+```text
+                         ┌────────────────────┐
+                         │ 华夏文明表现 / QinWen │
+                         └─────────┬──────────┘
+                                   │
+        ┌──────────────────────────▼──────────────────────────┐
+        │                 Daqin Spatial Shell                 │
+        │  World / Person / Career / Asset / Knowledge / GIS │
+        └───────────────┬──────────────────┬─────────────────┘
+                        │                  │
+              ┌─────────▼───────┐  ┌──────▼────────┐
+              │ UWOM / DUECG    │  │ DECA Arena    │
+              │ world/capability│  │ real benchmark│
+              └─────────┬───────┘  └──────┬────────┘
+                        └──────────┬───────┘
+                                   ▼
+                     ┌────────────────────────┐
+                     │ Identity / Policy Plane│
+                     │ RBAC+ABAC+Capability   │
+                     └───────────┬────────────┘
+                                 ▼
+                 ┌──────────────────────────────┐
+                 │ DAQIN-ZT7 Security Fabric    │
+                 │ telemetry / audit / FDIR     │
+                 └───────────┬──────────────────┘
+                             ▼
+                   ┌──────────────────────┐
+                   │ Daqin Service Plane  │
+                   │ Cangjie/Rust/Go/C++  │
+                   └─────────┬────────────┘
+                             ▼
+                    ┌─────────────────────┐
+                    │ DAQIN-IR / MLIR     │
+                    │ verifier / lowering │
+                    └──────────┬──────────┘
+                               ▼
+                    ┌─────────────────────┐
+                    │ DaqinOS Stable      │
+                    │ Linux-derived first │
+                    ├─────────────────────┤
+                    │ Challenger / Research│
+                    └──────────┬──────────┘
+                               ▼
+                CPU / GPU / NPU / FPGA / DPU / HSM
+```
+
+---
+
+# 40.19 ActionPlan：从今天到第一版可实测原型
+
+### A0 — 冻结当前 MASTER
+
+- SHA256；
+- backup；
+- append-only；
+- 回归闸。
+
+### A1 — Host Passport
+
+真实采集 Windows 11/WSL2/CPU/GPU/RAM/SSD/TPM/Secure Boot/virtualization。
+
+### A2 — OS Battle Lab
+
+- Ubuntu stable；
+- Debian challenger；
+- NixOS challenger；
+- Fedora/openSUSE family representatives；
+- Windows native；
+- VM/bare-metal 以后补证。
+
+### A3 — LANG-CJ-01
+
+同任务比较 C/C++/Rust/Cangjie/Python/Go，生成可复现 benchmark report。
+
+### A4 — AUTH-01
+
+RBAC/ABAC/capability/Policy-as-Code 模拟百万次授权。
+
+### A5 — ZT-OBS-01
+
+只在授权模拟环境测检测、隔离、恢复、误报、人工作业量。
+
+### A6 — Game Mechanic Registry
+
+将 §37/§38 的游戏机制正式转成 machine-readable registry，而不是继续文字描述。
+
+### A7 — PersonCareerGraph Synthetic
+
+用 10,000 合成人物模拟：技能→职业→学习→项目→资产→关系→人生事件。
+
+### A8 — DECA 国家公开数据原型
+
+只接 World Bank/ITU/WIPO/NASA/SIPRI 等公开高层指标；不生成政治总评。
+
+### A9 — Spatial Shell Prototype
+
+Cesium/OSM/Overture/Google 3D Tiles Challenger，实测 FPS/VRAM/网络/LOD。
+
+### A10 — QinWen / Culture UI
+
+Canonical data 仍用稳定 Unicode 与现代 identifiers；文言/繁体/篆体由表现层渲染。
+
+### A11 — DaqinOS Profile
+
+先在成熟 Linux base 生成可复现 Profile/Image，不从零写 kernel。
+
+### A12 — Research Kernel Lane
+
+另行研究 Rust/capability/microkernel/formal verification，永不直接覆盖 Stable。
+
+### A13 — IQ/OQ/PQ/MQ
+
+全部通过后才能把某组件写入“默认 Champion”。
+
+---
+
+# 40.20 本章一手/高可信公开来源（2026-10-01 核验）
+
+## 权限 / OS 安全
+
+- Microsoft — Mandatory Integrity Control: https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control
+- Microsoft — Local accounts / SYSTEM / LocalService / NetworkService: https://learn.microsoft.com/en-us/windows/security/identity-protection/access-control/local-accounts
+- Linux capabilities(7): https://man7.org/linux/man-pages/man7/capabilities.7.html
+- Android Application Sandbox: https://source.android.com/docs/security/app-sandbox
+- seL4 capabilities: https://docs.sel4.systems/Tutorials/capabilities.html
+- seL4 capDL: https://docs.sel4.systems/projects/capdl/index.html
+
+## Zero Trust / 高保证安全
+
+- NIST SP 800-207 Zero Trust Architecture: https://csrc.nist.gov/pubs/sp/800/207/final
+- NSA Zero Trust Implementation Guidelines: https://www.nsa.gov/Cybersecurity/ZIG/
+- NSA 2026 ZIG resource announcement: https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4496862/nsa-launches-zero-trust-implementation-guidelines-resource-webpage/
+- DoD Zero Trust Strategy: https://dodcio.defense.gov/Portals/0/Documents/Library/DoD-ZTStrategy.pdf
+
+## 编程语言 / 编译
+
+- Linux Kernel Rust docs: https://www.kernel.org/doc/html/next/rust/index.html
+- Cangjie getting started: https://docs.cangjie-lang.cn/en/docs/1.0.0/user_manual/source_en/first_understanding/basic.html
+- Cangjie–C interoperability: https://docs.cangjie-lang.cn/cjnative/user_manual/source_zh_cn/FFI/cangjie-c.html
+- Cangjie–Python interoperability: https://docs.cangjie-lang.cn/docs/0.53.13/user_manual/source_zh_cn/FFI/cangjie-python.html
+- MLIR Dialects: https://mlir.llvm.org/docs/Dialects/
+- MLIR lowering to LLVM: https://mlir.llvm.org/docs/Tutorials/Toy/Ch-6/
+
+## 国家公开数据 / 真实竞技场
+
+- World Bank Indicators API: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392
+- ITU DataHub: https://datahub.itu.int/about/
+- WIPO Global Innovation Index: https://www.wipo.int/en/web/global-innovation-index
+- NASA Open APIs: https://api.nasa.gov/
+- SIPRI Military Expenditure Database: https://www.sipri.org/databases/milex
+
+---
+
+# 40.21 本章收束
+
+《大秦赋算筹》若只把 Windows、Linux、Android、Apple、仓颉、Rust、地图、游戏、国家数据、AI 全部“堆进去”，最终只会成为技术杂货铺。
+
+真正的秦式统一必须是：
+
+> **万物有籍，百工有职；同文而不废方言，同轨而不废异器；权不可无界，术不可无证；以实测定冠军，以回滚防退化，以能力助人择业而不以总分定人贵贱。**
+
+因此当前最优路线仍是：
+
+1. **文化层**：春秋战国/诸子百家/文言为文明母体；
+2. **世界层**：UWOM + Spatial Shell；
+3. **人物层**：DUECG + PersonCareerGraph；
+4. **竞技层**：DECA，任务型、分赛道、带不确定度；
+5. **权限层**：身份×角色×scope×capability，不用“会员/管理员”二分；
+6. **安全层**：ZT7、可观测、最小权限、审计、FDIR，不做无授权监控；
+7. **语言层**：Cangjie 可做重要服务/应用 Challenger，但先以 DAQIN-IR/MLIR 统一语义与后端；
+8. **OS 层**：成熟 Linux 派生 Stable + Challenger + Research Kernel 三轨；
+9. **现实军权/主权**：不进入系统功能；只在 HISTORY/SIM/FICTION 表达；
+10. **一切前沿性**：未经本机/测试服务器实测，只能记 `LO∅/UNKNOWN`。
