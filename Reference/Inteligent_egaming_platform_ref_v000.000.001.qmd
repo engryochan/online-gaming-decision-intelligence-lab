@@ -36972,6 +36972,777 @@ redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actio
 
 ### Perplexity
 
+#### 总断
+
+我先以附件《真实版人物分析与治国策略服务·名录与九十日行令》为主档，结合当前公开资料复核。结论仍应坚持原案的核心判断：
+
+> **天下尚无一家机构真正提供《太阁立志传》《三国志》《大周列国志》式的“一站式现实人物数值＋势力经营＋外交征伐＋政策执行”服务。**
+
+现实市场是由九类能力拼接而成：古籍人物数据库、人物文本测度、关系图谱、国力指数、政策模拟、城市数字孪生、兵棋推演、群体预测、执行管理。最接近“决策机”的产品是 **Decitron**，最接近“人物面板”的开源工具是 **leadeR**，最接近“华夏历史人物库”的是 **CBDB**，最接近“国力面板”的是 **Lowy Asia Power Index、CINC、V-Dem/WGI**，最接近“真实兵棋”的是 **WarMatrix、RAND RDM、GenWar 类系统**。 [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/230362276/dd6c3df8-bf65-4248-8cb4-b3df063fc978/Zhen-Shi-Ban-Ren-Wu-Fen-Xi-Yu-Zhi-Guo-Ce-Lue-Fu-Wu-Ming-Lu-Yu-Jiu-Shi-Ri-Xing-Ling.md?AWSAccessKeyId=ASIA2F3EMEYE35CRGU4Q&Signature=cKFrH3woe%2BepD7V6k6C3N28Nb7k%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIAliphpHAryCaaHzmlXP8AHyGQ0zOFzEXonJIpi1Z9FbAiAoWtTaEYgJqATUlqoVB1ljPSZPui%2Fzm6Z68HBufV7yyyqDBQis%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDY5OTc1MzMwOTcwNSIMgchdZYPlzTYzQuPxKtcENZubMdPH%2BZis%2B1OIYyzYbTvgi%2BDz76PLXcDYV0ACCEcvPePehwBTtDgtkIp3gvVs62AfHL5SeaxdBGU9A0aeFSWUChGGjTgHcVpVzdZmpcbgy9OfaAKQWcRLsxn1ju8epMEyjtJjEWaW8HVc0%2BAKkf3TWEOqnjvIzwLvWRXq40C5h9hj8Upzw9sO1pukVxZ846BRZe1XRJBq4eRBUJYIaEjEc2qWqod3ZlgMnEfafCEIUVbKic1ODy1xVC0Y9t%2BVlJn9%2B0LbfWh5%2BgmFyw%2BMByizeLTgKyQFd6baq%2BIoyHDHm7gsj4TJoNePcINzbAOEzWgP9giOwres10vTb39OljtJUKszuRG8Hn8kzjwfHFYbDX24fCs%2FGSX5aefUJNJXhz2HxM9dWirfYIa4Q%2FwLhDBaRjS48jOvqen%2BmvB8X%2BkWDpoCTs5QgC3BmMj5NJsbwqPx7cu1Kgq1zrEHO%2FLmNriIdMI%2FDkSXJ3YOKWZeuro%2BxWL7RYy5nPBpmdHKdTfLlcGQWpd%2BOsmgnrkhhiYH9HbcI9krAXY5wBvmzL%2BmZIorfx05yzXnqbpRNVndx6eKCBMoOFJRhYYggHxQqLc4MSr9GDbDOcJtzF%2FtsOE8SDi881LqVOZIup2qz7KTN3CyC296kEpDJmNEdg3vHEgem%2FNxDjzRrrZ7rj1g5z%2BRD5%2Fx6sBRA8riRP%2Fa9bDhJr4aJmJuccQRzdjrnl0ZwRaDYkkMWrr4iDzwtczkLvXgfONqulhf2xbDhXa0xxz20LTd4k1BWCEAT04LDBHr2Pvzw1dnfduok0kwi9GD1gY6mQG%2BI0gB8I09uekSsKbgDRbvi4Bw5tBcXCl2785UQ0Q4aq%2BBi9TSE2x%2BggZRAMBUw4%2BliBGov9%2FuIfbrwJd%2BYkHtZorpRANTYMN8vdtpxH0SVeUR5Iwkg1Sl7wQbU364EvGlBdPuDrvS8WGk5Z78HmXY070pBpgv02YEDo7KFBGlguMewlAZ04BKe4pDMjwCSnTBPL%2BVw30MIWk%3D&Expires=1791030878)
+
+但必须先校正一处关键事实：当前可见附件中，只有 `Zhen-Shi-Ban-Ren-Wu-Fen-Xi-Yu-Zhi-Guo-Ce-Lue-Fu-Wu-Ming-Lu-Yu-Jiu-Shi-Ri-Xing-Ling.md`，并未实际出现用户所说的两个 `.txt` 文件和 `大秦赋算筹_游戏下载清单_20261002.csv`。附件主档已经记录了这三份材料的合并结果及三十七款游戏的六族映射，因此以下以该主档为准；不能把未直接读取到的 CSV 当作当前可独立核验的原始证据。 [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/230362276/dd6c3df8-bf65-4248-8cb4-b3df063fc978/Zhen-Shi-Ban-Ren-Wu-Fen-Xi-Yu-Zhi-Guo-Ce-Lue-Fu-Wu-Ming-Lu-Yu-Jiu-Shi-Ri-Xing-Ling.md?AWSAccessKeyId=ASIA2F3EMEYE35CRGU4Q&Signature=cKFrH3woe%2BepD7V6k6C3N28Nb7k%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIAliphpHAryCaaHzmlXP8AHyGQ0zOFzEXonJIpi1Z9FbAiAoWtTaEYgJqATUlqoVB1ljPSZPui%2Fzm6Z68HBufV7yyyqDBQis%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDY5OTc1MzMwOTcwNSIMgchdZYPlzTYzQuPxKtcENZubMdPH%2BZis%2B1OIYyzYbTvgi%2BDz76PLXcDYV0ACCEcvPePehwBTtDgtkIp3gvVs62AfHL5SeaxdBGU9A0aeFSWUChGGjTgHcVpVzdZmpcbgy9OfaAKQWcRLsxn1ju8epMEyjtJjEWaW8HVc0%2BAKkf3TWEOqnjvIzwLvWRXq40C5h9hj8Upzw9sO1pukVxZ846BRZe1XRJBq4eRBUJYIaEjEc2qWqod3ZlgMnEfafCEIUVbKic1ODy1xVC0Y9t%2BVlJn9%2B0LbfWh5%2BgmFyw%2BMByizeLTgKyQFd6baq%2BIoyHDHm7gsj4TJoNePcINzbAOEzWgP9giOwres10vTb39OljtJUKszuRG8Hn8kzjwfHFYbDX24fCs%2FGSX5aefUJNJXhz2HxM9dWirfYIa4Q%2FwLhDBaRjS48jOvqen%2BmvB8X%2BkWDpoCTs5QgC3BmMj5NJsbwqPx7cu1Kgq1zrEHO%2FLmNriIdMI%2FDkSXJ3YOKWZeuro%2BxWL7RYy5nPBpmdHKdTfLlcGQWpd%2BOsmgnrkhhiYH9HbcI9krAXY5wBvmzL%2BmZIorfx05yzXnqbpRNVndx6eKCBMoOFJRhYYggHxQqLc4MSr9GDbDOcJtzF%2FtsOE8SDi881LqVOZIup2qz7KTN3CyC296kEpDJmNEdg3vHEgem%2FNxDjzRrrZ7rj1g5z%2BRD5%2Fx6sBRA8riRP%2Fa9bDhJr4aJmJuccQRzdjrnl0ZwRaDYkkMWrr4iDzwtczkLvXgfONqulhf2xbDhXa0xxz20LTd4k1BWCEAT04LDBHr2Pvzw1dnfduok0kwi9GD1gY6mQG%2BI0gB8I09uekSsKbgDRbvi4Bw5tBcXCl2785UQ0Q4aq%2BBi9TSE2x%2BggZRAMBUw4%2BliBGov9%2FuIfbrwJd%2BYkHtZorpRANTYMN8vdtpxH0SVeUR5Iwkg1Sl7wQbU364EvGlBdPuDrvS8WGk5Z78HmXY070pBpgv02YEDo7KFBGlguMewlAZ04BKe4pDMjwCSnTBPL%2BVw30MIWk%3D&Expires=1791030878)
+
+##### 一、三十七款游戏的现实能力映射
+
+附件已将三十七款游戏归入六类。这个分类是正确方向，但应把“游戏机制”与“现实服务”严格分开：
+
+| 游戏机制族 | 代表游戏 | 现实对应服务 | 当前最接近者 |
+|---|---|---|---|
+| 立身 | 太阁立志传Ⅴ DX、太吾绘卷、大侠立志传、绝世好武功、模拟人生4、Elin | 人才测评、职业路径、能力成长、继任规划 | Hogan、Korn Ferry、SHL、Gallup、leadeR、AI 教练 |
+| 商贾 | The Guild II/3、SAELIG、Patrician IV、Port Royale 3/4、Big Ambitions、Capitalism Lab | 企业经营、产业组织、供应链与库存仿真 | AnyLogic、Simudyne、Capitalism Lab、REMI、CGE 模型 |
+| 舟楫 | 大航海时代Ⅳ、风帆纪元、Star Traders | 贸易流、路径优化、海事风险、供应链韧性 | ArcGIS、AnyLogic、供应链数字孪生、风险情报平台 |
+| 门阀 | Crusader Kings III、Citizen of Rome、Medieval Dynasty、Kenshi、骑马与砍杀Ⅱ | 家族谱系、关系网络、实体解析、继承与联盟 | CBDB、i2、Quantexa、Maltego、Altrata |
+| 列国 | 三国志8 REMAKE、信长之野望·新生、Total War: 三国、EU V、无悔华夏、大周列国志、大秦帝国之帝国烽烟、三国志·战略版、猫话列国 | 国力面板、外交、冲突、国家风险、政策推演 | Decitron、IFs、V-Dem、Lowy、CINC、RAND、WarMatrix |
+| 文明 | Civilization VII、Age of Empires IV、Stellaris | 科技树、人口、产业、文明长期演化 | IFs、Millennium Institute iSDG、CGE/系统动力学、城市数字孪生 |
+
+这张表说明：**没有一家服务覆盖全部六族**。当前真实市场在“列国”和“商贾”两族最成熟，在“立身”和“文明”两族最容易产生伪精确。
+
+##### 二、现实服务名录
+
+###### 1. 华夏历史人物与诸子百家底座
+
+####### CBDB：中国历代人物传记资料库
+
+CBDB 是目前最接近“历史人物面板和关系网”的真实数据底座。它是哈佛大学费正清中国研究中心、中研院历史语言研究所与北京大学中国古代史研究中心合作的关系型数据库，2026 年 5 月约收录 657,909 名历史人物，主要覆盖七至十九世纪，并支持传记、统计、社会网络和空间分析。 [cbdb.hsites.harvard](https://cbdb.hsites.harvard.edu/)
+
+它可以提供：
+
+- 人物生卒、籍贯、仕宦、亲属和社会关系。
+- 官职迁转与地域分布。
+- 历史人物网络和群体结构。
+- 可用于构造“门阀—师承—仕途—联盟”图谱。
+
+但它不能直接提供：
+
+- “某人智力 92、忠诚 83”这类游戏数值。
+- 对在世人物的性格判断。
+- 某项政策的最优方案。
+- 战争或政治结局的确定性预测。
+
+因此，CBDB 是“史料与关系层”，不是“治国 AI”。
+
+####### 识典古籍、《儒藏》及古籍数据库
+
+附件将识典古籍、《儒藏》数字化平台、中研院汉籍资料库、CHGIS 等列为文言语料和历史地理底座。这一方向必须保留，而且应置于模型最底层。
+
+对春秋战国和诸子百家而言，重要的不是让模型简单“模仿古人说话”，而是建立可追溯的：
+
+- 文本版本与校勘关系。
+- 作者、编者、时代、地域和体裁。
+- 经、史、子、集分类。
+- 论证对象、政策主张、利害判断和前提假设。
+- “法、术、势、仁、义、礼、农、兵、纵横”等思想标签。
+
+核心规则是：
+
+> **古籍人物分析必须区分史实人物、文学人物、后世编纂人物与文本中的发言者。**
+
+例如，《战国策》里的外交辞令不能未经处理就当作苏秦、张仪的原始心理样本；《史记》列传也可能反映司马迁的叙事选择，而不是人物本人完整人格。附件对此作出的“体裁盲区”判断是正确的。 [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/230362276/dd6c3df8-bf65-4248-8cb4-b3df063fc978/Zhen-Shi-Ban-Ren-Wu-Fen-Xi-Yu-Zhi-Guo-Ce-Lue-Fu-Wu-Ming-Lu-Yu-Jiu-Shi-Ri-Xing-Ling.md?AWSAccessKeyId=ASIA2F3EMEYE35CRGU4Q&Signature=cKFrH3woe%2BepD7V6k6C3N28Nb7k%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIAliphpHAryCaaHzmlXP8AHyGQ0zOFzEXonJIpi1Z9FbAiAoWtTaEYgJqATUlqoVB1ljPSZPui%2Fzm6Z68HBufV7yyyqDBQis%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDY5OTc1MzMwOTcwNSIMgchdZYPlzTYzQuPxKtcENZubMdPH%2BZis%2B1OIYyzYbTvgi%2BDz76PLXcDYV0ACCEcvPePehwBTtDgtkIp3gvVs62AfHL5SeaxdBGU9A0aeFSWUChGGjTgHcVpVzdZmpcbgy9OfaAKQWcRLsxn1ju8epMEyjtJjEWaW8HVc0%2BAKkf3TWEOqnjvIzwLvWRXq40C5h9hj8Upzw9sO1pukVxZ846BRZe1XRJBq4eRBUJYIaEjEc2qWqod3ZlgMnEfafCEIUVbKic1ODy1xVC0Y9t%2BVlJn9%2B0LbfWh5%2BgmFyw%2BMByizeLTgKyQFd6baq%2BIoyHDHm7gsj4TJoNePcINzbAOEzWgP9giOwres10vTb39OljtJUKszuRG8Hn8kzjwfHFYbDX24fCs%2FGSX5aefUJNJXhz2HxM9dWirfYIa4Q%2FwLhDBaRjS48jOvqen%2BmvB8X%2BkWDpoCTs5QgC3BmMj5NJsbwqPx7cu1Kgq1zrEHO%2FLmNriIdMI%2FDkSXJ3YOKWZeuro%2BxWL7RYy5nPBpmdHKdTfLlcGQWpd%2BOsmgnrkhhiYH9HbcI9krAXY5wBvmzL%2BmZIorfx05yzXnqbpRNVndx6eKCBMoOFJRhYYggHxQqLc4MSr9GDbDOcJtzF%2FtsOE8SDi881LqVOZIup2qz7KTN3CyC296kEpDJmNEdg3vHEgem%2FNxDjzRrrZ7rj1g5z%2BRD5%2Fx6sBRA8riRP%2Fa9bDhJr4aJmJuccQRzdjrnl0ZwRaDYkkMWrr4iDzwtczkLvXgfONqulhf2xbDhXa0xxz20LTd4k1BWCEAT04LDBHr2Pvzw1dnfduok0kwi9GD1gY6mQG%2BI0gB8I09uekSsKbgDRbvi4Bw5tBcXCl2785UQ0Q4aq%2BBi9TSE2x%2BggZRAMBUw4%2BliBGov9%2FuIfbrwJd%2BYkHtZorpRANTYMN8vdtpxH0SVeUR5Iwkg1Sl7wQbU364EvGlBdPuDrvS8WGk5Z78HmXY070pBpgv02YEDo7KFBGlguMewlAZ04BKe4pDMjwCSnTBPL%2BVw30MIWk%3D&Expires=1791030878)
+
+###### 2. 人物能力与政治风格分析
+
+####### leadeR
+
+`leadeR` 是当前最值得优先进行技术验证的免费 R 工具。它从演讲、采访、记者会等公开文本中进行远距领导分析，支持 Leadership Trait Analysis（LTA）与 Operational Code Analysis（OCA），可计算权力欲、概念复杂度、自信、任务导向、不信任、民族主义、控制感等指标，并映射到八种领导风格。 [cran.r-project](https://cran.r-project.org/web/packages/leadeR/leadeR.pdf)
+
+它还支持：
+
+- bootstrap 均值与方差。
+- 每篇演说的估计结果。
+- 多篇文本的聚合。
+- 精度加权平均。
+- Hermann 领导风格分类。 [cran.r-project](https://cran.r-project.org/web/packages/leadeR/vignettes/lta.html)
+
+这使它比一般人格测试更接近“游戏中的人物属性系统”。但是不能把它直接用于文言人物：
+
+- 原始词典和常模主要为英文政治文本设计。
+- 中文翻译会改变动词、主语、情态和主体—客体关系。
+- 文言省略主语，可能严重影响 VICS/OCA。
+- 古籍中的记录者可能不是实际发言者。
+- 文本数量不足时，分数方差会很大。
+
+因此，附件九十日计划中的“先重建中文/文言词典，再做三项指标”是正确的。最低验收标准建议保留：
+
+\[
+\kappa \geq 0.70
+\]
+
+但还应增加：
+
+- 标注者人数不少于 3 人。
+- 按时代、体裁、人物分层抽样。
+- 报告 Krippendorff’s alpha 或 Cohen’s kappa 的置信区间。
+- 同一人物至少拥有多个相对独立文本来源。
+- 分数必须同时展示 \(n\)、置信区间与文本长度。
+
+####### Hogan、Korn Ferry、SHL、Gallup
+
+这些平台适合现代组织内的：
+
+- 招聘与岗位匹配。
+- 高管发展。
+- 继任规划。
+- 工作风格和风险倾向。
+- 团队能力盘点。
+
+但它们不是“治国服务”。企业胜任力模型不能直接等价于国家治理能力；在没有本人授权和标准化施测时，也不能凭公开照片、姓名或传闻给私人打人格分数。
+
+附件把“此人与谁有关”和“此人适合什么职位”分开，是非常关键的红队修正：
+
+> **关系中心性高，不代表能力高；人格测试分数高，也不代表适合任何职位。**
+
+###### 3. 关系图谱与人物网络
+
+####### Palantir Gotham、Foundry、AIP
+
+Palantir 的优势是将实体、关系、事件、规则、模型和行动流程放入统一本体中。它最接近《三国志》中的“人物—势力—地盘—资源—事件”关系系统，但它不是自动生成天下情报的魔法平台，必须有：
+
+- 合法数据源。
+- 实体解析规则。
+- 数据治理。
+- 领域本体。
+- 权限体系。
+- 审计记录。
+- 专业实施团队。
+
+####### i2 Analyst’s Notebook、Quantexa、Maltego、Babel Street
+
+这些工具分别适合：
+
+- i2：人物、组织、资产、事件和时序关系图。
+- Quantexa：实体解析、上下文数据和风险决策。
+- Maltego：公开情报链路调查。
+- Babel Street：多语种公开信息与情报分析。
+
+它们可以回答“谁和谁有关系”“某资产与哪些实体相连”，但不能仅凭关系图谱推导“谁忠、谁奸、谁一定会反叛”。
+
+必须贯彻：
+
+\[
+\text{关系存在} \neq \text{共同犯罪}
+\]
+
+\[
+\text{相关性} \neq \text{因果性}
+\]
+
+\[
+\text{网络中心性} \neq \text{政治能力}
+\]
+
+###### 4. 国力、国势与国家风险
+
+####### Lowy Asia Power Index
+
+Lowy Asia Power Index 是当前最接近“三国志国力面板”的公开产品之一。它覆盖印太地区 27 个国家，以经济关系、军事能力、韧性、未来资源、经济能力、防务网络、外交影响力和文化影响力等八大主题衡量综合实力，并提供跨年度趋势比较。 [lowyinstitute](https://www.lowyinstitute.org/programs-projects/asia-power-index)
+
+它适合：
+
+- 比较国家综合实力。
+- 观察力量变化。
+- 构建亚洲国家面板。
+- 作为“国力总表”的外部基准。
+
+但它不等于国家胜负预测。指数权重本身就是模型假设，且国家内部治理、组织执行、联盟承诺和突发事件不能完全由一个综合分数表达。
+
+####### CINC、V-Dem、Polity、WGI、Fragile States Index、BTI
+
+这些数据库应作为“国势底盘”：
+
+- **CINC**：人口、军费、军力、钢铁产量、能源消费等物质能力。
+- **V-Dem**：民主、法治、国家能力和政治制度等多维治理指标。
+- **WGI**：政府效能、监管质量、法治、腐败控制等。
+- **Polity**：政体和政治权威结构。
+- **Fragile States Index**：脆弱性、社会压力和国家风险。
+- **BTI**：政治转型与经济治理。
+
+组合时不得把各指数简单加总。应先建立指标谱系：
+
+\[
+X_{c,t,k}
+=
+\text{country } c
+\times
+\text{time } t
+\times
+\text{indicator } k
+\]
+
+然后记录：
+
+- 来源。
+- 版本。
+- 取数日期。
+- 缺失值编码。
+- 指标方向。
+- 权重。
+- 标准化方法。
+- 不确定性。
+
+尤其必须贯彻：
+
+> **NULL 不等于 0；史无载不等于能力为零。**
+
+####### GeoQuant、EIU、Eurasia Group、Control Risks、Oxford Analytica
+
+这些更接近商业“天下大势”和国家风险服务：
+
+- GeoQuant：量化政治风险。
+- EIU：国别评级与宏观预测。
+- Eurasia Group：政治风险与地缘战略。
+- Control Risks：安全、情报和尽调。
+- Oxford Analytica：专家驱动的每日地缘分析。
+
+商业情报的价值通常是专业团队、资料整合和时效性，而不是“保证预测正确”。采购时应要求：
+
+- 历史回测。
+- 预测期限。
+- 预测概率而非只给结论。
+- Brier score、log loss 或 calibration curve。
+- 对错误预测的撤回与修订记录。
+
+###### 5. 政策模拟与国家治理
+
+####### International Futures（IFs）
+
+IFs 是目前最接近《大周列国志》长期国势推演的公开工具之一。它把人口、经济、教育、健康、农业、能源、环境、治理等系统连接起来，可以运行长期基线和政策情景。
+
+适合回答：
+
+- 人口变化如何影响财政和劳动力。
+- 教育投入如何影响生产率。
+- 能源或产业政策的长期影响。
+- 多种国家发展路径之间的差异。
+
+不适合回答：
+
+- 某君主何时必然失势。
+- 某场战争一定谁胜。
+- 某个将领是否会叛变。
+- 复杂政策的唯一最优解。
+
+####### EUROMOD、OpenFisca、PolicyEngine
+
+这些工具适合“内政算筹”：
+
+- 税收。
+- 福利。
+- 家庭收入。
+- 财政分配。
+- 政策受益者和受损者。
+- 不同税费规则的反事实比较。
+
+对于“文化城”项目，可以借鉴其规则引擎思想，建立：
+
+- 培训支出。
+- 基础设施支出。
+- 招商补贴。
+- 税收收入。
+- 就业创造。
+- 人口流入。
+- 企业生存率。
+- 财政可持续性。
+
+输出不应是“招商最好”，而应是：
+
+| 情景 | 财政余额 | 就业 | 人口净流入 | 产业集中风险 | 失败条件 |
+|---|---:|---:|---:|---:|---|
+| 培训优先 | 待模拟 | 待模拟 | 待模拟 | 较低/待验证 | 招聘需求不足 |
+| 基建优先 | 待模拟 | 待模拟 | 待模拟 | 中等 | 利用率不足 |
+| 招商优先 | 待模拟 | 待模拟 | 待模拟 | 较高 | 补贴依赖、单一产业 |
+
+###### 6. 城市数字孪生和空间治理
+
+####### ArcGIS Urban、AnyLogic、Simudyne
+
+这一族最接近“城池经营”和“民生内政”：
+
+- ArcGIS Urban：土地利用、分区、三维规划和空间情景。
+- AnyLogic：主体建模、系统动力学、离散事件仿真。
+- Simudyne：复杂系统和风险情景模拟。
+- Virtual Singapore 等：城市级数字孪生。
+
+对于真实项目，AnyLogic 或 Python/R 自建 ABM 更灵活。核心不是制作漂亮地图，而是明确：
+
+- 人口代理人。
+- 家庭和企业代理人。
+- 预算约束。
+- 迁入迁出。
+- 价格机制。
+- 交通和土地限制。
+- 政策冲击。
+- 代理人行为规则。
+
+三维可视化不能证明政策有效；只有可重复的规则、参数和验证结果才有决策价值。
+
+###### 7. 兵棋、红队和稳健决策
+
+####### RAND Robust Decision Making
+
+RAND 的稳健决策思想比“预测唯一未来”更适合真实治理。它不是寻找一个在单一预测下最优的方案，而是在大量不确定情景下寻找不容易崩溃的方案。
+
+可用形式是：
+
+\[
+\text{Robustness}(a)
+=
+1-
+\frac{\#\{\text{情景中未达最低目标}\}}
+{\#\{\text{全部情景}\}}
+\]
+
+决策结果应包括：
+
+- 各方案在多少情景下失败。
+- 失败由哪个假设触发。
+- 哪些指标最敏感。
+- 哪些预警信号出现时应切换策略。
+- 哪些政策可以低成本撤回。
+
+这比直接声称“策略 A 是最优”更符合现实。
+
+####### WarMatrix
+
+美国空军官方资料显示，WarMatrix 在 2026 年 GE 26 基准兵棋中首次进入实际运用。它是人机协同兵棋环境，将既有模型、数据和工作流结合，以 AI 加速分析，同时保留人的判断；官方特别强调透明性、可审计性、可重复裁决和对假设、结果、权衡的理解。 [af](https://www.af.mil/News/Article-Display/Article/4459553/usaf-ge-26-showcases-new-ai-enabled-warmatrix-wargaming-capability/)
+
+它很像《三国志》的“外交—军备—资源—行动—结果”循环，但它是军用系统，不是个人软件，不能简单采购或公开复制。
+
+####### GenWar、AFSIM、Skyral、Scale AI、Anduril、Shield AI
+
+这些属于国防模拟、合成环境和自主系统生态，主要服务军方、国防承包商和政府。对民用文化城或企业战略，不能照搬作战模型；但可吸收：
+
+- 红队与蓝队双边推演。
+- 对手策略生成。
+- 多回合行动。
+- 规则透明。
+- 事件裁决。
+- 事后复盘。
+- 模型版本控制。
+
+###### 8. 群体预测和政策执行
+
+####### Good Judgment、Metaculus、Polymarket、Kalshi
+
+这些工具可用于：
+
+- 收集多个独立判断。
+- 形成概率预测。
+- 追踪预测校准。
+- 比较专家与普通参与者的判断质量。
+
+但预测问题必须可裁决。例如：
+
+- “未来 90 天是否获得某项许可证？”
+- “六个月内客户留存率是否高于某阈值？”
+- “某项目是否在预算内完成？”
+
+“秦国能否统一天下”这类定义模糊、时间跨度过长、单次不可重复的问题，不适合作为高质量预测市场问题。
+
+####### PEMANDU Associates
+
+附件把 PEMANDU 的 Lab、BFR、NKRA、KPI 和公开记分板方法列为落地环节，这是合理的。它的意义不在“预测未来”，而在于把战略转成：
+
+- 目标。
+- 负责人。
+- 关键结果。
+- 里程碑。
+- 公开进度。
+- 红色预警。
+- 纠偏措施。
+
+换言之，PEMANDU 更像“商鞅式变法的执行仪表板”，不是“诸葛亮式预言机器”。
+
+##### 三、Red Team：原方案最需要强化之处
+
+###### 1. 最大盲点：把“人物”与“文本角色”混为一谈
+
+《三国演义》《战国策》《史记》《资治通鉴》中的人物形象，本身已经经过：
+
+- 作者筛选。
+- 史料缺失。
+- 政治叙事。
+- 后世改写。
+- 文学夸张。
+- 道德评判。
+
+因此，真实版系统必须同时输出三种对象：
+
+1. **历史人物实体**。
+2. **文本中的人物形象**。
+3. **叙事者对人物的建构**。
+
+三者不能混为一个人格向量。
+
+###### 2. 最大风险：把不确定性隐藏在面板后面
+
+游戏人物属性是设计者给出的确定数字，现实人物指标是估计值。应把每个属性表示为：
+
+\[
+\hat{\theta}_{i,k}
+\pm
+1.96 \cdot SE(\hat{\theta}_{i,k})
+\]
+
+而不是只显示“权力欲 82”。
+
+建议人物面板采用：
+
+| 指标 | 点估计 | 95% 区间 | 文本量 | 体裁 | 可靠性 |
+|---|---:|---:|---:|---|---|
+| 权力动机 | 估计值 | 区间 | \(n\) | 演说/史料 | A/B/C |
+| 概念复杂度 | 估计值 | 区间 | \(n\) | 同上 | A/B/C |
+| 联盟取向 | 估计值 | 区间 | \(n\) | 同上 | A/B/C |
+
+###### 3. 最大合规风险：对在世人物的自动画像
+
+对于在世私人，不应未经授权建立人格、忠诚、政治倾向、风险或“可治理性”评分。即使是公众人物，也应严格限定为：
+
+- 可公开取得的文本。
+- 明确的方法。
+- 不做犯罪断言。
+- 不把模型推断当事实。
+- 允许更正和撤回。
+- 保留来源和版本。
+
+附件所提及的 Cambridge Analytica 与 GDPR，应作为“不可越过的警戒线”，而不是作为可复制的样板。 [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/230362276/dd6c3df8-bf65-4248-8cb4-b3df063fc978/Zhen-Shi-Ban-Ren-Wu-Fen-Xi-Yu-Zhi-Guo-Ce-Lue-Fu-Wu-Ming-Lu-Yu-Jiu-Shi-Ri-Xing-Ling.md?AWSAccessKeyId=ASIA2F3EMEYE35CRGU4Q&Signature=cKFrH3woe%2BepD7V6k6C3N28Nb7k%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIAliphpHAryCaaHzmlXP8AHyGQ0zOFzEXonJIpi1Z9FbAiAoWtTaEYgJqATUlqoVB1ljPSZPui%2Fzm6Z68HBufV7yyyqDBQis%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAEaDDY5OTc1MzMwOTcwNSIMgchdZYPlzTYzQuPxKtcENZubMdPH%2BZis%2B1OIYyzYbTvgi%2BDz76PLXcDYV0ACCEcvPePehwBTtDgtkIp3gvVs62AfHL5SeaxdBGU9A0aeFSWUChGGjTgHcVpVzdZmpcbgy9OfaAKQWcRLsxn1ju8epMEyjtJjEWaW8HVc0%2BAKkf3TWEOqnjvIzwLvWRXq40C5h9hj8Upzw9sO1pukVxZ846BRZe1XRJBq4eRBUJYIaEjEc2qWqod3ZlgMnEfafCEIUVbKic1ODy1xVC0Y9t%2BVlJn9%2B0LbfWh5%2BgmFyw%2BMByizeLTgKyQFd6baq%2BIoyHDHm7gsj4TJoNePcINzbAOEzWgP9giOwres10vTb39OljtJUKszuRG8Hn8kzjwfHFYbDX24fCs%2FGSX5aefUJNJXhz2HxM9dWirfYIa4Q%2FwLhDBaRjS48jOvqen%2BmvB8X%2BkWDpoCTs5QgC3BmMj5NJsbwqPx7cu1Kgq1zrEHO%2FLmNriIdMI%2FDkSXJ3YOKWZeuro%2BxWL7RYy5nPBpmdHKdTfLlcGQWpd%2BOsmgnrkhhiYH9HbcI9krAXY5wBvmzL%2BmZIorfx05yzXnqbpRNVndx6eKCBMoOFJRhYYggHxQqLc4MSr9GDbDOcJtzF%2FtsOE8SDi881LqVOZIup2qz7KTN3CyC296kEpDJmNEdg3vHEgem%2FNxDjzRrrZ7rj1g5z%2BRD5%2Fx6sBRA8riRP%2Fa9bDhJr4aJmJuccQRzdjrnl0ZwRaDYkkMWrr4iDzwtczkLvXgfONqulhf2xbDhXa0xxz20LTd4k1BWCEAT04LDBHr2Pvzw1dnfduok0kwi9GD1gY6mQG%2BI0gB8I09uekSsKbgDRbvi4Bw5tBcXCl2785UQ0Q4aq%2BBi9TSE2x%2BggZRAMBUw4%2BliBGov9%2FuIfbrwJd%2BYkHtZorpRANTYMN8vdtpxH0SVeUR5Iwkg1Sl7wQbU364EvGlBdPuDrvS8WGk5Z78HmXY070pBpgv02YEDo7KFBGlguMewlAZ04BKe4pDMjwCSnTBPL%2BVw30MIWk%3D&Expires=1791030878)
+
+###### 4. 最大科学风险：伪因果
+
+人物分数、国力指数、政策结果之间不能自动推导因果。建议每个政策结论都标记为：
+
+- 描述性。
+- 预测性。
+- 反事实。
+- 因果性。
+- 规范性。
+
+如果没有识别策略或实验设计，就不能使用“导致”“证明有效”等因果词。
+
+###### 5. 最大工程风险：数据血缘不完整
+
+附件中的“三元锚”和“指纹双抄”应提升为系统硬约束：
+
+```text
+snapshot_id
+run_id
+corpus_version
+source_url
+retrieval_time
+row_count
+byte_count
+md5
+model_version
+prompt_version
+feature_version
+```
+
+此外还应增加：
+
+- 数据许可。
+- 个人资料处理依据。
+- 删除请求记录。
+- 模型输出审计。
+- 回滚版本。
+- 责任人。
+- 复核状态。
+
+##### 四、Killcritic：必须撤回或降级的说法
+
+以下表达必须禁止：
+
+- “这个人智力是 87。”
+- “这个人忠诚度是 92。”
+- “这个国家三年后一定崩溃。”
+- “此政策是唯一最优方案。”
+- “AI 已经看见未来。”
+- “关系图证明某人是同党。”
+- “古籍分析能还原某位先贤的真实心理。”
+- “战争模拟结果就是战争真实结局。”
+
+替换为：
+
+- “在指定语料、方法和时期下，得到某项文本特质的估计值。”
+- “该估计存在抽样、体裁、语言和测量误差。”
+- “在指定假设下，该方案表现出较高稳健性。”
+- “结果是情景推演，不是事实预言。”
+- “关系图显示关联路径，不证明因果或共同责任。”
+
+##### 五、推荐的“稷下算筹”产品蓝图
+
+我建议不要试图复制一个“万能三国志 AI”，而是建设一个可拆卸、可审计的六层系统。
+
+###### 第一层：华夏知识底座
+
+数据源：
+
+- CBDB。
+- CHGIS。
+- 识典古籍。
+- 《儒藏》。
+- 中研院汉籍数据库。
+- 《史记》《战国策》《左传》《国语》《韩非子》《商君书》《孙子》《管子》等经史子集。
+
+输出：
+
+- 人物实体。
+- 时间线。
+- 官职与地理。
+- 亲属、师承、联盟。
+- 文本出处。
+- 版本和校勘关系。
+
+###### 第二层：人物与势力本体
+
+建议建立以下实体：
+
+```text
+Person
+Group
+Office
+Place
+Institution
+Resource
+Event
+Policy
+Text
+Relationship
+```
+
+关系包括：
+
+```text
+kinship
+teacher_student
+appointment
+alliance
+conflict
+trade
+correspondence
+co-membership
+reported_by
+supports
+opposes
+```
+
+每一条关系必须有：
+
+- 起止时间。
+- 来源。
+- 证据等级。
+- 是否直接记载。
+- 是否推断。
+- 是否存在冲突来源。
+
+###### 第三层：人物面板
+
+建议采用七维，而不是简单模仿“武力、智力、政治、魅力”：
+
+1. 资源动员能力。
+2. 组织与执行能力。
+3. 信息处理与认知复杂度。
+4. 联盟与谈判能力。
+5. 风险偏好。
+6. 约束意识。
+7. 价值与政策取向。
+
+每项同时输出：
+
+- 点估计。
+- 置信区间。
+- 证据量。
+- 语料体裁。
+- 模型版本。
+- 可靠性等级。
+
+###### 第四层：国势与经济模型
+
+指标分成五组：
+
+- 人口与人力。
+- 财政与产业。
+- 军事与安全。
+- 组织与治理。
+- 外交与网络。
+
+不可直接把五组相加，应采用多视角报告：
+
+```text
+material_capacity
+institutional_capacity
+social_cohesion
+external_influence
+fiscal_resilience
+```
+
+最终报告应保留分项，不只给一个“国力总分”。
+
+###### 第五层：多智能体政策推演
+
+代理人可包括：
+
+- 君主/政府。
+- 地方官僚。
+- 军事集团。
+- 商人。
+- 农户。
+- 学派。
+- 外交盟友。
+- 竞争者。
+- 公众与迁移人口。
+
+每轮推演包括：
+
+1. 状态更新。
+2. 资源结算。
+3. 政策选择。
+4. 对手反应。
+5. 随机冲击。
+6. 结果裁决。
+7. 预警信号。
+8. 复盘。
+
+###### 第六层：九十日执行系统
+
+最终不输出“天下最优策”，而输出：
+
+- 目标。
+- 关键结果。
+- 行动负责人。
+- 时间节点。
+- 预算。
+- 风险。
+- 触发条件。
+- 备选方案。
+- 撤退条件。
+- 复盘日期。
+
+这才是从“游戏策略”进入“现实治理”的关键一步。
+
+##### 六、九十日优化版行令
+
+附件原有十三项任务可以保留，但我建议强化为下列版本。
+
+###### 第 1–15 日：证据与资产盘点
+
+- 固化主档、原始材料、下载台账和 MD5。
+- 将三十七款游戏逐项标记为“已安装、可验证、仅有链接、无法取得、名称歧义”。
+- 为每个现实服务建立一条证据记录。
+- 将“◎、○、△、★”升级为 `verified / inherited / unverified / new` 四态。
+- 对每个供应商记录产品、客户、价格、API、数据出口、法域和更新日期。
+
+验收：每一项都有状态，不能出现空白。
+
+###### 第 16–30 日：华夏人物知识图谱
+
+- 导入 CBDB。
+- 选定战国至秦汉人物。
+- 统一人物别名、异体字、地名和官职。
+- 建立至少 1,000 人、3,000 条关系边的原型。
+- 每条边保留出处和时间区间。
+
+验收：抽取 100 条关系人工复核，准确率、召回率和冲突数全部报告。
+
+###### 第 31–45 日：文言测度试验
+
+- 只做权力动机、概念复杂度、控制感三项。
+- 先建立现代中文，再建立文言规则。
+- 采用至少三名标注者。
+- 分离《左传》《战国策》《史记》《韩非子》等不同体裁。
+- 使用 bootstrap 估计方差。
+- 明确区分人物原话、转述和叙述者评价。
+
+验收：\(\kappa \geq 0.70\)，否则不得进入人物排序。
+
+###### 第 46–60 日：国力和预算模型
+
+- 载入 Lowy、V-Dem、CINC、WGI 等数据。
+- 形成多维国势面板。
+- 建立文化城预算规则引擎。
+- 至少模拟培训、基建、招商三种政策。
+- 加入预算超支、人口流入不足、产业集中和外部冲击。
+
+验收：每个政策都能输出基线、敏感性分析和失败条件。
+
+###### 第 61–75 日：红蓝双方推演
+
+- 红方代表竞争者、市场、财政约束或外部冲击。
+- 蓝方代表项目治理者。
+- 每套方案至少跑数百次随机情景。
+- 记录关键失败路径。
+- 禁止只报告平均值，应报告尾部风险。
+
+验收：每个方案有“成功条件、失败条件、早期预警和切换规则”。
+
+###### 第 76–90 日：公开版决策简报
+
+最终交付应包括：
+
+1. 一页式决策摘要。
+2. 人物与势力图谱。
+3. 数据血缘表。
+4. 模型假设表。
+5. 三种政策情景。
+6. 风险和盲区清单。
+7. 撤回与修订记录。
+8. 是否采购商业平台的书面裁定。
+
+如果免费工具已经足以完成问题，不采购昂贵平台；如果采购，则必须先证明商业平台解决了明确的瓶颈，而不是购买“气势”。
+
+##### 七、最终采购排序
+
+按照“高可及性、高兼容性、高稳定性、可审计、可落地”的顺序，我建议：
+
+###### 第一优先：自建开放底座
+
+- CBDB。
+- CHGIS。
+- leadeR。
+- V-Dem。
+- CINC。
+- Lowy。
+- OpenFisca/PolicyEngine。
+- Python/R。
+- PostgreSQL。
+- DuckDB/Parquet。
+- NetworkX/igraph。
+- AnyLogic 或自建 ABM。
+
+这是成本最低、可复制性最高、最适合您的 R/Python/SQL 背景的方案。 [cbdb.hsites.harvard](https://cbdb.hsites.harvard.edu/)
+
+###### 第二优先：采购专项能力
+
+- Quantexa：实体解析和决策情报。
+- i2：关系图谱。
+- ArcGIS Urban：空间规划。
+- IFs：长期国势情景。
+- Hogan/Korn Ferry：合规的人才测评。
+- EIU/Eurasia/Control Risks：商业政治风险。
+
+###### 第三优先：大型政企决策平台
+
+- Decitron。
+- Palantir Foundry/Gotham/AIP。
+- 大型国防兵棋和城市数字孪生平台。
+
+Decitron 的公开资料显示，它以大语言模型、多智能体协作、信号检测、关键问题框定、情景构建和未来模拟为核心，并试图形成“感知—建模—仿真—决策”的闭环，因此是目前清单中最接近“现实策略服务中枢”的产品之一。 但仍应要求实际演示、数据治理说明、API、审计日志、错误案例和部署边界，不能仅根据宣传材料采购。 [decitron.wenge](https://decitron.wenge.com/)
+
+##### 最终高见
+
+最优路线不是寻找一家公司“复刻《太阁立志传》”，而是建立：
+
+> **CBDB 的人物史料，leadeR 的文本测度，Quantexa/i2 的关系图谱，Lowy/V-Dem/CINC 的国势面板，IFs/OpenFisca 的政策模型，AnyLogic 的多智能体推演，RAND 的稳健决策，PEMANDU 的执行记分板。**
+
+这是一套“诸子百家合流”的现实架构：
+
+- 以史为鉴，不把史料当预言。
+- 以法定规，不把模型当神谕。
+- 以术测人，不把关系当罪证。
+- 以势观国，不把总分当国运。
+- 以兵棋穷举，不把一局当真相。
+- 以数据审计，不把漂亮面板当能力。
+- 以行动闭环，不让战略停在简报。
+
+故本项目真正的第一阶段，不是采购 Palantir、Decitron 或军用兵棋，而是完成**华夏人物本体＋文言语料治理＋可审计国势面板＋三情景预算推演**。这能以较低成本验证核心假设，也最符合您所要求的“不退化，只优化并强化”的铁律。
 
 ### Grok
 
@@ -37058,12 +37829,1614 @@ redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actio
 
 ### 深度求索
 
+#### 真实版人物分析与治国策略服务 · 卅七戏全映射与华夏前沿科技融合方案
+
+**Oct 3, 2026 · @黄联富**
+
+> **核心断语（强化重申）** ：现实无一家机构提供《三国志》式一站式「人物数值＋势力经营＋外交征战」服务。**售证据者众，售情景者寡，售结论者皆妄。** 本录在前录基础上，将卅七款游戏逐一映射至现实可及服务，并注入华夏盛族前沿科技维度。
+
+
+##### 〇、三附件综合梳理与对账
+
+###### 附件关系裁定
+
+| 来源件 | 实质 | 处置 |
+| --- | --- | --- |
+| 查证现实策略服务之ChatGPT篇.txt（924行） | ChatGPT十二答全文 | 经实体并集比对，为另一件之**真子集**，存档可弃 |
+| 查证现实策略服务.txt（964行） | 同上十二答 ＋ Claude一答 | **全集**，留存 |
+| 大秦赋算筹\_游戏下载清单\_20261002.csv（37项） | 游戏下载台账 | 提问之锚；原十二答只就其中三款作答 |
+
+###### 附件三大结构性问题
+
+**问题一：提问与回答错位。** 台账实有卅七款、机制分六族，但原十二答仅以三款游戏为锚，覆盖率约8%。这是重大遗漏。
+
+**问题二：十二答之结构雷同、实体重合逾八成**，属**一答之十二次重述**，不构成独立互证。此判已入撤回登记。
+
+**问题三：华夏维度近乎空白。** 原十二答中华夏机构仅三家，且皆为政府系、不可触及者；典籍人物库与国产决策智能双双挂零。本次新增CBDB、识典古籍、中科闻歌Decitron等核心华夏资产。
+
+
+##### 一、红队报告 · 九大风险与系统性批判
+
+本节以前录四层架构为基础，对原方案进行红队审计，识别结构性风险。
+
+###### 红队风险清单
+
+| # | 风险 | 要害 | 等级 |
+| --- | --- | --- | --- |
+| R1 | **数据管线混淆** | 面板上五个数，可能各出自五条不同管线，却同格并陈 | 致命 |
+| R2 | **语言与文化错位** | leadeR等LTA工具以英文编码规则构建，施于文言须重建词典与常模，否则所得非「孔明之概念复杂度」，而是译者之用词习惯 | 致命 |
+| R3 | **存活偏差** | CBDB五十余万人虽浩繁，入史者皆仕宦士族，分母本身已被筛选 | 高 |
+| R4 | **一次性问题** | 现实无重开档，治国策不可反事实验证 | 高 |
+| R5 | **法禁风险** | 对在世私人作人格画像，于大马PDPA 2010项下属敏感处理，不可先做后问 | 高 |
+| R6 | **成本断层** | Palantir、Quantexa、Eurasia皆年度六位数美元级；连游戏本体尚未下全，此时论采购是跳过三级台阶 | 中高 |
+| R7 | **可及性悬崖** | 台账卅七得三，本体尚未到手 | 中 |
+| R8 | **本土覆盖不足** | 名单八成为欧美产品，覆盖东南亚之深度远逊北美 | 中 |
+| R9 | **AI幻觉风险** | 大模型在复杂推演中可能生成看似合理但无据的判断 | 中 |
+
+###### 最致命的两个风险
+
+**R1之要害**：原前录a168案例已揭示—— `q` 侧与 `e` 侧两管线同窗同锚，仅差 `bet05 > 0` 与 `bet08 IS NOT NULL` 两条谓词，便令CSV之 `n_rounds` 与门槛所卡者非同一量。**人物面板风险全同。**
+
+**R2之要害**：文言LTA词典建设是第一真关隘。leadeR之LTA原始计数与特质比例皆按英文编码规则生成，施于中文尤施于文言，须重建词典与常模。
+
+
+##### 二、批判报告 · 结构与替代方案
+
+###### 对原方案的批判
+
+**批判一：以三款游戏锚定卅七款，是以偏概全。** 原十二答仅就《太阁立志传》《三国志》《大周列国志》三款作答，而台账实有卅七款。六族映射已然可考，却未穷尽。
+
+**批判二：忽略华夏古籍底座。** 识典古籍至2026年6月免费开放逾六万部古籍，月均逾240万人次阅读，设AI翻译、AI深度研究助手。CBDB截至2026年5月已收录657,909人之传记资料。此为华夏人物分析之第一底座，原方案未充分利用。
+
+**批判三：未纳入华夏决策智能新进展。** 中科闻歌Decitron决策机以世界模型、多智能体推演和博弈求解为三项关键技术路径，形成「四维混合推理能力」，支撑AI从「生成答案」走向「推演世界」。在PolyBench测评中实现三项SOTA，终局预测准确率81.20%，平均概率预测偏差仅0.822%。此为九门之中最接近《三国志》全套的华夏产品。
+
+**批判四：将「看起来像游戏」误认为「已量化了现实」。** 游戏能给人物打87、给国力画面板，因其具三性：规则闭合、参数可观测、开局可重复。现实三者皆无——规则随时改写，变量多不可测，历史只跑一次、无对照组。
+
+###### 替代方案：华夏前沿四层架构
+
+替代原四层架构（下二层免费、上二层自建），提出**华夏前沿融合架构**：
+
+| 层级 | 内容 | 华夏特色 | 预算 |
+| --- | --- | --- | --- |
+| **第四层 · 决策审计** | 三元锚＋指纹双抄＋NULL≠0＋撤回册 | 移植a168铁律 | 零 |
+| **第三层 · 推演引擎** | 中科闻歌Decitron式多智能体推演＋CMDP | 融合《孙子兵法》博弈思想 | 政企采购 |
+| **第二层 · 人物分析** | CBDB＋识典古籍＋BaiJia角色扮演平台 | 文言LTA词典＋华夏常模 | 零 |
+| **第一层 · 史料底座** | CBDB离线版＋识典古籍＋《儒藏》数字平台 | 经史子集全量 | 零 |
+
+**核心创新**：以华夏古籍为底座，以中科闻歌Decitron为推演引擎，以四层审计为质量保障。下二层全部免费且已就绪，上二层须自建；跳过下层直购上层之平台，即「跳过三级台阶」。
+
+
+##### 三、盲点报告 · 八条共同盲区（补强版）
+
+| # | 盲区 | 要害 |
+| --- | --- | --- |
+| 1 | **语种** | leadeR之LTA原始计数与特质比例皆按英文编码规则生成。施于中文尤施于文言，须重建词典与常模 |
+| 2 | **体裁** | LTA可比性以同体裁为前提。古人无记者会；《战国策》之辞令乃后世编纂之拟托，以之算特质是算编者而非算说者 |
+| 3 | **存活偏差** | CBDB五十余万人虽浩繁，入史者皆仕宦士族，分母本身已被筛选 |
+| 4 | **一次性** | 现实无重开档，治国策不可反事实验证 |
+| 5 | **本土** | 名单八成为欧美产品，以EIU看吉打州粒度不够 |
+| 6 | **法禁** | 对在世者作人格评分，于大马PDPA 2010项下属敏感处理 |
+| 7 | **成本** | Palantir、Quantexa、Eurasia皆年度六位数美元级 |
+| 8 | **可及性** | 台账卅七得三，连游戏本体尚未下全 |
+
+**补充盲区（★新增）** ：
+
+| # | 盲区 | 要害 |
+| --- | --- | --- |
+| 9 | **AI幻觉** | 大模型在多智能体推演中可能生成看似合理但无据的判断，须有可审计的推理链条 |
+| 10 | **量子威胁** | 量子计算在军事仿真、密码破解、关键基础设施保护领域潜力巨大，传统加密体系面临Q-Day风险 |
+| 11 | **供应链主权** | 国防与国安AI须运行在自有基础设施上，敏感数据不得离开主权控制范围 |
+| 12 | **文言对齐** | 大模型训练语料以现代汉语与英文为主，施于春秋战国文言文本须专门微调 |
+
+
+##### 四、卅七戏·六族全映射表
+
+原十二答以三款游戏为锚，而台账实有卅七款、机制分六族。名正则对应可考。
+
+| 族 | 台账诸戏 | 内核机制 | 现实对应之学 | 华夏前沿方案 |
+| --- | --- | --- | --- | --- |
+| **立身** | 太阁立志传Ⅴ DX、太吾绘卷、大侠立志传、绝世好武功、模拟人生4、Elin | 个体属性成长、师承、声望 | 人才测评、能力模型、继任规划 | CBDB人物谱系＋Hogan／Korn Ferry |
+| **商贾** | The Guild II／3、SAELIG、Patrician IV、Port Royale 3／4、Big Ambitions、Capitalism Lab | 闭合经济体、价格—产能—库存 | 产业组织、供应链仿真、经营沙盘 | PolicyEngine＋OpenFisca |
+| **舟楫** | 大航海时代Ⅳ HD／起源、风帆纪元、Star Traders | 航路、商品差价、风险航程 | 贸易流、海事风险、路径优化 | GDELT＋ACLED |
+| **门阀** | Crusader Kings III、Citizen of Rome、Medieval Dynasty、Kenshi、骑砍Ⅱ | 血缘—联姻—继承—封建关系网 | 关系图谱、实体解析、谱系学 | CBDB亲属关系＋i2／Maltego |
+| **列国** | 三国志8 REMAKE、信长之野望·新生、Total War: 三国、EU V、无悔华夏、大周列国志、大秦帝国之帝国烽烟、三国志·战略版、猫话列国 | 国力面板＋外交＋征伐 | 国别风险、国力指数、兵棋庙算 | IFs＋Decitron＋WarMatrix |
+| **文明** | Civilization VII、Age of Empires IV、Stellaris | 长周期科技树、文明演化 | 长期发展情景模型、综合评估模型 | IFs＋V-Dem |
+
+###### 逐款游戏·现实服务映射
+
+**第一族·立身（个人成长与人才测评）**
+
+| # | 游戏 | 现实对应 | 华夏方案 | 可及性 |
+| --- | --- | --- | --- | --- |
+| 1 | 太阁立志传Ⅴ DX | Hogan＋Korn Ferry | CBDB人物谱系＋BaiJia角色扮演 | 免费／中 |
+| 5 | 太吾绘卷 | Profiler Plus（LTA） | 文言LTA词典（待建） | 免费 |
+| 6 | 大侠立志传 | leadeR R包 | 文言LTA＋华夏常模 | 免费 |
+| 7 | 绝世好武功 | SHL／北森 | CBDB＋识典古籍 | 免费 |
+| 8 | 模拟人生4 | Hogan人格测评 | 同上 | 中 |
+| 11 | Elin | Gallup CliftonStrengths | 同上 | 中 |
+
+**第二族·商贾（经济经营与产业模拟）**
+
+| # | 游戏 | 现实对应 | 华夏方案 | 可及性 |
+| --- | --- | --- | --- | --- |
+| 2 | The Guild II Renaissance | REMI／PI+ | 区域经济模型 | 高 |
+| 3 | The Guild 3 | Oxford Economics | 全球经济模型 | 高 |
+| 4 | SAELIG | CGEBox | 可计算一般均衡 | 免费 |
+| 13 | Big Ambitions | PolicyEngine | 开源税制规则引擎 | 免费 |
+| 24 | Capitalism Lab | OpenFisca | 税费规则引擎 | 免费 |
+
+**第三族·舟楫（贸易与航路）**
+
+| # | 游戏 | 现实对应 | 华夏方案 | 可及性 |
+| --- | --- | --- | --- | --- |
+| 14 | 风帆纪元 | GDELT＋ACLED | 全球事件流 | 免费 |
+| 15 | 大航海时代Ⅳ HD | 贸易流分析 | 同上 | 免费 |
+| 16 | 大航海时代：起源 | 海事风险 | 同上 | 免费 |
+| 17 | Star Traders | 路径优化 | 同上 | 免费 |
+
+**第四族·门阀（关系网络与谱系）**
+
+| # | 游戏 | 现实对应 | 华夏方案 | 可及性 |
+| --- | --- | --- | --- | --- |
+| 9 | 骑马与砍杀Ⅱ | i2／Maltego | CBDB亲属关系 | 免费 |
+| 10 | Kenshi | Quantexa | CBDB社会关系 | 高 |
+| 12 | Medieval Dynasty | Altrata／BoardEx | CBDB＋唐代墓志 | 高 |
+| 18 | Citizen of Rome | 谱系学 | CBDB亲属数据 | 免费 |
+| 20 | Crusader Kings III | 关系图谱 | CBDB＋i2 | 中 |
+
+**第五族·列国（国力与外交）**
+
+| # | 游戏 | 现实对应 | 华夏方案 | 可及性 |
+| --- | --- | --- | --- | --- |
+| 19 | 三国志8 REMAKE | IFs＋Eurasia | IFs＋Decitron | 免费／政企 |
+| 25 | 大周列国志 | IFs | IFs免费在线入口 | 免费 |
+| 26 | 信长之野望·新生 | 国力指数 | Lowy＋CINC | 免费 |
+| 27 | Total War: 三国 | RAND推演 | 墨子推演系统 | 待核 |
+| 28 | Europa Universalis V | EIU国别分析 | 国家信息中心 | 机构 |
+| 32 | 大秦帝国之帝国烽烟 | 战国博弈 | Decitron＋孙子兵法 | 政企 |
+| 33 | 无悔华夏 | 华夏历史 | Decitron＋CBDB | 政企 |
+| 34 | 猫话列国 | 休闲策略 | —— | —— |
+| 35 | 三国志·战略版 | 战略博弈 | WarMatrix＋Decitron | 机构 |
+
+**第六族·文明（长周期演化）**
+
+| # | 游戏 | 现实对应 | 华夏方案 | 可及性 |
+| --- | --- | --- | --- | --- |
+| 29 | Stellaris | IFs | IFs延伸至2150年 | 免费 |
+| 30 | Civilization VII | V-Dem | 治理量化库 | 免费 |
+| 31 | Age of Empires IV | 长期发展模型 | IFs＋OECD | 免费 |
+
+
+##### 五、九门七十五家·名录全表（强化版）
+
+###### 第一门 · 华夏典籍与人物谱系
+
+| # | 机构／产品 | 实质 | 对应机制与局限 |
+| --- | --- | --- | --- |
+| 1 | **CBDB（哈佛／中研院史语所／北大）** | 截至2026年5月收录657,909人之传记资料，免费开放、含线上与离线版 | **真·人物列传数据库**：籍贯、入仕途径、官职迁转、亲属与社会关系。即人物名鉴之史实版。限史上人物 |
+| 2 | **识典古籍（北大—字节跳动）** | 至2026年6月免费开放逾六万部古籍，月均逾240万人次阅读 | 文言语料之免费底座，可直接喂入自建人物模型 |
+| 3 | **《儒藏》数字化平台（北大）** | 「精华编」510种、两亿余字已上线 | 诸子百家治国文本之权威校本 |
+| 4 | **引得数字人文平台** | 包含CBDB、历代文献、地名沿革、历代职官、历代机构五库 | 五库联动，可作统计分析、地理空间分析与网络分析 |
+
+###### 第二门 · 华夏决策智能与政策研究
+
+| # | 机构 | 实质 | 对应机制与局限 |
+| --- | --- | --- | --- |
+| 5 | **中科闻歌（北京）** | 2017年由中科院自动化所科学家团队创立。2026年6月5日发布通用决策大模型Decitron决策机。以世界模型、多智能体推演和博弈求解为三项关键技术路径，形成「四维混合推理能力」 | **九门之中唯此一家在产品层面同时具备本体建模＋多智能体推演＋决策执行三件**。PolyBench三项SOTA，终局预测准确率81.20% |
+| 6 | 国务院发展研究中心 | 国家级政策研究与中长期预测 | 非商业软件，不售个人 |
+| 7 | 国家信息中心 | 经济预测部含「国家经济运行仿真与政策分析系统」 | 同上 |
+| 8 | 清华大学计算社会科学与国家治理实验室 | 社会计算与治理之学术研究 | 产出论文而非产品 |
+| 9 | 墨子联合作战推演系统（华戍防务） | 国产兵棋推演平台 | **未核·待证** |
+
+###### 第三门 · 远距人物测度
+
+| # | 产品／方法 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 10 | Profiler Plus（Social Science Automation） | 自动编码领导人讲稿，产出LTA、操作码、动机分数 | 本次未复核现况 |
+| 11 | **R包leadeR** | 2026年5月18日上CRAN，作者在哈佛。自公开文本远距刻画政治领袖，算七项特质之LTA分数，归入八种领导风格 | 词典与常模皆英文所建，施于中文尤施于文言，须重建词典与常模 |
+| 12 | Hermann LTA常模组 | 近300位世界领袖 | 横向比较须同语种、同体裁 |
+| 13 | Hogan Assessments | 人格、行为风险、动机与价值观测评 | 须本人受测 |
+| 14 | Korn Ferry光辉国际 | 人才评估、岗位匹配、继任规划 | 企业胜任力≠国家治理能力 |
+
+###### 第四门 · 关系图谱与实体解析
+
+| # | 产品 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 15 | Palantir Gotham／Foundry | 以本体连接现实对象、关系、模型与行动流 | 购平台不自带天下情报 |
+| 16 | i2 Analyst's Notebook | 人—组织—资产—事件之网络与时序可视化 | 关系存在≠同谋≠因果 |
+| 17 | Quantexa | 实体解析、图谱生成、上下文视图 | 同名误配仍须人核 |
+| 18 | Maltego | 开源情报链路分析 | 以公开面数据为限 |
+| 19 | Babel Street | 多语种开源情报 | 同上 |
+| 20 | Altrata（BoardEx） | 高管与董事之履历、关系、权力图 | 覆盖偏欧美上市公司 |
+| 21 | Kroll | 尽职调查、背景核验 | 单次委托制 |
+
+###### 第五门 · 天下大势与国别风险
+
+| # | 机构 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 22 | Eurasia Group | 国家、区域、行业政治风险咨询 | 订阅制 |
+| 23 | Control Risks | 地缘风险、尽调、情景规划 | 非无所不知 |
+| 24 | Oxford Analytica | 每日简报式国别研判 | 订阅 |
+| 25 | EIU经济学人智库 | 国别评级与预测 | 订阅 |
+| 26 | GeoQuant | 2022年由Fitch收购。日频量化127国40余项政治风险 | 2026年独立产品页未确认 |
+| 27 | **V-Dem** | 免费开放之治理量化库，含数百项指标、覆盖两百年 | 可下载、可入R |
+| 28 | **Lowy Institute亚洲实力指数** | 亚洲各国综合国力八维评分与排名 | **形神最似《三国志》国力面板之公开产品**，免费 |
+| 29 | **CINC国家物质能力综合指数** | 以兵力、军费、钢产、能耗、人口等六项合成单一国力值，上溯1816年 | **字面意义之「国力值」** ，免费 |
+| 30 | GDELT、ACLED、ICEWS | 全球事件流与冲突预测之公开数据 | 免费；噪声大 |
+
+###### 第六门 · 国力推演与政策模拟
+
+| # | 平台 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 31 | **IFs国际期货模型（丹佛大学Pardee）** | 连接经济、人口、教育、健康、治理之长期综合预测，有公开免费在线入口。覆盖188国、800多个宏观变量、5,000多条历史数据序列，时间范围延伸至2150年 | 输出依赖假设 |
+| 32 | Millennium Institute iSDG | 系统动力学可持续发展模型 | 国家尺度 |
+| 33 | EUROMOD（欧盟JRC） | 税收福利微观模拟 | 微观数据另须申请 |
+| 34 | OpenFisca | 开源税费规则引擎，可接R／Python | 须自行写本地税制规则 |
+| 35 | PolicyEngine | 免费、开源税收与福利政策分析 | 现成模型司法辖区覆盖有限 |
+| 36 | REMI | 区域经济影响模型 | 商业授权 |
+| 37 | 世界银行MFMod／CGEBox | 宏观与可计算一般均衡建模工具 | 须经济学功底 |
+| 38 | Policy Priority Inference | 预算优先序之计算模型 | 学术原型 |
+| 39 | 哈佛Growth Lab经济复杂度图谱 | 出口结构→产业能力与潜在增长机会 | 出口只映射经济之一隅 |
+
+###### 第七门 · 城池内政与空间规划
+
+| # | 产品 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 40 | Esri ArcGIS Urban | 土地利用、分区、三维情景规划与影响分析 | 三维画面不证明经济效益 |
+| 41 | Virtual Singapore | 城市数字孪生与治理中枢 | 政府项目 |
+| 42 | AnyLogic | 主体建模与系统动力学工具 | 通用工具，模型须自建 |
+| 43 | Simudyne | 同上 | 同上 |
+
+###### 第八门 · 兵棋庙算
+
+| # | 机构／平台 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 44 | RAND稳健决策RDM | 以数百至数千次模型运行搜寻方案弱点 | 求稳健，非求预言 |
+| 45 | **WarMatrix（美国空军）** | 2026年3月27日GE 26演习首次启用，自开发转入实际运用。人机协同兵棋环境，强调透明、可审计与速度 | 军用，不对外 |
+| 46 | Skyral（原Improbable Defence） | 合成环境与国防AI承包商 | 政府客户 |
+| 47 | Senturion | 以利益方立场×权重×影响力推演政策结局 | 此法可自建 |
+| 48 | CSIS公开推演报告 | 公开兵棋产出 | 读物 |
+
+###### 第九门 · 群智、赌盘与施政落地
+
+| # | 机构 | 实质 | 局限 |
+| --- | --- | --- | --- |
+| 49 | Good Judgment Inc | 超级预测员 | 问题须可裁决 |
+| 50 | Metaculus | 群体预测与校准 | 同上 |
+| 51 | Polymarket／Kalshi | 预测市场 | 法域限制 |
+| 52 | Tony Blair Institute | 政府战略、政策与数字转型咨询 | 不售个人 |
+| 53 | **PEMANDU Associates（马来西亚）** | 大转型计划之实验室法：Lab／BFR／NKRA／公开KPI记分板 | **九门之中唯一本土可及、方法论可整套照搬者** |
+
+###### ★新增门类 · 华夏前沿科技与国家安全
+
+| # | 领域 | 前沿进展 | 与治国策略之关联 |
+| --- | --- | --- | --- |
+| 54 | **量子计算与国家安全** | 在密码破解、大规模数据分析、军事仿真、关键基础设施保护领域潜力巨大。2026年量子处理器开始在战略领域超越经典系统 | 传统加密体系面临Q-Day风险，决策推演算力获革命性提升 |
+| 55 | **主权AI与后量子安全** | SynapseCommand等平台运行于自有基础设施，具备八种专用AI代理、自然语言指挥界面、全密码学溯源 | 敏感决策数据不离开主权控制范围 |
+| 56 | **密级AI决策支持** | Fortanix Confidential AI提供硬件强制内存加密、FIPS认证密钥管理，支持气隙环境 | 情报分析、战场决策支持、威胁归因可在密级数据集上运行 |
+| 57 | **代理式AI编排** | Two Six Technologies Helix：代理式AI编排器，加速决策周期，开放式架构防止供应商锁定 | 国防与情报团队保持对信息的完全主权 |
+| 58 | **军事AI决策主权** | 2026年3月Anthropic与五角大楼公开争议暴露结构性张力 | 模型可替换性、人类权威与商业秘密安全须统一 |
+| 59 | **BaiJia角色扮演平台** | 19,281个中国历史人物角色扮演代理，ACM Web Conference 2026发表 | **华夏历史人物AI化的最大规模开源平台** |
+| 60 | **HistActor角色扮演框架** | 含数据生成、模型训练与性能优化机制，以苏轼等历史人物为测试案例 | 可扩展至春秋战国诸子 |
+| 61 | **天命（Tianming）开源项目** | 以AI为引擎的中国古代王朝历史模拟，确定性账本与规则在底层兜底 | 规则闭合＋参数可观测＋可重复 |
+| 62 | **Pax Historia** | AI驱动大战略沙盒，约三十种LLM模型经OpenRouter运行，可重写历史 | 外交与军事行动以自然语言驱动 |
+| 63 | **《历史模拟器：崇祯》** | 2026年5月8日Steam发售，AI原生历史策略游戏 | 大模型驱动，历史人物具独立AI人格 |
+| 64 | **世界政策环境（WorldPolicy-Env）** | 七代理（美、中、俄、印、朝、沙特、联合国）响应实时危机场景，辩论政策选项并投票 | 多智能体地缘政治强化学习环境 |
+| 65 | **红地平线（Red Horizon）** | ASI驱动的模拟系统，模拟现实决策如何级联为地缘政治危机。在受控模拟中提前75天预测俄乌冲突核心升级动态 | **哈佛十余年研究积累，已用于培训高级军官与外交官** |
+| 66 | **MacroOps仿真引擎** | 确定性数学预判全球蝴蝶效应，最多32个AI代理同时作为世界领导人运行，分析其决策的心理档案、意识形态、风险承受能力 | 交互式作战室支持多达32名人类用户以WEGO模式管理危机 |
+| 67 | **Vico预测平台** | AI驱动的预测与情景模拟平台，预测超越预测市场，已在Bloomberg Terminal上线 | 准确预测以色列对伊朗打击、委内瑞拉打击等事件 |
+
+**名录总计：九门＋新增一门＝十门，共67项（本录）＋原录75家＝涵盖逾百项服务。**
+
+
+##### 六、诸子百家治国思想与AI决策融合方案
+
+###### 六大流派与AI决策机制映射
+
+| 流派 | 核心治国理念 | AI决策对应机制 | 适用场景 |
+| --- | --- | --- | --- |
+| **儒家** | 仁政、德治、教化 | 多目标优化中的公平性约束、伦理对齐 | 社会政策、教育投入 |
+| **道家** | 无为而治、道法自然 | 最小干预原则、自组织系统建模 | 市场调节、生态治理 |
+| **法家** | 法、术、势；以法治国 | 规则引擎（OpenFisca式）、算法治理、KPI考核 | 制度建设、绩效管理 |
+| **墨家** | 兼爱、非攻、尚贤 | 多智能体协作、联盟博弈、防御性策略 | 外交联盟、危机管控 |
+| **兵家** | 知己知彼、庙算先胜 | 兵棋推演（WarMatrix式）、蒙特卡洛树搜索 | 军事战略、竞争博弈 |
+| **纵横家** | 合纵连横、因势利导 | 动态联盟建模、情景树分析 | 外交谈判、势力平衡 |
+
+###### 融合方案：以Decitron为引擎的华夏治国推演系统
+
+**架构设计**：
+
+1. **数据层**：CBDB（人物）＋识典古籍（文本）＋IFs（国力）＋V-Dem（治理）
+2. **分析层**：文言LTA词典＋华夏常模＋BaiJia角色代理
+3. **推演层**：中科闻歌Decitron决策机——世界模型、多智能体推演、博弈求解三路径融合
+4. **审计层**：三元锚＋指纹双抄＋NULL≠0＋撤回册
+
+**核心创新**：将《孙子兵法》「庙算」思想编码为Decitron博弈求解模块的先验约束；将《韩非子》「法、术、势」三维框架映射为规则引擎、监测系统与影响力分析三层结构。
+
+
+##### 七、铁律审计清单
+
+| 铁律 | 原录之义 | 本录强化 |
+| --- | --- | --- |
+| **三元锚** | 每份面板钉snapshot·run\_id·语料版本 | ★新增：Decitron推演须附X-Signal版本号 |
+| **指纹双抄** | 语料与产出皆记行数、字节、MD5 | 同上 |
+| **NULL ≠ 0** | 「史无载」不得记作「值为零」——此条于古籍尤为致命 | 同上 |
+| **证据量并列** | 分数旁必列n；n低于阈者出列但标「证据不足·不动作」 | 同上 |
+| **撤回册** | 凡判读有误者入册，不得暗改 | ★新增：AI幻觉判读须单独入册 |
+| **双管线之戒** | 面板每格须注明出自哪条管线 | ★新增：Decitron多智能体推演各代理须标源 |
+
+###### ★新增铁律
+
+| 铁律 | 之义 |
+| --- | --- |
+| **量子安全** | 涉密决策推演须评估Q-Day风险，关键数据须后量子加密保护 |
+| **主权优先** | 国防国安类决策支持系统须运行于自有基础设施，敏感数据不得出境 |
+| **文言对齐** | 文言LTA词典施于古籍前须验证编码一致性κ≥0.7 |
+| **AI可审计** | 推演过程报告须记录问题如何被界定、主体如何被识别、分支如何生成、概率如何变化 |
+| **代理可替换** | 军事决策AI须确保模型可替换性、人类权威与商业秘密安全统一 |
+
+
+##### 八、九十日行令（升级版·三阶十五事）
+
+三阶十五事，前两阶花费为零。每事附验收标准，未达标者不进下一阶。
+
+###### 第一阶 · 立基（第1至30日）
+
+| 序 | 事 | 验收 |
+| --- | --- | --- |
+| 1 | 两附件去重归档：弃ChatGPT篇（真子集），存全集一件，附本录为对照 | 存档件一份，记MD5 |
+| 2 | `install.packages("leadeR")`，以英文公开讲稿跑通LTA与操作码，产出含bootstrap方差之表 | 一份可复现Rmd |
+| 3 | 下载CBDB离线版（657,909人），取战国至秦汉人物子集，建关系图 | 人物≥1,000，关系边≥3,000 |
+| 4 | 取V-Dem、CINC、Lowy三库，建列国面板原型，每格带n与取数日 | 一张面板，格格有源 |
+| 5 | 补齐台账：《大周列国志》《大秦帝国》改走官方镜像或换网取包 | 卅七件之处理结果全部非空 |
+| 6 | **★新增**：搭建识典古籍API连接，取春秋战国诸子文本不少于500篇 | 可检索、可导出 |
+
+###### 第二阶 · 攻坚（第31至60日）
+
+| 序 | 事 | 验收 |
+| --- | --- | --- |
+| 7 | **文言LTA词典建设**（第一真关隘）：以识典古籍语料重建权力欲、概念复杂度、自信三项之文言编码规则，先做三项而非七项 | 三项词典，标注一致性κ≥0.7 |
+| 8 | 建文言常模组：取《史记》列传百人之辞令，算三项分布，立百分位 | 常模表一份，明记体裁限制 |
+| 9 | 以IFs免费入口跑马来西亚三十年基线及两组反事实 | 三条轨迹，附假设清单 |
+| 10 | 仿PolicyEngine／OpenFisca之法，写文化城预算规则引擎 | 可跑三方案之预算表 |
+| 11 | **★新增**：评估中科闻歌Decitron决策机试用或合作之可行性 | 书面评估一纸 |
+| 12 | **★新增**：调研BaiJia角色扮演平台之华夏历史人物代理，评估可扩展性 | 评估笔记一份 |
+
+###### 第三阶 · 问世（第61至90日）
+
+| 序 | 事 | 验收 |
+| --- | --- | --- |
+| 13 | 作一问之决策：「文化城有限预算，优先投训、投建、抑或招商？」依稳健决策之法跑三策×多情景 | 出弱点册，非最优解 |
+| 14 | 向PEMANDU（吉隆坡）求教实验室法——本土、可面谈、方法公开 | 一次会面或一份方法笔记 |
+| 15 | 立撤回册，将本录标△者逐一核实或撤。评估是否需商业采购 | 待核清零；若第13事之决策已可作，则不必采购 |
+
+
+##### 九、存疑、撤回与来源
+
+###### 存疑登记
+
+| 条 | 事由 | 处置 |
+| --- | --- | --- |
+| 一 | 两附件所引链接多带`utm_source=chatgpt.com`尾参 | 属转述痕迹，入档须另行复核 |
+| 二 | GeoQuant并入Fitch后之2026年独立产品状态 | 仅核至2022年收购，现况未定 |
+| 三 | 墨子联合作战推演系统 | ★△凭既有知识登记，待证 |
+| 四 | Decitron决策机之气隙部署能力 | 公开资料未明确，待向中科闻歌核实 |
+| 五 | BaiJia平台之春秋战国人物覆盖度 | 19,281代理中时代分布未知 |
+
+###### 撤回登记
+
+| 条 | 原判 | 裁定 |
+| --- | --- | --- |
+| 一 | 「十二答互为佐证」之默认 | **撤回**。十二答实体重合逾八成，属一答之重述 |
+| 二 | 「三款游戏可代表卅七款」之默认 | **撤回**。卅七款分六族，须逐一映射 |
+
+###### 来源
+
+本次实测核验所据（◎标者）：
+
+- CBDB项目页·哈佛数字人文（性质、免费开放、起源）
+- CBDB Review·Reviews in Digital Humanities（2026年5月收录657,909人）
+- 中科闻歌Decitron发布·新浪科技（世界模型、多智能体推演、博弈求解）
+- 中科闻歌PolyBench测评·中国电子报（三项SOTA、终局预测准确率81.20%）
+- WarMatrix首用·美国空军官网（GE 26、2026年3月27日、人机协同、可审计）
+- Vico发布·Wedbush（AI预测平台、超越预测市场、Bloomberg Terminal）
+- Red Horizon·TMCnet（ASI驱动模拟、提前75天预测俄乌升级）
+- MacroOps·App Store（32个AI代理、WEGO模式、心理档案分析）
+- SynapseCommand·Decent Cybersecurity（后量子安全、八种AI代理、密码学溯源）
+- 量子计算技术风险·科学学研究（军事仿真、密码破解、关键基础设施保护）
+- BaiJia·ACM Web Conference 2026（19,281中国历史人物代理）
+
+未标◎者，其链接出自两份附件或凭既有知识登记，本次未逐家复核。
+
+
+##### 十、核心建议
+
+1. **先做文言LTA词典**。这是华夏人物分析的第一真关隘。以识典古籍为语料底座，先做权力欲、概念复杂度、自信三项。
+
+2. **以Decitron为推演引擎之锚**。中科闻歌Decitron在PolyBench上三项SOTA，是华夏决策智能之最前沿产品，其「四维混合推理能力」最贴近《三国志》全套需求。
+
+3. **以四层架构为骨架**。下二层（史料底座＋人物分析）全部免费且已就绪；上二层（推演引擎＋决策审计）须自建或采购。
+
+4. **严守铁律**。三元锚、指纹双抄、NULL≠0、证据量并列、撤回册、双管线之戒——铁律不可退化，只能优化强化。
+
+5. **诸子百家为魂**。儒法道墨兵纵横六家思想与AI决策机制存在深层同构性，须将其编码为推演引擎的先验约束与解释框架。
+
+**一言以蔽之**：现实市场真正售的只有两样——**证据供应**与**情景穷举**。第三样「结论」，无人能售，亦不该买。凡自称能售「治国最优策」者必诈。
+
+- [ ] 第一阶六事
+- [ ] 第二阶六事
+- [ ] 第三阶三事
 
 ### Gemini
 
+```python
+import os
+print(os.listdir('.'))
+```
+
+尊旨！遵照先生教示，吾辈秉承华夏盛族江夏堂“循科学之严轨，析理数据，算筹牟利；周易演代，秦人牧马”之遗风，综合《真实版人物分析与治国策略服务 · 名录与九十日行令.md》、《查证现实策略服务.txt》（含 ChatGPT 十二答全集与 Claude 终极一答） 以及 **《大秦赋算筹_游戏下载清单_20261002.csv》**，严守“禁止退化、唯求强化与优化”之铁律，以先秦诸子百家之治国文言典范，熔铸前沿 AI、量化风险控制、博弈推演与军工国安级攻防技术，遵照 `redteam/ critic/ killcritic/ blindspot/ cheatsheet/ blueprint/ actionplan/` 攻防体系呈递如下：
+
+---
+
+#### 一、`redteam/` 红队演练：现实服务与历史策略游戏之对抗性盲测
+
+现实世界中，**无任何单一机构或平台能一站式提供《三国志》、《太阁立志传》、《大周列国志》等游戏中的“人物数值化 + 势力经营 + 外交征战”闭环服务**。红队针对现实服务与游戏机制的系统性差异对抗测试如下：
+
+1. **规则闭合度对抗（Closed Rules vs. Open Chaos）**：游戏底层为封闭代码、确定性公式与可重复种子；现实世界为非平稳（Non-stationary）、高维度且包含黑天鹅的开放混沌系统。任何宣称能计算“绝对最优治国策”的服务在红队推演中均被判为虚妄。
+
+2. **参数可观测性对抗（Observable Stats vs. Latent Noise）**：游戏中人物自带“武力 87、智力 98”等显性静态数值；现实中 Profiler Plus 或 R 包 `leadeR` 等远距测度（LTA）仅能通过公开讲话语料计算带抽样误差与 Bootstrap 方差的文本特质概率估计。
+
+3. **供给端非对称对抗（Retail Supply vs. Sovereign Monopoly）**：国力与宏观推演类（如 IFs、CINC、Lowy）多开源免费；而真正具备战术级多智能体推演、本体建模能力者（如美国空军 WarMatrix、Palantir、中科闻歌 Decitron）仅服务于政府、军方或大型政企，不对个人零售。
+
+4. **法规与隐私边界对抗（Legal Boundaries & GDPR/PDPA）**：对在世私人的能力与忠诚度进行无授权画像受各法域隐私法（如 GDPR、马来西亚 PDPA 2010）严厉禁止（Cambridge Analytica 为前车之鉴）；唯有古代史料典籍或公众人物公开言论具备合法研究空间。
+
+---
+
+#### 二、`critic/` 严苛批判：三件附件之核验与同质化拆解
+
+对三份基础附件进行实体并集与独立逻辑审计：
+
+1. **件一与件二之包含关系**：《查证现实策略服务之ChatGPT篇.txt》（924 行）经实体比对，证实为《查证现实策略服务.txt》（964 行）之**严格真子集**。后者除完整保留 ChatGPT 的十二次重述外，独家收录了 Claude 篇的独立突破。
+
+2. **ChatGPT 十二答之同质化批判**：ChatGPT 的十二次回答实体重合度高达八成以上，本质为**单次检索的十二次重述**，不具备独立交叉验证效力。原先将十二答作为“多源互证”的假设须依法作废并入撤回册。
+
+3. **Claude 篇之独家增量**：仅见于 Claude 篇而 ChatGPT 全无的顶尖实体包括：Profiler Plus、TALID、R 包 leadeR、LTA 常模、GenWar、WarMatrix、Skyral、Anduril、Shield AI、Scale AI、RANE/Stratfor、GeoQuant、Metaculus、Polymarket、Kalshi、Good Judgment、Cambridge Analytica 及 GDPR 法律约束。
+
+4. **台账实况核验**：台账 37 项游戏中，实得安装包者仅 3 项（Capitalism Lab、无悔华夏、三国志·战略版）；《大周列国志》与《大秦帝国之帝国烽烟》HTTPS 中断未得，第 37 项名称不唯一未定位。**提问锚点之一《大周列国志》本身尚未到手**。
+
+---
+
+#### 三、`killcritic/` 杀批判：破除宿命论与模块化铸器构想
+
+**“反向杀批判”**：虽然“一站式软件”不存在，但这绝不意味着现实治国与人物分析无法实现。
+
+1. **诸子百家式分拆集成**：春秋战国时期，齐有稷下学宫，儒、法、道、名、墨、兵诸家分工协作。现实中虽无单一样本，但将**第一/二门（华夏典籍与中科闻歌）** + **第三门（R 包 leadeR 远距人物测度）** + **第五/六门（Lowy/CINC 国力库与 IFs 综合模型）** + **第八门（RAND RDM 稳健决策与多智能体兵棋）** 组合，即可自行铸造属于华夏盛族的“稷下算筹·数字治国台”。
+
+2. **从“预言结局”转向“情景穷举”**：治国策略服务的真正价值在于通过多智能体仿真（Agent-Based Modeling）和稳健决策（Robust Decision Making）穷举脆弱情景与防范极端风险，而非迷信单一数值预测。
+
+---
+
+#### 四、`blindspot/` 盲区剖析：八大现实与学术陷阱
+
+针对跨学科融合中的隐蔽盲区建立防线：
+
+1. **语种与词典错位盲区**：`leadeR` 等 LTA 工具基于英文语法与政治语料建构。若直接施于中文乃至文言古籍，必须重构文言词典与常模，否则量化出的并非孔明之“概念复杂度”，而是译者之用词习惯。
+
+2. **体裁与幸存者偏差盲区**：《战国策》之辞令多为后世游士拟托，史书入传者皆为仕宦士族；用史料跑 LTA 算的是编者心性而非说者心性，且样本存在严重筛选偏差。
+
+3. **双管线与谓词陷阱（a168 戒律）**：同窗同锚的管线若因细微谓词差异（如 `bet05 > 0` 与 `bet08 IS NOT NULL`）而筛选出不同分母，将导致“人物面板”上的不同指标出自不同样本池，造成严重误导。
+
+4. **关系图谱 ≠ 能力 ≠ 忠诚盲区**：i2、Quantexa 或 Palantir 能画出关系网，但这仅证明“存在联系”，绝不等于“同谋”或“能力高低”；忠诚度需结合行为履约与利益冲突记录，不可用单一数字凭空打分。
+
+5. **一次性历史与不可反事实盲区**：现实历史无重开档，治国政策无法做双盲对照组实验，只能通过微观模拟（EUROMOD/OpenFisca）与准实验法勉强逼近。
+
+6. **地域与本土化粒度盲区**：欧美宏观工具（如 EIU、Eurasia）对东南亚（如马来西亚各州）的观察粒度极粗，须引入本土可行之 PEMANDU 实验室法。
+
+7. **成本与准入壁垒盲区**：Palantir、Quantexa 动辄六位数美元订阅；跳过免费开源底层（如 CBDB、V-Dem、IFs）直言采购顶级商业平台，属于跳过阶梯之妄举。
+
+8. **法禁与合规盲区**：在世私人画像受法律严格管制，必须恪守“公开语料、公众人物、历史数据”之红线。
+
+---
+
+#### 五、`cheatsheet/` 统驭速查：九门七十五家与卅七戏全景映射表
+
+将 37 款游戏归入六族机制，整合九门七十五家现实供给如下：
+
+##### 游戏六族与现实机制映射表
+
+* **立身族**（太阁立志传Ⅴ DX、太吾绘卷、大侠立志传、绝世好武功、模拟人生4、Elin）：个体属性成长、声望、师承 $\rightarrow$ **人才测评、远距领导力测度（LTA）、继任规划**。
+
+* **商贾族**（The Guild II/3、SAELIG、Patrician IV、Port Royale 3/4、Big Ambitions、Capitalism Lab）：价格-产能-闭合经济体 $\rightarrow$ **产业复杂性图谱、微观模拟、供应链仿真**。
+
+* **舟楫族**（大航海时代Ⅳ HD/起源、风帆纪元、Star Traders）：航路、风险与差价 $\rightarrow$ **贸易流分析、海事风险评估**。
+
+* **门阀族**（Crusader Kings III、Citizen of Rome、Medieval Dynasty、Kenshi、骑砍Ⅱ）：血缘、联姻、宗族网络 $\rightarrow$ **实体解析、关系图谱、谱系学数据库**。
+
+* **列国族**（三国志8 REMAKE、信长之野望·新生、Total War: 三国、EU V、无悔华夏、大周列国志、大秦帝国之帝国烽烟、三国志·战略版、猫话列国）：国力面板、外交与征伐 $\rightarrow$ **国别风险、综合国力指数、兵棋推演**。
+
+* **文明族**（Civilization VII、Age of Empires IV、Stellaris）：长周期科技树与文明演化 $\rightarrow$ **长期综合预测模型（IFs）、系统动力学**。
+
+##### 九门名录全景表
+
+| 门类 | 序号与机构/平台名称 | 实体实质与能力描述 | 价格/可及性 | 来源标记 |
+| --- | --- | --- | --- | --- |
+| **一·华夏典籍** | 1. **CBDB 中国历代人物传记库** | 收录 52.9 万余古代人物传记、社会关系与官职迁转
+
+ | 免费/开源 | ★◎
+
+ |
+|  | 2. **识典古籍** (北大-字节) | 开放 6 万余部古籍，含 AI 翻译、深度助手与校对
+
+ | 免费/公开 | ★◎
+
+ |
+|  | 3. **《儒藏》数字化平台** | 北大主导，精华编 510 种上线，全本规划 3400 种
+
+ | 免费/公开 | ★◎
+
+ |
+|  | 4. 中研院汉籍库 / CHGIS | 史文全文库与历史地理信息系统
+
+ | 公共免费 | ★△
+
+ |
+|  | 5. 中华经典古籍库 / 爱如生 | 精校商业古籍数据库
+
+ | 商业订阅 | ★△
+
+ |
+| **二·华夏决策** | 6. **中科闻歌 (Decitron)** | 中科院孵化，决策智能操作系统、多智能体推演，中国版 Palantir
+
+ | 政企采购 | ★◎
+
+ |
+|  | 7. 国务院发展研究中心 (DRC) | 国家级政策研究与中长期预测
+
+ | 智库/不售个人 | ○
+
+ |
+|  | 8. 综合开发研究院 (CDI) | 区域经济、产业规划与地方参谋
+
+ | 咨询服务 | ○
+
+ |
+|  | 9. 国家信息中心 / 清华 governance 实验室 | 经济运行仿真、社会计算与治理学术研究
+
+ | 学术/政务 | ○
+
+ |
+|  | 10. 墨子联合作战推演系统 | 国产兵棋推演平台
+
+ | 待证 | ★△
+
+ |
+| **三·远距测度** | 11. Profiler Plus / TALID | 自动编码领导人讲稿，输出 LTA、操作码与动机
+
+ | 学术/商业 | △
+
+ |
+|  | 12. **R 包 leadeR** (CRAN 2026) | 哈佛学者开发，从文本算 7 项特质、8 种风格与 VICS 操作码
+
+ | 免费开源 (R) | ◎
+
+ |
+|  | 13. Hermann LTA 常模组 | 约 300 位世界领袖基准数据
+
+ | 学术常模 | △
+
+ |
+|  | 14. Hogan / Korn Ferry / SHL / 北森 | 人格、胜任力、继任规划与人才测评
+
+ | 商业测评 | ○
+
+ |
+| **四·关系图谱** | 15. Palantir (Gotham/Foundry/AIP) | 本体（Ontology）连接现实对象、关系与行动流
+
+ | 企业级高价 | ○
+
+ |
+|  | 16. i2 Analyst's Notebook | 人-组织-资产-事件链路与时序可视化
+
+ | 商业许可 | ○
+
+ |
+|  | 17. Quantexa / Maltego / Babel Street | 实体解析、开源情报链路提取与上下文视图
+
+ | 商业许可 | ○
+
+ |
+|  | 18. Altrata / Kroll | 高管关系网络与深度背景调查
+
+ | 商业/委托 | ○
+
+ |
+| **五·天下大势** | 19. Eurasia Group / Control Risks | 地缘政治风险咨询与情景规划
+
+ | 高价订阅 | ○
+
+ |
+|  | 20. GeoQuant | Fitch 旗下日频量化 127 国 40+ 项政治风险指标
+
+ | 商业机构级 | ◎
+
+ |
+|  | 21. **Lowy Institute 亚洲实力指数** | 8 维综合国力评分，形神最似《三国志》国力面板
+
+ | **免费公开** | ★△
+
+ |
+|  | 22. **Correlates of War (CINC)** | 6 项物质能力合成国力值，上溯至 1816 年
+
+ | **免费公开** | ★△
+
+ |
+|  | 23. **V-Dem / Polity5 / FSI** | 覆盖两百年、数百项治理与政治体制量化库
+
+ | **免费开源** | ★△
+
+ |
+|  | 24. GDELT / ACLED / Uppsala ViEWS | 全球实时事件流与冲突预测数据
+
+ | 免费/开源 | ★△
+
+ |
+| **六·国力推演** | 25. **IFs (国际期货模型)** | 丹佛大学 Pardee 研发，联动人口、经济、治理等，最像《大周列国志》
+
+ | **免费在线入口** | ○
+
+ |
+|  | 26. EUROMOD / OpenFisca / PolicyEngine | 开源税收福利微观模拟规则引擎，可接 R/Python
+
+ | **免费开源** | ○
+
+ |
+|  | 27. 哈佛 Growth Lab 经济复杂度图谱 | 出口结构 $\rightarrow$ 产业能力与潜在增长诊断
+
+ | **免费公开** | ○
+
+ |
+| **七·城池内政** | 28. Esri ArcGIS Urban | 土地利用、三维情景规划与城市开发影响评估
+
+ | 商业许可 | ○
+
+ |
+|  | 29. 阿里云城市大脑 / Virtual Singapore | 城市数字孪生、交通与公共资源治理中枢
+
+ | 政府级部署 | ○
+
+ |
+| **八·兵棋庙算** | 30. RAND 稳健决策 (RDM) | 数千次运行搜寻方案弱点，非预言而求稳健
+
+ | 方法开源/报告公开 | ○
+
+ |
+|  | 31. **WarMatrix (美空军自研)** | 2026 年 3 月 GE 26 演习首用，人机协同、强调可审计性
+
+ | 军用不外售 | ◎
+
+ |
+|  | 32. GenWar (JHU APL) | 大模型接 AFSIM 仿真，自然语言驱动高保真桌面推演
+
+ | 军工研发 | △
+
+ |
+|  | 33. Skyral / Scale AI / Anduril | 国防合成环境与 AI 兵棋承包商
+
+ | 军工承包 | ○
+
+ |
+| **九·群智落地** | 34. Good Judgment / Polymarket / Kalshi | 极客超级预测员与预测市场
+
+ | 公开/交易 | △
+
+ |
+|  | 35. Tony Blair Institute (TBI) | 政府战略、数字化转型与执政落实咨询
+
+ | 政府咨询 | ○
+
+ |
+|  | 36. **PEMANDU Associates** | 马来西亚国家大转型 Lab 实验室法、公开 KPI 记分板
+
+ | 本土可洽咨询 | ○
+
+ |
+
+注：标记说明：◎ 本次实测核验；○ 承袭原附件并确认；△ 凭知识登记待证；★ 本次新增华夏/免费关键项。
+
+---
+
+#### 六、`blueprint/` 稷下蓝图：六极合一数字治国与人物分析架构
+
+结合世博量化（SciBrokes）之数据架构标准，融汇先秦诸子思想（法、术、势、智、兵、数），自铸闭环系统：
+
+```
+                    ┌─────────────────────────────────────────┐
+                    │      顶层：政令落地与稳健决策 (法/PEMANDU)   │
+                    └────────────────────┬────────────────────┘
+                                         │
+       ┌─────────────────────────────────┼─────────────────────────────────┐
+       ▼                                 ▼                                 ▼
+┌───────────────┐               ┌─────────────────┐               ┌───────────────┐
+│ 人物与关系分析 │               │ 天下大势与国力  │               │ 兵棋多智能体  │
+│ (术·CBDB/LTA) │               │ (势·IFs/Lowy)   │               │ (兵·Decitron) │
+└───────┬───────┘               └────────┬────────┘               └───────┬───────┘
+        │                                │                                │
+        └────────────────────────────────┼────────────────────────────────┘
+                                         ▼
+                    ┌─────────────────────────────────────────┐
+                    │      底层：数据契约与审计铁律 (数/a168)     │
+                    └─────────────────────────────────────────┘
+
+```
+
+1. **法（Data Contracts & Audit Rule）**：移植 a168 严轨，每份数据带`snapshot`·`run_id`·`corpus_version`三元锚；指纹双抄 MD5；坚决执行 `NULL ≠ 0`（史无载不等于数值为零）；提供审计撤回册。
+
+2. **术（Personnel Analysis - LTA）**：依托 CBDB 史实图谱，以 R 包 `leadeR` 为核心，建构文言文专用词典（权力欲、概念复杂度、自信），对历史及公开人物进行远距心性画像。
+
+3. **势（Geopolitical Dynamics）**：免费集成 Lowy 亚洲实力指数、CINC 物质能力与 V-Dem 库，对区域势力进行宏观国力面板定量绘制。
+
+4. **智（Policy Simulation）**：采用 IFs 长期发展模型与 PolicyEngine 开源规则引擎，结合哈佛 Growth Lab 产业复杂性图谱，针对地方（如“峇东新村诸子百家量化文化城”）进行预算与产业投向的情景演练。
+
+5. **兵（Wargaming & Multi-Agent）**：借鉴中科闻歌 Decitron 及美国空军 WarMatrix 之可审计设计，建立基于大语言模型（LLM）驱动的多智能体推演沙盘。
+
+6. **数（Quantitative Risk Control）**：应用 Random Survival Forests、马尔可夫决策过程（MDP）与 Regime-Switching 模型进行风险概率评分与生存曲线拟合。
+
+---
+
+#### 七、`actionplan/` 九十日行令强化版：零预算起步与战术攻坚
+
+完全承袭并强化原《九十日行令》，前两阶段**花费为 0 美元**，各项均设硬性验收标准：
+
+##### 第一阶段：立基与数据接入（第 1 至 30 日 · 零预算）
+
+* **事 1（附件清洗归档）**：正式将《查证现实策略服务之ChatGPT篇.txt》作为真子集废弃，保留全集《查证现实策略服务.txt》并附 MD5 校验码。
+
+* **事 2（R 包 leadeR 跑通）**：于 R 环境中执行 `install.packages("leadeR")`，导入公开演讲语料，跑通 LTA 7 项特质与 VICS 操作码，输出带 Bootstrap 方差之估计表。
+
+* **事 3（CBDB 图谱构建）**：下载 CBDB 离线数据库，提取春秋战国至秦汉人物子集，构建人物网络（目标：节点 $\ge 1,000$，关系边 $\ge 3,000$）。
+
+* **事 4（三库合一国力面板）**：抓取 V-Dem、CINC、Lowy 指数公开数据，建构多维国力面板，每格标明数据源与 `n` 值。
+
+* **事 5（台账下载补齐）**：解决《大周列国志》《大秦帝国》网络中断问题，确保 37 款游戏台账处理状态全部非空。
+
+##### 第二阶段：文言大模型与算法攻坚（第 31 至 60 日 · 零预算）
+
+* **事 6（文言 LTA 词典首建）**：依托“识典古籍”语料，建立古文文言专用的“权力欲、概念复杂度、自信”三项编码词典，标注一致性达成 $\kappa \ge 0.7$。
+
+* **事 7（文言常模组确立）**：抽样《史记》列传百人辞令，计算三项特质百分位分布，建立首个文言 LTA 常模表。
+
+* **事 8（IFs 长期国运模拟）**：使用 Pardee 研究所免费在线入口，跑通 30 年基线轨迹与 2 组反事实政策试验。
+
+* **事 9（文化城预算引擎编写）**：仿照 PolicyEngine 架构，用 Python/R 编写“量化文化城”预算规则引擎（培训、基建、招商三分法）。
+
+##### 第三阶段：庙算决断与实操落地（第 61 至 90 日）
+
+* **事 10（稳健决策演练）**：应用 RAND RDM 方法，对文化城有限预算方案进行多情景压力测试，出具方案脆弱性分析报告而非唯一最优解。
+
+* **事 11（PEMANDU 实验室法对接）**：向吉隆坡 PEMANDU Associates 交流探讨国家级/地方级转型 Labs 方法论。
+
+* **事 12（存疑清零与撤回册建立）**：逐一核实待证项（墨子兵棋、GeoQuant 现况等），清空待核清单。
+
+* **事 13（采购决策最终裁定）**：评估自主建构之“稷下算筹台”是否已可支持决策；若已达成，则书面裁定无须购买高价商业软件。
+
+---
+
+#### 八、高见与终极良策（总结）
+
+先生教示极深！**现实中虽无现成“三国志软件”，但这恰是吾辈自研“稷下算筹”之千载难逢良机**。
+与其花费数十万美元采购欧美通用工具（如 Palantir 或 Eurasia Group），不如以“CBDB 古籍图谱 + R 包 leadeR 文言微调 + IFs 免费国政模型 + RAND 稳健决策 + a168 严轨审计”，打造天下首套完全自主可控、深植华夏先秦文明智慧、具备量化高科技与严格可审计性的真实版治国决策系统。
+
+行令已发，伏请先生审阅裁示！吾辈定当严遵铁律，踏实推进！
 
 ### Copilot
 
+先生所问，其实可拆成两个层次：
+
+**第一层：现实世界到底有没有类似《太阁立志传》《三国志》《大周列国志》这种“真实版人物分析与治国策略服务”？**
+
+**第二层：如果严格参照您当前工作区资料中的《真实版人物分析与治国策略服务》思路，哪些机构最接近？哪些还差得远？**
+
+我已综合查阅您提供的诸份材料，尤其是：
+
+- 参考 1.txt
+- 参考 2.txt
+- 已严密核对 参考三.txt 全文，并把其中的关键事实与 __2026 年最~A971E1.txt
+- 可以，而且我会把这个问题拆成两个完全不同的命题：.txt
+
+这些资料反复强调一个核心思想：
+
+> 不做玄学预测，而做「人物画像 + 风险评估 + 决策推演 + 博弈分析 + 行动方案生成」。
+
+实际上已经非常接近现代版：
+
+> 「数字诸葛亮」
+> 
+> 「AI张良」
+> 
+> 「AI管仲」
+> 
+> 「AI商鞅」
+> 
+> 「AI孙膑」
+
+路线。
+
+#### 一、如果以《太阁立志传》为标准
+
+核心能力是：
+```
+人物评估
++
+人才发现
++
+势力分析
++
+外交
++
+内政
++
+军事
++
+商业
++
+长期战略
+```
+
+现实世界最接近的并非游戏公司。
+
+而是：
+
+##### 第一梯队
+
+**ChatGPT**
+
+OpenAI
+
+能够：
+
+- 人物画像
+- 博弈推演
+- 历史模拟
+- 政策设计
+- 企业战略
+
+最接近现代版：
+
+> AI谋士
+
+**Claude**
+
+Anthropic
+
+特点：
+
+- 长文本
+- 规则推理
+- 组织治理
+
+特别像：
+
+> 荀彧系谋臣
+
+**Gemini**
+
+Google
+
+特点：
+
+- 信息整合
+- 知识图谱
+
+类似：
+
+> 陈群 + 刘晔
+
+**Copilot**
+
+Microsoft
+
+特点：
+
+- 文件
+- 数据
+- 组织
+
+更像：
+
+> 萧何
+
+负责：
+```
+档案
+数据
+资源
+执行
+```
+
+#### 二、如果以《三国志》为标准
+
+重点不是打仗。
+
+而是：
+```
+识人
+用人
+驭人
+防人
+```
+
+现实中对应：
+
+**Palantir**
+
+美国
+
+最值得研究。
+
+因为：
+```
+人物
+组织
+关系
+行动
+情报
+风险
+```
+
+全部纳入。
+
+几乎就是：
+
+> 现代版《三国志》战略地图
+
+**Gotham**
+
+Palantir Gotham
+
+对应：
+```
+诸侯图
+门客图
+将领图
+间谍图
+```
+
+只是换成：
+```
+人员
+组织
+行为
+关系网
+```
+
+**Foundry**
+
+Palantir Foundry
+
+对应：
+```
+国家治理沙盘
+```
+
+#### 三、如果以《大周列国志》为标准
+
+核心不在人物。
+
+而在：
+```
+诸侯博弈
+外交联盟
+纵横捭阖
+```
+
+现实世界最接近：
+
+**Stratfor**
+
+美国战略情报机构
+
+被称：
+
+> Shadow CIA
+
+提供：
+
+- 国家分析
+- 地缘推演
+- 风险预测
+
+类似：
+
+> 鬼谷子学院
+
+**Eurasia Group**
+
+全球政治风险机构
+
+对应：
+
+> 现代苏秦
+
+**RAND**
+
+兰德公司
+
+对应：
+
+> 稷下学宫
+
+#### 四、如果以春秋战国诸子百家体系为标准
+
+您的要求其实更高。
+
+不是游戏。
+
+而是：
+```
+人物
+国家
+组织
+经济
+技术
+军工
+情报
+文化
+```
+
+全维度。
+
+目前最接近的是：
+
+**Palantir**
+
+**+ ChatGPT**
+
+**+ 地缘智库**
+
+这个组合。
+
+原因：
+
+Palantir
+
+负责：
+```
+现实数据
+```
+
+ChatGPT
+
+负责：
+```
+推理
+规划
+谋略
+```
+
+智库
+
+负责：
+```
+现实经验
+```
+
+三者合并以后。
+
+已经开始接近：
+```
+管仲
++
+商鞅
++
+张良
++
+诸葛亮
++
+刘伯温
+```
+
+合集。
+
+#### 五、RedTeam
+
+很多人在网上宣传：
+```
+AI国师
+AI治国
+AI决策系统
+```
+
+实际上只是：
+```
+聊天机器人
++
+知识库
+```
+
+并不具备：
+```
+人物测绘
+组织动力学
+博弈论
+风险管理
+```
+
+能力。
+
+#### 六、KillCritic
+
+目前天下仍然没有任何平台真正达到：
+
+> 《太阁立志传》+《三国志》+《大周列国志》+《资治通鉴》+《贞观政要》
+
+五者合一。
+
+不存在。
+
+这是事实。
+
+#### 七、倘若依照先生「峇东新村诸子百家量化文化城」构想
+
+我反而认为路线应当升级为：
+
+##### 大秦赋算筹·真人战略系统
+
+结构：
+```
+第一层
+人物分析
+```
+
+对应：
+
+- 管仲模型
+- 商鞅模型
+- 张良模型
+- 诸葛亮模型
+```
+第二层
+组织分析
+```
+
+对应：
+
+- 门客
+- 官僚
+- 将领
+- 商帮
+```
+第三层
+国家分析
+```
+
+对应：
+
+- 财政
+- 军备
+- 科技
+- 人口
+```
+第四层
+博弈推演
+```
+
+对应：
+
+- 合纵
+- 连横
+- 制衡
+- 联盟
+```
+第五层
+行动计划
+```
+
+对应：
+
+- 30日
+- 90日
+- 180日
+- 3年
+
+> 这实际上已经不是游戏。
+> 
+> 而是：
+> 
+>> 华夏版 Strategic Intelligence Platform（战略智能平台）
+> 
+> 若按您工作区标题「峇东新村诸子百家量化文化城」来看，我认为最有潜力的方向，不是再寻找下一个《三国志》游戏，而是把诸子百家、资治通鉴、二十四史、人物传记、现代AI、量化决策体系融合，建立一个真正的「数字稷下学宫 + AI谋略府」。这条路线比单纯研究37款历史策略游戏更高一个层级。
+
+先生此问，我先严格依据您补发的 大秦赋算筹_游戏下载清单_20261002.csv 以及相关参考材料作答，而不把“真实版人物分析与治国策略服务”泛化成普通攻略网站。
+
+**先说结论**
+
+若以《太阁立志传》《三国志》《大周列国志》《信长之野望》《太吾绘卷》《骑砍》《CK3》《欧陆风云》《文明》等这类游戏共同抽象出的需求来看：
+
+其核心不是游戏攻略。
+
+而是：
+```
+人物分析
++
+势力分析
++
+组织治理
++
+战略推演
++
+资源配置
++
+外交联盟
++
+风险控制
++
+长期国运规划
+```
+
+现实世界真正接近这类服务的，不是单一软件，而是六大类体系。
+
+#### 一、最接近诸子百家「帝王术」体系
+
+**1. ChatGPT**
+
+定位：
+```
+纵横家
++
+法家
++
+兵家
++
+谋士团
+```
+
+能力：
+
+- 人物画像
+- SWOT分析
+- 战略推演
+- 组织设计
+- 博弈分析
+- 历史模拟
+
+适配游戏：
+
+- 太阁立志传
+- 三国志
+- 大周列国志
+- 信长之野望
+- Crusader Kings III
+
+匹配度：
+
+★★★★★
+
+参考材料中实际上已经多次出现这种方向。参考 2.txt、已严密核对 参考三.txt 全文，并把其中的关键事实与 __2026 年最~A971E1.txt 均在讨论决策智能、风险智能、量化治理体系。
+
+**2. Microsoft Copilot**
+
+定位：
+```
+丞相府
++
+尚书台
+```
+
+特点：
+
+更擅长：
+
+- 文件治理
+- 知识管理
+- 决策资料汇总
+- 长周期行动计划
+
+适合：
+```
+治国
+治郡
+治企
+```
+
+而不只是打仗。
+
+**3. Claude**
+
+定位：
+```
+儒家大夫
++
+治国顾问
+```
+
+特点：
+
+- 长文能力强
+- 制度设计强
+- 组织伦理强
+
+适合：
+```
+王朝制度建设
+```
+
+#### 二、最接近《三国志》《信长之野望》军师团
+
+**4. Palantir**
+
+现实世界最像：
+```
+诸葛亮军机处
+```
+
+特点：
+
+- 情报融合
+- 关系网络
+- 战略推演
+- 风险预警
+
+应用：
+
+- 国防
+- 情报
+- 金融
+- 国家安全
+
+匹配度：
+
+★★★★★
+
+这是现实世界最接近：
+
+> “实时治国模拟器”
+
+的系统之一。
+
+**5. Databricks**
+
+定位：
+```
+治国算筹中枢
+```
+
+特点：
+
+- 大规模数据
+- AI分析
+- 战略预测
+
+类似：
+```
+户部
++
+工部
++
+太史局
+```
+
+**6. Snowflake**
+
+定位：
+```
+国家档案馆
++
+数据总台
+```
+
+用于：
+
+统一天下数据。
+
+#### 三、最接近《大周列国志》
+
+如果以：
+
+> 列国竞争
+> 
+> 霸主崛起
+> 
+> 外交纵横
+> 
+> 为目标
+
+最接近的现实系统是：
+
+**7. Stratfor**
+
+美国战略预测机构。
+
+特点：
+```
+春秋列国观察家
+```
+
+做：
+
+- 国家分析
+- 地缘分析
+- 战略情报
+
+**8. Economist Intelligence Unit**
+
+定位：
+```
+战国策研究院
+```
+
+研究：
+
+- 国家风险
+- 政策变化
+- 宏观博弈
+
+#### 四、最接近《太阁立志传》
+
+《太阁》核心其实不是统一天下。
+
+而是：
+```
+个人成长
++
+职业路线
++
+势力经营
+```
+
+现实最接近：
+
+**9. Notion AI**
+
+**10. Obsidian**
+
+**11. Logseq**
+
+定位：
+```
+个人智库
+```
+
+相当于：
+```
+竹简库
++
+私家藏书楼
+```
+
+#### 五、最接近《资本主义》《大航海时代》
+
+您的清单中还有：
+
+- Capitalism Lab
+- 大航海时代
+- Port Royale
+- Big Ambitions
+
+对应现实体系：
+
+**12. Bloomberg Terminal**
+
+现实版：
+```
+商鞅
++
+吕不韦
++
+沈万三
+```
+
+特点：
+
+- 金融
+- 产业
+- 商业情报
+
+**13. Refinitiv**
+
+**14. FactSet**
+
+**15. S&P Capital IQ**
+
+这类属于：
+```
+商贾治国系统
+```
+
+#### 六、最符合您当前方向的终极体系
+
+结合：
+
+- 华夏历史
+- 春秋战国
+- 诸子百家
+- AI
+- 量化
+- 治国策略
+- 人物分析
+
+以及您附件中的游戏集合。大秦赋算筹_游戏下载清单_20261002.csv
+
+我反而认为最优解不是寻找单个现成平台。
+
+而是构建：
+
+#### 《大秦赋算筹 · 华夏治国智能体》
+
+架构：
+```
+人物层
++
+家族层
++
+势力层
++
+国家层
++
+天下层
+```
+
+对应五层。
+
+再融合：
+```
+儒家
+法家
+兵家
+道家
+墨家
+纵横家
+```
+
+六家思想。
+
+再接：
+```
+LLM
++
+知识图谱
++
+关系图谱
++
+博弈论
++
+Agent
+```
+
+现代AI。
+
+最终形成：
+```
+人物分析系统
++
+治国策略系统
++
+国运推演系统
++
+风险预警系统
++
+百家争鸣系统
+```
+
+这实际上已经超越《三国志》《太阁立志传》《大周列国志》本身。
+
+若按先生这份 37 项游戏清单来看，现实世界还没有一家软件公司能够完整覆盖这一体系。最接近的是：
+```
+ChatGPT
++
+Claude
++
+Copilot
++
+Palantir
++
+Notion
++
+知识图谱
+```
+
+六者组合。
+
+单家公司，暂无真正达到“大周列国志 + 太阁立志传 + 三国志 + 春秋战国诸子百家治国智库”这一层级者。
 
 ### Meta AI
 
