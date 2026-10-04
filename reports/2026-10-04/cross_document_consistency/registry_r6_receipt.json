@@ -1,0 +1,34 @@
+{
+  "base": "reports/2026-10-04/tables/01_services/strategy_services_registry.csv",
+  "base_sha256": "3716f37854c7af08cc0b41a8c4e565f1d74f3f0cb56bbbb776b87794f6033801",
+  "base_is_dgef_input": true,
+  "r2": "reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r6.csv",
+  "r2_sha256": "00f5cbd354fb6c30733ae23705faa38f8d75821c395c0182ba2a5423b8053542",
+  "changed_rows": 331,
+  "status_before": {
+    "V": 60,
+    "U": 330,
+    "P": 15
+  },
+  "status_after": {
+    "V": 355,
+    "P": 30,
+    "U": 20
+  },
+  "by_batch": {
+    "u_review_batch06（改判 u_review_batch01）": 2,
+    "u_review_batch01": 17,
+    "u_review_batch03（改判 u_review_batch01）": 1,
+    "u_review_batch04（改判 u_review_batch03（改判 u_review_batch01））": 2,
+    "CDC-05": 52,
+    "u_review_batch03（改判 CDC-05）": 4,
+    "u_review_batch02": 134,
+    "u_review_batch04（改判 u_review_batch02）": 19,
+    "u_review_batch03（改判 u_review_batch02）": 1,
+    "u_review_batch03": 7,
+    "u_review_batch04": 1,
+    "u_review_batch05": 72,
+    "u_review_batch06": 19
+  },
+  "rule": "原表不改；r2 为现行名录；DGEF 若改用 r2 须走显式迁移"
+}

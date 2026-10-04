@@ -137,8 +137,24 @@ def check_releases():
     return issues
 
 
+def check_completion():
+    """竣工不变量：最新名录版本中，原表为 U 之行须皆有复核批次与理由。"""
+    import csv
+    services = ROOT / "reports/2026-10-04/tables/01_services"
+    releases = sorted(services.glob("strategy_services_registry_20261004_r*.csv"),
+                      key=lambda p: int(p.stem.rsplit("_r", 1)[1]))
+    if not releases:
+        return []
+    with (services / "strategy_services_registry.csv").open(encoding="utf-8-sig") as f:
+        base = {r["id"]: r["status"] for r in csv.DictReader(f)}
+    with releases[-1].open(encoding="utf-8-sig") as f:
+        latest = list(csv.DictReader(f))
+    missing = [r["id"] for r in latest if base[r["id"]] == "U" and not (r["review_batch"] and r["verified_scope"])]
+    return [f"[未复核] {releases[-1].name}: {', '.join(missing)}"] if missing else []
+
+
 def main():
-    issues = (check_releases() + check_numeric() + check_status_conflicts() + check_links() + check_database()
+    issues = (check_completion() + check_releases() + check_numeric() + check_status_conflicts() + check_links() + check_database()
               + check_mark_crosswalk())
     unresolved = [i for i in issues if "已裁定" not in i and "已登记" not in i]
     for i in issues:
