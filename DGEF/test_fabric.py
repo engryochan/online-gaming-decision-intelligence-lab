@@ -17,7 +17,7 @@ class FabricAcceptance(unittest.TestCase):
   actual={r[0] for r in self.c.execute("SELECT name FROM sqlite_master WHERE type IN ('table','view')")}
   self.assertFalse(names-actual,names-actual)
  def test_baseline_preservation_roundtrip(self):
-  for table,path in [('registry_country_area',f.ROOT/'Reference/registry_country_area_iso3166_m49_e164_20261004.csv'),('registry_admin_unit',f.ROOT/'Reference/registry_admin_units_iso3166_2_20261004.csv')]:
+  for table,path in [('registry_country_area',f.ROOT/'Reference/tables/01_country_area/registry_country_area_iso3166_m49_e164_20261004.csv'),('registry_admin_unit',f.ROOT/'Reference/tables/02_admin_units/registry_admin_units_iso3166_2_20261004.csv')]:
    originals=f.read_csv(path)
    restored=[json.loads(r[0]) for r in self.c.execute(f'SELECT baseline_json FROM {table}')]
    self.assertEqual(sorted(map(lambda r:json.dumps(r,sort_keys=True),originals)),sorted(map(lambda r:json.dumps(r,sort_keys=True),restored)))

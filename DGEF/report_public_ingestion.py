@@ -19,7 +19,7 @@ gap={
 rows=[]
 for n,(ddl,zh,grain) in f.SPECS.items():
  rows.append(dict(table=n,name_zh=zh,grain=grain,records=counts[n],status='POPULATED' if counts[n] else 'EMPTY_EXPLICIT',source_route='registry_source → registry_dataset → registry_ingest_record/claim/evidence' if counts[n] else 'PENDING',gap_reason=gap.get(n,'尚无通过本表粒度与来源校验的记录') if not counts[n] else '数据为有边界的快照，不宣称全球穷尽'))
-with (OUT/'表施工与数据覆盖对账.csv').open('w',encoding='utf-8-sig',newline='') as stream:
+with (OUT/'tables/coverage/表施工与数据覆盖对账.csv').open('w',encoding='utf-8-sig',newline='') as stream:
  w=csv.DictWriter(stream,fieldnames=rows[0]);w.writeheader();w.writerows(rows)
 text=['# 网站查证与真实数据入库复审','',
 '再次对照《参考_册三.txt》：此前已建表结构，本轮已从26个公开API／官网响应接入真实记录。新增原行账用于保存外部响应中的每一条记录；现为44张表、10视图，旧43张表全部保留。','',
@@ -43,7 +43,7 @@ for r in rows:
 text+=['','## 可复查实物','',
 '- DGEF/inbox/manifest.json：26个请求、抓取时间、TLS后端、响应文件与SHA256。',
 '- DGEF/artifacts/dgef.sqlite及tables目录：真实数据库与44份CSV。',
-'- 表施工与数据覆盖对账.csv：逐表粒度、记录数、空缺原因。',
+'- tables/coverage/表施工与数据覆盖对账.csv：逐表粒度、记录数、空缺原因。',
 '- before_public_ingestion.sqlite：入库前数据库备份；测试逐表检查所有旧行仍在且原值未变。',
 '- public_acceptance_tests.txt：实际响应指纹、法人字段、星历向量、外键、基线保全与非虚构填充验收。','',
 '结论：所述表可以依据不同公开来源逐类填实，本轮已完成第一批跨域入库；不能用“任何网站”替代证据分级，也不能把未取到或未运行的数据伪造为完成。','']

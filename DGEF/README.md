@@ -18,9 +18,11 @@
 | 模型接口 | v_model_features_approved 为SQL视图，非已训练神经网络、非物化缓存；目前0条获准训练数据 |
 | 时空接口 | 已接入地球、火星、月球共6条JPL星历向量；太阳中心、J2000黄道、TDB、AU/AU-day；无设施精确坐标 |
 
-本轮公开入库明细：科研记录160、法人92、政府类型49、公开研究设施37、天体28、物理参数45、来源关系38；各表可能记录同一实体，不可相加为公司数。宇航计划、任务、资产、运载器及公开地面中心各2条。研究成果表仅保存JPL列出的文献引用，不冒充已核全文或完整篇名。完整逐表对账见 `../reports/2026-10-04/dgef/表施工与数据覆盖对账.csv`。
+本轮公开入库明细：科研记录160、法人92、政府类型49、公开研究设施37、天体28、物理参数45、来源关系38；各表可能记录同一实体，不可相加为公司数。宇航计划、任务、资产、运载器及公开地面中心各2条。研究成果表仅保存JPL列出的文献引用，不冒充已核全文或完整篇名。完整逐表对账见 `../reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv`。
 
 数据库位于 `artifacts/dgef.sqlite`；各表CSV位于 `artifacts/tables/`。空领域表是已施工的结构，不表示对应对象不存在。附件每个明确命名的表均有实体表或兼容视图，测试会检查漏项。`space_object` 暂指宇航资产视图，天体另入 `registry_celestial_object`，避免混义。
+
+CSV导出按九个用途目录分类，由`table_layout.py`统一决定位置，重建继续使用分类路径。全项目表文件现址与旧址见[分类总索引](../reports/2026-10-04/table_reclassification/README.md)；历史来源URI通过该映射定位，不改写历史原行。
 
 ## RedTeam／墨家验伪
 
@@ -56,7 +58,7 @@
 
 `source → dataset → identity bridge → entity → typed domain → claim/evidence/observation → approved feature view`。
 
-实体不因名字相似自动合籍，模型不拥有实体身份裁决权；预测不得倒写canonical事实。数据字典见 `data_dictionary.csv`，DDL见 `schema.sql`；领域表各守自身记录粒度。框架只接入公开非操作性设施资料，不推断未公开设施坐标或现实攻击路径。
+实体不因名字相似自动合籍，模型不拥有实体身份裁决权；预测不得倒写canonical事实。数据字典见 `contracts/data_dictionary.csv`，DDL见 `schema.sql`；领域表各守自身记录粒度。框架只接入公开非操作性设施资料，不推断未公开设施坐标或现实攻击路径。
 
 ## ActionPlan／施工与验收
 

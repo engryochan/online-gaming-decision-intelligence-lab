@@ -17,7 +17,7 @@ new=[
 ('Preqin','V','https://www.preqin.com/','官网确认私募市场数据并标示BlackRock旗下；未独立核数据效果'),
 ('PEMANDU','V','https://pemandu.org/','官网确认战略工作坊、Lab、交付单位与PMO支持；未证明唯一可及、会面保证或方法完整复制'),
 ]
-p=o/'live_checks.tsv'
+p=o/'tables/03_sources_evidence/live_checks.tsv'
 with p.open(encoding='utf-8-sig',newline='') as f:r=list(csv.DictReader(f,delimiter='\t'))
 keys={x[0] for x in new};r=[x for x in r if x['key'] not in keys]+[dict(zip(('key','status','url','verified_scope'),x)) for x in new]
 with p.open('w',encoding='utf-8',newline='') as f:w=csv.DictWriter(f,fieldnames=r[0].keys(),delimiter='\t');w.writeheader();w.writerows(r)

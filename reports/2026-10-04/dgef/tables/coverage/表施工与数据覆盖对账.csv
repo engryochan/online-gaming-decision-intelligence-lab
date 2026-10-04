@@ -1,0 +1,45 @@
+﻿table,name_zh,grain,records,status,source_route,gap_reason
+registry_schema_version,度制版本,一次schema发布,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+cosmic_domain,宇域,一种空间域,11,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_entity_type,名籍类型,一种实体类型,16,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_source,证据出处,一个来源文档或可核验入口,40,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_dataset,资料版本,一个数据集快照,29,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_entity,实体正名,一个不因改名迁址换号的实体,5593,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_entity_alias,异名同籍,实体的一个有时间别名,969,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,11387,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_external_id,外号目录,尚可不绑定实体的外部ID,433,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,38,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_entity_status_history,沿革,一次状态时期,252,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_claim,主张账,一条可以被支持或反驳的主张,343,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,45,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_evidence_link,互证账,主张与证据的一条对应,343,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,1,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,6,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,249,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,5046,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_settlement,聚落,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,ROR城市信息不是完整聚落库，未接入官方地名或人口资料
+registry_legal_entity,法人,一个有来源、双时间的领域记录,92,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_public_body,公署,一个有来源、双时间的领域记录,49,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,160,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,37,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,需按具体设施类型核实主管者、公开资料与许可
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,本轮范围机构为主，尚未核对公开任职及生效时期
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,2,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,9,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_celestial_object,天体,一个有来源、双时间的领域记录,28,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,6,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,尚未接入带论文与误差的生命证据记录；不把无确认生命写成每个对象为0
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,现实网页不证明某虚拟世界已运行；需产品版本与公开场景证据
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,须先有虚拟世界记录，不以现实实体强填
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,须实际运行日志；网上模型介绍不能冒作本项目运行记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,0,EMPTY_EXPLICIT,PENDING,须真实生成过程与参数；不得为填表编造人口
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,405,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,284,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,1743,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,21,POPULATED,registry_source → registry_dataset → registry_ingest_record/claim/evidence,数据为有边界的快照，不宣称全球穷尽

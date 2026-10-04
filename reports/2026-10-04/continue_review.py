@@ -25,13 +25,13 @@ entries=[
 ('Simudyne','V','https://simudyne.com/','官网确认企业模拟软件定位；未实跑'),
 ('Leadership Connect','V','https://leadershipconnect.io/','独立官网确认政府关系、利益相关者图谱和立法追踪；未确认与Altrata集团关系'),
 ]
-p=OUT/'live_checks.tsv'
+p=OUT/'tables/03_sources_evidence/live_checks.tsv'
 with p.open(encoding='utf-8-sig',newline='') as f: old=list(csv.DictReader(f,delimiter='\t'))
 keys={r[0] for r in entries}
 rows=[r for r in old if r['key'] not in keys]+[dict(zip(('key','status','url','verified_scope'),r)) for r in entries]
 with p.open('w',encoding='utf-8',newline='') as f:
  w=csv.DictWriter(f,fieldnames=('key','status','url','verified_scope'),delimiter='\t');w.writeheader();w.writerows(rows)
-p=OUT/'catalogue_seed.tsv'
+p=OUT/'tables/02_catalogue_extraction/catalogue_seed.tsv'
 with p.open(encoding='utf-8-sig',newline='') as f: seeds=list(csv.DictReader(f,delimiter='\t'))
 for r in seeds:
  if r['name']=='Altrata / BoardEx / Boardroom Insiders / Leadership Connect':

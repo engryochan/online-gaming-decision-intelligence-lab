@@ -111,3 +111,5 @@ online-gaming-decision-intelligence-lab
 ## DGEF global entity fabric
 
 [大秦天下万物实体织网：已施工数据表与验收](DGEF/README.md)。全球范围、稳定身份、多表关联、来源与未知状态分职；保留现有CSV粒度。
+
+[全项目数据表分类总索引](reports/2026-10-04/table_reclassification/README.md)：65份数据表及数据库文件，列明分类、现址、旧址与SHA256；[Reference参考表分类](Reference/tables/README.md)。

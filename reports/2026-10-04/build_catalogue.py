@@ -4,7 +4,7 @@ OUT=Path(__file__).resolve().parent; ROOT=OUT.parents[1]
 texts=json.loads((OUT/'extracted_text.json').read_text(encoding='utf-8'))
 def load_csv(name,delim=','):
     with (OUT/name).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f,delimiter=delim))
-seeds=load_csv('catalogue_seed.tsv','\t'); checks=load_csv('live_checks.tsv','\t')
+seeds=load_csv('tables/02_catalogue_extraction/catalogue_seed.tsv','\t'); checks=load_csv('tables/03_sources_evidence/live_checks.tsv','\t')
 preferred=sorted(texts,key=lambda p:(p.startswith('.Rproj'),p.endswith('.html'),not p.startswith('Reference/'), 'v2_4' not in p, p))
 ascii_fold=str.maketrans('ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')
 folded={p:t.translate(ascii_fold) for p,t in texts.items()}
@@ -56,11 +56,11 @@ assert len(industry_rows)==70
 def write_csv(name,rows):
     with (OUT/name).open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=rows[0]);w.writeheader();w.writerows(rows)
-write_csv('strategy_services_registry.csv',registry);write_csv('entity_source_evidence.csv',evidence);write_csv('original_172_entries.csv',raw);write_csv('gaming_70_entries.csv',industry_rows)
+write_csv('tables/01_services/strategy_services_registry.csv',registry);write_csv('tables/03_sources_evidence/entity_source_evidence.csv',evidence);write_csv('tables/02_catalogue_extraction/original_172_entries.csv',raw);write_csv('tables/02_catalogue_extraction/gaming_70_entries.csv',industry_rows)
 (OUT/'unmatched_seed.json').write_text(json.dumps(missing,ensure_ascii=False,indent=2),encoding='utf-8')
 groups=collections.defaultdict(list)
 for x in registry:groups[x['category']].append(x)
-inventory=load_csv('file_inventory.csv')
+inventory=load_csv('tables/04_file_audit/file_inventory.csv')
 main_files=[x for x in inventory if not x['path'].startswith('.Rproj')]
 cache_files=[x for x in inventory if x['path'].startswith('.Rproj')]
 counts=collections.Counter(x['status'] for x in registry)
@@ -68,7 +68,7 @@ summary=dict(inventory_files=len(inventory),project_files=len(main_files),editor
 (OUT/'audit_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
 def link(p,n):return f'[来源](<{ROOT.as_posix()}/{p}:{n}>)'
 report=['# 现实策略服务公司与平台：全项目审阅及分类名录','', '审阅日期：2026-10-04（Asia/Tbilisi）。范围：此工作区当前文件快照，不是全球所有公司全集。','',
-f'纳入文件 {len(inventory)} 个：项目及渲染依赖 {len(main_files)} 个，RStudio 隐藏缓存 {len(cache_files)} 个；不把 Git 对象、Git 历史或本轮产物算作项目正文。每个文件的字节、SHA-256、提取方法见 file_inventory.csv。', '',
+f'纳入文件 {len(inventory)} 个：项目及渲染依赖 {len(main_files)} 个，RStudio 隐藏缓存 {len(cache_files)} 个；不把 Git 对象、Git 历史或本轮产物算作项目正文。每个文件的字节、SHA-256、提取方法见 tables/04_file_audit/file_inventory.csv。', '',
 '本轮完成全文件清点、可读文件全文程序扫描、表格与名称提取、重复核对、三个原有 Python 文件静态语法检查，以及关键策略段落的语义审阅和部分官网复核。**这不等于所有句子均逐句完成事实核验，也不等于代码、QMD、网页和模型已经实跑验证。** HTML 提取可见文字，未执行脚本；PDF 提取七页文字，未逐页验版。一个零字节 RStudio lock_file 因占用／权限未能读取；字体、二进制缓存仅清点与指纹登记。', '',
 '目录中 V 表示本轮取得官网正文／官方文档，能支持所列定位；P 表示部分核实、重定向、访问受限或仅核到一项交易；U 表示仅核实项目出现，当前状态仍待核。**V 不证明产品最佳、预测有效、采购可行或效果独立验证。** 原文 ◎ 不自动继承为本轮 V。','',
 f'主目录为 {len(registry)} 条公司／产品族／研究资源记录，分 {len(groups)} 类。公司与产品族合并，跨集团产品、公共机构、标准与研究对象另注明，**不能称为 {len(registry)} 家独立公司**。另附原名录全部 172 编号及行业原表 70 条，二者与主目录有交集，不能相加。','',
@@ -105,18 +105,18 @@ report+=['## 在线游戏平台、风控与自动化：行业补充 70 条','',
 '这是项目行业资料原表逐项列出，**本轮均为 U，未验证各平台当前牌照、地域开放、并购归属、模型效果或预测真实性**。集团、品牌与产品并列保留，原表“70 家”不继承为独立公司数。Oracle Baccarat Predictor、BACC.BOT、BaccaratAI 等名称只证明原文提及，不证明能预测牌局或可合法购买。','','| 原序 | 名称 | 本轮状态 | 项目来源 |','|---|---|---|---|']
 for x in industry_rows:report.append(f"| {x['number']} | {x['name']} | U | {link(x['path'],x['line'])} |")
 report+=['','## 原 172 编号条目的完整对账','',
-'以下为原名录标题层的完整保留，不是重新认证其原文数字与主张。详细原断言和边界在 original_172_entries.csv；标准、数据集、科研对象与机构仍应分开管理。','','| 原序 | 原条目标题 | 项目来源 |','|---|---|---|']
+'以下为原名录标题层的完整保留，不是重新认证其原文数字与主张。详细原断言和边界在 tables/02_catalogue_extraction/original_172_entries.csv；标准、数据集、科研对象与机构仍应分开管理。','','| 原序 | 原条目标题 | 项目来源 |','|---|---|---|']
 for x in raw:
     label=re.sub(r'\[([^\]]+)\]\([^\)]+\)',r'\1',x['label']).replace('**','')
     report.append(f"| {x['number']} | {label} | {link(x['path'],x['line'])} |")
 report+=['','## 文件审阅覆盖与可复查证据','',
-'- file_inventory.csv：所有纳入文件、字节、SHA-256、提取行数与审阅方式。',
-'- strategy_services_registry.csv：分类名录、V/P/U、官网核验范围与来源上下文。',
-'- entity_source_evidence.csv：每条名录在每个非缓存来源文件中的首个匹配位置；用于定位，不是自动认定所有同名词均为同一实体。',
-'- original_172_entries.csv 与 gaming_70_entries.csv：原目录逐行对账，未经复核的原主张明确标记。',
+'- tables/04_file_audit/file_inventory.csv：所有纳入文件、字节、SHA-256、提取行数与审阅方式。',
+'- tables/01_services/strategy_services_registry.csv：分类名录、V/P/U、官网核验范围与来源上下文。',
+'- tables/03_sources_evidence/entity_source_evidence.csv：每条名录在每个非缓存来源文件中的首个匹配位置；用于定位，不是自动认定所有同名词均为同一实体。',
+'- tables/02_catalogue_extraction/original_172_entries.csv 与 tables/02_catalogue_extraction/gaming_70_entries.csv：原目录逐行对账，未经复核的原主张明确标记。',
 '- duplicate_files.json：字节重复组；重复正文、HTML、缓存不算独立互证。',
 '- csv_audit.json：六份原始 CSV 的记录数、重复键、表间对应、行政单位计数与空文件检查。',
-'- live_checks.tsv：本轮实际复核入口与支持范围；未对每个实体逐家联网认证。','',
+'- tables/03_sources_evidence/live_checks.tsv：本轮实际复核入口与支持范围；未对每个实体逐家联网认证。','',
 '本轮已获用户授权直接斧正地理用词及 PEMANDU 相关断言；修改前文件与前后指纹另行保留，历史未修改验证记录只适用于之前轮次。未提交、推送或运行原项目生成器。覆盖声明限于当前工作区提取与已审阅证据，不宣称全球穷尽、全部句子正确或模型部署验收通过。','']
 (OUT/'现实策略服务_审阅与分类名录_20261004.md').write_text('\n'.join(report),encoding='utf-8')
 print(json.dumps(summary,ensure_ascii=True,indent=2))

@@ -24,7 +24,7 @@ replacements=[
 (term,'地区覆盖'),
 ]
 targets=[p for p in ROOT.rglob('*') if p.suffix.lower() in ('.md','.qmd','.txt','.html') and not any(x in p.relative_to(ROOT).parts for x in ('.git','.Rproj.user','reports'))]
-targets += [OUT/'build_catalogue.py',OUT/'续核与建议修订稿.md',OUT/'catalogue_seed.tsv']
+targets += [OUT/'build_catalogue.py',OUT/'续核与建议修订稿.md',OUT/'tables/02_catalogue_extraction/catalogue_seed.tsv']
 changes=[]
 backup=OUT/'terminology_before_correction_all_text.zip'
 with zipfile.ZipFile(backup,'x',compression=zipfile.ZIP_DEFLATED) as z:

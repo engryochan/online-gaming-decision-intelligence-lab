@@ -46,11 +46,11 @@ for p in files:
             if re.match(r'^#{1,4}\s',line): outlines.append(f'{rel}:{i}: {line[:200]}')
             if line.lstrip().startswith('|'): tables.append((rel,i,line))
             for url in re.findall(r'https?://[^\s<>\]\)\"]+',line): links.append(dict(path=rel,line=i,url=url.rstrip('.,;。；')))
-with (OUT/'file_inventory.csv').open('w',encoding='utf-8-sig',newline='') as f:
+with (OUT/'tables/04_file_audit/file_inventory.csv').open('w',encoding='utf-8-sig',newline='') as f:
     w=csv.DictWriter(f,fieldnames=inventory[0]); w.writeheader(); w.writerows(inventory)
 (OUT/'extracted_text.json').write_text(json.dumps(texts,ensure_ascii=False),encoding='utf-8')
 (OUT/'outline.txt').write_text('\n'.join(outlines),encoding='utf-8')
-with (OUT/'source_urls.csv').open('w',encoding='utf-8-sig',newline='') as f:
+with (OUT/'tables/03_sources_evidence/source_urls.csv').open('w',encoding='utf-8-sig',newline='') as f:
     w=csv.DictWriter(f,fieldnames=['path','line','url']);w.writeheader();w.writerows(links)
 unique={}
 for p,i,line in tables:

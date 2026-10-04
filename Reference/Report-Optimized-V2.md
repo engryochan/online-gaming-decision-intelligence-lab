@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | 查证现实策略服务之ChatGPT篇.txt（924行） | ChatGPT十二答全文 | 经实体并集比对，为另一件之**真子集**，存档可弃 |
 | 查证现实策略服务.txt（964行） | 同上十二答＋Claude一答 | **全集**，留存 |
-| 大秦赋算筹_游戏下载清单_20261002.csv（37项） | 游戏下载台账 | 提问之锚；原十二答只就其中三款作答 |
+| tables/04_gaming_catalogue/大秦赋算筹_游戏下载清单_20261002.csv（37项） | 游戏下载台账 | 提问之锚；原十二答只就其中三款作答 |
 
 仅见于Claude段而ChatGPT篇全无者：Profiler Plus、TALID、leadeR、LTA、GenWar、WarMatrix、Skyral、Anduril、Shield AI、Scale AI、RANE／Stratfor、GeoQuant、Metaculus、Polymarket、Kalshi、Good Judgment、Cambridge Analytica、GDPR。
 

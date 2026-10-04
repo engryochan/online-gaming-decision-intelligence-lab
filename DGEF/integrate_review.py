@@ -55,7 +55,7 @@ append='''
 
 ## 45.2 施工实物与覆盖
 
-已建43实体表、10视图：身份、别名、外号、关系、来源、资料版本、主张、观测、证据桥、许可、时空、国家行政、法人、公署、研究、公开设施、宇航天体及虚拟模拟。附件明确表名全部有实体表或兼容视图。DDL见[DGEF/schema.sql](DGEF/schema.sql)，字段与粒度见[DGEF/data_dictionary.csv](DGEF/data_dictionary.csv)。
+已建43实体表、10视图：身份、别名、外号、关系、来源、资料版本、主张、观测、证据桥、许可、时空、国家行政、法人、公署、研究、公开设施、宇航天体及虚拟模拟。附件明确表名全部有实体表或兼容视图。DDL见[DGEF/schema.sql](DGEF/schema.sql)，字段与粒度见[DGEF/contracts/data_dictionary.csv](DGEF/contracts/data_dictionary.csv)。
 
 已导入249国家／地区及5046行政单位，5295实体根号；405供应商目录先入待消歧候选表，不能当405法人。原CSV每字段无损保留，均为待实时核验的CLAIMED基线。领域空表不表示对象不存在。15外部适配合同多数INTERFACE_ONLY，未下载全球全量实体。
 

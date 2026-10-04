@@ -3,10 +3,10 @@ import csv,json,collections
 ROOT=Path(__file__).resolve().parents[2];OUT=Path(__file__).resolve().parent
 def rows(p):
     with (ROOT/p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
-p_old='Reference/registry_country_area_iso3166_20261003.csv'
-p_new='Reference/registry_country_area_iso3166_m49_e164_20261004.csv'
-p_admin='Reference/registry_admin_units_iso3166_2_20261004.csv'
-p_games='Reference/大秦赋算筹_游戏下载清单_20261002.csv'
+p_old='Reference/tables/01_country_area/registry_country_area_iso3166_20261003.csv'
+p_new='Reference/tables/01_country_area/registry_country_area_iso3166_m49_e164_20261004.csv'
+p_admin='Reference/tables/02_admin_units/registry_admin_units_iso3166_2_20261004.csv'
+p_games='Reference/tables/04_gaming_catalogue/大秦赋算筹_游戏下载清单_20261002.csv'
 p_tables='V2.0.1/feature/ods-data-dictionary-governance/docs/03_Data_Dictionary/01_ODS_TABLE_LIST.csv'
 p_columns='V2.0.1/feature/ods-data-dictionary-governance/docs/03_Data_Dictionary/02_ODS_FULL_DATA_DICTIONARY.csv'
 old,new,admin,games,tables,columns=[rows(p) for p in (p_old,p_new,p_admin,p_games,p_tables,p_columns)]

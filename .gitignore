@@ -55,3 +55,10 @@ docker-compose.override.yml
 .env
 *.pem
 secrets/
+
+# Classified, reviewable table assets and migration index.
+!Reference/tables/**/*.csv
+!Reference/tables/**/*.xlsx
+!reports/**/tables/**/*.csv
+!reports/**/table_reclassification/*.csv
+!V2.0.1/feature/ods-data-dictionary-governance/docs/03_Data_Dictionary/*.csv

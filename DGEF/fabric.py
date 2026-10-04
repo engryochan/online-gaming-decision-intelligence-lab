@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse, csv, hashlib, json, re, secrets, sqlite3, time, uuid
 from datetime import datetime, timezone
+from table_layout import table_category
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent
@@ -108,7 +109,7 @@ def build(output):
  c=sqlite3.connect(output/'dgef.sqlite');c.execute('PRAGMA foreign_keys=ON');c.executescript(schema())
  installed={r[0] for r in c.execute('SELECT version FROM registry_schema_version')}
  if installed-{'1.0.0',VERSION}:raise RuntimeError('Unknown schema version: migration required')
- inputs={'country':ROOT/'Reference/registry_country_area_iso3166_m49_e164_20261004.csv','admin':ROOT/'Reference/registry_admin_units_iso3166_2_20261004.csv','catalogue':ROOT/'reports/2026-10-04/strategy_services_registry.csv'}
+ inputs={'country':ROOT/'Reference/tables/01_country_area/registry_country_area_iso3166_m49_e164_20261004.csv','admin':ROOT/'Reference/tables/02_admin_units/registry_admin_units_iso3166_2_20261004.csv','catalogue':ROOT/'reports/2026-10-04/tables/01_services/strategy_services_registry.csv'}
  initial={k:sha(p) for k,p in inputs.items()}
  with c:
   insert(c,'registry_schema_version',version=VERSION,installed_at=now(),description='G0-G3 local baseline; model gate only, no trained NN')
@@ -160,11 +161,12 @@ def build(output):
  dictionary=[];counts={}
  for (name,) in export:
   cur=c.execute(f'SELECT * FROM {name} ORDER BY 1');rows=cur.fetchall();cols=[x[0] for x in cur.description];counts[name]=len(rows)
-  with (csvdir/(name+'.csv')).open('w',encoding='utf-8-sig',newline='') as f:
+  category_dir=csvdir/table_category(name);category_dir.mkdir(parents=True,exist_ok=True)
+  with (category_dir/(name+'.csv')).open('w',encoding='utf-8-sig',newline='') as f:
    w=csv.writer(f);w.writerow(cols);w.writerows(['' if v is None else v for v in row] for row in rows)
   for col in c.execute(f'PRAGMA table_info({name})'):
    dictionary.append(dict(table=name,table_name_zh=SPECS[name][1],grain=SPECS[name][2],column=col[1],sql_type=col[2],not_null=col[3],primary_key=col[5],null_semantics='UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO',business_definition=field_definition(col[1]),example_use=SPECS[name][2]))
- with (HERE/'data_dictionary.csv').open('w',encoding='utf-8-sig',newline='') as f:
+ with (HERE/'contracts/data_dictionary.csv').open('w',encoding='utf-8-sig',newline='') as f:
   w=csv.DictWriter(f,fieldnames=dictionary[0].keys());w.writeheader();w.writerows(dictionary)
  plans=[list(r) for r in c.execute('EXPLAIN QUERY PLAN SELECT * FROM registry_admin_unit WHERE country_entity_id=?',(country_ids['CN'],))]
  report=dict(schema_version=VERSION,sqlite_version=sqlite3.sqlite_version,table_count=len(SPECS),view_count=c.execute("SELECT count(*) FROM sqlite_master WHERE type='view'").fetchone()[0],row_counts=counts,input_sha256=initial,integrity='ok',foreign_key_errors=[],query_plan_country_admin=plans,training_approved_rows=c.execute('SELECT count(*) FROM v_model_features_approved').fetchone()[0],null_csv_encoding='empty field is SQL NULL; never convert to numeric zero',external_ingestion='PUBLIC_RESPONSE_SNAPSHOTS_IMPORTED' if counts['registry_ingest_record'] else 'ONLY_LOCAL_BASELINES; OTHER_ADAPTERS_INTERFACE_ONLY')
