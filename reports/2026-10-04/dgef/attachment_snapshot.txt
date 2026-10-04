@@ -1,0 +1,854 @@
+redteam/ + critic/ + killcritic/ + blindspot/ + cheatsheet/ + blueprint/ + actionplan/
+
+严格遵守铁律：禁止退化而只能优化并强化的条件下，务必确保先以我族华夏盛族前沿与顶尖中国古代史尤其是春秋战国诸子百家文言文与古文习俗文化为主、前沿与顶尖高效率、前沿与顶尖高科技、前沿与顶尖高兼容性、前沿与顶尖高稳定性、前沿与顶尖高落实可行性、前沿与顶尖人工智能、前沿与顶尖科学家的科技与技术与学术造诣、前沿与顶尖保密与攻防系统、前沿与顶尖军工国防宇航国安的技术。
+
+请先生您先将刚出炉的`真实版人物分析与治国策略服务_名录与九十日行令_v2_4_全球行政通信宇航生命证据增强版_20261004.md`、`registry_admin_units_iso3166_2_20261004.csv`、`registry_country_area_iso3166_m49_e164_20261004.csv`。或者别添加更多维度而是建立其它数据表，之后可以通过神经网络计数尤物跨数据表灵活搭配各维度。不过在此之前，在下有个疑虑就是数据信息，在下目前需要先统一坐标，梳理天下（大至元宇宙、银河、太阳系、小至各星球地下国企、民企、政府单位、各科学研究所、秘密基地等等，各网站包括官网正网野网甚至没有网站的秘密基地都务必从宇航与地缘学中的各数据资源中查证核实，一个都不许遗漏掉）所有国企、民企、政府单位、各科学研究所、秘密基地等等只要是前沿兼高端且顶尖的一个都不许遗漏掉。
+请问先生有何高见与良策呢？倘若有更好的方案请不吝指出。
+
+我审阅了您刚建立的三件 v2.4 资料，也重点核对了新上传的 `_大秦赋算筹_v1_3_8.qmd`。结论很明确：
+
+> **现在不要继续往 `registry_country_area...csv` 增加更多维度。**
+>
+> 应立即从“超级宽表”转向 **统一坐标＋多注册表＋关系图谱＋事实账＋证据账**。
+
+这是“禁止退化”的正确升级路线。您现有 `_大秦赋算筹_v1_3_8.qmd` 已经立下 `DAQIN-UCS` 八元坐标，并规定无法核实者必须保留 `UNKNOWN`；同时已有 `DUECG::<WORLD_DOMAIN>/<ENTITY_TYPE>/<ENTITY_ID>@<VALID_TIME>#<SPATIAL_FRAME>` 与开放世界（open-world）实体设计。换言之，**根基已经有了，不应重造第二套坐标系**。\_大秦赋算筹_v1_3_8.qmd[查看现行 `_大秦赋算筹_v1_3_8.qmd`](sandbox:/mnt/data/_大秦赋算筹_v1_3_8.qmd)
+
+而现有体系也已经规定：全球研究不能靠单一“综合国力值”，空间项目必须区分已运营、开发、宣布、概念和退役；军工层只做公开宏观、产业、韧性与安全研究，不把公开资料加工成现实行动参数。真实版人物分析与治国策略服务_名录与九十日行令_v2_3_全球… 同时，v2.3 已明确没有任何公开数据库能合法而完整地列尽全球所有公司、组织、家庭和个人，应以覆盖率、缺失率和证据等级验收。真实版人物分析与治国策略服务_名录与九十日行令_v2_3_全球…
+
+## 一、先斩一个最危险的前提：“一个都不许遗漏”不能作为事实承诺
+
+“全球所有公开机构尽量无漏”可以成为**工程目标**。
+
+但：
+
+> **“所有秘密基地、没有网站的组织、未公开设施一个都不遗漏”在认识论上无法证明。**
+
+因为真正未公开对象没有完整可验证分母；“没有查到”既不能证明不存在，也不能证明已经查全。
+
+因此建议把最高目标改写成：
+
+> **已知世界无静默漏项；未知世界有正式席位。**
+
+即：
+
+```text
+VERIFIED
+OBSERVED
+INFERRED
+CLAIMED
+UNKNOWN
+RESTRICTED_NOT_INGESTED
+```
+
+最后两个状态与前四个一样，是合法结果。
+
+对于所谓“秘密基地”，建议只建立：
+
+```text
+PUBLICLY_ACKNOWLEDGED_FACILITY
+PUBLIC_RESEARCH_FACILITY
+PUBLIC_DEFENCE_FACILITY
+PUBLIC_SPACE_FACILITY
+```
+
+并允许：
+
+```text
+UNKNOWN_FACILITY_EXISTS
+location = NULL
+```
+
+而不是搜集、推断或聚合未公开军事／安全设施的精确坐标。
+
+这不是退化，而是**史家不妄书、名家先正名、墨家必验、兵家慎泄机**。
+
+---
+
+# 二、真正应统一的不是一套经纬度，而是“五种坐标”
+
+建议把现有 DAQIN-UCS 与 DUECG 正式分工。
+
+**DAQIN-UCS = 技术／组件坐标。**
+
+继续保留现有：
+
+```text
+DOM / LAYER / CLASS / NAME
+VERSION / ARCH / LOCUS / ROLE
+```
+
+它适合 Windows、Linux、GPU、数据库、AI、软件、硬件、云、算法。
+
+**DUECG = 天下万物实体坐标。**
+
+建议成为人物、企业、政府、研究所、天体、航天器、城市、虚拟世界的母坐标：
+
+```text
+DUECG::<WORLD_DOMAIN>/<ENTITY_TYPE>/<ENTITY_ID>
+      @<VALID_TIME>#<SPATIAL_FRAME>
+```
+
+再增加三个**属性而非主键**：
+
+```text
+JURISDICTION
+EVIDENCE_STATE
+SENSITIVITY_CLASS
+```
+
+这样同一个 SpaceX 不会因为换 CEO、地址或产品而换 `ENTITY_ID`；同一颗小行星也不会因为新轨道解出来就变成另一个实体。
+
+---
+
+# 三、空间必须分七域，千万不要拿 WGS84 统治银河系
+
+建议新增 `cosmic_domain`，而不是在 CSV 加更多 longitude/latitude 列：
+
+| 宇域 | 正确坐标体系 |
+|---|---|
+| `EARTH_SURFACE` | WGS84／ITRF／EPSG |
+| `EARTH_ORBIT` | GCRS／ITRF／TEME 等＋epoch |
+| `SOLAR_SYSTEM` | ICRS／BCRS／JPL SPICE frame |
+| `PLANETARY_SURFACE` | IAU body-fixed frame |
+| `GALACTIC` | ICRS＋Galactic／Galactocentric |
+| `EXTRAGALACTIC` | ICRS＋redshift／distance |
+| `VIRTUAL_SIM` | simulator-local frame＋transform |
+
+NASA 的 SPICE 本来就是为这种问题而设计：它管理惯性坐标、天体固定坐标、航天器坐标以及坐标之间随时间变化的转换。[naif.jpl.nasa.gov](https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/frames.html?utm_source=chatgpt.com)
+
+所以任何宇航／天体记录至少应有：
+
+```text
+spatial_frame
+frame_center
+epoch
+time_scale
+x/y/z
+vx/vy/vz
+position_uncertainty
+source_solution
+```
+
+没有 `frame + epoch + time_scale` 的“宇宙坐标”，原则上不得进入正式模型。
+
+---
+
+# 四、不要再造一张万能表；建议正式拆成 16 张“天下注册表”
+
+核心只要一张：
+
+```text
+registry_entity
+```
+
+专管永久身份：
+
+```text
+entity_id
+entity_type
+canonical_name
+world_domain
+valid_from
+valid_to
+status
+```
+
+然后让其他表围绕它旋转：
+
+| 表 | 管什么 |
+|---|---|
+| `registry_entity_alias` | 中文、英文、旧名、简称、品牌名、译名 |
+| `registry_external_id` | ISO、M49、LEI、ROR、GERS、Gaia、SIMBAD、NAIF 等 |
+| `registry_entity_relation` | 母子公司、主管、隶属、投资、合作、供应关系 |
+| `registry_entity_location` | 地球／轨道／天体坐标 |
+| `registry_country_area` | 现有 249 country/area |
+| `registry_admin_unit` | 现有 5,046 ISO 3166-2，再接 SALB |
+| `registry_legal_entity` | 国企、民企、法人 |
+| `registry_public_body` | 政府、政府机构、监管者 |
+| `registry_research_org` | 大学、实验室、科研院所 |
+| `registry_public_facility` | **仅公开确认**科研／宇航／公共／国防设施 |
+| `registry_space_org` | 航天局、企业、大学空间中心等 |
+| `registry_space_asset` | 卫星、探测器、航天器、任务 |
+| `registry_celestial_object` | 恒星、行星、卫星、小天体等 |
+| `registry_source` | 官网、法定申报、论文、数据库、开放资料 |
+| `registry_claim` | “某组织具备某能力”的一条主张 |
+| `registry_observation` | 真正测到的数值、时间、误差、版本 |
+
+再加一个最重要的桥：
+
+```text
+bridge_entity_external_id
+```
+
+例如：
+
+```text
+DUECG:E123
+ ↔ LEI:xxxx
+ ↔ ROR:xxxx
+ ↔ OpenAlex:Ixxxx
+ ↔ Wikidata:Qxxxx
+ ↔ GERS:UUID
+```
+
+这才是真正的“书同文”。
+
+---
+
+# 五、天下机构不能靠 Google 搜索；应采用“注册表联邦”
+
+### 地球实体
+
+地理实体我特别建议把 **Overture GERS** 纳入桥接层。它就是为不同来源描述同一个现实地物时的实体对齐而设计，给建筑、行政区、地点、道路等稳定开放 ID，并维护 registry、changelog 和 bridge files。[Overture Maps Foundation](https://overturemaps.org/gers/?utm_source=chatgpt.com)
+
+但 GERS 不能当您的永久主键，因为它自己也说明过 **2025-06-25 曾全量更换一次 ID**，且稳定承诺只覆盖 registry 内若干类型。[Overture 文档](https://docs.overturemaps.org/gers/stability/?utm_source=chatgpt.com)
+
+所以：
+
+> **DUECG ID 是王；GERS 是外部身份证之一。**
+
+这是关键设计。
+
+### 国企／民企／法人
+
+GLEIF 的 2026-10-01 Golden Copy 已有：
+
+- **3,449,487** 条 LEI；
+- **671,935** 条“谁拥有谁”关系记录；
+
+非常适合成为跨国法人身份桥，但 LEI 也不是全球所有企业。[GLEIF](https://www.gleif.org/en/lei-data/gleif-concatenated-file/download-the-concatenated-file?utm_source=chatgpt.com)
+
+所以完整链应是：
+
+```text
+各国官方工商登记
+→ GLEIF
+→ OpenCorporates
+→ Orbis / Capital IQ
+→ 公司官网／法定申报
+```
+
+不能倒过来。
+
+### 科学研究所／大学／实验室
+
+这里强烈建议新增 **ROR（Research Organization Registry，研究组织注册表）**。
+
+ROR 现在覆盖 **125,000+** 全球科研与资助组织，包括大学、企业、政府机构、医院、独立实验室、研究设施、博物馆等，而且开放 API、CC0、约每月更新。[Research Organization Registry (ROR)](https://ror.org/blog/2026-06-24-three-tips-for-requesting-ror-id/?utm_source=chatgpt.com)
+
+再接 **OpenAlex**。
+
+OpenAlex 当前机构层约 **13.5 万家机构**，而且明确以 ROR 为组织身份基础，再把这些机构连接到作者和科研成果。[OpenAlex 帮助中心](https://help.openalex.org/data/institutions/?utm_source=chatgpt.com)
+
+这两者组合正好解决您的：
+
+> “天下科学家—研究所—大学—公司—成果”
+
+链。
+
+---
+
+# 六、宇航不应该是一份“公司名单”，而是七张表
+
+IAF 当前确实已有 **604 个会员、82 个国家**，会员涵盖航天局、企业、科研机构、大学、协会和研究所。[IAF](https://www.iafastro.org/about/?utm_source=chatgpt.com)
+
+但绝不能说：
+
+> IAF 没列 = 这个机构不存在。
+
+正确架构是：
+
+```text
+space_organization
+space_program
+space_mission
+space_vehicle
+space_object
+space_facility_public
+space_research_output
+```
+
+一个组织可以：
+
+```text
+owns
+operates
+funds
+builds
+launches
+researches
+supplies
+regulates
+```
+
+这样一家做抗辐射芯片的小企业，即使没有火箭，也能进入宇航生态。
+
+---
+
+# 七、从太阳系扩大到银河系，现在已有极强的数据母库
+
+这里正是您“不该人工列名单”的最好证明。
+
+**JPL Horizons** 2026 年版已经能处理：
+
+- 156 万以上小行星；
+- 4,075 颗彗星；
+- 461 颗天然卫星；
+- 所有行星和太阳；
+- 253 个航天器；
+- L1/L2 等动力学点。 [ssd.jpl.nasa.gov](https://ssd.jpl.nasa.gov/horizons/manual.html?utm_source=chatgpt.com)
+
+
+**SIMBAD** 截至 2026-10-02 已有：
+
+- **22,156,709 个天文对象**
+- **73,028,791 个标识符** [simbad.cds.unistra.fr](https://simbad.cds.unistra.fr/simbad/?utm_source=chatgpt.com)
+
+
+**Gaia** 则观测接近 **20 亿颗恒星／源**。[gea.esac.esa.int](https://gea.esac.esa.int/archive/?utm_source=chatgpt.com)
+
+**NASA Exoplanet Archive** 截至 2026-10-01 已有 **6,375 颗确认系外行星**。[exoplanetarchive.ipac.caltech.edu](https://exoplanetarchive.ipac.caltech.edu/?utm_source=chatgpt.com)
+
+因此“银河万物表”如果人工制造，必败。
+
+应该：
+
+```text
+DUECG celestial entity
+      ↓ bridge
+SIMBAD
+Gaia
+JPL Horizons / NAIF
+MPC
+NASA Exoplanet Archive
+IAU nomenclature
+```
+
+尤其注意：Gaia 官方明确警告 `source_id` **不能保证跨 Data Release 指向同一物理对象**。这正说明为什么您必须拥有自己的稳定 `ENTITY_ID`，外部数据库 ID 只能放桥接表。[gea.esac.esa.int](https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html?utm_source=chatgpt.com)
+
+这是本轮我认为最重要的技术发现之一。
+
+---
+
+# 八、元宇宙必须与现实宇宙断开事实层
+
+您现有 v1.3.8 的 `WORLD_DOMAIN` 思路非常正确。
+
+我建议正式冻结：
+
+```text
+REAL
+  EARTH
+  EARTH_ORBIT
+  SOLAR_SYSTEM
+  GALACTIC
+  EXTRAGALACTIC
+
+DIGITAL_TWIN
+SIMULATION
+METAVERSE
+FICTION
+HISTORY
+```
+
+例如：
+
+```text
+Mars            REAL/SOLAR_SYSTEM
+Mars digital twin  DIGITAL_TWIN
+Stellaris Mars     FICTION
+元宇宙火星城        METAVERSE
+```
+
+名字虽然都叫 Mars，却绝不能进入同一个事实账。
+
+---
+
+# RedTeam
+
+目前最大的红队攻击不是“漏了一家公司”，而是以下四种灾难：
+
+**第一，实体爆炸。**  
+同一个集团、品牌、法人、子公司、实验室、网站被算成五个主体。
+
+**第二，坐标污染。**  
+经纬度、轨道状态向量、RA/Dec、虚拟世界 XYZ 全塞进 longitude/latitude。
+
+**第三，来源污染。**  
+官网、论文、商业数据库、论坛、“野网”、传闻都变成同等级证据。
+
+**第四，秘密设施幻觉。**  
+模型看见卫星影像或论坛传闻后自行“确认秘密基地”。
+
+最后一种必须直接冻结。
+
+---
+
+# Critic
+
+“建立天下所有高端机构名单”本身仍然带有严重**选择偏差**：
+
+什么叫“高端”？  
+营收？论文？算力？专利？军工任务？资本？高可靠认证？航天任务？
+
+所以不要先建立：
+
+```text
+is_top = TRUE
+```
+
+应该先保存事实：
+
+```text
+revenue
+research_output
+mission_count
+patent_count
+compute_capacity
+certification
+production_scale
+citation
+launch_history
+market_share
+```
+
+再由明确场景决定谁“更适合某问题”。
+
+这完全符合您 v1.3.8 已经确立的原则：**没有证据不得给分，默认不算“天下第一”。**
+
+---
+
+# KillCritic
+
+以下任一发生，我建议整批数据拒绝进入神经网络训练集：
+
+1. 没有稳定 `entity_id`；
+2. 没有 `source_id/source_uri`；
+3. 没有 `valid_time`；
+4. 没有 `transaction_time`；
+5. 地理记录没有 `spatial_frame`；
+6. 天体记录没有 epoch；
+7. 外部 ID 被当成永久内部主键；
+8. 品牌和法人混同；
+9. 母公司与创办人混同；
+10. 论坛传闻直接升成事实；
+11. 未公开设施被模型自行补坐标；
+12. `UNKNOWN` 被补成 `0`；
+13. `SIMULATION/FICTION` 数据流入 REAL；
+14. 证据更新时间未知。
+
+---
+
+# Blindspot
+
+还有三个目前尤其值得补：
+
+**时间旅行问题。**公司、边界、职位、设施、轨道都会变，所以必须双时间：
+
+```text
+valid_time
+transaction_time
+```
+
+**实体消歧问题。**同名公司、改名、并购、分拆比神经网络建模更早、更重要。
+
+**数据许可问题。**可查询 ≠ 可批量下载 ≠ 可训练模型 ≠ 可重新发布。
+
+所以 `registry_source` 应有：
+
+```text
+license
+redistribution_allowed
+ml_training_allowed
+commercial_use_allowed
+retention_rule
+```
+
+---
+
+# Cheatsheet
+
+最终“查天下”应该按对象择库：
+
+| 对象 | 第一身份证 |
+|---|---|
+| 国家／地区 | UN M49＋ISO |
+| 行政区 | ISO 3166-2＋UN SALB |
+| 地物／建筑／POI | Overture GERS |
+| 法人企业 | 本国 Registry＋GLEIF |
+| 科研机构 | ROR |
+| 科研成果／机构关联 | OpenAlex |
+| 航天组织 | IAF＋国家正式资料 |
+| 太阳系对象 | JPL Horizons／NAIF |
+| 小天体 | MPC |
+| 恒星／银河对象 | Gaia＋SIMBAD |
+| 系外行星 | NASA Exoplanet Archive |
+| 行星表面命名 | IAU |
+| 未公开敏感设施 | **不推断；UNKNOWN** |
+
+---
+
+# Blueprint
+
+我建议“大秦赋算筹”下一代数据层正式定为：
+
+```text
+                  ┌─ Country/Admin
+                  ├─ Legal Entity
+                  ├─ Government Body
+                  ├─ Research Organization
+                  ├─ Public Facility
+外部数据 ─桥接→ registry_entity
+                  ├─ Space Organization
+                  ├─ Space Asset
+                  ├─ Celestial Object
+                  ├─ AI/Software
+                  └─ Virtual/Simulation Entity
+                         │
+                         ▼
+                  entity_relation
+                         │
+            ┌────────────┼────────────┐
+            ▼            ▼            ▼
+      observation     claim        source
+            │            │            │
+            └────── provenance ───────┘
+                         │
+                         ▼
+                Feature / Graph Views
+                         │
+        ┌────────────────┼───────────────┐
+        ▼                ▼               ▼
+      统计模型          图神经网络        Transformer
+        │                GNN              │
+        └────────────────┼───────────────┘
+                         ▼
+                 决策／情景／数字孪生
+```
+
+**神经网络一定在最后。**
+
+不要让神经网络负责“什么是 SpaceX、哪个公司是不是同一家、Mars 属于哪个坐标系”。
+
+这些属于**本体（Ontology）＋实体解析（Entity Resolution）＋数据治理**问题。
+
+神经网络应该负责：
+
+- 多表表征学习；
+- 图谱嵌入；
+- 时序预测；
+- 聚类；
+- 异常检测；
+- 跨模态检索；
+- 情景模型。
+
+这样才能真正“跨数据表灵活搭配各维度”。
+
+---
+
+# ActionPlan
+
+我建议现在**不要修改那三张 v2.4 表的粒度**。
+
+下一阶段直接定名：
+
+> **DAQIN Global Entity Fabric（大秦天下万物实体织网）**
+
+先完成五关：
+
+**G0 正名关**：冻结 DUECG `ENTITY_ID`、`WORLD_DOMAIN`、`ENTITY_TYPE`。
+
+**G1 桥接关**：接 ISO/M49/GERS/LEI/ROR/OpenAlex/JPL/SIMBAD/Gaia/MPC/NASA IDs。
+
+**G2 血统关**：所有值进入 `source → claim → observation`，不直接写死在实体主表。
+
+**G3 时空关**：Earth／Orbit／Solar／Galactic／Virtual 各自使用正确参考系。
+
+**G4 模型关**：最后才建立供 NN/GNN/Transformer 使用的 materialized feature views。
+
+这样便可以做到：
+
+> **表可以无限增加，核心主键永远不变；新世界、新公司、新天体、新模型出现，都无需重建整个数据库。**
+
+这其实比继续把 `registry_country_area_iso3166_m49_e164_20261004.csv` 从 50 列扩成 500 列强一个数量级。
+
+我的首选方案因此是：
+
+> **不再“扩宽表”，改为“扩关系”。**
+>
+> **不追求天下一表，而追求天下一坐标。**
+>
+> **不声称天下尽知，而确保天下已知皆可归籍、未知皆有席位。**
+
+这与您 `_大秦赋算筹_v1_3_8.qmd` 已立下的“**书同文、车同轨、度同制、开放世界 schema**”恰好完全同路。
+
+那就先优化并升级`_大秦赋算筹_v1_3_8.qmd` 吧！务必在初步竣工后，再次核实、校对、查证、审阅`_大秦赋算筹_v1_3_8.qmd`内容，确保可以接上任何上下文、避免出现任何冲突、信息来源不符等等。
+
+题外话，无需记录进文件内，在下区分数据表跨表提速是基于物理局限欲打开天下一表会遇到内存常宽度等等技术问题而非闲情雅致粉刷多数据表来滥竽充数。
+
+已依照“**禁止退化、只能优化并强化**”完成 `_大秦赋算筹_v1_3_8.qmd` 的初步施工、随后第二轮独立复核，并正式升为 **v1.3.9「天下万物实体织网版」**。
+
+\_大秦赋算筹_v1_3_9.qmd[下载 `_大秦赋算筹_v1_3_9.qmd`](sandbox:/mnt/data/_大秦赋算筹_v1_3_9.qmd)
+
+### 此轮最重要的架构裁定
+
+没有另起炉灶。原来的三大核心被完整保留并重新正名：
+
+- **DAQIN-UCS**：继续负责软件、硬件、操作系统、GPU、数据库等“技术组件坐标”。
+- **UWOM（统一世界对象模型）**：继续作为应用层逻辑对象视图。
+- **DUECG（大秦万物统一能力谱）**：继续负责世界实体、能力、事实与模型接口。
+
+真正新增的是永久实体根号：
+
+```text
+DUECG-EID::<UUIDv7>
+```
+
+并把原来的：
+
+```text
+DUECG::<WORLD_DOMAIN>/<ENTITY_TYPE>/<ENTITY_ID>@<VALID_TIME>#<SPATIAL_FRAME>
+```
+
+由“通用主键”正式斧正为：
+
+> **事实切片坐标（Fact-Slice Coordinate）**
+
+这样同一家企业改名、迁址，同一颗卫星更新轨道，同一人物换职位，都不会因为时间或坐标变化重新“换身份证”。
+
+UUIDv7 本身已由 IETF RFC 9562 标准化；我也在二审中特别修正了一处潜在歧义：UUIDv7 前 48 bit 是**发号时的 Unix 毫秒时间**，绝不能解释成实体的成立时间、出生时间或 `valid_time`。[RFC 编辑器](https://www.rfc-editor.org/rfc/rfc9562.html)
+
+### 不再扩万能宽表，而是建立 DGEF
+
+新设：
+
+> **天下万物实体织网（Daqin Global Entity Fabric, DGEF）**
+
+核心分为：
+
+```text
+registry_entity
+registry_entity_type
+registry_entity_alias
+bridge_entity_external_id
+registry_entity_relation
+registry_entity_location
+
+registry_source
+registry_dataset
+registry_claim
+registry_observation
+registry_evidence_link
+registry_license_policy
+registry_schema_version
+```
+
+再由各域拥有自己的表：
+
+```text
+registry_country_area
+registry_admin_unit
+registry_legal_entity
+registry_public_body
+registry_research_org
+registry_public_facility
+
+registry_space_org
+registry_space_program
+registry_space_mission
+registry_space_asset
+registry_celestial_object
+registry_ephemeris_solution
+registry_astrobiology_evidence
+```
+
+因此从今以后不是“天下一表”，而是：
+
+> **天下一身份、天下一套坐标规则、百表各守其职。**
+
+这与您现有 v1.3.8 的“书同文、车同轨、度量衡一、开放世界 schema”是直接接榫，而不是另造体系。
+
+### 空间坐标也彻底拆正
+
+保留：
+
+```text
+WORLD_DOMAIN =
+HISTORY / REAL-TWIN / SIM / FICTION
+```
+
+另增与之正交的：
+
+```text
+COSMIC_DOMAIN =
+EARTH_SURFACE
+EARTH_SUBSURFACE
+EARTH_OCEAN
+EARTH_ATMOSPHERE
+EARTH_ORBIT
+CISLUNAR
+LUNAR_SURFACE
+SOLAR_SYSTEM
+GALACTIC
+EXTRAGALACTIC
+VIRTUAL_LOCAL
+```
+
+所以“真实火星”“火星数字孪生”“Stellaris 火星”以后不会再因名字相同混账。
+
+### 外部世界统一采用“身份证桥”
+
+永久身份由我方掌握，外部 ID 只是桥：
+
+```text
+DUECG-EID
+   ↕
+ISO / M49
+GLEIF / LEI
+Overture GERS
+ROR
+OpenAlex
+IAF
+JPL Horizons
+SIMBAD
+Gaia
+NASA Exoplanet Archive
+```
+
+这点二次核验尤其重要。Overture 官方 2026 文档确认：GERS 的稳定性承诺只适用于 registry 内特定类型；`2025-06-25.0` 曾整体切换 UUID，而且 addresses 当前仍不在稳定 registry，所以 GERS 很适合桥接，却不适合作为《大秦赋算筹》的永久根身份证。[Overture 文档](https://docs.overturemaps.org/gers/stability/)
+
+科研生态方面，ROR 官方 2026 年资料称其已有 **125,000+** 研究组织；数据为 CC0、提供 API 与 data dump，并持续更新。OpenAlex 当前也明确把 ROR 作为机构 canonical external identifier 的基础。[Research Organization Registry (ROR)](https://ror.org/blog/2026-06-24-three-tips-for-requesting-ror-id/)
+
+宇宙层则已经核到当前资料：JPL Horizons v4.98e 覆盖 156 万+小行星、4,075 彗星、461 天然卫星、253 航天器等；SIMBAD 在 2026-10-02 已登记 22,156,709 个对象、73,028,791 个 identifiers；NASA Exoplanet Archive 在 2026-10-01 为 6,375 颗已确认系外行星。[ssd.jpl.nasa.gov](https://ssd.jpl.nasa.gov/horizons/manual.html)
+
+---
+
+## 神经网络的位置也已经定正
+
+我特别没有让神经网络负责“谁是谁”。
+
+正式流程改成：
+
+```text
+原始来源
+   ↓
+实体解析 / 证据 / 许可 / 安全闸
+   ↓
+Canonical Facts
+   ↓
+Versioned Feature Views
+   ↓
+统计 / GBDT / HMM / GNN / Transformer
+   ↓
+Prediction / Scenario Ledger
+   ↓
+Human Review / Outcome
+```
+
+所以：
+
+> **模型永不拥有户籍权。**
+
+模型可以学习、预测、聚类、检索、建立 embedding，但不能因为 embedding 很像，就自行把两个公司合并成一家，也不能把模型输出倒写成现实事实。
+
+---
+
+## “秘密基地”问题也已纳入安全边界
+
+本版明确允许研究：
+
+- 公开确认科研设施；
+- 公开航天设施；
+- 公开政府设施；
+- 公开军事／国安设施的非操作性资料。
+
+但不建立：
+
+- 未公开敏感设施精确坐标；
+- 守备情况；
+- 薄弱点；
+- 进入路径；
+- 攻击链；
+- 破坏优化。
+
+未知则：
+
+```text
+UNKNOWN
+REDACTED
+RESTRICTED_NOT_INGESTED
+```
+
+而不是由 AI 根据卫星图、匿名论坛或碎片资料自行“发现秘密基地”。
+
+---
+
+# RedTeam / Critic / KillCritic / Blindspot
+
+新版新增完整 §44：
+
+- **15 项 RedTeam**
+- **6 项 Critic**
+- **16 条 KillCritic**
+- **10 项 Blindspot**
+- Cheatsheet
+- Blueprint
+- ActionPlan
+- 来源清单
+- 二次审阅结果
+
+特别冻结：
+
+> 外部 ID ≠ 永久主键  
+> 图关系 ≠ 同谋／忠诚／因果  
+> catalog 查无 ≠ 现实不存在  
+> UNKNOWN ≠ 0  
+> SIM/FICTION ≠ REAL-TWIN  
+> 模型预测 ≠ canonical fact
+
+---
+
+## 第二轮重新审阅发现并修复的旧问题
+
+初步竣工后并没有立即签发，而是重新扫描全文。
+
+结果又抓出父版一个旧 Markdown 表格问题：
+
+`C-DAQIN-54` 原来实际上被拆成三行，另外 `C-DAQIN-58` 的正则表达式含未转义 `|`，有机会破坏 Markdown 表格解析。
+
+两处均已修复。
+
+最终检查：
+
+- YAML：**PASS**
+- 顶层章节：**0–44 连续**
+- 顶层撞号：**0**
+- 顶层缺号：**0**
+- C-DAQIN：**1–83 连续保留**
+- v1.3.8 原 44 个顶层章：**全部继承**
+- Markdown table 列数异常：**0**
+- fenced code：**成对**
+- Pandoc 3.1.11.1 全文解析：**PASS**
+- v2.4 三件输入文件 MD5/SHA-256：**重新逐位核对 PASS**
+- 新增外部资料：**第二轮重新查证 PASS**
+
+唯一没有假装完成的是：当前容器**没有 Quarto CLI**，所以我没有写“HTML/PDF Quarto 完整 render PASS”。文件中已经如实记录 `NOT RUN`。
+
+### 最终签发
+
+**14,449 行**  
+**764,338 bytes**
+
+MD5：
+
+`2b798499e9a0624064c75d7eb2b2c22f`
+
+SHA-256：
+
+`6827010333512db7634976ade0c46e80a4ec2e477acac64c02b52a74bf8d91dc`
+
+\_大秦赋算筹_v1_3_9.qmd[下载最终签发 `_大秦赋算筹_v1_3_9.qmd`](sandbox:/mnt/data/_大秦赋算筹_v1_3_9.qmd)
+
+这版可以把总纲的新工程军令浓缩成一句：
+
+> **书同文：同一实体有一根身份；车同轨：异源皆可桥接归轨；百表分职而不争权，模型用数而不得篡改事实之籍。**

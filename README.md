@@ -106,3 +106,8 @@ online-gaming-decision-intelligence-lab
 ---
 
 **OGDIL v0.1.0** | 以科学的严谨与工程的卓越构建。
+
+
+## DGEF global entity fabric
+
+[大秦天下万物实体织网：已施工数据表与验收](DGEF/README.md)。全球范围、稳定身份、多表关联、来源与未知状态分职；保留现有CSV粒度。

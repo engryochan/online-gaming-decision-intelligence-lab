@@ -1,0 +1,405 @@
+﻿table,table_name_zh,grain,column,sql_type,not_null,primary_key,null_semantics,business_definition,example_use
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,bridge_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,bridge id；定义受所属表粒度与SQL约束限定,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,id_system,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,id system；定义受所属表粒度与SQL约束限定,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,external_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,external id；定义受所属表粒度与SQL约束限定,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,external_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,外部命名空间发布版或快照日期,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,match_method,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,match method；定义受所属表粒度与SQL约束限定,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,match_score,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,实体匹配分数，仅用于人工复核，不自动合并,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,review_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,review status；定义受所属表粒度与SQL约束限定,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,外部命名空间+版本+有效起点的映射
+bridge_entity_external_id,外号桥接,外部命名空间+版本+有效起点的映射,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,外部命名空间+版本+有效起点的映射
+cosmic_domain,宇域,一种空间域,domain_code,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,domain code；定义受所属表粒度与SQL约束限定,一种空间域
+cosmic_domain,宇域,一种空间域,name_zh,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,name zh；定义受所属表粒度与SQL约束限定,一种空间域
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,adapter_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,adapter id；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,id_system,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,id system；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,canonical_uri,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,canonical uri；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,target_table,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,target table；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,version_required,INTEGER,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,version required；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,status；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,license_review,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,license review；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_adapter_contract,异源接榫,一个外部库接入合同；不冒充已下载,notes,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,notes；定义受所属表粒度与SQL约束限定,一个外部库接入合同；不冒充已下载
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,entity_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,subdivision_code,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,subdivision code；定义受所属表粒度与SQL约束限定,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,country_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,country entity id；定义受所属表粒度与SQL约束限定,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,name,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,name；定义受所属表粒度与SQL约束限定,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,unit_type,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,unit type；定义受所属表粒度与SQL约束限定,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,parent_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,parent entity id；定义受所属表粒度与SQL约束限定,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,baseline_json,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,原CSV一整行逐字段保留，不自动视为真实事实,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,原ISO3166-2快照的一行
+registry_admin_unit,行政区籍,原ISO3166-2快照的一行,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,原ISO3166-2快照的一行
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,evidence_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,evidence kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,finding_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,finding status；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,claim_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,claim id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_astrobiology_evidence,生命证据,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,object_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,object kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,catalog_solution,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,catalog solution；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_celestial_object,天体,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_claim,主张账,一条可以被支持或反驳的主张,claim_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,claim id；定义受所属表粒度与SQL约束限定,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,subject_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,subject entity id；定义受所属表粒度与SQL约束限定,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,predicate,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,predicate；定义受所属表粒度与SQL约束限定,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,value_json,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,value json；定义受所属表粒度与SQL约束限定,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,confidence,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,confidence；定义受所属表粒度与SQL约束限定,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,claim_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,claim status；定义受所属表粒度与SQL约束限定,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一条可以被支持或反驳的主张
+registry_claim,主张账,一条可以被支持或反驳的主张,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一条可以被支持或反驳的主张
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,entity_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,iso_alpha2,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,iso alpha2；定义受所属表粒度与SQL约束限定,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,iso_alpha3,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,iso alpha3；定义受所属表粒度与SQL约束限定,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,iso_numeric,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,iso numeric；定义受所属表粒度与SQL约束限定,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,un_m49_code,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,un m49 code；定义受所属表粒度与SQL约束限定,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,calling_code,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,calling code；定义受所属表粒度与SQL约束限定,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,baseline_json,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,原CSV一整行逐字段保留，不自动视为真实事实,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,原country/area快照的一行，不作政治裁定
+registry_country_area,国家地区籍,原country/area快照的一行，不作政治裁定,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,原country/area快照的一行，不作政治裁定
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,coverage_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,coverage id；定义受所属表粒度与SQL约束限定,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,country_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,country entity id；定义受所属表粒度与SQL约束限定,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,layer,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,layer；定义受所属表粒度与SQL约束限定,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,status；定义受所属表粒度与SQL约束限定,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,numerator,INTEGER,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,numerator；定义受所属表粒度与SQL约束限定,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,denominator,INTEGER,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可验证总量；未知为NULL，不能宣称覆盖100%,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,gap_reason,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,gap reason；定义受所属表粒度与SQL约束限定,国家地区×对象层；未知分母NULL
+registry_coverage,覆盖缺口,国家地区×对象层；未知分母NULL,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,国家地区×对象层；未知分母NULL
+registry_dataset,资料版本,一个数据集快照,dataset_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,dataset id；定义受所属表粒度与SQL约束限定,一个数据集快照
+registry_dataset,资料版本,一个数据集快照,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个数据集快照
+registry_dataset,资料版本,一个数据集快照,dataset_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,dataset version；定义受所属表粒度与SQL约束限定,一个数据集快照
+registry_dataset,资料版本,一个数据集快照,file_sha256,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,file sha256；定义受所属表粒度与SQL约束限定,一个数据集快照
+registry_dataset,资料版本,一个数据集快照,row_count,INTEGER,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,row count；定义受所属表粒度与SQL约束限定,一个数据集快照
+registry_dataset,资料版本,一个数据集快照,imported_at,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,imported at；定义受所属表粒度与SQL约束限定,一个数据集快照
+registry_entity,实体正名,一个不因改名迁址换号的实体,entity_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,entity_type,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,entity type；定义受所属表粒度与SQL约束限定,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,canonical_name,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,canonical name；定义受所属表粒度与SQL约束限定,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,world_domain,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,HISTORY/REAL-TWIN/SIM/FICTION，保留现行四域,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,status；定义受所属表粒度与SQL约束限定,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个不因改名迁址换号的实体
+registry_entity,实体正名,一个不因改名迁址换号的实体,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个不因改名迁址换号的实体
+registry_entity_alias,异名同籍,实体的一个有时间别名,alias_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,alias id；定义受所属表粒度与SQL约束限定,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,alias,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,alias；定义受所属表粒度与SQL约束限定,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,language_tag,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,language tag；定义受所属表粒度与SQL约束限定,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,alias_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,alias kind；定义受所属表粒度与SQL约束限定,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,实体的一个有时间别名
+registry_entity_alias,异名同籍,实体的一个有时间别名,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,实体的一个有时间别名
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,location_observation_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,location observation id；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,cosmic_domain,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,空间物理域，与世界域正交,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,spatial_frame,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,spatial frame；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,central_body,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,central body；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,epoch,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,位置或星历的历元，必须结合时标,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,time_scale,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,time scale；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,geometry_ref,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,geometry ref；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,x,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,x；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,y,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,y；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,z,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,z；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,vx,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,vx；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,vy,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,vy；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,vz,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,vz；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,position_unit,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,position unit；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,velocity_unit,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,velocity unit；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,uncertainty_ref,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,uncertainty ref；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,source_solution,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,source solution；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,disclosure_precision,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,disclosure precision；定义受所属表粒度与SQL约束限定,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一次参考系+历元+时标+来源解的位置
+registry_entity_location,位置观测,一次参考系+历元+时标+来源解的位置,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一次参考系+历元+时标+来源解的位置
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,relation_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,relation id；定义受所属表粒度与SQL约束限定,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,subject_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,subject entity id；定义受所属表粒度与SQL约束限定,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,predicate,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,predicate；定义受所属表粒度与SQL约束限定,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,object_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,object entity id；定义受所属表粒度与SQL约束限定,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一条有来源与双时间的有向关系
+registry_entity_relation,实体关系,一条有来源与双时间的有向关系,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一条有来源与双时间的有向关系
+registry_entity_status_history,沿革,一次状态时期,history_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,history id；定义受所属表粒度与SQL约束限定,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,status；定义受所属表粒度与SQL约束限定,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一次状态时期
+registry_entity_status_history,沿革,一次状态时期,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一次状态时期
+registry_entity_type,名籍类型,一种实体类型,type_code,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,type code；定义受所属表粒度与SQL约束限定,一种实体类型
+registry_entity_type,名籍类型,一种实体类型,name_zh,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,name zh；定义受所属表粒度与SQL约束限定,一种实体类型
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,frame_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,frame id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,epoch,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,位置或星历的历元，必须结合时标,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,time_scale,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,time scale；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,position_unit,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,position unit；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,velocity_unit,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,velocity unit；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,solution_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,solution version；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_ephemeris_solution,星历解,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_evidence_link,互证账,主张与证据的一条对应,evidence_link_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,evidence link id；定义受所属表粒度与SQL约束限定,主张与证据的一条对应
+registry_evidence_link,互证账,主张与证据的一条对应,claim_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,claim id；定义受所属表粒度与SQL约束限定,主张与证据的一条对应
+registry_evidence_link,互证账,主张与证据的一条对应,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,主张与证据的一条对应
+registry_evidence_link,互证账,主张与证据的一条对应,observation_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,observation id；定义受所属表粒度与SQL约束限定,主张与证据的一条对应
+registry_evidence_link,互证账,主张与证据的一条对应,direction,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,direction；定义受所属表粒度与SQL约束限定,主张与证据的一条对应
+registry_evidence_link,互证账,主张与证据的一条对应,locator,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,locator；定义受所属表粒度与SQL约束限定,主张与证据的一条对应
+registry_evidence_link,互证账,主张与证据的一条对应,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,主张与证据的一条对应
+registry_external_id,外号目录,尚可不绑定实体的外部ID,external_key,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,external key；定义受所属表粒度与SQL约束限定,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,id_system,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,id system；定义受所属表粒度与SQL约束限定,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,external_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,external id；定义受所属表粒度与SQL约束限定,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,external_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,外部命名空间发布版或快照日期,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,尚可不绑定实体的外部ID
+registry_external_id,外号目录,尚可不绑定实体的外部ID,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,尚可不绑定实体的外部ID
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,facility_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,facility entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,service_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,service kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_ground_facility_public,公开地面设施,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,infrastructure_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,infrastructure kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,operator_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,operator entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_infrastructure,基础设施,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,jurisdiction_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,jurisdiction entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,legal_form,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,legal form；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,registration_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,registration status；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_legal_entity,法人,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,policy_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,policy id；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,license,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,license；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,redistribution_allowed,INTEGER,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,redistribution allowed；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,ml_training_allowed,INTEGER,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,ml training allowed；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,commercial_use_allowed,INTEGER,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,commercial use allowed；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,retention_rule,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,retention rule；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_license_policy,用数许可,一个有时间的许可评估；NULL=未知,assessed_at,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,assessed at；定义受所属表粒度与SQL约束限定,一个有时间的许可评估；NULL=未知
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,observation_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,observation id；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,metric_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,metric id；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,value,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,观测数值，未知为NULL；零必须是实际零,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,unit,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,unit；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,sample_n,INTEGER,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,sample n；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,uncertainty,REAL,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,uncertainty；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,method_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,method id；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,claim_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,claim id；定义受所属表粒度与SQL约束限定,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个实体某指标的一次观测；NULL非零
+registry_observation,观测账,一个实体某指标的一次观测；NULL非零,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个实体某指标的一次观测；NULL非零
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,person_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,person entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,organization_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,organization entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,role_title,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,role title；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_person_public_role,公开任职,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,jurisdiction_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,jurisdiction entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,mandate,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,mandate；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_public_body,公署,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,facility_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,facility kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,public_acknowledgment_uri,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,public acknowledgment uri；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,operator_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,operator entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_public_facility,公开设施,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,org_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,org kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,research_scope,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,research scope；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_research_org,学府研究组织,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_schema_version,度制版本,一次schema发布,version,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,version；定义受所属表粒度与SQL约束限定,一次schema发布
+registry_schema_version,度制版本,一次schema发布,installed_at,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,installed at；定义受所属表粒度与SQL约束限定,一次schema发布
+registry_schema_version,度制版本,一次schema发布,description,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,description；定义受所属表粒度与SQL约束限定,一次schema发布
+registry_settlement,聚落,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,settlement_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,settlement kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,country_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,country entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_settlement,聚落,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,virtual_world_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,virtual world entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,model_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,model version；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,random_seed,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,random seed；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,started_at,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,started at；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,finished_at,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,finished at；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_simulation_run,模拟运行,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_source,证据出处,一个来源文档或可核验入口,source_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,publisher,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,publisher；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,source_type,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,source type；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,canonical_uri,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,canonical uri；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,access_class,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,access class；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,publication_date,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,publication date；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,retrieved_at,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,retrieved at；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,content_hash,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,content hash；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,policy_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,policy id；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_source,证据出处,一个来源文档或可核验入口,verification_scope,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,verification scope；定义受所属表粒度与SQL约束限定,一个来源文档或可核验入口
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,asset_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,asset kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,mission_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,mission entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,operational_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,operational status；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_space_asset,宇航资产,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,program_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,program entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,mission_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,mission status；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_space_mission,宇航任务,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,org_role,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,org role；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_space_org,宇航组织,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,lead_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,lead entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,program_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,program status；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_space_program,宇航计划,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,title,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,title；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,doi,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,doi；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,organization_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,organization entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_space_research_output,宇航研究成果,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,vehicle_kind,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,vehicle kind；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,operational_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,operational status；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_space_vehicle,宇航运载器,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,frame_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,frame id；定义受所属表粒度与SQL约束限定,一个明确中心轴和单位的参考系
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,cosmic_domain,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,空间物理域，与世界域正交,一个明确中心轴和单位的参考系
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,center_name,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,center name；定义受所属表粒度与SQL约束限定,一个明确中心轴和单位的参考系
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,axis_definition,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,axis definition；定义受所属表粒度与SQL约束限定,一个明确中心轴和单位的参考系
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,position_unit,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,position unit；定义受所属表粒度与SQL约束限定,一个明确中心轴和单位的参考系
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,velocity_unit,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,velocity unit；定义受所属表粒度与SQL约束限定,一个明确中心轴和单位的参考系
+registry_spatial_frame,时空度制,一个明确中心轴和单位的参考系,reference_uri,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,reference uri；定义受所属表粒度与SQL约束限定,一个明确中心轴和单位的参考系
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,simulation_run_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,simulation run id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,population_count,INTEGER,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,population count；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,generation_method,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,generation method；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_synthetic_population,合成人口,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,virtual_world_entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,virtual world entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_virtual_entity,虚拟实体,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,engine_name,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,engine name；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,engine_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,engine version；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,local_frame,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,local frame；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,source_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,可追溯证据入口外键,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,evidence_state,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,证据状态；导入旧表不得自动升级为已查证,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
+registry_virtual_world,虚拟世界,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,catalogue_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,catalogue id；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,name,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,name；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,category,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,category；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,verification_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,verification status；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,verification_url,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,verification url；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,verified_scope,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,verified scope；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,raw_json,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,raw json；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,dataset_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,dataset id；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,candidate_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,未经审核的目录行不自动进入实体正籍,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,resolution_status,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,resolution status；定义受所属表粒度与SQL约束限定,目录一行；合并品牌不得自动入法人籍
+staging_service_catalogue,候选供应商,目录一行；合并品牌不得自动入法人籍,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,目录一行；合并品牌不得自动入法人籍
