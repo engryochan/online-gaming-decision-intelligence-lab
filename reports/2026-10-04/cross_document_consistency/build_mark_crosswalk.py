@@ -11,13 +11,19 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-REGISTRY = ROOT / "reports/2026-10-04/tables/01_services/strategy_services_registry.csv"
+SERVICES = ROOT / "reports/2026-10-04/tables/01_services"
+# 以最新已签发之名录版本为准（r3 > r2 > 原表）。
+REGISTRY = max(SERVICES.glob("strategy_services_registry_20261004_r*.csv"), default=SERVICES / "strategy_services_registry.csv",
+               key=lambda p: int(p.stem.rsplit("_r", 1)[1]))
 BATCH = HERE / "tables/u_review_batch01.csv"
 MD = ROOT / "Reference/真实版人物分析与治国策略服务_名录与九十日行令_v2_4_全球行政通信宇航生命证据增强版_20261004.md"
 OUT = HERE / "tables/mark_crosswalk.csv"
 
-ROW = re.compile(r"^\|\s*(\d{1,3})\s*([★◎○△\s]*)\|(.*)$")
+ROW = re.compile(r"^\|\s*(\d{1,3})\s*([★◎○△→\s]*)\|(.*)$")
+CDC08 = re.compile(r"〔CDC-08：([^〕]*)〕")
 # 过短或过泛之词元易误配，不用作匹配键。
+# 已人工确认之误配：(名录 ID, 正文条目) → 理由。
+EXCLUDE = {("E0196", "49"): "名录 E0196 为阿里云平台；正文 #49 所指为阿里云城市大脑（E0098），子串误配"}
 STOP = {"AI", "API", "R", "IAF", "UN", "Pro", "Group", "Inc", "Lab", "Data", "Labs", "One", "SES", "PPI"}
 
 
@@ -30,9 +36,13 @@ def catalogue_rows():
             continue
         num, marks, rest = m.groups()
         name_cell = rest.split("|")[0]
+        # “○→◎”：箭头后为现行标记，箭头前留作历史。
+        current = marks.split("→")[-1]
+        note = CDC08.search(line)
         if num not in rows:
-            rows[num] = dict(num=num, marks="".join(sorted(set(marks.replace(" ", "")))),
-                             name_cell=name_cell.strip(), line=no)
+            rows[num] = dict(num=num, marks="".join(sorted(set(current.replace(" ", "")))),
+                             name_cell=name_cell.strip(), line=no,
+                             partial=note.group(1) if note else "")
     return rows
 
 
@@ -131,7 +141,8 @@ def main():
     cat = catalogue_rows()
     sources = source_lines()
     proposed = {}
-    if BATCH.exists():
+    # 已签发版本（r2 以降）已含各批裁定；只有对原表时才叠加第一批拟定。
+    if BATCH.exists() and not REGISTRY.stem.rsplit("_", 1)[-1].startswith("r"):
         with BATCH.open(encoding="utf-8-sig") as f:
             proposed = {r["id"]: r["proposed_status"] for r in csv.DictReader(f)}
     with REGISTRY.open(encoding="utf-8-sig") as f:
@@ -149,7 +160,13 @@ def main():
             continue
         status = proposed.get(r["id"], r["status"])
         src_url, src_line, src_basis = find_source(toks, sources)
+        hits = [(c, m) for c, m in hits if (r["id"], c["num"]) not in EXCLUDE]
         for c, matched in hits:
+            marks = c["marks"]
+            for part in c["partial"].split("；"):
+                if "已 ◎" in part and any(token_in(tk, part) for tk in matched):
+                    marks = "◎"
+            c = dict(c, marks=marks)
             out.append(dict(
                 registry_id=r["id"], registry_name=r["name"], registry_status=r["status"],
                 registry_status_after_batch01=status, doc_entry=c["num"], doc_marks=c["marks"],
@@ -164,6 +181,7 @@ def main():
         w.writeheader()
         w.writerows(out)
     linked = {o["registry_id"] for o in out}
+    print(f"名录版本 {REGISTRY.name}")
     print(f"目录行 {len(cat)}；名录 {len(registry)} 条中 {len(linked)} 条可回指；对照 {len(out)} 行")
     print(Counter(o["relation"] for o in out))
     first = {}

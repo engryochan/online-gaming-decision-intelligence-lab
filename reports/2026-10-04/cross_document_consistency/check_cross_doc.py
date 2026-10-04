@@ -102,11 +102,12 @@ def check_mark_crosswalk():
     for r in rows:
         if r["proposal"] in ("REVIEW_FOR_V", "UPDATE_DOC_MARK"):
             pending.setdefault(r["proposal"], set()).add(r["registry_id"])
-    adj = Path(__file__).resolve().parent / "tables/v_candidate_adjudication.csv"
-    if adj.exists():
-        import csv
+    import csv
+    done = set()
+    for adj in (Path(__file__).resolve().parent / "tables").glob("*adjudication.csv"):
         with adj.open(encoding="utf-8-sig") as f:
-            done = {r["registry_id"] for r in csv.DictReader(f)}
+            done |= {r["registry_id"] for r in csv.DictReader(f)}
+    if done:
         left = pending.get("REVIEW_FOR_V", set()) - done
         if left:
             pending["REVIEW_FOR_V"] = left

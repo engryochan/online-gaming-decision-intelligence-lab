@@ -20,9 +20,12 @@ BASE = ROOT / "reports/2026-10-04/tables/01_services/strategy_services_registry.
 RELEASES = {
     "r2": ("tables/v_candidate_adjudication.csv",),
     "r3": ("tables/v_candidate_adjudication.csv", "tables/u_review_batch02_adjudication.csv"),
+    "r4": ("tables/v_candidate_adjudication.csv", "tables/u_review_batch02_adjudication.csv",
+           "tables/u_review_batch03_adjudication.csv"),
 }
 BATCH_NAME = {"tables/v_candidate_adjudication.csv": "CDC-05",
-              "tables/u_review_batch02_adjudication.csv": "u_review_batch02"}
+              "tables/u_review_batch02_adjudication.csv": "u_review_batch02",
+              "tables/u_review_batch03_adjudication.csv": "u_review_batch03"}
 RELEASE = sys.argv[1] if len(sys.argv) > 1 else "r2"
 R2 = ROOT / f"reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_{RELEASE}.csv"
 LOG = HERE / f"tables/registry_{RELEASE}_changes.csv"
@@ -54,14 +57,22 @@ def main():
     for path in RELEASES[RELEASE]:
         batch = BATCH_NAME[path]
         for r in load(HERE / path):
-            assert r["registry_id"] not in updates, f"{r['registry_id']} 多批重复"
-            updates[r["registry_id"]] = dict(status=r["final_status"], url=r["evidence_url"],
-                                             scope=r["note"], batch=batch, at=r["checked_at"][:10])
+            rid = r["registry_id"]
+            # 不变量：本批所记之 prior_status 须等于此刻该行之真实状态（原表或前批结果）。
+            current = updates[rid]["status"] if rid in updates else by_id[rid]["status"]
+            assert r["prior_status"] == current, f"{rid} prior_status {r['prior_status']} ≠ 当前 {current}"
+            # 后批改判前批：只许带 supersedes 栏之批次，且所改判者须与前批记录一致。
+            if rid in updates:
+                assert r.get("supersedes") == updates[rid]["batch"], f"{rid} 多批重复而未声明改判"
+                batch_label = f"{batch}（改判 {updates[rid]['batch']}）"
+            else:
+                batch_label = batch
+            updates[rid] = dict(status=r["final_status"], url=r["evidence_url"],
+                                scope=r["note"], batch=batch_label, at=r["checked_at"][:10])
 
     log = []
     for rid, u in updates.items():
         old = by_id[rid]
-        assert old["status"] == "U", f"{rid} 原状态非 U：{old['status']}"
         new = dict(old)
         new["status"] = u["status"]
         if u["status"] in ("V", "P") and u["url"]:

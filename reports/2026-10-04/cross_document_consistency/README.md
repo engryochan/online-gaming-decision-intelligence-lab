@@ -11,8 +11,8 @@
 
 | 文件 | 修订前 | 修订后 |
 |---|---|---|
-| 名录 v2.4 | 50d0415ed7375c6ae111e91d040673da6d9d971312daf398a9a1c01cdd20a35f | b8afae48bb313fa2dbbc71af24619d185c9153993bed2b537766dd70c68ad76a |
-| _大秦赋算筹_v1_3_9.qmd | d1e0d29026976a3e5a7e3c2561308ddffe093a15326e194da65a2720f7e9753e | 5a4e40fa7e946c30f456226d64c72f7dc2358706213b4588c37fcc3dbb843fc6 |
+| 名录 v2.4 | 50d0415ed7375c6ae111e91d040673da6d9d971312daf398a9a1c01cdd20a35f | 89a15078015504244db5568b44ae57228f8879d3e45f956927ed437e1c2f1e8b |
+| _大秦赋算筹_v1_3_9.qmd | d1e0d29026976a3e5a7e3c2561308ddffe093a15326e194da65a2720f7e9753e | 4ada945439fd18460726bdda15bf774690ad6d26a23ddd31a4baf19a5c08af56 |
 
 ## 结论
 
@@ -57,3 +57,11 @@
 - `merge_registry_r2.py r2|r3` 可重建，r2 重跑字节不变；回执 `registry_r2_receipt.json`、`registry_r3_receipt.json`。
 - 对账脚本新增：回执哈希须等于实物、已签发版本短哈希须入档、原名录须仍为 DGEF 基线。
 - 官网所见变化：人大金仓→电科金仓；NIST CAISI→CAISSI 页面；Salesforce Einstein→Agentforce。
+
+## CDC-08 目录标记写回、第三批与 r4
+
+- 名录 v2.4 目录行就地更正：8 行 `○→◎`，6 行部分核注记，5 行注明复验受阻；旧标记保留可见。
+- 第三批 15 条（替代官方页）：12 V、2 P、1 U；含对前批之改判（`supersedes` 栏）。
+- r4（`30e97820…`，现行）：V269/P22/U114；r2、r3 重跑字节不变。
+- 自我更正：SC-01 PolicyMaker 5 前批判 P 过保守；SC-02 核验快照不宜整批重抓；SC-03 对照脚本旧批叠加缺陷与合并不变量收紧。
+- 复渲染 qmd 副本通过；DGEF 16 项测试通过。

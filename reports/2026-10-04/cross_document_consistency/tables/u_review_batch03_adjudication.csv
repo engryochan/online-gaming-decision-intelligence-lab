@@ -1,0 +1,16 @@
+﻿registry_id,registry_name,prior_status,final_status,basis,evidence_url,cited_url,cited_url_http,note,checked_at,supersedes
+E0091,PolicyMaker 5,P,V,MANUAL_REVIEW,https://michaelrreich.com/policymaker-software/,https://michaelrreich.com/policymaker-software/,200,Michael Reich 官网（polimap.com 跳转至此）载“A new web-based version of PolicyMaker 5 is available”；改判第一批之 P——当时只检得 2.0／2.2，判断过于保守（SC-01）,2026-10-04T12:04:24+00:00,u_review_batch01
+E0120,Polymarket,P,V,MANUAL_REVIEW,https://polymarket.com/,https://polymarket.com/,200,官网自述为预测市场；美国监管路径仍只有媒体口径，未读 CFTC 一手文件,2026-10-04T12:04:23+00:00,u_review_batch01
+E0121,Kalshi,P,P,MANUAL_REVIEW,https://kalshi.com/,https://kalshi.com/,429,kalshi.com 出 Vercel 安全检查页，未绕过；维持第一批 P,2026-10-04T12:04:23+00:00,u_review_batch01
+E0127,Bloomberg / Bloomberg Government,U,V,AUTOMATED,https://www.bgov.com/,https://www.bgov.com/,200,替代官方页内见“Bloomberg Government”；标题：Bloomberg Government,2026-10-04T12:04:23+00:00,u_review_batch02
+E0193,Google / DeepMind / Google Cloud / Vertex AI,U,V,MANUAL_REVIEW,https://deepmind.google/,https://deepmind.google/,200,同日首轮脚本请求读得标题“Google DeepMind”；补入 Polis 后重跑时该站返回空页（线上页面不稳定），经内置浏览器复读确认。教训：核验快照不宜整批重抓，只宜增补,2026-10-04T12:04:23+00:00,
+E0202,Meta / Llama,U,V,AUTOMATED,https://dev.meta.ai/,https://www.llama.com/,200,替代官方页内见“Llama”；标题：Products & Solutions for AI Developers | Meta,2026-10-04T12:04:24+00:00,
+E0206,NVIDIA / CUDA / Omniverse,U,V,AUTOMATED,https://developer.nvidia.com/cuda/toolkit,https://developer.nvidia.com/cuda-toolkit,200,替代官方页内见“CUDA”；标题：CUDA Toolkit - Free Tools and Training | NVIDIA Developer,2026-10-04T12:04:23+00:00,
+E0250,ICEWS,U,V,MANUAL_REVIEW,https://dataverse.harvard.edu/dataverse/icews,https://dataverse.harvard.edu/dataverse/icews,202,内置浏览器读得 Harvard Dataverse 之 ICEWS 数据集页；页载维护方为 Leidos 等（transitioned from Lockheed Martin）,2026-10-04T12:04:23+00:00,
+E0268,India MCA,U,U,MANUAL_REVIEW,https://www.mca.gov.in/content/mca/global/en/home.html,https://www.mca.gov.in/content/mca/global/en/home.html,403,mca.gov.in 对脚本拒绝访问，前批 data.gov.in 亦连接失败；未绕过,2026-10-04T12:04:23+00:00,CDC-05
+E0283,OCHA COD / HDX,U,V,AUTOMATED,https://data.humdata.org/,https://data.humdata.org/,200,替代官方页内见“Humanitarian Data Exchange+HDX”；标题：Humanitarian Data Exchange | Find & Use Crisis Data | HDX,2026-10-04T12:04:24+00:00,
+E0287,NASA Earthdata,P,V,AUTOMATED,https://www.earthdata.nasa.gov/,https://www.earthdata.nasa.gov/,200,替代官方页内见“Earthdata”；标题：Your Gateway to NASA Earth Observation Data | NASA Earthdata,2026-10-04T12:04:24+00:00,CDC-05
+E0321,Apple,U,V,AUTOMATED,https://www.apple.com/,https://www.apple.com/,200,替代官方页内见“Apple”；标题：Apple,2026-10-04T12:04:24+00:00,
+E0355,Forbes Global 2000,P,V,AUTOMATED,https://www.forbes.com/lists/global2000/,https://www.forbes.com/lists/global2000/,200,替代官方页内见“Global 2000”；标题：Forbes 2026 Global 2000 List - The World’s Largest Companies,2026-10-04T12:04:24+00:00,CDC-05
+E0124,S&P Capital IQ Pro,U,P,MANUAL_REVIEW,https://www.capitaliq.spglobal.com/,https://www.capitaliq.spglobal.com/,200,只到官方登录页，页显 S&P Capital IQ Pro 产品名；定位说明未能读取,2026-10-04T12:04:24+00:00,CDC-05
+E0079,Polis / Computational Democracy Project,P,V,MANUAL_REVIEW,https://compdemocracy.org/,https://compdemocracy.org/,200,Computational Democracy Project 官网与 pol.is 均可读；改判原表 P,2026-10-04T12:04:29+00:00,

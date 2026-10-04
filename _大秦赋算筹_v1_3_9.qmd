@@ -14784,3 +14784,35 @@ V 之范围：官网可达，主体自述可见；不证效果、价格、授权
 | U | 330 | 256 | 122 |
 
 **现行效力总索引再增补：服务名录之现行版本为 r3。**
+
+### 45.10.11 CDC-08 · 目录标记写回、第三批与名录 r4（同日续核）
+
+经用户“全依您”授权，本轮把对照结果**写回本文目录行**，并以替代官方页复核其余分歧。
+
+**一、目录行就地更正（只增不删）**：旧标记保留可见，现行标记写于箭头之后；注记附于行末栏内，表格栏数不变。对账脚本已改为读取箭头后之现行标记，并按行内〔CDC-08〕注记逐主体判定。
+
+| 处置 | 目录条目 |
+|---|---|
+| 全行已核，`○→◎` | #40 iSDG、#42 OpenFisca／PolicyEngine、#43 REMI、#44 MFMod／CGEBox／Modelflow（MANAGE 分项未核）、#56 Senturion／SES（并补 CDC-03 更正）、#57 CSIS、#61 PEMANDU、#73 LinkedIn Talent Insights |
+| 部分已核，保留 ○，行内注明哪几家已 ◎ | #47、#49、#50、#51（RAND 已核，RDM 方法页未单独核）、#52、#55 |
+| 本文 ◎ 而本轮复验受阻，行内注明 | #59 Kalshi、#76／#130／#145 S&P Capital IQ Pro、#123 India MCA |
+
+对照另排除一处子串误配：名录 E0196“阿里云”（云平台）曾被配到 #49“阿里云城市大脑”（E0098），已入脚本排除表并注明理由。
+
+**二、第三批：以替代官方页复核“本文 ◎、名录 U／P”者**（[`u_review_batch03_adjudication.csv`](reports/2026-10-04/cross_document_consistency/tables/u_review_batch03_adjudication.csv)）。15 条：12 条升 V（Google DeepMind、Meta Llama、NVIDIA CUDA、Apple、OCHA HDX、ICEWS、Bloomberg Government、NASA Earthdata、Forbes 2026 Global 2000、Polymarket、PolicyMaker 5、Polis），S&P Capital IQ Pro 由 U 升 P（只到官方登录页），Kalshi 仍 P，India MCA 仍 U。ICEWS 数据集页载维护方已由 Lockheed Martin 转为 Leidos 等。
+
+**三、自我更正**
+
+- **SC-01**：第一批将 PolicyMaker 5 定为 P，理由是“只检得 2.0／2.2”。今以浏览器读得 Michael Reich 官网（polimap.com 跳转至此），明载“A new web-based version of PolicyMaker 5 is available”。本文 #45 原标 ◎ 是对的，第一批判断过于保守，改判 V，并于 CDC-03 之后登记此误。
+- **SC-02**（方法）：补入 Polis 后整批重抓，DeepMind 首页由“有标题”变为空页。线上页面会变，**核验快照一经取得只宜增补，不宜整批重抓**；该条经浏览器复读后定案，改判理由写入裁定表。
+- **SC-03**（程序）：对照脚本曾在读现行名录时仍叠加第一批拟定，致 PolicyMaker、Polymarket 显示为旧状态；已改为对已签发版本不再叠加。合并程序原断言“只改原表中为 U 者”，改为更严之不变量：每批所记 `prior_status` 须等于该行此刻之真实状态。
+
+**四、名录 r4**：[`reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r4.csv`](reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r4.csv)，SHA256 `30e97820…8481`。r2、r3 重跑字节不变。
+
+| | 原表 | r2 | r3 | r4（现行） |
+|---|---:|---:|---:|---:|
+| V | 60 | 125 | 257 | 269 |
+| P | 15 | 24 | 26 | 22 |
+| U | 330 | 256 | 122 | 114 |
+
+对照（以 r4 为准）：可回指之 121 个名录 ID 中，139 行一致；余者均为本节注明之复验受阻或部分核。**现行效力总索引再增补：服务名录之现行版本为 r4。**
