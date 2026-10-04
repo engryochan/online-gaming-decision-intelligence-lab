@@ -1,0 +1,803 @@
+{
+  "fetched": 26,
+  "failed": 0,
+  "source_response_records": {
+    "ror_0": 20,
+    "ror_1": 20,
+    "ror_2": 20,
+    "ror_3": 20,
+    "ror_4": 20,
+    "ror_5": 20,
+    "ror_6": 20,
+    "ror_7": 20,
+    "lei_CN": 20,
+    "lei_US": 20,
+    "lei_DE": 20,
+    "lei_JP": 20,
+    "lei_IN": 20,
+    "sbdb_1": 1,
+    "sbdb_2": 1,
+    "sbdb_433": 1,
+    "sbdb_101955": 1,
+    "sbdb_162173": 1,
+    "exoplanets": 20,
+    "horizons_399": 1,
+    "horizons_499": 1,
+    "horizons_301": 1,
+    "chang_e_5": 1,
+    "artemis": 1,
+    "kennedy": 1,
+    "jpl": 1
+  },
+  "counts_before": {
+    "registry_schema_version": 2,
+    "cosmic_domain": 11,
+    "registry_entity_type": 16,
+    "registry_license_policy": 2,
+    "registry_source": 40,
+    "registry_dataset": 29,
+    "registry_entity": 5593,
+    "registry_entity_alias": 969,
+    "bridge_entity_external_id": 11387,
+    "registry_external_id": 433,
+    "registry_entity_relation": 38,
+    "registry_entity_status_history": 252,
+    "registry_claim": 343,
+    "registry_observation": 45,
+    "registry_evidence_link": 343,
+    "registry_spatial_frame": 1,
+    "registry_entity_location": 6,
+    "registry_country_area": 249,
+    "registry_admin_unit": 5046,
+    "registry_settlement": 0,
+    "registry_legal_entity": 92,
+    "registry_public_body": 49,
+    "registry_research_org": 160,
+    "registry_public_facility": 37,
+    "registry_infrastructure": 0,
+    "registry_person_public_role": 0,
+    "registry_space_org": 2,
+    "registry_space_program": 2,
+    "registry_space_mission": 2,
+    "registry_space_asset": 2,
+    "registry_space_vehicle": 2,
+    "registry_ground_facility_public": 2,
+    "registry_space_research_output": 9,
+    "registry_celestial_object": 28,
+    "registry_ephemeris_solution": 6,
+    "registry_astrobiology_evidence": 0,
+    "registry_virtual_world": 0,
+    "registry_virtual_entity": 0,
+    "registry_simulation_run": 0,
+    "registry_synthetic_population": 0,
+    "staging_service_catalogue": 405,
+    "registry_ingest_record": 284,
+    "registry_coverage": 1743,
+    "registry_adapter_contract": 15
+  },
+  "counts_after": {
+    "registry_schema_version": 2,
+    "cosmic_domain": 11,
+    "registry_entity_type": 16,
+    "registry_license_policy": 2,
+    "registry_source": 40,
+    "registry_dataset": 29,
+    "registry_entity": 5593,
+    "registry_entity_alias": 969,
+    "bridge_entity_external_id": 11387,
+    "registry_external_id": 433,
+    "registry_entity_relation": 38,
+    "registry_entity_status_history": 252,
+    "registry_claim": 343,
+    "registry_observation": 45,
+    "registry_evidence_link": 343,
+    "registry_spatial_frame": 1,
+    "registry_entity_location": 6,
+    "registry_country_area": 249,
+    "registry_admin_unit": 5046,
+    "registry_settlement": 0,
+    "registry_legal_entity": 92,
+    "registry_public_body": 49,
+    "registry_research_org": 160,
+    "registry_public_facility": 37,
+    "registry_infrastructure": 0,
+    "registry_person_public_role": 0,
+    "registry_space_org": 2,
+    "registry_space_program": 2,
+    "registry_space_mission": 2,
+    "registry_space_asset": 2,
+    "registry_space_vehicle": 2,
+    "registry_ground_facility_public": 2,
+    "registry_space_research_output": 9,
+    "registry_celestial_object": 28,
+    "registry_ephemeris_solution": 6,
+    "registry_astrobiology_evidence": 0,
+    "registry_virtual_world": 0,
+    "registry_virtual_entity": 0,
+    "registry_simulation_run": 0,
+    "registry_synthetic_population": 0,
+    "staging_service_catalogue": 405,
+    "registry_ingest_record": 284,
+    "registry_coverage": 1743,
+    "registry_adapter_contract": 21
+  },
+  "new_entity_count": 0,
+  "old_identity_and_names_preserved": true,
+  "integrity": "ok",
+  "foreign_key_errors": [],
+  "warnings": [
+    {
+      "key": "https://ror.org/034t30j35",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/034b53w38",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02bwk9n38",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02drdmm93",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05bxbmy32",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0313jb750",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02gp4e279",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05qbk4x57",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03792qf33",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/042pgcv68",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02hnjd848",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05t8xvx87",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/031npqv35",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/003qeh975",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04ndjyr10",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/046n0zq43",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03va9g668",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03j7v5j15",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05f6mer85",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05bxb3784",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03cve4549",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01vceef04",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04k6zqn86",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04sbypa54",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02hhwwz98",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0543pw950",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01yz55j88",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/050nfgr37",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00pkx4k51",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04bm3wy68",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00qpm2f14",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03x812s82",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/024yc3q36",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03zcpvf19",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03q21mh05",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/013922990",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00ys4cv94",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04bqj0966",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/005e2k071",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/043223922",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01yqg2h08",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/034w4kb21",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04f5b6771",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04kfz4b98",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02b9rcr39",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05bbfzp96",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/033c92c91",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04e6y1282",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/034e92n57",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05cvya303",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02mj3be11",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03qdcb993",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01v9qfq10",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01rrqa938",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/055egf157",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03zsxkw25",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0244d4092",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/007pp1604",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00ey9xa07",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0479fb973",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/027ka1x80",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03myraf72",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04rvfc379",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/004vanv95",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/025n1fp68",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03gh4w223",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/058trsp78",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01zgcd031",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04gyj6s21",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05jbw1519",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01j6j9107",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03b0ygs43",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/032241511",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/032214n64",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02z5nhe81",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03btasp49",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03dcxwy38",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02b1qqv62",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01s3dpm97",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/005epk420",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03wd9za21",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03a1gte98",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02ddzfk73",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03dcxwy38",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/047qzfw27",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03kz56x72",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05bkpyp72",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02a62p922",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00pe4rk68",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/034zgem50",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02jjkdr46",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/038g2f915",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05r48bj28",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02r28hc23",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/051sgbe98",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02k4b9v70",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01ayrdf49",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01z0wsw92",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02mkv8r24",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04abg5t05",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/059yhyy33",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/018ry6c52",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/041qnde49",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03528cg63",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02772kk97",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00jkndb94",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04sm2pv78",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02xketv37",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01m61nc85",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02rh6b217",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/022es3t03",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00hbgbh82",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05nf86y53",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05j81n580",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0160zbg78",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02twc7963",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04bpb0r34",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/003nx8950",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0466f4434",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00q9x4d93",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00cwrns71",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02wc0kq10",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/0527mfk98",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/038xqyz77",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05v9n8905",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/005jvjd77",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/015zbz228",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/002w0jp71",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03zm2br59",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04ryvdf08",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04n8tjj02",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02hj84f21",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05rmt1x67",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05kgk6p34",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00pm8fq14",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05k37ht14",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/047q4fb87",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02jcfzc36",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01bzgdw81",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01qtabf22",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02feahw73",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04td37d32",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01tytrg27",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03q83t159",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00yjd3n13",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05nfs2y11",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00675rp98",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/020vej288",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/00sbgyf60",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/02n56bb75",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/039z13y21",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05gap9e81",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/001ykgy03",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05v1m8q81",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/01ejfgc23",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/03rc1y976",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/04kptf457",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/003y0kg83",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/037y0xy94",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "https://ror.org/05jw85995",
+      "reason": "CITY_CENTROID_NOT_FACILITY_POSITION; epoch/frame precision unverified, not promoted to canonical location"
+    },
+    {
+      "key": "6488002I90RMAECO6054",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "648800XEBJXYHN57AA77",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "648800P1IJ6TJHH5WT70",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "648800F5DHKZM65P7E54",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "648800H57V12Q9FS4A96",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "648800WWETBUXBQZ0B55",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "648800WKBX2D0ZQP1383",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    },
+    {
+      "key": "64880077GGOBCD1MF206",
+      "reason": "PERSONAL_SOLE_PROPRIETOR_OUTSIDE_ORGANIZATION_SCOPE"
+    }
+  ],
+  "scope": "query-based sample, not global full download; no frontier ranking assigned"
+}

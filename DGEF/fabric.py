@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent
-VERSION='1.0.0'
+VERSION='1.0.1'
 WORLD=('HISTORY','REAL-TWIN','SIM','FICTION')
 COSMIC=('EARTH_SURFACE','EARTH_SUBSURFACE','EARTH_OCEAN','EARTH_ATMOSPHERE','EARTH_ORBIT','CISLUNAR','LUNAR_SURFACE','SOLAR_SYSTEM','GALACTIC','EXTRAGALACTIC','VIRTUAL_LOCAL')
 STATES=('VERIFIED','OBSERVED','INFERRED','CLAIMED','UNKNOWN','REDACTED','RESTRICTED_NOT_INGESTED')
@@ -60,6 +60,7 @@ DOMAIN={
 for name,(zh,cols) in DOMAIN.items():
  table(name,'record_id TEXT PRIMARY KEY, '+ENTITY+', '+cols+', '+PROV+(', UNIQUE(entity_id)' if name in ('registry_public_facility','registry_virtual_world') else ''),zh,'一个有来源、双时间的领域记录')
 table('staging_service_catalogue',"catalogue_id TEXT PRIMARY KEY, name TEXT NOT NULL, category TEXT NOT NULL, verification_status TEXT NOT NULL CHECK(verification_status IN ('V','P','U')), verification_url TEXT, verified_scope TEXT NOT NULL, raw_json TEXT NOT NULL CHECK(json_valid(raw_json)), dataset_id TEXT NOT NULL REFERENCES registry_dataset(dataset_id), candidate_entity_id TEXT REFERENCES registry_entity(entity_id), resolution_status TEXT NOT NULL CHECK(resolution_status IN ('PENDING','ACCEPTED','REJECTED')), transaction_time TEXT NOT NULL",'候选供应商','目录一行；合并品牌不得自动入法人籍')
+table('registry_ingest_record',"ingest_id TEXT PRIMARY KEY, entity_id TEXT REFERENCES registry_entity(entity_id), dataset_id TEXT NOT NULL REFERENCES registry_dataset(dataset_id), external_key TEXT NOT NULL, record_payload TEXT NOT NULL CHECK(json_valid(record_payload)), transform_version TEXT NOT NULL, transaction_time TEXT NOT NULL, UNIQUE(dataset_id,external_key)",'异源原行账','原始响应内一条记录，保留取值与空缺并追溯转换版')
 table('registry_coverage',"coverage_id TEXT PRIMARY KEY, country_entity_id TEXT NOT NULL REFERENCES registry_country_area(entity_id), layer TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('BASELINE','TO_RESOLVE','VERIFIED')), numerator INTEGER CHECK(numerator>=0), denominator INTEGER CHECK(denominator>=0), source_id TEXT NOT NULL REFERENCES registry_source(source_id), gap_reason TEXT NOT NULL, transaction_time TEXT NOT NULL, UNIQUE(country_entity_id,layer)",'覆盖缺口','国家地区×对象层；未知分母NULL')
 table('registry_adapter_contract',"adapter_id TEXT PRIMARY KEY, id_system TEXT NOT NULL, canonical_uri TEXT NOT NULL, target_table TEXT NOT NULL, version_required INTEGER NOT NULL CHECK(version_required IN (0,1)), status TEXT NOT NULL CHECK(status IN ('LOCAL_IMPORTED','INTERFACE_ONLY','BLOCKED')), license_review TEXT NOT NULL, notes TEXT NOT NULL",'异源接榫','一个外部库接入合同；不冒充已下载')
 ALIASES={'space_organization':'registry_space_org','space_program':'registry_space_program','space_mission':'registry_space_mission','space_vehicle':'registry_space_vehicle','space_object':'registry_space_asset','space_facility_public':'registry_ground_facility_public','space_research_output':'registry_space_research_output','registry_relation':'registry_entity_relation'}
@@ -105,7 +106,8 @@ def build(output):
  output=Path(output).resolve();output.mkdir(parents=True,exist_ok=True)
  (HERE/'schema.sql').write_text(schema(),encoding='utf-8')
  c=sqlite3.connect(output/'dgef.sqlite');c.execute('PRAGMA foreign_keys=ON');c.executescript(schema())
- if not c.execute('SELECT 1 FROM registry_schema_version WHERE version=?',(VERSION,)).fetchone() and c.execute('SELECT count(*) FROM registry_schema_version').fetchone()[0]:raise RuntimeError('Unknown schema version: migration required')
+ installed={r[0] for r in c.execute('SELECT version FROM registry_schema_version')}
+ if installed-{'1.0.0',VERSION}:raise RuntimeError('Unknown schema version: migration required')
  inputs={'country':ROOT/'Reference/registry_country_area_iso3166_m49_e164_20261004.csv','admin':ROOT/'Reference/registry_admin_units_iso3166_2_20261004.csv','catalogue':ROOT/'reports/2026-10-04/strategy_services_registry.csv'}
  initial={k:sha(p) for k,p in inputs.items()}
  with c:
@@ -165,7 +167,7 @@ def build(output):
  with (HERE/'data_dictionary.csv').open('w',encoding='utf-8-sig',newline='') as f:
   w=csv.DictWriter(f,fieldnames=dictionary[0].keys());w.writeheader();w.writerows(dictionary)
  plans=[list(r) for r in c.execute('EXPLAIN QUERY PLAN SELECT * FROM registry_admin_unit WHERE country_entity_id=?',(country_ids['CN'],))]
- report=dict(schema_version=VERSION,sqlite_version=sqlite3.sqlite_version,table_count=len(SPECS),view_count=c.execute("SELECT count(*) FROM sqlite_master WHERE type='view'").fetchone()[0],row_counts=counts,input_sha256=initial,integrity='ok',foreign_key_errors=[],query_plan_country_admin=plans,training_approved_rows=c.execute('SELECT count(*) FROM v_model_features_approved').fetchone()[0],null_csv_encoding='empty field is SQL NULL; never convert to numeric zero',external_ingestion='ONLY_LOCAL_BASELINES; OTHER_ADAPTERS_INTERFACE_ONLY')
+ report=dict(schema_version=VERSION,sqlite_version=sqlite3.sqlite_version,table_count=len(SPECS),view_count=c.execute("SELECT count(*) FROM sqlite_master WHERE type='view'").fetchone()[0],row_counts=counts,input_sha256=initial,integrity='ok',foreign_key_errors=[],query_plan_country_admin=plans,training_approved_rows=c.execute('SELECT count(*) FROM v_model_features_approved').fetchone()[0],null_csv_encoding='empty field is SQL NULL; never convert to numeric zero',external_ingestion='PUBLIC_RESPONSE_SNAPSHOTS_IMPORTED' if counts['registry_ingest_record'] else 'ONLY_LOCAL_BASELINES; OTHER_ADAPTERS_INTERFACE_ONLY')
  (output/'build_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');c.close();return report
 
 def field_definition(col):

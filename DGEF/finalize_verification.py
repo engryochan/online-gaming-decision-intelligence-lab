@@ -13,7 +13,7 @@ c.execute('PRAGMA foreign_keys=ON')
 q=(ROOT/'_大秦赋算筹_v1_3_9.qmd').read_text(encoding='utf-8');chapters=[int(x) for x in re.findall(r'^# (\d+)\.',q,re.M)]
 result=dict(original_project_files_checked=len(originals),authorized_modified_paths=changed,other_original_files_unchanged=True,pandoc_full_parse='PASS',pandoc_api_version=ast['pandoc-api-version'],top_level_numbered_chapters=chapters,data_dictionary_columns=len(dictionary),table_exports=len(list((ROOT/'DGEF/artifacts/tables').glob('*.csv'))),db_integrity=c.execute('PRAGMA integrity_check').fetchone()[0],foreign_key_errors=c.execute('PRAGMA foreign_key_check').fetchall(),quarto_execution='NOT_RUN')
 assert result['db_integrity']=='ok' and not result['foreign_key_errors']
-assert result['table_exports']==43
+assert result['table_exports']==44
 (OUT/'final_verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
 c.close();(OUT/'qmd_parse.json').unlink()
 print(json.dumps(result,ensure_ascii=True,indent=2))

@@ -199,6 +199,13 @@ registry_infrastructure,基础设施,一个有来源、双时间的领域记录,
 registry_infrastructure,基础设施,一个有来源、双时间的领域记录,valid_from,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效起点；快照导入不代表成立时间,一个有来源、双时间的领域记录
 registry_infrastructure,基础设施,一个有来源、双时间的领域记录,valid_to,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,业务有效终点，半开区间；NULL表示尚未给定终点,一个有来源、双时间的领域记录
 registry_infrastructure,基础设施,一个有来源、双时间的领域记录,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,一个有来源、双时间的领域记录
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,ingest_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,ingest id；定义受所属表粒度与SQL约束限定,原始响应内一条记录，保留取值与空缺并追溯转换版
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,原始响应内一条记录，保留取值与空缺并追溯转换版
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,dataset_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,dataset id；定义受所属表粒度与SQL约束限定,原始响应内一条记录，保留取值与空缺并追溯转换版
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,external_key,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,external key；定义受所属表粒度与SQL约束限定,原始响应内一条记录，保留取值与空缺并追溯转换版
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,record_payload,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record payload；定义受所属表粒度与SQL约束限定,原始响应内一条记录，保留取值与空缺并追溯转换版
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,transform_version,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,transform version；定义受所属表粒度与SQL约束限定,原始响应内一条记录，保留取值与空缺并追溯转换版
+registry_ingest_record,异源原行账,原始响应内一条记录，保留取值与空缺并追溯转换版,transaction_time,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,本系统记录时间UTC，与业务有效时间分离,原始响应内一条记录，保留取值与空缺并追溯转换版
 registry_legal_entity,法人,一个有来源、双时间的领域记录,record_id,TEXT,1,1,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,record id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
 registry_legal_entity,法人,一个有来源、双时间的领域记录,entity_id,TEXT,1,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,永久实体根号，发号时间不代表成立时间,一个有来源、双时间的领域记录
 registry_legal_entity,法人,一个有来源、双时间的领域记录,jurisdiction_entity_id,TEXT,0,0,UNKNOWN_OR_NOT_APPLICABLE; NEVER_IMPUTE_ZERO,jurisdiction entity id；定义受所属表粒度与SQL约束限定,一个有来源、双时间的领域记录
