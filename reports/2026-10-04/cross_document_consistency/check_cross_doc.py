@@ -90,9 +90,56 @@ def check_database():
     return issues
 
 
+def check_mark_crosswalk():
+    """名录 V/P/U 与名录 v2.4 ◎/○ 之分歧；以 CDC-04 登记者视为已裁定之待办。"""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import io
+    import contextlib
+    import build_mark_crosswalk as bmc
+    with contextlib.redirect_stdout(io.StringIO()):
+        rows = bmc.main()
+    pending = {}
+    for r in rows:
+        if r["proposal"] in ("REVIEW_FOR_V", "UPDATE_DOC_MARK"):
+            pending.setdefault(r["proposal"], set()).add(r["registry_id"])
+    adj = Path(__file__).resolve().parent / "tables/v_candidate_adjudication.csv"
+    if adj.exists():
+        import csv
+        with adj.open(encoding="utf-8-sig") as f:
+            done = {r["registry_id"] for r in csv.DictReader(f)}
+        left = pending.get("REVIEW_FOR_V", set()) - done
+        if left:
+            pending["REVIEW_FOR_V"] = left
+        else:
+            pending.pop("REVIEW_FOR_V", None)
+    registered = "CDC-04" in DOCS["md"].read_text(encoding="utf-8")
+    tag = "已登记(CDC-04)" if registered else "未裁定"
+    return [f"[标记分歧·{tag}] {k}: {len(v)} 个名录 ID" for k, v in sorted(pending.items())]
+
+
+def check_releases():
+    """已签发之名录版本：回执所记 SHA256 必须等于实物，且其短哈希须见于文档（防覆盖后文档漂移）。"""
+    import hashlib
+    here = Path(__file__).resolve().parent
+    text = DOCS["md"].read_text(encoding="utf-8") + DOCS["qmd"].read_text(encoding="utf-8")
+    issues = []
+    for receipt in sorted(here.glob("registry_r*_receipt.json")):
+        r = json.loads(receipt.read_text(encoding="utf-8"))
+        actual = hashlib.sha256((ROOT / r["r2"]).read_bytes()).hexdigest()
+        if actual != r["r2_sha256"]:
+            issues.append(f"[版本漂移] {receipt.name}: 回执 {r['r2_sha256'][:8]}，实物 {actual[:8]}")
+        if actual[:8] not in text:
+            issues.append(f"[版本未入档] {Path(r['r2']).name} {actual[:8]} 未见于两份文件")
+        base = hashlib.sha256((ROOT / r["base"]).read_bytes()).hexdigest()
+        if base != REPORT["input_sha256"]["catalogue"]:
+            issues.append("[基线漂移] 原名录已非 DGEF 签发版本")
+    return issues
+
+
 def main():
-    issues = check_numeric() + check_status_conflicts() + check_links() + check_database()
-    unresolved = [i for i in issues if "已裁定" not in i]
+    issues = (check_releases() + check_numeric() + check_status_conflicts() + check_links() + check_database()
+              + check_mark_crosswalk())
+    unresolved = [i for i in issues if "已裁定" not in i and "已登记" not in i]
     for i in issues:
         print(i)
     print(f"共 {len(issues)} 项提示，未裁定 {len(unresolved)} 项")

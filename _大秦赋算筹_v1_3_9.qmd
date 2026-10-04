@@ -14717,3 +14717,70 @@ CBDB年代覆盖核验：[官方项目简介](https://cbdb.hsites.harvard.edu/)�
 | 页内锚点 | 0 断裂、0 重复 |
 | 标题编号 | D-R1 后单一编号 |
 | PDF 渲染 | 未做（需 TeX，另立验收） |
+
+
+### 45.10.6 U 级名录第一批复核（同日续核）
+
+自 405 条服务名录中之 330 条 U，先取“归属、现况或版本待核”之 22 条：13 条可升 V，7 条止于 P，2 条仍 U。逐条结果与出处见 [`u_review_batch01.csv`](reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv)，摘要与 CDC-03 两处更正见名录 v2.4〈第七次复核续〉。
+
+本轮所得之现实归属变化，宜同步入本件：Traitify 经 Paradox 于 2025-10-01 归 Workday；pymetrics 并入 Harver；Nasdaq AxiomSL 经 Adenza 于 2023-11 归 Nasdaq；Polymarket 据媒体以收购 QCEX 取得美国指定合约市场路径（P 级，待读 CFTC 一手文件）。名录 CSV 本轮不改，以免破坏已签发批次。
+
+
+### 45.10.7 CDC-04 · 两套核验标记对照（同日续核）
+
+服务名录之 V／P／U 与名录 v2.4 目录行之 ◎／○ 从未对账。新增 [`build_mark_crosswalk.py`](reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py) 按名称回指，结果 [`mark_crosswalk.csv`](reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv)：405 条中 122 条可回指；56 条正文已 ◎ 而名录仍 U、且有分句内来源网址，列为人工复核升 V 之候选；24 条无出处或只得他方根域，保持 U；另有 9 个正文条目（#40、42、43、44、47、49、50、56、61）仍标 ○，而名录已核为 V，正文标记陈旧，裁定以名录为准。脚本不自动改名录，以免把同一作者之旧核验当作独立复核。此项已并入 `check_cross_doc.py` 常规检查。
+
+
+### 45.10.8 CDC-05 · 五十六条候选逐一复核（同日续核）
+
+CDC-04 之 56 条候选逐一请求来源网址并人工过目：52 条定为 V（39 自动、13 人工），2 条 P，2 条因站点拒绝访问仍 U，均未绕过访问控制。发现一处出处失效：正文所引 ECMWF ERA5 页现须登录，改据哥白尼 CDS 公开页；ILOSTAT 因人机验证改据 ILO 官方数据页；NASA／JPL Horizons 条原配到 Earthdata 网址，改据本仓 DGEF 已存之 Horizons API 原始响应。若与第一批一并采纳，名录将由 V60／P15／U330 变为 V125／P24／U256。明细见名录 v2.4〈CDC-05〉与 [`v_candidate_adjudication.csv`](reports/2026-10-04/cross_document_consistency/tables/v_candidate_adjudication.csv)。
+
+
+### 45.10.9 CDC-06 · 名录合并为 r2（同日续核）
+
+经用户准予合并（2026-10-04）。合并前查得：原名录 `strategy_services_registry.csv` 之 SHA256 `3716f378…3801` 即 `DGEF/artifacts/build_report.json` 所登记之 `catalogue` 输入指纹；`fabric.py` 遇输入指纹变化即拒绝重建（“Input baseline changed: explicit migration required”）。直接覆盖原表，等于以合并毁坏底座之可重建性。
+
+故按项目自设之迁移规则处置：**原表一字不动，仍为 DGEF 已签发基线；另立现行名录 r2**——[`reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r2.csv`](reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r2.csv)，列与原表同序，末尾追加 `review_batch`、`reviewed_at` 两列。合并程序 [`merge_registry_r2.py`](reports/2026-10-04/cross_document_consistency/merge_registry_r2.py) 先断言原表指纹与 DGEF 登记一致，再断言行数、ID 顺序及未触及行逐列不变；逐行变更见 [`registry_r2_changes.csv`](reports/2026-10-04/cross_document_consistency/tables/registry_r2_changes.csv)，回执见 [`registry_r2_receipt.json`](reports/2026-10-04/cross_document_consistency/registry_r2_receipt.json)。重跑结果字节一致；合并后 DGEF 16 项测试仍全过。
+
+| | 原表（DGEF 基线） | r2（现行） |
+|---|---:|---:|
+| V | 60 | 125 |
+| P | 15 | 24 |
+| U | 330 | 256 |
+| 合计 | 405 | 405 |
+| SHA256 | `3716f378…3801` | `d0451069…79e6` |
+
+变更 78 行：第一批 22 行（其中 2 行仍 U，只更新核验说明），CDC-05 共 56 行。**现行效力总索引增补一行：服务名录之现行版本为 r2；DGEF 如改用 r2，须另行显式迁移，不得覆盖旧数据集记录。**
+
+### 45.10.10 CDC-07 · U 级第二批与名录 r3（同日续核）
+
+名录 r2 合并后，赓续第二批：自剩余 256 条 U 中，取官网明确、身份不易混淆者 154 条（企业平台、云与开源基础设施、治理与人道数据、半导体、宇航工业、安全厂商、体育数据与彩票技术等），逐一请求官网（[`verify_url_batch.py`](reports/2026-10-04/cross_document_consistency/verify_url_batch.py)；清单 [`u_review_batch02_urls.csv`](reports/2026-10-04/cross_document_consistency/tables/u_review_batch02_urls.csv)），脚本未能判定者以内置浏览器正常打开阅读，只读不点击，遇人机验证即止。裁定见 [`u_review_batch02_adjudication.csv`](reports/2026-10-04/cross_document_consistency/tables/u_review_batch02_adjudication.csv)。
+
+暂不收：博彩运营方（须逐一核牌照主体）、同名待消歧者（CNA、Avanti、SIS、IWG、Kairos、凯盛／劲博／开云）、上批检索无果者。
+
+| 裁定 | 数 | 依据 |
+|---|---:|---|
+| V（自动） | 111 | 官网 200，主体名或产品名见于页内；112 个标题与最终域名逐一人工过目 |
+| V（人工） | 21 | 首页为 JS 空壳或拒绝脚本，经浏览器或官网内页读得（如 SAP、NDU、OpenAI、Tableau、CBDB、UNHCR、IOM DTM、Thales、BAE、中国航天科技集团） |
+| P | 2 | 天眼查（非标准状态 419，只得标题）；JoinQuant 聚宽（“当前地区暂不支持访问”） |
+| U | 20 | 站点拒绝访问、人机验证或连接失败（如 Bloomberg、IMF、Tesla、Roscosmos、国家电网、Aramco、中国石油、Perplexity、IPC）；均未绕过 |
+
+V 之范围：官网可达，主体自述可见；不证效果、价格、授权、牌照或名录所列每一分项。
+
+**本批官网所见之现实变化（名录旧称待更正，原文不删）**
+
+| 名录 ID | 旧称 | 2026-10-04 官网所见 |
+|---|---|---|
+| E0174 | 人大金仓 KingbaseES | 官网自称“电科金仓” |
+| E0357 | NIST CAISI | `nist.gov/caisi` 跳转至 `nist.gov/caissi`，页称 Center for Advancing Innovation and Standards for Super Intelligence (CAISSI)；同页 2026 年各期新闻仍称 CAISI。更名日期本轮未核 |
+| E0017 | Salesforce Einstein | AI 页未见 Einstein，以 Agentforce 为名 |
+
+**版本纪律（CDC-07）**：r2（`d0451069…79e6`）既已入档，即不再覆盖；本批另出 **r3**——[`reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r3.csv`](reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r3.csv)，SHA256 `928ab563…5f7f`，含第一批、CDC-05 与第二批。[`merge_registry_r2.py`](reports/2026-10-04/cross_document_consistency/merge_registry_r2.py) 以版本参数重建，r2 重跑字节不变。对账脚本新增两项检查：回执哈希须等于实物；每一已签发版本之短哈希须见于文档，否则报未裁定。
+
+| | 原表（DGEF 基线） | r2 | r3（现行） |
+|---|---:|---:|---:|
+| V | 60 | 125 | 257 |
+| P | 15 | 24 | 26 |
+| U | 330 | 256 | 122 |
+
+**现行效力总索引再增补：服务名录之现行版本为 r3。**

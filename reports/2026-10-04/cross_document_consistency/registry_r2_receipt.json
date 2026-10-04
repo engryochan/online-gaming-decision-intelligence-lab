@@ -1,0 +1,23 @@
+{
+  "base": "reports/2026-10-04/tables/01_services/strategy_services_registry.csv",
+  "base_sha256": "3716f37854c7af08cc0b41a8c4e565f1d74f3f0cb56bbbb776b87794f6033801",
+  "base_is_dgef_input": true,
+  "r2": "reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_r2.csv",
+  "r2_sha256": "d0451069463e124a4651ddb5765f5eadc770c1c4306296700e57ced7210879e6",
+  "changed_rows": 78,
+  "status_before": {
+    "V": 60,
+    "U": 330,
+    "P": 15
+  },
+  "status_after": {
+    "V": 125,
+    "U": 256,
+    "P": 24
+  },
+  "by_batch": {
+    "u_review_batch01": 22,
+    "CDC-05": 56
+  },
+  "rule": "原表不改；r2 为现行名录；DGEF 若改用 r2 须走显式迁移"
+}
