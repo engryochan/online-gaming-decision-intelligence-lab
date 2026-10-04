@@ -30,7 +30,7 @@ for s in seeds:
             context=t[t.rfind('\n',0,pos)+1:t.find('\n',end) if t.find('\n',end)>=0 else len(t)].strip()
             matches.append((p,line,context))
     if not matches:missing.append(s);continue
-    live=next((x for x in checks if x['key'].casefold() in s['name'].casefold()),None)
+    live=next((x for x in sorted(checks,key=lambda x:len(x['key']),reverse=True) if x['key'].casefold() in s['name'].casefold()),None)
     p,line,context=matches[0]
     row=dict(id=f'E{len(registry)+1:04d}',category=s['category'],name=s['name'],role=s['role'],status=live['status'] if live else 'U',verification_url=live['url'] if live else '',verified_scope=live['verified_scope'] if live else '仅核实项目出现；本轮未独立复核现况、归属、效果与价格',source_file=p,source_line=line,source_context=context[:600],matching_files=len(matches))
     registry.append(row)
@@ -85,6 +85,8 @@ f'主目录为 {len(registry)} 条公司／产品族／研究资源记录，分 
 '| 行数定义 | ChatGPT 篇本轮逻辑行数为 924，文件中宣称 923。LF 计数与最后一个无换行行的逻辑计数须区分，不能直接认定差一行就是内容遗失。 |',
 '| 绝对市场结论 | “现实无一家”“售结论者皆妄”等改为“本项目本轮核验范围未发现满足指定标准者”；商业咨询本就提供建议与结论，应评估证据、假设与责任。 |',
 '| Sift 同名与归属 | 风控 Sift 与遥测 Sift Stack 不同。航天报告将后者写成 SpaceX 自研不正确；其官网说明创办人是前 SpaceX 工程师。 |',
+'| 续核品牌边界 | Leadership Connect 已从 Altrata 合并条目拆出，以独立官网核验，不能据 Altrata 官网认定它属于同一集团。Talogy 已核服务定位，Caliper 仍待核，因此合并条目标 P。 |',
+'| Plum 现况 | 原网址现跳转 Phenom 的 2026-04-28 收购说明；更新为人才行为测评及官方收购声明，不继承其准确率营销数字。 |',
 '| GeoQuant | 原产品 URL 当前跳转 Geo Risk Signals；旧名称及历史规格不能直接宣称现行，完整变更仍待核。 |',
 '| 缺证性能与采用断言 | 航天报告“不可能用 StarRocks”“国际航天白名单”“ECharts 上万通道会卡死”等缺可复现实验、任务边界或明确清单来源，降为待核观点。 |',
 '| 历史与现售 | Senturion、RAND RSAS、IBM Watson Personality Insights、Cambridge Analytica 与现售产品分开；现有论文不证明今天可采购。 |',
