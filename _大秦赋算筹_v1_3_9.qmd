@@ -16,7 +16,10 @@ format:
     toc: true
     toc-depth: 3
     toc-location: left
-    number-sections: true
+    # 斧正 D-R1（2026-10-04 第七次复核）：原为 true。正文标题已手写 §0–§45 编号，
+    #   自动编号自 1 起算，渲染后 455 个标题出现双号且互相矛盾（如「1.1 0.1 术语」），
+    #   全书「§x.y」引用皆依手写号，故关闭自动编号，以手写号为唯一编号。
+    number-sections: false
     embed-resources: true
     page-layout: full
     code-fold: true
@@ -14637,3 +14640,80 @@ CBDB年代覆盖核验：[官方项目简介](https://cbdb.hsites.harvard.edu/)�
 | Intelligence Online · 情报外交专业报道 | 专门新闻与产业线索；报道—待核线索 | [官网](https://www.intelligenceonline.com/info/aboutus) |
 
 本轮独立增补台账：[18条服务能力](Reference/tables/05_realworld_ecosystems_20261004/provider_capabilities.csv)、[21条来源](Reference/tables/05_realworld_ecosystems_20261004/sources.csv)、[8条现实统计](Reference/tables/05_realworld_ecosystems_20261004/realworld_observations.csv)、[2条公开关系](Reference/tables/05_realworld_ecosystems_20261004/public_relationships.csv)、[9层产业链合同](Reference/tables/05_realworld_ecosystems_20261004/industry_chain_contracts.csv)。[本轮复审回执](reports/2026-10-04/realworld_ecosystems/README.md)。这些表为独立来源批次，未改旧DGEF44表及其根号，未强行将品牌消歧为法人。
+
+
+## 45.10 第七次复核：跨件对账、现行效力与七策（2026-10-04）
+
+本轮重读全仓（两份总纲、`DGEF/`、`reports/2026-10-04/`、`Reference/`），只增不删。所见之病不在单条错误，而在**层层追加而无现行总索引**：本件 §18–§24、§26.10–§26.18、§30.17–§30.23、§31–§45 各有一套 redteam／critic／killcritic／blindspot／cheatsheet／blueprint／actionplan，同一议题多处并存。以下现代编者拟句，不冒称古籍原文：**令出一门，籍归一册，数从实物，疑者留白。**
+
+### 45.10.1 本轮实测与联网复核（核对日 2026-10-04）
+
+| 项 | 结果 | 限定 |
+|---|---|---|
+| DGEF 库 | 只读副本：44 表、10 视图，行数与 `DGEF/artifacts/build_report.json` 逐表相符；`integrity_check = ok`；外键孤儿 0；36 表有记录、8 表空；获准训练 0 行 | 空表是结构，不表示对象不存在 |
+| DGEF 测试 | `test_fabric.py` 9 项＋`test_public_ingestion.py` 7 项＝16 项全过；与 §45.8 所称一致 | 须在 `DGEF/` 内或以脚本方式运行；自仓根 `py -m unittest DGEF/...` 因模块路径报错，不是测试失败 |
+| 本件本地链接 | 14 条全部可达 | 静态检查 |
+| IAF | 官网会员页本日可读：“604 Members from 82 countries” | [IAF Membership](https://www.iafastro.org/membership/)；页未标日期，只记核对日所见 |
+| SIPRI | 2025 全球军费 2,887 十亿美元，实质 +2.9%；中国估计 336 十亿美元，+7.4%；2026-04-27 发布 | 与 §45.9 相符；[SIPRI](https://www.sipri.org/media/press-release/2026/global-military-spending-rise-continues-european-and-asian-expenditures-surge) |
+| 非自治领土 | 联合国现列 17 个 | [UN](https://www.un.org/dppa/decolonization/en/nsgt)；不由本项目裁决主权 |
+| 地外生命 | 仍无确认发现；Sapphire Canyon 为 potential biosignature，K2‑18 b DMS／DMDS 约 3σ 未确认 | 与 §44.9“先建证据、后论实体”一致，不升级 |
+
+### 45.10.2 CDC-01 · IAF 状态冲突裁定
+
+§44.6.4、§44.19 记 PASS；§45.5 与 `DGEF/verification_sources.json` 因当时页面未读得记 UNKNOWN。今日复读原句可见，**裁定 PASS 成立，范围仅限 IAF 自述会员规模**，不推全球宇航普查，缺席 IAF 不推无宇航业务。DGEF 核验账为已签发批次，本轮不改其字节（保全响应指纹测试）；下次运行 `fetch_public.py`／`ingest_public.py` 时以新快照转 VERIFIED，旧行留作历史。
+
+另记 CDC-02：§45.2 之“43实体表、5295实体根号”是首阶段施工数，§45.7 之 44 表、新增 298 实体（合 5,593）为现行数；两处并存属阶段差，不是矛盾，以 `build_report.json` 为准。
+
+### 45.10.3 现行效力总索引（以后每轮先改此表，再写正文）
+
+| 议题 | 现行节 | 降为历史或方法库者 |
+|---|---|---|
+| 任务口径 | §45.9：分析现实百业生态产业链，服务现实决策 | §45.8 古人样本与先秦篇章试标之必选步骤 |
+| 九十日／阶段执行 | §45.9 actionplan 表＋本节三条门禁 | §24、§26.18、§30.23、§31.9、§32.8、§33.18、§35.17、§36.26、§37.15、§38.18、§39.25、§40.19、§41.8、§44.17、§45.8 之行动表 |
+| 安全边界 | §0 安全边界＋§0.7 价值不变量＋§44.8 守御账 | 无 |
+| 证据裁定 | §0.4 P×M×LO 三轴 | §0.2 历史兼容层 |
+| 数据底座实数 | `DGEF/artifacts/build_report.json` | 本件任何手写计数 |
+| 跨件一致 | `reports/2026-10-04/cross_document_consistency/check_cross_doc.py` | 人工逐段比对 |
+| 文化主线 | §42 九流十家工程映射；古籍引文以 §42 典籍引文核验登记为准 | 未核原句一律不加引号 |
+
+### 45.10.4 七策
+
+**redteam／墨家验伪**：所攻者为文书本身——令出多门、手写计数随库重建而过期、同一来源一处 PASS 一处 UNKNOWN、测试入口歧义致误报、以篇幅冒充证据。
+
+**critic／名家正名**：PASS 只说明此时此页可见此句；16 项测试通过只证现样本之结构与入库规则；对账脚本只查已登记之规则，不可称“全文已校”。
+
+**killcritic／三条现行门禁**：其一，先改现行效力总索引，后写正文；其二，对账脚本退出码非 0 而无 CDC 裁定号者不得签发；其三，底座实数不手写，只引程序产物或注明观察日。
+
+**blindspot／道家知止**：本件未做本轮 Quarto 全量渲染（本机 Quarto 1.10.18 可用，另立验收；**同日续核已完成 HTML 渲染，见 §45.10.5，PDF 仍未做**）；330 条 U 级名录未复核；DGEF 中 IAF 一行待入库转正；对账脚本不读 PDF、XLSX 与历史压缩包。
+
+**cheatsheet／检籍便览**：问现行看 §45.10.3；问库实物看 `build_report.json`；问文库是否一致，运行 `py reports/2026-10-04/cross_document_consistency/check_cross_doc.py`；问测试，在 `DGEF/` 内运行两份测试脚本。
+
+**blueprint／三层文书**：`现行正文（短，只写当前裁定）→ 证据层（库、表、快照，由程序生成）→ 历史层（各轮回执与被取代条款，原文不删）`。本件为 Quarto 文书，下一版宜以行内代码读取 `build_report.json` 生成计数，使正文数字随库重建自动更新；七十余万字节宜按 §0–§17 技术总纲、§18–§45 历史回执分册，以 Quarto book 或 include 组织。
+
+**actionplan／本轮落实与下一步**
+
+| 序 | 事 | 状态 |
+|---|---|---|
+| 1 | 只读复核 DGEF 库、16 项测试、本地链接 | 已完成 |
+| 2 | 新增跨件对账脚本；基线抓出 IAF 冲突 | 已完成 |
+| 3 | CDC-01、CDC-02 裁定，立现行效力总索引 | 已完成 |
+| 4 | 修订前字节备份 `reports/2026-10-04/cross_document_consistency/before_documents.zip` | 已完成 |
+| 5 | IAF 原始响应存证（HTTP 200，37,703 字节，SHA256 `b988d55d…0244`，见 `reports/2026-10-04/cross_document_consistency/evidence/`）；DGEF 正式入库转正 | 存证已完成；入库待下批 |
+| 6 | v1.4.0 分册与计数程序化 | 建议，待用户裁定 |
+| 7 | Quarto 全量渲染验收 | 已完成，见 §45.10.5 |
+
+> **一句话**：此后不怕少写一节，只怕多出一门号令；令出一门，数从一库，疑者留白。
+
+### 45.10.5 Quarto 全量渲染验收与斧正 D-R1（同日续核）
+
+本件副本于暂存目录以本机 Quarto 1.10.18、R 4.6.1 渲染 HTML，约 37 秒完成，未覆盖仓库内既有 HTML。唯一可执行 R 块 `crypto-runtime-audit` 实跑输出 `SHA3-512: TRUE`，并照旧声明“ML-KEM/ML-DSA/SLH-DSA 已验证部署：未由本代码证明”——哈希能力不充当后量子通过证据。渲染产物无重复锚点、无断裂页内链接；仅有 zh-CN 译名表缺失之两条警告，不影响正文。
+
+**斧正 D-R1**：原 YAML `number-sections: true`。正文标题本已手写 §0–§45，而自动编号自 1 起算，渲染后 905 个编号标题中 **455 个出现两个互相矛盾的号**（如“1.1 0.1 术语”），另 261 个无手写号之子标题被插入自动号；全书“§x.y”引用皆依手写号，读者据渲染页查 §0.4 会落空。今改为 `false`，复渲染确认自动编号 0 处，手写号成为唯一编号。原值与理由留于 YAML 注释。
+
+| 验收项 | 结果 |
+|---|---|
+| HTML 渲染 | 通过（副本） |
+| R 块执行 | 通过；不联网、不装包 |
+| 页内锚点 | 0 断裂、0 重复 |
+| 标题编号 | D-R1 后单一编号 |
+| PDF 渲染 | 未做（需 TeX，另立验收） |
