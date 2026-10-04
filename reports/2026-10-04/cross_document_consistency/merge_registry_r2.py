@@ -22,10 +22,13 @@ RELEASES = {
     "r3": ("tables/v_candidate_adjudication.csv", "tables/u_review_batch02_adjudication.csv"),
     "r4": ("tables/v_candidate_adjudication.csv", "tables/u_review_batch02_adjudication.csv",
            "tables/u_review_batch03_adjudication.csv"),
+    "r5": ("tables/v_candidate_adjudication.csv", "tables/u_review_batch02_adjudication.csv",
+           "tables/u_review_batch03_adjudication.csv", "tables/u_review_batch04_adjudication.csv"),
 }
 BATCH_NAME = {"tables/v_candidate_adjudication.csv": "CDC-05",
               "tables/u_review_batch02_adjudication.csv": "u_review_batch02",
-              "tables/u_review_batch03_adjudication.csv": "u_review_batch03"}
+              "tables/u_review_batch03_adjudication.csv": "u_review_batch03",
+              "tables/u_review_batch04_adjudication.csv": "u_review_batch04"}
 RELEASE = sys.argv[1] if len(sys.argv) > 1 else "r2"
 R2 = ROOT / f"reports/2026-10-04/tables/01_services/strategy_services_registry_20261004_{RELEASE}.csv"
 LOG = HERE / f"tables/registry_{RELEASE}_changes.csv"

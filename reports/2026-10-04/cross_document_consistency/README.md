@@ -11,8 +11,8 @@
 
 | 文件 | 修订前 | 修订后 |
 |---|---|---|
-| 名录 v2.4 | 50d0415ed7375c6ae111e91d040673da6d9d971312daf398a9a1c01cdd20a35f | 89a15078015504244db5568b44ae57228f8879d3e45f956927ed437e1c2f1e8b |
-| _大秦赋算筹_v1_3_9.qmd | d1e0d29026976a3e5a7e3c2561308ddffe093a15326e194da65a2720f7e9753e | 4ada945439fd18460726bdda15bf774690ad6d26a23ddd31a4baf19a5c08af56 |
+| 名录 v2.4 | 50d0415ed7375c6ae111e91d040673da6d9d971312daf398a9a1c01cdd20a35f | 0427e7b6d90b77eaf19ec664d1a8dc991f0beef5c7b43039188f852695342a06 |
+| _大秦赋算筹_v1_3_9.qmd | d1e0d29026976a3e5a7e3c2561308ddffe093a15326e194da65a2720f7e9753e | aed19102598063369e6b3f5b359778d021d1ff7c7ac688fb2018e2f34b28ffaa |
 
 ## 结论
 
@@ -65,3 +65,9 @@
 - r4（`30e97820…`，现行）：V269/P22/U114；r2、r3 重跑字节不变。
 - 自我更正：SC-01 PolicyMaker 5 前批判 P 过保守；SC-02 核验快照不宜整批重抓；SC-03 对照脚本旧批叠加缺陷与合并不变量收紧。
 - 复渲染 qmd 副本通过；DGEF 16 项测试通过。
+
+## CDC-09 替代官方渠道与 r5
+
+- 第四批 22 条：官网受阻者改走文档站、GitHub 官方组织、CFTC 名单、SEC EDGAR 与 8-K 原件；16 V、1 P、4 U，另 1 条 V 更换为一手证据。
+- 一手所得：Kalshi（2020-11-03）与 QCX LLC d/b/a Polymarket US（2025-07-09）均为 CFTC 指定合约市场；OpenBet 2025 年由 Endeavor 售予 OB Global Holdings。
+- r5（`1191b3ec…`，现行）：V285/P22/U98；r2–r4 重跑字节不变。
