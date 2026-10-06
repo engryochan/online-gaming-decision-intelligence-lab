@@ -32,6 +32,28 @@ language:
   title-block-published: "發佈於"
 ---
 
+<!-- FRONTIER_REVIEW_20261006_START -->
+# 核實與校訂索引（2026-10-06） {#sec-frontier-review}
+
+本檔是多模型問答工作底稿。模型相互重複、回答中自稱「P0/P1」、列出網址，均不等於已核實。**本輪完成全檔結構掃描，實質外部核實集中於提問卅九、卌及宇航報告；未宣稱全檔每項歷史主張均已查證。** 空白回答模板不計作證據。下列校訂優先於後文保留的原模型回答。
+
+| 原文主張／用語 | 本輪審閱裁定 | 一手來源／後續要求 |
+|---|---|---|
+| Athea＝Helsing×Saab 合資 | 錯誤；Athea官方列Thales與Eviden | [Athea](https://athea.tech/) |
+| IBM i2 作為現行提供方 | 名稱過時；官方說明2022年由Harris從IBM收購 | [i2官方說明](https://i2group.com/articles/2024-08-09pressrelease) |
+| ITAR/EAR/CMMC＝中國起源軟件全面禁入美歐白名單 | 缺乏支持，撤回此一般斷言；須按物項、交易、用途、合同與司法管轄核實 | [BIS許可判定](https://www.bis.gov/licensing)、[DDTC](https://www.pmddtc.state.gov/ddtc_public)、[CMMC](https://www.acq.osd.mil/asda/dpc/cp/cyber/cmmc.html) |
+| StarRocks只能秒級／上游不可能使用／百萬點必崩 | 無同負載測試，不能成立；OLAP用途與硬實時控制需分層 | [StarRocks功能](https://docs.starrocks.io/docs/introduction/Features/) |
+| SitaWare是北約標準、ArcGIS幾乎覆蓋全部軍用GIS | 產品用途可核實；市場全面性與正式標準身份尚未核實 | [SitaWare](https://systematic.com/int/industries/defence/products/sitaware-suite/)、[Esri](https://www.esri.com/en-us/industries/defense/overview) |
+| Ansys仍是獨立母集團 | 2025-07-17 Synopsys宣布完成收購；產品品牌與法人分開 | [收購公告](https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys) |
+| NASA VEDA採用Airflow | 官方NASA-IMPACT倉庫支持存在相關實作；不外推所有NASA任務或全行業採用率 | [官方倉庫](https://github.com/NASA-IMPACT/veda-data-airflow) |
+| 2026收入、認證、發佈日、Eutelsat衛星數、SpaceX完整栈 | 本輪未逐項取得充分一手證據，維持UNKNOWN，不轉成已核實結論 | 後續按claim逐條核實 |
+| 中俄全閉源／某國全部用一個栈／新加坡與馬來西亞合併 | 無法支持國家整體結論；每個組織與項目獨立登記 | ISO國家／地區FK＋組織＋項目＋claim |
+| N0～N7國家能力等級 | 未有定義、可重現測試與項目證據，不填國家級分數；缺證不等於N0 | 神經技術另建registry_neurotechnology_global；本輪未進行神經技術普查 |
+
+本輪逐機構索引、CSV及證據邊界見 [更新宇航報告](Aerospace_Ecosystem_Report.qmd) 與 [資料字典](tables/06_frontier_ecosystem_20261006/README.md)。VERIFIED只覆蓋具體claim的公開描述，不能連帶驗證產品線索、實際性能、軍方部署、监管许可或國家排名。全檔連結結構掃描見 [審閱回執](../reports/2026-10-06/frontier_ecosystem/review_receipt.json)，未聲稱全數URL均可訪問。
+
+<!-- FRONTIER_REVIEW_20261006_END -->
+
 # 提問一
 
 ## 提問
