@@ -14,4 +14,6 @@ VERIFIED只驗證claim文字；product_project_leads未被claim明確覆蓋時�
 
 ISO外鍵對既有249條母表做結構驗證；本輪不重新核准ISO快照，也不建249行空白能力表。擴展presence與神經技術合同見報告。表均UTF-8 BOM CSV，所有ID在本批穩定；重建資料時勿重排DATA，新增應在末尾，避免ID變動。
 
-重建：以Python執行 reports/2026-10-06/frontier_ecosystem/build_registry.py。生成報告、CSV、參考檔校訂索引與本地驗收回執；不聯網、不更新歷史HTML。驗收回執只是本地結構結果，不是獨立事實審核。
+更新目標：[地緣戰略、軍工、宇航與人工智能生態登記報告](../../Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd)。原Aerospace_Ecosystem_Report.qmd為保留的宇航數據栈比較報告，不能作為本批生成目標；保留使用者所定Interlligence檔名拼寫。
+
+重建：以Python執行 reports/2026-10-06/frontier_ecosystem/build_registry.py，預設只在該腳本旁preview/生成提案，不修改現行報告、CSV或參考檔。只有明確加--apply且delivery_baseline.json包含所有輸出、現行SHA256完全匹配時才能覆寫本批管理文件；任何使用者編輯會拒絕覆寫，應先審閱差異而非刷新基線後強制套用。原宇航報告不在允許輸出清單。驗收腳本只讀取交付文件並輸出回執，不恢復刪除資產或修改正文。驗收回執只是本地結構結果，不是獨立事實審核。

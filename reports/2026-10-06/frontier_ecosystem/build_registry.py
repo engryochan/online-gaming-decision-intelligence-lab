@@ -2,12 +2,36 @@
 No network requests. VERIFIED refers only to the stated public description.
 """
 from pathlib import Path
-import csv, json, re, hashlib
+import argparse, csv, json, re, hashlib
 from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / 'Reference/tables/06_frontier_ecosystem_20261006'
+REPORT_REL = 'Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd'
+parser = argparse.ArgumentParser(description='Generate proposals by default; --apply requires unchanged delivery baseline.')
+parser.add_argument('--apply', action='store_true', help='Write managed outputs only when baseline hashes still match.')
+parser.add_argument('--baseline', type=Path, default=Path(__file__).parent/'delivery_baseline.json')
+args = parser.parse_args()
+DEST = ROOT if args.apply else Path(__file__).parent / 'preview'
+if args.apply:
+    baseline = json.loads(args.baseline.read_text(encoding='utf-8'))
+    expected_paths = {REPORT_REL, 'Reference/Inteligent_egaming_platform_ref_v000.000.001.qmd',
+        'Reference/tables/06_frontier_ecosystem_20261006/README.md',
+        'reports/2026-10-06/frontier_ecosystem/review_receipt.json',
+        *('Reference/tables/06_frontier_ecosystem_20261006/'+name for name in
+          ('registry_frontier_organizations.csv','registry_frontier_claims.csv','registry_frontier_sources.csv'))}
+    assert set(baseline['sha256']) == expected_paths, 'Baseline must cover every managed output.'
+    for rel, expected in baseline['sha256'].items():
+        p = (ROOT/rel).resolve()
+        assert p.is_relative_to(ROOT.resolve()), 'Output outside workspace.'
+        if not p.exists() or hashlib.sha256(p.read_bytes()).hexdigest() != expected:
+            raise SystemExit(f'Refusing overwrite: {rel} differs from delivery baseline. Generate preview and review current edits first.')
+OUT = DEST / 'Reference/tables/06_frontier_ecosystem_20261006'
 OUT.mkdir(parents=True, exist_ok=True)
+def output_text(rel, content):
+    assert rel != 'Reference/Aerospace_Ecosystem_Report.qmd', 'Historical report is not a generated output.'
+    p = DEST/rel
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(content, encoding='utf-8')
 DATE = '2026-10-06'
 # domain|organization|country candidate|type|product/project leads|reviewed claim|source|state
 DATA = '''GEOPOLITICS|RAND|US|RESEARCH_ORG|政策研究、FFRDC|公开开展政策、国家安全与国际事务研究|https://www.rand.org/about.html|VERIFIED
@@ -269,14 +293,14 @@ note=f'''{start}
 | 中俄全閉源／某國全部用一個栈／新加坡與馬來西亞合併 | 無法支持國家整體結論；每個組織與項目獨立登記 | ISO國家／地區FK＋組織＋項目＋claim |
 | N0～N7國家能力等級 | 未有定義、可重現測試與項目證據，不填國家級分數；缺證不等於N0 | 神經技術另建registry_neurotechnology_global；本輪未進行神經技術普查 |
 
-本輪逐機構索引、CSV及證據邊界見 [更新宇航報告](Aerospace_Ecosystem_Report.qmd) 與 [資料字典](tables/06_frontier_ecosystem_20261006/README.md)。VERIFIED只覆蓋具體claim的公開描述，不能連帶驗證產品線索、實際性能、軍方部署、监管许可或國家排名。全檔連結結構掃描見 [審閱回執](../reports/2026-10-06/frontier_ecosystem/review_receipt.json)，未聲稱全數URL均可訪問。
+本輪逐機構索引、CSV及證據邊界見 [地緣戰略、軍工、宇航與人工智能生態登記報告](Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd) 與 [資料字典](tables/06_frontier_ecosystem_20261006/README.md)。原 [宇航數據栈比較報告](Aerospace_Ecosystem_Report.qmd) 保留原文，校訂與新增登記在新報告中並列呈現。VERIFIED只覆蓋具體claim的公開描述，不能連帶驗證產品線索、實際性能、軍方部署、监管许可或國家排名。全檔連結結構掃描見 [審閱回執](../reports/2026-10-06/frontier_ecosystem/review_receipt.json)，未聲稱全數URL均可訪問。
 
 {end}
 
 '''
 front_end=raw.find('\n---',4)+len('\n---')
 assert raw.startswith('---') and front_end>3
-REF.write_text(raw[:front_end]+'\n\n'+note+raw[front_end:].lstrip('\n'),encoding='utf-8')
+output_text(REF.relative_to(ROOT).as_posix(),raw[:front_end]+'\n\n'+note+raw[front_end:].lstrip('\n'))
 
 verified=sum(c['evidence_state']=='VERIFIED' for c in claims)
 groups=Counter(e['primary_domain'] for e in entities)
@@ -306,7 +330,7 @@ execute:
 
 「世界級最前沿兼頂尖高端」以跨國研究／服務、公開前沿技術、全球關聯資料或專業任务系统作為候選篩選方向。只有官方描述支持的用途可寫為VERIFIED；各家的世界排名、性能優勢、軍方部署與採購資格本輪均未獨立比較。傳統軍工主承包商、前沿AI與自主系統公司、航天機構、資料服務及學術研究分層比較，不能用一個營收或模型分數統一排序。地方性、只在單國營運的條目保留為生態與原文覆蓋線索，不自動授予「頂尖」稱號。
 
-本報告取代舊版未充分佐證的「更高維度」「霸主」「唯一重度重疊」「某國全部使用某栈」結論。參考問答檔是候選來源，不是一手資料；本輪核實採用政府、研究機構、供應商與官方開源倉庫。日期為查閱日期，不是每項主張的發布或生效日期。
+本報告與原 [宇航數據栈比較報告](Aerospace_Ecosystem_Report.qmd) 分檔保留：原報告記錄歷史研究內容，本報告列出後續校訂與新增登記，不覆寫或掩蓋原文。舊版未充分佐證的「更高維度」「霸主」「唯一重度重疊」「某國全部使用某栈」結論，適用下文逐项核對裁定。參考問答檔是候選來源，不是一手資料；本輪核實採用政府、研究機構、供應商與官方開源倉庫。日期為查閱日期，不是每項主張的發布或生效日期。
 
 ## 證據規則
 
@@ -386,7 +410,7 @@ CSV與資料字典見[本批資料目錄](tables/06_frontier_ecosystem_20261006/
 
 查證集中於機構身份線索與公開業務描述。每項产品的技术细节、全部国家所有机构、正式法人注册、专利论文穷举、实际部署与独立性能比较仍未完成，均明确标示边界。后续优先补产品级官方文档、任务／合同文件、研究论文和许可，再按国家系统推进。
 '''
-(ROOT/'Reference/Aerospace_Ecosystem_Report.qmd').write_text(report,encoding='utf-8')
+output_text(REPORT_REL, report)
 readme=f'''# 世界前沿生態登記 — 2026-10-06
 
 {len(entities)}個研究候選；{verified}條VERIFIED公開描述；{len(entities)-verified}條UNKNOWN。不聲稱全球全量或世界排名。
@@ -403,12 +427,14 @@ VERIFIED只驗證claim文字；product_project_leads未被claim明確覆蓋時�
 
 ISO外鍵對既有249條母表做結構驗證；本輪不重新核准ISO快照，也不建249行空白能力表。擴展presence與神經技術合同見報告。表均UTF-8 BOM CSV，所有ID在本批穩定；重建資料時勿重排DATA，新增應在末尾，避免ID變動。
 
-重建：以Python執行 reports/2026-10-06/frontier_ecosystem/build_registry.py。生成報告、CSV、參考檔校訂索引與本地驗收回執；不聯網、不更新歷史HTML。驗收回執只是本地結構結果，不是獨立事實審核。
+更新目標：[地緣戰略、軍工、宇航與人工智能生態登記報告](../../Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd)。原Aerospace_Ecosystem_Report.qmd為保留的宇航數據栈比較報告，不能作為本批生成目標；保留使用者所定Interlligence檔名拼寫。
+
+重建：以Python執行 reports/2026-10-06/frontier_ecosystem/build_registry.py，預設只在該腳本旁preview/生成提案，不修改現行報告、CSV或參考檔。只有明確加--apply且delivery_baseline.json包含所有輸出、現行SHA256完全匹配時才能覆寫本批管理文件；任何使用者編輯會拒絕覆寫，應先審閱差異而非刷新基線後強制套用。原宇航報告不在允許輸出清單。驗收腳本只讀取交付文件並輸出回執，不恢復刪除資產或修改正文。驗收回執只是本地結構結果，不是獨立事實審核。
 '''
-(OUT/'README.md').write_text(readme,encoding='utf-8')
+output_text('Reference/tables/06_frontier_ecosystem_20261006/README.md',readme)
 audit.update(organizations=len(entities),verified_public_descriptions=verified,unknown=len(entities)-verified,
     domains=dict(groups),country_master_rows=249,checks={'unique_ids':True,'iso_candidate_fk':True,'verified_source_fk':True},
     reviewed_on=DATE,render_status='NOT_RUN')
 audit['sha256']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in OUT.glob('*.csv')}
-(Path(__file__).parent/'review_receipt.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding='utf-8')
+output_text('reports/2026-10-06/frontier_ecosystem/review_receipt.json',json.dumps(audit,ensure_ascii=False,indent=2))
 print(json.dumps({k:audit[k] for k in ('organizations','verified_public_descriptions','unknown','domains','country_master_rows')},ensure_ascii=False))
