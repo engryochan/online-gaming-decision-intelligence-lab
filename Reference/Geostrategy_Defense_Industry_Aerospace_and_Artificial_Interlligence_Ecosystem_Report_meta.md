@@ -353,17 +353,3 @@ DARPA N3 的雙向非手術性能屬目標；Layer 7-T 的 FDA 文件僅支持�
 
 新增 [第二批科技與原始研究證據](Global_Technology_ISO249_Registry_B02.qmd)及 [HTML](Global_Technology_ISO249_Registry_B02.html)。完整整合表位於08目錄；累計335筆機構候選、54筆技術與16筆神經科技記錄。3篇人體BCI原始研究另列6筆數值與測試條件；論文報告結果不等於獨立重現或世界排名。首批與歷史批次保留，249地區全面核實仍未完成。
 <!-- GLOBAL_ISO249_B02_END -->
-
-
-<!-- GLOBAL_ISO249_B03_START -->
-## 全球科技第三批增補
-
-新增 [第三批量子、HPC與地區證據](Global_Technology_ISO249_Registry_B03.qmd)及 [HTML](Global_Technology_ISO249_Registry_B03.html)。完整整合表位於09目錄；累計371筆機構候選、59筆技術與16筆神經科技記錄。新增量子、HPC與科研設施資料；量子實驗結果、理論峰值與設施所在地分開記錄，不能推導國家排名。首批與歷史批次保留，249地區全面核實仍未完成。
-<!-- GLOBAL_ISO249_B03_END -->
-
-
-<!-- GLOBAL_ISO249_B04_START -->
-## 全球科技第四批增補
-
-新增[軍工AI、宇航影像與戰略服務平台](Global_Technology_ISO249_Registry_B04.qmd)及[HTML](Global_Technology_ISO249_Registry_B04.html)。12筆具名產品／服務、6筆帶前提規格與1筆公司公告事件；完整整合表位於10目錄。累計371筆機構候選、71筆技術／服務。官方描述與獨立效能、完整星座條件與實際服務開放分開；ISO249全面核實仍未完成。
-<!-- GLOBAL_ISO249_B04_END -->

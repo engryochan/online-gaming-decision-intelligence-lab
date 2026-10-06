@@ -1,0 +1,211 @@
+{
+  "technologies": [
+    [
+      "HX-2",
+      "DEFENSE_AI",
+      "UNCREWED_SYSTEM",
+      "Helsing",
+      "https://helsing.ai/hx-2",
+      "官方描述AI輔助無人系統及與Altra整合；未獨立驗證抗干擾性能",
+      "VERIFIED"
+    ],
+    [
+      "Altra",
+      "DEFENSE_AI",
+      "SOFTWARE_PLATFORM",
+      "Helsing",
+      "https://helsing.ai/altra",
+      "官方描述偵察資料整合與指揮軟件；不採用10倍等效能宣傳",
+      "VERIFIED"
+    ],
+    [
+      "ICEYE Gen4",
+      "SPACE_EO",
+      "SATELLITE_SYSTEM",
+      "ICEYE",
+      "https://www.iceye.com/missions-gen4",
+      "第四代SAR衛星系統公開描述；未採用全球最高性能宣稱",
+      "VERIFIED"
+    ],
+    [
+      "ICEYE Dwell Precise",
+      "SPACE_EO",
+      "IMAGING_MODE",
+      "ICEYE",
+      "https://sar.iceye.com/6.0.8/productspecification/introduction/",
+      "SAR成像模式；文件明列Gen3.5及後續世代可提供，並非Gen4獨有",
+      "VERIFIED"
+    ],
+    [
+      "BlackSky Gen-3",
+      "SPACE_EO",
+      "SATELLITE_SYSTEM",
+      "BlackSky",
+      "https://info.blacksky.com/hubfs/Gated-downloads/Blacksky_DataSheet_Gen-3.pdf",
+      "光學與短波紅外衛星系統；2025規格表含完整星座前提",
+      "VERIFIED"
+    ],
+    [
+      "BlackSky Spectra",
+      "GEOSPATIAL_AI",
+      "SOFTWARE_PLATFORM",
+      "BlackSky",
+      "https://blacksky.com/press-releases/blacksky-successfully-commissions-gen-3-in-less-than-one-week-opening-gen-3-general-availability-for-global-customer-base/",
+      "2026-03-12公司公告描述透過Spectra提供Gen3影像與AI分析服務",
+      "VERIFIED"
+    ],
+    [
+      "Planet Pelican",
+      "SPACE_EO",
+      "IMAGERY_PRODUCT",
+      "Planet Labs",
+      "https://docs.planet.com/data/imagery/pelican/",
+      "官方產品文件區分全色、分析與融合影像及各自處理級別",
+      "VERIFIED"
+    ],
+    [
+      "Mistral Medium 3.5",
+      "AI",
+      "MODEL",
+      "Mistral AI",
+      "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "2026公告的開放權重模型；modified MIT並非已審核標準MIT商用授權",
+      "VERIFIED"
+    ],
+    [
+      "Mistral Vibe remote agents",
+      "AI",
+      "SOFTWARE_PLATFORM",
+      "Mistral AI",
+      "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "2026公告描述雲端非同步編碼代理；未執行效能測試",
+      "VERIFIED"
+    ],
+    [
+      "CSIS Counterspace Timeline",
+      "GEOSTRATEGY",
+      "RESEARCH_DATABASE",
+      "CSIS",
+      "https://aerospace.csis.org/counterspace-timeline/",
+      "公开反太空活動歷史時間線；頁面標題1959–2022，未假設資料更新至2026",
+      "VERIFIED"
+    ],
+    [
+      "Military Balance+",
+      "GEOSTRATEGY",
+      "SUBSCRIPTION_DATABASE",
+      "IISS",
+      "https://www.iiss.org/the-military-balance-plus",
+      "官方搜索摘要列軍力與國防經濟資料服務；正文未可讀，仍待核實",
+      "UNKNOWN"
+    ],
+    [
+      "Palantir Mission Manager",
+      "DEFENSE_AI",
+      "SOFTWARE_PLATFORM",
+      "Palantir Technologies",
+      "https://www.palantir.com/platforms/mission-manager/",
+      "平台名稱待核實；官網正文與投資者PDF本輪讀取失敗",
+      "UNKNOWN"
+    ]
+  ],
+  "metrics": [
+    [
+      "ICEYE Dwell Precise",
+      "NOMINAL_GROUND_RESOLUTION",
+      "0.25",
+      "m",
+      "NOMINAL_PRODUCT_SPEC",
+      "",
+      "Dwell Precise; scene-center ground projection; standard scene 5x5 km; not optical GSD",
+      "2026",
+      ""
+    ],
+    [
+      "ICEYE Dwell Precise",
+      "GENERATION_3_5_PLUS_SLANT_RANGE_RESOLUTION",
+      "0.125",
+      "m",
+      "OR_COARSER_SPEC",
+      "",
+      "generation table; Gen3.5 and Gen4; slant range, not ground resolution",
+      "2026",
+      ""
+    ],
+    [
+      "BlackSky Gen-3",
+      "BEST_VISIBLE_GROUND_SAMPLE_DISTANCE",
+      "35",
+      "cm",
+      "BEST_DECLARED_GSD",
+      "",
+      "visible band; 2025 datasheet; not geolocation accuracy or independently measured resolving power",
+      "2025",
+      ""
+    ],
+    [
+      "BlackSky Gen-3",
+      "CONSTELLATION_REVISIT_RATE",
+      "60",
+      "minutes",
+      "DECLARED_AT_FULL_CAPACITY",
+      "",
+      "datasheet footnote: full operating capacity of 16 satellites; not established everywhere in 2026",
+      "2025",
+      ""
+    ],
+    [
+      "BlackSky Gen-3",
+      "COLLECTION_TO_DELIVERY_TIME",
+      "60",
+      "minutes",
+      "AS_LITTLE_AS",
+      "",
+      "datasheet footnote: full operating capacity of 16 satellites; not universal guaranteed latency",
+      "2025",
+      ""
+    ],
+    [
+      "Planet Pelican",
+      "ORTHO_PANCHROMATIC_PIXEL_SIZE",
+      "50",
+      "cm",
+      "RESAMPLED_OUTPUT_GRID",
+      "",
+      "orthorectified panchromatic product; separate from native multispectral pixels and optical resolving power; docs updated 2026-07-06",
+      "2026-07-06",
+      ""
+    ]
+  ],
+  "events": [
+    {
+      "technology": "BlackSky Gen-3",
+      "date": "2026-03-12",
+      "event": "VENDOR_ANNOUNCED_GENERAL_AVAILABILITY",
+      "claim": "公司公告第四顆Gen3完成調試並開放服務；不證明16顆全面運作",
+      "url": "https://blacksky.com/press-releases/blacksky-successfully-commissions-gen-3-in-less-than-one-week-opening-gen-3-general-availability-for-global-customer-base/"
+    }
+  ],
+  "source_anomalies": [
+    {
+      "url": "https://www.anduril.com/lattice/",
+      "state": "JAVASCRIPT_ONLY_REDIRECT",
+      "note": "Redirected to homepage with enable JavaScript only; no new verified Lattice record."
+    },
+    {
+      "url": "https://www.palantir.com/platforms/mission-manager/",
+      "state": "UNREADABLE",
+      "note": "Primary page and alternative investor PDF unreadable; do not upgrade search excerpts to verified."
+    },
+    {
+      "url": "https://www.iiss.org/the-military-balance-plus",
+      "state": "BODY_UNREADABLE_SEARCH_EXCERPT_ONLY",
+      "note": "Search excerpt describes database but opened body has no usable text."
+    },
+    {
+      "url": "https://sar.iceye.com/6.0.8/productspecification/introduction/",
+      "state": "TEXT_TABLE_INCONSISTENCY",
+      "note": "Table ground values are twice slant values, while adjacent prose says half; formula 1/sin(30)=2. Record table definitions, do not repeat half wording."
+    }
+  ]
+}

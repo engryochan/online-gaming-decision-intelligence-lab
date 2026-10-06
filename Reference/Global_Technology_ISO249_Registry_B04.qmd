@@ -1,0 +1,79 @@
+---
+title: "全球科技登記第四批：軍工AI、宇航影像與戰略服務平台"
+lang: zh-Hant
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute:
+  enabled: false
+---
+
+本批補強已登記機構的具名技術、軟件與服務，不重複增加公司筆數。VERIFIED僅指所列公開描述或官方規格可查；不表示實測達標、獨立重現、軍方驗收或世界排名。
+
+## 影像規格與部署事件
+
+[ICEYE技術文件6.0.8](https://sar.iceye.com/6.0.8/productspecification/introduction/)區分地面與斜距解析度。Dwell Precise並非Gen4獨有；世代與模式分列。表格與相鄰文字的half說法不一致，本批記錄表格口徑及異常，未採用16cm宣傳作統一地面解析度，也未將衛星通訊頻寬填入人體神經頻寬。
+
+[BlackSky 2025規格PDF](https://info.blacksky.com/hubfs/Gated-downloads/Blacksky_DataSheet_Gen-3.pdf)的60分鐘重訪及最低交付時間均有16顆衛星全面運作前提。[2026-03-12公司公告](https://blacksky.com/press-releases/blacksky-successfully-commissions-gen-3-in-less-than-one-week-opening-gen-3-general-availability-for-global-customer-base/)描述第四顆Gen3調試和服務開放，不能證明完整16顆配置已達成。新事件表將公司公告與獨立部署驗證分開。
+
+[Planet Pelican文件](https://docs.planet.com/data/imagery/pelican/)最後更新2026-07-06；全色正射、原生多光譜和融合產品的像素／處理口徑不同。50cm输出網格、BlackSky最佳GSD與SAR解析度不能直接排同一榜單；未下載影像作獨立測量。
+
+## 軍工AI與模型平台
+
+[Helsing Altra](https://helsing.ai/altra)及[HX-2](https://helsing.ai/hx-2)只核實系統名稱、功能描述與公開整合關係；抗干擾和倍數效能未獨立驗證。沒有加入操作、部署或攻擊指引。
+
+[Mistral 2026公告](https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5)描述Medium 3.5與Vibe雲端代理。公告時模型為public preview；未查證今日所有方案可用性。開放權重及modified MIT名稱不等於標準MIT全文已審核，授權適用條件維持UNKNOWN；未執行模型或採用自報基準成績排名。
+
+## 戰略研究服務的時間範圍
+
+[CSIS反太空時間線](https://aerospace.csis.org/counterspace-timeline/)頁面標题1959–2022。本批不把歷史資料平台說成已更新至2026，也未逐項獨立驗證時間線事件。IISS Military Balance+與Palantir Mission Manager本輪正文無法核實，列UNKNOWN線索；Anduril的JavaScript占位頁未增加已核實產品。
+
+ISO249母表、103地區候選覆蓋、神經科技與歷史數值維持原有內容。未完成全球所有科技普查、世界頂尖資格審核或大型egaming參考文件全文校對。
+
+本批新增12筆技術／服務：10筆公開描述VERIFIED、2筆UNKNOWN；6筆條件化規格與1筆公司公告事件。累計371筆機構候選、71筆技術／服務、17筆數值；神經科技維持16筆。
+
+## 本批技術與服務
+
+| ID | 名稱 | 角色 | 公開描述／待查主張 | 證據與來源 |
+| --- | --- | --- | --- | --- |
+| GDT0001 | HX-2 | UNCREWED_SYSTEM | 官方描述AI輔助無人系統及與Altra整合；未獨立驗證抗干擾性能 | [VERIFIED](https://helsing.ai/hx-2) |
+| GDT0002 | Altra | SOFTWARE_PLATFORM | 官方描述偵察資料整合與指揮軟件；不採用10倍等效能宣傳 | [VERIFIED](https://helsing.ai/altra) |
+| GDT0003 | ICEYE Gen4 | SATELLITE_SYSTEM | 第四代SAR衛星系統公開描述；未採用全球最高性能宣稱 | [VERIFIED](https://www.iceye.com/missions-gen4) |
+| GDT0004 | ICEYE Dwell Precise | IMAGING_MODE | SAR成像模式；文件明列Gen3.5及後續世代可提供，並非Gen4獨有 | [VERIFIED](https://sar.iceye.com/6.0.8/productspecification/introduction/) |
+| GDT0005 | BlackSky Gen-3 | SATELLITE_SYSTEM | 光學與短波紅外衛星系統；2025規格表含完整星座前提 | [VERIFIED](https://info.blacksky.com/hubfs/Gated-downloads/Blacksky_DataSheet_Gen-3.pdf) |
+| GDT0006 | BlackSky Spectra | SOFTWARE_PLATFORM | 2026-03-12公司公告描述透過Spectra提供Gen3影像與AI分析服務 | [VERIFIED](https://blacksky.com/press-releases/blacksky-successfully-commissions-gen-3-in-less-than-one-week-opening-gen-3-general-availability-for-global-customer-base/) |
+| GDT0007 | Planet Pelican | IMAGERY_PRODUCT | 官方產品文件區分全色、分析與融合影像及各自處理級別 | [VERIFIED](https://docs.planet.com/data/imagery/pelican/) |
+| GDT0008 | Mistral Medium 3.5 | MODEL | 2026公告的開放權重模型；modified MIT並非已審核標準MIT商用授權 | [VERIFIED](https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5) |
+| GDT0009 | Mistral Vibe remote agents | SOFTWARE_PLATFORM | 2026公告描述雲端非同步編碼代理；未執行效能測試 | [VERIFIED](https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5) |
+| GDT0010 | CSIS Counterspace Timeline | RESEARCH_DATABASE | 公开反太空活動歷史時間線；頁面標題1959–2022，未假設資料更新至2026 | [VERIFIED](https://aerospace.csis.org/counterspace-timeline/) |
+| GDT0011 | Military Balance+ | SUBSCRIPTION_DATABASE | 官方搜索摘要列軍力與國防經濟資料服務；正文未可讀，仍待核實 | [UNKNOWN](https://www.iiss.org/the-military-balance-plus) |
+| GDT0012 | Palantir Mission Manager | SOFTWARE_PLATFORM | 平台名稱待核實；官網正文與投資者PDF本輪讀取失敗 | [UNKNOWN](https://www.palantir.com/platforms/mission-manager/) |
+
+## 規格與前提
+
+| 指標 | 數值 | 口徑 | 前提 | 來源 |
+| --- | --- | --- | --- | --- |
+| NOMINAL_GROUND_RESOLUTION | 0.25 m | NOMINAL_PRODUCT_SPEC | Dwell Precise; scene-center ground projection; standard scene 5x5 km; not optical GSD | [來源](https://sar.iceye.com/6.0.8/productspecification/introduction/) |
+| GENERATION_3_5_PLUS_SLANT_RANGE_RESOLUTION | 0.125 m | OR_COARSER_SPEC | generation table; Gen3.5 and Gen4; slant range, not ground resolution | [來源](https://sar.iceye.com/6.0.8/productspecification/introduction/) |
+| BEST_VISIBLE_GROUND_SAMPLE_DISTANCE | 35 cm | BEST_DECLARED_GSD | visible band; 2025 datasheet; not geolocation accuracy or independently measured resolving power | [來源](https://info.blacksky.com/hubfs/Gated-downloads/Blacksky_DataSheet_Gen-3.pdf) |
+| CONSTELLATION_REVISIT_RATE | 60 minutes | DECLARED_AT_FULL_CAPACITY | datasheet footnote: full operating capacity of 16 satellites; not established everywhere in 2026 | [來源](https://info.blacksky.com/hubfs/Gated-downloads/Blacksky_DataSheet_Gen-3.pdf) |
+| COLLECTION_TO_DELIVERY_TIME | 60 minutes | AS_LITTLE_AS | datasheet footnote: full operating capacity of 16 satellites; not universal guaranteed latency | [來源](https://info.blacksky.com/hubfs/Gated-downloads/Blacksky_DataSheet_Gen-3.pdf) |
+| ORTHO_PANCHROMATIC_PIXEL_SIZE | 50 cm | RESAMPLED_OUTPUT_GRID | orthorectified panchromatic product; separate from native multispectral pixels and optical resolving power; docs updated 2026-07-06 | [來源](https://docs.planet.com/data/imagery/pelican/) |
+
+## 整合數據表
+
+| 數據表 | 連結 |
+| --- | --- |
+| registry_country_entity_relations.csv | [registry_country_entity_relations.csv](tables/10_global_technology_iso249_20261006_b04/registry_country_entity_relations.csv) |
+| registry_country_technology_coverage.csv | [registry_country_technology_coverage.csv](tables/10_global_technology_iso249_20261006_b04/registry_country_technology_coverage.csv) |
+| registry_global_claims.csv | [registry_global_claims.csv](tables/10_global_technology_iso249_20261006_b04/registry_global_claims.csv) |
+| registry_global_organizations.csv | [registry_global_organizations.csv](tables/10_global_technology_iso249_20261006_b04/registry_global_organizations.csv) |
+| registry_global_sources.csv | [registry_global_sources.csv](tables/10_global_technology_iso249_20261006_b04/registry_global_sources.csv) |
+| registry_neurotechnology_global.csv | [registry_neurotechnology_global.csv](tables/10_global_technology_iso249_20261006_b04/registry_neurotechnology_global.csv) |
+| registry_technology_metrics.csv | [registry_technology_metrics.csv](tables/10_global_technology_iso249_20261006_b04/registry_technology_metrics.csv) |
+| registry_technology_products_tools.csv | [registry_technology_products_tools.csv](tables/10_global_technology_iso249_20261006_b04/registry_technology_products_tools.csv) |
+| registry_technology_lifecycle_events.csv | [registry_technology_lifecycle_events.csv](tables/10_global_technology_iso249_20261006_b04/registry_technology_lifecycle_events.csv) |
+
+[數據字典與來源限制](tables/10_global_technology_iso249_20261006_b04/data_dictionary.json)。先前批次保留；本輪不新增未核實的國別能力結論。
