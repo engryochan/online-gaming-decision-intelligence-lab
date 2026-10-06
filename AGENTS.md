@@ -8,3 +8,5 @@
 - `validate_delivery.py` 只檢查交付文件及寫驗收回執，不恢復使用者刪除的文件、不改正文或換行。
 - 渲染前記錄現行變更；若渲染器刪除資產，先確認本輪基線與依賴再處理，不能自動從HEAD恢復任意刪除項目。
 - 全項目現況掃描可使用 `reports/2026-10-06/workspace_change_audit/scan_workspace.py`。快照記錄路徑、SHA256與Git狀態；`.git`內部與符號連結不掃描。它是版本基線，並非所有文件內容的實質核實。
+
+- 全球 ISO 249 科技增補位於 `Reference/Global_Technology_ISO249_Registry.qmd` 與 `Reference/tables/07_global_technology_iso249_20261006/`；原196筆為歷史批次。主報告只附加有界增補，不覆寫原宇航報告、使用者 HTML 或舊196筆資料。全球生成器預設 preview；apply 前核對基線與輸出雜湊，不以刷新基線繞過使用者修改。
