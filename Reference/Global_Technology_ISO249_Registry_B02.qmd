@@ -1,0 +1,113 @@
+---
+title: "全球科技登記第二批：機構覆蓋、先進計算與人體 BCI 證據"
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute:
+  enabled: false
+---
+
+本批核實 36 筆新增機構／科研單位／計畫候選，補入 10 筆具名技術與工具、3篇人体BCI原始研究及6筆帶測試條件的數值記錄。累計 335 筆機構候選、54 筆技術、16 筆神經科技項目。249地區母表與原首輪檢索日誌保持不變；有編輯候選的地區由61增至74。尚未建立候選的地區依然需要當地語言專項核實。
+
+這不是全球全部科技普查或頂尖排名。大型科研設施、國家研究機構及政策資助單位分別登記角色；國家級機構不因入表就成為世界頂尖。性能主張須保留日期、樣本與任務。[首批附錄](Global_Technology_ISO249_Registry.qmd)與原報告保留；本批完整整合表在新的08目錄，避免覆寫07資料。
+
+## 三篇人体研究與測試條件
+
+[Willett等2023研究](https://www.nature.com/articles/s41586-023-06377-x)記錄一位ALS參與者的皮質內微電極嘗試語音解碼：報告62 words/min；125000詞條件WER為23.8%，50詞條件為9.1%。後兩者不是同一詞彙難度。結果不能推廣成一般人口或全部植入器件的性能，也不是自由思想讀取。
+
+[Metzger等2023研究](https://www.nature.com/articles/s41586-023-06443-4)使用一位參與者的皮質表面記錄；文本解碼中位速度78 words/min、中位WER25%。頁面列2024作者更正，數字依目前可讀摘要；本輪未完整復核更正影響。它與前項的平均速度、任務及統計口徑不同，不能直接排全球名次。
+
+[Littlejohn等2025技術報告](https://www.nature.com/articles/s41593-025-01905-6)描述一位參與者的流式語音合成，摘要列80ms神經解碼增量。這是演算法步長，不是端到端延遲，更不是bits/s。論文資料存取條件混合，本輪沒有下載人體資料或執行重現。[作者軟件倉庫](https://github.com/cheoljun95/streaming.braindecoder)已可讀；存在代碼不代表可自由商用或本輪已重現。
+
+以上是2023／2025有日期的研究例證，並未證明它們仍是2026全球最新或最高性能。N0～N7與信息頻寬仍UNKNOWN；正式臨床階段、試驗登記狀態、專利及監管狀態尚未查證。
+
+| 項目 | 指標 | 數值 | 統計 | 樣本 | 條件 |
+| --- | --- | --- | --- | --- | --- |
+| Willett 2023 attempted-speech BCI | DECODED_ATTEMPTED_SPEECH_RATE | 62 words/min | MEAN | 1 | ALS；有聲嘗試說話；皮質內微電極；論文報告速度，非一般人口結果 |
+| Willett 2023 attempted-speech BCI | WORD_ERROR_RATE | 23.8 percent | REPORTED_AGGREGATE | 1 | 125000詞詞彙；有聲嘗試說話；不能與50詞條件的9.1%混用 |
+| Willett 2023 attempted-speech BCI | WORD_ERROR_RATE | 9.1 percent | REPORTED_AGGREGATE | 1 | 50詞詞彙；有聲嘗試說話；不是125000詞條件 |
+| Metzger 2023 speech and avatar BCI | TEXT_DECODING_RATE | 78 words/min | MEDIAN | 1 | 大詞彙文本解碼；無聲嘗試說話；皮質表面記錄 |
+| Metzger 2023 speech and avatar BCI | WORD_ERROR_RATE | 25 percent | MEDIAN | 1 | 大詞彙文本解碼；同論文中位數；非所有BCI的平均錯誤率 |
+| Littlejohn 2025 streaming speech BCI | NEURAL_DECODING_INCREMENT | 80 ms | ALGORITHM_INCREMENT | 1 | 摘要的在線解碼步長；不是端到端延遲或bits/s |
+
+## 半導體與大型科研設施
+
+[Rapidus官網](https://www.rapidus.inc/en/)描述2025年開始試產、2027年計畫量產；試產與量產分開。2nm是官方製程名稱，本輪未獨立量測物理尺寸或性能。Cerebras、Groq等只核實具名計算產品與架構公開描述，不採用官網最高性能宣傳作獨立比較。
+
+[ALMA官網](https://www.almaobservatory.org/en/about-alma/)描述智利設施及跨國合作。設施所在地、參與國、科研產出與各國自主製造能力分開；不以跨國天文設施給某國科技整體分數。
+
+| ID | 技術／工具 | 類型 | 核實範圍 | 來源 |
+| --- | --- | --- | --- | --- |
+| GBT0001 | Cerebras WSE-3 Turbo | HARDWARE_COMPONENT | 官網列出的晶圓級人工智能計算晶片；效能比較未獨立核實 | [來源](https://www.cerebras.ai/chip) |
+| GBT0002 | Groq LPU | HARDWARE_ARCHITECTURE | 官網描述的人工智能推論處理器架構 | [來源](https://groq.com/) |
+| GBT0003 | Groq LPX | HARDWARE_PLATFORM | 官網描述與GPU配合的推論平台；未核實部署规模 | [來源](https://groq.com/) |
+| GBT0004 | Rapidus 2nm GAA pilot programme | RESEARCH_MANUFACTURING_PROJECT | 官網描述2025年啟動試產線、2027年量產計畫；2nm是製程命名，非本輪物理尺寸實測 | [來源](https://www.rapidus.inc/en/) |
+| GBT0005 | Rapidus CORE | ECOSYSTEM_PLATFORM | 官網列2026-10-05生態框架公告；不據此證明量產完成 | [來源](https://www.rapidus.inc/en/) |
+| GBT0006 | ALMA interferometer | RESEARCH_FACILITY | 國際毫米與次毫米波天文干涉儀 | [來源](https://www.almaobservatory.org/en/about-alma/) |
+| GBT0007 | Willett 2023 attempted-speech BCI | RESEARCH_PROTOCOL | 單一ALS參與者皮質內微電極語音解碼研究；非商品與自由讀心 | [來源](https://www.nature.com/articles/s41586-023-06377-x) |
+| GBT0008 | Metzger 2023 speech and avatar BCI | RESEARCH_PROTOCOL | 單一參與者皮質表面記錄驅動文本、語音與虛擬面部研究 | [來源](https://www.nature.com/articles/s41586-023-06443-4) |
+| GBT0009 | Littlejohn 2025 streaming speech BCI | RESEARCH_PROTOCOL | 單一參與者流式語音合成研究；80ms解碼增量不等於端到端延遲 | [來源](https://www.nature.com/articles/s41593-025-01905-6) |
+| GBT0010 | streaming.braindecoder | SOFTWARE_REPOSITORY | 論文指向的流式語音解碼倉庫已可讀；本輪未執行重現，授權仍UNKNOWN | [來源](https://github.com/cheoljun95/streaming.braindecoder) |
+
+## 新增機構／科研單位
+
+| ID | 名稱 | 國別候選 | 領域 | 公開描述 | 證據 |
+| --- | --- | --- | --- | --- | --- |
+| GBO0001 | INESC TEC | PT | AI_ROBOTICS_COMPUTE | UNKNOWN：本輪頁面不足或讀取失敗；計算、機械人與工程研究 | [UNKNOWN](https://www.inesctec.pt/en) |
+| GBO0002 | Research Ireland | IE | RESEARCH_FUNDING | 科研與創新資助機構 | [VERIFIED](https://www.researchireland.ie/) |
+| GBO0003 | DTU | DK | ENGINEERING | 技術研究大學 | [VERIFIED](https://www.dtu.dk/english) |
+| GBO0004 | RISE | SE | APPLIED_RESEARCH | 應用技術研究機構 | [VERIFIED](https://www.ri.se/en) |
+| GBO0005 | CINVESTAV | MX | RESEARCH | UNKNOWN：本輪頁面不足或讀取失敗；高等科研機構 | [UNKNOWN](https://www.cinvestav.mx/) |
+| GBO0006 | UM6P | MA | RESEARCH | UNKNOWN：本輪頁面不足或讀取失敗；理工研究大學 | [UNKNOWN](https://www.um6p.ma/en) |
+| GBO0007 | KEMRI | KE | BIOMEDICAL | 醫學研究機構 | [VERIFIED](https://www.kemri.go.ke/) |
+| GBO0008 | CSIR-INSTI Ghana | GH | RESEARCH | 2024 年報列示科學與技術研究業務；不是2026績效證明 | [VERIFIED](https://insti.csir.org.gh/documents/2024_INSTI_ANNUAL_REPORT.pdf) |
+| GBO0009 | BITRI | BW | APPLIED_RESEARCH | 技術研究機構 | [VERIFIED](https://bitri.co.bw/about-us/) |
+| GBO0010 | SIRDC | ZW | APPLIED_RESEARCH | 科學與產業研究機構 | [VERIFIED](https://sirdc.ac.zw/about-us/) |
+| GBO0011 | GGPEN | AO | SPACE | UNKNOWN：本輪頁面不足或讀取失敗；國家太空計畫管理機構 | [UNKNOWN](https://ggpen.gov.ao/) |
+| GBO0012 | ASAL | DZ | SPACE | 太空機構 | [VERIFIED](https://asal.dz/) |
+| GBO0013 | CONAE | AR | SPACE | 太空活動機構 | [VERIFIED](https://www.argentina.gob.ar/ciencia/conae) |
+| GBO0014 | ALMA | 跨國 | ASTRONOMY | 國際毫米與次毫米波天文觀測設施 | [VERIFIED](https://www.almaobservatory.org/en/about-alma/) |
+| GBO0015 | SKAO | 跨國 | ASTRONOMY | 射電天文研究設施 | [VERIFIED](https://www.skao.int/en) |
+| GBO0016 | ESO | 跨國 | ASTRONOMY | 天文觀測研究機構 | [VERIFIED](https://www.eso.org/public/about-eso/) |
+| GBO0017 | CIMMYT | 跨國 | AGRICULTURAL_BIOTECH | 農業研究機構 | [VERIFIED](https://www.cimmyt.org/about/) |
+| GBO0018 | ICGEB | 跨國 | BIOTECH | UNKNOWN：本輪頁面不足或讀取失敗；基因工程與生物技術研究 | [UNKNOWN](https://www.icgeb.org/about-us/) |
+| GBO0019 | Arm | GB | SEMICONDUCTOR | 計算架構與半導體設計技術 | [VERIFIED](https://www.arm.com/) |
+| GBO0020 | Graphcore | GB | AI_COMPUTE | 人工智能計算 | [VERIFIED](https://www.graphcore.ai/) |
+| GBO0021 | Cerebras | US | AI_COMPUTE | 人工智能計算系統 | [VERIFIED](https://www.cerebras.ai/) |
+| GBO0022 | Groq | US | AI_COMPUTE | 人工智能推論計算 | [VERIFIED](https://groq.com/) |
+| GBO0023 | Tenstorrent | US;CA | AI_COMPUTE | 人工智能計算与處理器技術 | [VERIFIED](https://tenstorrent.com/) |
+| GBO0024 | Samsung Semiconductor | KR | SEMICONDUCTOR | 半導體產品與技術 | [VERIFIED](https://semiconductor.samsung.com/) |
+| GBO0025 | SK hynix | KR | SEMICONDUCTOR | 記憶體半導體 | [VERIFIED](https://www.skhynix.com/) |
+| GBO0026 | Micron | US | SEMICONDUCTOR | 記憶體與儲存半導體 | [VERIFIED](https://www.micron.com/) |
+| GBO0027 | Rapidus | JP | SEMICONDUCTOR | 先進半導體研發與製造計畫 | [VERIFIED](https://www.rapidus.inc/en/) |
+| GBO0028 | Infineon | DE | SEMICONDUCTOR | 半導體產品 | [VERIFIED](https://www.infineon.com/) |
+| GBO0029 | STMicroelectronics | CH;FR;IT | SEMICONDUCTOR | 半導體產品 | [VERIFIED](https://www.st.com/) |
+| GBO0030 | GlobalFoundries | US | SEMICONDUCTOR | 晶圓代工技術 | [VERIFIED](https://gf.com/) |
+| GBO0031 | National Academy of Sciences Armenia | AM | RESEARCH | 亞美尼亞國家科學研究網絡 | [VERIFIED](https://www.sci.am/) |
+| GBO0032 | ANAS | AZ | RESEARCH | 阿塞拜疆科學研究網絡 | [VERIFIED](https://science.gov.az/en) |
+| GBO0033 | Georgia Innovation and Technology Agency | GE | TECHNOLOGY_POLICY | 創新與技術政府機構 | [VERIFIED](https://gita.gov.ge/en) |
+| GBO0034 | Nepal Academy of Science and Technology | NP | RESEARCH | UNKNOWN：本輪頁面不足或讀取失敗；科學與技術研究機構 | [UNKNOWN](https://nast.gov.np/) |
+| GBO0035 | Stanford Wu Tsai Neurosciences Institute | US | NEUROTECH | 2023 人體語音 BCI 論文作者所屬科研單位 | [VERIFIED](https://www.nature.com/articles/s41586-023-06377-x) |
+| GBO0036 | UCSF Department of Neurological Surgery | US | NEUROTECH | 2025 流式語音 BCI 論文作者所屬科研單位 | [VERIFIED](https://www.nature.com/articles/s41593-025-01905-6) |
+
+## 整合資料與来源異常
+
+| 資料 | 連結 |
+| --- | --- |
+| registry_global_organizations.csv | [registry_global_organizations.csv](tables/08_global_technology_iso249_20261006_b02/registry_global_organizations.csv) |
+| registry_global_claims.csv | [registry_global_claims.csv](tables/08_global_technology_iso249_20261006_b02/registry_global_claims.csv) |
+| registry_global_sources.csv | [registry_global_sources.csv](tables/08_global_technology_iso249_20261006_b02/registry_global_sources.csv) |
+| registry_technology_products_tools.csv | [registry_technology_products_tools.csv](tables/08_global_technology_iso249_20261006_b02/registry_technology_products_tools.csv) |
+| registry_neurotechnology_global.csv | [registry_neurotechnology_global.csv](tables/08_global_technology_iso249_20261006_b02/registry_neurotechnology_global.csv) |
+| registry_country_entity_relations.csv | [registry_country_entity_relations.csv](tables/08_global_technology_iso249_20261006_b02/registry_country_entity_relations.csv) |
+| registry_country_technology_coverage.csv | [registry_country_technology_coverage.csv](tables/08_global_technology_iso249_20261006_b02/registry_country_technology_coverage.csv) |
+| registry_technology_metrics.csv | [registry_technology_metrics.csv](tables/08_global_technology_iso249_20261006_b02/registry_technology_metrics.csv) |
+
+[數據字典](tables/08_global_technology_iso249_20261006_b02/data_dictionary.json)含計數、欄位、證據邊界與來源異常。首次逐地搜索952筆線索仍見07目錄；本批沒有把其中未知關係的結果升格為實體。
+
+Ghana的候選主域名本輪返回博彩內容，原因未查明，標記CONTENT_MISMATCH而非科研證據；改用CSIR-INSTI的2024官方年報，僅支持其當年研究業務。BITRI與SIRDC使用可讀的無www官方About頁；失敗網址保留於來源異常。Georgia新增GITA官方Tbilisi地址關係，以排除先前美國Georgia州搜尋誤配。
+
+下一輪仍須核實其餘地區的具體項目、原始成果與部署條件；沒有找到或核實候選不代表沒有能力。
