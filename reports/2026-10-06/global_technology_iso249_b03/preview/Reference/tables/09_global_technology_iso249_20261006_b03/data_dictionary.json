@@ -1,0 +1,192 @@
+{
+  "counts": {
+    "organizations": 371,
+    "new_organizations": 36,
+    "new_organization_descriptions_verified": 23,
+    "organization_descriptions_verified": 221,
+    "technologies": 59,
+    "new_technologies": 5,
+    "neuro_records": 16,
+    "published_studies": 0,
+    "reported_metrics": 11,
+    "countries_with_editorial_candidates": 103
+  },
+  "batch": "B03",
+  "as_of": "2026-10-06",
+  "evidence_rules": [
+    "VERIFIED is claim-specific.",
+    "Paper metrics are verified as reported, not independently replicated.",
+    "Candidate country is not legal domicile or national frontier rank.",
+    "80ms increment is not end-to-end latency or information bandwidth.",
+    "Research infrastructure and policy roles do not constitute world-leading technology."
+  ],
+  "table_fields": {
+    "registry_global_organizations.csv": [
+      "entity_id",
+      "display_name",
+      "entity_type",
+      "primary_domain",
+      "country_candidate_iso_alpha2",
+      "country_assignment_status",
+      "legal_entity_status",
+      "selection_status",
+      "source_id",
+      "as_of",
+      "origin_batch",
+      "legal_domicile_state",
+      "world_frontier_rank_state"
+    ],
+    "registry_global_claims.csv": [
+      "claim_id",
+      "entity_id",
+      "claim",
+      "evidence_state",
+      "verification_scope",
+      "product_project_leads",
+      "product_leads_state",
+      "performance_state",
+      "deployment_state",
+      "regulatory_state",
+      "source_id",
+      "reviewed_on",
+      "origin_batch"
+    ],
+    "registry_global_sources.csv": [
+      "source_id",
+      "url",
+      "supports",
+      "source_class",
+      "access_state",
+      "checked_on",
+      "published_on",
+      "archive_state",
+      "license_state",
+      "origin_batch"
+    ],
+    "registry_technology_products_tools.csv": [
+      "technology_id",
+      "display_name",
+      "record_type",
+      "domain",
+      "issuer_entity_id",
+      "issuer_relation_state",
+      "public_description",
+      "evidence_state",
+      "verification_scope",
+      "source_id",
+      "version_state",
+      "license_state",
+      "availability_state",
+      "independent_performance_state",
+      "global_rank_state",
+      "regulatory_state",
+      "as_of"
+    ],
+    "registry_neurotechnology_global.csv": [
+      "neuro_id",
+      "entity_id",
+      "project_name",
+      "country_candidate_iso_alpha2",
+      "country_relation_state",
+      "invasiveness",
+      "modality",
+      "signal_direction",
+      "direction_state",
+      "remote_state",
+      "information_bandwidth_bits_per_second",
+      "bandwidth_state",
+      "bandwidth_protocol",
+      "human_trial_state",
+      "trial_ids",
+      "trial_registry_status",
+      "clinical_phase",
+      "publication_ids",
+      "publication_state",
+      "patent_ids",
+      "patent_state",
+      "regulatory_state",
+      "regulatory_jurisdiction",
+      "N0_N7_level",
+      "evidence_state",
+      "verification_scope",
+      "source_id",
+      "notes",
+      "as_of"
+    ],
+    "registry_country_entity_relations.csv": [
+      "relation_id",
+      "entity_id",
+      "iso_alpha2",
+      "relation_type",
+      "claim",
+      "evidence_state",
+      "verification_scope",
+      "source_id",
+      "as_of"
+    ],
+    "registry_country_technology_coverage.csv": [
+      "iso_alpha2",
+      "name_en",
+      "search_state",
+      "broad_queries_completed",
+      "retry_count",
+      "search_lead_count",
+      "editorial_entity_candidate_count",
+      "candidate_public_descriptions_verified",
+      "country_relation_verified_count",
+      "country_frontier_capability_state",
+      "N0_N7_level",
+      "research_completion_state",
+      "query",
+      "provider",
+      "searched_on"
+    ],
+    "registry_technology_metrics.csv": [
+      "metric_id",
+      "technology_id",
+      "entity_id",
+      "metric_name",
+      "value",
+      "unit",
+      "statistic",
+      "participant_count",
+      "conditions",
+      "study_date",
+      "doi",
+      "evidence_state",
+      "verification_scope",
+      "source_id",
+      "information_bandwidth_state",
+      "general_population_state",
+      "world_record_state",
+      "reviewed_on"
+    ]
+  },
+  "source_anomalies": [
+    {
+      "url": "https://www.nature.com/articles/s41586-026-10559-8",
+      "state": "CORRECTION_FULL_TEXT_UNREADABLE",
+      "note": "Article lists author correction 28 April 2026; current updated abstract reviewed; correction impact not fully audited."
+    },
+    {
+      "url": "https://www.it4i.cz/en/infrastructure/karolina",
+      "state": "UNRESOLVED_SPECIFICATION_DIFFERENCE",
+      "note": "Overview says 831 compute nodes; technical documentation says 829. Neither adopted as a reconciled node count."
+    },
+    {
+      "url": "https://www.it4i.cz/en/about/infoservice",
+      "state": "POSSIBLE_STALE_BOILERPLATE",
+      "note": "DGX-2 current-system wording differs from current infrastructure list retirement in early 2026. No current DGX-2 deployment asserted."
+    },
+    {
+      "url": "https://ime.um.edu.mo/about-us/introduction-history/",
+      "state": "SEARCH_EXCERPT_ONLY_BODY_UNREADABLE",
+      "note": "Official search excerpt supports lab lead; no readable body verification, claim remains UNKNOWN."
+    },
+    {
+      "url": "https://www.pasteur.sn/",
+      "state": "PLACEHOLDER_CONTENT",
+      "note": "Coming Soon content does not verify biomedical research activity."
+    }
+  ]
+}
