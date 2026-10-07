@@ -1,0 +1,32 @@
+---
+title: "官方證據增補 B06：Synchron SWITCH 論文與更正核查"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批增補 **2 條期刊來源、6 條限定主張、1 筆論文及 7 筆研究指標**，對照 Synchron 的 GTO0034 條目，保留原資料。
+
+SWITCH 為單中心前瞻性首次人體研究，入組5人、植入及分析4人，追蹤12個月。研究報告零嚴重不良事件，亦有8次輕度器件不良影響；小樣本觀察不能當成零風險證明。[JAMA Neurology 正文](https://jamanetwork.com/journals/jamaneurology/fullarticle/2799839)。
+
+| 指標 | 論文報告值 | 必須保留的條件 |
+|---|---|---|
+| 訊號頻寬 | 平均233 Hz，SD 16 | 頻率範圍；不是資訊傳輸率 |
+| 正確字元／分鐘 | 平均16.6，SD 5.6 | BCI 點擊配合眼動游標；不是 BCI 單獨打字 |
+
+Synchron 出資並參與設計、資料及發表工作；同行評審發表不等於獨立重現。[研究結果與資助披露](https://jamanetwork.com/journals/jamaneurology/fullarticle/2799839)。
+
+期刊於2023-03-27更正 Figure 3D 左圖縱軸為0至30。本批記錄更正關係，數值取自現行正文，未從圖像估讀。[更正通知](https://jamanetwork.com/journals/jamaneurology/fullarticle/2802981)。
+
+## 資料表與證據界線
+
+- [期刊來源](tables/16_official_evidence_20261007_b06/registry_supplemental_sources.csv)
+- [限定主張](tables/16_official_evidence_20261007_b06/registry_supplemental_claims.csv)
+- [論文、試驗編號及更正關係](tables/16_official_evidence_20261007_b06/registry_neuro_publications.csv)
+- [七筆指標與測試條件](tables/16_official_evidence_20261007_b06/registry_study_metrics.csv)
+- [讀取限制](../reports/2026-10-07/official_evidence_b06/access_attempts.csv)、[基線指紋](../reports/2026-10-07/official_evidence_b06/baseline_manifest.csv)、[驗收](../reports/2026-10-07/official_evidence_b06/validation.json)、[生成程式](../reports/2026-10-07/official_evidence_b06/build_evidence.py)
+
+VERIFIED 限於核對論文報告內容。原始受試者資料未取得，未重新分析或重現實驗；不將此研究結果外推為全部人群、當前器件性能或商業許可。論文中的 SWITCH 編號 NCT03834857 作出版物所報編號，當前登記狀態 UNKNOWN，未與 COMMAND／INTENT／FOCUS 合併。
+
+另一信號穩定性預印本及作者鏡像未成功讀取，本批只保留查證線索，不引用摘要當成已核實結果。期刊來源未保存原始 HTTP 回應，公開閱讀不代表取得訓練授權。舊 SQLite 快照、原宇航報告、歷史數據與既有 HTML 均保留；不新增國家 N0～N7 能力、排名或监管判定。
