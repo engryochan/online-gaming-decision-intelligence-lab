@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant" xml:lang="zh-Hant"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>全球金融母表 B06：ISO市場全表、公司與券商身份對照</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Global_Financial_Universe_B06_20261007_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/popper.min.js"></script>
+<script src="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Global_Financial_Universe_B06_20261007_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Global_Financial_Universe_B06_20261007_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Global_Financial_Universe_B06_20261007_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Global_Financial_Universe_B06_20261007_files/libs/bootstrap/bootstrap-215b371544c282197b31c8aa00ce3677.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">全球金融母表 B06：ISO市場全表、公司與券商身份對照</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="全球市場識別母表" class="level2">
+<h2 class="anchored" data-anchor-id="全球市場識別母表">全球市場識別母表</h2>
+<p>完整接收<a href="https://www.iso20022.org/market-identifier-codes">ISO10383官方MIC全表</a>2,883條，保留全部17個原始欄位。官方頁列出版日期2026-09-14、生效日期2026-09-28；本批保留來源CSV及SHA256，不把提取日替代生效日。原狀態分別ACTIVE 2,296、EXPIRED 566、UPDATED 21，未刪除失效或更新記錄。</p>
+<p>MIC識別交易所、交易平台、受監管及非受監管市場、交易報告設施等，因此2,883不是全球股票交易所總數。OPRT與SGMT分別保留，所有OPERATING MIC引用均能在全表找到父代碼，這是引用完整性驗證，不是市場許可或法人身份驗證。法人名稱、LEI、網站、市場類型、各項日期與備註保留；LEI欄位尚未逐筆向GLEIF核實。</p>
+<p>來源涵蓋149種地區原碼，其中148種可對到249條目母表，特殊碼ZZ單獨保留、不創造第250個國家。其餘101個母表條目在這份MIC來源無記錄，不等於該地沒有交易所。1,334條ACTIVE且OPRT的來源記錄已建立逐市場調查隊列，仍須確認每個市場是否有股票上市、實際名錄及監管範圍；不得把MIC全表直接視為各國所有交易所已查完。</p>
+<ul>
+<li><a href="tables/24_financial_universe_b06_20261007/registry_iso10383_mic.csv">MIC全部2,883條</a></li>
+<li><a href="tables/24_financial_universe_b06_20261007/registry_operating_market_research_queue.csv">1,334條營運市場調查隊列</a></li>
+</ul>
+</section>
+<section id="公司全量官方來源" class="level2">
+<h2 class="anchored" data-anchor-id="公司全量官方來源">公司全量官方來源</h2>
+<p>從<a href="https://openapi.twse.com.tw/">TWSE官方OpenAPI</a>與<a href="https://www.tpex.org.tw/openapi/">TPEx官方OpenAPI</a>的規格確認端點後，完整接收：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>來源分類</th>
+<th style="text-align: right;">本批公司資料列</th>
+<th>官方端點</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>上市</td>
+<td style="text-align: right;">1,095</td>
+<td><a href="https://openapi.twse.com.tw/v1/opendata/t187ap03_L">TWSE上市公司基本資料</a></td>
+</tr>
+<tr class="even">
+<td>上櫃</td>
+<td style="text-align: right;">893</td>
+<td><a href="https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O">TPEx上櫃公司基本資料</a></td>
+</tr>
+<tr class="odd">
+<td>興櫃，獨立分類</td>
+<td style="text-align: right;">362</td>
+<td><a href="https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_R">TPEx興櫃公司基本資料</a></td>
+</tr>
+</tbody>
+</table>
+<p>共2,350条全部回應資料，逐列保留公司名稱、代碼、統一編號、外國企業註冊地、產業、地址、公司及財務相關欄位。興櫃不能混稱為已上市；來源的空白／占位註冊地不推定為本地國籍。統一編號保留來源字串，不省略前導零；公司代碼及官方日期原文保留，尚未取得別的官方總數對賬，因此只宣稱全部API回應已接收，未宣稱全國所有公司已完成。</p>
+<ul>
+<li><a href="tables/24_financial_universe_b06_20261007/registry_tw_company_profiles.csv">三份公司來源全部列</a></li>
+</ul>
+</section>
+<section id="證券商及公司身份核對" class="level2">
+<h2 class="anchored" data-anchor-id="證券商及公司身份核對">證券商及公司身份核對</h2>
+<p>完整接收<a href="https://openapi.twse.com.tw/v1/brokerService/brokerList">TWSE券商總公司資料</a>64條與<a href="https://openapi.twse.com.tw/v1/opendata/t187ap18">券商基本資料</a>64條；兩份來源各自代碼唯一，代碼集合完全一致。以相同官方券商代碼對接成64條來源檔案，每份原始JSON欄位仍獨立保留，沒有按名稱猜測合併。</p>
+<p><a href="https://data.gov.tw/dataset/20765">政府資料開放平台</a>將後者列為全體券商彙總報表，包含證券IB等業務；本批按原業務種類及項目保留，不能推論每家公司都持有相同牌照，也不能以總公司表代替全部分公司或監管牌照歷史。基本資料出表日期原文1151007；總公司端點沒有同等有效日期欄位，未自行補造。</p>
+<p>另以非空、八位數且非全零的官方統一編號，找到11條券商—公司來源關係。狀態為EXACT_SHARED_OFFICIAL_BUSINESS_NUMBER／LEGAL_REGISTRATION_REVIEW_PENDING，只建立可追溯關係，不自動覆寫名稱或把來源匹配提升成已查證全球法人註冊身份。</p>
+<ul>
+<li><a href="tables/24_financial_universe_b06_20261007/registry_tw_broker_source_profiles.csv">64條券商來源對照與全部原始欄位</a></li>
+<li><a href="tables/24_financial_universe_b06_20261007/broker_company_identifier_links.csv">11條公司身份來源匹配</a></li>
+</ul>
+</section>
+<section id="統一快照v3與保留驗收" class="level2">
+<h2 class="anchored" data-anchor-id="統一快照v3與保留驗收">統一快照v3與保留驗收</h2>
+<p>新資料庫 <code>reports/2026-10-07/financial_universe_b06/financial_universe_v3.sqlite</code>沿用v2全部表與既有來源記錄，新增本批資料及mic_registry。此前72,310條raw_records及41,060條工具／目錄記錄逐列比較完整保留；449條貨幣與1,951條FSA業者仍可查詢。7張新資料表逐列全部欄位還原、原始API JSON逐列比對、MIC父引用檢查及資料庫完整性均通過。</p>
+<p>本快照工具／目錄／公司来源記錄累計 <strong>43,410條</strong>，含基金、衍生工具與不同市場分類，仍不是全球唯一上市公司數。原表記錄累計79,207條，包含來源、覆蓋與市場隊列表，同樣不是公司數。</p>
+<ul>
+<li><a href="tables/24_financial_universe_b06_20261007/registry_country_financial_coverage.csv">249條目金融覆蓋及MIC來源計數</a></li>
+<li><a href="tables/24_financial_universe_b06_20261007/source_manifest.csv">本批官方來源、範圍與雜湊</a></li>
+<li><a href="tables/24_financial_universe_b06_20261007/integration_input_manifest.csv">統一查詢新增輸入清單</a></li>
+</ul>
+</section>
+<section id="尚未閉合的缺口" class="level2">
+<h2 class="anchored" data-anchor-id="尚未閉合的缺口">尚未閉合的缺口</h2>
+<p>目前七個市場有公司／工具來源接收，仍有242個母表條目尚未接收上市名錄；七地全部市場枚舉、唯一法人及歷史有效期間也未全部完成。MIC調查隊列補強了逐市場定位，但沒有替代上市公司名錄。券商仍須逐國接收完整監管牌照與分支資料，並對賬公司及市場參與資格。貨幣原官方表完整保留，地方及實際使用貨幣仍需央行及法規證據。</p>
+<p>印度官方下載存取拒絕與NZX摘要180／明細179的差異繼續保留。後續依市場隊列核實股票上市範圍、接收全量公司與牌照表、解析身份及跨市場關係，再連結科技證據。未以缺資料推論零家公司，也未將任何未完成項目標為全球完成。</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

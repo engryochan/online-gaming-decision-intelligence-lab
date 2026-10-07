@@ -1,0 +1,57 @@
+---
+title: "全球金融母表 B06：ISO市場全表、公司與券商身份對照"
+lang: zh-Hant
+format: html
+---
+
+## 全球市場識別母表
+
+完整接收[ISO10383官方MIC全表](https://www.iso20022.org/market-identifier-codes)2,883條，保留全部17個原始欄位。官方頁列出版日期2026-09-14、生效日期2026-09-28；本批保留來源CSV及SHA256，不把提取日替代生效日。原狀態分別ACTIVE 2,296、EXPIRED 566、UPDATED 21，未刪除失效或更新記錄。
+
+MIC識別交易所、交易平台、受監管及非受監管市場、交易報告設施等，因此2,883不是全球股票交易所總數。OPRT與SGMT分別保留，所有OPERATING MIC引用均能在全表找到父代碼，這是引用完整性驗證，不是市場許可或法人身份驗證。法人名稱、LEI、網站、市場類型、各項日期與備註保留；LEI欄位尚未逐筆向GLEIF核實。
+
+來源涵蓋149種地區原碼，其中148種可對到249條目母表，特殊碼ZZ單獨保留、不創造第250個國家。其餘101個母表條目在這份MIC來源無記錄，不等於該地沒有交易所。1,334條ACTIVE且OPRT的來源記錄已建立逐市場調查隊列，仍須確認每個市場是否有股票上市、實際名錄及監管範圍；不得把MIC全表直接視為各國所有交易所已查完。
+
+- [MIC全部2,883條](tables/24_financial_universe_b06_20261007/registry_iso10383_mic.csv)
+- [1,334條營運市場調查隊列](tables/24_financial_universe_b06_20261007/registry_operating_market_research_queue.csv)
+
+## 公司全量官方來源
+
+從[TWSE官方OpenAPI](https://openapi.twse.com.tw/)與[TPEx官方OpenAPI](https://www.tpex.org.tw/openapi/)的規格確認端點後，完整接收：
+
+|來源分類|本批公司資料列|官方端點|
+|---|---:|---|
+|上市|1,095|[TWSE上市公司基本資料](https://openapi.twse.com.tw/v1/opendata/t187ap03_L)|
+|上櫃|893|[TPEx上櫃公司基本資料](https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O)|
+|興櫃，獨立分類|362|[TPEx興櫃公司基本資料](https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_R)|
+
+共2,350条全部回應資料，逐列保留公司名稱、代碼、統一編號、外國企業註冊地、產業、地址、公司及財務相關欄位。興櫃不能混稱為已上市；來源的空白／占位註冊地不推定為本地國籍。統一編號保留來源字串，不省略前導零；公司代碼及官方日期原文保留，尚未取得別的官方總數對賬，因此只宣稱全部API回應已接收，未宣稱全國所有公司已完成。
+
+- [三份公司來源全部列](tables/24_financial_universe_b06_20261007/registry_tw_company_profiles.csv)
+
+## 證券商及公司身份核對
+
+完整接收[TWSE券商總公司資料](https://openapi.twse.com.tw/v1/brokerService/brokerList)64條與[券商基本資料](https://openapi.twse.com.tw/v1/opendata/t187ap18)64條；兩份來源各自代碼唯一，代碼集合完全一致。以相同官方券商代碼對接成64條來源檔案，每份原始JSON欄位仍獨立保留，沒有按名稱猜測合併。
+
+[政府資料開放平台](https://data.gov.tw/dataset/20765)將後者列為全體券商彙總報表，包含證券IB等業務；本批按原業務種類及項目保留，不能推論每家公司都持有相同牌照，也不能以總公司表代替全部分公司或監管牌照歷史。基本資料出表日期原文1151007；總公司端點沒有同等有效日期欄位，未自行補造。
+
+另以非空、八位數且非全零的官方統一編號，找到11條券商—公司來源關係。狀態為EXACT_SHARED_OFFICIAL_BUSINESS_NUMBER／LEGAL_REGISTRATION_REVIEW_PENDING，只建立可追溯關係，不自動覆寫名稱或把來源匹配提升成已查證全球法人註冊身份。
+
+- [64條券商來源對照與全部原始欄位](tables/24_financial_universe_b06_20261007/registry_tw_broker_source_profiles.csv)
+- [11條公司身份來源匹配](tables/24_financial_universe_b06_20261007/broker_company_identifier_links.csv)
+
+## 統一快照v3與保留驗收
+
+新資料庫 `reports/2026-10-07/financial_universe_b06/financial_universe_v3.sqlite`沿用v2全部表與既有來源記錄，新增本批資料及mic_registry。此前72,310條raw_records及41,060條工具／目錄記錄逐列比較完整保留；449條貨幣與1,951條FSA業者仍可查詢。7張新資料表逐列全部欄位還原、原始API JSON逐列比對、MIC父引用檢查及資料庫完整性均通過。
+
+本快照工具／目錄／公司来源記錄累計 **43,410條**，含基金、衍生工具與不同市場分類，仍不是全球唯一上市公司數。原表記錄累計79,207條，包含來源、覆蓋與市場隊列表，同樣不是公司數。
+
+- [249條目金融覆蓋及MIC來源計數](tables/24_financial_universe_b06_20261007/registry_country_financial_coverage.csv)
+- [本批官方來源、範圍與雜湊](tables/24_financial_universe_b06_20261007/source_manifest.csv)
+- [統一查詢新增輸入清單](tables/24_financial_universe_b06_20261007/integration_input_manifest.csv)
+
+## 尚未閉合的缺口
+
+目前七個市場有公司／工具來源接收，仍有242個母表條目尚未接收上市名錄；七地全部市場枚舉、唯一法人及歷史有效期間也未全部完成。MIC調查隊列補強了逐市場定位，但沒有替代上市公司名錄。券商仍須逐國接收完整監管牌照與分支資料，並對賬公司及市場參與資格。貨幣原官方表完整保留，地方及實際使用貨幣仍需央行及法規證據。
+
+印度官方下載存取拒絕與NZX摘要180／明細179的差異繼續保留。後續依市場隊列核實股票上市範圍、接收全量公司與牌照表、解析身份及跨市場關係，再連結科技證據。未以缺資料推論零家公司，也未將任何未完成項目標為全球完成。
