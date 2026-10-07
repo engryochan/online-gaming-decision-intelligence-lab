@@ -1,0 +1,131 @@
+{
+  "scope": "1514_SOURCE_ROWS_SINGLE_CONNECTION_WARM_IN_MEMORY_COPY",
+  "comparison": "three secondary indexes present versus removed; primary indexes retained",
+  "sqlite_version": "3.53.1",
+  "python_version": "3.12.14",
+  "os": "Windows",
+  "limits": "not disk-cold, concurrent, distributed, production or worldwide performance evidence",
+  "source_database_modified": false,
+  "results": [
+    {
+      "query": "country_coverage",
+      "secondary_indexes_enabled": true,
+      "result_rows": 249,
+      "result_sha256": "2dae7a6fac9554e5074423204fb9dd3912d9c20380632c0ffb4fd9382ee6d68f",
+      "p50_ms": 0.9102,
+      "p95_ms": 0.9721,
+      "rounds": 30,
+      "plan": [
+        "SCAN c USING INDEX sqlite_autoindex_registry_country_technology_coverage_1",
+        "CORRELATED SCALAR SUBQUERY 3",
+        "SEARCH b USING COVERING INDEX candidate_country (iso_alpha2=?)",
+        "CORRELATED SCALAR SUBQUERY 4",
+        "SEARCH b USING INDEX candidate_country (iso_alpha2=?)",
+        "SEARCH a EXISTS USING INDEX claims_entity (entity_id=?)",
+        "CORRELATED SCALAR SUBQUERY 6",
+        "SEARCH b USING INDEX candidate_country (iso_alpha2=?)",
+        "SEARCH a EXISTS USING INDEX claims_entity (entity_id=?)",
+        "CORRELATED SCALAR SUBQUERY 8",
+        "SEARCH r USING INDEX relations_country (iso_alpha2=?)"
+      ]
+    },
+    {
+      "query": "missing_sources",
+      "secondary_indexes_enabled": true,
+      "result_rows": 7,
+      "result_sha256": "6ae2085c1171a44258c31faa7e544029464cb21e9712bf2c78382b180e5e5bae",
+      "p50_ms": 0.0271,
+      "p95_ms": 0.0294,
+      "rounds": 30,
+      "plan": [
+        "SCAN a"
+      ]
+    },
+    {
+      "query": "metrics_with_context",
+      "secondary_indexes_enabled": true,
+      "result_rows": 17,
+      "result_sha256": "5aafe9d93b0312918069368bbc3d2ea88e5ca0a355e69fc20359aaa0cf626497",
+      "p50_ms": 0.06695000000000001,
+      "p95_ms": 0.0708,
+      "rounds": 30,
+      "plan": [
+        "SCAN m",
+        "SEARCH p USING INDEX sqlite_autoindex_metric_numeric_projection_1 (metric_id=?)",
+        "SEARCH t USING INDEX sqlite_autoindex_registry_technology_products_tools_1 (technology_id=?)"
+      ]
+    },
+    {
+      "query": "neuro_missing_bandwidth",
+      "secondary_indexes_enabled": true,
+      "result_rows": 16,
+      "result_sha256": "9f778be07257b86aacb2fc661b2930af62c7aa5e8cb20ef93445a2303f061729",
+      "p50_ms": 0.0204,
+      "p95_ms": 0.0215,
+      "rounds": 30,
+      "plan": [
+        "SCAN registry_neurotechnology_global"
+      ]
+    },
+    {
+      "query": "country_coverage",
+      "secondary_indexes_enabled": false,
+      "result_rows": 249,
+      "result_sha256": "2dae7a6fac9554e5074423204fb9dd3912d9c20380632c0ffb4fd9382ee6d68f",
+      "p50_ms": 11.3756,
+      "p95_ms": 11.5791,
+      "rounds": 30,
+      "plan": [
+        "SCAN c USING INDEX sqlite_autoindex_registry_country_technology_coverage_1",
+        "CORRELATED SCALAR SUBQUERY 3",
+        "SCAN b USING COVERING INDEX sqlite_autoindex_entity_country_candidates_1",
+        "CORRELATED SCALAR SUBQUERY 4",
+        "SCAN b USING COVERING INDEX sqlite_autoindex_entity_country_candidates_1",
+        "SEARCH a EXISTS USING AUTOMATIC PARTIAL COVERING INDEX (entity_id=? AND evidence_state=?)",
+        "CORRELATED SCALAR SUBQUERY 6",
+        "SCAN b USING COVERING INDEX sqlite_autoindex_entity_country_candidates_1",
+        "SEARCH a EXISTS USING AUTOMATIC PARTIAL COVERING INDEX (entity_id=? AND evidence_state=? AND verification_scope=?)",
+        "CORRELATED SCALAR SUBQUERY 8",
+        "SCAN r"
+      ]
+    },
+    {
+      "query": "missing_sources",
+      "secondary_indexes_enabled": false,
+      "result_rows": 7,
+      "result_sha256": "6ae2085c1171a44258c31faa7e544029464cb21e9712bf2c78382b180e5e5bae",
+      "p50_ms": 0.027549999999999998,
+      "p95_ms": 0.0366,
+      "rounds": 30,
+      "plan": [
+        "SCAN a"
+      ]
+    },
+    {
+      "query": "metrics_with_context",
+      "secondary_indexes_enabled": false,
+      "result_rows": 17,
+      "result_sha256": "5aafe9d93b0312918069368bbc3d2ea88e5ca0a355e69fc20359aaa0cf626497",
+      "p50_ms": 0.07045,
+      "p95_ms": 0.0738,
+      "rounds": 30,
+      "plan": [
+        "SCAN m",
+        "SEARCH p USING INDEX sqlite_autoindex_metric_numeric_projection_1 (metric_id=?)",
+        "SEARCH t USING INDEX sqlite_autoindex_registry_technology_products_tools_1 (technology_id=?)"
+      ]
+    },
+    {
+      "query": "neuro_missing_bandwidth",
+      "secondary_indexes_enabled": false,
+      "result_rows": 16,
+      "result_sha256": "9f778be07257b86aacb2fc661b2930af62c7aa5e8cb20ef93445a2303f061729",
+      "p50_ms": 0.0208,
+      "p95_ms": 0.0218,
+      "rounds": 30,
+      "plan": [
+        "SCAN registry_neurotechnology_global"
+      ]
+    }
+  ]
+}

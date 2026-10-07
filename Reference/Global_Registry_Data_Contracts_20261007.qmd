@@ -1,0 +1,105 @@
+---
+title: "全球科技登記：欄位契約、證據口徑與可查詢快照"
+date: 2026-10-07
+lang: zh-Hant
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  enabled: false
+---
+
+## 本輪交付與範圍
+
+本輪承接 `7876b20` 歸檔提交，以 B04 九份資料表建立可查詢研究快照，保留原始 CSV、歷史批次、DGEF 資料庫與使用者 HTML。未重跑舊生成器，未將候選機構自動灌入 DGEF。
+
+九表共 1,514 行、135 個欄位記錄，每欄提供粒度、定義、用途、單位／空值處理與來源。契約狀態為 CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED，表示已有具體上下文定義，仍待資料負責人簽核。沿同族欄位回填既有語義目錄後，344 筆原未決欄位獲得定義，UNRESOLVED 由 768 降為 **424**；全目錄仍為 1,989 筆，没有刪掉未決或重複版本。
+
+[欄位契約](../reports/2026-10-07/registry_contracts/field_contracts.csv)、[完整語義目錄第二版](../reports/2026-10-07/registry_contracts/field_semantics_v2.csv)、[來源雜湊](../reports/2026-10-07/registry_contracts/source_manifest.csv)、[研究快照 SQLite](../reports/2026-10-07/registry_contracts/global_registry_b04_query.sqlite)。
+
+## 表的粒度與業務價值
+
+| 表 | 一筆資料的粒度 | 行數 | 可支持的用途 |
+|---|---|---:|---|
+| registry_country_technology_coverage | 一個 ISO 國家／地區條目的研究覆蓋狀態 | 249 | 搜索進度、未知與候選覆蓋 |
+| registry_global_organizations | 一個編輯登記機構候選 | 371 | 機構檢索與後續法人查證 |
+| registry_global_claims | 一條機構描述或研究隸屬主張 | 371 | 主張、範圍與來源追溯 |
+| registry_global_sources | 一次版本化來源支持登記 | 408 | 可讀性、封存與授權缺口 |
+| registry_country_entity_relations | 一條機構—ISO 關係主張 | 10 | 所在地／關係核實；不推論法律住所 |
+| registry_technology_products_tools | 一個具名技術、產品或服務記錄 | 71 | 同類技術候選篩選 |
+| registry_neurotechnology_global | 一個具名神經技術／項目 | 16 | 模態、方向、試驗與證據差距 |
+| registry_technology_metrics | 一個技術與來源條件下的數值 | 17 | 保留口徑的測量／規格比較 |
+| registry_technology_lifecycle_events | 一個技術生命周期事件 | 1 | 區分公告與獨立部署驗證 |
+
+機構候選不等於已核法人或公司；來源記錄數不等於唯一 URL 或獨立證據數；數值數不等於臨床研究數。價值是定性決策用途，未虛構 ROI、收入或最優性能。
+
+## 國別橋接與證據範圍
+
+五筆機構候選含多個國別代碼，兩筆神經技術記錄亦引用跨國候選。新建 entity_country_candidates 將分號／逗號列表拆成橋接行，保留原字串、候選狀態與機構 ID。各拆分代碼均可連母表；不能把候選橋接當作法人住所、主權、部署國或國家能力。
+
+共有 **341 條機構—候選國別隸屬**，涉及 103 個 ISO 條目；36 筆機構未分配候選國別。跨國機構可在多國出現，不以 341 當唯一機構數。其餘 146 個條目尚無本表候選，不證明沒有相關科技。
+
+candidate_public_descriptions_verified 的生成邏輯計算候選機構任意範圍 VERIFIED 主張，包含研究隸屬關係。全局主張表的221條 VERIFIED 中，219 條限 PUBLIC_DESCRIPTION_ONLY，2 條限 PUBLISHED_RESEARCH_AFFILIATION。新視圖另列任意範圍與僅公開描述的核實數，保留原欄位與歷史統計；國別橋接可能重复归入同一機構，不把國別分项總和當全局唯一主張數。
+
+country_relation_verified_count 的現行生成器計入全部關係行，本快照恰有 10 行且全部 VERIFIED；欄名不能保證未來排除 UNKNOWN。新視圖明確按 evidence_state 過濾。此為計算邊界審校，不是國家能力核實。
+
+249 條目的國家前沿能力與 N0～N7 仍為 UNKNOWN。廣泛搜索完成只表示既定查詢操作完成，不能變成所有科技、機構或領域普查完成。
+
+## 真實缺口不填猜測
+
+7 筆機構及其對應主張未填來源 ID；25 筆技術未填機構歸屬鍵，36 筆機構未填候選國別，均原樣保留。非空來源、機構與技術鍵經引用檢查，空值不能自動建立虛構來源或法人。
+
+16 筆神經技術資訊帶寬均為空。words/min、錯誤率、訊號頻寬或衛星下行速度不自動轉成人體神經資訊 bits/s。這是未有該欄可比較值，不是零帶寬或沒有能力。
+
+## 影像指標的兩項一手復核
+
+ICEYE 6.0.8 表格列 Gen3.5／Gen4 地面解析度 0.25m、斜距解析度 0.125m，並給名義入射角 30°。表格与公式對應二倍關係，但相鄰 half 文字矛盾；保留文件異常，不挑一句當全球通用換算，亦不將 SAR 解析度當光學 GSD。[ICEYE 官方文件](https://sar.iceye.com/6.0.8/productspecification/introduction/)。
+
+Planet 明列 Ortho Panchromatic 重採樣為 50cm 像素，Ortho Analytic 為 1m。全色、多光譜、融合、正射處理与網格不同，因此 50cm 輸出網格不等於原生多光譜取樣或實測分辨能力，也不能與 SAR 斜距解析度直接排世界榜單。[Planet Pelican 官方文件](https://docs.planet.com/data/imagery/pelican/)。
+
+本輪只復核兩項官方文件的定義与一致性，未下載影像或執行獨立性能實驗。數值投影保留原值、單位、統計口徑与條件，不因可數值化而提升證據等級。
+
+## 可直接使用的查詢
+
+SQLite 含九張原值表、兩張衍生投影及四個視圖。原表所有儲存格回驗相等；空字串仍是空字串，來源連接以 NULLIF 處理缺值。投影未知值留 NULL，不將 UNKNOWN 轉成零。
+
+```sql
+PRAGMA query_only = ON;
+
+SELECT iso_alpha2, name_en, candidate_entity_count,
+       candidate_any_scope_verified_count,
+       candidate_public_description_only_count,
+       verified_country_relation_count,
+       country_frontier_capability_state, N0_N7_level
+FROM v_country_evidence_coverage ORDER BY iso_alpha2;
+
+SELECT claim_id, entity_id, evidence_state, verification_scope
+FROM v_claims_with_source WHERE source_id = '';
+
+SELECT metric_id, display_name, metric_name, numeric_value,
+       unit, statistic, conditions, verification_scope
+FROM v_metrics_with_context;
+
+SELECT * FROM v_neuro_bandwidth_missing;
+```
+
+主鍵与橋接／數值投影外鍵有結構約束；原值表非空引用在交付時作 16 項核對。此為受版本雜湊限定的研究快照，未配置生產身份、權限或持續同步，不替代 DGEF。檔案持有人仍可改 SQLite；query_only 是連線設定，不是防篡改保證。
+
+## 當期快照的效率量測
+
+在本機記憶體副本上，對四個查詢各跑30次熱查詢，比較三個次級索引有／無的情況；主鍵索引保留，所有答案雜湊相同。249條目國別證據查詢的p50為0.9102ms（有次級索引）及11.3756ms（移除次級索引），p95為0.9721ms及11.5791ms。這只證明本快照、該查詢與本次環境下的索引效果；其他三個小查詢沒有同等量級差距，不把此結果推為世界最優、磁碟冷查詢或多人併發性能。[實驗條件、結果與執行計畫](../reports/2026-10-07/registry_contracts/query_benchmark.json)。
+
+對目前1,514行研究快照，先核實定義、主鍵与查詢索引已有可量測效益；是否需分散式平台仍須更大資料、併發、更新、成本與失敗重播實驗，不因「前沿」要求就先增加系統種類。
+
+## 使用者歸檔與路徑追溯
+
+保留使用者歸檔、宇航 HTML 更新與舊渲染資產刪除，未從 HEAD 恢復資產。[當期路徑對照](../reports/2026-10-07/registry_contracts/archive_path_aliases.csv)依 Git 更名與正文核對建立；舊路徑是歷史定位，不機械改寫所有引用。
+
+Git 相似度更名可能把被刪來源配到內容相近的快照，因此保留[更名候選](../reports/2026-10-07/registry_contracts/git_rename_candidates.csv)，不把相似匹配當正式入口。12 條對照正文在換行正規化後相等；地緣問答依既有更名回執指向現行 .md，內容更新另標示。
+
+## 驗收與剩餘工作
+
+[驗收回執](../reports/2026-10-07/registry_contracts/validation.json)記錄逐格回驗、引用檢查與統計。[國別證據統計](../reports/2026-10-07/registry_contracts/country_evidence_coverage.csv)不把候選轉成能力；[獨立驗證](../reports/2026-10-07/registry_contracts/independent_validation.json)另核對欄位與查詢。
+
+424 筆未決欄位仍需逐表釐清；已有定義亦需負責人確認。後續按主體身分、授權、部署与測量條件的決策影響查證，不藉擴充名單宣稱全球查全。

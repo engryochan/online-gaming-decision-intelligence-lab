@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "test_storage": "IN_MEMORY_COPY_ONLY",
+  "checks": [
+    "VERIFIED to UNKNOWN removes claim from both scoped counts",
+    "UNKNOWN relation does not increase verified-country count",
+    "invalid ISO bridge rejected by foreign key",
+    "missing-source claims retained by left join"
+  ],
+  "source_files_modified": false
+}
