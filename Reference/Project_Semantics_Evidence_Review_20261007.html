@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>科研項目資料架構、業務定義與價值評估方案</title>
+<title>業務語義、既有資料底座與主張核實增補</title>
 <style>
 
 span.smallcaps{font-variant: small-caps;}
@@ -2210,14 +2210,18 @@ vertical-align: -.125em;
     <h2 id="toc-title">目錄</h2>
    
   <ul>
-  <li><a href="#建議與現況" id="toc-建議與現況" class="nav-link active" data-scroll-target="#建議與現況">建議與現況</a></li>
-  <li><a href="#資料分層與流向" id="toc-資料分層與流向" class="nav-link" data-scroll-target="#資料分層與流向">資料分層與流向</a></li>
-  <li><a href="#所有資料類別的業務定義與價值" id="toc-所有資料類別的業務定義與價值" class="nav-link" data-scroll-target="#所有資料類別的業務定義與價值">所有資料類別的業務定義與價值</a></li>
-  <li><a href="#核心實體與時間模型" id="toc-核心實體與時間模型" class="nav-link" data-scroll-target="#核心實體與時間模型">核心實體與時間模型</a></li>
-  <li><a href="#技術選擇與擴展條件" id="toc-技術選擇與擴展條件" class="nav-link" data-scroll-target="#技術選擇與擴展條件">技術選擇與擴展條件</a></li>
-  <li><a href="#價值與最高效率的驗證方式" id="toc-價值與最高效率的驗證方式" class="nav-link" data-scroll-target="#價值與最高效率的驗證方式">價值與最高效率的驗證方式</a></li>
-  <li><a href="#執行順序與當期查詢" id="toc-執行順序與當期查詢" class="nav-link" data-scroll-target="#執行順序與當期查詢">執行順序與當期查詢</a></li>
-  <li><a href="#本輪已核對的既有底座" id="toc-本輪已核對的既有底座" class="nav-link" data-scroll-target="#本輪已核對的既有底座">本輪已核對的既有底座</a></li>
+  <li><a href="#本輪完成與限制" id="toc-本輪完成與限制" class="nav-link active" data-scroll-target="#本輪完成與限制">本輪完成與限制</a></li>
+  <li><a href="#承接-dgef避免重複建立實體底座" id="toc-承接-dgef避免重複建立實體底座" class="nav-link" data-scroll-target="#承接-dgef避免重複建立實體底座">承接 DGEF，避免重複建立實體底座</a></li>
+  <li><a href="#五項一手來源核實與限定裁決" id="toc-五項一手來源核實與限定裁決" class="nav-link" data-scroll-target="#五項一手來源核實與限定裁決">五項一手來源核實與限定裁決</a>
+  <ul class="collapse">
+  <li><a href="#mage-的歸屬" id="toc-mage-的歸屬" class="nav-link" data-scroll-target="#mage-的歸屬">MAGE 的歸屬</a></li>
+  <li><a href="#athea-的歷史成立關係" id="toc-athea-的歷史成立關係" class="nav-link" data-scroll-target="#athea-的歷史成立關係">Athea 的歷史成立關係</a></li>
+  <li><a href="#ansys-收購事件" id="toc-ansys-收購事件" class="nav-link" data-scroll-target="#ansys-收購事件">Ansys 收購事件</a></li>
+  <li><a href="#fmn-的定義" id="toc-fmn-的定義" class="nav-link" data-scroll-target="#fmn-的定義">FMN 的定義</a></li>
+  <li><a href="#open-meteo-商業-api-邊界" id="toc-open-meteo-商業-api-邊界" class="nav-link" data-scroll-target="#open-meteo-商業-api-邊界">Open-Meteo 商業 API 邊界</a></li>
+  </ul></li>
+  <li><a href="#結構化交付與查詢" id="toc-結構化交付與查詢" class="nav-link" data-scroll-target="#結構化交付與查詢">結構化交付與查詢</a></li>
+  <li><a href="#本輪並行來源更名" id="toc-本輪並行來源更名" class="nav-link" data-scroll-target="#本輪並行來源更名">本輪並行來源更名</a></li>
   </ul>
 </nav>
 </div>
@@ -2225,7 +2229,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">科研項目資料架構、業務定義與價值評估方案</h1>
+<h1 class="title">業務語義、既有資料底座與主張核實增補</h1>
 </div>
 
 
@@ -2248,128 +2252,52 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="建議與現況" class="level2">
-<h2 class="anchored" data-anchor-id="建議與現況">建議與現況</h2>
-<p>此項目最先需要的是可追溯資料模型、來源保留及可驗證查詢，再按實際負載擴展計算。建議以 PostgreSQL 管理實體、主張、證據、版本與審核狀態；原始文件與媒體存於具版本與雜湊的檔案／物件儲存；分析資料以 Parquet 保存，由分析引擎讀取。只有當資料量、多人併發寫入、跨引擎一致性或更新需求實際成立，再引入 Iceberg、分散式運算及串流服務。這是依目前研究型檔案項目的設計建議，尚非負載實測後的最優解。</p>
-<p>本輪已建立可直接查詢的本地 SQLite 目錄，保存資產、來源版本、段落覆蓋與欄位清單。它尚未把所有正文轉成經審核的機構／主張資料，也未部署 PostgreSQL、Iceberg 或生產服務。<a href="../reports/2026-10-07/project_information_integration/project_information_catalog.sqlite">本地目錄</a>、<a href="../reports/2026-10-07/project_information_integration/asset_catalog.csv">資產清單</a>、<a href="../reports/2026-10-07/project_information_integration/column_catalog.csv">欄位清單</a>。</p>
-</section>
-<section id="資料分層與流向" class="level2">
-<h2 class="anchored" data-anchor-id="資料分層與流向">資料分層與流向</h2>
-<pre class="mermaid"><code>flowchart TD
-  A[文件、問答、表格、程式、媒體] --&gt; B[原始版本與 SHA256]
-  B --&gt; C[抽取段落、實體、主張、測量]
-  C --&gt; D[來源定位、衝突與人工審核]
-  D --&gt; E[PostgreSQL 研究登記與業務詞典]
-  E --&gt; F[版本化 Parquet 分析資料]
-  F --&gt; G[報告、SQL 查詢與比較]
-  E --&gt; H[搜尋、向量或圖關係索引]
-  H --&gt; G</code></pre>
-<p>原始層不可被清洗結果覆蓋。標準化層保留每次轉換版本與異常資料；審核層提供經明確定義的當期視圖；檢索索引可重建，答案必須回指原始證據。無法解析的檔案、空欄、失效連結、未知授權、相互矛盾說法也須登記，不能悄悄捨棄。</p>
-</section>
-<section id="所有資料類別的業務定義與價值" class="level2">
-<h2 class="anchored" data-anchor-id="所有資料類別的業務定義與價值">所有資料類別的業務定義與價值</h2>
-<p>以下是業務定義提案，尚需資料負責人認領；本輪欄位清單的 REVIEW_REQUIRED 不代表每欄已完成語義核實。價值不能由文件大小、重複次數或模型答覆篇幅推定。</p>
+<section id="本輪完成與限制" class="level2">
+<h2 class="anchored" data-anchor-id="本輪完成與限制">本輪完成與限制</h2>
+<p>承接 Git 提交 <code>20439fb</code>，以新基線核對現行文件，不重新生成或覆蓋上一輪整合。此次讀取 168 份原目錄所涵蓋的 CSV／TSV，逐欄加入來源雜湊、空值與不同值數、粒度、業務用途、定義狀態及可定位的既有 SQL 約束；保留歷史與 preview 的資料角色。</p>
+<p>修正上一輪盤點的一項解析缺口：DGEF 的 <code>registry_ingest_record.csv</code> 含一個 139,101 字元的儲存格，超過 CSV 預設欄位長度限制。提高上限後讀取 284 筆記錄、7 欄，沒有修改原表；以 7 個真實欄位替代此前 1 筆 PARSE_ERROR，總欄位記錄由 1,983 變為 <strong>1,989</strong>。前次數字是當時目錄口徑，不能再稱為完整欄位數。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>類別</th>
-<th>業務粒度與必要欄位</th>
-<th>可支持的決策／价值</th>
-<th>品質與限制</th>
+<th>定義狀態</th>
+<th style="text-align: right;">欄位記錄數</th>
+<th>意義</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>國家／地區</td>
-<td>ISO 代碼、正式名稱、版次、有效期</td>
-<td>國別覆蓋、司法區及母表連結</td>
-<td>249 條目不等於 249 主權國家；代碼版本化</td>
+<td>PROPOSED_CONTEXT_REVIEW</td>
+<td style="text-align: right;">1,069</td>
+<td>已提供具體語義與用途提案，尚待所屬表上下文及負責人審核</td>
 </tr>
 <tr class="even">
-<td>公司／組織／科研／政府／軍方公開項目</td>
-<td>一個法律或行政實體；別名、母子關係、所在地、時間</td>
-<td>生態搜尋、合作與供應鏈追溯</td>
-<td>集團、子公司、研究所、產品分開；未知不補猜</td>
+<td>DOCUMENTED_CONTEXT_REVIEW</td>
+<td style="text-align: right;">4</td>
+<td>沿用既有具體定義，仍需業務審核</td>
 </tr>
 <tr class="odd">
-<td>軟體／應用／組件／工具／平臺</td>
-<td>一個產品與版本；類型、接口、授權、維護與依賴</td>
-<td>技術選型、可移植性及總成本</td>
-<td>產品存在不證明部署、性能或合規</td>
+<td>DOCUMENTED_GENERIC_REVIEW</td>
+<td style="text-align: right;">148</td>
+<td>既有字典只有泛化描述，不當作語義已完成</td>
 </tr>
 <tr class="even">
-<td>能力／主張／否定結果</td>
-<td>一個可檢驗命題；主體、謂詞、場景、時間、狀態</td>
-<td>比較能力、排除不成立方案</td>
-<td>UNKNOWN、爭議、撤回、反證與已核實分開</td>
-</tr>
-<tr class="odd">
-<td>論文／專利／監管／試驗／部署</td>
-<td>一個來源記錄與可定位證據</td>
-<td>科研成熟度、臨床與採用路徑</td>
-<td>論文不等於商用；專利不等於實作；廠商宣稱保留來源類型</td>
-</tr>
-<tr class="even">
-<td>測量／性能／臨床／帶寬</td>
-<td>一次測試或估計；值、單位、協議、樣本、誤差與條件</td>
-<td>可比較性能、風險与成熟度</td>
-<td>空值不填零；不同測試條件不直接排名</td>
-</tr>
-<tr class="odd">
-<td>地理／軌道／遙測／影像</td>
-<td>時空觀測；座標參考、時間基準、解析度、來源與授權</td>
-<td>時空分析與任務態勢</td>
-<td>地面分析不等於飛行控制；座標／時區轉換須留痕</td>
-</tr>
-<tr class="even">
-<td>原始問答／模型輸出／提示</td>
-<td>一次互動；來源、模型標識、時間、完整正文與引用</td>
-<td>保留研究推理、候選線索及審核記錄</td>
-<td>生成内容不是一手證據；假引用單獨標記</td>
-</tr>
-<tr class="odd">
-<td>策略／商業化／成本／收益</td>
-<td>一個假設、方案或測算版本；客戶、成本與依據</td>
-<td>決策評估与方案取捨</td>
-<td>推估與已實現收入分開；缺失成本不當零</td>
-</tr>
-<tr class="even">
-<td>遊戲／博彩／金融／客戶資料</td>
-<td>事件、交易、實驗或個體；用途、保留期与權限</td>
-<td>實驗、風險監控及服務品質</td>
-<td>數學期望、模擬、實盤與營收分開；適用規則另核實</td>
-</tr>
-<tr class="odd">
-<td>程式／設定／資料字典／模型權重</td>
-<td>一個版本與執行環境；輸入輸出、依賴與授權</td>
-<td>重現計算、維運與交付</td>
-<td>程式存在不代表已成功執行；權重另查授權</td>
-</tr>
-<tr class="even">
-<td>歷史版本／刪除／回執／渲染／媒體</td>
-<td>一次版本事件或資產；內容雜湊與來源</td>
-<td>防止錯覆寫、審計与交付追溯</td>
-<td>舊 PASS 不能沿用到新內容；HTML 不是權威來源</td>
-</tr>
-<tr class="odd">
-<td>執行環境／鎖檔／其他未分類資產</td>
-<td>一件環境或未知資產；分類原因与例外</td>
-<td>重現環境、排除誤判遗漏</td>
-<td>鎖檔未讀須列例外；不當科研實體計數</td>
+<td>UNRESOLVED</td>
+<td style="text-align: right;">768</td>
+<td>尚缺可信業務定義，不以猜測補齊</td>
 </tr>
 </tbody>
 </table>
-<p>每個欄位補齊：業務名称／定義、資料粒度、型別、單位、可選值、空值原因、主外鍵、來源定位、時間語義、負責人、更新週期、品質規則、授權／使用限制、用途與下游依賴。未知項保留待辦與責任人，不用自動生成的通用文字冒充完成。</p>
+<p>欄位在不同版本與表中重複出現，以上不是 1,989 個獨立概念。空字串按輸出觀察統計，不推論其原因；SQL NULL 與空字串的來源約定需保留。所有負責人仍為 UNASSIGNED，價值評估是定性提案，沒有虛構收入、ROI 或最優性能分數。</p>
 </section>
-<section id="核心實體與時間模型" class="level2">
-<h2 class="anchored" data-anchor-id="核心實體與時間模型">核心實體與時間模型</h2>
-<p>使用穩定內部 ID；國家代碼與正式識別號是外部鍵，名稱是可變別名。保留「現實有效時間」與「系統記錄時間」，以便回答當時發生什麼，以及當時我們知道什麼。母子公司、政府改組、收購與產品版本不得直接覆蓋舊記錄。</p>
+<section id="承接-dgef避免重複建立實體底座" class="level2">
+<h2 class="anchored" data-anchor-id="承接-dgef避免重複建立實體底座">承接 DGEF，避免重複建立實體底座</h2>
+<p>本次以唯讀連線核對 <code>DGEF/artifacts/dgef.sqlite</code>：44 張表、5,593 筆實體記錄與 40 筆來源記錄；<code>PRAGMA integrity_check</code> 為 ok，<code>PRAGMA foreign_key_check</code> 無違規。這些是目前本地資料庫的結構與完整性結果，不代表所有內容已外部核實、實體已去重正確或已部署生產權限。</p>
+<p>既有資料庫已含實體、別名、外部 ID 橋接、主張、觀測、證據關係、時空、授權、加工與覆蓋表。前輪文件目錄 SQLite 用於資產與段落追溯；本輪語義 SQLite 用於欄位、價值卡與裁決。三者用途不同。後續先建立受審的映射與檢索視圖，不能把新的文檔目錄當作取代 DGEF 的實體主資料。</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2378,86 +2306,101 @@ vertical-align: -.125em;
 </colgroup>
 <thead>
 <tr class="header">
-<th>表</th>
-<th>一筆資料的含義</th>
-<th>關鍵關係</th>
+<th>新需求</th>
+<th>既有可承接結構</th>
+<th>仍需核實／補充</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>asset / asset_version</td>
-<td>一件資產及其內容版本</td>
-<td>SHA256、來源路徑、時間、媒體類型</td>
+<td>穩定機構身分</td>
+<td>registry_entity、registry_entity_alias、bridge_entity_external_id</td>
+<td>品牌／法人差異、來源跨版本映射、人工解決冲突</td>
 </tr>
 <tr class="even">
-<td>document_section</td>
-<td>某版本的一个可定位段落</td>
-<td>asset_version、行號／頁碼／偏移、雜湊</td>
+<td>主張與證據</td>
+<td>registry_claim、registry_observation、registry_evidence_link</td>
+<td>文件段落定位、支持／反對方向、審核事件与時效</td>
 </tr>
 <tr class="odd">
-<td>country / entity / entity_alias</td>
-<td>國別與實體及別名</td>
-<td>ISO、法律身分、有效期間</td>
+<td>版本與加工</td>
+<td>registry_source、registry_dataset、registry_ingest_record</td>
+<td>文檔版本 ID、轉換血緣、非結構化媒體定位</td>
 </tr>
 <tr class="even">
-<td>product / product_version</td>
-<td>產品與版次</td>
-<td>所屬實體、技術類別、授權</td>
+<td>時空與觀測</td>
+<td>registry_spatial_frame、registry_entity_location、registry_ephemeris_solution</td>
+<td>時間尺度、中心與單位一致性、觀測協議</td>
 </tr>
 <tr class="odd">
-<td>assertion / evidence / assertion_evidence</td>
-<td>主張、證據及其支持／反對關係</td>
-<td>證據定位、審核者、有效期、衝突</td>
+<td>授權與模型准入</td>
+<td>registry_license_policy、既有模型視圖</td>
+<td>按來源／版本核對用途，未知授權不自動放行</td>
 </tr>
 <tr class="even">
-<td>measurement / deployment / trial / regulatory_record</td>
-<td>測量、部署、試驗及監管事件</td>
-<td>主張、版本、國別、協議、狀態</td>
-</tr>
-<tr class="odd">
-<td>relation / taxonomy / business_definition</td>
-<td>關係、分類與業務詞典</td>
-<td>帶時間的邊、分類版次、負責人</td>
-</tr>
-<tr class="even">
-<td>transformation_run / quality_issue / review_event</td>
-<td>加工、品質異常與審核</td>
-<td>輸入輸出雜湊、程式版本、結果</td>
+<td>全球覆盖</td>
+<td>registry_country_area、registry_admin_unit、registry_coverage</td>
+<td>分母与分類層級；候選不當成已核國家能力</td>
 </tr>
 </tbody>
 </table>
-<p>VERIFIED 必須限定到具體主張、來源、條件、日期與審核事件。若某公司一項能力已核實，不代表公司所有能力已核實。UNKNOWN 不納入「已做到」的國別能力分子；排名先定義比較樣本、指標與缺失規則。神經技術 N0～N7 定義未簽發前保留 UNKNOWN。</p>
+<p><strong>未將全球登記 CSV 自動灌入 DGEF</strong>：兩者 ID、粒度、時間与核實狀態需先對齊，否則容易重复機構或把候選關聯當成事實。</p>
 </section>
-<section id="技術選擇與擴展條件" class="level2">
-<h2 class="anchored" data-anchor-id="技術選擇與擴展條件">技術選擇與擴展條件</h2>
-<p>PostgreSQL 用於一致性登記、約束與權限。行級安全可限制普通查詢，但擁有者、superuser 與 BYPASSRLS 存在繞過條件；仍需角色分離、授權測試及審計設計。<a href="https://www.postgresql.org/docs/current/ddl-rowsecurity.html">PostgreSQL 官方說明</a>。</p>
-<p>本地批量研究先評估單機列式分析與分區 Parquet；資料更新及跨引擎管理變複雜時，再評估 Iceberg 的 schema／partition evolution，並測試目錄服務、並發提交、舊快照與保留政策。<a href="https://iceberg.apache.org/docs/latest/evolution/">Iceberg 官方說明</a>。採用該格式不是性能或成本最優的保證。</p>
-<p>加工血緣以資料集、工作與執行記錄連結輸入輸出，與 OpenLineage 的 dataset／job／run 模型對照；本輪段落覆蓋台帳只是文件來源追蹤，並非完整流水線血緣服務。<a href="https://openlineage.io/docs/spec/object-model/">OpenLineage 官方模型</a>。</p>
-<p>全文搜尋服務用於詞項檢索；向量用於候選召回，須記模型、分塊與索引版本；圖索引用於多跳關係查詢。這些均從主資料產生，不能以向量相似度判定事實。CDC／訊息系統只有在明確即時更新需求與失敗重播設計後引入。</p>
+<section id="五項一手來源核實與限定裁決" class="level2">
+<h2 class="anchored" data-anchor-id="五項一手來源核實與限定裁決">五項一手來源核實與限定裁決</h2>
+<section id="mage-的歸屬" class="level3">
+<h3 class="anchored" data-anchor-id="mage-的歸屬">MAGE 的歸屬</h3>
+<p>MAGE 官方項目頁說明，它由 NGA 與 BIT Systems 合作開發，軟體使用、修改與散布以 MIT 授權約束。因此「Esri ArcGIS（含 MAGE）」不可作為產品歸屬結論；ArcGIS 與 MAGE 應分列。官方描述支援低帶寬与離線使用，不能延伸為所有場景性能、安全認證或零成本已獲證明。<a href="https://ngageoint.github.io/MAGE/about/">MAGE 官方 About</a>。</p>
+<p>NGA 的另一份事實表本次回傳 403，並未用它作核實依據；可讀項目頁的範圍已足以裁定上述歸屬。</p>
 </section>
-<section id="價值與最高效率的驗證方式" class="level2">
-<h2 class="anchored" data-anchor-id="價值與最高效率的驗證方式">價值與最高效率的驗證方式</h2>
-<p>每項資料／資料產品建立價值卡：使用者與決策、業務定義、現有基準、可驗證收益假設、證據、使用頻率、時效要求、品質門檻、取得／儲存／計算／授權／人力成本、失敗後果與負責人。未有量測前不填虛構 ROI 或總價值分數。</p>
-<p>測試代表性任務：按國家查詢已核實能力、追溯某個數值到原文、重建歷史報告、比較產品版本、查反證與重複機構。記錄資料規模、硬體、併發、冷／熱快取、p50／p95 延遲、成本、品質錯誤及重現率；依相同條件比較單機、資料庫與分散式方案。</p>
-<p>完整性分母採本輪基線資產數、來源版本數、段落數、表格欄位數及不能讀取項目。內容保存率、可解析率、業務定義完成率、外部證據審核率是不同指標；段落覆蓋完成不意味語義與外部事實核实完成。</p>
+<section id="athea-的歷史成立關係" class="level3">
+<h3 class="anchored" data-anchor-id="athea-的歷史成立關係">Athea 的歷史成立關係</h3>
+<p>Thales 2021-05-27 官方新聞稿記錄，Athea 由 Thales 與 Atos 宣布成立，面向國防、情報與內部安全的大數據與 AI 平臺。因此原文「Helsing × Saab 合資」有誤，應更正。這份歷史資料不能單獨證明 2026 年法人股權、當期 Eviden 關係或產品實際性能；當期關係仍需時間對應證據。<a href="https://www.thalesgroup.com/en/print/pdf/node/13916">Thales 官方新聞稿</a>。</p>
 </section>
-<section id="執行順序與當期查詢" class="level2">
-<h2 class="anchored" data-anchor-id="執行順序與當期查詢">執行順序與當期查詢</h2>
-<p>先保留與編目，接著補業務詞典及實體別名，再逐條抽取與審核主張，最後按量測擴展分析平台。本輪做到前兩步的可追溯基礎，欄位語義認領與主張審核仍有待完成。</p>
-<p>下列是已交付 SQLite 目錄的查詢示例，不是未部署 PostgreSQL 表的假查詢：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> family, <span class="kw">role</span>, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> assets</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> assets <span class="kw">GROUP</span> <span class="kw">BY</span> family, <span class="kw">role</span> <span class="kw">ORDER</span> <span class="kw">BY</span> family, <span class="kw">role</span>;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">source</span>, state, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> blocks</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> block_coverage <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">source</span>, state;</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> path, column_name, row_count, blank_count</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">columns</span> <span class="kw">WHERE</span> business_definition_status <span class="op">=</span> <span class="st">&#39;REVIEW_REQUIRED&#39;</span>;</span></code></pre></div><button title="複製到剪貼簿" class="code-copy-button"><i class="bi"></i></button></div>
-<p>資料刪除依法定保留、授權與使用者指示執行，保留必要的刪除事件；「不遺漏資訊」是有邊界的可驗證保存與管理要求，不能推論應永久公開保存憑證、個人資料或無權持有的內容。</p>
+<section id="ansys-收購事件" class="level3">
+<h3 class="anchored" data-anchor-id="ansys-收購事件">Ansys 收購事件</h3>
+<p>Synopsys 官方公告確認於 2025-07-17 完成收購 Ansys。報告應保留 Ansys／STK 等產品名稱，另記集團關係與事件日期；不把收購公告中的預期整合、協同或財務收益當作已實現結果。<a href="https://investor.synopsys.com/news/news-details/2025/Synopsys-Completes-Acquisition-of-Ansys/default.aspx">Synopsys 官方公告</a>。</p>
 </section>
-<section id="本輪已核對的既有底座" class="level2">
-<h2 class="anchored" data-anchor-id="本輪已核對的既有底座">本輪已核對的既有底座</h2>
-<p>DGEF/artifacts/dgef.sqlite 已有 44 張表，本輪唯讀完整性與外鍵檢查通過。它承接實體、主張、證據、觀測、授權與時間；本文件的 PostgreSQL 等是擴展方案，不能理解為項目尚無資料底座。新文件目錄與語義目錄均為旁側目錄，未替換或改寫 DGEF。<a href="Project_Semantics_Evidence_Review_20261007.qmd">核查與對接方案</a>。</p>
+<section id="fmn-的定義" class="level3">
+<h3 class="anchored" data-anchor-id="fmn-的定義">FMN 的定義</h3>
+<p>NATO 將 FMN 描述為包含人員、流程与技術的受治理框架。因此由聊天、身份与網路工具组成的方案只能作为候選設計；是否符合 FMN 需具體要求、版本与互操作驗證，不能僅靠工具清單宣稱等效。<a href="https://coi.nato.int/FMNPublic/SitePages/Home_RML_2.aspx">NATO FMN 官方定義</a>。</p>
+</section>
+<section id="open-meteo-商業-api-邊界" class="level3">
+<h3 class="anchored" data-anchor-id="open-meteo-商業-api-邊界">Open-Meteo 商業 API 邊界</h3>
+<p>目前官方定價頁將 Free／Open-Access 商業使用標為不可，付費方案提供商業使用授權。此為服務方案条件，不能與資料授權、伺服器軟體授權或自架成本混成「全部免費商用」。具體費率或容量易變，採購時重新核對。<a href="https://open-meteo.com/en/pricing">Open-Meteo 官方定價</a>。</p>
+</section>
+</section>
+<section id="結構化交付與查詢" class="level2">
+<h2 class="anchored" data-anchor-id="結構化交付與查詢">結構化交付與查詢</h2>
+<ul>
+<li><a href="../reports/2026-10-07/semantic_evidence_review/field_semantics.csv">欄位語義台帳</a>：1,989 筆，有來源雜湊與定義狀態。</li>
+<li><a href="../reports/2026-10-07/semantic_evidence_review/data_value_cards.csv">資料價值卡</a>：168 份表檔的用途、角色、粒度与待審事項。</li>
+<li><a href="../reports/2026-10-07/semantic_evidence_review/dgef_table_counts.csv">DGEF 逐表行數</a>：只讀當期資料庫計算。</li>
+<li><a href="../reports/2026-10-07/semantic_evidence_review/claim_review.csv">主張裁決</a>與<a href="../reports/2026-10-07/semantic_evidence_review/claim_locations.csv">報告定位</a>：已審主張連回兩份報告，關鍵詞匹配只是定位，不能冒充每處已獨立核實。</li>
+<li><a href="../reports/2026-10-07/semantic_evidence_review/semantic_catalog.sqlite">語義查詢 SQLite</a>與<a href="../reports/2026-10-07/semantic_evidence_review/validation.json">本輪驗證</a>。</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> definition_status, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> field_records</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> field_semantics <span class="kw">GROUP</span> <span class="kw">BY</span> definition_status;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> path, column_name, blank_count, row_count</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> field_semantics</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">role</span> <span class="op">=</span> <span class="st">&#39;REFERENCE_DATA&#39;</span> <span class="kw">AND</span> definition_status <span class="op">=</span> <span class="st">&#39;UNRESOLVED&#39;</span>;</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> path, grain, review_state <span class="kw">FROM</span> data_value_cards</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">role</span> <span class="op">=</span> <span class="st">&#39;DGEF_EXPORT&#39;</span>;</span></code></pre></div><button title="複製到剪貼簿" class="code-copy-button"><i class="bi"></i></button></div>
+<p>此次台帳中，DGEF 匯出有 411 欄記錄、Reference 資料有 709 欄、歷史報告輸出有 324 欄、preview 有 535 欄，另有其他 10 欄。保留全部角色以追溯；統計當期業務資料時不得把歷史與 preview 再累加。表的 grain 未確立時保持 REVIEW_REQUIRED。</p>
+<p>下一批查證由決策風險與資料缺口排序：法人與國別關係、測量單位與協議、技術／部署／監管主張、授權与业务成本。768 筆未決定義仍需逐表核對，不能因完成目錄而宣稱全項目已完成業務審核。</p>
+</section>
+<section id="本輪並行來源更名" class="level2">
+<h2 class="anchored" data-anchor-id="本輪並行來源更名">本輪並行來源更名</h2>
+<p>三份 .txt 來源目前改為 .md，兩份現實策略附件內容雜湊完全相同；地緣附件新增標題及四份空問答模板，增量已補入兩份主報告。刪除的 TXT 未恢復；舊路徑仍屬歷史版本定位。現行入口：</p>
+<ul>
+<li><a href="地緣學、軍事、宇航、策略服務平臺提問.md">地緣問答</a></li>
+<li><a href="查证现实策略服务.md">現實策略問答</a></li>
+<li><a href="查证现实策略服务之ChatGPT篇.md">現實策略 ChatGPT 問答</a></li>
+</ul>
+<p><a href="../reports/2026-10-07/semantic_evidence_review/concurrent_source_renames.json">路径與內容雜湊對照</a>。</p>
+<p>附件更名後再次新增的地緣問答，亦已按捕獲版本追加至兩份主報告，維持 UNKNOWN_INHERITED；完整來源雜湊與差異字元數见<a href="../reports/2026-10-07/semantic_evidence_review/subsequent_source_baseline.json">後續來源基線</a>。本輪審校不聲稱這些新增模型答覆已逐項核實；若附件仍持續編輯，以驗證回執中的待同步版本欄判斷後續差異。</p>
 </section>
 
 </main>

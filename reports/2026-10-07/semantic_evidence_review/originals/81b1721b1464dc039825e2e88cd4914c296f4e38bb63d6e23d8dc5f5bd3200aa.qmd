@@ -107,7 +107,3 @@ FROM columns WHERE business_definition_status = 'REVIEW_REQUIRED';
 ```
 
 資料刪除依法定保留、授權與使用者指示執行，保留必要的刪除事件；「不遺漏資訊」是有邊界的可驗證保存與管理要求，不能推論應永久公開保存憑證、個人資料或無權持有的內容。
-
-## 本輪已核對的既有底座
-
-DGEF/artifacts/dgef.sqlite 已有 44 張表，本輪唯讀完整性與外鍵檢查通過。它承接實體、主張、證據、觀測、授權與時間；本文件的 PostgreSQL 等是擴展方案，不能理解為項目尚無資料底座。新文件目錄與語義目錄均為旁側目錄，未替換或改寫 DGEF。[核查與對接方案](Project_Semantics_Evidence_Review_20261007.qmd)。

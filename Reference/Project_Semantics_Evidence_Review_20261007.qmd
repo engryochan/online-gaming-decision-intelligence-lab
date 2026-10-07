@@ -1,0 +1,103 @@
+---
+title: "業務語義、既有資料底座與主張核實增補"
+date: 2026-10-07
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  enabled: false
+---
+
+## 本輪完成與限制
+
+承接 Git 提交 `20439fb`，以新基線核對現行文件，不重新生成或覆蓋上一輪整合。此次讀取 168 份原目錄所涵蓋的 CSV／TSV，逐欄加入來源雜湊、空值與不同值數、粒度、業務用途、定義狀態及可定位的既有 SQL 約束；保留歷史與 preview 的資料角色。
+
+修正上一輪盤點的一項解析缺口：DGEF 的 `registry_ingest_record.csv` 含一個 139,101 字元的儲存格，超過 CSV 預設欄位長度限制。提高上限後讀取 284 筆記錄、7 欄，沒有修改原表；以 7 個真實欄位替代此前 1 筆 PARSE_ERROR，總欄位記錄由 1,983 變為 **1,989**。前次數字是當時目錄口徑，不能再稱為完整欄位數。
+
+| 定義狀態 | 欄位記錄數 | 意義 |
+|---|---:|---|
+| PROPOSED_CONTEXT_REVIEW | 1,069 | 已提供具體語義與用途提案，尚待所屬表上下文及負責人審核 |
+| DOCUMENTED_CONTEXT_REVIEW | 4 | 沿用既有具體定義，仍需業務審核 |
+| DOCUMENTED_GENERIC_REVIEW | 148 | 既有字典只有泛化描述，不當作語義已完成 |
+| UNRESOLVED | 768 | 尚缺可信業務定義，不以猜測補齊 |
+
+欄位在不同版本與表中重複出現，以上不是 1,989 個獨立概念。空字串按輸出觀察統計，不推論其原因；SQL NULL 與空字串的來源約定需保留。所有負責人仍為 UNASSIGNED，價值評估是定性提案，沒有虛構收入、ROI 或最優性能分數。
+
+## 承接 DGEF，避免重複建立實體底座
+
+本次以唯讀連線核對 `DGEF/artifacts/dgef.sqlite`：44 張表、5,593 筆實體記錄與 40 筆來源記錄；`PRAGMA integrity_check` 為 ok，`PRAGMA foreign_key_check` 無違規。這些是目前本地資料庫的結構與完整性結果，不代表所有內容已外部核實、實體已去重正確或已部署生產權限。
+
+既有資料庫已含實體、別名、外部 ID 橋接、主張、觀測、證據關係、時空、授權、加工與覆蓋表。前輪文件目錄 SQLite 用於資產與段落追溯；本輪語義 SQLite 用於欄位、價值卡與裁決。三者用途不同。後續先建立受審的映射與檢索視圖，不能把新的文檔目錄當作取代 DGEF 的實體主資料。
+
+| 新需求 | 既有可承接結構 | 仍需核實／補充 |
+|---|---|---|
+| 穩定機構身分 | registry_entity、registry_entity_alias、bridge_entity_external_id | 品牌／法人差異、來源跨版本映射、人工解決冲突 |
+| 主張與證據 | registry_claim、registry_observation、registry_evidence_link | 文件段落定位、支持／反對方向、審核事件与時效 |
+| 版本與加工 | registry_source、registry_dataset、registry_ingest_record | 文檔版本 ID、轉換血緣、非結構化媒體定位 |
+| 時空與觀測 | registry_spatial_frame、registry_entity_location、registry_ephemeris_solution | 時間尺度、中心與單位一致性、觀測協議 |
+| 授權與模型准入 | registry_license_policy、既有模型視圖 | 按來源／版本核對用途，未知授權不自動放行 |
+| 全球覆盖 | registry_country_area、registry_admin_unit、registry_coverage | 分母与分類層級；候選不當成已核國家能力 |
+
+**未將全球登記 CSV 自動灌入 DGEF**：兩者 ID、粒度、時間与核實狀態需先對齊，否則容易重复機構或把候選關聯當成事實。
+
+## 五項一手來源核實與限定裁決
+
+### MAGE 的歸屬
+
+MAGE 官方項目頁說明，它由 NGA 與 BIT Systems 合作開發，軟體使用、修改與散布以 MIT 授權約束。因此「Esri ArcGIS（含 MAGE）」不可作為產品歸屬結論；ArcGIS 與 MAGE 應分列。官方描述支援低帶寬与離線使用，不能延伸為所有場景性能、安全認證或零成本已獲證明。[MAGE 官方 About](https://ngageoint.github.io/MAGE/about/)。
+
+NGA 的另一份事實表本次回傳 403，並未用它作核實依據；可讀項目頁的範圍已足以裁定上述歸屬。
+
+### Athea 的歷史成立關係
+
+Thales 2021-05-27 官方新聞稿記錄，Athea 由 Thales 與 Atos 宣布成立，面向國防、情報與內部安全的大數據與 AI 平臺。因此原文「Helsing × Saab 合資」有誤，應更正。這份歷史資料不能單獨證明 2026 年法人股權、當期 Eviden 關係或產品實際性能；當期關係仍需時間對應證據。[Thales 官方新聞稿](https://www.thalesgroup.com/en/print/pdf/node/13916)。
+
+### Ansys 收購事件
+
+Synopsys 官方公告確認於 2025-07-17 完成收購 Ansys。報告應保留 Ansys／STK 等產品名稱，另記集團關係與事件日期；不把收購公告中的預期整合、協同或財務收益當作已實現結果。[Synopsys 官方公告](https://investor.synopsys.com/news/news-details/2025/Synopsys-Completes-Acquisition-of-Ansys/default.aspx)。
+
+### FMN 的定義
+
+NATO 將 FMN 描述為包含人員、流程与技術的受治理框架。因此由聊天、身份与網路工具组成的方案只能作为候選設計；是否符合 FMN 需具體要求、版本与互操作驗證，不能僅靠工具清單宣稱等效。[NATO FMN 官方定義](https://coi.nato.int/FMNPublic/SitePages/Home_RML_2.aspx)。
+
+### Open-Meteo 商業 API 邊界
+
+目前官方定價頁將 Free／Open-Access 商業使用標為不可，付費方案提供商業使用授權。此為服務方案条件，不能與資料授權、伺服器軟體授權或自架成本混成「全部免費商用」。具體費率或容量易變，採購時重新核對。[Open-Meteo 官方定價](https://open-meteo.com/en/pricing)。
+
+## 結構化交付與查詢
+
+- [欄位語義台帳](../reports/2026-10-07/semantic_evidence_review/field_semantics.csv)：1,989 筆，有來源雜湊與定義狀態。
+- [資料價值卡](../reports/2026-10-07/semantic_evidence_review/data_value_cards.csv)：168 份表檔的用途、角色、粒度与待審事項。
+- [DGEF 逐表行數](../reports/2026-10-07/semantic_evidence_review/dgef_table_counts.csv)：只讀當期資料庫計算。
+- [主張裁決](../reports/2026-10-07/semantic_evidence_review/claim_review.csv)與[報告定位](../reports/2026-10-07/semantic_evidence_review/claim_locations.csv)：已審主張連回兩份報告，關鍵詞匹配只是定位，不能冒充每處已獨立核實。
+- [語義查詢 SQLite](../reports/2026-10-07/semantic_evidence_review/semantic_catalog.sqlite)與[本輪驗證](../reports/2026-10-07/semantic_evidence_review/validation.json)。
+
+```sql
+SELECT definition_status, COUNT(*) AS field_records
+FROM field_semantics GROUP BY definition_status;
+
+SELECT path, column_name, blank_count, row_count
+FROM field_semantics
+WHERE role = 'REFERENCE_DATA' AND definition_status = 'UNRESOLVED';
+
+SELECT path, grain, review_state FROM data_value_cards
+WHERE role = 'DGEF_EXPORT';
+```
+
+此次台帳中，DGEF 匯出有 411 欄記錄、Reference 資料有 709 欄、歷史報告輸出有 324 欄、preview 有 535 欄，另有其他 10 欄。保留全部角色以追溯；統計當期業務資料時不得把歷史與 preview 再累加。表的 grain 未確立時保持 REVIEW_REQUIRED。
+
+下一批查證由決策風險與資料缺口排序：法人與國別關係、測量單位與協議、技術／部署／監管主張、授權与业务成本。768 筆未決定義仍需逐表核對，不能因完成目錄而宣稱全項目已完成業務審核。
+
+## 本輪並行來源更名
+
+三份 .txt 來源目前改為 .md，兩份現實策略附件內容雜湊完全相同；地緣附件新增標題及四份空問答模板，增量已補入兩份主報告。刪除的 TXT 未恢復；舊路徑仍屬歷史版本定位。現行入口：
+
+- [地緣問答](地緣學、軍事、宇航、策略服務平臺提問.md)
+- [現實策略問答](查证现实策略服务.md)
+- [現實策略 ChatGPT 問答](查证现实策略服务之ChatGPT篇.md)
+
+[路径與內容雜湊對照](../reports/2026-10-07/semantic_evidence_review/concurrent_source_renames.json)。
+
+附件更名後再次新增的地緣問答，亦已按捕獲版本追加至兩份主報告，維持 UNKNOWN_INHERITED；完整來源雜湊與差異字元數见[後續來源基線](../reports/2026-10-07/semantic_evidence_review/subsequent_source_baseline.json)。本輪審校不聲稱這些新增模型答覆已逐項核實；若附件仍持續編輯，以驗證回執中的待同步版本欄判斷後續差異。

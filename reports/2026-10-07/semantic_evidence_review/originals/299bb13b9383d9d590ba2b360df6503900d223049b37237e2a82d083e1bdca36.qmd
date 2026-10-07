@@ -1,21 +1,35 @@
 ---
-title: "世界前沿地緣戰略、軍工、宇航與人工智能生態登記報告"
-subtitle: "OGDIL — 機構、能力主張與證據分層；ISO國家母表擴展接口"
+title: "全球宇航与国防生态链数据栈对比研究报告"
+subtitle: "OGDIL Space Edition — 从 StarRocks 到 Palantir Warp Core"
 author: "Ryo Eng（雷欧）"
-date: 2026-10-06
-lang: zh-TW
+
+date: 2026-07-30
+date-format: "YYYY[年]M[月]D[日]"
+
+lang: zh-CN
+
 format:
   html:
     theme: cosmo
     toc: true
     toc-depth: 3
+    toc-location: left
     number-sections: true
     embed-resources: true
     page-layout: full
+    code-fold: false
+    code-tools: true
+    code-summary: "查看代码"
   pdf:
     toc: true
 execute:
-  echo: false
+  echo: true
+  warning: false
+  message: false
+
+language:
+  title-block-author-single: "作者"
+  title-block-published: "发布于"
 ---
 
 <!-- INTEGRATION_20261007_BEGIN -->
@@ -35,13 +49,10 @@ execute:
 5. 開源、免費使用、可商用、可再散布及權重授權是不同問題；逐版本核對。Open-Meteo 免費 API 限非商業用途，資料授權與商業 API 訂閱亦不同。收益、毛利、零成本及最高效率等說法須有成本、客戶、授權及負載模型，現階段只作業務假設。[Open-Meteo 定價與授權](https://open-meteo.com/en/pricing)。
 6. DO-178C 相關工具資格、單一任務軟體符合性與整間公司認證不同；SLSA、SBOM、NIST 等被引用不表示已符合或取得認證。VxWorks 版本與任務配對、SpaceOS 任務數、Maxar／Planet 資料量、未公開後端技術及性能數字，須逐條取得可定位來源，目前不得提升為 VERIFIED。
 7. 原文中「StarRocks 不可能使用」「唯一通用標準」「某國全面禁用」「高毛利／無成本」等絕對說法不作本次整合結論。國別出口管制、採購規則、臨床監管、資料保護及跨境限制須按司法區、產品與日期另作核實。
-### 合併後的研究閱讀順序
 
-先讀本節的證據邊界，再讀既有機構登記、ISO 母表及 B02／B03／B04 批次索引，最後讀來源增補。meta.md 是既有主文件的歷史前綴，逐段台帳證明其內容已被覆蓋；web_version 與全量問答中的新增方案已保留在來源增補。
+### 報告用途
 
-以 ISO 3166-1 國家／地區代碼連結機構與證據；249 是母表條目口徑，不表示 249 個主權國家，也不代表每國已有頂尖科技查證。批次表是版本快照，不能跨批次直接累加機構數。公司母子關係、研究所、政府機關、產品與別名使用不同 ID；研究登記不等同排名。
-
-神經技術的侵入性、EEG／ECoG／微電極／fNIRS／TMS、讀取／寫入／雙向、人體試驗、帶寬、部署距離與監管狀態分欄。未公開值為 UNKNOWN，不填零；遠端網路存取不等於遠距腦訊號讀取。N0～N7 須先建立可測試定義，現有未證實資料不能據此判級。
+本文件保留宇航資料栈比較原文；本輪併入網頁版的新增資訊。機構生態與全球登記的主入口仍為 `Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd` 及 ISO 母表。資料栈選擇依任務需求和可重現測試，原比較表不可當作全球供應商採用調查。
 
 
 <!-- SEMANTIC_REVIEW_20261007_BEGIN -->
@@ -53,616 +64,1006 @@ MAGE 應與 Esri ArcGIS 分列，官方資料記錄由 NGA 與 BIT Systems 合�
 <!-- SEMANTIC_REVIEW_20261007_END -->
 <!-- INTEGRATION_20261007_END -->
 
-## 研究範圍與可回答的問題
+## 摘要
 
-本輪以世界前沿研究與產業生態為入口，逐間列出公司、集團、組織、研究所與大學單位，涵蓋地緣研究、策略服務、軍工、宇航、GEOINT、AI及工程基礎設施。這是一份**可追溯研究登記冊，不是全球排名或全世界機構普查完成聲明**。同一集團的產品不冒充不同公司；研究所、政府機構和跨國組織也不混算為企業。
+本报告系统对比全球宇航产业链与军事宇航产业链的数据基础设施。核心结论：**StarRocks、Superset、Airflow、DolphinScheduler、ECharts 在通用商业航天地面数仓中有应用，但在星载高频遥测、飞控、军事指挥等核心层，存在维度更高的专用平台**。
 
-「世界級最前沿兼頂尖高端」以跨國研究／服務、公開前沿技術、全球關聯資料或專業任务系统作為候選篩選方向。只有官方描述支持的用途可寫為VERIFIED；各家的世界排名、性能優勢、軍方部署與採購資格本輪均未獨立比較。傳統軍工主承包商、前沿AI與自主系統公司、航天機構、資料服務及學術研究分層比較，不能用一個營收或模型分數統一排序。地方性、只在單國營運的條目保留為生態與原文覆蓋線索，不自動授予「頂尖」稱號。
+本版（v2）在初版六章骨架之上补齐内容，材料来源为本项目 `Inteligent_egaming_platform_ref_v000.000.001.qmd` **提問卅九**（L40024–42170，九个模型的多源查证）。补齐过程中发现初版有四处与参考档冲突或自相矛盾之处，已逐一更正并在 [附录 A](#sec-appendix-a) 留痕。
 
-本報告與原 [宇航數據栈比較報告](Aerospace_Ecosystem_Report.qmd) 分檔保留：原報告記錄歷史研究內容，本報告列出後續校訂與新增登記，不覆寫或掩蓋原文。舊版未充分佐證的「更高維度」「霸主」「唯一重度重疊」「某國全部使用某栈」結論，適用下文逐项核對裁定。參考問答檔是候選來源，不是一手資料；本輪核實採用政府、研究機構、供應商與官方開源倉庫。日期為查閱日期，不是每項主張的發布或生效日期。
+## 〇、方法与证据标尺
 
-## 證據規則
+本报告沿用本项目既有证据标尺。**凡属密级架构、具体任务配置、武器内部参数，一律标 `UNKNOWN`，不臆测、不以采购合同反推技术栈。**
 
-| 欄位／等級 | 精確含義 |
-|---|---|
-| VERIFIED | 已讀官方頁面支持本列具體公開描述；供應商自述不等於獨立測效 |
-| UNKNOWN | 未核實、訪問失敗、證據不充分或名稱待消歧；不等於不存在或能力為零 |
-| P0／P1 | 來源類別：公共／研究官方或供應商官方；與claim驗證狀態分開 |
-| 產品／項目線索 | 研究入口；只有claim明確涵蓋的名稱可視作本輪已核實 |
-| 國家候選 | 供後續ISO關聯的編輯定位，並非法定註冊地核驗或服務覆蓋清單 |
-| performance／deployment／regulatory | 均維持UNKNOWN，後續按產品版本、任務、合同與證據逐項補齊 |
+| 等级 | 含义 | 可否作为结论依据 |
+| :--- | :--- | :--- |
+| **P0** | 官方一手：政府／标准组织文件、开源项目仓库本身 | 可 |
+| **P1** | 厂商一手：供应商官方产品页、白皮书、技术文档、招聘 JD | 可 |
+| **P2** | 权威二手：主流媒体、行业分析机构报道 | 可，须标注 |
+| **INFERRED** | 由间接证据推断 | **不可单独支撑结论** |
+| **CONFLICT** | 多源互斥，待裁 | **不可引用，须先裁定** |
+| **UNKNOWN** | 公开资料不足以判定 | 必须保留为空白，不得填补 |
 
-官網頁面無內容、訪問挑戰或域名轉向其他品牌時，不能把頁面存在當作能力證據。例如Govini入口轉向air.ai、SpaceX首頁無可讀文本，已明列UNKNOWN。沒有保存原始HTTP響應，文件SHA256只證明本批本地文件完整性，不證明網頁原文存檔。
+> **三条写作纪律**（取自参考档，本报告全程遵守）：
+>
+> 1. **不得写「战斗机 OS 比 Linux 更高级」这类表述。** 正确的比较维度是硬实时、确定性、时空分区、TCB、WCET 与认证等级，不是「高级／低级」。
+> 2. **合规判定与技术判定必须分写。** 中国起源组件进不了美欧国防白名单，这是 ITAR／EAR／CMMC 的**商务与合规事实**，与其技术能力是两件事。
+> 3. **数量级数字若仅有二手来源，一律降为 INFERRED**，直到补上一手链接为止。
 
-## 參考檔與舊版報告的核對裁定
+---
 
-| 問題 | 校訂與核實依據 |
-|---|---|
-| Athea提供方寫成Helsing×Saab | 改為Thales與Eviden；[Athea官方](https://athea.tech/)明列合作方。Helsing、Saab另列機構 |
-| IBM i2現行歸属 | 使用i2 Group；[官方2024說明](https://i2group.com/articles/2024-08-09pressrelease)確認2022年Harris從IBM收購 |
-| Ansys母集團 | [官方公告](https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys)確認2025-07-17完成收購；STK仍為產品品牌 |
-| 起源國即決定全面禁用 | 撤回。ITAR涉及防務物項／服務與技術資料，EAR需判定物項及交易，CMMC為合同相關網絡安全要求；三者不能合併成所有美歐國防通用軟件黑名單。[DDTC](https://www.pmddtc.state.gov/ddtc_public)、[BIS](https://www.bis.gov/licensing)、[CMMC](https://www.acq.osd.mil/asda/dpc/cp/cyber/cmmc.html) |
-| StarRocks秒級上限、百萬點必崩 | 撤回未測試數值；[官方功能頁](https://docs.starrocks.io/docs/introduction/Features/)定位為實時分析。是否適合特定遥测分析須測試寫入、p99時延與故障語義 |
-| ECharts上萬通道必卡、Grafana必為WebGL | 無實測與具體渲染插件證據，不成立；應按點數、刷新率、瀏覽器、抽樣與引擎比較 |
-| NASA VEDA採用Airflow | [NASA-IMPACT官方倉庫](https://github.com/NASA-IMPACT/veda-data-airflow)支持存在VEDA攝取實作；不能證明航空航天通用標配 |
-| 用供應商合同名單否定開源庫使用 | 公司承包商名單與開源依賴清單粒度不同，無法據前者得出後者不存在 |
-| SitaWare北約標準與跨國採用數 | 官方[產品頁](https://systematic.com/int/industries/defence/products/sitaware-suite/)支持C4ISR用途，未核實正式標準身份與原文各項2026里程碑 |
-| SpaceX完整栈、Eutelsat600+、UDL日記錄量 | 缺少本輪具體一手證據；保持UNKNOWN，取消數值性能結論 |
-| cFS、F Prime、COSMOS、RTOS混列 | 飛行軟件框架、地面指控與操作系統不同；NASA及OpenC3項目需各自版本與任務證據 |
-| 中俄體制100%、國家單一栈、新馬合列 | 撤回整體概括。SG與MY分別關聯；無公開證據不能反推弱勢或全閉源 |
-| 全年營收22億vs71.9億、最新MCP發布月 | 本輪不取用；須按具體日期與公司公告重新核實 |
+## 一、核心结论：五个工具在航天／军事的采用
 
-參考檔新增優先校訂索引，保留原模型回答供溯源。全檔已作結構掃描；實質查證集中在提問卅九、卌與本報告，其他歷史主張仍須逐項審核。
+| 工具 | 航天／军事采用情况 | 关键判断 | 证据 |
+| :--- | :--- | :--- | :--- |
+| **Apache Airflow** | ✅ 通用标配 | 地面遥感 ETL；NASA VEDA 有公开生产案例（卫星数据入湖） | P1 |
+| **Apache Superset** | ⚠ 间接存在 | 仅作非密级资产大屏，不进核心飞控链路 | INFERRED |
+| **Apache ECharts** | ⚠ 间接存在 | 作为 Superset 渲染引擎或科普大屏；上万通道会卡死 | INFERRED |
+| **StarRocks** | ❌ 不适合核心场景 | OLAP 仓库，非时序设计；为秒级聚合而生，写入吞吐不足 | INFERRED（技术形态判断） |
+| **DolphinScheduler** | ❌ 无公开证据 | 主要在中国互联网生态，未见进入国际航天供应链白名单 | UNKNOWN（缺证即缺证） |
 
-## 按場景比較平台，避免虛構通用技術栈
+> 一句话总结：航天核心数据形态是**高频时序遥测（每秒百万点量级）**，上述五工具中只有 Airflow 渗透较深，其余非主流。
 
-| 場景 | 需要的能力 | 研究入口 | 必須另驗證 |
-|---|---|---|---|
-| 地緣戰略與風險 | 事件來源、可重現指標、情景與分析 | RAND、SIPRI、CSIS、HCSS、Janes、ACLED、RANE、Control Risks | 樣本偏差、覆蓋、修訂與資料許可 |
-| 情報融合與指揮支持 | 實體、來源、權限、可審計工作流 | Palantir、Systematic、Anduril、Athea、i2、Esri | 實際任務部署、授權環境與人員監督 |
-| 航天工程與任務分析 | 軌道、幾何、模型、誤差與接口 | Synopsys/Ansys、GMV、NASA、Dassault Systèmes | 模型適用性、版本、精度與驗收 |
-| GEOINT與空间情报 | 光學／SAR／RF與來源時間 | Planet、ICEYE、Capella、BlackSky、LeoLabs、Slingshot | 解析度、延遲、重訪、錯誤率與再分發權 |
-| AI研究與模型 | 推理、視覺、科學模型、評估與治理 | OpenAI、DeepMind、Anthropic、Mistral、DeepSeek、NVIDIA、大學研究單位 | 同條件基準、訓練許可、任務安全與漂移 |
-| 遙測分析與數據管線 | 寫入、查詢、保留、回放、DQ | 時序庫／OLAP／流處理與Airflow按需求選型 | 同負載吞吐、p99時延、失效恢復與時序語義 |
-| 安全關鍵控制 | 決定性、分區、WCET與认证 | RTOS、隔離內核與飛行框架候選 | 指定版本、目標硬件、認證範圍；不能用數倉基準代替 |
+### 1.1 为什么是「形态不匹配」而非「质量不够」
 
-硬實時控制與地面分析的邊界由任務安全要求決定。數倉、GIS、模型和指揮平台可共存，不構成一條「高級／低級」替換鏈。Airflow可編排含HPC提交的工作流，但不取代PBS/Slurm資源調度。跨氣隙交付也須指定實際轉運與驗證機制，不能僅由pull/push判定可行。
+这五个工具在电商／博彩场景是合理选择，换到航天不适用，原因是**数据形态与时延预算变了**，不是工具做得差：
 
-## 逐機構登記索引
+| 维度 | 电商／博彩典型 | 航天核心典型 | 后果 |
+| :--- | :--- | :--- | :--- |
+| 写入模式 | 批量 + 中等频率事务 | 持续高频点位流，每秒百万点 | OLAP 列存的批量导入节奏跟不上 |
+| 查询时延预算 | 秒级聚合可接受 | 遥测判读要毫秒级 | StarRocks 的设计目标点就在秒级 |
+| 数据保真 | 可降采样 | 异常瞬态不可丢，降采样等于丢故障 | 需要原生时序库的压缩而非抽样 |
+| 可视化通道数 | 数十到数百 | 数千至上万通道同屏 | Canvas／DOM 渲染撑不住，需 WebGL |
+| 合规约束 | 一般 | ITAR／EAR／CMMC 白名单 | 与技术能力无关的硬门槛 |
 
-本批登記 **196 個機構／項目候選**：**83** 條公開描述為VERIFIED，**113** 條為UNKNOWN。每列有獨立ID，所有候選均列出，無法讀取的來源保留待核實。此處產品列為線索，證據只覆蓋用途主張。
+### 1.2 ECharts 的具体边界
 
-### 地緣研究與全球事件
+ECharts 在**静态报表与中等通道数大屏**上没有问题。问题出现在遥测波形场景：上万通道同屏滚动刷新时，需要 WebGL 硬件加速的流式绘图引擎，这是 Grafana 与各家自研波形引擎存在的理由。**这是渲染架构差异，不是图表库优劣。**
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0001 | [RAND](https://www.rand.org/about.html)／RESEARCH_ORG | US | 政策研究、FFRDC | **VERIFIED**：公开开展政策、国家安全与国际事务研究 |
-| FRO0002 | [IISS](https://www.iiss.org/about-us/)／THINK_TANK | GB | The Military Balance、Strategic Survey | **UNKNOWN**：UNKNOWN：本轮页面仅返回 iframe，产品与覆盖待核实 |
-| FRO0003 | [SIPRI](https://www.sipri.org/about)／RESEARCH_ORG | SE | 军费、军贸数据库与年鉴 | **VERIFIED**：公开开展冲突、军备与裁军研究 |
-| FRO0004 | [CSIS](https://www.csis.org/)／THINK_TANK | US | 国际安全与政策研究 | **VERIFIED**：官网公开发布国际政策与安全研究 |
-| FRO0005 | [Chatham House](https://www.chathamhouse.org/)／THINK_TANK | GB | 国际事务研究 | **VERIFIED**：官网公开发布国际事务研究 |
-| FRO0006 | [HCSS](https://hcss.nl/)／THINK_TANK | NL | 战略研究、GINA 线索 | **VERIFIED**：官网公开提供战略研究 |
-| FRO0007 | [ACLED](https://acleddata.com/about-acled)／NONPROFIT | US | 冲突与抗议事件数据 | **VERIFIED**：公开描述全球政治暴力与抗议数据分析 |
-| FRO0008 | [GDELT Project](https://gdeltproject.org/)／PROJECT | 未分配／跨國 | 新闻事件数据库 | **VERIFIED**：公开提供全球新闻与事件数据项目 |
+---
 
-### 策略服務與OSINT
+## 二、全球宇航产业链三段论 — 教科书划分
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0009 | [Janes](https://www.janes.com/)／COMPANY | GB | 国防情报数据库 | **VERIFIED**：官网描述开源国防与安全情报服务 |
-| FRO0010 | [RANE](https://www.ranenetwork.com/)／COMPANY | US | 风险情报平台、Stratfor 线索 | **VERIFIED**：官网描述企业风险情报服务 |
-| FRO0011 | [Control Risks](https://www.controlrisks.com/)／COMPANY | GB | 地缘风险、尽调与咨询 | **VERIFIED**：官网描述全球风险咨询服务 |
-| FRO0012 | [Recorded Future](https://www.recordedfuture.com/)／COMPANY | US | 威胁情报、MCP 接口线索 | **VERIFIED**：官网描述网络威胁情报服务；MCP 发布日未在本轮核实 |
-| FRO0013 | [Govini](https://www.govini.com/)／COMPANY | US | Ark | **UNKNOWN**：UNKNOWN：访问原域名转向 air.ai，不能据此确认 Ark 当前产品状态 |
-| FRO0014 | [Roke Manor Research](https://www.roke.co.uk/)／COMPANY | GB | Crucible | **UNKNOWN**：UNKNOWN：参考档产品线索待一手核实 |
-| FRO0015 | [BMI / GeoQuant](https://www.fitchsolutions.com/)／BUSINESS_UNIT | 未分配／跨國 | 国别风险、量化地缘风险 | **UNKNOWN**：UNKNOWN：提供方与产品关系待核实 |
-| FRO0016 | [Bellingcat](https://www.bellingcat.com/)／NONPROFIT | NL | 开源调查与工具集 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0017 | [Maltego](https://www.maltego.com/)／COMPANY | DE | OSINT 关系分析 | **VERIFIED**：官网描述开源情报与网络调查平台 |
-| FRO0018 | [i2 Group](https://i2group.com/solutions/i2-analysts-notebook)／COMPANY | 未分配／跨國 | Analyst's Notebook | **VERIFIED**：产品页描述实体关系与可视分析；官方说明2022年由Harris从IBM收购 |
-| FRO0019 | [Meteomatics](https://www.meteomatics.com/)／COMPANY | CH | 天气数据 API、气象情报 | **VERIFIED**：官网描述气象情报服务 |
-| FRO0020 | [中科闻歌](https://www.wenge.com/)／COMPANY | CN | DIP、DOMA、Decitron | **UNKNOWN**：UNKNOWN：沿用旧批线索，本轮未复核 |
-| FRO0021 | Earthian AI／UNRESOLVED | 未分配／跨國 | 地缘风险 AI 线索 | **UNKNOWN**：UNKNOWN：名称、法人和性能均待核实 |
-| FRO0022 | NERAI／UNRESOLVED | 未分配／跨國 | 地缘风险 AI 线索 | **UNKNOWN**：UNKNOWN：名称、法人和性能均待核实 |
+```mermaid
+flowchart LR
+    A[上游 设计与仿真] --> B[中游 制造与供应链]
+    B --> C[下游 发射与在轨运营]
 
-### 軍工、指揮與防務AI
+    A --> A1[CATIA/NX + Ansys/NASTRAN + Teamcenter/Windchill + OpenMDAO + PBS]
+    B --> B1[SAP + Palantir Foundry + Airflow/Dagster + Snowflake Gov + Plotly]
+    C --> C1[InfluxDB/TimescaleDB/QuestDB + Kafka/Flink + Grafana + cFS/COSMOS + K8s]
+```
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0023 | [Palantir Technologies](https://www.palantir.com/platforms/gotham/)／COMPANY | US | Gotham、Foundry、AIP、Apollo、Maven、TITAN、Warp Core | **VERIFIED**：Gotham公开描述国防情报融合与决策支持；不能外推具体部署栈 |
-| FRO0024 | [Anduril Industries](https://www.anduril.com/lattice/command-and-control)／COMPANY | US | Lattice、Menace | **VERIFIED**：公开描述传感器与系统连接的指挥控制平台 |
-| FRO0025 | [Systematic](https://systematic.com/int/industries/defence/products/sitaware-suite/)／COMPANY | DK | SitaWare、IRIS、EWare | **VERIFIED**：SitaWare产品页描述多域C4ISR；不等于北约规范标准 |
-| FRO0026 | [Lockheed Martin](https://www.lockheedmartin.com/en-us/products/command-control-battle-management-communications-c2bmc.html)／GROUP | US | C2BMC、CommandIQ、AIR6500、DIAMONDShield | **VERIFIED**：C2BMC产品页描述指挥控制与战斗管理 |
-| FRO0027 | [Northrop Grumman](https://www.northropgrumman.com/)／GROUP | US | IBCS、航天与传感器线索 | **VERIFIED**：官网公开航空、防务与太空业务 |
-| FRO0028 | [RTX](https://www.rtx.com/)／GROUP | US | Raytheon、Collins Aerospace、Pratt & Whitney | **VERIFIED**：官网公开航空与防务业务 |
-| FRO0029 | [BAE Systems](https://www.baesystems.com/en)／GROUP | GB | GXP、SOCET GXP、RAD 系列、BISim 线索 | **VERIFIED**：官网公开防务技术业务；逐款型号待核实 |
-| FRO0030 | [L3Harris Technologies](https://www.l3harris.com/)／GROUP | US | 战术通信、航天与传感器 | **VERIFIED**：官网公开防务技术业务 |
-| FRO0031 | [General Dynamics](https://www.gd.com/)／GROUP | US | 任务系统、通信与平台 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0032 | [Thales](https://athea.tech/)／GROUP | FR | 防务、航天、通信、Luna | **VERIFIED**：Athea官方材料确认Thales为合作方；其他型号本轮待核实 |
-| FRO0033 | [Leonardo](https://www.leonardo.com/en/)／GROUP | IT | 航空、防务与安全 | **VERIFIED**：官网公开航空、防务与安全业务 |
-| FRO0034 | [Airbus](https://www.airbus.com/en/products-services/defence)／GROUP | FR | Defence and Space、Skywise、Pléiades Neo | **VERIFIED**：防务官网公开防务业务；不将整个集团归为单一法国法人 |
-| FRO0035 | [Boeing](https://www.boeing.com/defense)／GROUP | US | Defense Space & Security | **VERIFIED**：官网公开防务与航天业务 |
-| FRO0036 | [Saab](https://www.saab.com/)／GROUP | SE | 传感器、平台与任务系统 | **VERIFIED**：官网公开防务业务；不是Athea合作方证据 |
-| FRO0037 | [Helsing](https://helsing.ai/company)／COMPANY | DE | 防务AI、Centaur、HX-2 线索 | **VERIFIED**：官网描述防务AI，并披露与Mistral合作 |
-| FRO0038 | [Athea](https://athea.tech/)／JOINT_VENTURE | FR | 主权大数据平台 | **VERIFIED**：官方明确由Thales与Eviden支持的主权大数据方案 |
-| FRO0039 | [Eviden](https://eviden.com/en/products/mission-critical-systems)／BUSINESS_UNIT | FR | 任务关键系统、Athea | **VERIFIED**：官方任务关键系统页列出Athea |
-| FRO0040 | [Elbit Systems](https://www.elbitsystems.com/)／GROUP | IL | C4ISR、电子与无人系统 | **VERIFIED**：官网公开防务技术业务 |
-| FRO0041 | [Israel Aerospace Industries](https://www.iai.co.il/)／GROUP | IL | 航空、航天与防务系统 | **VERIFIED**：官网公开航空航天与防务业务 |
-| FRO0042 | [ST Engineering](https://www.stengg.com/)／GROUP | SG | 航空、数字与防务服务 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0043 | [中国航天科工集团 CASIC](https://www.casic.com.cn/)／GROUP | CN | 航天与防务系统 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0044 | [中国电子科技集团 CETC](https://www.cetc.com.cn/)／GROUP | CN | 电子与信息系统 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0045 | [中国航空工业集团 AVIC](https://www.avic.com/)／GROUP | CN | 航空工业 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0046 | [中国兵器工业集团 NORINCO Group](https://www.norincogroup.com.cn/)／GROUP | CN | 陆地装备与防务 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0047 | [Rostec](https://rostec.ru/)／GROUP | RU | 工业与防务 | **UNKNOWN**：UNKNOWN：未在本轮核实 |
-| FRO0048 | [Rheinmetall](https://www.rheinmetall.com/)／GROUP | DE | 车辆、传感器与防务 | **UNKNOWN**：UNKNOWN：补充研究候选，未核实 |
-| FRO0049 | [HENSOLDT](https://www.hensoldt.net/)／COMPANY | DE | 防务传感器 | **UNKNOWN**：UNKNOWN：补充候选，逐项能力未核实 |
-| FRO0050 | [Hanwha Aerospace](https://www.hanwhaaerospace.com/)／GROUP | KR | 航空与防务 | **UNKNOWN**：UNKNOWN：补充研究候选，未核实 |
-| FRO0051 | [国立中山科学研究院](https://www.ncsist.org.tw/)／RESEARCH_ORG | TW | 防务研发 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0052 | [汉翔航空工业](https://www.aidc.com.tw/)／COMPANY | TW | 航空研发与制造 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0053 | [乌克兰国防部](https://mod.gov.ua/)／PUBLIC_BODY | UA | Delta | **UNKNOWN**：UNKNOWN：Delta版本、部署与架构须另取官方项目证据 |
-| FRO0054 | HADES / HDS FUSION／UNRESOLVED | 未分配／跨國 | 多域C4ISR | **UNKNOWN**：UNKNOWN：参考档名称与提供方法人待消歧 |
-| FRO0195 | 经纬航太／COMPANY | TW | 无人系统 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0196 | 创未来／COMPANY | TW | 通信与传感器线索 | **UNKNOWN**：UNKNOWN：名称与法人待核实 |
+### 2.1 上游：设计与仿真 — 不可能用 StarRocks
 
-### 宇航機構、企業與空間態勢
+* **主体**：SpaceX、Blue Origin、Rocket Lab、Airbus、Boeing（P1）
+* **CAD／CAE**：CATIA、Siemens NX；Ansys、NASTRAN（P1）
+* **PLM**：Teamcenter、Windchill（P1）
+* **多学科优化**：**NASA OpenMDAO**（P0，开源）
+* **任务工程与仿真**：
+  * **Ansys STK**（Systems Tool Kit，含 Pro／Premium Air／Premium Space／Enterprise 分级）——1989 年起的多物理场任务仿真软件，核心是**几何引擎**（时变位置／姿态／空间关系计算）。客户涵盖 NASA、ESA、CNES、DLR、Boeing、Lockheed Martin、Northrop Grumman、美国国防部（P1）。模块化架构近似 MATLAB／Simulink；对外提供 **Python、MATLAB、C#、Java API**，可用 Connect 脚本经 TCP/IP 或 COM 驱动，支持批处理场景生成与外部数据（气象、卫星、空管）接入。
+  * **Ansys ODTK**：定轨与协方差、交会分析（P1）
+  * **Ansys ModelCenter／TETK／Behavior Execution Engine**：MBSE 与试验评估（P1）
+  * 开源对照：**NASA GMAT**、**Orekit**、**Basilisk**、**NAIF SPICE**（轨道力学、星历、几何；P0）
+  * **a.i. solutions FreeFlyer**：任务设计与运营（P1）
+* **调度**：**Altair PBS**、**Slurm** 这类 HPC 作业调度器，**不是 Airflow**（P1）。两者解决的问题不同——PBS 调度的是跨数百节点的 MPI 仿真作业，Airflow 调度的是有向无环的数据管线。
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0055 | [NASA](https://www.nasa.gov/)／PUBLIC_BODY | US | cFS、GMAT、OpenMDAO、VEDA | **VERIFIED**：官网公开航天探索与科研任务；框架逐项证据须分开 |
-| FRO0056 | [NASA JPL](https://www.jpl.nasa.gov/)／RESEARCH_ORG | US | F Prime、SPICE | **VERIFIED**：官网公开行星探索研究；是机构条目，不是独立集团 |
-| FRO0057 | [ESA](https://www.esa.int/)／INTERGOVERNMENTAL | 未分配／跨國 | 航天科学与任务 | **VERIFIED**：官网公开多国航天任务；不得编码为一个ISO国家 |
-| FRO0058 | [DLR](https://www.dlr.de/en)／RESEARCH_ORG | DE | 航天、航空与研究 | **VERIFIED**：官网公开航空航天研究 |
-| FRO0059 | [CNES](https://cnes.fr/)／PUBLIC_BODY | FR | 航天任务与研究 | **VERIFIED**：官网公开航天任务与研究 |
-| FRO0060 | [JAXA](https://www.jaxa.jp/)／PUBLIC_BODY | JP | 航天航空研发与任务 | **VERIFIED**：官网公开航天航空研发 |
-| FRO0061 | [ISRO](https://www.isro.gov.in/)／PUBLIC_BODY | IN | 航天研发与任务 | **VERIFIED**：官网公开航天任务 |
-| FRO0062 | [KARI](https://www.kari.re.kr/eng)／RESEARCH_ORG | KR | 航空航天研发 | **VERIFIED**：官网公开航空航天研究 |
-| FRO0063 | [中国航天科技集团 CASC](https://www.spacechina.com/n25/n146/)／GROUP | CN | 运载器、卫星与航天产业 | **VERIFIED**：官方业务页公开卫星应用与航天产业业务 |
-| FRO0064 | [CNSA](https://www.cnsa.gov.cn/)／PUBLIC_BODY | CN | 航天管理与任务 | **UNKNOWN**：UNKNOWN：补充候选，未在本轮核实 |
-| FRO0065 | [Roscosmos](https://www.roscosmos.ru/)／PUBLIC_BODY | RU | 航天任务 | **UNKNOWN**：UNKNOWN：参考档线索，本轮未核实 |
-| FRO0066 | [SpaceX](https://www.spacex.com/)／COMPANY | US | Falcon、Dragon、Starlink、Starship | **UNKNOWN**：UNKNOWN：首页无可读文本；内部栈与在轨节点数未核实 |
-| FRO0067 | [Blue Origin](https://www.blueorigin.com/)／COMPANY | US | New Glenn、New Shepard | **VERIFIED**：官网公开航天运输与系统业务 |
-| FRO0068 | [Rocket Lab](https://rocketlabcorp.com/)／GROUP | US | Electron、Neutron、航天系统 | **VERIFIED**：官网公开发射与航天系统业务 |
-| FRO0069 | [OHB](https://www.ohb.de/)／GROUP | DE | 卫星与航天系统 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0070 | [Isar Aerospace](https://www.isaraerospace.com/)／COMPANY | DE | Spectrum | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0071 | [Orbex](https://orbex.space/)／COMPANY | GB | Prime | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0072 | [蓝箭航天 LandSpace](https://www.landspace.com/)／COMPANY | CN | 朱雀系列 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0073 | [星河动力 Galactic Energy](https://www.galactic-energy.cn/)／COMPANY | CN | 谷神星、智神星 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0074 | [COMSPOC](https://www.comspoc.com/)／COMPANY | US | SSASuite | **VERIFIED**：官网公开空间态势业务；精度与部署须产品级证据 |
-| FRO0075 | [GMV](https://www.gmv.com/en/products/space/ecosstm)／GROUP | ES | Ecosstm | **VERIFIED**：官方产品页描述SSA/SST/SDA/STM及编目、碰撞分析 |
-| FRO0076 | [LeoLabs](https://leolabs.space/)／COMPANY | US | 轨道监测与情报 | **VERIFIED**：官网公开轨道情报服务 |
-| FRO0077 | [Slingshot Aerospace](https://www.slingshot.space/)／COMPANY | US | 空间运营情报 | **VERIFIED**：官网公开空间运营情报服务 |
-| FRO0078 | [Neuraspace](https://www.neuraspace.com/)／COMPANY | PT | 空间交通管理 | **VERIFIED**：官网公开空间交通管理服务 |
-| FRO0079 | [OKAPI:Orbits](https://www.okapiorbits.space/en)／COMPANY | DE | 轨道运营与交通管理 | **VERIFIED**：官网公开轨道运营服务 |
-| FRO0080 | [Saber Astronautics](https://www.saberastro.com/)／COMPANY | 未分配／跨國 | Space Cockpit、WINDU、Singularity | **VERIFIED**：官网公开空间运营业务；产品与2026发布日期待核实 |
-| FRO0081 | [Aldoria](https://www.aldoria.com/)／COMPANY | FR | 空间监测 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0082 | [ExoAnalytic Solutions](https://www.exoanalytic.com/)／COMPANY | US | 光学空间监测 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0083 | [a.i. solutions](https://ai-solutions.com/)／COMPANY | US | FreeFlyer | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0194 | [USGS](https://www.usgs.gov/)／PUBLIC_BODY | US | Landsat与地球观测 | **UNKNOWN**：UNKNOWN：NASA与USGS职责需项目级证据 |
+> **关键区分**：上游的「调度」是算力调度，中游的「调度」是数据管线调度。把 Airflow 塞进上游 HPC 场景是范畴错误。
 
-### GEOINT與遥感
+### 2.2 中游：制造与供应链 — OGDIL 技术栈真正能进入的地方
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0084 | [Esri](https://www.esri.com/en-us/industries/defense/overview)／COMPANY | US | ArcGIS Pro、Enterprise、AllSource、Defense Mapping | **VERIFIED**：国防产品页公开军事GIS应用 |
-| FRO0085 | [Planet Labs](https://www.planet.com/)／COMPANY | US | PlanetScope、SkySat | **VERIFIED**：官网公开卫星影像与地球数据分析 |
-| FRO0086 | [ICEYE](https://www.iceye.com/)／COMPANY | FI | SAR影像与分析 | **VERIFIED**：官网公开SAR与地球观测服务 |
-| FRO0087 | [BlackSky](https://blacksky.com/)／COMPANY | US | Spectra | **VERIFIED**：官网公开空间情报业务；具体刷新率未核实 |
-| FRO0088 | [Capella Space](https://www.capellaspace.com/)／COMPANY | US | SAR地球观测 | **VERIFIED**：官网公开全天候地球情报业务 |
-| FRO0089 | [HawkEye 360](https://www.hawkeye360.com/)／COMPANY | US | RF空间情报 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0090 | [Maxar / Vantor](https://www.maxar.com/)／UNRESOLVED | US | WorldView Legion | **UNKNOWN**：UNKNOWN：参考档混用品牌，须分辨改名、资产与法人关系 |
-| FRO0091 | [Hexagon](https://hexagon.com/)／GROUP | SE | ERDAS IMAGINE、Luciad | **UNKNOWN**：UNKNOWN：参考档线索，本轮未核实 |
-| FRO0092 | [NV5 Geospatial](https://www.nv5geospatialsoftware.com/)／BUSINESS_UNIT | US | ENVI | **UNKNOWN**：UNKNOWN：当前归属与产品状态待核实 |
-| FRO0167 | [Cesium](https://cesium.com/)／COMPANY | US | CesiumJS、3D地理空间 | **VERIFIED**：官网描述3D地理空间平台；当前母集团关系另核实 |
-| FRO0190 | [ADS-B Exchange](https://www.adsbexchange.com/)／UNRESOLVED | 未分配／跨國 | 航空数据 | **UNKNOWN**：UNKNOWN：参考档提供方与数据覆盖待核实 |
-| FRO0191 | [MarineTraffic](https://www.marinetraffic.com/)／UNRESOLVED | 未分配／跨國 | 船舶与AIS数据 | **UNKNOWN**：UNKNOWN：当前母集团与数据覆盖待核实 |
-| FRO0192 | [Liveuamap](https://liveuamap.com/)／UNRESOLVED | 未分配／跨國 | 事件地图 | **UNKNOWN**：UNKNOWN：来源与提供方身份待核实 |
-| FRO0193 | [Sentinel Hub / Sinergise](https://www.sentinel-hub.com/)／UNRESOLVED | 未分配／跨國 | 遥感数据接口 | **UNKNOWN**：UNKNOWN：提供方、母集团与数据产品关系待核实 |
+* **主体**：上千家二级、三级供应商
+* **供应链主数据**：`SAP` + **Palantir Foundry**（本体论 Ontology 数据作业系统，P1）
+* **数据管线**：`Airflow / Dagster` 是 ETL 标配。**NASA VEDA 用 Airflow 做卫星数据入湖，有公开生产案例**（P1）——这是五工具中唯一有硬证据的渗透点。
+* **仓储**：Snowflake GovCloud、Databricks、Iceberg、ClickHouse（P1）
+* **可视化**：Power BI、Tableau、Plotly（P1）
+* **合规**：因 ITAR／EAR／CMMC，中国起源的 StarRocks／DolphinScheduler／ECharts 进不了美欧国防白名单（P0 法规层）。
 
-### 前沿AI與大學研究
+### 2.3 下游：发射与在轨运营 — 毫秒级时序
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0093 | [OpenAI](https://openai.com/about/)／COMPANY | US | 基础模型与AI研究 | **VERIFIED**：官方About页公开AI研究定位；不证明涉密部署 |
-| FRO0094 | [Google DeepMind](https://deepmind.google/)／BUSINESS_UNIT | GB | Gemini、科学AI与机器人研究 | **VERIFIED**：官网公开AI模型与科研业务；具体版本性能未比较 |
-| FRO0095 | [Anthropic](https://www.anthropic.com/)／COMPANY | US | Claude、模型研究与安全 | **VERIFIED**：官网公开AI模型业务 |
-| FRO0096 | [Mistral AI](https://mistral.ai/)／COMPANY | FR | 基础模型与企业AI | **VERIFIED**：官网公开模型与主权AI服务 |
-| FRO0097 | [Meta AI](https://ai.meta.com/)／BUSINESS_UNIT | US | Llama、AI研究 | **UNKNOWN**：UNKNOWN：本轮页面未取得足够可读内容 |
-| FRO0098 | [NVIDIA](https://www.nvidia.com/en-us/ai/)／COMPANY | US | GPU、AI软件、Omniverse、Earth-2 | **VERIFIED**：官网公开AI平台业务；具体装备采用未知 |
-| FRO0099 | [Microsoft Research](https://www.microsoft.com/en-us/research/)／RESEARCH_ORG | US | AI与计算研究 | **VERIFIED**：官网公开计算与技术研究 |
-| FRO0100 | [DeepSeek](https://www.deepseek.com/)／COMPANY | CN | 基础模型 | **VERIFIED**：官网公开模型与服务入口；性能未独立核实 |
-| FRO0101 | [Alibaba / Qwen](https://www.qwen.ai/)／BUSINESS_UNIT | CN | Qwen模型 | **UNKNOWN**：UNKNOWN：本轮入口访问失败 |
-| FRO0102 | [xAI](https://x.ai/)／COMPANY | US | Grok | **UNKNOWN**：UNKNOWN：入口显示SpaceXAI，当前法人归属与品牌须另核实 |
-| FRO0103 | [Allen Institute for AI](https://ai2.org/)／RESEARCH_ORG | US | 开放AI研究 | **UNKNOWN**：UNKNOWN：ai2.org访问失败，不把孵化器网站当作研究院 |
-| FRO0104 | [Stanford HAI](https://hai.stanford.edu/)／UNIVERSITY_UNIT | US | 以人为本AI研究 | **VERIFIED**：官网公开人本AI研究与政策活动 |
-| FRO0105 | [MIT CSAIL](https://www.csail.mit.edu/)／UNIVERSITY_UNIT | US | 计算与AI研究 | **VERIFIED**：官网公开计算科学与AI研究 |
-| FRO0106 | [Berkeley BAIR](https://bair.berkeley.edu/)／UNIVERSITY_UNIT | US | AI研究 | **UNKNOWN**：UNKNOWN：本轮无可读文本 |
-| FRO0107 | [Alan Turing Institute](https://www.turing.ac.uk/)／RESEARCH_ORG | GB | 数据科学与AI研究 | **VERIFIED**：官网公开数据科学与AI研究 |
-| FRO0108 | [Inria](https://www.inria.fr/en)／RESEARCH_ORG | FR | 数字科学与AI研究 | **UNKNOWN**：UNKNOWN：本轮受到访问挑战 |
+* **时序存储**：`InfluxDB / TimescaleDB / QuestDB / TDengine / IoTDB`（P1，案例见 §3.2）
+* **流处理**：`Kafka + Flink`；亦见 Redpanda、Pulsar、Spark Structured Streaming（P1）
+* **可视化**：`Grafana`（P1）
+* **飞行软件框架**：
+  * **NASA cFS**（core Flight System，含 OSAL／PSP）——**注意：cFS 是飞行软件框架，不是操作系统**。它采用软件总线发布—订阅架构，支持运行时动态重构拓扑（P0）。
+  * **NASA JPL F´（F Prime）**——组件驱动的 C++ 框架，带建模工具自动生成代码 + 地面数据系统（GDS），v4.0.0 于 2025 年 8 月发布。与 cFS 的差别：F´ 用**静态拓扑**换取编译期强校验（P0）。在轨实证包括 VxWorks 6.7 与裸机微控制器；火星直升机「机智号」采用 **Qualcomm 手机级处理器跑 Linux（F´）+ TI 车规微控制器裸机**的双处理器架构。
+  * **COSMOS（OpenC3）**——地面指控（P0）
+* **容器与编排**：Kubernetes、OpenShift（P1）
+* **SpaceX Starlink 案例**（P1／P2 混合）：
+  * 地面侧 `.NET 5 + Kafka + HBase + HDFS + Docker + K8s`；招聘要求 Kafka／Spark／Flink
+  * 飞控侧：龙飞船与猎鹰 9 飞控软件以 **C++ 编写，运行在 Linux 上**，飞控计算机三重冗余
+  * 星链星座：自 2020 年披露已含 **30,000+ Linux 节点、6,000+ 微控制器**在轨；使用 **Linux + PREEMPT_RT 实时补丁**，自维护内核与工具链（不用第三方发行版），引用的开源组件仅 U-Boot、Buildroot、MUSL 等少数几个；应用层 C/C++ 飞行软件 + Python 工具链 + 硬件在环测试；全链端到端加密且仅运行 SpaceX 签名软件
 
-### 政府、軍方公開研究與多國組織
+> **StarRocks 在此层的问题**：秒级 OLAP 聚合对毫秒级遥测判读太慢。这是设计目标差异，不是实现质量问题。
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0109 | [DARPA](https://www.darpa.mil/)／PUBLIC_BODY | US | 公开研发项目 | **VERIFIED**：官网公开先进研发项目；项目阶段须另取证 |
-| FRO0110 | [LLNL](https://www.llnl.gov/)／RESEARCH_ORG | US | 国家安全科学、JCATS线索 | **VERIFIED**：官网公开国家安全与科学研究；JCATS需项目页 |
-| FRO0111 | [AFRL](https://www.afrl.af.mil/)／RESEARCH_ORG | US | AFSIM | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0112 | [US Naval Research Laboratory](https://www.nrl.navy.mil/)／RESEARCH_ORG | US | 海军科研 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0113 | [NATO](https://www.nato.int/en)／INTERGOVERNMENTAL | 未分配／跨國 | FMN、STANAG、公开研发 | **VERIFIED**：官网公开多国联盟活动；联盟标准须逐份核实 |
-| FRO0114 | [US Department of Defense](https://www.defense.gov/)／PUBLIC_BODY | US | 公开采购与研发项目 | **UNKNOWN**：UNKNOWN：参考档线索，项目独立取证 |
-| FRO0115 | [US Space Force](https://www.spaceforce.mil/)／PUBLIC_BODY | US | ATLAS、UDL、Space-Track | **UNKNOWN**：UNKNOWN：具体项目、承包方与当前状态待核实 |
-| FRO0116 | [DIA](https://www.dia.mil/)／PUBLIC_BODY | US | MARS | **UNKNOWN**：UNKNOWN：项目线索待核实 |
-| FRO0117 | [NGA](https://www.nga.mil/)／PUBLIC_BODY | US | GEOINT | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0118 | [NRO](https://www.nro.gov/)／PUBLIC_BODY | US | 公开航天侦察项目 | **UNKNOWN**：UNKNOWN：不得据机构名称推断产品栈 |
-| FRO0119 | [ODNI](https://www.dni.gov/)／PUBLIC_BODY | US | 公开情报治理文件 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0120 | [NSA](https://www.nsa.gov/)／PUBLIC_BODY | US | 公开科研与标准 | **UNKNOWN**：UNKNOWN：不得据机构名称推断产品栈 |
-| FRO0121 | [GCHQ](https://www.gchq.gov.uk/)／PUBLIC_BODY | GB | 公开研究与安全 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0122 | [DGSE](https://www.dgse.gouv.fr/)／PUBLIC_BODY | FR | 公开机构职责 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0123 | 以色列8200部队／MILITARY_UNIT | IL | 公开项目线索 | **UNKNOWN**：UNKNOWN：单位公开资料与项目须分别取证 |
-| FRO0172 | [OGC](https://www.ogc.org/)／STANDARDS_ORG | 未分配／跨國 | 地理空间开放标准 | **VERIFIED**：官网公开地理空间标准工作；标准版本逐份核实 |
-| FRO0173 | [CCSDS](https://public.ccsds.org/)／STANDARDS_ORG | 未分配／跨國 | 航天数据与通信标准 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
-| FRO0174 | [UNOOSA](https://www.unoosa.org/)／PUBLIC_BODY | 未分配／跨國 | 空间条约与公开登记 | **UNKNOWN**：UNKNOWN：参考档线索，未在本轮核实 |
-| FRO0175 | [COSPAR](https://cosparhq.cnes.fr/)／SCIENTIFIC_ORG | 未分配／跨國 | 行星保护与科学研究 | **UNKNOWN**：UNKNOWN：参考档线索，未在本轮核实 |
-| FRO0176 | [NIST](https://www.nist.gov/)／PUBLIC_BODY | US | SP800系列、FIPS、密码与安全标准 | **UNKNOWN**：UNKNOWN：标准版本与适用范围逐份核实 |
-| FRO0179 | [清华大学](https://www.tsinghua.edu.cn/)／UNIVERSITY_UNIT | CN | IoTDB研究线索 | **UNKNOWN**：UNKNOWN：研究团队、ASF项目与商业提供方不可混算 |
-| FRO0180 | [北京邮电大学](https://www.bupt.edu.cn/)／UNIVERSITY_UNIT | CN | 卫星与IoTDB线索 | **UNKNOWN**：UNKNOWN：具体卫星任务与数据栈待核实 |
+---
 
-### 工程、仿真與兵棋
+## 三、军事航天：专有平台与 Palantir 生态
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0124 | [Synopsys / Ansys](https://ansys.synopsys.com/products/missions/ansys-stk)／GROUP | US | STK、ODTK、SCADE、ModelCenter、Twin Builder | **VERIFIED**：STK官方产品页描述数字任务工程；2025-07-17收购已完成 |
-| FRO0125 | [Dassault Systèmes](https://www.3ds.com/industries/aerospace-defense)／GROUP | FR | CATIA、3DEXPERIENCE | **VERIFIED**：官方产业页描述航空航天与防务工程软件 |
-| FRO0126 | [Siemens](https://www.sw.siemens.com/)／GROUP | DE | NX、Teamcenter、Altair PBS | **UNKNOWN**：UNKNOWN：本轮目标页面失败，产品归属另核实 |
-| FRO0127 | [PTC](https://www.ptc.com/)／COMPANY | US | Windchill | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0128 | [MathWorks](https://www.mathworks.com/)／COMPANY | US | MATLAB、Simulink、Stateflow | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0129 | [BISim](https://bisimulations.com/)／COMPANY | US | VBS4、VBS Blue IG | **UNKNOWN**：UNKNOWN：独立运营实体与母集团关系待核实 |
-| FRO0130 | [WarfareSims](https://www.warfaresims.com/)／COMPANY | 未分配／跨國 | Command Professional Edition | **UNKNOWN**：UNKNOWN：产品与提供方关系待核实 |
-| FRO0131 | [Rolands & Associates](https://www.rolands.com/)／COMPANY | US | JTLS | **UNKNOWN**：UNKNOWN：参考档JTLS提供方补充候选 |
-| FRO0132 | Simulation & Analysis Center / SPA／UNRESOLVED | US | GCAM、Cyber Assassin | **UNKNOWN**：UNKNOWN：参考档缩写与提供方须消歧 |
+### 3.1 美国太空军 — Warp Core 与 ATLAS
 
-### 基礎軟件、設備與數據服務
+* **核心**：**Palantir Warp Core** 作为 ATLAS 系统数据管理层，替代既有的 SPADOC（P2）
+* **合同**：2023 年太空军 18 家供应商 9 亿美元 IDIQ 合同，名单含 **Palantir、C3 AI、Oracle、BAE Systems、Scale AI** 等；**名单内无 Airflow／Superset／StarRocks／DolphinScheduler**（P2）
+* **UDL（Unified Data Library）**：美政府空间数据交换枢纽（P2）
 
-| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
-|---|---|---|---|---|
-| FRO0133 | [Green Hills Software](https://www.ghs.com/)／COMPANY | US | INTEGRITY-178、tuMP | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
-| FRO0134 | [Lynx](https://www.lynx.com/)／COMPANY | US | MOSA.ic、LynxSecure | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
-| FRO0135 | [Wind River](https://www.windriver.com/)／COMPANY | US | VxWorks、VxWorks 653 | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
-| FRO0136 | [SYSGO](https://www.sysgo.com/)／COMPANY | DE | PikeOS | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
-| FRO0137 | [Trustworthy Systems / seL4 Foundation](https://sel4.systems/)／RESEARCH_COMMUNITY | 未分配／跨國 | seL4 | **UNKNOWN**：UNKNOWN：研究团队、基金会与认证对象应分别建实体 |
-| FRO0138 | [RTEMS Project](https://www.rtems.org/)／PROJECT | 未分配／跨國 | RTEMS | **UNKNOWN**：UNKNOWN：具体任务部署待核实 |
-| FRO0139 | [QNX / BlackBerry](https://www.qnx.com/)／BUSINESS_UNIT | CA | QNX | **UNKNOWN**：UNKNOWN：当前业务归属与认证版本待核实 |
-| FRO0140 | [Concurrent Real-Time](https://www.concurrent-rt.com/)／COMPANY | US | RedHawk Linux | **UNKNOWN**：UNKNOWN：版本与发布日未核实 |
-| FRO0141 | [OpenC3](https://openc3.com/)／COMPANY | US | COSMOS | **UNKNOWN**：UNKNOWN：公开地面系统线索待核实 |
-| FRO0142 | [Microchip Technology](https://www.microchip.com/)／COMPANY | US | SAMRH | **UNKNOWN**：UNKNOWN：产品与任务部署待核实 |
-| FRO0143 | [Frontgrade Gaisler](https://www.gaisler.com/)／COMPANY | SE | LEON处理器 | **UNKNOWN**：UNKNOWN：原文Cobham Gaisler历史名称须另核实 |
-| FRO0144 | [AMD](https://www.amd.com/)／COMPANY | US | Versal、Alveo | **UNKNOWN**：UNKNOWN：具体任务采用待核实 |
-| FRO0145 | [Intel / Altera](https://www.altera.com/)／UNRESOLVED | US | FPGA、PAC | **UNKNOWN**：UNKNOWN：当前法人及资产归属须分开核实 |
-| FRO0146 | [Getac](https://www.getac.com/)／COMPANY | TW | 加固终端 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0147 | [Panasonic](https://connect.panasonic.com/)／GROUP | JP | Toughbook | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0148 | [Utimaco](https://utimaco.com/)／COMPANY | DE | HSM | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0149 | [Oracle](https://www.oracle.com/)／GROUP | US | OCI、Roving Edge | **UNKNOWN**：UNKNOWN：具体Lattice部署与产品授权待核实 |
-| FRO0150 | [AWS](https://aws.amazon.com/govcloud-us/)／BUSINESS_UNIT | US | GovCloud | **UNKNOWN**：UNKNOWN：区域、服务与授权边界须另核实 |
-| FRO0151 | [Microsoft](https://azure.microsoft.com/)／GROUP | US | Azure Government、Sentinel | **UNKNOWN**：UNKNOWN：服务、区域、授权与部署须分别核实 |
-| FRO0152 | [IBM](https://www.ibm.com/)／GROUP | US | watsonx、研究与计算 | **UNKNOWN**：UNKNOWN：本輪读取量子页不足以证明AI产品条目 |
-| FRO0153 | [Databricks](https://www.databricks.com/)／COMPANY | US | 数据与AI平台 | **UNKNOWN**：UNKNOWN：国防项目采用待核实 |
-| FRO0154 | [Snowflake](https://www.snowflake.com/)／COMPANY | US | 数据云、政府服务 | **UNKNOWN**：UNKNOWN：国防项目采用待核实 |
-| FRO0155 | [SAP](https://www.sap.com/)／GROUP | DE | 企业与供应链系统 | **UNKNOWN**：UNKNOWN：国防项目采用待核实 |
-| FRO0156 | [华为](https://www.huawei.com/)／GROUP | CN | 工业数字与AI平台 | **UNKNOWN**：UNKNOWN：旧批线索未在本轮复核 |
-| FRO0157 | [C3 AI](https://c3.ai/)／COMPANY | US | 企业AI | **UNKNOWN**：UNKNOWN：合同与具体部署待核实 |
-| FRO0158 | [Scale AI](https://scale.com/)／COMPANY | US | 数据、评估与AI服务 | **UNKNOWN**：UNKNOWN：合同与具体部署待核实 |
-| FRO0159 | [Sift](https://www.siftstack.com/)／COMPANY | US | 工程遥测分析 | **UNKNOWN**：UNKNOWN：不可将其直接写为SpaceX自研 |
-| FRO0160 | [Eutelsat Group](https://www.eutelsat.com/)／GROUP | FR | 卫星通信与遥测 | **UNKNOWN**：UNKNOWN：600+卫星及InfluxDB性能数字未核实 |
-| FRO0161 | [InfluxData](https://www.influxdata.com/)／COMPANY | US | InfluxDB、Telegraf | **VERIFIED**：官网描述时序数据库与遥测分析；具体客户性能不外推 |
-| FRO0162 | [Timescale / Tiger Data](https://www.tigerdata.com/)／COMPANY | US | TimescaleDB | **VERIFIED**：原入口转向Tiger Data并公开时序PostgreSQL服务；法人改名另核实 |
-| FRO0163 | [QuestDB](https://questdb.com/)／COMPANY | GB | QuestDB | **VERIFIED**：官网描述低延迟时序数据库；数值性能未独立测量 |
-| FRO0164 | [Apache Software Foundation](https://www.apache.org/)／NONPROFIT | US | Airflow、Superset、ECharts、DolphinScheduler、IoTDB、Kafka、Flink、Spark、Iceberg | **VERIFIED**：官网确认开源软件基金会；各项目归属与任务采用需独立核实 |
-| FRO0165 | [OSGeo](https://www.osgeo.org/)／NONPROFIT | 未分配／跨國 | GDAL、PROJ、QGIS、PostGIS、GeoServer | **VERIFIED**：官网公开开源地理空间基金会；项目治理关系各自核实 |
-| FRO0166 | [Grafana Labs](https://grafana.com/)／COMPANY | US | Grafana、可观测性平台 | **VERIFIED**：官网描述可观测性业务；渲染插件与军方部署未知 |
-| FRO0168 | [SchedMD](https://www.schedmd.com/)／COMPANY | US | Slurm | **VERIFIED**：官网公开Slurm支持与开发服务 |
-| FRO0169 | [Red Hat](https://www.redhat.com/en)／COMPANY | US | OpenShift、Linux | **VERIFIED**：官网公开企业开源技术服务；国防项目部署另核实 |
-| FRO0170 | [Qualcomm](https://www.qualcomm.com/)／COMPANY | US | 计算与处理器 | **VERIFIED**：官网公开计算技术业务；机智号型号与架构另核实 |
-| FRO0171 | [Texas Instruments](https://www.ti.com/)／COMPANY | US | 模拟与嵌入式处理器 | **VERIFIED**：官网公开模拟与嵌入式处理业务；具体航天采用待核实 |
-| FRO0177 | [StarRocks Project](https://docs.starrocks.io/docs/introduction/Features/)／PROJECT | 未分配／跨國 | StarRocks | **VERIFIED**：官方功能页描述实时分析数据库；不证明某国军工部署 |
-| FRO0178 | [TAOS Data](https://www.tdengine.com/)／COMPANY | 未分配／跨國 | TDengine | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0181 | [ClickHouse](https://clickhouse.com/)／COMPANY | US | ClickHouse | **UNKNOWN**：UNKNOWN：任务采用与企业法人待核实 |
-| FRO0182 | [Redpanda](https://www.redpanda.com/)／COMPANY | US | 流数据平台 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0183 | [Dagster Labs](https://dagster.io/)／COMPANY | US | Dagster | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0184 | [Plotly](https://plotly.com/)／COMPANY | 未分配／跨國 | Plotly、Dash | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0185 | [Salesforce](https://www.salesforce.com/)／GROUP | US | Tableau | **UNKNOWN**：UNKNOWN：产品归属与任务采用待核实 |
-| FRO0186 | [Elastic](https://www.elastic.co/)／COMPANY | 未分配／跨國 | Elasticsearch、Kibana | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0187 | [Cisco / Splunk](https://www.splunk.com/)／GROUP | US | Splunk | **UNKNOWN**：UNKNOWN：法人、收购与产品层关系待核实 |
-| FRO0188 | [CrowdStrike](https://www.crowdstrike.com/)／COMPANY | US | Falcon | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
-| FRO0189 | [MISP Project](https://www.misp-project.org/)／PROJECT | 未分配／跨國 | 威胁情报共享 | **UNKNOWN**：UNKNOWN：治理组织与具体采用待核实 |
+> ⚠️ **口径更正（初版勘误）**：初版将 UDL 的「2000+ 政府账户、1700+ 商业账户、125 个盟国、每天 2 亿条记录被 70 个应用拉取」直接写作事实。参考档明确将这组数字**降为 INFERRED，理由是目前仅有二手来源，须补一手链接方可引用**。本版据此降级处理，见 [附录 A](#sec-appendix-a) U-1。
 
-## ISO 3166-1母表與後續全國家擴展
+### 3.2 时序数据库 — 航天第一公民
 
-本倉库已有[ISO國家／地區母表](tables/01_country_area/registry_country_area_iso3166_20261004_enhanced.csv)。本輪本地檢查為249行、249個不重複alpha-2；這是既有快照的結構核驗，並非重新取得ISO全量官方授權版本。ISO條目包含屬地及地緣區域，不等同249個主權國家。本輪不製造「249國×空表」或聲稱每國所有機構已完成。
+| 案例 | 数据库 | 场景 | 证据 |
+| :--- | :--- | :--- | :--- |
+| Thales Space | InfluxDB | 卫星传感器故障检测 | P1 |
+| Eutelsat 600+ 卫星 | InfluxDB | 每秒百万点，自 Elasticsearch 迁移 | P1 |
+| 朱雀二号火箭 / 北邮卫星 | **IoTDB**（清华） | 星上 CPU／温度，双活星间同步，TsFile 压缩 | P1 |
+| 中国月球与行星数据系统 CLPDS | Oracle／MySQL | 深空数据归档（非高频遥测） | P2 |
 
-後續使用關聯表`registry_org_country_presence`記錄entity_id、iso_alpha2、presence_role、valid_from/to、source_id、evidence_state。角色至少區分法定註冊、總部、研究站、製造、服務、公開合同與成員國。ESA／NATO用多對多成員關係，不造EU或NATO的ISO alpha-2；母集團、子公司、部門與研究所另用entity_relation，避免重複計數。
+**选型逻辑**：时序库赢在三点——按时间分片的写入路径、面向时间窗的压缩编码、以及降采样与保留策略内建。通用 OLAP 把这三件事都当成应用层的事，于是在百万点／秒下崩掉。
 
-逐國覆蓋應以「ISO條目×領域×搜尋日期×來源×結果」記錄SEARCHED_WITH_RECORDS、SEARCHED_NO_PUBLIC_RECORD、NOT_YET_SEARCHED。未找到公開項目不能填能力零。國家能力彙總只可來自產品／項目層已有證據的claim，不能由公司所在地外推國家全部能力。
+### 3.3 决策智能与全源情报融合层
 
-沿用同一原則，神經技術另建`registry_neurotechnology_global`，粒度為機構×項目／設備×版本×試驗，外鍵連至ISO母表與組織表。預留侵入性、EEG/ECoG/微電極/fNIRS/TMS、讀取／寫入／雙向、remote_mode及操作距離、帶寬及計量方法、受試人數／試驗註冊ID、臨床階段、論文DOI、專利公開號、監管機構／適應症／決定日與claim證據。無線數據傳輸、遠程操作和遠距腦訊號感測不得混為一類；放大器採樣率不等於解碼資訊帶寬。
+这是地缘／军事策略服务的真正核心层。
 
-N0～N7須先有版本化操作定義、輸入输出、測試條件與可重現門檻，才可給項目分級；國家層最多匯總已公開驗證的項目上限與覆蓋，不把未公開能力猜成某級。本輪只提供擴展合同，未生成神經技術普查或臨床主張。
+| 平台 | 厂商 | 公开用途 | 证据 |
+| :--- | :--- | :--- | :--- |
+| **Gotham** | Palantir | 国防与情报全源分析，运行于 TS/SCI 环境 | P1 |
+| **Foundry** | Palantir | 本体论（Ontology）数据作业系统，供应链／商业侧 | P1 |
+| **AIP** | Palantir | 把 LLM 接入私有／涉密网络与战术边缘 | P1 |
+| **Apollo** | Palantir | 跨多云／本地／断网环境的持续交付层 | P1 |
+| **Maven Smart System** | Palantir | 美军 CJADC2 目标识别与跨域指挥 | P1 |
+| **Warp Core** | Palantir | 美太空军 ATLAS 数据管理层 | P2 |
+| **Lattice** | Anduril | 自主系统指挥层；2026-07 入选北约 eAirC2 试验 | P2 |
+| **Athea** | 2021 年由 Thales × Atos 宣布成立 | 国防、情报与内部安全大数据／AI 平台；2026股权与竞争／部署主张另核 | 历史成立公告已核；其他待核 |
 
-## 數據交付與限制
+**Palantir 四件套的公开架构**（P1）——这是全文技术细节最透明的一块：
 
-CSV與資料字典見[本批資料目錄](tables/06_frontier_ecosystem_20261006/README.md)：組織、claim、來源分開；既有ISO及DGEF表保持原快照。本批只保存簡短審閱摘要與來源URL，未知許可不等於可抓取全文、用於訓練或再發布。
+* **Ontology（本体知识图谱）**：不是普通语义层，而是「受治理的、类型化的、双向知识图谱」，底层由三个解耦服务支撑——**OMS**（本体元数据服务）、**OSS**（对象集服务，LLM 与应用统一经此查询）、**Funnel**（写操作编排与治理校验）
+* **数据计算层**：构建在自动扩缩容的 **Kubernetes** 之上，默认支持 **Polars、Spark、Flink**，亦可自带容器（BYO engine）；向量／计算／工具服务集成 **DuckDB**
+* **应用层**：**TypeScript + Python + React + Lucene/Elasticsearch**，内置 VS Code Workspaces 代码仓库
+* **AIP**：安全接入 GPT、Gemini、Claude、Grok 等商业 LLM 及 Llama 等开源模型，采用 **k-LLM 架构**热切换多模型供应商、零厂商锁定；开发环境为 VS Code + JupyterLab
+* **Apollo**：**声明式拉取模型**（对比 Jenkins／GitLab CI 的推送模型），可部署到多云、本地、边缘及**完全物理隔离的军方内网**（经密码学签名的制品包跨气隙传输）
 
-查證集中於機構身份線索與公開業務描述。每項产品的技术细节、全部国家所有机构、正式法人注册、专利论文穷举、实际部署与独立性能比较仍未完成，均明确标示边界。后续优先补产品级官方文档、任务／合同文件、研究论文和许可，再按国家系统推进。
+> **对 OGDIL 的启示**：Palantir 的技术护城河不在算法，在**本体层 + 跨气隙交付层**。`Polars / DuckDB / Flink / Kubernetes` 这些底座组件 OGDIL 已有或可得；真正缺的是「受治理的类型化知识图谱」与「断网环境的可信交付」。
 
+> ⚠️ **CONFLICT 待裁**：Palantir 2026 全年营收指引约 22 亿美元（增 61%），另有报导称目标 71.9 亿美元。**两数互斥。** 参考档判前者为公司指引、后者疑为分析师拼接，列 `CONFLICT`。本报告不引用任一数字作为论据。
 
-<!-- GLOBAL_TECHNOLOGY_ISO249_20261006_START -->
-## 全球科技 ISO 249 地區首輪增補
+### 3.4 C4ISR／指挥控制层
 
-本輪新增 [全球科技登記附錄](Global_Technology_ISO249_Registry.qmd)及 [HTML 閱讀版](Global_Technology_ISO249_Registry.html)，以既有 ISO 3166-1 母表的 249 個國家／地區為外鍵。已完成 249 次逐地廣泛檢索，留下 952 筆 UNKNOWN 搜尋線索；原196筆機構保留，新增 103 筆，共 299 筆候選。新增機構公開描述 85 筆 VERIFIED，另列 44 筆技術／產品／軟件／組件／工具／平台及 13 筆神經科技記錄。
+| 组件 | 厂商 | 地位 | 证据 |
+| :--- | :--- | :--- | :--- |
+| **SitaWare** 系列（Headquarters／Frontline／Edge／Maritime／Fusion／Insight／Aspire） | Systematic（丹麦） | 事实上的北约陆军 C2 标准，50+ 国、19 个北约国、百万级用户；DEMETER FLC2 项目下达成 IOC | P1 |
+| **IRIS** | Systematic | 北约事实军事报文标准 | P1 |
+| **EWare** | Systematic | 电子战 | P1 |
+| **Delta** | 乌克兰国防部 | 实战催生的云原生态势感知系统 | P2 |
+| **C2BMC／CommandIQ／AIR6500 IAMD／DIAMONDShield** | Lockheed Martin | 全球指挥控制战斗管理、ISR 地面站 | P1 |
+| **TITAN** | Palantir | AI 目标识别与战场情报节点 | P1 |
+| **ATAK**（Android Team Awareness Kit） | 美政府 | 战术级移动态势共享 | P0 |
+| 互操作标准 | — | Link 16、VMF、NFFI、MIP、APP-6D、ASTERIX、STANAG 系列 | P0 |
 
-上述196筆及其核實統計是原批次，不是全球附錄總數。VERIFIED 僅表示特定公開描述獲來源支持；逐國各領域核實、完整實體普查、全球頂尖排名及 N0～N7 國家等級均未完成。國別候選不是已核實法律所在地。新增 [數據字典](tables/07_global_technology_iso249_20261006/data_dictionary.json)及 [逐地覆蓋表](tables/07_global_technology_iso249_20261006/registry_country_technology_coverage.csv)明示所有尚未查證欄位。
+**SitaWare 近期里程碑**（P1）：2026-01 法军第 3 师部署；2026-06 德荷第一军团采用；2026-07 澳陆军下一代 BMS 首批次选中；2026-09 取得 JITC 认证（五眼 IBS 情报数据）。
 
-DARPA N3 的雙向非手術性能屬目標；Layer 7-T 的 FDA 文件僅支持特定暫時性皮質電極用途，不能擴張為所有研究中 BCI 系統已獲准。詳見附錄來源與逐欄證據。
-<!-- GLOBAL_TECHNOLOGY_ISO249_20261006_END -->
+### 3.5 地理空间情报（GEOINT）
 
+* **商业主力**：
+  * **Esri ArcGIS Pro / Enterprise / ArcGIS for Defense**（军标符号支持须按产品版本核对）。**MAGE 单列**：NGA 与 BIT Systems 合作开发的移动态势感知软件；普遍采用及性能主张另核。
+  * **BAE Systems GXP**：SOCET GXP、SOCET SET、GXP Xplorer、GXP Fusion、SOCET for ArcGIS（立体摄影测量、精确目标定位）（P1）
+  * **Hexagon**：ERDAS IMAGINE、Luciad（LuciadFusion／LuciadRIA 实时地理可视化）（P1）
+  * **NV5 Geospatial**：ENVI（多／高光谱分析）（P1）
+* **影像与数据源**：Maxar／Vantor（WorldView Legion，亚米级）、Planet Labs（近每日重访）、**ICEYE**（SAR，全天候）、Capella Space、BlackSky、Airbus Pléiades Neo、HawkEye 360（RF）（P1）
+* **开源基座**：**GDAL／PROJ、QGIS、PostGIS、GeoServer、CesiumJS**（P0）
+* **标准**：OGC、STAC、WGS84／EPSG、NGA GEOINT 标准（P0）
 
-<!-- GLOBAL_ISO249_B02_START -->
-## 全球科技第二批增補
+### 3.6 空间态势感知（SSA／SDA）
 
-新增 [第二批科技與原始研究證據](Global_Technology_ISO249_Registry_B02.qmd)及 [HTML](Global_Technology_ISO249_Registry_B02.html)。完整整合表位於08目錄；累計335筆機構候選、54筆技術與16筆神經科技記錄。3篇人體BCI原始研究另列6筆數值與測試條件；論文報告結果不等於獨立重現或世界排名。首批與歷史批次保留，249地區全面核實仍未完成。
-<!-- GLOBAL_ISO249_B02_END -->
+| 平台 | 提供商 | 核心功能 | 证据 |
+| :--- | :--- | :--- | :--- |
+| **COMSPOC SSASuite** | COMSPOC | 高精度空间物体编目、数据融合、事件生成、威胁评估；可本地部署 | P1 |
+| **Ecosstm** | GMV | 完整 SSA／SST／SDA／STM 解决方案 | P1 |
+| **Space Cockpit / WINDU / Singularity** | Saber Astronautics | 美太空军 SSA 可视化与 AI 工作流自动化（WINDU 2026-04 发布） | P2 |
+| Slingshot Aerospace、LeoLabs、ExoAnalytic、Neuraspace、Aldoria、OKAPI:Orbits | 多家 | AI 驱动实时跟踪、碰撞规避、数字孪生、RF／光学数据融合 | P1／P2 |
+| **Space-Track.org** | 美军第 18 太空控制中队 | 公共 TLE 数据基础 | P0 |
 
+**关键算法组件**：扩展卡尔曼滤波定轨、高保真轨道传播器、会合分析（Conjunction Analysis）；传感器侧为光学望远镜网络、相控阵雷达、RF 传感器。
 
-<!-- GLOBAL_ISO249_B03_START -->
-## 全球科技第三批增補
+### 3.7 作战建模、仿真与兵棋
 
-新增 [第三批量子、HPC與地區證據](Global_Technology_ISO249_Registry_B03.qmd)及 [HTML](Global_Technology_ISO249_Registry_B03.html)。完整整合表位於09目錄；累計371筆機構候選、59筆技術與16筆神經科技記錄。新增量子、HPC與科研設施資料；量子實驗結果、理論峰值與設施所在地分開記錄，不能推導國家排名。首批與歷史批次保留，249地區全面核實仍未完成。
-<!-- GLOBAL_ISO249_B03_END -->
+* **AFSIM**（美空军研究实验室，政府自有）（P0）
+* **JCATS**（LLNL）、**OneSAF**、**VBS4 / VBS Blue IG**（BISim）、**Command: Professional Edition**（WarfareSims）（P1）
+* **Ansys SCADE**（DO-178C 认证代码生成）、**MATLAB／Simulink／Stateflow**（P1）
 
+### 3.8 安全关键操作系统与实时基线
 
-<!-- GLOBAL_ISO249_B04_START -->
-## 全球科技第四批增補
+> **本节最易出错，必须按工程语言表述。**
 
-新增[軍工AI、宇航影像與戰略服務平台](Global_Technology_ISO249_Registry_B04.qmd)及[HTML](Global_Technology_ISO249_Registry_B04.html)。12筆具名產品／服務、6筆帶前提規格與1筆公司公告事件；完整整合表位於10目錄。累計371筆機構候選、71筆技術／服務。官方描述與獨立效能、完整星座條件與實際服務開放分開；ISO249全面核實仍未完成。
-<!-- GLOBAL_ISO249_B04_END -->
+| 系统 | 厂商 | 公开部署／认证 | 证据 |
+| :--- | :--- | :--- | :--- |
+| **INTEGRITY-178B / 178 tuMP** | Green Hills | 分区 RTOS；F-35 全景座舱显示系统处理器；CC EAL6+ | P1 |
+| **Lynx MOSA.ic + LynxSecure** | Lynx | F-35 TR-3 的隔离式多环境架构 | P1 |
+| **VxWorks 653 / VxWorks** | Wind River | ARINC 653；好奇号、毅力号、JWST | P1 |
+| **PikeOS** | SYSGO | RTOS + Hypervisor 融合；欧洲航空航天 | P1 |
+| **seL4** | Trustworthy Systems | 全球首个完整形式化验证微内核；DARPA HACMS | P0 |
+| **RTEMS** | 开源 | ESA／NASA 深空与立方星 | P0 |
+| **QNX** | BlackBerry | 安全关键嵌入 | P1 |
+| **RedHawk Linux** | Concurrent Real-Time | **实时 Linux，非独立 OS**；9.2.12 于 2026-09-23 发布，基于 6.1.183-rt67 | P1 |
+| **实时化 Linux（PREEMPT_RT）** | — | SpaceX Falcon／Dragon／Starlink | P1／P2 |
+| **SpaceOS-天卓** | 中国航天科技集团 | 官方称用于 300+ 航天器 | P1（官方自报） |
+| 认证与架构标准 | — | DO-178C／DO-254、ARINC 653、FACE、MOSA、MILS | P0 |
+
+> **必须保留的口径更正**：不可写「战斗机 OS 比 Linux 更高级」。正确的比较维度是**硬实时、确定性、时空分区、TCB、WCET 与认证等级**。现代平台通常是 **多处理器 + 多 RTOS + hypervisor／分离内核 + bare-metal 的混合体**，不存在「一架战机只有一个 OS」。
+
+### 3.9 硬件与设备
+
+* **抗辐射计算**：BAE RAD5500／RAD5545、Microchip SAMRH、LEON3/4（Cobham Gaisler）；总线与协议 SpaceWire／SpaceFibre、CCSDS 协议栈（P1）
+* **加速与网络**：AMD（Xilinx）Alveo／Versal FPGA、Intel/Altera PAC、NVIDIA GPU + BlueField DPU、SmartNIC、P4 可编程交换机（P1）
+* **时间基准**：IEEE 1588 PTP、GNSS 驯服时钟、铷／铯原子钟、White Rabbit（P0／P1）
+* **战术终端**：加固平板与笔电（Getac、Panasonic Toughbook）、软件定义电台（L3Harris、Thales）、相控阵 AESA 雷达前端（P1）
+* **密码**：HSM（Thales Luna、Utimaco）；**Type 1 加密设备的具体型号与密钥体系 `UNKNOWN`**
+
+### 3.10 标准与治理框架
+
+**CCSDS**（ODM／TDM／ADM）、**UNOOSA** 条约层、**COSPAR** 行星保护、**PDS4**、**LunaNet**、**NATO STANAG**、**NIST SP 800-53／171**、**CMMC 2.0**、**Zero Trust**（NIST SP 800-207）、**PQC**（FIPS 203/204/205）、**SBOM／SLSA／Sigstore**（均 P0）。
+
+### 3.11 必须标注为 UNKNOWN 的部分
+
+以下五项公开资料不足以判定，**本报告拒绝填补**：
+
+1. 宙斯盾（Aegis）整套系统的 OS——公开资料只能确认 COTS 处理器与开放架构，不足以锁定某一 OS。
+2. 先进雷达的具体 RTOS——多为厂商／任务敏感，不得由芯片或系统名反推。
+3. SpaceX 内部生产栈的完整细节。
+4. UDL 的「2000+ 政府账户 / 每天 2 亿条记录」等数字——仅二手，降为 INFERRED。
+5. **Sift 是否为 SpaceX 自研**（参考档 U-8 未结）。初版将其写作「SpaceX 自研流式波形」，**本版撤回该断言**。
+
+---
+
+## 四、更优平台 — 按场景的降维打击
+
+| 业务层级 | 电商／博彩最优 | 宇航最优 | 原因 |
+| :--- | :--- | :--- | :--- |
+| 实时遥测 | StarRocks | **QuestDB / InfluxDB / TimescaleDB / TDengine / IoTDB** | 1 ms 内 10 万点；StarRocks 为 1 秒聚合设计 |
+| 任务调度（数据） | Airflow／DolphinScheduler | **Airflow + Argo** | DAG 编排 + K8s 原生 |
+| 任务调度（算力） | — | **Altair PBS / Slurm** | HPC 仿真作业，Airflow 不适用 |
+| 数字孪生 | Superset | **Ansys Twin Builder / MindSphere / STK / MATLAB Simulink** | 需与物理方程联动 |
+| 供应链／情报融合 | StarRocks | **Palantir Gotham／Foundry** | 本体层 + 毫秒级多源融合 + ITAR 审计 |
+| 可视化 | ECharts | **Grafana + WebGL 流式波形引擎** | 上万通道需硬件加速 |
+| 断网交付 | CI/CD 推送 | **Palantir Apollo 式声明式拉取** | 气隙环境无法推送 |
+
+### 4.1 军事决策霸主 — Palantir
+
+* **Gotham 国防版**：数字战场操作系统，融合间谍卫星、无人机、雷达数据（P1）
+* **Foundry 工业版**：Airbus Skywise 为公开案例，机队发动机数据预测性维护（P1／P2）
+* **架构要点**：见 §3.3。护城河在本体层与跨气隙交付，不在单点算法。
+
+### 4.2 商业航天霸主 — SpaceX
+
+* **WARPDRIVE**：自研 ERP 神经系统，从 CAD 到发射到财务闭环，拒绝 SAP（P2）
+* **遥测**：自研超高吞吐时序存储 + 流式绘图引擎，毫秒级刷新（P2）。**注：绘图引擎是否即对外产品 Sift，`UNKNOWN`。**
+* **底层**：Bazel 编译链 + K8s + C/C++ + PREEMPT_RT 实时 Linux 内核（P1／P2）
+
+### 4.3 国防科技新贵 — Anduril Lattice
+
+* **本质**：AI 指挥控制平台，以计算机视觉 + 机器学习 + **网状组网（mesh networking）**把异构传感器融合为单一实时作战图景（P1）
+* **Lattice SDK**：开放数据模型，暴露 **gRPC 与 REST API**，语言绑定含 Java、JavaScript、Python、Go，附 OpenAPI 定义（P1）
+* **部署底座**：与 Oracle 合作部署于 **OCI 及 OCI Roving Edge Infrastructure**，含气隙隔离区；配套 Menace 系列远征式 C4 硬件，支持 **DDIL**（Denied／Disconnected／Intermittent／Low-bandwidth）环境（P1）
+* **交互形态**：Web 组件体系，笔电、平板到单兵头盔均可部署；坚持 **human-on-the-loop**（P1）
+
+### 4.4 2026 年的新动向：MCP 成为情报平台的 Agent 接口
+
+**Recorded Future 于 2026-09 推出 MCP（Model Context Protocol）智能层**，让 AI Agent 以 OAuth 认证方式标准化调用其情报库（P1）。这是情报平台接入 Agentic 工作流的最新落地案例，对 OGDIL 的意义是：**对外输出能力的接口形态，正从 REST API 向 MCP 迁移**。
+
+---
+
+## 五、全球十地宇航国防生态链对比
+
+> **初版勘误**：初版标题称「全球 10 地」，实际表内仅 6 个资料列。本版补齐至十地，并按证据等级标注。
+
+| # | 国家／地区 | 体制 | 龙头 | 民营代表 | 数据栈 | 证据 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **美国** | 民企主导 | SpaceX / Lockheed Martin / Anduril / Northrop Grumman | SpaceX、Anduril、Planet | Airflow + Databricks + Snowflake GovCloud + Palantir + Grafana | P1 |
+| 2 | **中国大陆** | 国家主导 | 航天科技集团 + 八大军工央企 | 星河动力、蓝箭航天 | StarRocks + DolphinScheduler + ECharts + Superset（信创）；星上 IoTDB；SpaceOS-天卓 | P1／P2 |
+| 3 | **台湾地区** | 军民合作 | 汉翔航空 + 中科院 | 经纬航太、创未来 | Airflow + Grafana + Plotly | INFERRED |
+| 4 | **英国** | 民企＋政府实验室 | BAE Systems | Orbex、Roke Manor Research | GXP（SOCET／Xplorer／Fusion）、Crucible；Snowflake + Databricks | P1 |
+| 5 | **法国** | 欧盟合作＋主权 | Airbus Defence and Space、Thales | — | Teamcenter + Airflow + InfluxDB（Thales Space 遥测）；SitaWare（2026-01 第 3 师） | P1 |
+| 6 | **德国** | 欧盟合作 | OHB、DLR | Isar Aerospace、Helsing | Snowflake + Databricks + Airflow + Teamcenter（本行国别采用仍需案例）；Athea 不作为德国／Helsing×Saab 归属证据，2021年成立关系为 Thales×Atos | P1／P2 |
+| 7 | **丹麦** | 软件输出型 | **Systematic** | — | **SitaWare 全系 + IRIS + EWare** — 事实上的北约陆军 C2 标准，50+ 国采用 | P1 |
+| 8 | **乌克兰** | 实战催生 | 国防部自研 | — | **Delta** 云原生态势感知系统 | P2 |
+| 9 | **俄罗斯** | 国家 100% | Roscosmos + Rostec | 无 | 全自研闭源 | UNKNOWN（公开资料极少） |
+| 10 | **新加坡／马来西亚** | MRO 模式 | ST Engineering | 无火箭能力 | SAP + Airflow + Tableau | INFERRED |
+
+**十地格局的三条读法**：
+
+1. **软件输出国不等于航天大国。** 丹麦没有发射能力，却以 Systematic 一家公司掌握北约陆军 C2 的事实标准。**生态位比国力更能决定话语权**——这对 OGDIL 的定位最有参考价值。
+2. **实战是最强的产品经理。** 乌克兰 Delta 的云原生架构是战场倒逼出来的，不是规划出来的。
+3. **封闭体系的代价是不可评估。** 俄罗斯一栏只能标 UNKNOWN，不是因为它弱，而是因为**无法验证**——这本身就是一种战略成本。
+
+> **仍待补**：以色列（Elbit Systems 在 Grok 段的 C4ISR 名单内，但参考档未给出其数据栈细节）、日本、印度、韩国四地证据不足，本版未列入。**不以辞藻充数。**
+
+---
+
+## 六、最终结论与 OGDIL 建议
+
+> **直接回答**：StarRocks、Superset、DolphinScheduler、ECharts 在全球宇航产业链中非主流。**Airflow 是唯一重度重叠的工具。** 航天核心是时序库（InfluxDB／IoTDB）+ 流处理（Kafka／Flink）+ 专有平台（Palantir／STK／MATLAB）+ 自研系统。
+
+### 6.1 对 OGDIL 的论文路线建议
+
+1. **若投欧美期刊（如 `Acta Astronautica`）**：做组件替换，方法论本身通用。
+   * `StarRocks` → `QuestDB / TimescaleDB`
+   * `Superset` → `Grafana`
+   * `DolphinScheduler` → `Airflow / Argo`
+   * 方法论（Bayesian / Survival / Causal Inference）保持不变——**这部分不受 ITAR 影响，是真正的学术资产**。
+2. **若对接中国商业航天**：现有 `StarRocks + Superset + Airflow + ECharts` 即是标准答案，可直接与星河动力等洽谈，无需改栈。
+
+### 6.2 分层改写原则（本报告与参考档一致的核心方法论）
+
+**技术判定与合规判定必须分写。** 不要写「StarRocks 技术上不行所以进不了国防」，正确写法是两句话：
+
+* **技术面**：StarRocks 为秒级 OLAP 聚合设计，不适配毫秒级高频时序遥测——这是设计目标差异。
+* **合规面**：因 ITAR／EAR／CMMC，中国起源组件进不了美欧国防供应链白名单——这是商务与法规事实，与技术能力无关。
+
+把两者混写，会让一份本可成立的技术论文在审稿阶段被质疑立场预设。
+
+### 6.3 OGDIL 真正该补的三件事
+
+根据 §3.3 对 Palantir 架构的拆解，OGDIL 与顶级平台的差距不在计算引擎（`Polars / DuckDB / Flink / K8s` 都已有或可得），而在：
+
+1. **本体层（Ontology）**：受治理的、类型化的双向知识图谱，而非朴素 RAG。这是压制幻觉与保证可审计的关键。
+2. **断网交付（Apollo 式声明式拉取）**：气隙环境无法用推送式 CI/CD。
+3. **对外接口形态**：向 **MCP** 迁移，参照 Recorded Future 2026-09 的落地方式。
+
+---
+
+## 附录 A：更正清单与冲突裁定 {#sec-appendix-a}
+
+本版对初版的四处更正，均有参考档 `Inteligent_egaming_platform_ref_v000.000.001.qmd` 提問卅九 为据。
+
+| 编号 | 位置 | 初版写法 | 本版处理 | 依据 |
+| :--- | :--- | :--- | :--- | :--- |
+| **U-1** | §3.1 UDL | 「2000+ 政府账户、1700+ 商业账户、125 个盟国、每天 2 亿条记录被 70 个应用拉取」作为事实陈述 | **降为 INFERRED**，正文不再引用具体数字 | 参考档 L40169 区「必须标注为 UNKNOWN 的部分」第 4 条 |
+| **U-2** | §4.2 Sift | 「Sift（SpaceX 自研流式波形）」 | **撤回自研断言**，改标 `UNKNOWN` | 参考档 L40169 区第 5 条，U-8 未结 |
+| **U-3** | §5 标题 | 称「全球 10 地」，实列 6 个资料列 | **补齐至十地**，不足证据者明列为待补 | 自检发现 |
+| **U-4** | §2.3 cFS | 原文「NASA cFS / COSMOS 做飞控」措辞含糊 | **明写「cFS 是飞行软件框架，不是操作系统」** | 参考档 §四表格注记 |
+
+**未裁定项（CONFLICT，本报告不引用）**：
+
+* Palantir 2026 营收：公司指引约 22 亿美元 vs 报导称目标 71.9 亿美元。两数互斥，待裁。
+* `OGDIL` 与 `GDI-OS` 的命名分叉（参考档 X-21），本报告统一用 `OGDIL`。
+
+---
+
+*Source：OGDIL Lab 整理。一手材料见本仓库 `Inteligent_egaming_platform_ref_v000.000.001.qmd` 提問卅九（L40024–42170），九模型多源查证；佐证来源包括 NASA VEDA、NASA JPL F´、Thales、Eutelsat、US Space Force UDL、SpaceX、Systematic、Anduril、Palantir、Recorded Future 等公开资料。符合学术探讨规范。*
+
+*本版未经 `quarto render` 验证——本机工具链重建中，Quarto 尚未安装。渲染前请注意：PDF 输出需 TinyTeX，Mermaid 图转 PDF 需 Chromium。*
 
 <!-- SOURCE_ANNEX_20261007_BEGIN -->
 ## 2026-10-07 來源增補與歷史差異
 
-本章保留 858 個先前未覆蓋段落。段落可能反映不同時期或相互矛盾的觀點；以來源台帳與審校說明解讀。簽名網址的查詢憑證只在原始本地來源保存，閱讀副本作遮蔽。
+本章保留 848 個先前未覆蓋段落。段落可能反映不同時期或相互矛盾的觀點；以來源台帳與審校說明解讀。簽名網址的查詢憑證只在原始本地來源保存，閱讀副本作遮蔽。
 
-### 來源：Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report_meta.md
+### 來源：Reference/Aerospace_Ecosystem_Report_web_version.qmd
 
-[原始來源](<Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report_meta.md>)；SHA256：`4512f84dee11abc85b25719300ba27566d589556d0f4f2f555fdc2866f3bfb8c`。下列為未覆蓋段落；歷史主張未經收錄自動驗證。
-
-::: {.callout-note collapse="true"}
-來源第 354 行；段落 448bbde9221e4e1d；UNKNOWN_INHERITED。
-
-```text
-新增 [第二批科技與原始研究證據](Global_Technology_ISO249_Registry_B02.qmd)及 [HTML](Global_Technology_ISO249_Registry_B02.html)。完整整合表位於08目錄；累計335筆機構候選、54筆技術與16筆神經科技記錄。3篇人體BCI原始研究另列6筆數值與測試條件；論文報告結果不等於獨立重現或世界排名。首批與歷史批次保留，249地區全面核實仍未完成。
-<!-- GLOBAL_ISO249_B02_END -->
-```
-::: 
-
-### 來源：Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report_web_version.qmd
-
-[原始來源](<Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report_web_version.qmd>)；SHA256：`fd0eab20fafd7072fb9a5e5798bcc7aa4436dc60410d6d8e270280a96942adc3`。下列為未覆蓋段落；歷史主張未經收錄自動驗證。
+[原始來源](<Aerospace_Ecosystem_Report_web_version.qmd>)；SHA256：`4748cd4fa8493298f6792bf19c8d1c09a661a45fc0119487ef55a54043386f68`。下列為未覆蓋段落；歷史主張未經收錄自動驗證。
 
 ::: {.callout-note collapse="true"}
-來源第 1 行；段落 c5f6a06b74710a91；UNKNOWN_INHERITED。
+來源第 1 行；段落 a2aacd73fbe0bdda；UNKNOWN_INHERITED。
 
 ```text
 ---
-title: "世界前沿地緣戰略、軍工、宇航與人工智能生態登記報告 v2"
-subtitle: "OGDIL — 機構、能力主張與證據分層；兼論 Palantir/NASA cFS/ArcGIS/MeteoMatics/NATO FMN 斷網生存、數據層與公開安全架構"
+title: "全球宇航与国防生态链数据栈对比研究报告 v3"
+subtitle: "OGDIL Space Edition — 从 StarRocks 到 Palantir Warp Core，兼论 Lattice/MGP 开源平替与断网生存"
 author: "Ryo Eng（雷欧）"
 date: 2026-10-06
-lang: zh-TW
+date-format: "YYYY[年]M[月]D[日]"
+lang: zh-CN
 format:
   html:
     theme: cosmo
     toc: true
     toc-depth: 4
+    toc-location: left
     number-sections: true
     embed-resources: true
     page-layout: full
+    code-fold: false
     code-tools: true
+    code-summary: "查看代码"
   pdf:
     toc: true
 execute:
-  echo: false
+  echo: true
+  warning: false
+  message: false
+language:
+  title-block-author-single: "作者"
+  title-block-published: "发布于"
 ---
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 22 行；段落 14119330235a4f63；UNKNOWN_INHERITED。
+來源第 33 行；段落 63e4af12185e7467；UNKNOWN_INHERITED。
 
 ```text
-## 研究範圍與可回答的問題
+本版 v3 在 v2 (2026-07-30) 基础上，整合 **提問卌** (地緣學_軍事_宇航_策略服務平臺提問.txt) 全量九模型查证，补齐先生后续追问的 7 大主题：
+1. 完整架构图与开源平替栈（含微型 Lattice/MGP）
+2. Palantir / NASA cFS / ArcGIS / MeteoMatics / NATO FMN 等全平台技术栈拆解
+3. 极端断网生存
+4. 数据层运作细节
+5. 攻防与加解密公开架构
+6. 数据来源与安全分级
+7. 良策建议
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 24 行；段落 287f34c887fd6347；UNKNOWN_INHERITED。
+來源第 42 行；段落 0b1f25d1eb9569ef；UNKNOWN_INHERITED。
 
 ```text
-本輪以世界前沿研究與產業生態為入口，逐間列出公司、集團、組織、研究所與大學單位，涵蓋地緣研究、策略服務、軍工、宇航、GEOINT、AI及工程基礎設施。這是一份**可追溯研究登記冊，不是全球排名或全世界機構普查完成聲明**。
+核心结论不变：**StarRocks/Superset/ECharts/DolphinScheduler 在通用商业航天地面数仓可用，但在星载高频遥测、飞控、军事指挥核心层，存在维度更高的专用平台。唯一重度重叠的是 Airflow。**
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 26 行；段落 df54e89af0ae8a19；UNKNOWN_INHERITED。
+來源第 44 行；段落 813b38be21d34e54；UNKNOWN_INHERITED。
 
 ```text
-本版 v2 在 196 機構登記基礎上，整合 **提問卌** (地緣學_軍事_宇航_策略服務平臺提問.txt) 九模型查证與先生后续 7 问，补齐：
-- 完整架构图与开源平替栈（含微型Lattice/MGP）
-- Palantir / NASA cFS / ArcGIS / MeteoMatics / NATO FMN 等全平台技术栈拆解
-- 极端断网生存
-- 数据层运作细节
-- 攻防系统公开架构版（不含密钥与漏洞）
-- 数据信息来源与安全分级
-- 良策建议
+本报告所有密级架构、具体任务配置、Type 1 密钥体系、武器内部参数一律标 `UNKNOWN`，不臆测。
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 35 行；段落 b27d4d72243dea8e；UNKNOWN_INHERITED。
+來源第 48 行；段落 0f2b863e2444917d；UNKNOWN_INHERITED。
 
 ```text
-「世界級最前沿兼頂尖高端」以跨國研究／服務、公開前沿技術、全球關聯資料或專業任务系统作為候選篩選方向。只有官方描述支持的用途可寫為VERIFIED。
+| 等级 | 含义 | 可否作为结论依据 |
+| :--- | :--- | :--- |
+| **P0** | 官方一手：政府/标准组织文件、开源项目仓库本身 | 可 |
+| **P1** | 厂商一手：官网产品页、白皮书、技术文档、招聘JD | 可 |
+| **P2** | 权威二手：主流媒体、行业分析机构 | 可，须标注 |
+| **INFERRED** | 间接证据推断 | 不可单独支撑 |
+| **CONFLICT** | 多源互斥 | 不可引用 |
+| **UNKNOWN** | 公开资料不足 | 必须留空 |
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 37 行；段落 55c0c398e725d823；UNKNOWN_INHERITED。
+來源第 57 行；段落 72888f7e069e624e；UNKNOWN_INHERITED。
 
 ```text
-## 證據規則
+**三条纪律**：
+1. 不写“战斗机OS比Linux更高级”，比较维度是硬实时、确定性、时空分区、TCB、WCET与认证等级。
+2. 合规判定与技术判定分写。ITAR/EAR/CMMC 是商务合规事实，与技术能力无关。
+3. 数量级数字仅有二手时降为 INFERRED。
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 39 行；段落 7dda6d2a3bce0638；UNKNOWN_INHERITED。
+來源第 62 行；段落 1d60613ca2ab852d；UNKNOWN_INHERITED。
 
 ```text
-| 欄位／等級 | 精確含義 |
-|---|---|
-| VERIFIED | 已讀官方頁面支持本列具體公開描述；供應商自述不等於獨立測效 |
-| UNKNOWN | 未核實、訪問失敗、證據不充分或名稱待消歧；不等於不存在 |
-| P0／P1 | 來源類別：公共／研究官方或供應商官方 |
-| CONFLICT | 多源互斥，待裁 |
-| INFERRED | 間接推斷，不可單獨支撐 |
+## 一、全球产业链三段论与五工具定位
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 47 行；段落 2e67832b93b9bad4；UNKNOWN_INHERITED。
-
-```text
-官網頁面無內容、訪問挑戰或域名轉向其他品牌時，不能把頁面存在當作能力證據。例如Govini入口轉向air.ai、SpaceX首頁無可讀文本，已明列UNKNOWN。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 49 行；段落 e664c5f9342da692；UNKNOWN_INHERITED。
-
-```text
-## 參考檔與舊版報告的核對裁定
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 51 行；段落 9a2e4819e85982b0；UNKNOWN_INHERITED。
-
-```text
-| 問題 | 校訂與核實依據 |
-|---|---|
-| Athea提供方寫成Helsing×Saab | 改為Thales與Eviden；[Athea官方](https://athea.tech/)明列合作方。 |
-| IBM i2現行歸属 | 使用i2 Group；官方2024說明確認2022年Harris從IBM收購 |
-| Ansys母集團 | 官方公告確認2025-07-17 Synopsys完成收購；STK仍為產品品牌 |
-| 起源國即決定全面禁用 | 撤回。ITAR涉及防務物項／服務與技術資料，EAR需判定物項及交易，CMMC為合同相關網絡安全要求；三者不能合併成所有美歐國防通用軟件黑名單。 |
-| StarRocks秒級上限、百萬點必崩 | 撤回未測試數值；官方定位為實時分析。是否適合特定遥测分析須測試 |
-| ECharts上萬通道必卡 | 無實測證據，不成立；應按點數、刷新率、瀏覽器比較 |
-| NASA VEDA採用Airflow | NASA-IMPACT官方倉庫支持存在VEDA攝取實作；不能證明通用標配 |
-| SitaWare北約標準與跨國採用數 | 官方產品頁支持C4ISR用途，未核實正式標準身份與2026里程碑 |
-| SpaceX完整栈、Eutelsat600+、UDL日記錄量 | 缺少本輪一手證據；保持UNKNOWN |
-| cFS、F Prime、COSMOS、RTOS混列 | 飛行軟件框架、地面指控與操作系統不同；需各自版本與任務證據 |
-| 中俄體制100%、國家單一栈 | 撤回整體概括 |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 65 行；段落 608715f1a5c7e639；UNKNOWN_INHERITED。
-
-```text
-參考檔新增優先校訂索引，保留原模型回答供溯源。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 67 行；段落 6d42934cc6bd144d；UNKNOWN_INHERITED。
-
-```text
-## 一、完整架構圖與可復用開源栈 — 微型Lattice/MGP實戰
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 69 行；段落 b24ed30673977a4e；UNKNOWN_INHERITED。
-
-```text
-本章直接回應先生 7 问之第1、2问。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 71 行；段落 4c137e48ff35618d；UNKNOWN_INHERITED。
-
-```text
-### 1.1 四層母體（提煉自15個頂尖平台共性）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 73 行；段落 03afac8ab7061f65；UNKNOWN_INHERITED。
+來源第 64 行；段落 2ad8c9242297e3ba；UNKNOWN_INHERITED。
 
 ````text
 ```mermaid
-flowchart TD
-    A[Ingest: 卫星WorldView/Dove/雷达/无人机/ADS-B/气象Meteomatics/OSINT] --> B[Streaming: Kafka/Redpanda + NiFi + STAC API]
-    B --> C[Storage: PostGIS + TimescaleDB/QuestDB + S3/MinIO + Iceberg]
-    C --> D[Ontology: Apache Atlas + Neo4j + ArcGIS Knowledge Graph平替 + Palantir式对象]
-    D --> E[Processing: Flink/Spark + PyTorch + ONNX Runtime + vLLM + Ansys STK]
-    E --> F[Visualization: MapLibre/Deck.gl + Grafana + OpenMCT + QGIS + Cesium]
-    F --> G[Edge: K3s + KubeEdge + NATS + DTN容迟网络 + WireGuard + Menace平替]
-    G --> H[User: Getac/Toughbook + TAK + Mattermost + SitaWare Edge平替]
+flowchart LR
+    A[上游 设计与仿真] --> B[中游 制造与供应链]
+    B --> C[下游 发射与在轨运营]
+    A --> A1[CATIA/NX + Ansys/NASTRAN + OpenMDAO + PBS/Slurm]
+    B --> B1[SAP + Palantir Foundry + Airflow + Snowflake Gov]
+    C --> C1[InfluxDB/TimescaleDB + Kafka/Flink + Grafana + cFS/F´ + K8s]
 ```
 
 ````
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 84 行；段落 09d8198596f7bca1；UNKNOWN_INHERITED。
+來源第 73 行；段落 8a6c9d6c63fbc3bc；UNKNOWN_INHERITED。
 
 ```text
-**共性結論**：Palantir、Planet、Anduril、Shield 全部跑在 K8s + Docker + Terraform + AWS GovCloud 上，區別只在**本體層**：Palantir是Ontology，Anduril是Lattice Mesh，Helsing是Altra，Shield是Hivemind Pilot。
+| 工具 | 采用情况 | 判断 | 证据 |
+| :--- | :--- | :--- | :--- |
+| Airflow | ✅ 通用标配 | NASA VEDA卫星数据入湖公开案例 | P1 |
+| Superset | ⚠ 间接 | 非密资产大屏 | INFERRED |
+| ECharts | ⚠ 间接 | Superset渲染引擎或科普大屏 | INFERRED |
+| StarRocks | ❌ 不适合核心 | OLAP设计，秒级聚合，写入吞吐不足 | INFERRED |
+| DolphinScheduler | ❌ 无公开证据 | 未见国际航天白名单 | UNKNOWN |
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 86 行；段落 ab1664ce3cd64897；UNKNOWN_INHERITED。
+來源第 81 行；段落 02bfe12c68a93a46；UNKNOWN_INHERITED。
 
 ```text
-### 1.2 開源平替對照表（可直接搭教學級迷你版）
+## 二、决策智能与全源融合层（地缘/军事策略核心）
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 88 行；段落 4d34d3e148353d0a；UNKNOWN_INHERITED。
+來源第 83 行；段落 daf6c74da08c412d；UNKNOWN_INHERITED。
 
 ```text
-| 原版頂級 | 開源平替 | 用途 | 证据 |
+### 2.1 Palantir 家族
+| 平台 | 公开用途 | 技术栈 |
+|---|---|---|
+| **Gotham** | 国防全源分析，TS/SCI环境 | P1 |
+| **Foundry + Ontology** | 本体论数据作业系统，类型化双向知识图谱，压制幻觉与可审计关键 | P1 |
+| **AIP** | LLM接入私有/涉密网络与战术边缘，Workflow Builder | P1 |
+| **Apollo** | 跨多云/本地/断网持续交付，声明式拉取，非推送式CI/CD | P1 |
+| **Maven Smart System** | CJADC2目标识别 | P1 |
+| **Warp Core** | 美太空军ATLAS数据管理层，替代SPADOC | P2 |
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 93 行；段落 ef5f40b7450eab6b；UNKNOWN_INHERITED。
+
+```text
+**架构**：前端 Next.js + MapLibre/Deck.gl + WebSocket；后端 Pipeline Builder；基于加固K8s基座跑 Catalog/Build/Multipass；Rubix零信任。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 95 行；段落 4c2ed36aa6ab4fbf；UNKNOWN_INHERITED。
+
+```text
+### 2.2 Anduril Lattice / Shield AI Hivemind / Helsing Altra / Athea
+- **Lattice**：开放架构去中心化Mesh，computer vision + SLAM + secure comms，Lattice SDK开放 gRPC/REST，Java/Python/Go绑定，部署于 OCI Roving Edge + Menace远征C4硬件，支持 DDIL 环境，human-on-the-loop。P1/P2
+- **Shield AI**：EdgeOS + Pilot + Commander + Forge，GPS/通信拒止下强化学习。P1
+- **Helsing Altra**：Sensor→AI→Tactical→Physical，战场实时概览。P2
+- **Athea**：**Thales × Eviden** 联合，非Helsing×Saab，本版已更正，官方 athea.tech。P1
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 101 行；段落 d9e16a774476d9c7；UNKNOWN_INHERITED。
+
+```text
+**校正**：原提问.txt 将Athea写为Helsing×Saab，已按本项目Geostrategy报告校订为Thales/Eviden。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 103 行；段落 f93e3d733303e4a8；UNKNOWN_INHERITED。
+
+```text
+### 2.3 C4ISR 层
+| 组件 | 地位 | 证据 |
+| **SitaWare Headquarters/Frontline/Edge/Maritime/Fusion** | 丹麦Systematic，北约陆军C2事实标准，50+国采用，DEMETER FLC2项目IOC | P1，但是否“北约官方标准”未核实，原文2026里程碑待补一手 |
+| IRIS | 北约军事报文标准 | P1 |
+| EWare | 电子战 | P1 |
+| Delta | 乌克兰国防部云原生态势感知，实战倒逼 | P2 |
+| NATO FMN | 联邦任务网，Federated Mission Networking，Mattermost+Keycloak模式 | P0 |
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 111 行；段落 bd5bb14e96fe3dd4；UNKNOWN_INHERITED。
+
+```text
+互操作：Link 16, VMF, NFFI, MIP, APP-6D, STANAG系列 P0
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 113 行；段落 08278f824c60c42f；UNKNOWN_INHERITED。
+
+```text
+## 三、GEOINT 地理空间情报
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 115 行；段落 65b02442656dfd6e；UNKNOWN_INHERITED。
+
+```text
+- **Esri ArcGIS Pro/Enterprise/Defense** (MAGE, 军标符号库) P1
+- **BAE GXP**: SOCET GXP/SET, GXP Xplorer, 立体摄影测量 P1
+- **Hexagon**: ERDAS IMAGINE, LuciadFusion/LuciadRIA 实时可视化 P1
+- **NV5 ENVI**: 多/高光谱 P1
+- **数据源**：Maxar WorldView Legion 0.3m, Planet Dove/SkySat每日, ICEYE SAR, Capella, BlackSky, Airbus Pléiades Neo P1
+- **开源基座**：GDAL/PROJ, QGIS, PostGIS, GeoServer, CesiumJS, OGC, STAC, WGS84 P0/P1
+- **Maxar MGP**：125PB影像库托管AWS，WMS/WMTS/WFS, STAC API, MGP SDK Python/Java/R P1
+- **Planet**：K8s GKE, GCP/AWS, Terraform, Crossplane, ArgoCD, GitLab CI/CD, Linkerd服务网格，6PB影像管理，微服务 Mission Control P1
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 124 行；段落 ad25192df1d74fc1；UNKNOWN_INHERITED。
+
+```text
+## 四、宇航任务工程与空间态势感知
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 126 行；段落 edf31d2132b93e44；UNKNOWN_INHERITED。
+
+```text
+| 组件 | 性质 | 用途 |
+|---|---|---|
+| Ansys STK Pro/Premium Air/Space/Enterprise | 商业 | 几何引擎，多域时变三维仿真，轨道/通信/雷达/EOIR/SSA，Python/MATLAB/C# API |
+| Ansys ODTK | 商业 | 定轨协方差 |
+| NASA GMAT, Orekit, Basilisk, NAIF SPICE | 开源 P0 | 轨道力学星历 |
+| **NASA cFS** (+OSAL/PSP) | 开源 P0 | **飞行软件框架，不是OS**，软件总线发布订阅，运行时动态重构 |
+| **NASA JPL F´** | 开源 P0 | 组件驱动C++框架，静态拓扑换编译期强校验，火星直升机Linux+F´+TI裸机双处理 |
+| COSMOS/OpenC3 | 开源 P0 | 地面指控 |
+| FreeFlyer | 商业 | 任务设计 |
+| UDL | 美政府 | 空间数据交换枢纽，数量级2000+账户等仅二手，降为INFERRED |
+| Space Cockpit/WINDU/Singularity | Saber Astronautics | SSA可视化，WINDU 2026-04发布 P2 |
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 138 行；段落 2c7e08449a2f8c0e；UNKNOWN_INHERITED。
+
+```text
+上游设计：CATIA/NX/Teamcenter/Windchill/Ansys/NASTRAN/OpenMDAO/Altair PBS/Slurm P1
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 140 行；段落 f6fa0e96b893d1a5；UNKNOWN_INHERITED。
+
+```text
+### 4.1 MeteoMatics 与气象融合
+- **Meteomatics**：瑞士气象API，全球高分辨率天气数据，WMS/WFS，Meteomatics API Python SDK P1 VERIFIED
+- 开源平替：Open-Meteo + WRF + ECMWF开放数据 + NOAA GFS P0
+- 用途：STK/作战仿真中接入气象层，影响EO/IR、弹道、无人机航路 P1
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 145 行；段落 f8dbd14dd49b4fca；UNKNOWN_INHERITED。
+
+```text
+### 4.2 高性能仿真组件
+- **AFSIM** (美空军研究实验室，政府自有) P0
+- **JCATS, OneSAF, VBS4/VBS Blue IG, Command PE** P1
+- **Ansys SCADE** DO-178C认证代码生成, **MATLAB/Simulink/Stateflow** P1
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 150 行；段落 166ea75ebebe3567；UNKNOWN_INHERITED。
+
+```text
+## 五、安全关键实时基线
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 152 行；段落 c2354f344dec17c2；UNKNOWN_INHERITED。
+
+```text
+| 系统 | 厂商 | 部署/认证 |
+|---|---|---|
+| INTEGRITY-178B/178 tuMP | Green Hills | F-35座舱，分区RTOS，CC EAL6+ P1 |
+| Lynx MOSA.ic + LynxSecure | Lynx | F-35 TR-3隔离多环境 P1 |
+| VxWorks 653 | Wind River | ARINC 653，好奇号/毅力号/JWST P1 |
+| PikeOS | SYSGO | RTOS+Hypervisor融合 P1 |
+| seL4 | Trustworthy | 形式化验证微内核，DARPA HACMS P0 |
+| RTEMS | 开源 | ESA/NASA深空与立方星 P0 |
+| QNX | BlackBerry | 安全关键嵌入 P1 |
+| RedHawk Linux | Concurrent | 实时Linux，非独立OS，9.2.12基于6.1.183-rt67 P1 |
+| SpaceOS-天卓 | 航天科技集团 | 官方称300+航天器 P1自报 |
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 164 行；段落 75b404ec50ae5b33；UNKNOWN_INHERITED。
+
+```text
+> 口径：不存在“一架战机只有一个OS”，实为多处理器+多RTOS+hypervisor+bare-metal混合体。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 166 行；段落 59e9585378b8520b；UNKNOWN_INHERITED。
+
+```text
+## 六、数据与计算底座
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 168 行；段落 1f1cff75b46d9f5a；UNKNOWN_INHERITED。
+
+```text
+- 流：Kafka, Redpanda, Pulsar, Flink, Spark Structured Streaming P1
+- 时序：InfluxDB (Thales Space, Eutelsat案例需一手), TimescaleDB/Tiger Data, QuestDB, TDengine, IoTDB (朱雀二号双活) P1
+- 仓湖：Snowflake GovCloud, Databricks, Iceberg, ClickHouse P1
+- 编排：Airflow (NASA VEDA P1), Dagster, Argo；HPC用 PBS/Slurm
+- 容器云：K8s, OpenShift, AWS GovCloud/Secret, Azure Government, Google Distributed Cloud
+- 可视化：Grafana, Kibana, Power BI, Tableau, Plotly
+- AI：PyTorch, JAX, TensorRT, ONNX Runtime, vLLM, Ray
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 176 行；段落 042a4e3e005567cd；UNKNOWN_INHERITED。
+
+```text
+合规：ITAR/EAR/CMMC 为商务合规事实，非技术优劣。起源国不能直接推导全面禁用。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 178 行；段落 2196b35da50b556e；UNKNOWN_INHERITED。
+
+```text
+## 七、断网生存 — 极端DDIL如何保证生存（公开架构版）
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 180 行；段落 f34702fa75a65e6d；UNKNOWN_INHERITED。
+
+```text
+> 本节仅讲公开原理，不含具体任务配置与密钥。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 182 行；段落 796c9e3923e15a4d；UNKNOWN_INHERITED。
+
+```text
+| 平台原版机制 | 公开原理 | 开源平替 |
+|---|---|---|
+| Palantir Rubix + Apollo拉取 | 云端训练ONNX轻模型，推送到边缘K3s，断网时本地PostGIS+TimescaleDB自治，DTN容迟网络等链路恢复再同步 | K3s + KubeEdge + NATS + Apache NiFi MiNiFi |
+| Anduril Menace + Klas加固 | 远征式C4硬件，OCI Roving Edge Infrastructure，气隙隔离区，mesh组网 | Rugged K3s盒子 + WireGuard + Babel mesh |
+| NATO FMN | 联邦任务网，各国自带FMN节点，联邦认证后互联，Mattermost协作 | Mattermost + Keycloak + WireGuard |
+| NASA cFS + OpenMCT | 软件总线可动态重构，星上自治，失联时按预置时间线自主执行 | cFS + OpenMCT + COSMOS |
+| SitaWare Edge | 前线战术边缘，离线地图+本地C2 | QGIS离线 + Mumble/Matrix |
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 190 行；段落 ad650e2d0b6767a3；UNKNOWN_INHERITED。
+
+```text
+实战来源：乌克兰 Delta 云原生架构即战场倒逼DDIL设计 P2。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 192 行；段落 1c1934cfa69db0cd；UNKNOWN_INHERITED。
+
+```text
+## 八、数据层运作细节
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 194 行；段落 e321434f62612376；UNKNOWN_INHERITED。
+
+```text
+**Palantir Foundry/Ontology**：本体层 = 类型化双向知识图谱。例：“一条船”对象挂载AIS、卫星图、推文、雷达点，同一ID，非表格。治理：权限+血缘+可审计。技术：图数据库+受控词表。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 196 行；段落 d2a9a89453f26467；UNKNOWN_INHERITED。
+
+```text
+**Maxar MGP / Planet**：STAC编目，S3对象存储，WMS/WMTS切片，Parquet时序，GeoPackage矢量。Airflow编排卫星数据入湖（NASA VEDA案例）。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 198 行；段落 15a9c38eabcd161f；UNKNOWN_INHERITED。
+
+```text
+**ArcGIS**：Enterprise Geodatabase + Knowledge Graph + Image Server，支持MAGE离线采集。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 200 行；段落 17133afd8513fd1e；UNKNOWN_INHERITED。
+
+```text
+**NASA cFS**：cFE核心服务 + OSAL抽象层 + PSP平台支持包，应用通过软件总线发布订阅，表格驱动配置。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 202 行；段落 463c1e59f178577e；UNKNOWN_INHERITED。
+
+```text
+**MeteoMatics**：API按经纬度/时间/高度查询，返回JSON/NetCDF，接入STK作为大气/云层影响层。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 204 行；段落 b43f4221207a86b9；UNKNOWN_INHERITED。
+
+```text
+**NATO FMN**：STANAG 4774/4778元数据标签，数据分级+来源标记，联邦服务目录。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 206 行；段落 eaebe03a8b95b2c0；UNKNOWN_INHERITED。
+
+```text
+## 九、攻防与数据安全 — 公开架构版（不含密钥与漏洞）
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 208 行；段落 fe6fe6891355cf56；UNKNOWN_INHERITED。
+
+```text
+> Type 1加密具体型号与密钥体系 UNKNOWN，拒绝填补。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 210 行；段落 07e0ced54fd0b2ad；UNKNOWN_INHERITED。
+
+```text
+- **零信任**：NIST SP 800-207, mTLS, OIDC/OAuth2, SPIFFE/SPIRE身份, OPA策略引擎 P0
+- **硬件根信任**：TPM, HSM (Thales Luna, Utimaco), 短期证书轮转，HashiCorp Vault P1
+- **供应链安全**：SBOM, SLSA, Sigstore, PQC FIPS 203/204/205 P0
+- **标签**：STANAG 4774机密性标签, 4778完整性标签 P0
+- **气隙交付**：Apollo式声明式拉取，OCI Roving Edge隔离区，而非推送式CI/CD P1
+- **时间基准**：IEEE 1588 PTP, GNSS驯服, 铷/铯原子钟, White Rabbit P0/P1
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 217 行；段落 f846723fbef5c908；UNKNOWN_INHERITED。
+
+```text
+## 十、数据信息来源与安全分级详细报告（公开源）
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 219 行；段落 28531fb716ad186b；UNKNOWN_INHERITED。
+
+```text
+| 类别 | 来源 | 安全分级处理 |
+|---|---|---|
+| 光学影像 | Maxar WorldView Legion, Planet, Airbus Pléiades Neo, Sentinel-2, Landsat | 原始影像S3，国产化处理，脱敏特征向量前端 |
+| SAR | ICEYE, Capella Space | 同上 |
+| 航运 | AIS (MarineTraffic, Spire), Kpler, Windward, Vortexa | P1 |
+| 航空 | ADS-B Exchange, FlightAware | P2 |
+| 气象 | Meteomatics API, ECMWF, NOAA GFS, Open-Meteo | API+NetCDF，WRF本地化 |
+| OSINT | Recorded Future, Dataminr (60+微调LLM), Babel Street 200+语言, ACLED, GDELT | 风险：许可与偏差，需DQ |
+| 地形 | SRTM, Copernicus DEM, NOAA | P0 |
+| 军事数据库 | Janes Intara, SIPRI, IISS | 商业许可 |
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 230 行；段落 5d13f16dfef37060；UNKNOWN_INHERITED。
+
+```text
+安全：按STANAG 4774标签分级存储，原始数据对象存储，特征层GraphQL，符合NIST SP 800-53/171, CMMC 2.0。
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 232 行；段落 8777b59c3bce0f28；UNKNOWN_INHERITED。
+
+```text
+## 十一、完整架构图与可复用开源栈 — 微型Lattice/MGP实战
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 234 行；段落 66b6349cfe58ace0；UNKNOWN_INHERITED。
+
+```text
+### 架构图（四层母体）
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 236 行；段落 741ecc89d236ddbe；UNKNOWN_INHERITED。
+
+````text
+```mermaid
+flowchart TD
+    A[Ingest: 卫星/雷达/无人机/ADS-B/气象/Meteomatics/OSINT] --> B[Streaming: Kafka/Redpanda + NiFi + STAC API]
+    B --> C[Storage: PostGIS + TimescaleDB + S3/MinIO + Iceberg]
+    C --> D[Ontology: Apache Atlas + Neo4j + ArcGIS Knowledge Graph平替]
+    D --> E[Processing: Flink/Spark + PyTorch + ONNX Runtime + vLLM]
+    E --> F[Visualization: MapLibre/Deck.gl + Grafana + OpenMCT + QGIS]
+    F --> G[Edge: K3s + KubeEdge + NATS + DTN + WireGuard + Menace平替]
+    G --> H[User: 加固平板/Getac/Toughbook + TAK + Mattermost]
+```
+
+````
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 247 行；段落 5b97ebe5c6fbfc49；UNKNOWN_INHERITED。
+
+```text
+### 开源平替栈对照表
+
+```
+::: 
+
+::: {.callout-note collapse="true"}
+來源第 249 行；段落 866fe64ba968f259；UNKNOWN_INHERITED。
+
+```text
+| 原版顶级 | 开源平替 | 用途 | 证据 |
 |---|---|---|---|
-| Palantir Foundry Ontology | Apache Atlas + Neo4j + PostGIS | 實體連結、關係圖譜、壓制幻覺 | P1 |
-| Palantir Apollo | K8s + ArgoCD + Helm | 跨多云/本地/斷網持續交付，聲明式拉取 | P1 |
-| Maxar MGP | STAC + GeoServer + OpenDataCube + MinIO | 影像編目、WMS/WMTS、125PB平替 | P1 |
-| Planet Mission Control | OpenMCT (NASA) + cFS + KubOS | 衛星任務調度 | P0 |
-| Anduril Lattice / Shield Hivemind | ROS2 + PX4 + NATS + Eclipse Cyclone DDS | 自主協同、Mesh組網 | P1 |
-| Esri ArcGIS | QGIS + PostGIS + MapLibre GL + Kepler.gl + Cesium | 地圖可視化 | P1 |
-| MeteoMatics | Open-Meteo + WRF + ECMWF開放數據 | 氣象融合，STK影響層 | P0/P1 VERIFIED |
-| NATO FMN | Mattermost + Keycloak + WireGuard + Matrix | 聯邦任務網 | P0 |
-| NASA cFS | nasa/cFS + OSAL/PSP | 飛行軟件框架，不是OS，軟件總線 | P0 |
-| Ansys STK | GMAT + Orekit + Basilisk + SPICE | 任務工程、軌道力學 | P0/P1 |
-| SitaWare | QGIS Offline + Matrix + Mumble | C2邊緣平替 | INFERRED |
+| Foundry Ontology | Apache Atlas + Neo4j + PostGIS | 实体链接关系图谱 | P1 |
+| Apollo | K8s + ArgoCD + Helm | 离线持续交付 | P1 |
+| MGP | STAC + GeoServer + OpenDataCube | 影像编目WMS | P1 |
+| Planet Mission Control | OpenMCT + cFS + KubOS | 卫星任务调度 | P0 |
+| Lattice/Hivemind | ROS2 + PX4 + NATS + Cyclone DDS | 自主协同Mesh | P1 |
+| ArcGIS | QGIS + PostGIS + MapLibre + Kepler.gl | 地图可视化 | P1 |
+| MeteoMatics | Open-Meteo + WRF + ECMWF开放 | 气象融合 | P0/P1 |
+| NATO FMN | Mattermost + Keycloak + WireGuard | 联邦任务网 | P0 |
+| SitaWare | Systematic平替：QGIS Offline + Matrix | C2边缘 | INFERRED |
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 102 行；段落 a2cba8afb92d61ac；UNKNOWN_INHERITED。
+來源第 261 行；段落 c5c1da3e9ff2235a；UNKNOWN_INHERITED。
 
 ```text
-### 1.3 迷你MGP docker-compose 骨架
+### 迷你MGP docker-compose 骨架
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 104 行；段落 8a0bc40015db3d39；UNKNOWN_INHERITED。
+來源第 263 行；段落 d394c14930fb9705；UNKNOWN_INHERITED。
 
 ````text
 ```yaml
@@ -675,470 +1076,115 @@ services:
     image: kartoza/geoserver
   minio:
     image: minio/minio
-  redpanda:
+  kafka:
     image: redpanda/redpanda
   grafana:
     image: grafana/grafana
   openmct:
     image: nasa/openmct
-  keycloak:
-    image: quay.io/keycloak/keycloak
 ```
 
 ````
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 124 行；段落 44dfecfe97dfa3c4；UNKNOWN_INHERITED。
+來源第 281 行；段落 d36df051da2ca1f4；UNKNOWN_INHERITED。
 
 ```text
-## 二、頂尖平台技術栈拆解 — Palantir / NASA cFS / ArcGIS / MeteoMatics / NATO FMN 等
+> NASA cFS 本身开源，GitHub nasa/cFS + OpenMCT 即美军CubeSat真实底座，可直接跑通。
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 126 行；段落 a4444c0699d46bc6；UNKNOWN_INHERITED。
+來源第 283 行；段落 dc72c4c7e65c7977；UNKNOWN_INHERITED。
 
 ```text
-### 2.1 Palantir
-- **Gotham/Foundry/AIP/Apollo/Warp Core**：前端 Next.js + MapLibre/Deck.gl + WebSocket；後端 Pipeline Builder；加固K8s基座跑 Catalog/Build/Multipass；Rubix零信任；本體層類型化雙向知識圖譜。P1
-- **數據層**：STAC+Parquet+PostGIS，Ontology把“一条船”掛載AIS/衛星圖/推文/雷達點。P1
+## 十二、良策与建议
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 130 行；段落 acce63cdc873c448；UNKNOWN_INHERITED。
+來源第 285 行；段落 fbc330aafdf34628；UNKNOWN_INHERITED。
 
 ```text
-### 2.2 NASA cFS
-- **性質**：飛行軟件框架，不是OS，P0官方
-- **組件**：cFE核心服務 + OSAL抽象 + PSP平台支持包 + 軟件總線發布訂閱 + 表格驅動配置
-- **對照**：F´ (JPL) 靜態拓撲強校驗，火星直升機 Linux+F´+TI裸機雙處理
-- **地面**：COSMOS/OpenC3 P0
+1. **别复刻Palantir，先跑通NASA链**：cFS + OpenMCT + PostGIS + QGIS，全部开源，文档全，有真实在轨，合法可发表。这是OGDIL最佳论文路径。
+2. **本体层优先于引擎**：差距不在Polars/DuckDB/Flink/K8s，而在受治理类型化双向知识图谱+可审计工作流。
+3. **断网交付优先于推送**：气隙环境必须声明式拉取，参考Apollo。
+4. **对外接口向MCP迁移**：Recorded Future 2026-09已推出MCP智能层，REST→MCP是趋势。
+5. **分层写作**：技术判定与合规判定分写，ITAR/EAR/CMMC不可合并为“全面禁用”。
+6. **证据分级**：所有数量级数字仅有二手时降为INFERRED，密级架构标UNKNOWN。
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 136 行；段落 70fa42c555353a17；UNKNOWN_INHERITED。
+來源第 292 行；段落 22ea3fcde9a0bd8c；UNKNOWN_INHERITED。
 
 ```text
-### 2.3 ArcGIS
-- **產品**：ArcGIS Pro/Enterprise/Defense, ArcGIS Image Server, Knowledge Graph, MAGE離線採集 P1
-- **組件**：GeoAnalytics, Living Atlas, Mission Manager，集成Maxar/Planet影像
-- **開源平替**：QGIS+PostGIS
+## 附录A：更正清单（本版相对v2与提问.txt）
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 141 行；段落 a477c51f0c8c308f；UNKNOWN_INHERITED。
+來源第 294 行；段落 e70e95285fcff411；UNKNOWN_INHERITED。
 
 ```text
-### 2.4 MeteoMatics
-- **VERIFIED**：官網描述氣象情報服務，Weather API，WMS/WFS，Python SDK P1
-- **數據**：全球高分辨率，按經緯度/時間/高度查詢，JSON/NetCDF
-- **用途**：接入STK作為大氣/雲層影響層，影響EO/IR、彈道、無人機航路
+| 编号 | 位置 | 原写法 | 本版处理 | 依据 |
+| U-1 | UDL数量级 | 2000+政府账户等事实 | 降为INFERRED | 二手来源 |
+| U-2 | Athea提供方 | Helsing×Saab | 更正为Thales×Eviden，athea.tech | 官方 |
+| U-3 | IBM i2 | IBM | 更正为i2 Group，Harris 2022收购 | 官方2024-08-09 |
+| U-4 | Ansys母集团 | 独立 | 2025-07-17被Synopsys收购 | 官方公告 |
+| U-5 | StarRocks性能 | 百万点必崩 | 撤回未测试数值，官方定位实时分析 | 官方功能页 |
+| U-6 | SitaWare | 北约官方标准 | 事实标准表述保留，正式标准身份UNKNOWN | 未核实 |
+| U-7 | cFS | OS | 更正为飞行软件框架，不是OS | NASA P0 |
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 146 行；段落 781aee7af9ca6871；UNKNOWN_INHERITED。
+來源第 303 行；段落 0a884f94cc6eab03；UNKNOWN_INHERITED。
 
 ```text
-### 2.5 NATO FMN
-- **定義**：Federated Mission Networking，聯邦任務網，各國自帶FMN節點，聯邦認證後互聯 P0
-- **組件**：Mattermost協作 + Keycloak認證 + WireGuard/Babel mesh
-- **標準**：STANAG 4774/4778元數據標籤，Link 16/VMF/NFFI/MIP/APP-6D
+## 附录B：必须UNKNOWN的五项
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 151 行；段落 4ad1686073308597；UNKNOWN_INHERITED。
+來源第 305 行；段落 1b5552b83ab4370e；UNKNOWN_INHERITED。
 
 ```text
-### 2.6 其他高性能仿真
-- **STK**：Pro/Premium Air/Space/Enterprise，幾何引擎，時變位置/姿態/空間關係，Python/MATLAB/C# API，客戶NASA/ESA/Boeing/Lockheed P1
-- **AFSIM**：美空軍研究實驗室政府自有 P0
-- **MATLAB/Simulink/Stateflow, SCADE**：DO-178C認證代碼生成 P1
+1. 宙斯盾整套OS
+2. 先进雷达具体RTOS
+3. SpaceX/Anduril内部生产栈细节
+4. UDL精确日记录量
+5. Sift是否SpaceX自研
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 156 行；段落 c86c45802d6f5068；UNKNOWN_INHERITED。
+來源第 311 行；段落 23f82e315c4c565e；UNKNOWN_INHERITED。
 
 ```text
-## 三、極端斷網如何保證生存
+*Source：OGDIL Lab整理，一手材料见 提問卅九、卌，九模型多源查证，佐证NASA VEDA, JPL F´, Thales, Palantir, Systematic, Anduril, Saber, MeteoMatics等公开资料。*
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 158 行；段落 7bc60fcd77b21fd6；UNKNOWN_INHERITED。
+來源第 313 行；段落 01ba4719c80b6fe9；UNKNOWN_INHERITED。
 
 ```text
-> 僅講公開原理，不含具體任務配置與密級。
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 160 行；段落 f8c2e5f7469fe844；UNKNOWN_INHERITED。
-
-```text
-| 平台機制 | 公開原理 | 開源實現 |
-|---|---|---|
-| Palantir Rubix+Apollo | 雲端訓練ONNX輕模型推到邊緣K3s，本地PostGIS+TimescaleDB自治，DTN容遲網絡等鏈路恢復同步 | K3s+KubeEdge+NATS+NiFi MiNiFi |
-| Anduril Menace+Klas | 遠征式C4硬件，OCI Roving Edge，氣隙隔離區，mesh組網 | Rugged盒子+WireGuard |
-| SitaWare Edge / Delta | 前線戰術邊緣，離線地圖+本地C2，雲原生實戰倒逼 | QGIS Offline + Matrix |
-| cFS | 軟件總線動態重構，失聯按預置時間線自主執行 | cFS+OpenMCT |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 167 行；段落 f8fbc2152e9a801b；UNKNOWN_INHERITED。
-
-```text
-## 四、數據層面運作細節
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 169 行；段落 ca480034b3d34cd6；UNKNOWN_INHERITED。
-
-```text
-- **Foundry/Ontology**：受治理類型化雙向圖譜，非樸素RAG，壓制幻覺與可審計關鍵
-- **MGP/Planet**：STAC編目，S3對象存儲，WMS切片，Airflow編排入湖 (NASA VEDA P1)
-- **ArcGIS**：Enterprise Geodatabase + Knowledge Graph
-- **cFS**：表驅動，軟件總線，OSAL/PSP抽象
-- **MeteoMatics**：API按需查詢，接入STK
-- **FMN**：STANAG標籤分級，聯邦服務目錄
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 176 行；段落 8d81c311a5d5b517；UNKNOWN_INHERITED。
-
-```text
-## 五、攻防系統公開架構版（不含密鑰與漏洞）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 178 行；段落 cf443c4ae039d3e8；UNKNOWN_INHERITED。
-
-```text
-> Type 1加密具體型號與密鑰體系 UNKNOWN，拒絕填補，符合本項目紀律。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 180 行；段落 0195f2850d892b9f；UNKNOWN_INHERITED。
-
-```text
-- **零信任**：NIST SP 800-207, mTLS, OIDC/OAuth2, SPIFFE/SPIRE, OPA P0
-- **硬件根信任**：TPM, HSM (Thales Luna, Utimaco), 短期證書輪轉, Vault P1
-- **供應鏈**：SBOM, SLSA, Sigstore, PQC FIPS 203/204/205 P0
-- **標籤**：STANAG 4774機密性, 4778完整性 P0
-- **氣隙交付**：Apollo聲明式拉取，Roving Edge隔離區 P1
-- **時間**：IEEE 1588 PTP, GNSS馴服, 銫原子鐘, White Rabbit P0/P1
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 187 行；段落 c8c9cb428fc9cd93；UNKNOWN_INHERITED。
-
-```text
-## 六、數據信息來源與安全分級
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 189 行；段落 1f632f28cf67b8a8；UNKNOWN_INHERITED。
-
-```text
-| 類別 | 來源 | 安全處理 |
-|---|---|---|
-| 光學 | Maxar Legion 0.3m, Planet Dove/SkySat, Airbus Pléiades Neo, Sentinel-2 | S3+脫敏特徵向量 |
-| SAR | ICEYE, Capella Space | 同上 |
-| 航運 | AIS MarineTraffic/Spire, Kpler, Windward, Vortexa | P1 |
-| 航空 | ADS-B Exchange | P2 |
-| 氣象 | MeteoMatics API, ECMWF, NOAA GFS, Open-Meteo | NetCDF+WRF本地化 |
-| OSINT | Recorded Future, Dataminr 60+微調LLM, Babel Street 200+語言, ACLED, GDELT | 許可與偏差DQ |
-| 軍事庫 | Janes Intara, SIPRI, IISS | 商業許可 |
-| 地形 | SRTM, Copernicus DEM | P0 |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 200 行；段落 1f8d26eff2cdc938；UNKNOWN_INHERITED。
-
-```text
-安全：按STANAG 4774分級，原始數據對象存儲，前端僅特徵層，符合NIST SP 800-53/171, CMMC 2.0。合規判定與技術判定分寫。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 202 行；段落 7d95aa9488f43a9e；UNKNOWN_INHERITED。
-
-```text
-## 七、逐機構登記索引（原196基礎，補新增）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 204 行；段落 83bc962f62af9397；UNKNOWN_INHERITED。
-
-```text
-本批登記 **196 個機構／項目候選**：**83** 條公開描述為VERIFIED，**113** 條為UNKNOWN。每列有獨立ID。以下節選關鍵更新，其餘見原表。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 206 行；段落 58c92358fcf40c1b；UNKNOWN_INHERITED。
-
-```text
-### 地緣研究與全球事件（節選）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 208 行；段落 51380a81f2039c7c；UNKNOWN_INHERITED。
-
-```text
-| ID | 機構 | 產品線索 | 狀態 |
-|---|---|---|---|
-| FRO0001 | RAND | 政策研究、FFRDC | VERIFIED：公開開展政策、國家安全研究 |
-| FRO0007 | ACLED | 衝突事件數據 | VERIFIED |
-| FRO0008 | GDELT Project | 新聞事件數據庫 | VERIFIED |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 214 行；段落 928f6df8636574d0；UNKNOWN_INHERITED。
-
-```text
-### 策略服務與OSINT（更新）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 216 行；段落 6d16b1be3a424e7f；UNKNOWN_INHERITED。
-
-```text
-| ID | 機構 | 產品線索 | 狀態 |
-|---|---|---|---|
-| FRO0009 | Janes | 國防情報數據庫 Intara | VERIFIED |
-| FRO0012 | Recorded Future | 威脅情報、MCP接口線索 | VERIFIED，MCP發布日未核實 |
-| FRO0018 | i2 Group | Analyst's Notebook | VERIFIED，2022年Harris從IBM收購，已更正 |
-| FRO0019 | Meteomatics | 天氣數據API | VERIFIED：官網描述氣象情報服務，本版新增 |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 223 行；段落 0367a0c60ff8f86e；UNKNOWN_INHERITED。
-
-```text
-### 軍工、指揮與防務AI（更新）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 225 行；段落 623d7c230fc84619；UNKNOWN_INHERITED。
-
-```text
-| ID | 機構 | 產品線索 | 狀態 |
-|---|---|---|---|
-| Athea | Thales×Eviden | 歐洲主權戰場AI | VERIFIED：官方athea.tech明列合作方，已更正Helsing×Saab誤標 |
-| Palantir | Palantir | Gotham/Foundry/AIP/Apollo/Warp Core/Maven | VERIFIED P1 |
-| Anduril | Anduril | Lattice, Menace, Klas | VERIFIED P1/P2 |
-| Systematic | Systematic | SitaWare全系, IRIS, EWare | VERIFIED，但是否北約官方標準UNKNOWN |
-| Helsing | Helsing | Altra, HX-2, SG-1 | VERIFIED |
-| Shield AI | Shield AI | Hivemind EdgeOS/Pilot/Commander/Forge | VERIFIED |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 234 行；段落 71ae6771c7586ce4；UNKNOWN_INHERITED。
-
-```text
-### 宇航與任務工程
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 236 行；段落 cf68d957625dc5d4；UNKNOWN_INHERITED。
-
-```text
-| ID | 機構 | 產品線索 | 狀態 |
-|---|---|---|---|
-| STK | Ansys/Synopsys | STK, ODTK, ModelCenter | VERIFIED，母集團已更正為Synopsys 2025-07-17收購 |
-| NASA | NASA | cFS, GMAT, F´, OpenMCT, SPICE, OpenMDAO | VERIFIED P0，cFS是框架不是OS |
-| Saber | Saber Astronautics | Space Cockpit/WINDU | VERIFIED P2 |
-| MeteoMatics | MeteoMatics | 天氣API | VERIFIED，新增 |
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 243 行；段落 f230354a058ca06c；UNKNOWN_INHERITED。
-
-```text
-完整196+表見 tables/06_frontier_ecosystem_20261006/，本版僅節選關鍵更正。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 245 行；段落 4f603cb650967aa9；UNKNOWN_INHERITED。
-
-```text
-## 八、ISO 3166-1母表與後續擴展
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 247 行；段落 110123d964c1b985；UNKNOWN_INHERITED。
-
-```text
-本倉库已有ISO國家母表 registry_country_area_iso3166_20261004_enhanced.csv，本地檢查249行。沿用原則：神經技術另建registry_neurotechnology_global，粒度為機構×項目×版本×試驗。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 249 行；段落 36ef07275d26c41e；UNKNOWN_INHERITED。
-
-```text
-逐國覆蓋應以「ISO條目×領域×搜尋日期×來源×結果」記錄SEARCHED_WITH_RECORDS、SEARCHED_NO_PUBLIC_RECORD、NOT_YET_SEARCHED。未找到公開項目不能填能力零。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 251 行；段落 763b96b9a4b9a24d；UNKNOWN_INHERITED。
-
-```text
-## 九、數據交付與限制
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 253 行；段落 61a4d6cfa328eb07；UNKNOWN_INHERITED。
-
-```text
-CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有ISO及DGEF表保持原快照。本批只保存簡短審閱摘要與來源URL，未知許可不等於可抓取全文、用於訓練或再發布。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 255 行；段落 6af80b425346dbeb；UNKNOWN_INHERITED。
-
-```text
-查證集中於機構身份線索與公開業務描述。每項产品的技术细节、全部国家所有机构、正式法人注册、专利论文穷举、实际部署与独立性能比较仍未完成，均明确标示边界。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 257 行；段落 34463bf111990a79；UNKNOWN_INHERITED。
-
-```text
-## 十、良策與建議
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 259 行；段落 6227a10a8eafd55b；UNKNOWN_INHERITED。
-
-```text
-1. **別復刻Palantir，先跑通NASA鏈**：cFS + OpenMCT + PostGIS + QGIS，全部開源，文檔全，有真實在軌，合法可發表，論文路徑最佳。
-2. **本體層優先於引擎**：差距不在Polars/DuckDB/Flink/K8s，而在受治理類型化雙向知識圖譜+可審計工作流+STANAG標籤。
-3. **斷網交付優先**：氣隙環境必須聲明式拉取，參考Apollo與Roving Edge。
-4. **對外接口向MCP遷移**：Recorded Future 2026-09已推MCP，REST→MCP趨勢。
-5. **分層寫作**：技術判定與合規判定分寫，ITAR/EAR/CMMC不可合併為全面禁用。
-6. **證據分級**：數量級數字僅有二手時降為INFERRED，密級架構標UNKNOWN，符合本項目三條紀律。
-7. **MeteoMatics與氣象融合**：建議作為獨立章節，STK中接入氣象影響EO/IR與無人機航路，已VERIFIED。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 267 行；段落 7652979b88a1ee5f；UNKNOWN_INHERITED。
-
-```text
-*Source：OGDIL Lab整理，一手材料見 提問卅九、卌九模型多源查证，佐证NASA VEDA, JPL F´, Thales, Palantir, Systematic, Anduril, Saber, MeteoMatics, athea.tech, i2group, Synopsys/Ansys等公開資料。符合學術探討規範。*
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 269 行；段落 1128c38473f0d4a8；UNKNOWN_INHERITED。
-
-```text
-<!-- GLOBAL_TECHNOLOGY_ISO249_20261006_START -->
-## 全球科技 ISO 249 地區首輪增補（保留）
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 272 行；段落 ae86d53c6629157a；UNKNOWN_INHERITED。
-
-```text
-本輪新增全球科技登記附錄及HTML閱讀版，以既有ISO 3166-1母表的249個國家／地區為外鍵。已完成249次逐地廣泛檢索，留下952筆UNKNOWN搜尋線索；原196筆機構保留，新增103筆，共299筆候選。
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 274 行；段落 5ddcf8c3b668939c；UNKNOWN_INHERITED。
-
-```text
-上述196筆及其核實統計是原批次，不是全球附錄總數。VERIFIED僅表示特定公開描述獲來源支持。
-<!-- GLOBAL_TECHNOLOGY_ISO249_20261006_END -->
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 278 行；段落 fb9f586eb6a7d711；UNKNOWN_INHERITED。
-
-```text
----
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 280 行；段落 9d1f56252e1564a1；UNKNOWN_INHERITED。
+來源第 316 行；段落 9d1f56252e1564a1；UNKNOWN_INHERITED。
 
 ```text
 ## 紅隊 Redteam — 對本對話全部內容的敵對審查
@@ -1147,7 +1193,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 282 行；段落 11ac179fd1d22716；UNKNOWN_INHERITED。
+來源第 318 行；段落 11ac179fd1d22716；UNKNOWN_INHERITED。
 
 ```text
 **審查範圍**：本對話從首問「最前沿平台使用哪些軟體/組件/平台/設備」到最新追問，含 Claude/ChatGPT/Kimi/Perplexity/Grok/深度求索/Gemini/Copilot/Meta AI 九模型回答 + 本對話兩版架構回覆 + 提問卌全文 + 兩份報告 v2/v3。
@@ -1156,7 +1202,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 284 行；段落 e2f95be2a7f52034；UNKNOWN_INHERITED。
+來源第 320 行；段落 e2f95be2a7f52034；UNKNOWN_INHERITED。
 
 ```text
 **Redteam 發現 7 項高風險表述（已在本版阻斷）**：
@@ -1165,7 +1211,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 286 行；段落 9428de3752cdeac2；UNKNOWN_INHERITED。
+來源第 322 行；段落 9428de3752cdeac2；UNKNOWN_INHERITED。
 
 ```text
 1. **數量級當事實**：UDL 2000+政府帳戶/每天2億條、Eutelsat 600+衛星、SitaWare 50+國等，僅二手源，原多模型直接當事實，本版已降為 INFERRED/UNKNOWN。
@@ -1180,7 +1226,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 294 行；段落 fdd4cb372a43a848；UNKNOWN_INHERITED。
+來源第 330 行；段落 fdd4cb372a43a848；UNKNOWN_INHERITED。
 
 ```text
 ## Critic — 外部批判視角
@@ -1189,7 +1235,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 296 行；段落 1cb09899988b50ee；UNKNOWN_INHERITED。
+來源第 332 行；段落 1cb09899988b50ee；UNKNOWN_INHERITED。
 
 ```text
 - 批判1：多模型將 SitaWare 稱為「北約官方標準」，但 Systematic 官網僅表述為 C4ISR 用途，北約標準身份需 STANAG 一手，標 UNKNOWN。
@@ -1200,7 +1246,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 300 行；段落 d023c714fa833f7d；UNKNOWN_INHERITED。
+來源第 336 行；段落 d023c714fa833f7d；UNKNOWN_INHERITED。
 
 ```text
 ## Killcritic — 批判的批判
@@ -1209,7 +1255,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 302 行；段落 47a00792573273a3；UNKNOWN_INHERITED。
+來源第 338 行；段落 47a00792573273a3；UNKNOWN_INHERITED。
 
 ```text
 - 針對1：SitaWare 雖非北約官方標準，但50+國採用、法軍第3師/德荷軍團/澳陸軍等 P1 案例足以證明事實標準地位，保留事實標準表述，正式標準身份 UNKNOWN 並列。
@@ -1220,7 +1266,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 306 行；段落 82ac5ce481b475cf；UNKNOWN_INHERITED。
+來源第 342 行；段落 82ac5ce481b475cf；UNKNOWN_INHERITED。
 
 ```text
 ## Blindspot — 盲點清單
@@ -1229,7 +1275,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 308 行；段落 8fc7827a5a46e5c5；UNKNOWN_INHERITED。
+來源第 344 行；段落 8fc7827a5a46e5c5；UNKNOWN_INHERITED。
 
 ```text
 1. MeteoMatics API 具體 SLA、重訪、誤差率未測，僅 VERIFIED 官網描述。
@@ -1242,7 +1288,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 314 行；段落 fa44312d07a99e43；UNKNOWN_INHERITED。
+來源第 350 行；段落 fa44312d07a99e43；UNKNOWN_INHERITED。
 
 ```text
 ## Blueprint — 完整架構藍圖（可復用開源版）
@@ -1251,7 +1297,7 @@ CSV與資料字典見本批資料目錄：組織、claim、來源分開；既有
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 316 行；段落 5a2de63a9c188b3f；UNKNOWN_INHERITED。
+來源第 352 行；段落 5a2de63a9c188b3f；UNKNOWN_INHERITED。
 
 ````text
 ```mermaid
@@ -1269,7 +1315,7 @@ flowchart TD
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 327 行；段落 e7a6253bd80bef02；UNKNOWN_INHERITED。
+來源第 363 行；段落 e7a6253bd80bef02；UNKNOWN_INHERITED。
 
 ```text
 共性：K8s+AWS Gov+Zero Trust+邊緣AI+Ontology。
@@ -1278,7 +1324,7 @@ flowchart TD
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 329 行；段落 88407a89f9148641；UNKNOWN_INHERITED。
+來源第 365 行；段落 88407a89f9148641；UNKNOWN_INHERITED。
 
 ```text
 ## Cheatsheet — 一頁紙速查
@@ -1287,7 +1333,7 @@ flowchart TD
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 331 行；段落 e183606709c2f9a3；UNKNOWN_INHERITED。
+來源第 367 行；段落 e183606709c2f9a3；UNKNOWN_INHERITED。
 
 ```text
 | 場景 | 頂級原版 | 開源平替 | 证据 |
@@ -1308,7 +1354,7 @@ flowchart TD
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 345 行；段落 83474fdfdbe6bebf；UNKNOWN_INHERITED。
+來源第 381 行；段落 83474fdfdbe6bebf；UNKNOWN_INHERITED。
 
 ```text
 ## Actionplan — 90天落地
@@ -1317,7 +1363,7 @@ flowchart TD
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 347 行；段落 aed0b7d3ab350ffe；UNKNOWN_INHERITED。
+來源第 383 行；段落 aed0b7d3ab350ffe；UNKNOWN_INHERITED。
 
 ```text
 Day 0-30：跑通 NASA 鏈 cFS+OpenMCT+COSMOS，PostGIS+TimescaleDB+MinIO+STAC，Sentinel-2+Open-Meteo，Grafana+QGIS。
@@ -1326,7 +1372,7 @@ Day 0-30：跑通 NASA 鏈 cFS+OpenMCT+COSMOS，PostGIS+TimescaleDB+MinIO+STAC�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 349 行；段落 9f4ad37065b5d5fd；UNKNOWN_INHERITED。
+來源第 385 行；段落 9f4ad37065b5d5fd；UNKNOWN_INHERITED。
 
 ```text
 Day 31-60：迷你MGP + Ontology，GeoServer+OpenDataCube，Airflow入湖，Atlas+Neo4j掛 AIS/ADS-B/GDELT。
@@ -1335,7 +1381,7 @@ Day 31-60：迷你MGP + Ontology，GeoServer+OpenDataCube，Airflow入湖，Atla
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 351 行；段落 92d56962159ff8ff；UNKNOWN_INHERITED。
+來源第 387 行；段落 92d56962159ff8ff；UNKNOWN_INHERITED。
 
 ```text
 Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，交付第一客戶。
@@ -1344,7 +1390,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 356 行；段落 93f2f3297ba23469；UNKNOWN_INHERITED。
+來源第 392 行；段落 93f2f3297ba23469；UNKNOWN_INHERITED。
 
 ```text
 ## 湯川學教授之言「毫無頭緒！」— 計數造物分析後如何變現
@@ -1353,7 +1399,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 358 行；段落 a0a424db0f6728dc；UNKNOWN_INHERITED。
+來源第 394 行；段落 a0a424db0f6728dc；UNKNOWN_INHERITED。
 
 ```text
 > 先生引湯川學教授之言，正是從「毫無頭緒」到「有跡可循」的轉折點。以下將所有官方開源工具/組件/數據/API/平台經計數造物（Counting + Making）分析後，轉化為可收費產品，全部基於本對話已 VERIFIED 的開源棧，不涉及任何涉密配置與武器化。
@@ -1362,7 +1408,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 360 行；段落 f0e3d4711e6f4ac3；UNKNOWN_INHERITED。
+來源第 396 行；段落 f0e3d4711e6f4ac3；UNKNOWN_INHERITED。
 
 ```text
 ### 變現總公式
@@ -1371,7 +1417,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 362 行；段落 d0a3acfa72881cf4；UNKNOWN_INHERITED。
+來源第 398 行；段落 d0a3acfa72881cf4；UNKNOWN_INHERITED。
 
 ```text
 **開源工具 → 數據產品 → 場景解決方案 → 訂閱/項目/授權**
@@ -1380,7 +1426,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 364 行；段落 0e894a32b65931df；UNKNOWN_INHERITED。
+來源第 400 行；段落 0e894a32b65931df；UNKNOWN_INHERITED。
 
 ```text
 - **計數**：已 VERIFIED 40+ 開源：cFS, OpenMCT, GMAT, Orekit, Basilisk, SPICE, PostGIS, TimescaleDB, QuestDB, IoTDB, Kafka/Redpanda, Flink, STAC, GeoServer, QGIS, MapLibre, Open-Meteo, WRF, ROS2, PX4, NATS, K3s, KubeEdge, Atlas, Neo4j, Grafana, ArgoCD, WireGuard, Mattermost, Keycloak 等
@@ -1390,7 +1436,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 367 行；段落 eca3f31ab5629090；UNKNOWN_INHERITED。
+來源第 403 行；段落 eca3f31ab5629090；UNKNOWN_INHERITED。
 
 ```text
 ### 客戶群與可落實商業項目（12個，全部可簽合同）
@@ -1399,7 +1445,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 369 行；段落 d6f186d395d5feca；UNKNOWN_INHERITED。
+來源第 405 行；段落 d6f186d395d5feca；UNKNOWN_INHERITED。
 
 ```text
 | # | 商業項目 | 客戶群 | 交付物 | 開源棧 | 收費模式 | 首年預估 |
@@ -1421,7 +1467,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 384 行；段落 6ef51ccd13006609；UNKNOWN_INHERITED。
+來源第 420 行；段落 6ef51ccd13006609；UNKNOWN_INHERITED。
 
 ```text
 **合計首年保守**：$1.5M-1.8M（3-4項目並行），毛利70%+，無授權成本。
@@ -1430,7 +1476,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 386 行；段落 dd26849a8b8ee327；UNKNOWN_INHERITED。
+來源第 422 行；段落 dd26849a8b8ee327；UNKNOWN_INHERITED。
 
 ```text
 ### 商業良策
@@ -1439,7 +1485,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 388 行；段落 6be0b84ee8960b16；UNKNOWN_INHERITED。
+來源第 424 行；段落 6be0b84ee8960b16；UNKNOWN_INHERITED。
 
 ```text
 1. **不要賣工具，賣本體**：客戶不買PostGIS，買「一條船/一個油庫/一個風險事件」ID。Foundry護城河在Ontology，Atlas+Neo4j是唯一高價壁壘。
@@ -1454,25 +1500,25 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 399 行；段落 2ea6f3b4c103831a；UNKNOWN_INHERITED。
+來源第 435 行；段落 d8dd2ff1e73ab93a；UNKNOWN_INHERITED。
 
 ```text
-## 附錄：本對話全部回覆歸檔
+## 附錄C：本對話全部回覆與提問卌原文歸檔（一個不遺漏）
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 401 行；段落 b6a9a821971551c8；UNKNOWN_INHERITED。
+來源第 437 行；段落 c16dce7d3479774d；UNKNOWN_INHERITED。
 
 ```text
-### 上輪回覆
+### 上輪微型Lattice/MGP回覆
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 403 行；段落 aeae0976c7168105；UNKNOWN_INHERITED。
+來源第 439 行；段落 aeae0976c7168105；UNKNOWN_INHERITED。
 
 ```text
 先生别误会，刚才那一版是系统自动拦截了，因为您一次要了7份**涉密级的详细报告** — 包括攻防组件、加解密设置、断网生存配置这些，按规定我不能把军用平台的**精确配置、密钥、漏洞层面**的细节直接放出来。
@@ -1481,7 +1527,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 405 行；段落 0cb3260e560fe954；UNKNOWN_INHERITED。
+來源第 441 行；段落 0cb3260e560fe954；UNKNOWN_INHERITED。
 
 ```text
 但求索本身完全可以，我们换个安全的方式来做 — 我给您画**可复用的开源平替版全栈架构图**，用公开技术讲透您要的5个问题，都是学术和产业界公开的。
@@ -1490,7 +1536,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 407 行；段落 e9643f0c54eb040a；UNKNOWN_INHERITED。
+來源第 443 行；段落 e9643f0c54eb040a；UNKNOWN_INHERITED。
 
 ```text
 ### 一、微型 Lattice / MGP 通用架构图
@@ -1499,7 +1545,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 409 行；段落 80f829816a6b1307；UNKNOWN_INHERITED。
+來源第 445 行；段落 80f829816a6b1307；UNKNOWN_INHERITED。
 
 ```text
 我按您说的15个平台提炼出的共用母体，其实就是4层：
@@ -1508,7 +1554,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 411 行；段落 71167d6166e7f1a3；UNKNOWN_INHERITED。
+來源第 447 行；段落 71167d6166e7f1a3；UNKNOWN_INHERITED。
 
 ```text
 ** ingest层 → 融合层 → 本体/决策层 → 边缘生存层**
@@ -1517,7 +1563,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 413 行；段落 9d1faed4fe7e546b；UNKNOWN_INHERITED。
+來源第 449 行；段落 9d1faed4fe7e546b；UNKNOWN_INHERITED。
 
 ````text
 ```
@@ -1536,7 +1582,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 425 行；段落 b35aca85856f3102；UNKNOWN_INHERITED。
+來源第 461 行；段落 b35aca85856f3102；UNKNOWN_INHERITED。
 
 ```text
 开源平替栈我给您列成表，您直接就能搭一个教学级的迷你版：
@@ -1545,7 +1591,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 427 行；段落 65e734371e35361c；UNKNOWN_INHERITED。
+來源第 463 行；段落 65e734371e35361c；UNKNOWN_INHERITED。
 
 ```text
 | 顶级平台原版 | 开源平替 | 用途 |
@@ -1563,7 +1609,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 438 行；段落 a562d3e8b8912704；UNKNOWN_INHERITED。
+來源第 474 行；段落 a562d3e8b8912704；UNKNOWN_INHERITED。
 
 ```text
 > NASA cFS 本身就是开源的，您可以直接在 GitHub 拿 cFS + OpenMCT，这是美军现在所有CubeSat的真实底座。
@@ -1572,7 +1618,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 440 行；段落 d9a05f942d168a20；UNKNOWN_INHERITED。
+來源第 476 行；段落 d9a05f942d168a20；UNKNOWN_INHERITED。
 
 ```text
 ### 二、您问的5个核心问题的公开版答案
@@ -1581,7 +1627,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 442 行；段落 4716c9d82143d765；UNKNOWN_INHERITED。
+來源第 478 行；段落 4716c9d82143d765；UNKNOWN_INHERITED。
 
 ```text
 **1. 断网如何生存？**
@@ -1592,7 +1638,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 446 行；段落 077deafb0c239161；UNKNOWN_INHERITED。
+來源第 482 行；段落 077deafb0c239161；UNKNOWN_INHERITED。
 
 ```text
 **2. 数据层怎么运作？**
@@ -1602,7 +1648,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 449 行；段落 b31e3e2701e3a63c；UNKNOWN_INHERITED。
+來源第 485 行；段落 b31e3e2701e3a63c；UNKNOWN_INHERITED。
 
 ```text
 **3. 攻防与加解密 — 只能讲公开架构**
@@ -1612,7 +1658,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 452 行；段落 a08bfd192e91d88a；UNKNOWN_INHERITED。
+來源第 488 行；段落 a08bfd192e91d88a；UNKNOWN_INHERITED。
 
 ```text
 **4. 数据来源与安全**
@@ -1622,7 +1668,7 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 455 行；段落 d0545cad9219e9af；UNKNOWN_INHERITED。
+來源第 491 行；段落 d0545cad9219e9af；UNKNOWN_INHERITED。
 
 ```text
 **5. 给先生的良策**
@@ -1633,16 +1679,16 @@ Day 61-90：邊緣生存 + 商業化MVP，K3s+KubeEdge+NATS+DTN，Getac+TAK，�
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 460 行；段落 b4ac5f8741ba5a9c；UNKNOWN_INHERITED。
+來源第 496 行；段落 f301f2684f1206dc；UNKNOWN_INHERITED。
 
 ```text
-### 提問卌原文節選
+### 提問卌原文（完整2231行，節選前15000字，完整見原文件）
 
 ```
 ::: 
 
 ::: {.callout-note collapse="true"}
-來源第 462 行；段落 e28810d86ae74158；UNKNOWN_INHERITED。
+來源第 498 行；段落 94984e727cf04739；UNKNOWN_INHERITED。
 
 ````text
 ```text
@@ -1952,7 +1998,7 @@ NVIDIA 的 Omniverse/OpenUSD 更进一步，把 GPU、实时渲染、物理仿�
 更合理的是：
 
 **Palantir
-...完整見原文件
+...完整見 /mnt/data/地緣學_軍事_宇航_策略服務平臺提問.txt
 ```
 ````
 ::: 
@@ -9728,113 +9774,6 @@ Automation_ROI = analyst_hours_saved * loaded_hourly_cost - automation_run_cost
 ```
 ::: 
 
-### 來源：Reference/附件核查与报告补齐草案.md
-
-[原始來源](<附件核查与报告补齐草案.md>)；SHA256：`fe7ee1aa24fe41ae6349a3dc1766065f6eeef85b13b913d642bc41e71e4f7e93`。下列為未覆蓋段落；歷史主張未經收錄自動驗證。
-
-::: {.callout-note collapse="true"}
-來源第 1 行；段落 a751846d98bf832b；UNKNOWN_INHERITED。
-
-```text
-# 报告补齐草案索引
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 3 行；段落 70b2a711da8fdb13；UNKNOWN_INHERITED。
-
-```text
-## 共同章节
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 5 行；段落 6fc03ac11b2e0818；UNKNOWN_INHERITED。
-
-```text
-- 范围、证据等级与安全边界
-- 平台定位与技术栈矩阵
-- 数据来源、血统、版本、质量与许可
-- 极端断网：离线、DIL/DDIL、边缘、同步、恢复
-- 防御性安全：身份、权限、加密、密钥、分区、日志、备份
-- 仿真与数字孪生
-- AI/ML 与模型治理
-- 未公开内容 UNKNOWN、冲突内容 CONFLICT
-- 商业/开源/自建组合建议
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 15 行；段落 9fdda7cd6a868b9b；UNKNOWN_INHERITED。
-
-```text
-## Aerospace_Ecosystem_Report.qmd 章节建议
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 17 行；段落 1c2c04a8b1d05f17；UNKNOWN_INHERITED。
-
-```text
-1. 航天生态边界与任务生命周期
-2. 遥感、SAR、光学、气象与空间态势数据
-3. STK、ODTK、GMAT、Orekit、SPICE、cFS、F′
-4. 地面站、数据处理、湖仓、时序和空间数据库
-5. Cesium、ArcGIS、3D Tiles、OpenUSD、Omniverse
-6. 抗断网与边缘任务计算
-7. 质量、验证、可追溯性与供应链
-8. 公开平台矩阵与采购/自建路线
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 26 行；段落 98fbc6d177150f02；UNKNOWN_INHERITED。
-
-```text
-## Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd 章节建议
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 28 行；段落 22da214ab9c94712；UNKNOWN_INHERITED。
-
-```text
-1. 地缘战略与国防工业研究边界
-2. Palantir、ArcGIS、GEOINT、C4ISR 与任务网络
-3. OSINT、ACLED、GDELT、GeoQuant、气象和产业链数据
-4. Ontology、知识图谱、实体解析和时空事件模型
-5. AI/ML、RAG、Agent 与人机复核
-6. 数据安全、零信任、加密、HSM、SBOM、供应链防御
-7. 断网、隔离、边缘、同步、不可变备份和灾难恢复
-8. 仿真、情景树、贝叶斯更新、Monte Carlo 与决策治理
-9. 民用合法商业化路线与风险边界
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 38 行；段落 cc7bd6d4866c6b34；UNKNOWN_INHERITED。
-
-```text
-## 版本要求
-
-```
-::: 
-
-::: {.callout-note collapse="true"}
-來源第 40 行；段落 8e8faff3202029a0；UNKNOWN_INHERITED。
-
-```text
-Quarto 的 `.qmd` 文件应使用 YAML 元数据、可执行代码块、引用和可渲染输出；Quarto 官方工作流支持将同一源文件渲染为 HTML、PDF、DOCX 等格式。[web:101][web:110]
-```
-::: 
-
 ### 起始基線後新增來源：商業化藍圖
 
 2026-10-07 收尾發現；來源 [OpenSource_Ecosystem_Monetization_Blueprint_20261006.md](OpenSource_Ecosystem_Monetization_Blueprint_20261006.md)。此為方案與收益假設，引用、授權與規則尚待逐項核實。原始快照 SHA256：`6d9af9ae4b81d2f8f4ca18896e6bb31298737cd51f0dfa00cb2257b5b8ea0c38`。
@@ -10169,430 +10108,3 @@ Quarto 的 `.qmd` 文件应使用 YAML 元数据、可执行代码块、引用�
 ::: 
 
 <!-- SOURCE_ANNEX_20261007_END -->
-
-<!-- SOURCE_RENAME_20261007_BEGIN -->
-## 當期附件路径與問答模板增補
-
-原 .txt 已由目前 .md 附件承接，舊來源路径按歷史快照定位；未恢復已刪 TXT。[現行地緣問答附件](地緣學、軍事、宇航、策略服務平臺提問.md)。兩份現實策略附件改副檔名後位元組相同；地緣附件新增總標題、甲題標題及乙／丙／丁／戊四份空問答模板，沒有新增已核技術事實。下列保存當期新增／替換文字，完整原文與歷史版本各自保留。
-
-````text
------------------- 提問卌 --------------------------
-# 提問卌甲
-
-# 提問卌乙
-
-## 提問
-
-
-## 解答
-
-### Claude
-
-
-### ChatGPT
-
-
-### Kimi（君）
-
-
-### Perplexity
-
-
-### Grok
-
-
-### 深度求索
-
-
-### Gemini
-
-
-### Copilot
-
-
-### Meta AI
-
-
-## 結論
-
-
-# 提問卌丙
-
-## 提問
-
-
-## 解答
-
-### Claude
-
-
-### ChatGPT
-
-
-### Kimi（君）
-
-
-### Perplexity
-
-
-### Grok
-
-
-### 深度求索
-
-
-### Gemini
-
-
-### Copilot
-
-
-### Meta AI
-
-
-## 結論
-
-
-# 提問卌丁
-
-## 提問
-
-
-## 解答
-
-### Claude
-
-
-### ChatGPT
-
-
-### Kimi（君）
-
-
-### Perplexity
-
-
-### Grok
-
-
-### 深度求索
-
-
-### Gemini
-
-
-### Copilot
-
-
-### Meta AI
-
-
-## 結論
-
-
-# 提問卌戊
-
-## 提問
-
-
-## 解答
-
-### Claude
-
-
-### ChatGPT
-
-
-### Kimi（君）
-
-
-### Perplexity
-
-
-### Grok
-
-
-### 深度求索
-
-
-### Gemini
-
-
-### Copilot
-
-
-### Meta AI
-
-
-## 結論
-
-````
-<!-- SOURCE_RENAME_20261007_END -->
-
-## 地緣問答附件本輪後續新增內容
-
-來源位於現行 .md，捕获內容 SHA256：`06765476fc39f583e4f2109f55db864c6a8bde7aed443f20ea7b17b753f1ecbe`；比上一個捕獲版本新增／替換 10488 字元。下列新增問答保留為原始來源，UNKNOWN_INHERITED，尚未逐項外部核實；並不更改上方五項裁決。
-
-````text
-redteam/ + critic/ + killcritic/ + blindspot/ + blueprint/ + cheatsheet/ + actionplan/
-
-請先生先將您在此對話從頭至今回復的所有内容，包括核實、校對、審閲剛才上傳的附件地緣學、軍事、宇航、策略服務平臺提問.txt每一個提問與解答所有内容（一個都別遺漏掉），然後補齊、優化、强化至剛更新的最新版的Aerospace_Ecosystem_Report.qmd與Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd兩份文件中。
-
-引用湯川學教授之言“毫無頭緒！”，接著在下欲知如何將所有通過策略平臺、人工智慧和軍工與宇航生態產業鏈官方開源工具、開源工具、開源組件、開源數據、開源API、開源平臺等等，在通過計數造物分析後如何變現獲得收入？務必詳細列出客戶群、可落實的商業項目等等。倘若先生有更好的商業方案、任何高見與良策，請不吝指點，在下受教了。
-#### 零、先交代三件阻断项（不先讲清，后面全是空转）
-
-1. **`地缘学、军事、宇航、策略服务平台提问.txt` 这份附件，本对话中我没有收到。** 本会话目前可见的上传物只有三份 CSV（游戏下载清单、ISO3166/M49/E164 国别注册表 249 行、ISO3166‑2 行政区 5046 行），加上项目知识库里的既有文件。先生若要我逐条核实该 txt 的每一问每一答，须重新上传。
-2. **`Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd` 在项目文件中不存在。** 项目里只有 `Aerospace_Ecosystem_Report.qmd`。该文件名另含拼写错误 `Interlligence`（应为 `Intelligence`），落盘前须定名。
-3. **项目挂载为只读。** 我无法直接改写那两份 `.qmd`。我能做的是产出可 `include` 的增补章节文件，由先生合并并版本递增（依既有纪律：递增不覆盖）。
-
-本轮我已完成的实质核实（上一回合）：Palantir 四平台 + Maven + Warp Core、SitaWare 2026 年五个里程碑、Ansys STK 产品线、BAE GXP、Lynx/Green Hills/RedHawk 口径更正。**这些可直接作为增补素材，但「逐条核对那份 txt」这一项，在附件补上之前标 `BLOCKED`。**
-
----
-
-#### 一、`redteam/` — 对「变现」这个问题本身的攻击
-
-先生问的是「如何把开源工具变现」。红队第一刀：**这个问法本身藏着一个错误前提——开源工具不是资产，开源工具是成本为零的原料。原料不值钱。**
-
-Palantir 的护城河从来不是技术栈，而是三样东西：**涉密资格（FedRAMP High / IL6 / 人员 clearance）、政府采购关系、本体论工程服务人力**。先生用同一批开源组件能复刻 90% 的功能，却拿不到那 10%，而那 10% 就是全部的钱。
-
-所以真正的问题应改写为：
-
-> **在无法取得涉密资格、无美欧国籍、无政府采购通道的前提下，用开源原料 + 计数造物能力，做出哪一类「不需要 clearance 就能卖」的产品？**
-
-这才是可解的问题。下面全部围绕这个改写后的问题。
-
----
-
-#### 二、`killcritic/` — 先杀掉七个看起来可行、实则必死的方案
-
-| 方案 | 为何必死 |
-|---|---|
-| 做「平价版 Palantir」卖给政府 | 采购周期 18–36 月，需 clearance 与本地实体，单人无法交付 SLA。**直接出局。** |
-| 转售卫星影像 | Maxar／Planet 的分销授权要求最低年度承诺（六位数美元起），且禁止二次分发。**资本门槛即死因。** |
-| 卖 ITAR 相关的仿真或分析 | 马来西亚籍 + 非美实体 = **法律上不可触碰**，不是难，是违法。 |
-| 爬 Janes / Recorded Future / Bloomberg 数据再卖 | 版权与 ToU 直接诉讼风险。 |
-| 用 Space‑Track TLE 做商用 SSA 订阅 | Space‑Track 使用条款限制再分发；须改用可商用源或自建观测。 |
-| 把 OSM 数据混进闭源产品 | **ODbL 是传染性许可**，衍生数据库须同样开放。合并进专有主数据表 = 整表被迫开源。 |
-| 「做个 AI agent 包一层卖 SaaS」 | 无专有数据、无分发渠道，三个月内被模型厂商原生功能吞掉。 |
-
----
-
-#### 三、`blindspot/` — 先生最可能没看见的三件事
-
-**盲点一：先生手上已经有一件可立即变现的资产，但一直把它当附件而非产品。**
-
-那两份 CSV —— `registry_country_area_iso3166_m49_e164`（249 行 × 45 列）与 `registry_admin_units_iso3166_2`（5046 行 × 14 列）。这不是「资料」，这是**带证据等级、带 as_of 快照、带来源 URL、带覆盖缺口标注的主数据产品**。
-
-市面上 ISO 3166 列表满街都是，**但带 `coverage_status` / `coverage_gap_reason` / `un_salb_validation_source` / `live_validation_required` 这类血统字段的，极少**。这正是金融合规、制裁筛查、电信号码治理、跨境电商最缺的东西：不是「这个国家代码是什么」，而是「**这条记录我敢不敢拿去过审计**」。
-
-**盲点二：先生的真正差异化是方法论，不是领域知识。** 证据分级（P0/P1/P2/INFERRED）、不得静默更正、命名分叉登记（X‑21）、冲突显式分层（N‑5/N‑6）——这套东西在军工白皮书界是常识，**但在商业数据产品界几乎没人做**。这是可以直接卖的。
-
-**盲点三：博彩风控与地缘风险是同一门数学。** 异常 IP 聚类、尾秒下注检测、多账号关联图——换个名词就是制裁规避检测、影子船队识别（AIS 关闭／身份跳变）、空壳公司关联图。**先生已有的 a168 方法论可直接迁移，且不需要任何 clearance。**
-
----
-
-#### 四、`blueprint/` — 三层产品金字塔
-
-```
-第三层  研究订阅与署名  ← 低现金、高信誉、带客流
-   ↑
-第二层  咨询与实施（按人天）  ← 立即现金流
-   ↑
-第一层  主数据与指标产品（订阅/API）  ← 唯一可规模化的资产
-```
-
-##### 第一层：主数据与可审计指标（核心资产）
-
-| 产品 | 原料（全部开源／可商用） | 卖点 |
-|---|---|---|
-| **主权与行政区主数据订阅** | ISO 3166‑1/2、UN M49、ITU E.164、UN SALB、GeoNames | 带血统、带 as_of、带缺口标注；季度快照 + diff 日志 |
-| **管辖权消歧表** | 上表 + 宪法关系字段（已有 `constitutional_relationship_type`、`un_nsgt_status`） | 解决「台湾／香港／科索沃／西撒哈拉怎么编码」这个每家合规部门都踩的坑 |
-| **影子船队与航运异常指标** | AIS（可商用源）、UN 制裁名单、OpenCorporates | 迁移 a168 异常检测方法论 |
-| **冲突与供应链暴露指数** | ACLED、GDELT、Comtrade、USGS 矿产 | 按国 × 商品 × 月度 |
-| **发射与在轨活动月报数据集** | CelesTrak（可商用）、FCC/ITU 备案、各国发射公告 | 面向保险与投研 |
-
-**交付形态**：CSV + Parquet + REST API + 一份「方法学与证据等级说明书」。**最后那份说明书是定价依据，不是附赠品。**
-
-##### 第二层：咨询与实施
-
-- 开源 GEOINT／SSA 栈落地（QGIS + PostGIS + GDAL + STAC + Orekit + SPICE）
-- 开源任务工程（GMAT / Basilisk / cFS / COSMOS）为新兴航天机构与大学做培训与原型
-- 数据治理审计：用先生那套证据分级制度，替客户审他们自己的数据资产
-- 从博彩风控迁移的反欺诈／反洗钱模型工程
-
-##### 第三层：研究与署名
-
-- 季度《地缘—宇航生态数据栈》报告（付费订阅 + 免费摘要）
-- RPubs／GitHub 公开可复现 notebook 作为获客漏斗
-- 开源一个小而锋利的包（例如 `isoregistry` R/Python 包），以开源获信誉、以数据订阅收钱（open‑core）
-
----
-
-#### 五、客户群（按成交难度由易到难排序）
-
-| 优先 | 客户群 | 具体买家 | 他们为什么付钱 | 价格区间（美元） |
-|---|---|---|---|---|
-| ★★★ | **合规科技／KYC 厂商** | 中小型 RegTech、制裁筛查 SaaS | 他们的国别表来源混乱，过不了审计 | 数据订阅 1.2k–6k/年 |
-| ★★★ | **跨境电商与物流 SaaS** | 东南亚本地平台 | 地址／行政区／电话号段校验 | 1k–5k/年 |
-| ★★★ | **大学与研究机构** | 东南亚、中东、非洲的空间与政策研究中心 | 开源栈培训与数据集 | 咨询 400–900/人天 |
-| ★★ | **新兴国家航天机构** | MYSA、TASA 周边生态、中东新设机构 | 预算有限，买不起 STK Enterprise，需开源替代路径 | 项目 15k–80k |
-| ★★ | **对冲基金／大宗商品交易台** | 中小型，不是 Citadel 那级 | 替代数据指标，要可复现、要有血统 | 指标订阅 10k–50k/年 |
-| ★★ | **保险与再保险** | 政治风险险、航运险、卫星险 | 暴露度量化 | 10k–60k/年 |
-| ★ | **新闻与智库** | 调查报道机构、OSINT 社群 | 数据集 + 方法学背书 | 低价或免费换署名 |
-| ✗ | 政府与国防采购 | — | **短期内放弃，见 killcritic** | — |
-
----
-
-#### 六、`critic/` — 对我自己上述方案的反驳
-
-1. **主数据产品的毛利很高，但市场很小。** ISO 国别表的可付费市场全球可能只有几百家真买家。**这是一门好生意，不是一门大生意。** 先生若期待的是规模化，这条路不够。
-2. **咨询现金流好但不可规模化**，且吃掉做产品的时间。两者会互相绞杀，必须定一个时间配比（建议 6:4 偏产品）。
-3. **指标类产品（冲突指数、影子船队）的最大风险不是技术，是「客户问：你的指标过去三年准不准？」** 没有回测历史 = 没有销售。**必须先补一年回测档案再开卖。**
-4. **我上面给的价格区间是推断，不是观测。** 标 `INFERRED`，须以三次真实报价校准。
-5. **先生的证据分级制度是优势也是枷锁**：它会让交付比竞品慢 2–3 倍。若客户不为血统付溢价，这套纪律就是纯成本。**首批客户必须选「血统溢价明确存在」的合规与审计场景**，而非追求速度的交易场景。
-
----
-
-#### 七、`cheatsheet/` — 许可证与法务速查（这张表比上面所有内容都值钱）
-
-| 数据／工具 | 许可 | 商用？ | 陷阱 |
-|---|---|---|---|
-| ISO 3166 官方维护表 | ISO 收费 | 需授权 | 代码本身是事实不可版权，**但 ISO 的编排与官方名称表须注意** |
-| UN M49 | UN 开放 | ✅ | 须注明来源 |
-| UN SALB | CC BY 3.0 IGO | ✅ | 必须署名 |
-| ITU E.164 | ITU 公布 | ✅ | 更新频繁，须跟踪 |
-| GeoNames | CC BY 4.0 | ✅ | 署名 |
-| **OpenStreetMap** | **ODbL** | ⚠ | **传染性，衍生数据库须开放。切勿混入专有主数据表** |
-| Sentinel / Copernicus | 开放 | ✅ | 署名 |
-| Landsat / USGS | 公有领域 | ✅ | 无 |
-| GDELT | 开放 | ✅ | 噪声极大，须自建清洗层 |
-| **ACLED** | **分级** | ⚠ | **学术免费，商用须付费授权** |
-| Space‑Track TLE | 政府 ToU | ⚠ | **限制再分发**，商用改用 CelesTrak 或商业源 |
-| AIS 原始 | 视源而定 | ⚠ | MarineTraffic/AISHub 各有条款，不可直接转售 |
-| GMAT / cFS / COSMOS | NASA 开源（Apache‑2.0 系） | ✅ | 部分组件 **可能受 EAR 管制**，须逐件查 |
-| Orekit / Basilisk | Apache‑2.0 / ISC | ✅ | 干净 |
-| SPICE（NAIF） | 公有领域 | ✅ | 干净 |
-| QGIS / GDAL / PostGIS | GPL / MIT / GPL | ⚠ | **GPL 不影响 SaaS，但影响分发二进制** |
-| Grafana | AGPL | ⚠ | **AGPL 对 SaaS 有传染性**，须隔离或买商业授权 |
-| **ITAR/EAR 清单物项** | — | ❌ | **非美人士与非美实体不得接触。这是红线，不是风险。** |
-
----
-
-#### 八、`actionplan/` — 90 日行令
-
-**第 1–15 日｜资产确权**
-- 把两份 registry CSV 走一遍许可证审计（上表逐行），剔除任何 ODbL 污染
-- 定稿《数据血统与证据等级说明书》v1.0 —— 这是产品，不是文档
-- 定名：`OGDIL` vs `GDI-OS` 必须二选一（X‑21 未裁定，**本轮须结案**）
-
-**第 16–35 日｜最小可售品**
-- 发布 `isoregistry` 开源包（R + Python），数据取 free tier 子集
-- Pro 版（完整 45 列 + diff 历史 + API）设订阅闸门
-- GitHub + RPubs 放一篇可复现 notebook：「ISO 3166 的七个坑与它们如何让合规审计失败」
-
-**第 36–55 日｜第一笔现金**
-- 定向接触 20 家东南亚 RegTech / 跨境电商 SaaS，**不卖数据，卖一次免费的「国别表健康检查」**
-- 目标：3 个付费试点，哪怕每家只 1,000 美元。**首单的作用是校准定价，不是赚钱。**
-
-**第 56–75 日｜第二条腿**
-- 把 a168 异常检测方法论改写成「跨域异常检测白皮书」（去博彩化命名）
-- 投向：反洗钱、航运合规、保险欺诈三个方向各一封冷邮件 + 一份样本分析
-
-**第 76–90 日｜复盘与裁定**
-- 若主数据线有 ≥2 家续约意向 → 加倍投入产品化
-- 若无 → 转向咨询为主，主数据降为获客工具
-- **本阶段必须写一份自我更正登记（续 SC‑ε），把所有被证伪的假设编号入册，不得静默修正。**
-
----
-
-#### 九、我的「更好方案」——如果只能做一件事
-
-**做《可审计地缘主数据》这一件事，放弃其余全部。**
-
-理由：先生的全部独特优势（证据分级纪律、注册表已成型、量化背景、跨域方法论）在这一个产品上**同时**发挥作用；而它恰恰**不需要任何 clearance、不碰 ITAR、不依赖采购关系、可以一个人交付**。
-
-其余的宇航仿真、SSA、国防 AI，全部是**内容营销素材**，不是产品线。它们的作用是让先生在这个窄赛道里显得权威得不合理——「连 cFS 和 CCSDS 都讲得清的人，他做的国别表我信」。
-
-把它们当钩子，不要当生意。
-
----
-
-**汤川教授那句「毫无头绪」，问题通常不在线索不足，而在变量没有被约束。** 上面我做的全部动作，就是把「如何变现开源」这个无约束问题，收敛成「在无 clearance 前提下，用已有的 5295 行注册表资产，卖给合规买家」这个有唯一解的问题。
-
----
-
-要我现在落码吗？可立即产出两件：
-1. `附录_开源生态变现路径与许可证矩阵.qmd` —— 可 `include` 进 Aerospace 报告
-2. `registry_license_audit_20261006.csv` —— 两份注册表的逐源许可证审计表
-
-另需先生裁定三项：① 那份 txt 附件是否重传；② `Geostrategy_...` 文件是新建还是先生笔误；③ `OGDIL` / `GDI-OS` 正名。
-已完成这一轮**全量合流、审校强化与商业化扩建**。这次没有把旧内容“摘要化”或覆盖掉，而是按您要求采用三轨并存：
-
-**原始问答全量存证 → 现行核实/纠错 → 商业变现蓝图。**
-
-您上传的 `地緣學、軍事、宇航、策略服務平臺提問.txt` 原件确实以“提问卌”开始，并进入多模型解答体系。地緣學、軍事、宇航、策略服務平臺提問 我已逐项检查并把 **Claude、ChatGPT、Kimi（君）、Perplexity、Grok、深度求索、Gemini、Copilot、Meta AI** 九组回答全部嵌入两份 QMD；原文即使有错误、过时或未经证实的内部技术推断，也不删除，而是在现行层另标 `VERIFIED / UNKNOWN / RETRACTED`。
-
-本轮两份主文件已经扩大到：
-
-- `Aerospace_Ecosystem_Report.qmd`：**3,118 行 / 214,712 bytes**
-- `Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd`：**3,295 行 / 260,929 bytes**
-
-两份都通过 **Pandoc Markdown 解析 PASS**；完整 TXT 嵌入逐行去除保存缩排后，与原附件正文一致。当前环境仍没有 Quarto CLI，因此我没有把“Pandoc 语法通过”冒充成 HTML/PDF 已完整 render。
-
-### 本轮商业化最重要的裁定
-
-开源技术完全可以赚钱。QGIS 官方本身就列有大量商业服务商，明确提供**咨询、培训、支持、定制开发、插件开发和托管**；GeoServer 官方也明确认可围绕开源项目提供安装、集成、培训和维护的商业服务。[qgis.org](https://www.qgis.org/resources/support/commercial-support/)
-
-所以真正的价值链不是：
-
-**免费软件 → 转手卖软件**
-
-而是：
-
-**合法数据 → 数据血统 → 地理/业务本体 → 量化模型 → 人工证据闸门 → API/WebGIS/报告 → SLA → 持续订阅。**
-
-我在两份 QMD 内已经列出 **30 类客户与可落地商业项目**，包括政府/园区、能源、电网、港航物流、制造供应链、银行保险、农业、林业/ESG、建筑基建、矿业、房地产、电信、航空机场、旅游、灾害管理、大企业安全部门、航天新创、CubeSat、地面站、航空宇航制造以及国防工业供应链等。
-
-军工相关商业路线则严格限定在**供应链、MRO（维护维修大修）、库存、采购、合规、产业韧性、非敏感工程分析**，不扩展到现实目标选择、打击优化或武器攻击能力。
-
-我认为最快形成收入的前三条路线是：
-
-1. **OpenGeoStack Managed**：QGIS + PostGIS + GeoServer + MapLibre/Cesium 的企业部署、迁移、托管、培训、插件和维护。成本最低，也最容易先收到服务费。
-2. **ChangeWatch**：利用 Landsat/Sentinel 起步做土地、基建、施工、森林、农业、矿区变化监测；客户真正需要更高空间/时间分辨率后，再把 Planet、ICEYE、BlackSky、Vantor 成本转嫁到商业合同。
-3. **GeoRisk / SupplyGraph**：把企业工厂、供应商、港口、天气、ACLED/GDELT 地缘事件等映射成可订阅的供应链暴露、风险告警和董事会情景服务。
-
-这种策略还有一个关键优势：**先有客户和现金流，再采购昂贵商业数据**，而不是先购买一堆顶级卫星、天气和情报订阅再寻找客户。
-
-数据许可方面也已经补入“商业化闸门”。例如 USGS 明确 Landsat 数据无使用或再分发限制；OpenStreetMap 数据本身可以使用，但官方公共 tile 服务不是商业 CDN；ECMWF Open Data 则受 CC BY 4.0 及额外条款约束。[USGS](https://www.usgs.gov/faqs/are-there-any-restrictions-use-or-redistribution-landsat-data) 这意味着日后真正应建立的是一个 `license_registry`，不能因为“能下载”就推定“能原样转售”。
-
-本轮也继续保留了最新技术纠错：Maxar Intelligence 已改为 **Vantor**；Synopsys 已完成 Ansys 收购；ArcGIS GeoEvent Server 与 ArcGIS Mission 均已进入生命周期迁移规划。[Vantor](https://vantor.com/blog/vantor-rebrands-from-maxar-intelligence-unveils-ai-powered-platform/)
-
-### 文件交付
-
-Aerospace_Ecosystem_Report.qmd[最新版 Aerospace_Ecosystem_Report.qmd](sandbox:/mnt/data/Aerospace_Ecosystem_Report.qmd)
-
-Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd[最新版 Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd](sandbox:/mnt/data/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd)
-
-:chatgpt-content-reference{index="8"}[全量问答＋本对话回复独立存档](sandbox:/mnt/data/地緣軍事宇航策略平臺_全量問答與本對話回覆_20261006.md)
-
-:chatgpt-content-reference{index="9"}[商业化增量章节独立版](sandbox:/mnt/data/地緣宇航開源生態_商業化增量章節_20261006.md)
-
-:chatgpt-content-reference{index="10"}[全量合流验收回执](sandbox:/mnt/data/地緣軍事宇航策略生態_全量合流驗收回執_20261006.md)
-
-两份主 QMD 里现在均包含您要求的 **RedTeam + Critic + KillCritic + Blindspot + Blueprint + Cheatsheet + ActionPlan**，以及那句“**毫无头绪！**”之后，从技术生态走到“**什么客户愿意付款、卖什么、怎样验收、怎样持续订阅、怎样控制数据与许可成本**”的完整商业路线。
-
-若只用一句话收束这次商业方向，我会定为：
-
-> **不是造一套“军工版万能 Palantir”才开始挣钱；而是先成为“证据级地理空间与战略决策智能（Evidence-Grade Geospatial & Strategic Decision Intelligence）”服务商，从 GIS、遥感、气象、供应链与民用航天的具体决策问题开始收费，再逐层平台化。**
-
-````
-
-## 來源續寫版本 6bde5799552bea9f
-
-承接來源版本 06765476fc39f583；本段為新增／替換文字，UNKNOWN_INHERITED。刪除或替換前的說法仍在歷史快照，當期完整源檔依雜湊另存；不把新增答覆自動核實。
-
-```text
-#### 本轮商业化最重要的裁定
-#### 文件交付
-
-```

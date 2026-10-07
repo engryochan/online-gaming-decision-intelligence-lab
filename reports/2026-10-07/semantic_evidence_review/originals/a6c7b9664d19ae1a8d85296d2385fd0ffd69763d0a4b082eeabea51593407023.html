@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>科研項目資料架構、業務定義與價值評估方案</title>
+<title>項目資訊整合、版本導航與驗收入口</title>
 <style>
 
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +22,6 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
-}
-
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -2210,14 +2175,12 @@ vertical-align: -.125em;
     <h2 id="toc-title">目錄</h2>
    
   <ul>
-  <li><a href="#建議與現況" id="toc-建議與現況" class="nav-link active" data-scroll-target="#建議與現況">建議與現況</a></li>
-  <li><a href="#資料分層與流向" id="toc-資料分層與流向" class="nav-link" data-scroll-target="#資料分層與流向">資料分層與流向</a></li>
-  <li><a href="#所有資料類別的業務定義與價值" id="toc-所有資料類別的業務定義與價值" class="nav-link" data-scroll-target="#所有資料類別的業務定義與價值">所有資料類別的業務定義與價值</a></li>
-  <li><a href="#核心實體與時間模型" id="toc-核心實體與時間模型" class="nav-link" data-scroll-target="#核心實體與時間模型">核心實體與時間模型</a></li>
-  <li><a href="#技術選擇與擴展條件" id="toc-技術選擇與擴展條件" class="nav-link" data-scroll-target="#技術選擇與擴展條件">技術選擇與擴展條件</a></li>
-  <li><a href="#價值與最高效率的驗證方式" id="toc-價值與最高效率的驗證方式" class="nav-link" data-scroll-target="#價值與最高效率的驗證方式">價值與最高效率的驗證方式</a></li>
-  <li><a href="#執行順序與當期查詢" id="toc-執行順序與當期查詢" class="nav-link" data-scroll-target="#執行順序與當期查詢">執行順序與當期查詢</a></li>
-  <li><a href="#本輪已核對的既有底座" id="toc-本輪已核對的既有底座" class="nav-link" data-scroll-target="#本輪已核對的既有底座">本輪已核對的既有底座</a></li>
+  <li><a href="#本輪範圍與閱讀方式" id="toc-本輪範圍與閱讀方式" class="nav-link active" data-scroll-target="#本輪範圍與閱讀方式">本輪範圍與閱讀方式</a></li>
+  <li><a href="#六個主入口" id="toc-六個主入口" class="nav-link" data-scroll-target="#六個主入口">六個主入口</a></li>
+  <li><a href="#各版本與資料表的邊界" id="toc-各版本與資料表的邊界" class="nav-link" data-scroll-target="#各版本與資料表的邊界">各版本與資料表的邊界</a></li>
+  <li><a href="#核查資料與業務價值" id="toc-核查資料與業務價值" class="nav-link" data-scroll-target="#核查資料與業務價值">核查資料與業務價值</a></li>
+  <li><a href="#可重現的驗收入口" id="toc-可重現的驗收入口" class="nav-link" data-scroll-target="#可重現的驗收入口">可重現的驗收入口</a></li>
+  <li><a href="#收尾新增來源" id="toc-收尾新增來源" class="nav-link" data-scroll-target="#收尾新增來源">收尾新增來源</a></li>
   </ul>
 </nav>
 </div>
@@ -2225,7 +2188,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">科研項目資料架構、業務定義與價值評估方案</h1>
+<h1 class="title">項目資訊整合、版本導航與驗收入口</h1>
 </div>
 
 
@@ -2248,216 +2211,83 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="建議與現況" class="level2">
-<h2 class="anchored" data-anchor-id="建議與現況">建議與現況</h2>
-<p>此項目最先需要的是可追溯資料模型、來源保留及可驗證查詢，再按實際負載擴展計算。建議以 PostgreSQL 管理實體、主張、證據、版本與審核狀態；原始文件與媒體存於具版本與雜湊的檔案／物件儲存；分析資料以 Parquet 保存，由分析引擎讀取。只有當資料量、多人併發寫入、跨引擎一致性或更新需求實際成立，再引入 Iceberg、分散式運算及串流服務。這是依目前研究型檔案項目的設計建議，尚非負載實測後的最優解。</p>
-<p>本輪已建立可直接查詢的本地 SQLite 目錄，保存資產、來源版本、段落覆蓋與欄位清單。它尚未把所有正文轉成經審核的機構／主張資料，也未部署 PostgreSQL、Iceberg 或生產服務。<a href="../reports/2026-10-07/project_information_integration/project_information_catalog.sqlite">本地目錄</a>、<a href="../reports/2026-10-07/project_information_integration/asset_catalog.csv">資產清單</a>、<a href="../reports/2026-10-07/project_information_integration/column_catalog.csv">欄位清單</a>。</p>
+<section id="本輪範圍與閱讀方式" class="level2">
+<h2 class="anchored" data-anchor-id="本輪範圍與閱讀方式">本輪範圍與閱讀方式</h2>
+<p>本輪以使用者指定的兩份主報告為中心，整合六個可識別的版本家族，保留所有來源檔與主文件原文。新增資訊放入主文件的「來源增補」；審校說明在正文前明示其證據邊界。這些附錄保存資料，尚不代表每段已完成重寫、每項外部主張已核實或已成為結構化資料。</p>
+<p>起始盤點為 577 件可讀一般檔案；一個 <code>.Rproj.user</code> 鎖檔無法读取，已列基線例外。目錄按資產全覆蓋，CSV／TSV 欄位目錄記錄 1,983 欄，其他格式仍需按內容抽取。原資料、歷史登記批次、現有 HTML、使用者刪除的 <code>Report-Optimized-V2.md</code> 均保留原狀，不因本輪整合恢復或覆寫。</p>
 </section>
-<section id="資料分層與流向" class="level2">
-<h2 class="anchored" data-anchor-id="資料分層與流向">資料分層與流向</h2>
-<pre class="mermaid"><code>flowchart TD
-  A[文件、問答、表格、程式、媒體] --&gt; B[原始版本與 SHA256]
-  B --&gt; C[抽取段落、實體、主張、測量]
-  C --&gt; D[來源定位、衝突與人工審核]
-  D --&gt; E[PostgreSQL 研究登記與業務詞典]
-  E --&gt; F[版本化 Parquet 分析資料]
-  F --&gt; G[報告、SQL 查詢與比較]
-  E --&gt; H[搜尋、向量或圖關係索引]
-  H --&gt; G</code></pre>
-<p>原始層不可被清洗結果覆蓋。標準化層保留每次轉換版本與異常資料；審核層提供經明確定義的當期視圖；檢索索引可重建，答案必須回指原始證據。無法解析的檔案、空欄、失效連結、未知授權、相互矛盾說法也須登記，不能悄悄捨棄。</p>
-</section>
-<section id="所有資料類別的業務定義與價值" class="level2">
-<h2 class="anchored" data-anchor-id="所有資料類別的業務定義與價值">所有資料類別的業務定義與價值</h2>
-<p>以下是業務定義提案，尚需資料負責人認領；本輪欄位清單的 REVIEW_REQUIRED 不代表每欄已完成語義核實。價值不能由文件大小、重複次數或模型答覆篇幅推定。</p>
+<section id="六個主入口" class="level2">
+<h2 class="anchored" data-anchor-id="六個主入口">六個主入口</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>類別</th>
-<th>業務粒度與必要欄位</th>
-<th>可支持的決策／价值</th>
-<th>品質與限制</th>
+<th>家族</th>
+<th>整合主文件</th>
+<th>來源處理</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>國家／地區</td>
-<td>ISO 代碼、正式名稱、版次、有效期</td>
-<td>國別覆蓋、司法區及母表連結</td>
-<td>249 條目不等於 249 主權國家；代碼版本化</td>
+<td>地緣／軍工／宇航／AI</td>
+<td><a href="Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd">生態登記主報告</a></td>
+<td>meta、web、原始 TXT、全量問答、助理答覆及商業化章節；保留 Interlligence 拼寫</td>
 </tr>
 <tr class="even">
-<td>公司／組織／科研／政府／軍方公開項目</td>
-<td>一個法律或行政實體；別名、母子關係、所在地、時間</td>
-<td>生態搜尋、合作與供應鏈追溯</td>
-<td>集團、子公司、研究所、產品分開；未知不補猜</td>
+<td>宇航資料栈</td>
+<td><a href="Aerospace_Ecosystem_Report.qmd">宇航比較主報告</a></td>
+<td>web 與共用問答／商業化附件；原文可逐位元組還原</td>
 </tr>
 <tr class="odd">
-<td>軟體／應用／組件／工具／平臺</td>
-<td>一個產品與版本；類型、接口、授權、維護與依賴</td>
-<td>技術選型、可移植性及總成本</td>
-<td>產品存在不證明部署、性能或合規</td>
+<td>大秦賦算籌</td>
+<td><a href="../_大秦赋算筹_v1_3_9.qmd">v1.3.9 主文件</a></td>
+<td>根目錄、歸檔 QMD 及 Enhanced；歷史內容不當作當期執行結果</td>
 </tr>
 <tr class="even">
-<td>能力／主張／否定結果</td>
-<td>一個可檢驗命題；主體、謂詞、場景、時間、狀態</td>
-<td>比較能力、排除不成立方案</td>
-<td>UNKNOWN、爭議、撤回、反證與已核實分開</td>
+<td>現實人物與策略</td>
+<td><a href="真实版人物分析与治国策略服务_名录与九十日行令_v2_4_全球行政通信宇航生命证据增强版_20261004.md">v2.4 行政通信宇航生命版</a></td>
+<td>同日 ISO249 分支、舊版、Taige、補充文與兩份 TXT；分支合併不隱藏矛盾</td>
 </tr>
 <tr class="odd">
-<td>論文／專利／監管／試驗／部署</td>
-<td>一個來源記錄與可定位證據</td>
-<td>科研成熟度、臨床與採用路徑</td>
-<td>論文不等於商用；專利不等於實作；廠商宣稱保留來源類型</td>
+<td>AI 博彩治理白皮書</td>
+<td><a href="Whitepaper-Perfect-Baccarat-AI-Quant-Governance-V3-1-0.md">v3.1.0 主文件</a></td>
+<td>舊白皮書、perfect-baccarat、Automation 與科技移植總表</td>
 </tr>
 <tr class="even">
-<td>測量／性能／臨床／帶寬</td>
-<td>一次測試或估計；值、單位、協議、樣本、誤差與條件</td>
-<td>可比較性能、風險与成熟度</td>
-<td>空值不填零；不同測試條件不直接排名</td>
-</tr>
-<tr class="odd">
-<td>地理／軌道／遙測／影像</td>
-<td>時空觀測；座標參考、時間基準、解析度、來源與授權</td>
-<td>時空分析與任務態勢</td>
-<td>地面分析不等於飛行控制；座標／時區轉換須留痕</td>
-</tr>
-<tr class="even">
-<td>原始問答／模型輸出／提示</td>
-<td>一次互動；來源、模型標識、時間、完整正文與引用</td>
-<td>保留研究推理、候選線索及審核記錄</td>
-<td>生成内容不是一手證據；假引用單獨標記</td>
-</tr>
-<tr class="odd">
-<td>策略／商業化／成本／收益</td>
-<td>一個假設、方案或測算版本；客戶、成本與依據</td>
-<td>決策評估与方案取捨</td>
-<td>推估與已實現收入分開；缺失成本不當零</td>
-</tr>
-<tr class="even">
-<td>遊戲／博彩／金融／客戶資料</td>
-<td>事件、交易、實驗或個體；用途、保留期与權限</td>
-<td>實驗、風險監控及服務品質</td>
-<td>數學期望、模擬、實盤與營收分開；適用規則另核實</td>
-</tr>
-<tr class="odd">
-<td>程式／設定／資料字典／模型權重</td>
-<td>一個版本與執行環境；輸入輸出、依賴與授權</td>
-<td>重現計算、維運與交付</td>
-<td>程式存在不代表已成功執行；權重另查授權</td>
-</tr>
-<tr class="even">
-<td>歷史版本／刪除／回執／渲染／媒體</td>
-<td>一次版本事件或資產；內容雜湊與來源</td>
-<td>防止錯覆寫、審計与交付追溯</td>
-<td>舊 PASS 不能沿用到新內容；HTML 不是權威來源</td>
-</tr>
-<tr class="odd">
-<td>執行環境／鎖檔／其他未分類資產</td>
-<td>一件環境或未知資產；分類原因与例外</td>
-<td>重現環境、排除誤判遗漏</td>
-<td>鎖檔未讀須列例外；不當科研實體計數</td>
+<td>三價值草稿</td>
+<td><a href="在线博彩娱乐白皮书_完美真人百家乐_三价值统一架构_v0_3_0_DRAFT.md">v0.3.0 草稿</a></td>
+<td>v0.1／v0.2 補入；仍為 DRAFT</td>
 </tr>
 </tbody>
 </table>
-<p>每個欄位補齊：業務名称／定義、資料粒度、型別、單位、可選值、空值原因、主外鍵、來源定位、時間語義、負責人、更新週期、品質規則、授權／使用限制、用途與下游依賴。未知項保留待辦與責任人，不用自動生成的通用文字冒充完成。</p>
+<p>整合台帳共有 58 筆來源—目標關係、45,423 筆段落覆蓋記錄；同一來源可映射到兩份不同用途的主文件。精確重複以段落雜湊去重，不以名稱相近刪除異文。各主文件共新增 3,771 個未重複段落；計數不是事實數、公司數或科研成果數。</p>
 </section>
-<section id="核心實體與時間模型" class="level2">
-<h2 class="anchored" data-anchor-id="核心實體與時間模型">核心實體與時間模型</h2>
-<p>使用穩定內部 ID；國家代碼與正式識別號是外部鍵，名稱是可變別名。保留「現實有效時間」與「系統記錄時間」，以便回答當時發生什麼，以及當時我們知道什麼。母子公司、政府改組、收購與產品版本不得直接覆蓋舊記錄。</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>表</th>
-<th>一筆資料的含義</th>
-<th>關鍵關係</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>asset / asset_version</td>
-<td>一件資產及其內容版本</td>
-<td>SHA256、來源路徑、時間、媒體類型</td>
-</tr>
-<tr class="even">
-<td>document_section</td>
-<td>某版本的一个可定位段落</td>
-<td>asset_version、行號／頁碼／偏移、雜湊</td>
-</tr>
-<tr class="odd">
-<td>country / entity / entity_alias</td>
-<td>國別與實體及別名</td>
-<td>ISO、法律身分、有效期間</td>
-</tr>
-<tr class="even">
-<td>product / product_version</td>
-<td>產品與版次</td>
-<td>所屬實體、技術類別、授權</td>
-</tr>
-<tr class="odd">
-<td>assertion / evidence / assertion_evidence</td>
-<td>主張、證據及其支持／反對關係</td>
-<td>證據定位、審核者、有效期、衝突</td>
-</tr>
-<tr class="even">
-<td>measurement / deployment / trial / regulatory_record</td>
-<td>測量、部署、試驗及監管事件</td>
-<td>主張、版本、國別、協議、狀態</td>
-</tr>
-<tr class="odd">
-<td>relation / taxonomy / business_definition</td>
-<td>關係、分類與業務詞典</td>
-<td>帶時間的邊、分類版次、負責人</td>
-</tr>
-<tr class="even">
-<td>transformation_run / quality_issue / review_event</td>
-<td>加工、品質異常與審核</td>
-<td>輸入輸出雜湊、程式版本、結果</td>
-</tr>
-</tbody>
-</table>
-<p>VERIFIED 必須限定到具體主張、來源、條件、日期與審核事件。若某公司一項能力已核實，不代表公司所有能力已核實。UNKNOWN 不納入「已做到」的國別能力分子；排名先定義比較樣本、指標與缺失規則。神經技術 N0～N7 定義未簽發前保留 UNKNOWN。</p>
+<section id="各版本與資料表的邊界" class="level2">
+<h2 class="anchored" data-anchor-id="各版本與資料表的邊界">各版本與資料表的邊界</h2>
+<p><a href="Global_Technology_ISO249_Registry.qmd">ISO249 主登記</a>、<a href="Global_Technology_ISO249_Registry_B02.qmd">B02</a>、<a href="Global_Technology_ISO249_Registry_B03.qmd">B03</a>、<a href="Global_Technology_ISO249_Registry_B04.qmd">B04</a> 是分批研究記錄，其來源資料表保持批次快照。最新合併口徑應讀批次說明与去重規則，不能將所有快照行數相加。</p>
+<p><a href="Inteligent_egaming_platform_ref_v000.000.001.qmd">egaming 全量問答</a> 保留最新使用者提交，其檔名版本號不代表正文只有一版。模型引用、過期簽名網址與 sandbox 路徑需各自核實，不能當作有效外部來源。此輪不重寫其全部問答。<a href="電腦已昇級至視窗11版（工欲善其事必先利其器）.qmd">Windows 11 研究問答</a> 維持獨立用途。</p>
+<p>根目錄及 <code>V1.0.0</code>／<code>V2.0.1</code>／<code>DGEF</code> 的 README、貢獻、分析、程式與設定按各自產品／模組保留；資料目錄及代碼不是同題報告的舊版，不作全項目機械合併。它們均列入資產清單，尚未逐段核實所有程式與第三方依賴。語言不同的貢獻文件也不因名字接近而直接覆蓋。</p>
+<p>2026-10-06「全量合流驗收回執」記載的主文件行數與 SHA256 不對應本輪起始文件，只作歷史回執。當期完整性以本輪驗證與雜湊為準，不改写旧 PASS 冒充當期驗收。</p>
 </section>
-<section id="技術選擇與擴展條件" class="level2">
-<h2 class="anchored" data-anchor-id="技術選擇與擴展條件">技術選擇與擴展條件</h2>
-<p>PostgreSQL 用於一致性登記、約束與權限。行級安全可限制普通查詢，但擁有者、superuser 與 BYPASSRLS 存在繞過條件；仍需角色分離、授權測試及審計設計。<a href="https://www.postgresql.org/docs/current/ddl-rowsecurity.html">PostgreSQL 官方說明</a>。</p>
-<p>本地批量研究先評估單機列式分析與分區 Parquet；資料更新及跨引擎管理變複雜時，再評估 Iceberg 的 schema／partition evolution，並測試目錄服務、並發提交、舊快照與保留政策。<a href="https://iceberg.apache.org/docs/latest/evolution/">Iceberg 官方說明</a>。採用該格式不是性能或成本最優的保證。</p>
-<p>加工血緣以資料集、工作與執行記錄連結輸入輸出，與 OpenLineage 的 dataset／job／run 模型對照；本輪段落覆蓋台帳只是文件來源追蹤，並非完整流水線血緣服務。<a href="https://openlineage.io/docs/spec/object-model/">OpenLineage 官方模型</a>。</p>
-<p>全文搜尋服務用於詞項檢索；向量用於候選召回，須記模型、分塊與索引版本；圖索引用於多跳關係查詢。這些均從主資料產生，不能以向量相似度判定事實。CDC／訊息系統只有在明確即時更新需求與失敗重播設計後引入。</p>
+<section id="核查資料與業務價值" class="level2">
+<h2 class="anchored" data-anchor-id="核查資料與業務價值">核查資料與業務價值</h2>
+<p><a href="Project_Data_Architecture_20261007.qmd">資料架構與價值評估方案</a> 定義資料類型、粒度、業務價值、證據關係、時間模型、權限與擴展條件。未有實測前不宣稱某一產品為世界最高效率，不用總收藏量代替有效資料量。</p>
+<p>本輪主要審校：產品／框架／RTOS／地面控制分層、NATO FMN 定義、離線部署條件、商業授權、能力與認證區分、未驗證收益與性能、ISO 母表口徑与神經技術 UNKNOWN。詳細裁決與一手來源見兩份主報告的前置審校說明。</p>
 </section>
-<section id="價值與最高效率的驗證方式" class="level2">
-<h2 class="anchored" data-anchor-id="價值與最高效率的驗證方式">價值與最高效率的驗證方式</h2>
-<p>每項資料／資料產品建立價值卡：使用者與決策、業務定義、現有基準、可驗證收益假設、證據、使用頻率、時效要求、品質門檻、取得／儲存／計算／授權／人力成本、失敗後果與負責人。未有量測前不填虛構 ROI 或總價值分數。</p>
-<p>測試代表性任務：按國家查詢已核實能力、追溯某個數值到原文、重建歷史報告、比較產品版本、查反證與重複機構。記錄資料規模、硬體、併發、冷／熱快取、p50／p95 延遲、成本、品質錯誤及重現率；依相同條件比較單機、資料庫與分散式方案。</p>
-<p>完整性分母採本輪基線資產數、來源版本數、段落數、表格欄位數及不能讀取項目。內容保存率、可解析率、業務定義完成率、外部證據審核率是不同指標；段落覆蓋完成不意味語義與外部事實核实完成。</p>
+<section id="可重現的驗收入口" class="level2">
+<h2 class="anchored" data-anchor-id="可重現的驗收入口">可重現的驗收入口</h2>
+<ul>
+<li><a href="../reports/2026-10-06/workspace_change_audit/integration_20261007_start_summary.json">起始基線</a>：HEAD、Git 狀態、577 檔與鎖檔例外。</li>
+<li><a href="../reports/2026-10-07/project_information_integration/source_manifest.csv">來源版本台帳</a>：來源、目標、雜湊及原始快照。</li>
+<li><a href="../reports/2026-10-07/project_information_integration/block_coverage.csv">逐段覆蓋台帳</a>：來源行號、內容雜湊、已覆蓋／補入與顯示遮蔽。</li>
+<li><a href="../reports/2026-10-07/project_information_integration/asset_catalog.csv">資產目錄</a>與<a href="../reports/2026-10-07/project_information_integration/column_catalog.csv">欄位目錄</a>：全項目基線與待審業務定義。</li>
+<li><a href="../reports/2026-10-07/project_information_integration/delivery_plan.json">交付計畫</a>及<a href="../reports/2026-10-07/project_information_integration/validation_receipt.json">驗收回執</a>：套用前後雜湊及完整性邊界。</li>
+<li><a href="../reports/2026-10-07/project_information_integration/project_information_catalog.sqlite">SQLite 查詢目錄</a>：資產、來源、段落与欄位的可查詢本地資料庫。</li>
+</ul>
+<p>原始快照含完整原文，僅供本地追溯；新閱讀附錄遮蔽簽名網址查詢參數。原檔未刪改。段落完整性、語法解析、外部事實審查與業務語義完成度分別驗收；本輪不能宣稱後兩者已全項目完成。</p>
 </section>
-<section id="執行順序與當期查詢" class="level2">
-<h2 class="anchored" data-anchor-id="執行順序與當期查詢">執行順序與當期查詢</h2>
-<p>先保留與編目，接著補業務詞典及實體別名，再逐條抽取與審核主張，最後按量測擴展分析平台。本輪做到前兩步的可追溯基礎，欄位語義認領與主張審核仍有待完成。</p>
-<p>下列是已交付 SQLite 目錄的查詢示例，不是未部署 PostgreSQL 表的假查詢：</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> family, <span class="kw">role</span>, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> assets</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> assets <span class="kw">GROUP</span> <span class="kw">BY</span> family, <span class="kw">role</span> <span class="kw">ORDER</span> <span class="kw">BY</span> family, <span class="kw">role</span>;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">source</span>, state, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> blocks</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> block_coverage <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">source</span>, state;</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> path, column_name, row_count, blank_count</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">columns</span> <span class="kw">WHERE</span> business_definition_status <span class="op">=</span> <span class="st">&#39;REVIEW_REQUIRED&#39;</span>;</span></code></pre></div><button title="複製到剪貼簿" class="code-copy-button"><i class="bi"></i></button></div>
-<p>資料刪除依法定保留、授權與使用者指示執行，保留必要的刪除事件；「不遺漏資訊」是有邊界的可驗證保存與管理要求，不能推論應永久公開保存憑證、個人資料或無權持有的內容。</p>
-</section>
-<section id="本輪已核對的既有底座" class="level2">
-<h2 class="anchored" data-anchor-id="本輪已核對的既有底座">本輪已核對的既有底座</h2>
-<p>DGEF/artifacts/dgef.sqlite 已有 44 張表，本輪唯讀完整性與外鍵檢查通過。它承接實體、主張、證據、觀測、授權與時間；本文件的 PostgreSQL 等是擴展方案，不能理解為項目尚無資料底座。新文件目錄與語義目錄均為旁側目錄，未替換或改寫 DGEF。<a href="Project_Semantics_Evidence_Review_20261007.qmd">核查與對接方案</a>。</p>
+<section id="收尾新增來源" class="level2">
+<h2 class="anchored" data-anchor-id="收尾新增來源">收尾新增來源</h2>
+<p>起始 577 件資產基線保持不變；另納入 1 件後續新增商業化藍圖，共 578 件原項目資產目錄。新增藍圖已增補至兩份主報告，保留原檔與獨立增量基線。新生成的交付與驗收資產另見收尾快照。</p>
 </section>
 
 </main>
