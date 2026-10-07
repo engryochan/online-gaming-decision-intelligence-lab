@@ -1,0 +1,139 @@
+{
+  "source_path": "DGEF\\artifacts\\dgef.sqlite",
+  "source_sha256": "03eef98e471ff216b0c4fb7d2091e1d38740589419c051a1f121b58bd4b2200b",
+  "source_unchanged": true,
+  "tables": {
+    "bridge_entity_external_id": 11387,
+    "cosmic_domain": 11,
+    "registry_adapter_contract": 21,
+    "registry_admin_unit": 5046,
+    "registry_astrobiology_evidence": 0,
+    "registry_celestial_object": 28,
+    "registry_claim": 343,
+    "registry_country_area": 249,
+    "registry_coverage": 1743,
+    "registry_dataset": 29,
+    "registry_entity": 5593,
+    "registry_entity_alias": 969,
+    "registry_entity_location": 6,
+    "registry_entity_relation": 38,
+    "registry_entity_status_history": 252,
+    "registry_entity_type": 16,
+    "registry_ephemeris_solution": 6,
+    "registry_evidence_link": 343,
+    "registry_external_id": 433,
+    "registry_ground_facility_public": 2,
+    "registry_infrastructure": 0,
+    "registry_ingest_record": 284,
+    "registry_legal_entity": 92,
+    "registry_license_policy": 2,
+    "registry_observation": 45,
+    "registry_person_public_role": 0,
+    "registry_public_body": 49,
+    "registry_public_facility": 37,
+    "registry_research_org": 160,
+    "registry_schema_version": 2,
+    "registry_settlement": 0,
+    "registry_simulation_run": 0,
+    "registry_source": 40,
+    "registry_space_asset": 2,
+    "registry_space_mission": 2,
+    "registry_space_org": 2,
+    "registry_space_program": 2,
+    "registry_space_research_output": 9,
+    "registry_space_vehicle": 2,
+    "registry_spatial_frame": 1,
+    "registry_synthetic_population": 0,
+    "registry_virtual_entity": 0,
+    "registry_virtual_world": 0,
+    "staging_service_catalogue": 405
+  },
+  "current_training_rows": 0,
+  "hypothetical_controls": [
+    {
+      "case": "known_zero",
+      "legacy_selected": true,
+      "review_selected": true,
+      "expected_review": true,
+      "pass_check": true
+    },
+    {
+      "case": "null_value",
+      "legacy_selected": false,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "empty_method",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "whitespace_method",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "lowercase_unknown_method",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "padded_unknown_method",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "empty_unit",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "unknown_claim",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "unknown_claim_evidence",
+      "legacy_selected": true,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "simulation_entity",
+      "legacy_selected": false,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "restricted_source",
+      "legacy_selected": false,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    },
+    {
+      "case": "unknown_training_license",
+      "legacy_selected": false,
+      "review_selected": false,
+      "expected_review": false,
+      "pass_check": true
+    }
+  ],
+  "review_is_training_authorization": false
+}

@@ -111,3 +111,10 @@ FROM columns WHERE business_definition_status = 'REVIEW_REQUIRED';
 ## 本輪已核對的既有底座
 
 DGEF/artifacts/dgef.sqlite 已有 44 張表，本輪唯讀完整性與外鍵檢查通過。它承接實體、主張、證據、觀測、授權與時間；本文件的 PostgreSQL 等是擴展方案，不能理解為項目尚無資料底座。新文件目錄與語義目錄均為旁側目錄，未替換或改寫 DGEF。[核查與對接方案](Project_Semantics_Evidence_Review_20261007.qmd)。
+
+
+<!-- DGEF_GATE_REVIEW_20261007 -->
+
+## DGEF 模型資料准入核查增補（2026-10-07）
+
+[本批核查報告](DGEF_Model_Gate_Review_20261007.qmd)：現行 45 筆觀測、0 筆獲准訓練；記憶體副本 12 項反例測試揭示原視圖 7 項未攔截情況。候選 SQL 僅供待審篩選，未授權訓練；原 DGEF 庫保持不變。欄位未決數仍為 424，本批不宣稱已完成全部語義校訂。
