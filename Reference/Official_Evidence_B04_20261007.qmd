@@ -1,0 +1,43 @@
+---
+title: "官方證據增補 B04：SPA 技術目錄與複合名稱審查"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批新增 **3 條來源、3 條限定主張、8 條技術／服務描述、2 條關係及1條身份審查記錄**。本頁的「官方證據 B04」與原「全球登記 B04」為不同批次，來源表以 OEB04 前綴區別。原全球登記及 B01～B03、既有查詢快照保留。
+
+## 名稱審查結論
+
+SPA 官網及公告以 Systems Planning & Analysis 展開 SPA。原 FRO0132 的 GCAM 線索與官網目錄相符；但本輪審閱來源沒有將「Simulation & Analysis Center」列為其正式別名，因此保留原複合標籤待查。未找到正式別名證據不等於證明機構不存在，也不足以合併法人或刪除原名稱。
+
+## 現行公開目錄
+
+| 名稱 | 公開描述類別 |
+|---|---|
+| GCAM | 模擬分析工具 |
+| COMSTAT | 排程分析軟件 |
+| ArcherEye | 模型與任務效度評估 |
+| AthenaSight | 協作規劃環境 |
+| VeracityCast | 資源預測分析流程 |
+| SPA Red Six Mission Assurance Program | 評估服務 |
+| SwarmInsight | 評估工具集 |
+| NSS | 海事模擬工具 |
+
+以上按官網展示名稱登記，用途為簡要轉述。VERIFIED 限於 PUBLIC_DESCRIPTION_ONLY，沒有測試性能、部署、兼容性或許可。[SPA 技術目錄](https://spa.com/our-approach/technology/)。
+
+2026-09-02 公告介紹 Advanced Analytics Lab，本批登記為提供方描述的內部實驗室，不新建獨立法人，也不把其安全環境自述當成第三方認證。[SPA 實驗室公告](https://spa.com/news/spa-advances-analytics-capabilities-for-critical-national-security-missions/)。
+
+2024-09-16 澳洲展示公告提及 GCAM、ARCHER 與 AnyLogic。本批只建立歷史展示使用關係，不把 AnyLogic 列為 SPA 自有產品。ARCHER 與 ArcherEye 是否同一產品的版本沿革尚未核實；Cyber Assassin 沿用 B02 的歷史名稱記錄，不能因本輪目錄未列它便認定停產。[SPA 澳洲展示公告](https://spa.com/news/spa-australia-showcases-modeling-and-simulation-capabilities/)。
+
+## 數據與限制
+
+- [官方來源](tables/14_official_evidence_20261007_b04/registry_supplemental_sources.csv)
+- [限定主張](tables/14_official_evidence_20261007_b04/registry_supplemental_claims.csv)
+- [八項技術／服務描述](tables/14_official_evidence_20261007_b04/registry_supplemental_technology_descriptions.csv)
+- [實驗室與展示使用關係](tables/14_official_evidence_20261007_b04/registry_supplemental_relationships.csv)
+- [身份及版本審查](tables/14_official_evidence_20261007_b04/identity_adjudication.csv)
+- [輸入指紋](../reports/2026-10-07/official_evidence_b04/baseline_manifest.csv)、[驗收](../reports/2026-10-07/official_evidence_b04/validation.json)、[生成程式](../reports/2026-10-07/official_evidence_b04/build_evidence.py)
+
+機構連結沿用 FRO0132 作原線索定位，並以 provider_display_name 單獨記錄 SPA，不能視為已解決原複合身份。未新增法人、國家能力或全球排名。許可、訓練授權、獨立性能、部署與監管仍 UNKNOWN。網頁工具文本閱讀未保存原始 HTTP 回應；現有整合 SQLite 快照不自動納入本批。

@@ -1,0 +1,39 @@
+---
+title: "官方證據增補 B05：神經科技器件、人體研究與許可範圍"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批新增 **5 條來源、7 條限定主張、3 份器件概況及 4 條廠商試驗連結**，對照 Neuralink、Synchron、Precision Neuroscience 原條目。原表及歷史 UNKNOWN 保留；器件許可、試驗目標與人體使用自述分開記錄。
+
+| 器件 | 本批能確認的來源內容 | 未決範圍 |
+|---|---|---|
+| Neuralink N1 | 廠商頁列 PRIME／CONVOY，描述人體研究使用及設備控制目標 | 登記現況、臨床階段、結果與性能 |
+| Synchron Stentrode | 廠商描述血管內植入及研究用途；頁列 INTENT／FOCUS | 登記現況、試驗結果、獨立效能 |
+| Precision Layer 7-T | FDA K242618 實質等同決定及限定適用範圍 | 長期植入、外部系統遠程功能及語義讀寫能力 |
+
+## 器件許可與技術範圍
+
+FDA 記錄 Layer 7-T 的 510(k) K242618 決定日期為 2025-03-30，申請人為 Precision Neuroscience, Corp.；此為器件特定實質等同決定，不能擴大為公司全部產品的許可。[FDA 記錄](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm?ID=K242618)。
+
+其適用範圍為少於 30 天的皮質表面電訊號記錄、監測及刺激；申請人摘要另說明器件為被動裝置，本身無無線功能及軟件。因此登記「記錄／刺激」只是電生理功能，不能據此宣稱讀取任意思想或寫入語義內容。器件本身無無線功能，也不能自動推斷外接系統完全無遠程功能。此許可不構成長期植入 BCI 許可。[FDA 信函、適用範圍及申請人摘要，PDF 第1、4、6頁](https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242618.pdf)。
+
+## 試驗與人體資料
+
+Neuralink 頁列 PRIME（NCT06429735）及 CONVOY（NCT06710626），描述 N1 人體使用與設備／輔助機械臂控制研究。本批限定為廠商人體使用自述與試驗列表，不將其當成已完成試驗或商業許可。[Neuralink 試驗頁](https://www.neuralinktrials.com/trials/device-control)。
+
+Synchron 技術頁描述 Stentrode 為血管內植入 BCI，並標示研究用途。[Synchron 技術頁](https://synchron.com/technology)。其加入研究頁列 INTENT（NCT07543367，美國）與 FOCUS（NCT07533903，澳洲），並自述未獲商業使用批准；國別只表示廠商列表上下文，不認定國家能力或法律住所。[Synchron 試驗頁](https://synchron.com/join)。
+
+ClinicalTrials.gov 的 PRIME、COMMAND 頁僅返回 HTML 空殼，API 本機請求連線被拒；PubMed 線索頁亦未成功讀取。因此本批不使用搜尋摘要填寫最新招募狀態、入組人數、臨床階段或論文結果。上述四個編號是廠商頁可確認的連結線索，登記現況均 UNKNOWN；COMMAND 保留為查證線索，未與 INTENT／FOCUS 合併。
+
+## 資料與保全
+
+- [五條來源](tables/15_official_evidence_20261007_b05/registry_supplemental_sources.csv)
+- [七條限定主張](tables/15_official_evidence_20261007_b05/registry_supplemental_claims.csv)
+- [三份器件概況](tables/15_official_evidence_20261007_b05/registry_neurotechnology_supplement.csv)
+- [四條廠商試驗連結](tables/15_official_evidence_20261007_b05/registry_trial_links.csv)
+- [讀取限制](../reports/2026-10-07/official_evidence_b05/access_attempts.csv)、[基線指紋](../reports/2026-10-07/official_evidence_b05/baseline_manifest.csv)、[驗收](../reports/2026-10-07/official_evidence_b05/validation.json)、[生成程式](../reports/2026-10-07/official_evidence_b05/build_evidence.py)
+
+資訊帶寬、遠程神經存取、獨立效能、授權及 N0～N7 國別判定未核實。來源以網頁工具文本閱讀，未保存原始 HTTP 回應；舊 SQLite 快照未更新。本輪只追加補充資料與報告索引，保留原宇航報告、歷史資料及既有 HTML。
