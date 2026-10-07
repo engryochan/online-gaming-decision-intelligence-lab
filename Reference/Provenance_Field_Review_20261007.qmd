@@ -1,0 +1,32 @@
+---
+title: "欄位來源與副本對照：預覽、資料字典及歷史未決項"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批整理 **25 筆欄位**：15 筆預覽欄位所屬文件與現行 Reference 文件逐位元相同，沿用已有定義並記錄來源連結；10 筆為 DGEF 資料字典自身的欄位，按 `DGEF/fabric.py` 字典生成邏輯定義。副本對照先核對完整文件位元內容及欄位位置，沒有僅靠同名欄位套用。
+
+完整目錄 v9 保留 1,989 筆，其餘 **1,964 筆逐欄不變**；UNRESOLVED 從 264 降至 **239**，剩餘全部屬 HISTORICAL_REPORT_OUTPUT。字典及沿用定義仍待業務審批，來源原件、舊目錄及預覽文件未修改。
+
+資料字典的 `primary_key` 是 PRAGMA 主鍵序位，`not_null` 是宣告標記；不能直接解作身份已核實或業務值有效。`example_use` 在原生成器實際複製表粒度文字，不能宣稱它是獨立使用案例或量測效益。共用的 null_semantics 也不能取代各欄位完整缺值原因。
+
+| 目錄狀態 | 正確解讀 |
+|---|---|
+| 現行 Reference／DGEF 匯出表沒有 UNRESOLVED 標記 | 已有某種定義或審閱提案，仍需看實際定義狀態 |
+| 預覽文件逐位元相同 | 這個快照可沿用對應定義；不代表未來版本永遠相同 |
+| 239 筆歷史欄位仍未決 | 需追溯歷史生成程式、判定批次及當時來源 |
+| 表內事實 UNKNOWN、授權 UNKNOWN 或資料缺口 | 不因字典有定義而變為 VERIFIED |
+
+本批減少的是欄位字典未決項，不是重新驗證 25 項現實科技事實，也不是增補全球公司數。剩餘歷史項目包括服務名錄修訂、URL 檢查、裁決表、抽取清單、文件盤點及變更回執；它們的批次語義需要分開還原。全球機構與技術查證尚未完成。
+
+- [25 筆定義與來源](../reports/2026-10-07/provenance_field_review/definition_changes.csv)
+- [完整目錄 v9](../reports/2026-10-07/provenance_field_review/field_semantics_v9.csv)
+- [15 筆副本證明](../reports/2026-10-07/provenance_field_review/byte_equal_definition_links.csv)
+- [239 筆歷史未決清單](../reports/2026-10-07/provenance_field_review/remaining_unresolved.csv)
+- [資料角色與定義狀態摘要](../reports/2026-10-07/provenance_field_review/role_status_summary.csv)
+- [來源指紋](../reports/2026-10-07/provenance_field_review/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/provenance_field_review/validation.json)、[核查程式](../reports/2026-10-07/provenance_field_review/review.py)
+
+已交付批次拒絕直接重建覆寫。來源保全與結構核對不等於全部來源內容實質核實；HTML 編譯成功不代表瀏覽器外觀已核查。

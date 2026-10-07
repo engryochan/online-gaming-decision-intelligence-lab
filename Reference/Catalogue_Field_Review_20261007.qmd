@@ -1,0 +1,24 @@
+---
+title: "遊戲名錄與國別搜尋線索：編碼核查及欄位口徑"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批新增 **10 筆上下文定義**，未決欄位由 302 降至 **292**。完整目錄 v7 仍為 1,989 筆，其他 **1,979 筆逐欄不變**。定義為 CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED，業務審批 PENDING；來源 CSV、舊目錄及原生成器未修改。
+
+遊戲清單以嚴格 UTF-8 讀取，五個欄名為「序号、游戏、官方出处、处理结果、安装包已下载」，與原語義目錄按位置完全相同，內容沒有 U+FFFD 替代字元。先前工具顯示的亂碼不構成原內容受損證據；本批不改名、不轉碼。核對範圍為編碼、欄位及行數，未查驗安裝包存在、可執行性、來源當前可達性或授權。
+
+國別搜尋線索的 lead_id 由查詢國別與回應序號生成，不能当機構根號。title 是搜尋回應標題，不是法人規範名。原生成程式將國別關係標為 UNREVIEWED_SEARCH_RESULT，相關性標為 UNKNOWN_MAY_BE_IRRELEVANT；因此命中某國的查詢不證明結果所指機構屬於該國，也不证明機構科技領先。
+
+歷史產品／計劃線索的 notes 明示複合文字不是已核實產品登記。本批只釐清既有欄位，不重新核實產品、網站、授權或下載狀態。現任人物及政治權限未在本批處理，全球科技資料完整性仍待逐項核查。
+
+- [10 筆定義](../reports/2026-10-07/catalogue_field_review/definition_changes.csv)
+- [完整目錄 v7](../reports/2026-10-07/catalogue_field_review/field_semantics_v7.csv)
+- [292 筆未決清單](../reports/2026-10-07/catalogue_field_review/remaining_unresolved.csv)
+- [來源指紋](../reports/2026-10-07/catalogue_field_review/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/catalogue_field_review/validation.json)
+- [可審閱核查程式](../reports/2026-10-07/catalogue_field_review/review.py)
+
+已交付批次拒絕直接重建覆寫；後續修訂建立新批次。HTML 編譯成功不代表已完成瀏覽器外觀檢查。

@@ -1,0 +1,33 @@
+---
+title: "政治與職銜欄位：歷史口徑及官方證據工作清單"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批整理國家／地區增強母表與君主名錄的 **28 筆待審定義**。完整目錄 v8 保留 1,989 筆，其餘 **1,961 筆逐欄不變**；未決欄位由 292 降至 **264**。新定義為 PROPOSED_BASELINE_CONTEXT_REVIEW，由現行欄名、值及資料狀態解讀；未找到完整原生成政策，不當成已核准分類標準。業務負責人與審批仍待確認。
+
+本地歷史名錄的 43 筆君主條目與母表以 ISO 鍵對照，holder、三種語言職銜、職銜類型、政體、形式權力與繼承方式等八欄共 344 組比較沒有差異。兩表一致不證明現任人物、憲制分類或來源內容正確，也不將本地 43 筆當成今日官方世界君主政體總數。
+
+| 母表歷史資料狀態 | 本地條目數 | 後續工作 |
+|---|---|---|
+| VERIFIED_BASELINE_2026_10_04 | 43 | 對當前用途重新核實人物、任期與適用制度 |
+| PENDING_CURRENT_LEADER_JOIN | 155 | 取得有日期的官方人物與職銜證據 |
+| 非獨立主權元首或需地方地位審查 | 51 | 核對地方與關聯實體的適用制度，不強填國家元首 |
+
+母表的 power_model_eligible 有 198 個 True、51 個 False；這是歷史模型候選範圍標記，不代表真實能力已測量、資料齊備或模型訓練已獲授權。formal_power_class 是本地分類，不是實際影響力或軍事能力分數。職銜也不能自動推定統帥權。
+
+本批新增 **249 條官方證據工作清單**，每條保留歷史狀態與核查截止日，另列所需官方人物／職務、適用憲制及地方地位證據。全部為 PENDING_OFFICIAL_EVIDENCE，當前人物與權力核實均 UNKNOWN；清單不授權訓練，也不是已新增 249 條已核實主張。它是查證工作的隊列，不是使用者所反對的空公司名錄。
+
+本批沒有對現任人物、憲法或政治地位作外部事實認證，没有改寫核查日期。原母表、君主 CSV、舊目錄、DGEF 庫及既有報告內容保留。業務價值是避免歷史資料被當成當前事实及明確派定證據工作，尚無已測 ROI。全球科技機構登記仍需另行實質查證。
+
+- [28 筆定義](../reports/2026-10-07/governance_field_contracts/definition_changes.csv)
+- [完整目錄 v8](../reports/2026-10-07/governance_field_contracts/field_semantics_v8.csv)
+- [264 筆未決清單](../reports/2026-10-07/governance_field_contracts/remaining_unresolved.csv)
+- [249 條官方證據工作清單](../reports/2026-10-07/governance_field_contracts/official_evidence_queue.csv)
+- [來源指紋](../reports/2026-10-07/governance_field_contracts/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/governance_field_contracts/validation.json)
+- [核查程式](../reports/2026-10-07/governance_field_contracts/review.py)
+
+已交付批次拒絕直接重建覆寫；后續修訂建立新批次。HTML 編譯成功不等於已完成瀏覽器外觀核查。
