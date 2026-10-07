@@ -1,0 +1,25 @@
+---
+title: "審閱產物欄位：定義變更、SQL 合同與控制測試"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批整理 **99 筆待審定義**，範圍是既有 definition_changes、field_contracts 與 control_tests。703 個增量欄位位置保留，累計 609 筆已有上下文或提案，剩餘 **94 筆 INCREMENTAL_FIELD_REVIEW_PENDING**。本批新增為 PROPOSED_REVIEW_ARTIFACT_CONTEXT，按原標頭与产物用途提出，尚非逐程式完整追溯或業務批准。
+
+定義變更表的 previous_definition／previous_status 保存歷史，不能僅因後版提出不同文字便認定原定義全部錯誤。definition_status 是定義成熟度；owner_approval、business_approval 均不等於來源事实證據狀態。NOT_PERFORMED、NOT_REVERIFIED 等範圍标记必须保留，不能只显示定義已補入。
+
+SQL 合同的 declared_not_null、primary_key_position、foreign_key_targets 分別記錄宣告、序位與結構關聯；不能据此推定空字串有效、法律身份真實或關係已獲核實。table_ddl 不包含所有 trigger、身份认证與部署權限。business_value／business_value_proposal 是用途提案，非已測 ROI。
+
+控制測試的 legacy_selected、review_selected 與 expected_review 来自記憶體副本假設許可及單欄變更。case 不是現行資料違規紀錄，pass_check 只表示候選結果符合該案預期，不能當成全部生產安全驗收或人工訓練授權。本批沒有重新執行模型訓練或修改准入視圖。
+
+14 個來源文件指紋保持不變。原目錄、來源表、SQLite 庫、主報告與既有 HTML 未改寫；尚待處理的整合覆蓋、來源定位、別名及摘要欄位留在待審清單。全球公司、產品、监管與科技能力未在本批重新核實。
+
+- [703 筆增量合同 v4](../reports/2026-10-07/review_artifact_contracts/incremental_field_contracts_v4.csv)
+- [99 筆新增提案](../reports/2026-10-07/review_artifact_contracts/definition_changes.csv)
+- [94 筆待處理欄位](../reports/2026-10-07/review_artifact_contracts/remaining_pending.csv)
+- [來源指紋](../reports/2026-10-07/review_artifact_contracts/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/review_artifact_contracts/validation.json)、[審阅程式](../reports/2026-10-07/review_artifact_contracts/review.py)
+
+已交付批次拒絕直接覆寫；HTML 編譯成功不代表完成瀏覽器外觀核查。

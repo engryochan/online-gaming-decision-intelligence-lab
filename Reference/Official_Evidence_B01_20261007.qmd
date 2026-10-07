@@ -1,0 +1,32 @@
+---
+title: "官方證據增補 B01：Earthian AI 與 NERAI 公開描述"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批從 B04 登記中七個無來源條目選取兩個查證，新增 **3 條提供方來源、4 條限定主張與4條產品／接口描述**。記錄沿用 FRO0021、FRO0022 作展示名／领域上下文對照，不新造法人身份，不改寫原歷史 UNKNOWN 主張。新增 VERIFIED 僅限 PUBLIC_DESCRIPTION_ONLY。
+
+| 原條目 | 本批能確認的內容 | 尚未確認 |
+|---|---|---|
+| Earthian AI | 官網金融風險平台自述及 Axiom-0、Tenet-0 名稱 | 法人、國別住所、独立性能、部署、監管與排名 |
+| NERAI | 官網地緣風險平台自述及 MCP 接口介紹 | 法人、國別住所、实际 API、性能、部署與授權 |
+
+Earthian AI 官網列有風險模型；页面不同位置出現版本名稱差異，本批按 Models 區段記錄，不擅自合併為唯一當前版本，也不將「最準確」「世界第一」等宣稱升級為独立證明。[Earthian AI 官網](https://www.earthianai.com/)。
+
+NERAI 官網描述事件資料、國別風險指數、預測及問答功能。本批只核對描述存在，不驗證其預測效度、指數數值或國家代碼。[NERAI 官網](https://neraicorp.com/)。接口頁介紹 hosted MCP server 與六個唯讀工具；本批未申請帳號、付費、取得密鑰或實際呼叫。頁面計數顯示與文字描述並不完全一致，未把計數或性能口號當成實測。[NERAI 接口頁](https://neraicorp.com/ai-agents.html)。
+
+歐洲企業網絡 NERAI 線索頁本輪開啟返回 403，搜尋摘要保留為線索，沒有據此賦予比利時國別關係或法律住所。未讀的完整頁面不充作已核實來源。其他五個原無來源條目未在本批查完；缺來源不代表机构不存在。
+
+## 數據表與保全
+
+- [3 條來源](tables/11_official_evidence_20261007_b01/registry_supplemental_sources.csv)
+- [4 條限定主張](tables/11_official_evidence_20261007_b01/registry_supplemental_claims.csv)
+- [4 條技術／接口描述](tables/11_official_evidence_20261007_b01/registry_supplemental_technology_descriptions.csv)
+- [七個原無來源條目的處理狀態](tables/11_official_evidence_20261007_b01/baseline_missing_source_review.csv)
+- [訪問受阻記錄](../reports/2026-10-07/official_evidence_b01/access_attempts.csv)
+- [原 B04 指紋](../reports/2026-10-07/official_evidence_b01/baseline_manifest.csv)
+- [核查回執](../reports/2026-10-07/official_evidence_b01/validation.json)、[增補程式](../reports/2026-10-07/official_evidence_b01/build_evidence.py)
+
+來源以網頁工具文本閱讀，未保存原始 HTTP 响应；許可及訓練權限 UNKNOWN。舊 B04 表與 SQLite 查询庫不重建，本批覆蓋統計仍需按補充主張另查，不能宣稱舊視圖已自動更新。原宇航報告與既有 HTML 保留；主報告僅附加本批索引。全球科技完整性與前沿排名尚未核實。

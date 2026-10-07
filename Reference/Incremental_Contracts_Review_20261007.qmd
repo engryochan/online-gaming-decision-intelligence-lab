@@ -1,0 +1,23 @@
+---
+title: "增量欄位合同：字典版本與官方證據隊列"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批為增量盤點的 703 個欄位位置補入 **437 筆上下文定義**，包括字典版本／未決子集的 427 筆與官方證據隊列的 10 筆；仍有 **266 筆 INCREMENTAL_FIELD_REVIEW_PENDING**。新增定義為 CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED，業務審批仍为 PENDING。它們描述的是元資料欄位，不是新增 437 項科技事實或公司。
+
+目錄中的 path、table、column_name 指向被描述的來源表，不能與這份目錄本身的路徑／欄位混同。source_sha256 保存來源版本指紋；row_count、blank_count 和 distinct_nonblank 描述當批讀取資料，不構成機構數、完整缺值原因或独立證據數。definition_status 是定義成熟度，不等於實際主張的 evidence_state。
+
+不同時期的字典及未決子集保留當時狀態，不因最新固定目錄已無 UNRESOLVED 而改寫旧版本。舊 column_catalog 的 business_definition_status 另按原結構解讀，不與新版狀態名稱機械等同。本批核對生成結構與來源標頭，提案仍需業務負責人審阅。
+
+證據工作隊列的 required_evidence 表示需要取得的材料；current_holder_verified 與 current_power_verified 在该批均為 UNKNOWN，training_permission 不授權訓練。歷史截止日與模型候選標記保留原值，不更新為今日核實。
+
+- [703 筆增量合同 v2](../reports/2026-10-07/incremental_contracts/incremental_field_contracts_v2.csv)
+- [437 筆新增定義](../reports/2026-10-07/incremental_contracts/definition_changes.csv)
+- [266 筆仍待處理欄位](../reports/2026-10-07/incremental_contracts/remaining_pending.csv)
+- [來源指紋](../reports/2026-10-07/incremental_contracts/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/incremental_contracts/validation.json)、[核查程式](../reports/2026-10-07/incremental_contracts/review.py)
+
+原固定目錄、增量盤點、來源表、DGEF 庫、主報告與既有 HTML 均保留。本批沒有重新核實現行人物、科技机构、產品或性能。全球實質查證仍未完成；HTML 編譯成功不代表瀏覽器外觀已核查。後續優先處理來源回執、定義輸入及查詢投影，保留副本和事實的區別。

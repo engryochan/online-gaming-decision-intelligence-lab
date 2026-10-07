@@ -1,0 +1,39 @@
+---
+title: "來源回執與查詢投影：增量合同及計數口徑"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批為增量目錄補入 **73 筆待審定義**，涵蓋來源回執 48 筆、定義輸入 6 筆與查詢投影 19 筆。703 個增量欄位位置已有 510 筆上下文定義，剩餘 **193 筆 INCREMENTAL_FIELD_REVIEW_PENDING**。新定義為 CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED，業務審批 PENDING；回執／輸入按原標頭和範圍解讀，不假稱每份原生成程式均已逐行驗證。
+
+## 查詢投影核對
+
+本批將 country_evidence_coverage、entity_country_candidates、metric_numeric_projection 三份 CSV 与唯讀 B04 SQLite 快照的相應視圖／表全行比對，不依賴行順序。投影空字串與 SQL NULL 按該批導出約定比較，沒有改寫原始資料空值。結果一致。
+
+| 國別覆蓋投影合計 | 值 | 解讀 |
+|---|---|---|
+| 條目數 | 249 | 本地國別／地區母表條目 |
+| 候選關聯 | 341 | 國別與候選實體關聯，不是唯一實體数 |
+| 任意範圍 VERIFIED 候選計數 | 210 | 按國別累加，包含公開描述以外的限定主張 |
+| 僅 PUBLIC_DESCRIPTION_ONLY 候選計數 | 208 | 按國別累加，仍非性能或部署認證 |
+| VERIFIED 國別關係行 | 10 | 關係行數，不是候選總量或國家能力排名 |
+
+同一跨國候選可出現在多個條目，不能把國別合計當唯一機構數。兩個 VERIFIED 計數相差 2 僅反映本快照的範圍篩選差別，不证明國家科技領先。country_frontier_capability_state 與 N0_N7_level 保留原 UNKNOWN；不能由候選數推定分級。
+
+metric_numeric_projection 的 numeric_value 由原值經 Decimal／float 轉換，空或不能轉換的值保留缺值。單位、statistic、conditions 與 interpretation 必须伴隨數值返回；數字格式有效不構成独立 benchmark 證據。本批沒有重新測量性能。
+
+## 回執與輸入
+
+source_manifest、edit_manifest 及 workspace_delta 的指紋和時點僅支持來源追溯與版本比較，不支持内容全部真實。before／after 指紋應按當批回執解讀，不能當今日現況。snapshot 保存位置也不授權恢復或覆寫原文件。
+
+定義輸入的 proposed_definition 或 definition 均是審阅文字；source_code_path 指向歷史生成程式，本批不執行它。六筆輸入欄位保留原始無首行標頭布局，不把第一條定義當表頭丟棄。
+
+- [703 筆增量合同 v3](../reports/2026-10-07/projection_contracts/incremental_field_contracts_v3.csv)
+- [73 筆新增定義](../reports/2026-10-07/projection_contracts/definition_changes.csv)
+- [193 筆待處理欄位](../reports/2026-10-07/projection_contracts/remaining_pending.csv)
+- [來源指紋](../reports/2026-10-07/projection_contracts/source_manifest.csv)
+- [投影全行比對及核查回執](../reports/2026-10-07/projection_contracts/validation.json)、[核查程式](../reports/2026-10-07/projection_contracts/review.py)
+
+來源表、SQLite 庫、原目錄、主報告及既有 HTML 未修改；本批未核实当下公司、產品、监管、授權或國家能力。全球科技實質查證仍未完成。已交付批次拒絕直接覆寫；HTML 編譯成功不代表瀏覽器外觀已核查。

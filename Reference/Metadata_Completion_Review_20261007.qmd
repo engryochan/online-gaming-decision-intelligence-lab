@@ -1,0 +1,40 @@
+---
+title: "增量元資料整理收尾：覆蓋、定位、別名與摘要"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批為最後 **94 個增量欄位位置**提出上下文定義。固定 71 份產物、703 個欄位位置的增量合同 v5 已沒有 INCREMENTAL_FIELD_REVIEW_PENDING 標記，狀態為 **510 筆需負責人審阅的上下文定義、193 筆審阅產物用途提案**。業務審批全部仍為 PENDING。本批新增提案依來源標頭及產物範圍解讀，不宣稱原生成方法已全部独立重驗。
+
+## 重要欄位邊界
+
+| 類別 | 定義限定 |
+|---|---|
+| 整合覆蓋 | block_sha256、state、source_snapshot 記錄文本保全／附加，不驗證歷史主張 |
+| 顯示遮蔽 | redacted_display 描述顯示與原文是否不同，原始快照另外保留 |
+| 來源定位 | baseline_line、source_line 等均依歷史版本，不能當現行行號 |
+| 路徑別名 | Git 相似／改名候選與人工依據分開，不自動恢復文件或裁定同一來源 |
+| 文字等值 | 換行規範化後相等不等於原位元内容相同 |
+| 表／版本摘要 | 行數、V/P/U、累積修訂数不等於新機構或當日全面核實數 |
+| 價值卡 | decision_use、value_basis 是用途提案，eligible_for_cross_batch_sum 防止版本重複加總 |
+
+核查回執 pass、文件存在、內容指紋相等、主鍵唯一及資料表行數一致，都只支持各自已檢查的範圍；不能拼接為全球科技事实已查全的結論。受檢主張的 evidence_state 必须連同 verification_scope、日期和來源返回。
+
+## 本輪完整範圍與後續工作
+
+原固定目錄 v12 有 1,989 筆欄位記錄；增量合同 v5 有 703 個產物欄位位置。兩者各自保留來源版本，不能把總和 2,692 當成獨立業務概念或全球科技資料全集。增量包含字典自身、歷史版本及核查回執，也不把本輪新生成文件遞歸加入同一盤點範圍。
+
+本輪完成的是上述固定範圍的欄位解讀與審阅提案。後續應轉向已有原始登記的實質證據核查：身份與法人、產品／技术用途、國別關係、性能口徑、監管與授權，逐主張保存日期及範圍。未知仍為 UNKNOWN，資訊來源缺失仍需工作隊列，不因字典整理收尾變為 VERIFIED。業務負責人亦需審批粒度、單位與缺值合同。
+
+- [703 筆增量合同 v5](../reports/2026-10-07/metadata_completion/incremental_field_contracts_v5.csv)
+- [94 筆新增提案](../reports/2026-10-07/metadata_completion/definition_changes.csv)
+- [定義狀態摘要](../reports/2026-10-07/metadata_completion/definition_status_summary.csv)
+- [来源指紋](../reports/2026-10-07/metadata_completion/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/metadata_completion/validation.json)、[審阅程式](../reports/2026-10-07/metadata_completion/review.py)
+- [原固定目錄範圍與收尾](Historical_Metadata_Review_20261007.qmd)
+- [增量盤點邊界](Incremental_Catalogue_Review_20261007.qmd)
+- [查詢投影口徑](Projection_Contracts_Review_20261007.qmd)
+
+16 個來源文件指紋保持不變；原表、資料庫、舊目錄、主報告與既有 HTML 未改寫。已交付批次拒絕直接覆寫；HTML 編譯成功不代表完成瀏覽器外觀核查。全球資料完整性及当下事实尚未核實完畢。
