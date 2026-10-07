@@ -1,0 +1,44 @@
+---
+title: "全球貨幣與證券行 B03：ISO 4217 全表及監管名錄"
+lang: zh-Hant
+format: html
+---
+
+## 本輪接收與完成界限
+
+按249國家／地區母表，分別登記貨幣、持牌金融業者、交易所參與者與上市公司覆蓋。本輪全部接收 SIX 官方現行及歷史 XML：現行280條實體—貨幣／基金記錄、178個非空代碼；歷史169條記錄。現行發布日期2026-09-17，歷史發布日期2026-01-01。178不是178種國家法定貨幣，代碼也包括基金、貴金屬、測試及無貨幣等特殊項目。原始 XML、空欄與每條原文全部保留。
+
+[SIX官方說明與完整來源](https://www.six-group.com/en/products-services/financial-information/market-reference-data/data-standards.html)列出現行貨幣與基金及歷史表，並確認其為ISO 4217維護機構。國家／地區採ISO 3166-1，貨幣代碼採ISO 4217，兩者不是對國家的認證。
+
+## 每個國家／地區的貨幣關係
+
+本批249條目均找到現行來源對應列；匹配方法分成既有母表名稱正規化與明列名稱別名。別名是可審閱的編輯對照，不冒稱ISO直接提供alpha-2關聯。非國家實體與特殊代碼原列保留，不強塞到某個國家。多國共用同碼、一地多碼、空碼及歷史撤回日期均保留。
+
+這代表來源行已全收錄，並不證明各國所有實際流通、地方、補充、數碼或非ISO貨幣均已核實。法定流通與實際使用須另以中央銀行及當地法規證據核對，覆蓋表仍標UNKNOWN。歷史表依官方提供範圍保存，未宣稱涵蓋人類所有歷史貨幣。
+
+- [現行與歷史全部條目](tables/21_currency_broker_b03_20261007/registry_iso4217_all_entries.csv)
+- [名稱別名對照與證據狀態](tables/21_currency_broker_b03_20261007/country_name_aliases.csv)
+- [249條目金融覆蓋](tables/21_currency_broker_b03_20261007/registry_country_financial_coverage.csv)
+
+## 證券行、牌照與交易資格
+
+[日本金融廳官方名錄](https://www.fsa.go.jp/menkyo/menkyo.html)截至2026-08-31，共1,951家金融商品交易業者；全部接收並與工作簿摘要總數對賬。第一種業務旗標共293家，與摘要一致：281條單純圓圈、8條附「僅非上市仲介業」限制、4條附「僅少額」限制。限制文字完整保留，不能將293家都推論為提供所有股票經紀業務的證券行。
+
+保留法人編號、登記編號、業務種類、有價證券相關業、業務限制及原始全部欄位。第二種、投資顧問及資產管理等業者仍收錄，分類查詢；銀行、仲介業者等其他監管名錄尚需另補，不能以此表宣稱日本所有證券行已收齊。來源Excel登記日期數值保留原序號，未猜測日期格式。
+
+[JPX官方交易參與者名錄](https://www.jpx.co.jp/english/rules-participants/participants/list/)全部158條參與者記錄亦接收，保留東證、大阪及TOCOM六類資格，包括遠程及非證券公司參與者。交易資格不等同監管牌照，JPX市場所在地不等同法人註冊地；尚未以相似名稱合併至FSA或上市公司表。
+
+- [FSA全部1,951家登記業者](tables/21_currency_broker_b03_20261007/registry_fsa_financial_instrument_firms.csv)
+- [FSA工作簿所有行與欄位](tables/21_currency_broker_b03_20261007/fsa_workbook_rows.csv)
+- [JPX全部158條參與者](tables/21_currency_broker_b03_20261007/registry_jpx_trading_participants.csv)
+- [官方來源、日期、行數及SHA256](tables/21_currency_broker_b03_20261007/source_manifest.csv)
+
+## 查詢、驗收與缺口
+
+SQLite位於 `reports/2026-10-07/currency_broker_b03/currency_broker.sqlite`：表 `currency_entries`、`country_coverage`、`fsa_firms`、`fsa_workbook_rows`、`jpx_participants`、`sources`；視圖 `type_one_firms`含所有第一種旗標及其限制，並非純證券經紀公司計數。工作簿逐列還原與XML條目解析驗證通過。
+
+上市公司仍沿用前兩批34,938筆未去重来源記錄；本輪未新增上市公司記錄，該數也不是公司總數。美國、日本、香港市場及其他246條目仍有交易所枚舉、完整公司名錄、發行人身份和跨市場關係缺口。
+
+證券行方面，日本僅接收上述來源，其他248國家／地區尚未接收監管全表。[FINRA全量業者API說明](https://developer.finra.org/news/introducing-broker-dealer-firm-list-dataset)提供官方來源線索，但實際全量API資料本輪未取得；不以測試資料替代真實名錄。[香港SFC公眾紀錄冊](https://www.sfc.hk/TC/Regulatory-functions/Intermediaries/Licensing/Register-of-licensed-persons-and-registered-institutions)亦需全量提取並按活動分類，不能把所有持牌個人算成公司。
+
+每國的完成條件是：枚舉主管監管機構及交易所，接收完整名錄，核對日期與官方總數，記錄所有牌照／上市關係，解析法人身份，再對跨國分支、撤銷與有效期間對賬。未達條件不得標記COMPLETE；沒有來源記錄不得判定當地沒有證券行、上市公司或貨幣。本批為持續增補，全球三項全量目標尚未完成。
