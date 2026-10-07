@@ -1,0 +1,38 @@
+---
+title: "增量資料盤點：新核查產物、欄位與來源漂移"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批以開始時工作區文件快照作固定邊界，比對既有 1,989 筆欄位目錄的 168 份來源文件。**168 份來源全部與目錄指紋相符**，沒有以舊定義悄悄覆蓋改動資料。
+
+盤點另找到 **71 份尚未纳入舊目錄的 CSV／TSV、703 個欄位位置**。它們均為既有整合、語義審閱、證據核查及查詢派生產物，本批未發現新增 Reference／DGEF 原始業務表。角色分類為審閱提案，不表示每項產物的全部內容已核實。
+
+| 新盤點文件角色 | 文件數 |
+|---|---|
+| 派生核查產物 | 28 |
+| 語義目錄、版本或未決子集 | 21 |
+| 來源與變更回執 | 16 |
+| 待審定義輸入 | 2 |
+| 官方證據工作隊列 | 1 |
+| 派生查詢投影 | 3 |
+
+**703 個新增欄位位置全部標為 INCREMENTAL_FIELD_REVIEW_PENDING。** 舊固定目錄的零 UNRESOLVED 結論只適用其原範圍，不能據此宣稱新盤點也已完成定義。欄位位置包含多個版本重複結構，不是 703 種獨立業務概念，也不是新增科技事實。
+
+兩份定義 TSV 沒有首行欄名，本批明確採用其布局，保留首行資料；其餘 CSV／TSV 按首行欄名讀取。全部逐行檢查欄位數與標頭唯一性，未發現本批解析結構錯誤。語義及來源內容的實質核查仍需分批進行。
+
+工作區掃描不含 `.git`、符號連結或扫描器自身收據；掃描時有一個 RStudio lock_file 無法讀取，未把它算作成功核查。新產物索引依開始快照建立，不递歸把本批剛生成的索引再次列入，避免盤點自我膨脹。這仍是 CSV／TSV 盤點，不是 Excel、JSON、SQLite、PDF 等所有格式的內容核實。
+
+## 交付與後續
+
+- [71 份新產物索引](../reports/2026-10-07/incremental_catalogue_review/new_artifact_inventory.csv)
+- [703 個待審欄位位置](../reports/2026-10-07/incremental_catalogue_review/incremental_column_catalogue.csv)
+- [168 份原目錄來源漂移檢查](../reports/2026-10-07/incremental_catalogue_review/original_catalogue_source_drift.csv)
+- [新增來源指紋](../reports/2026-10-07/incremental_catalogue_review/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/incremental_catalogue_review/validation.json)、[可審閱盤點程式](../reports/2026-10-07/incremental_catalogue_review/review.py)
+
+下一步應按產物角色整理欄位合同與依賴：字典版本引用既有定义，隊列保留待審，來源回執與業務事實分開，派生投影追溯原始資料及查询口徑。不能從这些副本重複增加全球機構數或 VERIFIED 主張數。全球科技機構與技术的實質查證尚未完成。
+
+本批未修改舊目錄、來源表、DGEF 庫、主報告或既有 HTML。已交付批次拒絕直接覆寫；HTML 編譯成功不代表瀏覽器外觀已核查。
