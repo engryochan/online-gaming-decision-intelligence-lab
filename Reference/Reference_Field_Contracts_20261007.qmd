@@ -1,0 +1,52 @@
+---
+title: "現實服務與前沿登記：欄位定義及查詢口徑"
+date: 2026-10-07
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本批結果
+
+從現行來源 CSV 與原生成程式核對 **8 張表、49 筆未決欄位**，補入有文件與行號可追溯的上下文定義。完整目錄 v4 保留 1,989 筆記錄，其餘 **1,940 筆逐欄不變**。全目錄 UNRESOLVED 從 424 降至 **375**，其中 REFERENCE_DATA 從 160 降至 **111**。
+
+補入定義標為 `CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED`；業務負責人與審批仍待確認。這表示已找到本項目的欄位上下文，不表示來源事實已重新查證。原 CSV、舊目錄、DGEF 庫及生成程式均不修改，不執行歷史生成器。獨立復核核對 11 個來源文件雜湊、49 個定位行號及全部目錄差異。
+
+本批不重新核實歷史統計數值、公司當前產品或合作狀態，也不為候選機構授予世界第一、已部署或可訓練等結論。全球 249 國科技登記的完整查證仍未完成。
+
+## 八表粒度與判讀
+
+| 表 | 記錄粒度 | 查詢限制 |
+|---|---|---|
+| industry_chain_contracts | 一個產業鏈分析設計層 | required_evidence 為所需證據；join_keys 為擬議關聯，非已建外鍵 |
+| provider_capabilities | 一個提供方公開能力描述 | 名稱未必是核實法人；自述不等於独立性能測試 |
+| public_relationships | 一條來源報導的合作關係線索 | 主客體為名稱；合作不自動推定供應層級、金額或控制權 |
+| realworld_observations | 一條手工整理的來源統計 | WORLD、區域和國別混合；價格、分母與期間須分開 |
+| sources | 一条歷史來源登記 | 存取方式與核查日不代表現行可達或已存原始響應 |
+| registry_frontier_claims | 一條候選組織主張 | product_leads_state 不會把全部產品線索升級為 VERIFIED |
+| registry_frontier_organizations | 一個前沿組織候選 | 展示名及類型不代替法人消歧；選入明示未排名 |
+| registry_frontier_sources | 一條候選主張來源 | P0／P1 由組織類型生成，不能當獨立品質評分 |
+
+定義按 `path + table + column_name` 定位，避免同名 `sources` 表跨批次套用。本批只覆蓋現行 Reference CSV，不將定義機械套入歷史輸出或 preview。
+
+## 容易造成誤讀的欄位
+
+`comparison_base` 同時保存比較年份與 GDP 分母標記，不適合直接轉成數字。`region_or_country` 包含全球與區域，不能一律拿來連接 ISO 母表。`price_basis` 區分現價、不變價格及來源比率；不能把軍費當承包商收入、裝備訂單或操作能力。
+
+兩條 `public_relationships` 的 `contract_value` 與 `supplier_tier` 均空，表示本批未記錄；不填 0、不估算層級。`source_date`、`published_on` 與 `checked_on` 分別代表來源標示日、發布日和本批核查日，空值不互相代填。
+
+現實服務來源的 `raw_http_snapshot=NOT_ARCHIVED` 與前沿來源的 `archive_state=NO_RAW_HTTP_ARCHIVE` 均明示沒有本批原始 HTTP 存檔。可閱讀、公開自述、分類 P0／P1、選為候選及已核實領先地位是不同概念，查詢不能相互替代。`redistribution_license=UNKNOWN` 保留未決授權，不能解作許可。
+
+上述是從本項目程式与 CSV 核對的欄位用法；不引用外部資料為歷史數值重新背書。業務價值在於防止誤連接、錯誤聚合與證據範圍擴張，本批沒有量測 ROI。
+
+## 交付與復核
+
+- [49 筆定義及原定義對照](../reports/2026-10-07/reference_field_contracts/definition_changes.csv)
+- [完整欄位目錄 v4](../reports/2026-10-07/reference_field_contracts/field_semantics_v4.csv)
+- [剩餘 375 筆未決清單](../reports/2026-10-07/reference_field_contracts/remaining_unresolved.csv)
+- [來源文件指紋](../reports/2026-10-07/reference_field_contracts/source_manifest.csv)
+- [獨立驗收回執](../reports/2026-10-07/reference_field_contracts/independent_validation.json)
+- [定義詞彙與來源](../reports/2026-10-07/reference_field_contracts/definitions.tsv)、[生成程式](../reports/2026-10-07/reference_field_contracts/build_contracts.py)、[復核程式](../reports/2026-10-07/reference_field_contracts/validate_contracts.py)
+
+生成程式拒絕直接覆寫已交付批次；復核只更新自身回執。上一批[DGEF 欄位合同](DGEF_Field_Contracts_20261007.qmd)及[模型准入核查](DGEF_Model_Gate_Review_20261007.qmd)完整保留。HTML 渲染成功不代表完成瀏覽器外觀檢查。
