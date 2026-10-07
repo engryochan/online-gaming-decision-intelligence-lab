@@ -1,0 +1,49 @@
+---
+title: "DGEF 欄位合同與業務定義審閱稿"
+date: 2026-10-07
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本批交付
+
+以目前 DGEF SQLite 與來源 CSV 為唯讀基線，整理 **44 張表、411 個欄位合同**。每個合同列出表粒度、原定義、審閱定義、實際 SQL 型別、NOT NULL 宣告、主鍵位置、外鍵目的表／欄位、完整表 DDL、空值政策及業務價值提案。NOT NULL 欄位是結構宣告，不能解作空字串、時間格式及現實含義已全部驗證；表 DDL 也不包含所有 trigger，完整約束仍須回查原 schema。
+
+148 筆通用定義改為依表粒度限定的審閱提案，對應 112 個不同欄位名。新目錄保留 1,989 筆記錄；其餘 1,841 筆逐欄完全相同。舊目錄、DGEF 原資料字典、生成器、資料庫與 44 份 CSV 未修改。本批核對 48 個來源文件雜湊，另以獨立程式核對全部 SQL 欄位與外鍵。
+
+**這 148 筆是 PROPOSED_TABLE_CONTRACT_REVIEW，業務負責人仍未指派，審批為 PENDING。全項目 424 筆 UNRESOLVED 沒有因本批降低。** 字典結構查核不等於來源中每一項現實事實已重新核实。現行訓練視圖依然為 0 筆。
+
+## 定義如何使用
+
+| 類別 | 業務價值 | 使用邊界 |
+|---|---|---|
+| 實體、記錄及外部身份鍵 | 支持去重、關聯和更新定位 | 記錄鍵不替代實體鍵；同名不自動合併 |
+| 指標、方法、單位與不確定度 | 支持比較和模型特徵準備 | 仍需受控名錄、量綱、統計含義和方法適用性 |
+| 主張、證據及狀態 | 保留來源論證與審核過程 | SQL 狀態合法不證明內容真實；不同表狀態分開理解 |
+| 授權、發布與保留規則 | 支持用途評估與治理 | PUBLIC 不等於可訓練；許可名稱不替代用途審查 |
+| 世界域、參考系與模擬 | 支持現實、歷史與生成資料隔離 | 模擬人口不當真人普查；坐標不能脫離中心、歷元和單位 |
+| 國家、行政區與覆蓋賬 | 支持全球盤點與缺口追蹤 | 代碼保留前導零；未知分母不宣稱全球查全 |
+
+相同欄位名必須連同 `table` 和 `grain` 解讀。例如 `record_id` 只識別所屬領域表的記錄，`status` 不跨表共用口徑，`country_entity_id` 不推定法律國籍。單位缺失、未知不確定度和未知樣本量均不能補 0。業務價值欄只是用途提案，沒有已測 ROI。
+
+## 後續待決
+
+1. 指定各表業務負責人，逐項決定分類詞彙、欄位缺省與 NULL 原因。
+2. 建立 metric／method／unit 配對合同；不確定度需明確是標準差、區間、誤差界或其他口徑。
+3. 核對來源有效時間、抓取時間、導入時間與模擬執行時間，勿互相替代。
+4. 從[模型准入核查](DGEF_Model_Gate_Review_20261007.qmd)繼續補用途審批、上下文綁定和有效期；本批未建立訓練授權。
+5. 對其餘 424 筆未決欄位及全球科技登記逐批核實，不把本批語義提案當成全球資料完整證明。
+
+## 文件與復核
+
+- [411 筆欄位合同](../reports/2026-10-07/dgef_field_contracts/field_contracts.csv)
+- [148 筆原定義與提案對照](../reports/2026-10-07/dgef_field_contracts/definition_changes.csv)
+- [完整語義目錄 v3](../reports/2026-10-07/dgef_field_contracts/field_semantics_v3.csv)
+- [44 表合同摘要](../reports/2026-10-07/dgef_field_contracts/table_contract_summary.csv)
+- [來源雜湊清單](../reports/2026-10-07/dgef_field_contracts/source_manifest.csv)
+- [獨立驗收回執](../reports/2026-10-07/dgef_field_contracts/independent_validation.json)
+- [提案詞彙](../reports/2026-10-07/dgef_field_contracts/proposed_definitions.tsv)、[生成程式](../reports/2026-10-07/dgef_field_contracts/build_contracts.py)、[復核程式](../reports/2026-10-07/dgef_field_contracts/validate_contracts.py)
+
+已交付批次的生成程式拒絕直接重建，避免覆寫審閱結果；復核程式只讀來源並更新自身驗收回執。需要修訂時建立新批次，保留本批版本。HTML 編譯成功不等於已完成瀏覽器外觀檢查。

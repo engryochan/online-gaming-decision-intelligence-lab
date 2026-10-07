@@ -1,0 +1,112 @@
+access_class	來源的存取分類；PUBLIC 不代表已獲训练或再發布許可
+adapter_id	資料接入適配合同識別鍵，不代表適配器已執行
+alias	來源記錄的實體別名；不得單憑同名合併實體
+alias_id	特定實體別名記錄的識別鍵
+alias_kind	別名用途分類，例如語言名或歷史名稱；分類表待確認
+assessed_at	授權政策評估記錄的時間，並非來源發布時間
+asset_kind	宇航資產類別；類別存在不證明資產已部署
+axis_definition	空間參考系坐標軸的定義，須與原點、單位及時間尺度合讀
+bridge_id	外部命名空間、版本及有效起點所構成映射的記錄識別鍵
+calling_code	國家或地區電話呼叫代碼；不能用作實體唯一鍵
+canonical_name	項目採用的實體規範名稱；不是法律登記核實標記
+catalog_solution	天體目錄採用的解算標識；須核對目錄版本與適用對象
+catalogue_id	待消歧服務名錄行識別鍵，不等於已核實法人根號
+category	待接入服務名錄的分類標籤；分類範圍由本表粒度限定
+center_name	空間參考系中心／原點的名稱，不能替代中心識別合同
+central_body	天體相關記錄所採用的中心天體描述；須核對解算上下文
+confidence	主張的置信評估數值；SQL 0至1約束不證明概率已校準
+country_entity_id	指向本表所屬國家／地區實體的關聯键，不推定法律國籍
+coverage_id	一個國家／地區與一個覆蓋層的覆蓋賬記錄識別鍵
+dataset_version	來源資料集版本標籤；不等同於本項目 schema 版本
+description	本表對象的文字說明；保留來源與粒度，不能充作核實狀態
+direction	證據對主張的關係：支持、反駁或上下文；不直接改判主張
+disclosure_precision	公開施設資料允許披露的位置精度描述；不推導未公開坐標
+doi	研究成果記錄的 DOI；標識存在不等於已讀全文或核實成果
+domain_code	空間／宇域分類代碼，與 HISTORY、REAL-TWIN、SIM、FICTION 世界域分開
+engine_name	虛擬世界使用的引擎名稱；不表明真實世界觀測來源
+engine_version	虛擬世界引擎的版本標籤
+entity_type	實體類型代碼，須參照 registry_entity_type 而不是名稱猜測
+evidence_kind	天體生物學記錄的證據類型；須與發現狀態和來源合讀
+evidence_link_id	主張與來源及可選觀測之間證據鏈記錄的識別鍵
+facility_entity_id	關聯公開設施的實體鍵；可關聯性不授權披露精確位置
+facility_kind	公開設施類型標籤；不推論未公開軍用功能
+finding_status	天體生物學發現的描述狀態，不等同於存在生命已獲證實
+finished_at	模擬執行結束時間；NULL 原因須區分未結束與未記錄
+gap_reason	覆蓋賬未完成或未知的原因說明；不將空表解作對象不存在
+generation_method	合成人口生成方法；生成結果不得冒充真人普查
+geometry_ref	位置幾何資料的外部引用，須核對參考系與披露規則
+history_id	實體狀態歷史事件記錄的識別鍵
+imported_at	資料集導入本系統的時間，不能代替來源有效時間
+infrastructure_kind	基礎設施類型標籤；不代表已公開全部設施
+installed_at	schema 版本在本系統登記安裝的時間
+iso_numeric	ISO 3166-1 數字代碼字串；保留前導零
+jurisdiction_entity_id	公共機關相關管轄實體關聯鍵；須另核權限及有效期間
+language_tag	別名的語言標記；受控標記標準與缺省規則待確認
+layer	國家／地區覆蓋賬的領域層標籤，須與分子分母口徑合讀
+lead_entity_id	宇航計劃牽頭實體的關聯鍵，不自動視為法律所有人
+legal_form	法人組織形式描述；須保留司法區及來源版本
+license	來源許可的標識或文本；許可名不自動核准所有用途
+local_frame	虛擬世界局部參考系描述；不能直接對應地理坐標
+location_observation_id	特定實體位置觀測記錄的識別鍵
+locator	證據在來源中的位置描述；不保證定位引用永久可達
+mandate	公共機關公開職權描述；須保留法定來源與有效期
+method_id	觀測取得或推導方法標識／描述；尚未建成受控方法外鍵
+metric_id	觀測指標標識；尚未建成受控指標外鍵，須補單位和量綱合同
+mission_entity_id	宇航任務的實體關聯鍵，不等同於參與機構鍵
+mission_status	宇航任務狀態描述，須按來源日期判定
+model_version	模擬模型版本標籤，不能單憑版本推定可重現性
+name	本表對象名稱；唯一性及法律效力須由本表合同另定
+name_zh	分類代碼的中文名稱；翻譯不是新實體
+notes	名錄補充說明，保留原始上下文，不自動轉作已核實主張
+object_entity_id	關係記錄中的客體實體鍵；關係意義由 predicate 限定
+object_kind	天體對象類型描述；目錄分類不代表所有性質已核實
+observation_id	特定指標觀測記錄識別鍵，須與主體、方法及來源合讀
+operational_status	設施／資產運行狀態描述，須保留來源及有效時間
+operator_entity_id	公開運營實體關聯鍵，不自動推定所有權或控制權
+org_kind	科研組織類型標籤，須依來源分類判定
+org_role	宇航組織角色描述；多角色應按本表粒度及約束處理
+organization_entity_id	公開角色或相關記錄所屬組織的實體關聯鍵
+parent_entity_id	上級或父級實體關聯鍵；層級不自動構成法律母子公司關係
+person_entity_id	公開職務記錄的個人實體鍵；不額外推導非公開個人資訊
+policy_id	來源許可政策記錄的識別鍵；授權評估須按用途另審
+population_count	合成人口數量；非負整數不表示真實人口統計
+predicate	主張或實體關係的語義謂詞；受控詞彙及方向待確認
+program_entity_id	宇航計劃的實體關聯鍵；須區分計劃與任務
+program_status	宇航計劃狀態描述；不直接轉作完成度或性能指標
+public_acknowledgment_uri	設施公開承認／介紹來源 URI；不推定未披露細節
+publication_date	來源標示的發布日期；未知留 NULL，不以抓取日替代
+publisher	来源發布者名稱；不能單凭名稱認定權威性
+random_seed	模擬隨機種子原始標記；仍需算法、環境和版本才可重現
+record_id	本表一條領域記錄的識別鍵；不是跨表共用實體根號
+reference_uri	定義或解算參考資料 URI；須保留版本與可達性評估
+registration_status	法人來源記錄的登記狀態；不是項目核實狀態
+relation_id	一條有方向實體關係記錄識別鍵
+research_scope	科研組織研究領域描述，不等於已取得能力或成果
+resolution_status	服務名錄消歧處理狀態；PENDING 不創造已核實法人
+retention_rule	許可／治理記錄中的保留規則；尚非自動刪除排程
+review_status	外部身份映射審核狀態；接受映射不核准訓練或全部事實
+role_title	公開職務的職銜描述，須保留來源及任期
+sample_n	觀測樣本量；可空非負整數，不等於來源文獻引用數
+service_kind	服務名錄中的服務類型標籤，不代表性能已查證
+settlement_kind	聚落類型標籤；須依來源行政與地理口徑判定
+simulation_run_id	合成資料所關聯的模擬執行記錄键
+solution_version	星歷或位置解算的版本標籤；與来源数据集版本分開
+source_solution	位置觀測所用來源解算描述；須與參考系、歷元及單位合讀
+source_type	来源類型標籤；OFFICIAL_DATA 不代表所有主張已獨立核實
+started_at	模擬執行開始時間，不是模擬內容代表的歷史時間
+status	本表對象的狀態描述；不同表狀態不可混用
+subdivision_code	來源行政區代碼；須保留國家及代碼系統上下文
+subject_entity_id	主張或關係的主體實體鍵；若可空須保留未匹配原因
+target_table	適配合同預定輸入的表名；不表示已實際入庫
+title	研究成果來源所列標題／描述；文獻引用不能冒充完整核全文篇名
+type_code	實體類型字典的分類代碼
+un_m49_code	UN M49 分類代碼字串；保留前導零及分類層级
+uncertainty	觀測不確定度數值；非負約束不指定統計含義，需方法及單位合同
+uncertainty_ref	位置／解算不確定度的引用描述；未引用不等於零誤差
+unit_type	空間參考系的單位類型描述，須与坐標及速度單位區分
+value_json	主張原始 JSON 值；有效 JSON 不代表業務內容已核實
+vehicle_kind	運載器類型描述；分類不證明載荷或性能數值
+verification_url	名錄來源核查連結；連結存在不是 VERIFIED 判定
+version	本表登記的 schema 版本標識
+version_required	適配合同要求的外部資料版本；需核对實際接入版本
+virtual_world_entity_id	虛擬對象或模擬所屬虛擬世界關聯鍵，不合併到現實身份
