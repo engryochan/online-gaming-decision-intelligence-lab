@@ -1,0 +1,36 @@
+---
+title: "歷史裁決與網址檢查：判定欄位及證據範圍"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批從歷史生成程式追溯 **11 份表、88 筆欄位定義**，完整目錄 v11 仍有 1,989 筆，其餘 **1,901 筆逐欄不變**。UNRESOLVED 由 161 降至 **73**；新增定義為 CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED，業務審批 PENDING。來源 CSV、歷史程式及舊目錄不修改，也不重新抓取網站或執行舊裁決生成器。
+
+六份裁決表含 v_candidate 與 batch02～06；五份檢查表含 v_candidate 與 batch02～05。每表核對行數及 registry_id 的表內唯一性，不將不同批次的同一 ID 當成新增機構，也不宣稱已驗證所有跨批次改判關係。
+
+| 欄位／判定 | 原始口徑與限制 |
+|---|---|
+| prior_status | 裁決採用的前置狀態；與累積變更日志的原始基線狀態分開 |
+| final_status | 該批最終判定，須保留 note、時間與證據範圍 |
+| basis | 人工或自動判定類型，不直接構成證據品質等級 |
+| cited_url、cited_url_http | 原請求 URL 及歷史回應；與 evidence_url 分開 |
+| supersedes | 前版 review_batch 标記；有值不代表已完成全鏈改判驗收 |
+| http_status、final_url | 當時回應及重定向，不證明今日可達或内容真實 |
+| title、terms_found | 擷取標題／預定詞命中，不是主張語義與全文核實 |
+| verdict | 原腳本規則分類；不能獨立充作全面 VERIFIED |
+| error | 請求錯誤摘要，部分程式截斷；空值不保證響應有效 |
+
+一般網址腳本在 HTTP 200 且預定詞命中時產生 V_CONFIRMED，也會識別部分挑戰頁；v_candidate 腳本另可能對 PDF 回應標記 V_PDF_NAME_UNCHECKED。判定規則只支持其有限的頁面／詞命中範圍，不能由此推定法人身份、產品部署、性能、监管或授權已核實。後續裁決程式還可能使用人工覆核與替代來源。
+
+本批不自動降級或提升歷史狀態，不把舊裁決改成今天的核查。用於查詢時應連同 note、basis、日期、evidence_url 及來源限定一起返回，避免只顯示 final_status。全球科技與現行機構事實未在本批重新核實。
+
+- [88 筆定義及程式定位](../reports/2026-10-07/adjudication_field_review/definition_changes.csv)
+- [完整欄位目錄 v11](../reports/2026-10-07/adjudication_field_review/field_semantics_v11.csv)
+- [73 筆歷史未決清單](../reports/2026-10-07/adjudication_field_review/remaining_unresolved.csv)
+- [11 表歷史狀態摘要](../reports/2026-10-07/adjudication_field_review/historical_status_summary.csv)
+- [來源指紋](../reports/2026-10-07/adjudication_field_review/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/adjudication_field_review/validation.json)、[核查程式](../reports/2026-10-07/adjudication_field_review/review.py)
+
+已交付批次拒絕直接重建覆寫。定義校訂不等於來源內容核實，沒有已測 ROI。HTML 編譯成功不代表完成瀏覽器外觀檢查。

@@ -1,0 +1,42 @@
+---
+title: "歷史服務名錄：六版沿革與累積修訂欄位"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批從原抽取及合併程式核對 **78 筆歷史欄位定義**：六版服務名錄各八欄、五份累積變更表各六欄。完整目錄 v10 保留 1,989 筆，其餘 **1,911 筆逐欄不變**；未決欄位由 239 降至 **161**。新定義為 CONTEXT_DEFINED_OWNER_REVIEW_REQUIRED，業務審批仍待確認。
+
+## 版本結構與重要限制
+
+原始名錄及 r2～r6 各有 405 行，ID 順序一致。五版變更表的 old_status、old_verification_url 均與**原始基線**相符，new_status、new_verification_url 均與對應版本名錄相符。未列入變更表的行，其原始欄位保持一致。
+
+**變更表是相對原始基線的累積修訂，不是相鄰版本的差異。** 各版本仍需比較完整行才能判定 r3 相對 r2 等變化；不能把累積日志再逐版加總成新增機構數或核查次數。同一 ID 在六版重現不是六個機構。
+
+本地歷史 r6 的狀態計數為 V 355、P 30、U 20，合計 405。這只是該歷史版本的狀態分布，不能宣稱今日有 355 家全面核實的公司；名稱可能是品牌、項目或其他對象，V/P/U 須與 verified_scope、審閱批次及日期合讀。
+
+## 欄位判讀
+
+| 欄位 | 正確口徑 |
+|---|---|
+| id | 原抽取批次的 E 序號，版本沿用，不是全球永久法人鍵 |
+| category、role | 種子清單的編輯分類與用途，不是性能排名 |
+| name | 展示名稱；文本匹配不完成法人消歧 |
+| status | 該歷史版本的審閱狀態，不自動延續為今日認證 |
+| verification_url | 歷史核查引用；存在連結不等於當前可達或内容已核 |
+| source_context | 原抽取局部文字最多 600 字元，不是完整原文 |
+| matching_files | 名稱／別名匹配文件數，不是独立證據來源數 |
+| old_status、old_verification_url | 原始基線值，並非上一版值 |
+| new_status、new_verification_url | 本版累積修訂後值；U 判定也可能保留原 URL |
+
+本批沒有重新執行歷史抽取／合併生成器，沒有修改名錄、日志、舊目錄、DGEF 庫、原宇航報告或既有 HTML。原基線仍可供已簽發 DGEF 輸入追溯。這些核對確認版本結構，沒有重新驗證當前公司、產品、性能、許可或網址。
+
+- [78 筆定義](../reports/2026-10-07/service_version_review/definition_changes.csv)
+- [完整欄位目錄 v10](../reports/2026-10-07/service_version_review/field_semantics_v10.csv)
+- [161 筆歷史未決清單](../reports/2026-10-07/service_version_review/remaining_unresolved.csv)
+- [六版行數與狀態分布](../reports/2026-10-07/service_version_review/version_summary.csv)
+- [來源指紋](../reports/2026-10-07/service_version_review/source_manifest.csv)
+- [核查回執](../reports/2026-10-07/service_version_review/validation.json)、[核查程式](../reports/2026-10-07/service_version_review/review.py)
+
+已交付批次拒絕直接重建覆寫。業務價值在於防止累積修訂被重複計算及保留來源版本，沒有已測 ROI。全球科技事實尚未查全；HTML 編譯成功不代表已核查瀏覽器外觀。
