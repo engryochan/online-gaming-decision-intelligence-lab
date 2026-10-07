@@ -1,0 +1,369 @@
+---
+title: "世界前沿地緣戰略、軍工、宇航與人工智能生態登記報告"
+subtitle: "OGDIL — 機構、能力主張與證據分層；ISO國家母表擴展接口"
+author: "Ryo Eng（雷欧）"
+date: 2026-10-06
+lang: zh-TW
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    embed-resources: true
+    page-layout: full
+  pdf:
+    toc: true
+execute:
+  echo: false
+---
+
+## 研究範圍與可回答的問題
+
+本輪以世界前沿研究與產業生態為入口，逐間列出公司、集團、組織、研究所與大學單位，涵蓋地緣研究、策略服務、軍工、宇航、GEOINT、AI及工程基礎設施。這是一份**可追溯研究登記冊，不是全球排名或全世界機構普查完成聲明**。同一集團的產品不冒充不同公司；研究所、政府機構和跨國組織也不混算為企業。
+
+「世界級最前沿兼頂尖高端」以跨國研究／服務、公開前沿技術、全球關聯資料或專業任务系统作為候選篩選方向。只有官方描述支持的用途可寫為VERIFIED；各家的世界排名、性能優勢、軍方部署與採購資格本輪均未獨立比較。傳統軍工主承包商、前沿AI與自主系統公司、航天機構、資料服務及學術研究分層比較，不能用一個營收或模型分數統一排序。地方性、只在單國營運的條目保留為生態與原文覆蓋線索，不自動授予「頂尖」稱號。
+
+本報告與原 [宇航數據栈比較報告](Aerospace_Ecosystem_Report.qmd) 分檔保留：原報告記錄歷史研究內容，本報告列出後續校訂與新增登記，不覆寫或掩蓋原文。舊版未充分佐證的「更高維度」「霸主」「唯一重度重疊」「某國全部使用某栈」結論，適用下文逐项核對裁定。參考問答檔是候選來源，不是一手資料；本輪核實採用政府、研究機構、供應商與官方開源倉庫。日期為查閱日期，不是每項主張的發布或生效日期。
+
+## 證據規則
+
+| 欄位／等級 | 精確含義 |
+|---|---|
+| VERIFIED | 已讀官方頁面支持本列具體公開描述；供應商自述不等於獨立測效 |
+| UNKNOWN | 未核實、訪問失敗、證據不充分或名稱待消歧；不等於不存在或能力為零 |
+| P0／P1 | 來源類別：公共／研究官方或供應商官方；與claim驗證狀態分開 |
+| 產品／項目線索 | 研究入口；只有claim明確涵蓋的名稱可視作本輪已核實 |
+| 國家候選 | 供後續ISO關聯的編輯定位，並非法定註冊地核驗或服務覆蓋清單 |
+| performance／deployment／regulatory | 均維持UNKNOWN，後續按產品版本、任務、合同與證據逐項補齊 |
+
+官網頁面無內容、訪問挑戰或域名轉向其他品牌時，不能把頁面存在當作能力證據。例如Govini入口轉向air.ai、SpaceX首頁無可讀文本，已明列UNKNOWN。沒有保存原始HTTP響應，文件SHA256只證明本批本地文件完整性，不證明網頁原文存檔。
+
+## 參考檔與舊版報告的核對裁定
+
+| 問題 | 校訂與核實依據 |
+|---|---|
+| Athea提供方寫成Helsing×Saab | 改為Thales與Eviden；[Athea官方](https://athea.tech/)明列合作方。Helsing、Saab另列機構 |
+| IBM i2現行歸属 | 使用i2 Group；[官方2024說明](https://i2group.com/articles/2024-08-09pressrelease)確認2022年Harris從IBM收購 |
+| Ansys母集團 | [官方公告](https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys)確認2025-07-17完成收購；STK仍為產品品牌 |
+| 起源國即決定全面禁用 | 撤回。ITAR涉及防務物項／服務與技術資料，EAR需判定物項及交易，CMMC為合同相關網絡安全要求；三者不能合併成所有美歐國防通用軟件黑名單。[DDTC](https://www.pmddtc.state.gov/ddtc_public)、[BIS](https://www.bis.gov/licensing)、[CMMC](https://www.acq.osd.mil/asda/dpc/cp/cyber/cmmc.html) |
+| StarRocks秒級上限、百萬點必崩 | 撤回未測試數值；[官方功能頁](https://docs.starrocks.io/docs/introduction/Features/)定位為實時分析。是否適合特定遥测分析須測試寫入、p99時延與故障語義 |
+| ECharts上萬通道必卡、Grafana必為WebGL | 無實測與具體渲染插件證據，不成立；應按點數、刷新率、瀏覽器、抽樣與引擎比較 |
+| NASA VEDA採用Airflow | [NASA-IMPACT官方倉庫](https://github.com/NASA-IMPACT/veda-data-airflow)支持存在VEDA攝取實作；不能證明航空航天通用標配 |
+| 用供應商合同名單否定開源庫使用 | 公司承包商名單與開源依賴清單粒度不同，無法據前者得出後者不存在 |
+| SitaWare北約標準與跨國採用數 | 官方[產品頁](https://systematic.com/int/industries/defence/products/sitaware-suite/)支持C4ISR用途，未核實正式標準身份與原文各項2026里程碑 |
+| SpaceX完整栈、Eutelsat600+、UDL日記錄量 | 缺少本輪具體一手證據；保持UNKNOWN，取消數值性能結論 |
+| cFS、F Prime、COSMOS、RTOS混列 | 飛行軟件框架、地面指控與操作系統不同；NASA及OpenC3項目需各自版本與任務證據 |
+| 中俄體制100%、國家單一栈、新馬合列 | 撤回整體概括。SG與MY分別關聯；無公開證據不能反推弱勢或全閉源 |
+| 全年營收22億vs71.9億、最新MCP發布月 | 本輪不取用；須按具體日期與公司公告重新核實 |
+
+參考檔新增優先校訂索引，保留原模型回答供溯源。全檔已作結構掃描；實質查證集中在提問卅九、卌與本報告，其他歷史主張仍須逐項審核。
+
+## 按場景比較平台，避免虛構通用技術栈
+
+| 場景 | 需要的能力 | 研究入口 | 必須另驗證 |
+|---|---|---|---|
+| 地緣戰略與風險 | 事件來源、可重現指標、情景與分析 | RAND、SIPRI、CSIS、HCSS、Janes、ACLED、RANE、Control Risks | 樣本偏差、覆蓋、修訂與資料許可 |
+| 情報融合與指揮支持 | 實體、來源、權限、可審計工作流 | Palantir、Systematic、Anduril、Athea、i2、Esri | 實際任務部署、授權環境與人員監督 |
+| 航天工程與任務分析 | 軌道、幾何、模型、誤差與接口 | Synopsys/Ansys、GMV、NASA、Dassault Systèmes | 模型適用性、版本、精度與驗收 |
+| GEOINT與空间情报 | 光學／SAR／RF與來源時間 | Planet、ICEYE、Capella、BlackSky、LeoLabs、Slingshot | 解析度、延遲、重訪、錯誤率與再分發權 |
+| AI研究與模型 | 推理、視覺、科學模型、評估與治理 | OpenAI、DeepMind、Anthropic、Mistral、DeepSeek、NVIDIA、大學研究單位 | 同條件基準、訓練許可、任務安全與漂移 |
+| 遙測分析與數據管線 | 寫入、查詢、保留、回放、DQ | 時序庫／OLAP／流處理與Airflow按需求選型 | 同負載吞吐、p99時延、失效恢復與時序語義 |
+| 安全關鍵控制 | 決定性、分區、WCET與认证 | RTOS、隔離內核與飛行框架候選 | 指定版本、目標硬件、認證範圍；不能用數倉基準代替 |
+
+硬實時控制與地面分析的邊界由任務安全要求決定。數倉、GIS、模型和指揮平台可共存，不構成一條「高級／低級」替換鏈。Airflow可編排含HPC提交的工作流，但不取代PBS/Slurm資源調度。跨氣隙交付也須指定實際轉運與驗證機制，不能僅由pull/push判定可行。
+
+## 逐機構登記索引
+
+本批登記 **196 個機構／項目候選**：**83** 條公開描述為VERIFIED，**113** 條為UNKNOWN。每列有獨立ID，所有候選均列出，無法讀取的來源保留待核實。此處產品列為線索，證據只覆蓋用途主張。
+
+### 地緣研究與全球事件
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0001 | [RAND](https://www.rand.org/about.html)／RESEARCH_ORG | US | 政策研究、FFRDC | **VERIFIED**：公开开展政策、国家安全与国际事务研究 |
+| FRO0002 | [IISS](https://www.iiss.org/about-us/)／THINK_TANK | GB | The Military Balance、Strategic Survey | **UNKNOWN**：UNKNOWN：本轮页面仅返回 iframe，产品与覆盖待核实 |
+| FRO0003 | [SIPRI](https://www.sipri.org/about)／RESEARCH_ORG | SE | 军费、军贸数据库与年鉴 | **VERIFIED**：公开开展冲突、军备与裁军研究 |
+| FRO0004 | [CSIS](https://www.csis.org/)／THINK_TANK | US | 国际安全与政策研究 | **VERIFIED**：官网公开发布国际政策与安全研究 |
+| FRO0005 | [Chatham House](https://www.chathamhouse.org/)／THINK_TANK | GB | 国际事务研究 | **VERIFIED**：官网公开发布国际事务研究 |
+| FRO0006 | [HCSS](https://hcss.nl/)／THINK_TANK | NL | 战略研究、GINA 线索 | **VERIFIED**：官网公开提供战略研究 |
+| FRO0007 | [ACLED](https://acleddata.com/about-acled)／NONPROFIT | US | 冲突与抗议事件数据 | **VERIFIED**：公开描述全球政治暴力与抗议数据分析 |
+| FRO0008 | [GDELT Project](https://gdeltproject.org/)／PROJECT | 未分配／跨國 | 新闻事件数据库 | **VERIFIED**：公开提供全球新闻与事件数据项目 |
+
+### 策略服務與OSINT
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0009 | [Janes](https://www.janes.com/)／COMPANY | GB | 国防情报数据库 | **VERIFIED**：官网描述开源国防与安全情报服务 |
+| FRO0010 | [RANE](https://www.ranenetwork.com/)／COMPANY | US | 风险情报平台、Stratfor 线索 | **VERIFIED**：官网描述企业风险情报服务 |
+| FRO0011 | [Control Risks](https://www.controlrisks.com/)／COMPANY | GB | 地缘风险、尽调与咨询 | **VERIFIED**：官网描述全球风险咨询服务 |
+| FRO0012 | [Recorded Future](https://www.recordedfuture.com/)／COMPANY | US | 威胁情报、MCP 接口线索 | **VERIFIED**：官网描述网络威胁情报服务；MCP 发布日未在本轮核实 |
+| FRO0013 | [Govini](https://www.govini.com/)／COMPANY | US | Ark | **UNKNOWN**：UNKNOWN：访问原域名转向 air.ai，不能据此确认 Ark 当前产品状态 |
+| FRO0014 | [Roke Manor Research](https://www.roke.co.uk/)／COMPANY | GB | Crucible | **UNKNOWN**：UNKNOWN：参考档产品线索待一手核实 |
+| FRO0015 | [BMI / GeoQuant](https://www.fitchsolutions.com/)／BUSINESS_UNIT | 未分配／跨國 | 国别风险、量化地缘风险 | **UNKNOWN**：UNKNOWN：提供方与产品关系待核实 |
+| FRO0016 | [Bellingcat](https://www.bellingcat.com/)／NONPROFIT | NL | 开源调查与工具集 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0017 | [Maltego](https://www.maltego.com/)／COMPANY | DE | OSINT 关系分析 | **VERIFIED**：官网描述开源情报与网络调查平台 |
+| FRO0018 | [i2 Group](https://i2group.com/solutions/i2-analysts-notebook)／COMPANY | 未分配／跨國 | Analyst's Notebook | **VERIFIED**：产品页描述实体关系与可视分析；官方说明2022年由Harris从IBM收购 |
+| FRO0019 | [Meteomatics](https://www.meteomatics.com/)／COMPANY | CH | 天气数据 API、气象情报 | **VERIFIED**：官网描述气象情报服务 |
+| FRO0020 | [中科闻歌](https://www.wenge.com/)／COMPANY | CN | DIP、DOMA、Decitron | **UNKNOWN**：UNKNOWN：沿用旧批线索，本轮未复核 |
+| FRO0021 | Earthian AI／UNRESOLVED | 未分配／跨國 | 地缘风险 AI 线索 | **UNKNOWN**：UNKNOWN：名称、法人和性能均待核实 |
+| FRO0022 | NERAI／UNRESOLVED | 未分配／跨國 | 地缘风险 AI 线索 | **UNKNOWN**：UNKNOWN：名称、法人和性能均待核实 |
+
+### 軍工、指揮與防務AI
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0023 | [Palantir Technologies](https://www.palantir.com/platforms/gotham/)／COMPANY | US | Gotham、Foundry、AIP、Apollo、Maven、TITAN、Warp Core | **VERIFIED**：Gotham公开描述国防情报融合与决策支持；不能外推具体部署栈 |
+| FRO0024 | [Anduril Industries](https://www.anduril.com/lattice/command-and-control)／COMPANY | US | Lattice、Menace | **VERIFIED**：公开描述传感器与系统连接的指挥控制平台 |
+| FRO0025 | [Systematic](https://systematic.com/int/industries/defence/products/sitaware-suite/)／COMPANY | DK | SitaWare、IRIS、EWare | **VERIFIED**：SitaWare产品页描述多域C4ISR；不等于北约规范标准 |
+| FRO0026 | [Lockheed Martin](https://www.lockheedmartin.com/en-us/products/command-control-battle-management-communications-c2bmc.html)／GROUP | US | C2BMC、CommandIQ、AIR6500、DIAMONDShield | **VERIFIED**：C2BMC产品页描述指挥控制与战斗管理 |
+| FRO0027 | [Northrop Grumman](https://www.northropgrumman.com/)／GROUP | US | IBCS、航天与传感器线索 | **VERIFIED**：官网公开航空、防务与太空业务 |
+| FRO0028 | [RTX](https://www.rtx.com/)／GROUP | US | Raytheon、Collins Aerospace、Pratt & Whitney | **VERIFIED**：官网公开航空与防务业务 |
+| FRO0029 | [BAE Systems](https://www.baesystems.com/en)／GROUP | GB | GXP、SOCET GXP、RAD 系列、BISim 线索 | **VERIFIED**：官网公开防务技术业务；逐款型号待核实 |
+| FRO0030 | [L3Harris Technologies](https://www.l3harris.com/)／GROUP | US | 战术通信、航天与传感器 | **VERIFIED**：官网公开防务技术业务 |
+| FRO0031 | [General Dynamics](https://www.gd.com/)／GROUP | US | 任务系统、通信与平台 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0032 | [Thales](https://athea.tech/)／GROUP | FR | 防务、航天、通信、Luna | **VERIFIED**：Athea官方材料确认Thales为合作方；其他型号本轮待核实 |
+| FRO0033 | [Leonardo](https://www.leonardo.com/en/)／GROUP | IT | 航空、防务与安全 | **VERIFIED**：官网公开航空、防务与安全业务 |
+| FRO0034 | [Airbus](https://www.airbus.com/en/products-services/defence)／GROUP | FR | Defence and Space、Skywise、Pléiades Neo | **VERIFIED**：防务官网公开防务业务；不将整个集团归为单一法国法人 |
+| FRO0035 | [Boeing](https://www.boeing.com/defense)／GROUP | US | Defense Space & Security | **VERIFIED**：官网公开防务与航天业务 |
+| FRO0036 | [Saab](https://www.saab.com/)／GROUP | SE | 传感器、平台与任务系统 | **VERIFIED**：官网公开防务业务；不是Athea合作方证据 |
+| FRO0037 | [Helsing](https://helsing.ai/company)／COMPANY | DE | 防务AI、Centaur、HX-2 线索 | **VERIFIED**：官网描述防务AI，并披露与Mistral合作 |
+| FRO0038 | [Athea](https://athea.tech/)／JOINT_VENTURE | FR | 主权大数据平台 | **VERIFIED**：官方明确由Thales与Eviden支持的主权大数据方案 |
+| FRO0039 | [Eviden](https://eviden.com/en/products/mission-critical-systems)／BUSINESS_UNIT | FR | 任务关键系统、Athea | **VERIFIED**：官方任务关键系统页列出Athea |
+| FRO0040 | [Elbit Systems](https://www.elbitsystems.com/)／GROUP | IL | C4ISR、电子与无人系统 | **VERIFIED**：官网公开防务技术业务 |
+| FRO0041 | [Israel Aerospace Industries](https://www.iai.co.il/)／GROUP | IL | 航空、航天与防务系统 | **VERIFIED**：官网公开航空航天与防务业务 |
+| FRO0042 | [ST Engineering](https://www.stengg.com/)／GROUP | SG | 航空、数字与防务服务 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0043 | [中国航天科工集团 CASIC](https://www.casic.com.cn/)／GROUP | CN | 航天与防务系统 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0044 | [中国电子科技集团 CETC](https://www.cetc.com.cn/)／GROUP | CN | 电子与信息系统 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0045 | [中国航空工业集团 AVIC](https://www.avic.com/)／GROUP | CN | 航空工业 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0046 | [中国兵器工业集团 NORINCO Group](https://www.norincogroup.com.cn/)／GROUP | CN | 陆地装备与防务 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0047 | [Rostec](https://rostec.ru/)／GROUP | RU | 工业与防务 | **UNKNOWN**：UNKNOWN：未在本轮核实 |
+| FRO0048 | [Rheinmetall](https://www.rheinmetall.com/)／GROUP | DE | 车辆、传感器与防务 | **UNKNOWN**：UNKNOWN：补充研究候选，未核实 |
+| FRO0049 | [HENSOLDT](https://www.hensoldt.net/)／COMPANY | DE | 防务传感器 | **UNKNOWN**：UNKNOWN：补充候选，逐项能力未核实 |
+| FRO0050 | [Hanwha Aerospace](https://www.hanwhaaerospace.com/)／GROUP | KR | 航空与防务 | **UNKNOWN**：UNKNOWN：补充研究候选，未核实 |
+| FRO0051 | [国立中山科学研究院](https://www.ncsist.org.tw/)／RESEARCH_ORG | TW | 防务研发 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0052 | [汉翔航空工业](https://www.aidc.com.tw/)／COMPANY | TW | 航空研发与制造 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0053 | [乌克兰国防部](https://mod.gov.ua/)／PUBLIC_BODY | UA | Delta | **UNKNOWN**：UNKNOWN：Delta版本、部署与架构须另取官方项目证据 |
+| FRO0054 | HADES / HDS FUSION／UNRESOLVED | 未分配／跨國 | 多域C4ISR | **UNKNOWN**：UNKNOWN：参考档名称与提供方法人待消歧 |
+| FRO0195 | 经纬航太／COMPANY | TW | 无人系统 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0196 | 创未来／COMPANY | TW | 通信与传感器线索 | **UNKNOWN**：UNKNOWN：名称与法人待核实 |
+
+### 宇航機構、企業與空間態勢
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0055 | [NASA](https://www.nasa.gov/)／PUBLIC_BODY | US | cFS、GMAT、OpenMDAO、VEDA | **VERIFIED**：官网公开航天探索与科研任务；框架逐项证据须分开 |
+| FRO0056 | [NASA JPL](https://www.jpl.nasa.gov/)／RESEARCH_ORG | US | F Prime、SPICE | **VERIFIED**：官网公开行星探索研究；是机构条目，不是独立集团 |
+| FRO0057 | [ESA](https://www.esa.int/)／INTERGOVERNMENTAL | 未分配／跨國 | 航天科学与任务 | **VERIFIED**：官网公开多国航天任务；不得编码为一个ISO国家 |
+| FRO0058 | [DLR](https://www.dlr.de/en)／RESEARCH_ORG | DE | 航天、航空与研究 | **VERIFIED**：官网公开航空航天研究 |
+| FRO0059 | [CNES](https://cnes.fr/)／PUBLIC_BODY | FR | 航天任务与研究 | **VERIFIED**：官网公开航天任务与研究 |
+| FRO0060 | [JAXA](https://www.jaxa.jp/)／PUBLIC_BODY | JP | 航天航空研发与任务 | **VERIFIED**：官网公开航天航空研发 |
+| FRO0061 | [ISRO](https://www.isro.gov.in/)／PUBLIC_BODY | IN | 航天研发与任务 | **VERIFIED**：官网公开航天任务 |
+| FRO0062 | [KARI](https://www.kari.re.kr/eng)／RESEARCH_ORG | KR | 航空航天研发 | **VERIFIED**：官网公开航空航天研究 |
+| FRO0063 | [中国航天科技集团 CASC](https://www.spacechina.com/n25/n146/)／GROUP | CN | 运载器、卫星与航天产业 | **VERIFIED**：官方业务页公开卫星应用与航天产业业务 |
+| FRO0064 | [CNSA](https://www.cnsa.gov.cn/)／PUBLIC_BODY | CN | 航天管理与任务 | **UNKNOWN**：UNKNOWN：补充候选，未在本轮核实 |
+| FRO0065 | [Roscosmos](https://www.roscosmos.ru/)／PUBLIC_BODY | RU | 航天任务 | **UNKNOWN**：UNKNOWN：参考档线索，本轮未核实 |
+| FRO0066 | [SpaceX](https://www.spacex.com/)／COMPANY | US | Falcon、Dragon、Starlink、Starship | **UNKNOWN**：UNKNOWN：首页无可读文本；内部栈与在轨节点数未核实 |
+| FRO0067 | [Blue Origin](https://www.blueorigin.com/)／COMPANY | US | New Glenn、New Shepard | **VERIFIED**：官网公开航天运输与系统业务 |
+| FRO0068 | [Rocket Lab](https://rocketlabcorp.com/)／GROUP | US | Electron、Neutron、航天系统 | **VERIFIED**：官网公开发射与航天系统业务 |
+| FRO0069 | [OHB](https://www.ohb.de/)／GROUP | DE | 卫星与航天系统 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0070 | [Isar Aerospace](https://www.isaraerospace.com/)／COMPANY | DE | Spectrum | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0071 | [Orbex](https://orbex.space/)／COMPANY | GB | Prime | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0072 | [蓝箭航天 LandSpace](https://www.landspace.com/)／COMPANY | CN | 朱雀系列 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0073 | [星河动力 Galactic Energy](https://www.galactic-energy.cn/)／COMPANY | CN | 谷神星、智神星 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0074 | [COMSPOC](https://www.comspoc.com/)／COMPANY | US | SSASuite | **VERIFIED**：官网公开空间态势业务；精度与部署须产品级证据 |
+| FRO0075 | [GMV](https://www.gmv.com/en/products/space/ecosstm)／GROUP | ES | Ecosstm | **VERIFIED**：官方产品页描述SSA/SST/SDA/STM及编目、碰撞分析 |
+| FRO0076 | [LeoLabs](https://leolabs.space/)／COMPANY | US | 轨道监测与情报 | **VERIFIED**：官网公开轨道情报服务 |
+| FRO0077 | [Slingshot Aerospace](https://www.slingshot.space/)／COMPANY | US | 空间运营情报 | **VERIFIED**：官网公开空间运营情报服务 |
+| FRO0078 | [Neuraspace](https://www.neuraspace.com/)／COMPANY | PT | 空间交通管理 | **VERIFIED**：官网公开空间交通管理服务 |
+| FRO0079 | [OKAPI:Orbits](https://www.okapiorbits.space/en)／COMPANY | DE | 轨道运营与交通管理 | **VERIFIED**：官网公开轨道运营服务 |
+| FRO0080 | [Saber Astronautics](https://www.saberastro.com/)／COMPANY | 未分配／跨國 | Space Cockpit、WINDU、Singularity | **VERIFIED**：官网公开空间运营业务；产品与2026发布日期待核实 |
+| FRO0081 | [Aldoria](https://www.aldoria.com/)／COMPANY | FR | 空间监测 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0082 | [ExoAnalytic Solutions](https://www.exoanalytic.com/)／COMPANY | US | 光学空间监测 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0083 | [a.i. solutions](https://ai-solutions.com/)／COMPANY | US | FreeFlyer | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0194 | [USGS](https://www.usgs.gov/)／PUBLIC_BODY | US | Landsat与地球观测 | **UNKNOWN**：UNKNOWN：NASA与USGS职责需项目级证据 |
+
+### GEOINT與遥感
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0084 | [Esri](https://www.esri.com/en-us/industries/defense/overview)／COMPANY | US | ArcGIS Pro、Enterprise、AllSource、Defense Mapping | **VERIFIED**：国防产品页公开军事GIS应用 |
+| FRO0085 | [Planet Labs](https://www.planet.com/)／COMPANY | US | PlanetScope、SkySat | **VERIFIED**：官网公开卫星影像与地球数据分析 |
+| FRO0086 | [ICEYE](https://www.iceye.com/)／COMPANY | FI | SAR影像与分析 | **VERIFIED**：官网公开SAR与地球观测服务 |
+| FRO0087 | [BlackSky](https://blacksky.com/)／COMPANY | US | Spectra | **VERIFIED**：官网公开空间情报业务；具体刷新率未核实 |
+| FRO0088 | [Capella Space](https://www.capellaspace.com/)／COMPANY | US | SAR地球观测 | **VERIFIED**：官网公开全天候地球情报业务 |
+| FRO0089 | [HawkEye 360](https://www.hawkeye360.com/)／COMPANY | US | RF空间情报 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0090 | [Maxar / Vantor](https://www.maxar.com/)／UNRESOLVED | US | WorldView Legion | **UNKNOWN**：UNKNOWN：参考档混用品牌，须分辨改名、资产与法人关系 |
+| FRO0091 | [Hexagon](https://hexagon.com/)／GROUP | SE | ERDAS IMAGINE、Luciad | **UNKNOWN**：UNKNOWN：参考档线索，本轮未核实 |
+| FRO0092 | [NV5 Geospatial](https://www.nv5geospatialsoftware.com/)／BUSINESS_UNIT | US | ENVI | **UNKNOWN**：UNKNOWN：当前归属与产品状态待核实 |
+| FRO0167 | [Cesium](https://cesium.com/)／COMPANY | US | CesiumJS、3D地理空间 | **VERIFIED**：官网描述3D地理空间平台；当前母集团关系另核实 |
+| FRO0190 | [ADS-B Exchange](https://www.adsbexchange.com/)／UNRESOLVED | 未分配／跨國 | 航空数据 | **UNKNOWN**：UNKNOWN：参考档提供方与数据覆盖待核实 |
+| FRO0191 | [MarineTraffic](https://www.marinetraffic.com/)／UNRESOLVED | 未分配／跨國 | 船舶与AIS数据 | **UNKNOWN**：UNKNOWN：当前母集团与数据覆盖待核实 |
+| FRO0192 | [Liveuamap](https://liveuamap.com/)／UNRESOLVED | 未分配／跨國 | 事件地图 | **UNKNOWN**：UNKNOWN：来源与提供方身份待核实 |
+| FRO0193 | [Sentinel Hub / Sinergise](https://www.sentinel-hub.com/)／UNRESOLVED | 未分配／跨國 | 遥感数据接口 | **UNKNOWN**：UNKNOWN：提供方、母集团与数据产品关系待核实 |
+
+### 前沿AI與大學研究
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0093 | [OpenAI](https://openai.com/about/)／COMPANY | US | 基础模型与AI研究 | **VERIFIED**：官方About页公开AI研究定位；不证明涉密部署 |
+| FRO0094 | [Google DeepMind](https://deepmind.google/)／BUSINESS_UNIT | GB | Gemini、科学AI与机器人研究 | **VERIFIED**：官网公开AI模型与科研业务；具体版本性能未比较 |
+| FRO0095 | [Anthropic](https://www.anthropic.com/)／COMPANY | US | Claude、模型研究与安全 | **VERIFIED**：官网公开AI模型业务 |
+| FRO0096 | [Mistral AI](https://mistral.ai/)／COMPANY | FR | 基础模型与企业AI | **VERIFIED**：官网公开模型与主权AI服务 |
+| FRO0097 | [Meta AI](https://ai.meta.com/)／BUSINESS_UNIT | US | Llama、AI研究 | **UNKNOWN**：UNKNOWN：本轮页面未取得足够可读内容 |
+| FRO0098 | [NVIDIA](https://www.nvidia.com/en-us/ai/)／COMPANY | US | GPU、AI软件、Omniverse、Earth-2 | **VERIFIED**：官网公开AI平台业务；具体装备采用未知 |
+| FRO0099 | [Microsoft Research](https://www.microsoft.com/en-us/research/)／RESEARCH_ORG | US | AI与计算研究 | **VERIFIED**：官网公开计算与技术研究 |
+| FRO0100 | [DeepSeek](https://www.deepseek.com/)／COMPANY | CN | 基础模型 | **VERIFIED**：官网公开模型与服务入口；性能未独立核实 |
+| FRO0101 | [Alibaba / Qwen](https://www.qwen.ai/)／BUSINESS_UNIT | CN | Qwen模型 | **UNKNOWN**：UNKNOWN：本轮入口访问失败 |
+| FRO0102 | [xAI](https://x.ai/)／COMPANY | US | Grok | **UNKNOWN**：UNKNOWN：入口显示SpaceXAI，当前法人归属与品牌须另核实 |
+| FRO0103 | [Allen Institute for AI](https://ai2.org/)／RESEARCH_ORG | US | 开放AI研究 | **UNKNOWN**：UNKNOWN：ai2.org访问失败，不把孵化器网站当作研究院 |
+| FRO0104 | [Stanford HAI](https://hai.stanford.edu/)／UNIVERSITY_UNIT | US | 以人为本AI研究 | **VERIFIED**：官网公开人本AI研究与政策活动 |
+| FRO0105 | [MIT CSAIL](https://www.csail.mit.edu/)／UNIVERSITY_UNIT | US | 计算与AI研究 | **VERIFIED**：官网公开计算科学与AI研究 |
+| FRO0106 | [Berkeley BAIR](https://bair.berkeley.edu/)／UNIVERSITY_UNIT | US | AI研究 | **UNKNOWN**：UNKNOWN：本轮无可读文本 |
+| FRO0107 | [Alan Turing Institute](https://www.turing.ac.uk/)／RESEARCH_ORG | GB | 数据科学与AI研究 | **VERIFIED**：官网公开数据科学与AI研究 |
+| FRO0108 | [Inria](https://www.inria.fr/en)／RESEARCH_ORG | FR | 数字科学与AI研究 | **UNKNOWN**：UNKNOWN：本轮受到访问挑战 |
+
+### 政府、軍方公開研究與多國組織
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0109 | [DARPA](https://www.darpa.mil/)／PUBLIC_BODY | US | 公开研发项目 | **VERIFIED**：官网公开先进研发项目；项目阶段须另取证 |
+| FRO0110 | [LLNL](https://www.llnl.gov/)／RESEARCH_ORG | US | 国家安全科学、JCATS线索 | **VERIFIED**：官网公开国家安全与科学研究；JCATS需项目页 |
+| FRO0111 | [AFRL](https://www.afrl.af.mil/)／RESEARCH_ORG | US | AFSIM | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0112 | [US Naval Research Laboratory](https://www.nrl.navy.mil/)／RESEARCH_ORG | US | 海军科研 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0113 | [NATO](https://www.nato.int/en)／INTERGOVERNMENTAL | 未分配／跨國 | FMN、STANAG、公开研发 | **VERIFIED**：官网公开多国联盟活动；联盟标准须逐份核实 |
+| FRO0114 | [US Department of Defense](https://www.defense.gov/)／PUBLIC_BODY | US | 公开采购与研发项目 | **UNKNOWN**：UNKNOWN：参考档线索，项目独立取证 |
+| FRO0115 | [US Space Force](https://www.spaceforce.mil/)／PUBLIC_BODY | US | ATLAS、UDL、Space-Track | **UNKNOWN**：UNKNOWN：具体项目、承包方与当前状态待核实 |
+| FRO0116 | [DIA](https://www.dia.mil/)／PUBLIC_BODY | US | MARS | **UNKNOWN**：UNKNOWN：项目线索待核实 |
+| FRO0117 | [NGA](https://www.nga.mil/)／PUBLIC_BODY | US | GEOINT | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0118 | [NRO](https://www.nro.gov/)／PUBLIC_BODY | US | 公开航天侦察项目 | **UNKNOWN**：UNKNOWN：不得据机构名称推断产品栈 |
+| FRO0119 | [ODNI](https://www.dni.gov/)／PUBLIC_BODY | US | 公开情报治理文件 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0120 | [NSA](https://www.nsa.gov/)／PUBLIC_BODY | US | 公开科研与标准 | **UNKNOWN**：UNKNOWN：不得据机构名称推断产品栈 |
+| FRO0121 | [GCHQ](https://www.gchq.gov.uk/)／PUBLIC_BODY | GB | 公开研究与安全 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0122 | [DGSE](https://www.dgse.gouv.fr/)／PUBLIC_BODY | FR | 公开机构职责 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0123 | 以色列8200部队／MILITARY_UNIT | IL | 公开项目线索 | **UNKNOWN**：UNKNOWN：单位公开资料与项目须分别取证 |
+| FRO0172 | [OGC](https://www.ogc.org/)／STANDARDS_ORG | 未分配／跨國 | 地理空间开放标准 | **VERIFIED**：官网公开地理空间标准工作；标准版本逐份核实 |
+| FRO0173 | [CCSDS](https://public.ccsds.org/)／STANDARDS_ORG | 未分配／跨國 | 航天数据与通信标准 | **UNKNOWN**：UNKNOWN：本轮访问失败 |
+| FRO0174 | [UNOOSA](https://www.unoosa.org/)／PUBLIC_BODY | 未分配／跨國 | 空间条约与公开登记 | **UNKNOWN**：UNKNOWN：参考档线索，未在本轮核实 |
+| FRO0175 | [COSPAR](https://cosparhq.cnes.fr/)／SCIENTIFIC_ORG | 未分配／跨國 | 行星保护与科学研究 | **UNKNOWN**：UNKNOWN：参考档线索，未在本轮核实 |
+| FRO0176 | [NIST](https://www.nist.gov/)／PUBLIC_BODY | US | SP800系列、FIPS、密码与安全标准 | **UNKNOWN**：UNKNOWN：标准版本与适用范围逐份核实 |
+| FRO0179 | [清华大学](https://www.tsinghua.edu.cn/)／UNIVERSITY_UNIT | CN | IoTDB研究线索 | **UNKNOWN**：UNKNOWN：研究团队、ASF项目与商业提供方不可混算 |
+| FRO0180 | [北京邮电大学](https://www.bupt.edu.cn/)／UNIVERSITY_UNIT | CN | 卫星与IoTDB线索 | **UNKNOWN**：UNKNOWN：具体卫星任务与数据栈待核实 |
+
+### 工程、仿真與兵棋
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0124 | [Synopsys / Ansys](https://ansys.synopsys.com/products/missions/ansys-stk)／GROUP | US | STK、ODTK、SCADE、ModelCenter、Twin Builder | **VERIFIED**：STK官方产品页描述数字任务工程；2025-07-17收购已完成 |
+| FRO0125 | [Dassault Systèmes](https://www.3ds.com/industries/aerospace-defense)／GROUP | FR | CATIA、3DEXPERIENCE | **VERIFIED**：官方产业页描述航空航天与防务工程软件 |
+| FRO0126 | [Siemens](https://www.sw.siemens.com/)／GROUP | DE | NX、Teamcenter、Altair PBS | **UNKNOWN**：UNKNOWN：本轮目标页面失败，产品归属另核实 |
+| FRO0127 | [PTC](https://www.ptc.com/)／COMPANY | US | Windchill | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0128 | [MathWorks](https://www.mathworks.com/)／COMPANY | US | MATLAB、Simulink、Stateflow | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0129 | [BISim](https://bisimulations.com/)／COMPANY | US | VBS4、VBS Blue IG | **UNKNOWN**：UNKNOWN：独立运营实体与母集团关系待核实 |
+| FRO0130 | [WarfareSims](https://www.warfaresims.com/)／COMPANY | 未分配／跨國 | Command Professional Edition | **UNKNOWN**：UNKNOWN：产品与提供方关系待核实 |
+| FRO0131 | [Rolands & Associates](https://www.rolands.com/)／COMPANY | US | JTLS | **UNKNOWN**：UNKNOWN：参考档JTLS提供方补充候选 |
+| FRO0132 | Simulation & Analysis Center / SPA／UNRESOLVED | US | GCAM、Cyber Assassin | **UNKNOWN**：UNKNOWN：参考档缩写与提供方须消歧 |
+
+### 基礎軟件、設備與數據服務
+
+| ID | 機構／類型 | ISO候選 | 產品／項目線索 | 本輪公開描述與狀態 |
+|---|---|---|---|---|
+| FRO0133 | [Green Hills Software](https://www.ghs.com/)／COMPANY | US | INTEGRITY-178、tuMP | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
+| FRO0134 | [Lynx](https://www.lynx.com/)／COMPANY | US | MOSA.ic、LynxSecure | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
+| FRO0135 | [Wind River](https://www.windriver.com/)／COMPANY | US | VxWorks、VxWorks 653 | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
+| FRO0136 | [SYSGO](https://www.sysgo.com/)／COMPANY | DE | PikeOS | **UNKNOWN**：UNKNOWN：具体平台与认证版本待核实 |
+| FRO0137 | [Trustworthy Systems / seL4 Foundation](https://sel4.systems/)／RESEARCH_COMMUNITY | 未分配／跨國 | seL4 | **UNKNOWN**：UNKNOWN：研究团队、基金会与认证对象应分别建实体 |
+| FRO0138 | [RTEMS Project](https://www.rtems.org/)／PROJECT | 未分配／跨國 | RTEMS | **UNKNOWN**：UNKNOWN：具体任务部署待核实 |
+| FRO0139 | [QNX / BlackBerry](https://www.qnx.com/)／BUSINESS_UNIT | CA | QNX | **UNKNOWN**：UNKNOWN：当前业务归属与认证版本待核实 |
+| FRO0140 | [Concurrent Real-Time](https://www.concurrent-rt.com/)／COMPANY | US | RedHawk Linux | **UNKNOWN**：UNKNOWN：版本与发布日未核实 |
+| FRO0141 | [OpenC3](https://openc3.com/)／COMPANY | US | COSMOS | **UNKNOWN**：UNKNOWN：公开地面系统线索待核实 |
+| FRO0142 | [Microchip Technology](https://www.microchip.com/)／COMPANY | US | SAMRH | **UNKNOWN**：UNKNOWN：产品与任务部署待核实 |
+| FRO0143 | [Frontgrade Gaisler](https://www.gaisler.com/)／COMPANY | SE | LEON处理器 | **UNKNOWN**：UNKNOWN：原文Cobham Gaisler历史名称须另核实 |
+| FRO0144 | [AMD](https://www.amd.com/)／COMPANY | US | Versal、Alveo | **UNKNOWN**：UNKNOWN：具体任务采用待核实 |
+| FRO0145 | [Intel / Altera](https://www.altera.com/)／UNRESOLVED | US | FPGA、PAC | **UNKNOWN**：UNKNOWN：当前法人及资产归属须分开核实 |
+| FRO0146 | [Getac](https://www.getac.com/)／COMPANY | TW | 加固终端 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0147 | [Panasonic](https://connect.panasonic.com/)／GROUP | JP | Toughbook | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0148 | [Utimaco](https://utimaco.com/)／COMPANY | DE | HSM | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0149 | [Oracle](https://www.oracle.com/)／GROUP | US | OCI、Roving Edge | **UNKNOWN**：UNKNOWN：具体Lattice部署与产品授权待核实 |
+| FRO0150 | [AWS](https://aws.amazon.com/govcloud-us/)／BUSINESS_UNIT | US | GovCloud | **UNKNOWN**：UNKNOWN：区域、服务与授权边界须另核实 |
+| FRO0151 | [Microsoft](https://azure.microsoft.com/)／GROUP | US | Azure Government、Sentinel | **UNKNOWN**：UNKNOWN：服务、区域、授权与部署须分别核实 |
+| FRO0152 | [IBM](https://www.ibm.com/)／GROUP | US | watsonx、研究与计算 | **UNKNOWN**：UNKNOWN：本輪读取量子页不足以证明AI产品条目 |
+| FRO0153 | [Databricks](https://www.databricks.com/)／COMPANY | US | 数据与AI平台 | **UNKNOWN**：UNKNOWN：国防项目采用待核实 |
+| FRO0154 | [Snowflake](https://www.snowflake.com/)／COMPANY | US | 数据云、政府服务 | **UNKNOWN**：UNKNOWN：国防项目采用待核实 |
+| FRO0155 | [SAP](https://www.sap.com/)／GROUP | DE | 企业与供应链系统 | **UNKNOWN**：UNKNOWN：国防项目采用待核实 |
+| FRO0156 | [华为](https://www.huawei.com/)／GROUP | CN | 工业数字与AI平台 | **UNKNOWN**：UNKNOWN：旧批线索未在本轮复核 |
+| FRO0157 | [C3 AI](https://c3.ai/)／COMPANY | US | 企业AI | **UNKNOWN**：UNKNOWN：合同与具体部署待核实 |
+| FRO0158 | [Scale AI](https://scale.com/)／COMPANY | US | 数据、评估与AI服务 | **UNKNOWN**：UNKNOWN：合同与具体部署待核实 |
+| FRO0159 | [Sift](https://www.siftstack.com/)／COMPANY | US | 工程遥测分析 | **UNKNOWN**：UNKNOWN：不可将其直接写为SpaceX自研 |
+| FRO0160 | [Eutelsat Group](https://www.eutelsat.com/)／GROUP | FR | 卫星通信与遥测 | **UNKNOWN**：UNKNOWN：600+卫星及InfluxDB性能数字未核实 |
+| FRO0161 | [InfluxData](https://www.influxdata.com/)／COMPANY | US | InfluxDB、Telegraf | **VERIFIED**：官网描述时序数据库与遥测分析；具体客户性能不外推 |
+| FRO0162 | [Timescale / Tiger Data](https://www.tigerdata.com/)／COMPANY | US | TimescaleDB | **VERIFIED**：原入口转向Tiger Data并公开时序PostgreSQL服务；法人改名另核实 |
+| FRO0163 | [QuestDB](https://questdb.com/)／COMPANY | GB | QuestDB | **VERIFIED**：官网描述低延迟时序数据库；数值性能未独立测量 |
+| FRO0164 | [Apache Software Foundation](https://www.apache.org/)／NONPROFIT | US | Airflow、Superset、ECharts、DolphinScheduler、IoTDB、Kafka、Flink、Spark、Iceberg | **VERIFIED**：官网确认开源软件基金会；各项目归属与任务采用需独立核实 |
+| FRO0165 | [OSGeo](https://www.osgeo.org/)／NONPROFIT | 未分配／跨國 | GDAL、PROJ、QGIS、PostGIS、GeoServer | **VERIFIED**：官网公开开源地理空间基金会；项目治理关系各自核实 |
+| FRO0166 | [Grafana Labs](https://grafana.com/)／COMPANY | US | Grafana、可观测性平台 | **VERIFIED**：官网描述可观测性业务；渲染插件与军方部署未知 |
+| FRO0168 | [SchedMD](https://www.schedmd.com/)／COMPANY | US | Slurm | **VERIFIED**：官网公开Slurm支持与开发服务 |
+| FRO0169 | [Red Hat](https://www.redhat.com/en)／COMPANY | US | OpenShift、Linux | **VERIFIED**：官网公开企业开源技术服务；国防项目部署另核实 |
+| FRO0170 | [Qualcomm](https://www.qualcomm.com/)／COMPANY | US | 计算与处理器 | **VERIFIED**：官网公开计算技术业务；机智号型号与架构另核实 |
+| FRO0171 | [Texas Instruments](https://www.ti.com/)／COMPANY | US | 模拟与嵌入式处理器 | **VERIFIED**：官网公开模拟与嵌入式处理业务；具体航天采用待核实 |
+| FRO0177 | [StarRocks Project](https://docs.starrocks.io/docs/introduction/Features/)／PROJECT | 未分配／跨國 | StarRocks | **VERIFIED**：官方功能页描述实时分析数据库；不证明某国军工部署 |
+| FRO0178 | [TAOS Data](https://www.tdengine.com/)／COMPANY | 未分配／跨國 | TDengine | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0181 | [ClickHouse](https://clickhouse.com/)／COMPANY | US | ClickHouse | **UNKNOWN**：UNKNOWN：任务采用与企业法人待核实 |
+| FRO0182 | [Redpanda](https://www.redpanda.com/)／COMPANY | US | 流数据平台 | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0183 | [Dagster Labs](https://dagster.io/)／COMPANY | US | Dagster | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0184 | [Plotly](https://plotly.com/)／COMPANY | 未分配／跨國 | Plotly、Dash | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0185 | [Salesforce](https://www.salesforce.com/)／GROUP | US | Tableau | **UNKNOWN**：UNKNOWN：产品归属与任务采用待核实 |
+| FRO0186 | [Elastic](https://www.elastic.co/)／COMPANY | 未分配／跨國 | Elasticsearch、Kibana | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0187 | [Cisco / Splunk](https://www.splunk.com/)／GROUP | US | Splunk | **UNKNOWN**：UNKNOWN：法人、收购与产品层关系待核实 |
+| FRO0188 | [CrowdStrike](https://www.crowdstrike.com/)／COMPANY | US | Falcon | **UNKNOWN**：UNKNOWN：参考档线索待核实 |
+| FRO0189 | [MISP Project](https://www.misp-project.org/)／PROJECT | 未分配／跨國 | 威胁情报共享 | **UNKNOWN**：UNKNOWN：治理组织与具体采用待核实 |
+
+## ISO 3166-1母表與後續全國家擴展
+
+本倉库已有[ISO國家／地區母表](tables/01_country_area/registry_country_area_iso3166_20261004_enhanced.csv)。本輪本地檢查為249行、249個不重複alpha-2；這是既有快照的結構核驗，並非重新取得ISO全量官方授權版本。ISO條目包含屬地及地緣區域，不等同249個主權國家。本輪不製造「249國×空表」或聲稱每國所有機構已完成。
+
+後續使用關聯表`registry_org_country_presence`記錄entity_id、iso_alpha2、presence_role、valid_from/to、source_id、evidence_state。角色至少區分法定註冊、總部、研究站、製造、服務、公開合同與成員國。ESA／NATO用多對多成員關係，不造EU或NATO的ISO alpha-2；母集團、子公司、部門與研究所另用entity_relation，避免重複計數。
+
+逐國覆蓋應以「ISO條目×領域×搜尋日期×來源×結果」記錄SEARCHED_WITH_RECORDS、SEARCHED_NO_PUBLIC_RECORD、NOT_YET_SEARCHED。未找到公開項目不能填能力零。國家能力彙總只可來自產品／項目層已有證據的claim，不能由公司所在地外推國家全部能力。
+
+沿用同一原則，神經技術另建`registry_neurotechnology_global`，粒度為機構×項目／設備×版本×試驗，外鍵連至ISO母表與組織表。預留侵入性、EEG/ECoG/微電極/fNIRS/TMS、讀取／寫入／雙向、remote_mode及操作距離、帶寬及計量方法、受試人數／試驗註冊ID、臨床階段、論文DOI、專利公開號、監管機構／適應症／決定日與claim證據。無線數據傳輸、遠程操作和遠距腦訊號感測不得混為一類；放大器採樣率不等於解碼資訊帶寬。
+
+N0～N7須先有版本化操作定義、輸入输出、測試條件與可重現門檻，才可給項目分級；國家層最多匯總已公開驗證的項目上限與覆蓋，不把未公開能力猜成某級。本輪只提供擴展合同，未生成神經技術普查或臨床主張。
+
+## 數據交付與限制
+
+CSV與資料字典見[本批資料目錄](tables/06_frontier_ecosystem_20261006/README.md)：組織、claim、來源分開；既有ISO及DGEF表保持原快照。本批只保存簡短審閱摘要與來源URL，未知許可不等於可抓取全文、用於訓練或再發布。
+
+查證集中於機構身份線索與公開業務描述。每項产品的技术细节、全部国家所有机构、正式法人注册、专利论文穷举、实际部署与独立性能比较仍未完成，均明确标示边界。后续优先补产品级官方文档、任务／合同文件、研究论文和许可，再按国家系统推进。
+
+
+<!-- GLOBAL_TECHNOLOGY_ISO249_20261006_START -->
+## 全球科技 ISO 249 地區首輪增補
+
+本輪新增 [全球科技登記附錄](Global_Technology_ISO249_Registry.qmd)及 [HTML 閱讀版](Global_Technology_ISO249_Registry.html)，以既有 ISO 3166-1 母表的 249 個國家／地區為外鍵。已完成 249 次逐地廣泛檢索，留下 952 筆 UNKNOWN 搜尋線索；原196筆機構保留，新增 103 筆，共 299 筆候選。新增機構公開描述 85 筆 VERIFIED，另列 44 筆技術／產品／軟件／組件／工具／平台及 13 筆神經科技記錄。
+
+上述196筆及其核實統計是原批次，不是全球附錄總數。VERIFIED 僅表示特定公開描述獲來源支持；逐國各領域核實、完整實體普查、全球頂尖排名及 N0～N7 國家等級均未完成。國別候選不是已核實法律所在地。新增 [數據字典](tables/07_global_technology_iso249_20261006/data_dictionary.json)及 [逐地覆蓋表](tables/07_global_technology_iso249_20261006/registry_country_technology_coverage.csv)明示所有尚未查證欄位。
+
+DARPA N3 的雙向非手術性能屬目標；Layer 7-T 的 FDA 文件僅支持特定暫時性皮質電極用途，不能擴張為所有研究中 BCI 系統已獲准。詳見附錄來源與逐欄證據。
+<!-- GLOBAL_TECHNOLOGY_ISO249_20261006_END -->
+
+
+<!-- GLOBAL_ISO249_B02_START -->
+## 全球科技第二批增補
+
+新增 [第二批科技與原始研究證據](Global_Technology_ISO249_Registry_B02.qmd)及 [HTML](Global_Technology_ISO249_Registry_B02.html)。完整整合表位於08目錄；累計335筆機構候選、54筆技術與16筆神經科技記錄。3篇人體BCI原始研究另列6筆數值與測試條件；論文報告結果不等於獨立重現或世界排名。首批與歷史批次保留，249地區全面核實仍未完成。
+<!-- GLOBAL_ISO249_B02_END -->
+
+
+<!-- GLOBAL_ISO249_B03_START -->
+## 全球科技第三批增補
+
+新增 [第三批量子、HPC與地區證據](Global_Technology_ISO249_Registry_B03.qmd)及 [HTML](Global_Technology_ISO249_Registry_B03.html)。完整整合表位於09目錄；累計371筆機構候選、59筆技術與16筆神經科技記錄。新增量子、HPC與科研設施資料；量子實驗結果、理論峰值與設施所在地分開記錄，不能推導國家排名。首批與歷史批次保留，249地區全面核實仍未完成。
+<!-- GLOBAL_ISO249_B03_END -->
+
+
+<!-- GLOBAL_ISO249_B04_START -->
+## 全球科技第四批增補
+
+新增[軍工AI、宇航影像與戰略服務平台](Global_Technology_ISO249_Registry_B04.qmd)及[HTML](Global_Technology_ISO249_Registry_B04.html)。12筆具名產品／服務、6筆帶前提規格與1筆公司公告事件；完整整合表位於10目錄。累計371筆機構候選、71筆技術／服務。官方描述與獨立效能、完整星座條件與實際服務開放分開；ISO249全面核實仍未完成。
+<!-- GLOBAL_ISO249_B04_END -->

@@ -1,0 +1,61 @@
+---
+title: "項目資訊整合、版本導航與驗收入口"
+date: 2026-10-07
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  enabled: false
+---
+
+## 本輪範圍與閱讀方式
+
+本輪以使用者指定的兩份主報告為中心，整合六個可識別的版本家族，保留所有來源檔與主文件原文。新增資訊放入主文件的「來源增補」；審校說明在正文前明示其證據邊界。這些附錄保存資料，尚不代表每段已完成重寫、每項外部主張已核實或已成為結構化資料。
+
+起始盤點為 577 件可讀一般檔案；一個 `.Rproj.user` 鎖檔無法读取，已列基線例外。目錄按資產全覆蓋，CSV／TSV 欄位目錄記錄 1,983 欄，其他格式仍需按內容抽取。原資料、歷史登記批次、現有 HTML、使用者刪除的 `Report-Optimized-V2.md` 均保留原狀，不因本輪整合恢復或覆寫。
+
+## 六個主入口
+
+| 家族 | 整合主文件 | 來源處理 |
+|---|---|---|
+| 地緣／軍工／宇航／AI | [生態登記主報告](Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd) | meta、web、原始 TXT、全量問答、助理答覆及商業化章節；保留 Interlligence 拼寫 |
+| 宇航資料栈 | [宇航比較主報告](Aerospace_Ecosystem_Report.qmd) | web 與共用問答／商業化附件；原文可逐位元組還原 |
+| 大秦賦算籌 | [v1.3.9 主文件](../_大秦赋算筹_v1_3_9.qmd) | 根目錄、歸檔 QMD 及 Enhanced；歷史內容不當作當期執行結果 |
+| 現實人物與策略 | [v2.4 行政通信宇航生命版](真实版人物分析与治国策略服务_名录与九十日行令_v2_4_全球行政通信宇航生命证据增强版_20261004.md) | 同日 ISO249 分支、舊版、Taige、補充文與兩份 TXT；分支合併不隱藏矛盾 |
+| AI 博彩治理白皮書 | [v3.1.0 主文件](Whitepaper-Perfect-Baccarat-AI-Quant-Governance-V3-1-0.md) | 舊白皮書、perfect-baccarat、Automation 與科技移植總表 |
+| 三價值草稿 | [v0.3.0 草稿](在线博彩娱乐白皮书_完美真人百家乐_三价值统一架构_v0_3_0_DRAFT.md) | v0.1／v0.2 補入；仍為 DRAFT |
+
+整合台帳共有 58 筆來源—目標關係、45,423 筆段落覆蓋記錄；同一來源可映射到兩份不同用途的主文件。精確重複以段落雜湊去重，不以名稱相近刪除異文。各主文件共新增 3,771 個未重複段落；計數不是事實數、公司數或科研成果數。
+
+## 各版本與資料表的邊界
+
+[ISO249 主登記](Global_Technology_ISO249_Registry.qmd)、[B02](Global_Technology_ISO249_Registry_B02.qmd)、[B03](Global_Technology_ISO249_Registry_B03.qmd)、[B04](Global_Technology_ISO249_Registry_B04.qmd) 是分批研究記錄，其來源資料表保持批次快照。最新合併口徑應讀批次說明与去重規則，不能將所有快照行數相加。
+
+[egaming 全量問答](Inteligent_egaming_platform_ref_v000.000.001.qmd) 保留最新使用者提交，其檔名版本號不代表正文只有一版。模型引用、過期簽名網址與 sandbox 路徑需各自核實，不能當作有效外部來源。此輪不重寫其全部問答。[Windows 11 研究問答](電腦已昇級至視窗11版（工欲善其事必先利其器）.qmd) 維持獨立用途。
+
+根目錄及 `V1.0.0`／`V2.0.1`／`DGEF` 的 README、貢獻、分析、程式與設定按各自產品／模組保留；資料目錄及代碼不是同題報告的舊版，不作全項目機械合併。它們均列入資產清單，尚未逐段核實所有程式與第三方依賴。語言不同的貢獻文件也不因名字接近而直接覆蓋。
+
+2026-10-06「全量合流驗收回執」記載的主文件行數與 SHA256 不對應本輪起始文件，只作歷史回執。當期完整性以本輪驗證與雜湊為準，不改写旧 PASS 冒充當期驗收。
+
+## 核查資料與業務價值
+
+[資料架構與價值評估方案](Project_Data_Architecture_20261007.qmd) 定義資料類型、粒度、業務價值、證據關係、時間模型、權限與擴展條件。未有實測前不宣稱某一產品為世界最高效率，不用總收藏量代替有效資料量。
+
+本輪主要審校：產品／框架／RTOS／地面控制分層、NATO FMN 定義、離線部署條件、商業授權、能力與認證區分、未驗證收益與性能、ISO 母表口徑与神經技術 UNKNOWN。詳細裁決與一手來源見兩份主報告的前置審校說明。
+
+## 可重現的驗收入口
+
+- [起始基線](../reports/2026-10-06/workspace_change_audit/integration_20261007_start_summary.json)：HEAD、Git 狀態、577 檔與鎖檔例外。
+- [來源版本台帳](../reports/2026-10-07/project_information_integration/source_manifest.csv)：來源、目標、雜湊及原始快照。
+- [逐段覆蓋台帳](../reports/2026-10-07/project_information_integration/block_coverage.csv)：來源行號、內容雜湊、已覆蓋／補入與顯示遮蔽。
+- [資產目錄](../reports/2026-10-07/project_information_integration/asset_catalog.csv)與[欄位目錄](../reports/2026-10-07/project_information_integration/column_catalog.csv)：全項目基線與待審業務定義。
+- [交付計畫](../reports/2026-10-07/project_information_integration/delivery_plan.json)及[驗收回執](../reports/2026-10-07/project_information_integration/validation_receipt.json)：套用前後雜湊及完整性邊界。
+- [SQLite 查詢目錄](../reports/2026-10-07/project_information_integration/project_information_catalog.sqlite)：資產、來源、段落与欄位的可查詢本地資料庫。
+
+原始快照含完整原文，僅供本地追溯；新閱讀附錄遮蔽簽名網址查詢參數。原檔未刪改。段落完整性、語法解析、外部事實審查與業務語義完成度分別驗收；本輪不能宣稱後兩者已全項目完成。
+
+## 收尾新增來源
+
+起始 577 件資產基線保持不變；另納入 1 件後續新增商業化藍圖，共 578 件原項目資產目錄。新增藍圖已增補至兩份主報告，保留原檔與獨立增量基線。新生成的交付與驗收資產另見收尾快照。
