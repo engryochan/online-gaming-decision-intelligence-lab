@@ -1,0 +1,30 @@
+---
+title: "國家／地區對照層：欄位定義與未決邊界"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批從現行母表的欄名、值與限定說明整理 **32 筆待審定義**。欄位目錄 v6 保留 1,989 筆，其他 **1,957 筆逐欄不變**；未決數由 334 降至 **302**。新定義為 PROPOSED_BASELINE_CONTEXT_REVIEW，業務審批 PENDING，未宣稱找回原生成器的正式定義或重新核實所有來源事實。
+
+定義涵蓋 M49 對照、憲制及非自治領土關係、電話編號、行政資料入口、宇航生態、覆蓋狀態及歷史科學主張。國別關係需另外按官方來源與適用時間查證；來源入口不表示資料已全量接入。科學主張是帶日期的全球陳述，不能複製為各國能力分數。
+
+| 本地檢查 | 結果 | 使用限制 |
+|---|---|---|
+| 宇航生態待核 | 249 條目全部待核 | 不表示沒有宇航活動，也不表示已查全 |
+| 覆蓋施工狀態 | 全部要求國別接入完成 | 基線標準化不等於資料完整 |
+| 電話碼空值 | AQ、BV、HM、UM | 保留原值，不補零或猜測編號 |
+| M49 狀態 | 248 條目為列示或相容，另 1 條目有特殊說明 | 本批不逐條認證官方列示 |
+
+ITU 的 E.164 官方說明涵蓋地理區域、全球服務、衛星、網路等編號用途。本項目的電話欄位因此需與編號安排狀態合讀，不能當國家唯一鍵；本批未逐碼核實現行分配。[ITU E.164 官方文件](https://www.itu.int/itu-t/recommendations/rec.aspx?rec=E.164)。
+
+非自治領土官方頁面本輪遭 JavaScript／機器人驗證，未讀得清單；保留本地分類，不標成今日已核。現任元首、統帥權、政治地位、IAF 歷史數量及境外生命主張也未重新驗證。原母表、舊目錄、DGEF 庫、原宇航報告與既有 HTML 均保留。
+
+- [32 筆定義](../reports/2026-10-07/country_layer_contracts/definition_changes.csv)
+- [完整目錄 v6](../reports/2026-10-07/country_layer_contracts/field_semantics_v6.csv)
+- [302 筆未決清單](../reports/2026-10-07/country_layer_contracts/remaining_unresolved.csv)
+- [来源指紋](../reports/2026-10-07/country_layer_contracts/source_manifest.csv)
+- [验收回執](../reports/2026-10-07/country_layer_contracts/validation.json)
+
+本批核查是欄位解讀與來源保全，不等於全球科技已查全。HTML 編譯成功不代表已檢查瀏覽器外觀。

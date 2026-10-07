@@ -1,0 +1,59 @@
+---
+title: "ISO 國家／地區母表與行政區：本地一致性及欄位合同"
+date: 2026-10-07
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本批結果
+
+本批處理三份國家／地區母表與一份行政區快照的 **41 筆未決欄位**。完整欄位目錄 v5 仍為 1,989 筆，其餘 **1,948 筆逐欄不變**；UNRESOLVED 由 375 降至 **334**。新定義標為 `PROPOSED_BASELINE_CONTEXT_REVIEW`，由現行欄名、資料與 scope_note 解讀，業務審批仍為 PENDING，不冒充找到原始生成程式的正式定義。
+
+本批未修改四份來源 CSV、舊目錄、DGEF 庫、原宇航報告或既有 HTML。來源指紋及目錄差異已復核；SQL 記憶體副本另行核算行政區分組與父級引用。
+
+## 本地結構核查
+
+| 檢查 | 結果 | 實際支持範圍 |
+|---|---|---|
+| 三份母表行數與唯一兩字母代碼 | 各 249 | 本地每份沒有重複國別鍵 |
+| 三種代碼組合 | 三份一致 | 版本間代碼匹配，非即時官方完整性證明 |
+| 數字代碼 | 均為三位字串 | 保留前導零，禁止數值聚合 |
+| 正式英文名稱空值 | 每份 76 筆 | 原值保留，不推定沒有正式名稱 |
+| 行政區記錄 | 5,046 筆唯一代碼 | 本地快照，非所有市鎮村落全集 |
+| 非空父級引用 | 1,456 條 | 本地均有對應行，未發現循環或跨國父級 |
+| 國別代碼及前綴 | 無錯配 | 本地母表與行政區內部一致 |
+| 母表分區數量 | 與行政區分組相符 | 本地數量一致，非現行行政邊界已核實 |
+
+所有「通過」只限本地資料結構與本批檢查。249 是這三份本地版本的條目數，不在本批重新宣稱已逐條驗證官方當日清單。行政區來源記錄使用 pycountry 24.6.1；本批未將它視為官方即時發布。
+
+## 官方口徑與欄位業務價值
+
+ISO 3166-1 的範圍包括國家、屬地及特定地緣區域；3166-2 描述主要行政分區。條目存在不構成本項目的主權判定，行政區快照也不保證包含每個地方單位。[ISO 官方說明](https://www.iso.org/iso-3166-country-codes.html)。
+
+UN M49 使用國家／地區及統計分組；分組用於統計便利，不對政治歸屬、法律地位或邊界作裁判。因此本項目的 ISO、M49、管轄關係與主權分類应分開保存，不能用一個代碼直接推定全部關係。[UNSD M49 說明](https://unstats.un.org/unsd/methodology/m49/)。本批未逐項核對 M49 對照。
+
+| 欄位組 | 本批定義與用途 | 未決事項 |
+|---|---|---|
+| 名稱與數字代碼 | 支持匹配，保留文字及前導零 | 正式名稱空值与現行改名待核 |
+| coverage_required | 表示要求覆蓋核查 | 不能解作已查全 |
+| population／settlement／organization／govtech layer | 擬議資料來源層 | 不能解作已導入全部資料 |
+| inhabited_status | 區域級描述或待核標記 | 不構成住戶、人口網格或普查證明 |
+| parent_code 與 type | 支持行政區層級查詢 | 類型不能跨國自動推定同等權限 |
+| standard_status 與 snapshot_library | 保存版本上下文 | 標準有效不代表快照逐區現行有效 |
+| validation_required | 表示仍要求核查 | TRUE 不表示核查已完成 |
+
+本批不修訂現任元首、職銜、君主制度、統帥權、政治分類或境外生命主張，也不將歷史核查日期改成今日。相關事實需另按官方來源、適用時間與證據範圍驗證。SALB 入口本輪讀取失敗，未把它標為已核實邊界來源。業務價值是防止錯配、錯誤聚合與核查狀態誤讀，沒有已測 ROI。
+
+## 交付與復核
+
+- [41 筆定義與原定義對照](../reports/2026-10-07/iso_field_contracts/definition_changes.csv)
+- [完整欄位目錄 v5](../reports/2026-10-07/iso_field_contracts/field_semantics_v5.csv)
+- [334 筆未決清單](../reports/2026-10-07/iso_field_contracts/remaining_unresolved.csv)
+- [母表核查摘要](../reports/2026-10-07/iso_field_contracts/country_baseline_checks.csv)
+- [來源指紋](../reports/2026-10-07/iso_field_contracts/source_manifest.csv)
+- [本地結構核查回執](../reports/2026-10-07/iso_field_contracts/validation.json)、[獨立復核回執](../reports/2026-10-07/iso_field_contracts/independent_validation.json)
+- [唯讀核查與定義生成程式](../reports/2026-10-07/iso_field_contracts/audit_contracts.py)、[獨立復核程式](../reports/2026-10-07/iso_field_contracts/validate_contracts.py)
+
+已交付批次不直接重建覆寫；復核只更新自身回執。來源保全不等於全部內容實質核實。HTML 編譯成功不代表瀏覽器外觀已檢查。全球科技登記仍需持續逐國、逐組織及逐主張查證。
