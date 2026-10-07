@@ -1,0 +1,33 @@
+---
+title: "全球上市公司全量收錄：證券母表與腦際互動證據（首批）"
+lang: zh-Hant
+format: html
+---
+
+## 收錄範圍與驗收
+
+本批完整接收 Nasdaq 官方兩份名錄全部 13285 筆證券列，沒有按公司知名度或科技題材抽選。檔案時間原文均為 `File Creation Time: 1007202607:00`；時間區未自行推定。原始檔、SHA256、每列原始欄位及資料庫均保留。原始欄位逐列 JSON 還原比對通過。
+
+249 國家／地區母表沿用項目既有 ISO 3166-1 表；[ISO 標準](https://www.iso.org/iso-3166-country-codes.html)不是國家認證。本批只有美國上市市場的部分官方來源，其餘 248 條目明列尚未接收；不能據此判定當地無交易所。全球每一家上市公司的收錄工作尚未完成，美國全市場也未宣稱完成。
+
+## 數據表與查詢
+
+- [全部證券列](tables/19_global_listed_company_universe_20261007/registry_listed_security.csv)：13285 列，包括 ETF、測試證券、股類、權證等；任何原始欄位均存入 `raw_fields_json`。
+- [249 條目市場覆蓋](tables/19_global_listed_company_universe_20261007/registry_country_market_coverage.csv)：區分市場所在地與發行人註冊地，後者目前 UNKNOWN。
+- [市場分組分析](tables/19_global_listed_company_universe_20261007/market_security_analysis.csv)：按來源、交易所原碼、ETF 與測試旗標計數。
+- [來源與雜湊](tables/19_global_listed_company_universe_20261007/source_manifest.csv)。官方[欄位定義](https://www.nasdaqtrader.com/trader.aspx?id=symboldirdefs)、[Nasdaq 名錄](https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt)、[其他市場名錄](https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt)。未知交易所代碼保留原碼，不猜名稱。
+- SQLite：`reports/2026-10-07/global_listed_universe/listed_universe.sqlite`，表 `securities`、`countries`、`sources`、`neural_interaction`；視圖 `non_test_non_etf_securities`。
+
+排除測試與 ETF 後仍有 7483 筆**證券**，不能當成 7483 家公司。普通股、存託憑證、優先股及權證可能對應同一發行人；非 ETF 也可能是其他基金。SEC [發行人對照下載](https://www.sec.gov/files/company_tickers_exchange.json)本輪遭網站拒絕，未建立虛構 CIK、公司唯一數或發行人國籍。名錄是當前快照，未聲稱涵蓋所有歷史退市公司。
+
+## 業務定義與價值
+
+證券主鍵以來源及列號確保原文留存；後續以市場、代碼及有效期間建立跨批鍵。公司主表須另以監管登記識別碼／LEI及官方註冊資料解析，上市關係採多對多；註冊地、總部與交易市場各自登記。名稱相似不可直接合併。全市場母表支援公司技術暴露、跨市場重複上市及供應鏈分析，但每一家公司是否屬前沿科技須另有論文、專利、產品或監管證據，不能從上市本身推論。
+
+下一階段逐國確認所有交易所及官方完整名錄、接收全部列、對賬來源總數、解析發行人及上市關係，再連結現有科技登記。缺失、來源拒絕、未授權取得與尚未查證分別保留狀態；249 覆蓋列不是249國完成證明。
+
+## 遠程腦際互動：實驗與待驗證能力
+
+[BrainNet 作者版本 v3](https://arxiv.org/abs/1809.08632v3)摘要描述五组三人參與者，平均任務正確率 0.813。EEG 解碼是否旋轉遊戲方塊的決策，經網路傳輸，由 TMS 刺激接收者枕葉；接收者再透過 EEG 作出選擇。相關期刊 DOI 為 [10.1038/s41598-019-41895-7](https://doi.org/10.1038/s41598-019-41895-7)，本輪期刊正文無法讀取，所以來源等級限定為作者版本摘要核實。
+
+[神經互動證據表](tables/19_global_listed_company_universe_20261007/registry_neural_interaction_evidence.csv)登記這項硬體及網路介導的有限決策互動。完整思想、記憶或情緒傳輸、無器件遠程心靈相通、人體臨床授權及 bits/s 資訊帶寬均為 UNKNOWN；0.813 是特定任務正確率，不能轉換成心靈交流帶寬。未建立 N0～N7 定義與判準前不授予國家等級，也未以此單篇歷史實驗宣稱當今最高技術。
