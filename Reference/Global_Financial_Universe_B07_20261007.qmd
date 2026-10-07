@@ -1,0 +1,294 @@
+---
+title: "全球金融資料全集 B07：ISO 249 逐國覆蓋與 ESMA 完整接收"
+date: 2026-10-07
+format:
+  html:
+    toc: true
+---
+
+## 本輪交付與實際邊界
+
+全部249個ISO 3166-1國家／地區均已列入覆蓋表，並分別展開上市公司、證券業者、貨幣三項工作，共747項。這是有來源與缺口的逐國清單；747項仍為OPEN，不能據此宣稱全球每家公司及每種實際使用貨幣均已收齊。ISO代碼不表示國家獲得認證。
+
+本輪完整接收ESMA投資公司登記：7,162條公司／分支記錄，涵蓋31個來源母國標籤；來源狀態Active 5,861條、Inactive 1,301條，Head office 6,476條、Branch 686條。另收33,363條業務活動及42,005條活動歷史，合計82,530份來源文件。活動類型不等於全部當前有效授權；投資公司登記也不等於唯一證券行總數。英國來源只有一條Inactive記錄，不能當成當前市場完整覆蓋。
+
+來源依[ESMA公開A2A文件及官方預定義查詢](https://registers.esma.europa.eu/publication/helpApp)下載。公司查詢8頁、公司與活動歷史查詢17頁，逐頁numFound穩定、來源ID無重複；兩個查詢的公司文件逐項相同，所有活動父ID均存在。這驗證此次查詢接收完整，不保證跨頁原子快照或來源所有授權均已更新。來源自身更新日期與HTTP接收日期分别保留。
+
+登記中的42個主管機關名稱字串形成71個母國／名稱分組，尚未完成主管機關法律身份去重；母國分組不代表該機關所在地。所有原始欄位、陣列、狀態、日期、LEI及歷史均保留JSON，未以名稱合併公司。
+
+## 資料與查詢
+
+統一快照v4保留v3的所有79,207條原始列、43,410條上市工具／公司目錄來源列及2,883條MIC資料，新原始列累計162,933條。這些數字均不是全球唯一公司數。舊資料庫與原報告保留，新增查詢庫位於`../reports/2026-10-07/financial_universe_b07/financial_universe_v4.sqlite`。
+
+上市來源目前覆蓋七個市場，其餘242個母表條目尚待接收或確認適用範圍。249條目均已連結既有貨幣來源關係，但名稱別名、法定地位及所有實際使用貨幣仍須核實。MIC來源網站是待查入口，未當成已逐站核實的交易所名單。日本FSA／JPX、台灣TWSE及紐西蘭NZX先前業者／參與者清單已納入來源盤點；不同清單重疊未去重，參與者不全是證券行。
+
+- [esma_country_status_office_analysis.csv](tables/25_iso249_financial_universe_b07_20261007/esma_country_status_office_analysis.csv)
+- [integration_input_manifest.csv](tables/25_iso249_financial_universe_b07_20261007/integration_input_manifest.csv)
+- [registry_competent_authority_source_names.csv](tables/25_iso249_financial_universe_b07_20261007/registry_competent_authority_source_names.csv)
+- [registry_esma_activities_and_history.csv](tables/25_iso249_financial_universe_b07_20261007/registry_esma_activities_and_history.csv)
+- [registry_esma_investment_firm_entities.csv](tables/25_iso249_financial_universe_b07_20261007/registry_esma_investment_firm_entities.csv)
+- [registry_iso249_financial_coverage.csv](tables/25_iso249_financial_universe_b07_20261007/registry_iso249_financial_coverage.csv)
+- [registry_iso249_three_stream_tasks.csv](tables/25_iso249_financial_universe_b07_20261007/registry_iso249_three_stream_tasks.csv)
+- [source_page_manifest.csv](tables/25_iso249_financial_universe_b07_20261007/source_page_manifest.csv)
+
+## ISO 249 全部條目的現況
+
+下表的0表示尚未接收對應來源，不表示該地區沒有公司、市場或證券行。業者欄是來源記錄清單而非唯一券商數；ESMA含分支與失效記錄，FSA含多類金融工具業者，JPX／NZX含不同參與角色。貨幣代碼含來源定義的特殊用途項目；空碼須核實。完整母表欄位、網站、主管機關、狀態及缺口見上述CSV。
+
+| ISO | 國家／地區來源名稱 | 上市來源列 | 業者／參與者來源盤點 | MIC來源列 | 貨幣來源代碼 |
+|---|---|---:|---|---:|---|
+| AD | Andorra | 0 | 待接收／待核實 | 0 | EUR |
+| AE | United Arab Emirates | 0 | 待接收／待核實 | 23 | AED |
+| AF | Afghanistan | 0 | 待接收／待核實 | 0 | AFN |
+| AG | Antigua and Barbuda | 0 | 待接收／待核實 | 1 | XCD |
+| AI | Anguilla | 0 | 待接收／待核實 | 0 | XCD |
+| AL | Albania | 0 | 待接收／待核實 | 2 | ALL |
+| AM | Armenia | 0 | 待接收／待核實 | 1 | AMD |
+| AO | Angola | 0 | 待接收／待核實 | 1 | AOA |
+| AQ | Antarctica | 0 | 待接收／待核實 | 0 | 來源空碼／待核實 |
+| AR | Argentina | 0 | 待接收／待核實 | 17 | ARS |
+| AS | American Samoa | 0 | 待接收／待核實 | 0 | USD |
+| AT | Austria | 0 | ESMA_ENTITY_RECORDS: 585 | 22 | EUR |
+| AU | Australia | 1923 | 待接收／待核實 | 48 | AUD |
+| AW | Aruba | 0 | 待接收／待核實 | 0 | AWG |
+| AX | Åland Islands | 0 | 待接收／待核實 | 0 | EUR |
+| AZ | Azerbaijan | 0 | 待接收／待核實 | 2 | AZN |
+| BA | Bosnia and Herzegovina | 0 | 待接收／待核實 | 3 | BAM |
+| BB | Barbados | 0 | 待接收／待核實 | 3 | BBD |
+| BD | Bangladesh | 0 | 待接收／待核實 | 2 | BDT |
+| BE | Belgium | 0 | ESMA_ENTITY_RECORDS: 51 | 25 | EUR |
+| BF | Burkina Faso | 0 | 待接收／待核實 | 0 | XOF |
+| BG | Bulgaria | 0 | ESMA_ENTITY_RECORDS: 54 | 17 | EUR |
+| BH | Bahrain | 0 | 待接收／待核實 | 2 | BHD |
+| BI | Burundi | 0 | 待接收／待核實 | 0 | BIF |
+| BJ | Benin | 0 | 待接收／待核實 | 0 | XOF |
+| BL | Saint Barthélemy | 0 | 待接收／待核實 | 0 | EUR |
+| BM | Bermuda | 0 | 待接收／待核實 | 3 | BMD |
+| BN | Brunei Darussalam | 0 | 待接收／待核實 | 0 | BND |
+| BO | Bolivia, Plurinational State of | 0 | 待接收／待核實 | 1 | BOB;BOV |
+| BQ | Bonaire, Sint Eustatius and Saba | 0 | 待接收／待核實 | 0 | USD |
+| BR | Brazil | 0 | 待接收／待核實 | 13 | BRL |
+| BS | Bahamas | 0 | 待接收／待核實 | 1 | BSD |
+| BT | Bhutan | 0 | 待接收／待核實 | 0 | BTN;INR |
+| BV | Bouvet Island | 0 | 待接收／待核實 | 0 | NOK |
+| BW | Botswana | 0 | 待接收／待核實 | 3 | BWP |
+| BY | Belarus | 0 | 待接收／待核實 | 1 | BYN |
+| BZ | Belize | 0 | 待接收／待核實 | 0 | BZD |
+| CA | Canada | 3768 | 待接收／待核實 | 45 | CAD |
+| CC | Cocos (Keeling) Islands | 0 | 待接收／待核實 | 0 | AUD |
+| CD | Congo, The Democratic Republic of the | 0 | 待接收／待核實 | 0 | CDF |
+| CF | Central African Republic | 0 | 待接收／待核實 | 0 | XAF |
+| CG | Congo | 0 | 待接收／待核實 | 0 | XAF |
+| CH | Switzerland | 0 | 待接收／待核實 | 48 | CHE;CHF;CHW |
+| CI | Côte d'Ivoire | 0 | 待接收／待核實 | 2 | XOF |
+| CK | Cook Islands | 0 | 待接收／待核實 | 0 | NZD |
+| CL | Chile | 0 | 待接收／待核實 | 3 | CLF;CLP |
+| CM | Cameroon | 0 | 待接收／待核實 | 1 | XAF |
+| CN | China | 0 | 待接收／待核實 | 18 | CNY |
+| CO | Colombia | 0 | 待接收／待核實 | 1 | COP;COU |
+| CR | Costa Rica | 0 | 待接收／待核實 | 1 | CRC |
+| CU | Cuba | 0 | 待接收／待核實 | 0 | CUP |
+| CV | Cabo Verde | 0 | 待接收／待核實 | 1 | CVE |
+| CW | Curaçao | 0 | 待接收／待核實 | 1 | XCG |
+| CX | Christmas Island | 0 | 待接收／待核實 | 0 | AUD |
+| CY | Cyprus | 0 | ESMA_ENTITY_RECORDS: 348 | 17 | EUR |
+| CZ | Czechia | 0 | ESMA_ENTITY_RECORDS: 57 | 22 | CZK |
+| DE | Germany | 0 | ESMA_ENTITY_RECORDS: 2420 | 216 | EUR |
+| DJ | Djibouti | 0 | 待接收／待核實 | 0 | DJF |
+| DK | Denmark | 0 | ESMA_ENTITY_RECORDS: 241 | 27 | DKK |
+| DM | Dominica | 0 | 待接收／待核實 | 0 | XCD |
+| DO | Dominican Republic | 0 | 待接收／待核實 | 2 | DOP |
+| DZ | Algeria | 0 | 待接收／待核實 | 1 | DZD |
+| EC | Ecuador | 0 | 待接收／待核實 | 2 | USD |
+| EE | Estonia | 0 | ESMA_ENTITY_RECORDS: 17 | 6 | EUR |
+| EG | Egypt | 0 | 待接收／待核實 | 2 | EGP |
+| EH | Western Sahara | 0 | 待接收／待核實 | 0 | MAD |
+| ER | Eritrea | 0 | 待接收／待核實 | 0 | ERN |
+| ES | Spain | 0 | ESMA_ENTITY_RECORDS: 452 | 64 | EUR |
+| ET | Ethiopia | 0 | 待接收／待核實 | 0 | ETB |
+| FI | Finland | 0 | ESMA_ENTITY_RECORDS: 234 | 14 | EUR |
+| FJ | Fiji | 0 | 待接收／待核實 | 1 | FJD |
+| FK | Falkland Islands (Malvinas) | 0 | 待接收／待核實 | 0 | FKP |
+| FM | Micronesia, Federated States of | 0 | 待接收／待核實 | 0 | USD |
+| FO | Faroe Islands | 0 | 待接收／待核實 | 1 | DKK |
+| FR | France | 0 | ESMA_ENTITY_RECORDS: 419 | 108 | EUR |
+| GA | Gabon | 0 | 待接收／待核實 | 0 | XAF |
+| GB | United Kingdom | 0 | ESMA_ENTITY_RECORDS: 1 | 603 | GBP |
+| GD | Grenada | 0 | 待接收／待核實 | 0 | XCD |
+| GE | Georgia | 0 | 待接收／待核實 | 1 | GEL |
+| GF | French Guiana | 0 | 待接收／待核實 | 0 | EUR |
+| GG | Guernsey | 0 | 待接收／待核實 | 1 | GBP |
+| GH | Ghana | 0 | 待接收／待核實 | 1 | GHS |
+| GI | Gibraltar | 0 | 待接收／待核實 | 3 | GIP |
+| GL | Greenland | 0 | 待接收／待核實 | 0 | DKK |
+| GM | Gambia | 0 | 待接收／待核實 | 0 | GMD |
+| GN | Guinea | 0 | 待接收／待核實 | 0 | GNF |
+| GP | Guadeloupe | 0 | 待接收／待核實 | 0 | EUR |
+| GQ | Equatorial Guinea | 0 | 待接收／待核實 | 0 | XAF |
+| GR | Greece | 0 | ESMA_ENTITY_RECORDS: 68 | 16 | EUR |
+| GS | South Georgia and the South Sandwich Islands | 0 | 待接收／待核實 | 0 | 來源空碼／待核實 |
+| GT | Guatemala | 0 | 待接收／待核實 | 1 | GTQ |
+| GU | Guam | 0 | 待接收／待核實 | 0 | USD |
+| GW | Guinea-Bissau | 0 | 待接收／待核實 | 0 | XOF |
+| GY | Guyana | 0 | 待接收／待核實 | 1 | GYD |
+| HK | Hong Kong | 17206 | 待接收／待核實 | 36 | HKD |
+| HM | Heard Island and McDonald Islands | 0 | 待接收／待核實 | 0 | AUD |
+| HN | Honduras | 0 | 待接收／待核實 | 2 | HNL |
+| HR | Croatia | 0 | ESMA_ENTITY_RECORDS: 25 | 8 | EUR |
+| HT | Haiti | 0 | 待接收／待核實 | 0 | HTG;USD |
+| HU | Hungary | 0 | ESMA_ENTITY_RECORDS: 35 | 20 | HUF |
+| ID | Indonesia | 0 | 待接收／待核實 | 7 | IDR |
+| IE | Ireland | 0 | ESMA_ENTITY_RECORDS: 205 | 63 | EUR |
+| IL | Israel | 0 | 待接收／待核實 | 1 | ILS |
+| IM | Isle of Man | 0 | 待接收／待核實 | 0 | GBP |
+| IN | India | 0 | 待接收／待核實 | 28 | INR |
+| IO | British Indian Ocean Territory | 0 | 待接收／待核實 | 0 | USD |
+| IQ | Iraq | 0 | 待接收／待核實 | 1 | IQD |
+| IR | Iran, Islamic Republic of | 0 | 待接收／待核實 | 3 | IRR |
+| IS | Iceland | 0 | ESMA_ENTITY_RECORDS: 13 | 7 | ISK |
+| IT | Italy | 0 | ESMA_ENTITY_RECORDS: 494 | 66 | EUR |
+| JE | Jersey | 0 | 待接收／待核實 | 0 | GBP |
+| JM | Jamaica | 0 | 待接收／待核實 | 1 | JMD |
+| JO | Jordan | 0 | 待接收／待核實 | 2 | JOD |
+| JP | Japan | 4447 | FSA_FINANCIAL_INSTRUMENT_FIRMS: 1951；JPX_PARTICIPANTS: 158 | 89 | JPY |
+| KE | Kenya | 0 | 待接收／待核實 | 1 | KES |
+| KG | Kyrgyzstan | 0 | 待接收／待核實 | 1 | KGS |
+| KH | Cambodia | 0 | 待接收／待核實 | 1 | KHR |
+| KI | Kiribati | 0 | 待接收／待核實 | 0 | AUD |
+| KM | Comoros | 0 | 待接收／待核實 | 0 | KMF |
+| KN | Saint Kitts and Nevis | 0 | 待接收／待核實 | 1 | XCD |
+| KP | Korea, Democratic People's Republic of | 0 | 待接收／待核實 | 0 | KPW |
+| KR | Korea, Republic of | 0 | 待接收／待核實 | 11 | KRW |
+| KW | Kuwait | 0 | 待接收／待核實 | 1 | KWD |
+| KY | Cayman Islands | 0 | 待接收／待核實 | 1 | KYD |
+| KZ | Kazakhstan | 0 | 待接收／待核實 | 5 | KZT |
+| LA | Lao People's Democratic Republic | 0 | 待接收／待核實 | 1 | LAK |
+| LB | Lebanon | 0 | 待接收／待核實 | 1 | LBP |
+| LC | Saint Lucia | 0 | 待接收／待核實 | 0 | XCD |
+| LI | Liechtenstein | 0 | ESMA_ENTITY_RECORDS: 127 | 8 | CHF |
+| LK | Sri Lanka | 0 | 待接收／待核實 | 1 | LKR |
+| LR | Liberia | 0 | 待接收／待核實 | 0 | LRD |
+| LS | Lesotho | 0 | 待接收／待核實 | 0 | LSL;ZAR |
+| LT | Lithuania | 0 | ESMA_ENTITY_RECORDS: 25 | 9 | EUR |
+| LU | Luxembourg | 0 | ESMA_ENTITY_RECORDS: 267 | 20 | EUR |
+| LV | Latvia | 0 | ESMA_ENTITY_RECORDS: 26 | 3 | EUR |
+| LY | Libya | 0 | 待接收／待核實 | 1 | LYD |
+| MA | Morocco | 0 | 待接收／待核實 | 2 | MAD |
+| MC | Monaco | 0 | 待接收／待核實 | 0 | EUR |
+| MD | Moldova, Republic of | 0 | 待接收／待核實 | 1 | MDL |
+| ME | Montenegro | 0 | 待接收／待核實 | 2 | EUR |
+| MF | Saint Martin (French part) | 0 | 待接收／待核實 | 0 | EUR |
+| MG | Madagascar | 0 | 待接收／待核實 | 1 | MGA |
+| MH | Marshall Islands | 0 | 待接收／待核實 | 0 | USD |
+| MK | North Macedonia | 0 | 待接收／待核實 | 1 | MKD |
+| ML | Mali | 0 | 待接收／待核實 | 0 | XOF |
+| MM | Myanmar | 0 | 待接收／待核實 | 0 | MMK |
+| MN | Mongolia | 0 | 待接收／待核實 | 1 | MNT |
+| MO | Macao | 0 | 待接收／待核實 | 0 | MOP |
+| MP | Northern Mariana Islands | 0 | 待接收／待核實 | 0 | USD |
+| MQ | Martinique | 0 | 待接收／待核實 | 0 | EUR |
+| MR | Mauritania | 0 | 待接收／待核實 | 0 | MRU |
+| MS | Montserrat | 0 | 待接收／待核實 | 0 | XCD |
+| MT | Malta | 0 | ESMA_ENTITY_RECORDS: 119 | 8 | EUR |
+| MU | Mauritius | 0 | 待接收／待核實 | 4 | MUR |
+| MV | Maldives | 0 | 待接收／待核實 | 1 | MVR |
+| MW | Malawi | 0 | 待接收／待核實 | 1 | MWK |
+| MX | Mexico | 0 | 待接收／待核實 | 4 | MXN;MXV |
+| MY | Malaysia | 0 | 待接收／待核實 | 5 | MYR |
+| MZ | Mozambique | 0 | 待接收／待核實 | 2 | MZN |
+| NA | Namibia | 0 | 待接收／待核實 | 1 | NAD;ZAR |
+| NC | New Caledonia | 0 | 待接收／待核實 | 0 | XPF |
+| NE | Niger | 0 | 待接收／待核實 | 0 | XOF |
+| NF | Norfolk Island | 0 | 待接收／待核實 | 0 | AUD |
+| NG | Nigeria | 0 | 待接收／待核實 | 2 | NGN |
+| NI | Nicaragua | 0 | 待接收／待核實 | 1 | NIO |
+| NL | Netherlands | 0 | ESMA_ENTITY_RECORDS: 330 | 123 | EUR |
+| NO | Norway | 0 | ESMA_ENTITY_RECORDS: 138 | 43 | NOK |
+| NP | Nepal | 0 | 待接收／待核實 | 1 | NPR |
+| NR | Nauru | 0 | 待接收／待核實 | 0 | AUD |
+| NU | Niue | 0 | 待接收／待核實 | 0 | NZD |
+| NZ | New Zealand | 431 | NZX_PARTICIPANTS: 26 | 6 | NZD |
+| OM | Oman | 0 | 待接收／待核實 | 3 | OMR |
+| PA | Panama | 0 | 待接收／待核實 | 1 | PAB;USD |
+| PE | Peru | 0 | 待接收／待核實 | 1 | PEN |
+| PF | French Polynesia | 0 | 待接收／待核實 | 0 | XPF |
+| PG | Papua New Guinea | 0 | 待接收／待核實 | 1 | PGK |
+| PH | Philippines | 0 | 待接收／待核實 | 3 | PHP |
+| PK | Pakistan | 0 | 待接收／待核實 | 4 | PKR |
+| PL | Poland | 0 | ESMA_ENTITY_RECORDS: 59 | 43 | PLN |
+| PM | Saint Pierre and Miquelon | 0 | 待接收／待核實 | 0 | EUR |
+| PN | Pitcairn | 0 | 待接收／待核實 | 0 | NZD |
+| PR | Puerto Rico | 0 | 待接收／待核實 | 0 | USD |
+| PS | Palestine, State of | 0 | 待接收／待核實 | 1 | 來源空碼／待核實 |
+| PT | Portugal | 0 | ESMA_ENTITY_RECORDS: 89 | 13 | EUR |
+| PW | Palau | 0 | 待接收／待核實 | 0 | USD |
+| PY | Paraguay | 0 | 待接收／待核實 | 1 | PYG |
+| QA | Qatar | 0 | 待接收／待核實 | 1 | QAR |
+| RE | Réunion | 0 | 待接收／待核實 | 0 | EUR |
+| RO | Romania | 0 | ESMA_ENTITY_RECORDS: 44 | 22 | RON |
+| RS | Serbia | 0 | 待接收／待核實 | 1 | RSD |
+| RU | Russian Federation | 0 | 待接收／待核實 | 21 | RUB |
+| RW | Rwanda | 0 | 待接收／待核實 | 2 | RWF |
+| SA | Saudi Arabia | 0 | 待接收／待核實 | 2 | SAR |
+| SB | Solomon Islands | 0 | 待接收／待核實 | 0 | SBD |
+| SC | Seychelles | 0 | 待接收／待核實 | 5 | SCR |
+| SD | Sudan | 0 | 待接收／待核實 | 1 | SDG |
+| SE | Sweden | 0 | ESMA_ENTITY_RECORDS: 162 | 67 | SEK |
+| SG | Singapore | 0 | 待接收／待核實 | 49 | SGD |
+| SH | Saint Helena, Ascension and Tristan da Cunha | 0 | 待接收／待核實 | 0 | SHP |
+| SI | Slovenia | 0 | ESMA_ENTITY_RECORDS: 12 | 6 | EUR |
+| SJ | Svalbard and Jan Mayen | 0 | 待接收／待核實 | 0 | NOK |
+| SK | Slovakia | 0 | ESMA_ENTITY_RECORDS: 45 | 6 | EUR |
+| SL | Sierra Leone | 0 | 待接收／待核實 | 0 | SLE |
+| SM | San Marino | 0 | 待接收／待核實 | 0 | EUR |
+| SN | Senegal | 0 | 待接收／待核實 | 0 | XOF |
+| SO | Somalia | 0 | 待接收／待核實 | 0 | SOS |
+| SR | Suriname | 0 | 待接收／待核實 | 0 | SRD |
+| SS | South Sudan | 0 | 待接收／待核實 | 0 | SSP |
+| ST | Sao Tome and Principe | 0 | 待接收／待核實 | 0 | STN |
+| SV | El Salvador | 0 | 待接收／待核實 | 1 | SVC;USD |
+| SX | Sint Maarten (Dutch part) | 0 | 待接收／待核實 | 0 | XCG |
+| SY | Syrian Arab Republic | 0 | 待接收／待核實 | 1 | SYP |
+| SZ | Eswatini | 0 | 待接收／待核實 | 1 | SZL |
+| TC | Turks and Caicos Islands | 0 | 待接收／待核實 | 0 | USD |
+| TD | Chad | 0 | 待接收／待核實 | 0 | XAF |
+| TF | French Southern Territories | 0 | 待接收／待核實 | 0 | EUR |
+| TG | Togo | 0 | 待接收／待核實 | 0 | XOF |
+| TH | Thailand | 0 | 待接收／待核實 | 6 | THB |
+| TJ | Tajikistan | 0 | 待接收／待核實 | 0 | TJS |
+| TK | Tokelau | 0 | 待接收／待核實 | 0 | NZD |
+| TL | Timor-Leste | 0 | 待接收／待核實 | 0 | USD |
+| TM | Turkmenistan | 0 | 待接收／待核實 | 0 | TMT |
+| TN | Tunisia | 0 | 待接收／待核實 | 2 | TND |
+| TO | Tonga | 0 | 待接收／待核實 | 0 | TOP |
+| TR | Türkiye | 0 | 待接收／待核實 | 13 | TRY |
+| TT | Trinidad and Tobago | 0 | 待接收／待核實 | 1 | TTD |
+| TV | Tuvalu | 0 | 待接收／待核實 | 0 | AUD |
+| TW | Taiwan, Province of China | 2350 | TWSE_BROKER_MATCHED_SOURCE_CODES: 64 | 7 | TWD |
+| TZ | Tanzania, United Republic of | 0 | 待接收／待核實 | 1 | TZS |
+| UA | Ukraine | 0 | 待接收／待核實 | 16 | UAH |
+| UG | Uganda | 0 | 待接收／待核實 | 2 | UGX |
+| UM | United States Minor Outlying Islands | 0 | 待接收／待核實 | 0 | USD |
+| US | United States | 13285 | 待接收／待核實 | 504 | USD;USN |
+| UY | Uruguay | 0 | 待接收／待核實 | 3 | UYI;UYU;UYW |
+| UZ | Uzbekistan | 0 | 待接收／待核實 | 5 | UZS |
+| VA | Holy See (Vatican City State) | 0 | 待接收／待核實 | 0 | EUR |
+| VC | Saint Vincent and the Grenadines | 0 | 待接收／待核實 | 1 | XCD |
+| VE | Venezuela, Bolivarian Republic of | 0 | 待接收／待核實 | 2 | VED;VES |
+| VG | Virgin Islands, British | 0 | 待接收／待核實 | 2 | USD |
+| VI | Virgin Islands, U.S. | 0 | 待接收／待核實 | 0 | USD |
+| VN | Viet Nam | 0 | 待接收／待核實 | 4 | VND |
+| VU | Vanuatu | 0 | 待接收／待核實 | 2 | VUV |
+| WF | Wallis and Futuna | 0 | 待接收／待核實 | 0 | XPF |
+| WS | Samoa | 0 | 待接收／待核實 | 0 | WST |
+| YE | Yemen | 0 | 待接收／待核實 | 0 | YER |
+| YT | Mayotte | 0 | 待接收／待核實 | 0 | EUR |
+| ZA | South Africa | 0 | 待接收／待核實 | 17 | ZAR |
+| ZM | Zambia | 0 | 待接收／待核實 | 1 | ZMW |
+| ZW | Zimbabwe | 0 | 待接收／待核實 | 2 | ZWG |
+
+## 驗收與下一階段缺口
+
+來源分頁清單保留25頁的URL、SHA256、列數與伺服器日期。接收資料通過原始JSON往返、活動父子關係、旧列逐項保留及SQLite完整性檢查。驗收不等於所有249條目內容已完成實質核實。
+
+下一階段需逐國核對主管機關完整持牌名冊、全部交易場所的公司與證券清單、跨境／跨市場掛牌身份與所有貨幣法律來源；每項完成必須有來源範圍、日期、接收總數、分頁對賬、唯一身份與排除規則。沒有來源或受限下載的條目保持UNKNOWN，不能改寫為零或VERIFIED。神經科技與技術成熟度依原證據流程另行核實，本輪金融資料不能代替其能力證據。
