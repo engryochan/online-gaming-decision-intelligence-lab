@@ -1,0 +1,32 @@
+---
+title: "官方證據增補 B03：HDS FUSION 與 8200 部隊"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批新增 **3 條官方來源、4 條限定主張、1 條平台描述及 3 條關係**。原七個缺來源條目至此均有 B01～B03 的限定補充資料，但尚未完成全部身份與技術核實，尤其 FRO0132 的複合名稱仍待釐清。原 B04 登記、歷史 UNKNOWN 主張、國別投影及 SQLite 查詢庫保留。
+
+## HADES 提供方與 HDS FUSION 平台
+
+原 FRO0054 的「HADES / HDS FUSION」混合了提供方及平台名稱。官網以 HADES Defense Systems 為提供方展示名，將 HDS FUSION 描述為軟件定義 C4ISR 平台。本批分開記錄兩者，不據域名推定法人或法律住所。頁面明言展示配置為參考架構；整合、效能與可部署性屬提供方自述，沒有轉成獨立測試結論或 NATO 認證。[HDS FUSION 官方頁](https://hadesdefense.nl/en/hds-fusion-c4isr-platform/)。
+
+## 8200 的機構隸屬與歷史合作
+
+IDF 官方介紹將 8200 列為軍事情報局的單位，並描述資訊收集工具開發、分析及處理職能。新增 VERIFIED 限於 OFFICIAL_ORGANIZATIONAL_AFFILIATION 與 PUBLIC_DESCRIPTION_ONLY；IL 只記為公開制度隸屬的國別上下文，不能當成國家科技能力評分。[IDF 官方介紹](https://www.idf.il/en/mini-sites/directorates/military-intelligence-directorate/military-intelligence-directorate/)。
+
+國防部的 2023 年獲獎公告列有 ISA－8200 及 Mossad－8200 合作。本批登記兩條歷史公告關係，不擅自創造產品名稱、推測機密系統或把國防獎當成世界排名。公告的技術規格、性能與部署細节不足以独立核實，均維持 UNKNOWN。[國防部獲獎公告](https://mod.gov.il/en/press-releases/press-room/2023-israel-defense-prize-awarded-to-4-outstanding-projects)。頁面日期欄為 13/6/2023，而內文另稱 Wednesday；本批只保存出版日期欄，不據此確定典禮的精確日期。
+
+## 數據、未決事項與保全
+
+- [官方來源](tables/13_official_evidence_20261007_b03/registry_supplemental_sources.csv)
+- [限定主張](tables/13_official_evidence_20261007_b03/registry_supplemental_claims.csv)
+- [平台描述](tables/13_official_evidence_20261007_b03/registry_supplemental_technology_descriptions.csv)
+- [機構與合作關係](tables/13_official_evidence_20261007_b03/registry_supplemental_relationships.csv)
+- [七個原缺來源條目的累計處理狀態](tables/13_official_evidence_20261007_b03/baseline_missing_source_review.csv)
+- [基線指紋](../reports/2026-10-07/official_evidence_b03/baseline_manifest.csv)、[驗收](../reports/2026-10-07/official_evidence_b03/validation.json)、[增補程式](../reports/2026-10-07/official_evidence_b03/build_evidence.py)
+
+本批沒有新增法人、國家能力或全球前沿排名認證。所有新增技術主張的獨立性能、部署、監管及訓練授權仍 UNKNOWN。來源為網頁工具文本閱讀，未保存原始 HTTP 回應。原宇航報告、此前批次及既有 HTML 保留，三份報告只追加本批索引。
+
+七個線索有來源不等於全球覆蓋完成。後續仍需處理法人識別、SPA 複合名稱、原國別空值，以及逐項性能／臨床／監管證據；ISO 249 全部國家與地區的前沿能力尚未完成核實。

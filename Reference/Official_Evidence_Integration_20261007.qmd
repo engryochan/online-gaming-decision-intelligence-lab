@@ -1,0 +1,30 @@
+---
+title: "官方證據整合查詢：B04 與 B01～B03"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本輪將 B04 原登記與 B01～B03 補充證據納入**獨立 SQLite 快照**，共 371 個原機構、382 條主張，其中 11 條是新增限定主張。原表及舊查詢庫保留，沒有用補充 VERIFIED 覆蓋原 UNKNOWN。
+
+## 如何查詢與判讀
+
+- [SQLite 快照](../reports/2026-10-07/evidence_integration/global_registry_evidence_query.sqlite)
+- [唯讀 SQL 範例](../reports/2026-10-07/evidence_integration/queries.sql)
+- [各批證據範圍統計](../reports/2026-10-07/evidence_integration/claim_scope_counts.csv)
+- [七個原缺來源條目整合狀態](../reports/2026-10-07/evidence_integration/seven_entity_evidence_status.csv)
+
+`claims` 保留批次、主張及驗證範圍；`source_records` 保留來源元資料；`raw_records` 以原文件路徑及行序保存所有解碼後的 CSV 欄位，包括未投影至查詢欄位的資訊。原文件本身是字節基線，JSON 記錄不是原始 HTTP 網頁存檔。
+
+`verified_public_descriptions` 只選取 PUBLIC_DESCRIPTION_ONLY。機構隸屬及歷史合作公告以各自範圍統計，不能將全部 VERIFIED 加總當成技術成熟度、臨床階段或排名。
+
+七個原缺來源條目均已有補充主張，同時各保留一條原 UNKNOWN。SPA 的複合名稱尚未釐清；其他商業線索的法人身份也沒有因官網展示名稱而自動核實。8200 的官方隸屬可確認，但其未公開項目的性能仍 UNKNOWN。
+
+## 未決事项與更新界線
+
+目前仍需逐項核實法人、國別關係、性能、部署、監管、版本與授權。此快照沒有新增 ISO 國家能力、全球前沿排名或 N0～N7 判定，也没有把 371 機構視為世界全部機構。原國別候選、補充關係與能力主張需分開使用。
+
+本輪只整合既有證據，未新增網頁查證。各批來源與限制見 [B01](Official_Evidence_B01_20261007.qmd)、[B02](Official_Evidence_B02_20261007.qmd)、[B03](Official_Evidence_B03_20261007.qmd)。快照不自動同步；後續更新應另建批次，核對輸入指紋後重新產生新版本，不覆寫此交付。
+
+[輸入指紋及筆數](../reports/2026-10-07/evidence_integration/source_manifest.csv)、[欄位往返及完整性驗收](../reports/2026-10-07/evidence_integration/validation.json)、[生成程式](../reports/2026-10-07/evidence_integration/build_query.py)。驗收逐檔比較所有解碼欄位、主外鍵與 SQLite 完整性；資料一致性檢查不等於對其科學主張的實質認證。
