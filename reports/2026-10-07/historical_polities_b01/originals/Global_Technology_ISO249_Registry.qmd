@@ -1,0 +1,653 @@
+---
+title: "全球科技登記：ISO 3166-1 249 國家／地區"
+subtitle: "有來源的機構、產品、工具與神經科技；2026-10-06 首輪"
+lang: zh-Hant
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute:
+  enabled: false
+---
+
+本附錄以項目現有 ISO 3166-1 母表的 **249 個國家／地區**為外鍵，記錄逐地實際檢索、機構公開描述與具名技術。保留原有 196 筆機構批次，新增 103 筆候選，共 299 筆；另有 44 筆產品／軟件／組件／工具／平台與 13 筆神經科技登記。這是已完成的首輪檢索與部分實體核實，**並未完成每地每領域的全面查證，也不是全球全部科技實體或世界頂尖排名**。
+
+## 範圍與證據判讀
+
+ISO 清單包括國家、屬地與特殊地理區域，不能把 249 項都稱為主權國家。母表沿用 [ISO 國家代碼框架](https://www.iso.org/iso-3166-country-codes.html)，國名為項目母表英名；不以名稱作主鍵。
+
+逐地完成一個廣泛科技檢索，保存 952 筆實際搜尋結果及查詢日誌。搜尋結果可能無關、過時或指向另一國機構，全部標記 UNKNOWN，不能自動升格為所在地機構。三次初次限流失敗均已重試，歷史保留。沒有候選機構的地區代表尚未找到／核實，並不代表沒有科技能力。
+
+VERIFIED 僅適用於具體 claim 與來源支持的範圍：官網或官方文件確實描述該研究／產品。它不能延伸為獨立性能驗證、最新部署、臨床療效、合法使用或世界第一。國別候選欄為編輯定位，法律註冊地 UNKNOWN；跨國機構可不指派國家。已查證的國別關係另列窄義關係表，目前僅登記 Synchron 官網描述的美澳研究地點。
+
+候選領域包含地緣學、戰略情報、軍工、宇航、GEOINT、AI、半導體／計算、量子、機械人／自主系統、生物／神經科技、能源／材料、大型科學與科研軟件。入選是後續技術查證優先清單；每項的全球排名仍 UNKNOWN。[WIPO GII 2026](https://www.wipo.int/en/web/global-innovation-index/2026/index)的經濟體與創新集群指標可供國際背景參考，不可轉換成所有 249 地區或每家企業的技術排名。
+
+## 數據表與核實數量
+
+- iso_entries: **249**
+- completed_country_queries: **249**
+- search_leads: **952**
+- organizations: **299**
+- new_organizations: **103**
+- organization_public_descriptions_verified: **168**
+- new_organization_public_descriptions_verified: **85**
+- technologies: **44**
+- technology_public_descriptions_verified: **40**
+- neuro_records: **13**
+- countries_with_editorial_entity_candidates: **61**
+- countries_with_verified_frontier_level: **0**
+
+| 資料表 | 內容 |
+| --- | --- |
+| [registry_country_technology_coverage.csv](tables/07_global_technology_iso249_20261006/registry_country_technology_coverage.csv) | 249 地區：查詢、線索數、候選數與未完成狀態 |
+| [registry_global_organizations.csv](tables/07_global_technology_iso249_20261006/registry_global_organizations.csv) | 歷史196筆加新增候選；顯示實體與法律法人分開 |
+| [registry_global_claims.csv](tables/07_global_technology_iso249_20261006/registry_global_claims.csv) | 逐項短主張、VERIFIED／UNKNOWN與核實範圍 |
+| [registry_global_sources.csv](tables/07_global_technology_iso249_20261006/registry_global_sources.csv) | 來源網址、日期、可讀狀態與支持範圍 |
+| [registry_technology_products_tools.csv](tables/07_global_technology_iso249_20261006/registry_technology_products_tools.csv) | 具名軟件／組件／工具／設備／平台 |
+| [registry_neurotechnology_global.csv](tables/07_global_technology_iso249_20261006/registry_neurotechnology_global.csv) | 侵入性、模態、方向、遠程、頻寬、試驗與監管 |
+| [registry_country_entity_relations.csv](tables/07_global_technology_iso249_20261006/registry_country_entity_relations.csv) | 有來源的窄義國別關係 |
+| [registry_country_search_leads.csv](tables/07_global_technology_iso249_20261006/registry_country_search_leads.csv) | 逐地實際結果；全部未審查線索 |
+| [registry_legacy_product_project_leads.csv](tables/07_global_technology_iso249_20261006/registry_legacy_product_project_leads.csv) | 原196筆的產品／項目研究詞，未冒充已核實產品 |
+
+## 新增機構與研究計畫
+
+| ID | 機構／計畫 | 國別候選 | 領域 | 公開描述 | 證據／来源 |
+| --- | --- | --- | --- | --- | --- |
+| GTO0001 | ASML | NL | SEMICONDUCTOR | 光刻、量測與計算光刻產品 | [VERIFIED](https://www.asml.com/en) |
+| GTO0002 | TSMC | TW | SEMICONDUCTOR | 晶圓代工與先進封裝公開產品 | [VERIFIED](https://www.tsmc.com/english) |
+| GTO0003 | imec | BE | SEMICONDUCTOR | 奈米電子研究 | [VERIFIED](https://www.imec-int.com/en) |
+| GTO0004 | CEA | FR | RESEARCH | 綜合科學與技術研究 | [VERIFIED](https://www.cea.fr/english) |
+| GTO0005 | Fraunhofer | DE | RESEARCH | 應用科學研究網絡 | [VERIFIED](https://www.fraunhofer.de/en.html) |
+| GTO0006 | RIKEN | JP | RESEARCH | 科學研究機構 | [VERIFIED](https://www.riken.jp/en/) |
+| GTO0007 | VTT | FI | RESEARCH | 技術研究 | [VERIFIED](https://www.vttresearch.com/en) |
+| GTO0008 | SINTEF | NO | RESEARCH | 應用研究 | [VERIFIED](https://www.sintef.no/en/) |
+| GTO0009 | Technology Innovation Institute | AE | RESEARCH | 先進技術研究 | [VERIFIED](https://www.tii.ae/) |
+| GTO0010 | KAUST | SA | RESEARCH | 科學與技術研究大學 | [VERIFIED](https://www.kaust.edu.sa/en/) |
+| GTO0011 | CNRS | FR | RESEARCH | 跨學科研究 | [VERIFIED](https://www.cnrs.fr/en) |
+| GTO0012 | Max Planck Society | DE | RESEARCH | 基礎科學研究網絡 | [VERIFIED](https://www.mpg.de/en) |
+| GTO0013 | AIST | JP | RESEARCH | 產業科學與技術研究 | [VERIFIED](https://www.aist.go.jp/index_en.html) |
+| GTO0014 | KAIST | KR | RESEARCH | 科學與技術研究大學 | [VERIFIED](https://www.kaist.ac.kr/en/) |
+| GTO0015 | Vector Institute | CA | AI | 人工智能研究 | [VERIFIED](https://vectorinstitute.ai/) |
+| GTO0016 | Amii | CA | AI | 人工智能與機器學習研究 | [VERIFIED](https://www.amii.ca/) |
+| GTO0017 | Mila | CA | AI | 加拿大官方列為國家人工智能研究機構 | [VERIFIED](https://ised-isde.canada.ca/site/ai-strategy/en?ssp=1) |
+| GTO0018 | MBZUAI | AE | AI | 人工智能研究大學 | [VERIFIED](https://mbzuai.ac.ae/) |
+| GTO0019 | CERN | 跨國／未指派 | LARGE_SCIENCE | 粒子物理研究 | [VERIFIED](https://home.cern/) |
+| GTO0020 | ITER | 跨國／未指派 | ENERGY | 核融合研究計畫 | [VERIFIED](https://www.iter.org/) |
+| GTO0021 | A*STAR | SG | RESEARCH | UNKNOWN：頁面內容不足 | [UNKNOWN](https://www.a-star.edu.sg/) |
+| GTO0022 | CSIRO | AU | AI | 人工智能研究 | [VERIFIED](https://www.csiro.au/en/research/technology-space/ai) |
+| GTO0023 | ETRI | KR | RESEARCH | UNKNOWN：本輪主頁讀取失敗 | [UNKNOWN](https://www.etri.re.kr/eng/) |
+| GTO0024 | National Research Council Canada | CA | RESEARCH | 加拿大國家研究機構 | [VERIFIED](https://nrc.canada.ca/en) |
+| GTO0025 | Quantinuum | GB;US | QUANTUM | 量子計算硬件與軟件 | [VERIFIED](https://www.quantinuum.com/) |
+| GTO0026 | IQM | FI | QUANTUM | 超導量子計算系統 | [VERIFIED](https://iqm.tech/) |
+| GTO0027 | IonQ | US | QUANTUM | 離子阱量子計算 | [VERIFIED](https://www.ionq.com/) |
+| GTO0028 | Pasqal | FR | QUANTUM | 量子計算 | [VERIFIED](https://www.pasqal.com/) |
+| GTO0029 | Quandela | FR | QUANTUM | 光子量子計算 | [VERIFIED](https://www.quandela.com/) |
+| GTO0030 | QuEra | US | QUANTUM | 中性原子量子計算 | [VERIFIED](https://www.quera.com/) |
+| GTO0031 | D-Wave | CA | QUANTUM | 量子計算系統 | [VERIFIED](https://www.dwavequantum.com/) |
+| GTO0032 | Xanadu | CA | QUANTUM | UNKNOWN：主頁未提供可讀內容 | [UNKNOWN](https://www.xanadu.ai/) |
+| GTO0033 | Neuralink | US | NEUROTECH | UNKNOWN：主頁未提供可讀內容 | [UNKNOWN](https://neuralink.com/) |
+| GTO0034 | Synchron | US;AU | NEUROTECH | 公開描述血管內植入式腦機介面與美澳人體研究 | [VERIFIED](https://synchron.com/) |
+| GTO0035 | Precision Neuroscience | US | NEUROTECH | 公開描述 Layer 7 腦機介面研發 | [VERIFIED](https://www.precisionneuro.io/) |
+| GTO0036 | Paradromics | US | NEUROTECH | 公開描述 Connexus 植入式腦機介面研發 | [VERIFIED](https://paradromics.com/) |
+| GTO0037 | Blackrock Neurotech | US | NEUROTECH | 公開描述腦機介面與神經研究技術 | [VERIFIED](https://blackrockneurotech.com/) |
+| GTO0038 | g.tec | AT | NEUROTECH | EEG 與腦機介面硬件、軟件和研究系統 | [VERIFIED](https://www.gtec.at/) |
+| GTO0039 | Neuroelectrics | ES | NEUROTECH | EEG 記錄與 tES 神經調控平台 | [VERIFIED](https://www.neuroelectrics.com/) |
+| GTO0040 | BrainGate | US | NEUROTECH | 腦機介面研究合作 | [VERIFIED](https://www.braingate.org/) |
+| GTO0041 | Artinis | NL | NEUROTECH | fNIRS／NIRS 研究設備 | [VERIFIED](https://artinis.com/) |
+| GTO0042 | NIRx | US;DE | NEUROTECH | fNIRS 系統 | [VERIFIED](https://nirx.net/) |
+| GTO0043 | Magstim | GB | NEUROTECH | 神經刺激設備 | [VERIFIED](https://www.magstim.com/) |
+| GTO0044 | BrainsWay | IL | NEUROTECH | 非侵入式 Deep TMS 設備 | [VERIFIED](https://www.brainsway.com/) |
+| GTO0045 | DARPA N3 | US | NEUROTECH | 非手術雙向腦機介面研發目標；官方標記計畫已完成，未證明全部目標實現 | [VERIFIED](https://www.darpa.mil/research/programs/next-generation-nonsurgical-neurotechnology) |
+| GTO0046 | CSIR | ZA | RESEARCH | 科學與產業研究 | [VERIFIED](https://www.csir.co.za/) |
+| GTO0047 | SANSA | ZA | SPACE | 地球觀測與太空研究業務 | [VERIFIED](https://www.sansa.org.za/) |
+| GTO0048 | LNCC | BR | COMPUTE | 科學計算研究 | [VERIFIED](https://www.gov.br/lncc/pt-br) |
+| GTO0049 | CONICET | AR | RESEARCH | 科學與技術研究 | [VERIFIED](https://www.conicet.gov.ar/) |
+| GTO0050 | Istituto Italiano di Tecnologia | IT | RESEARCH | 技術研究 | [VERIFIED](https://www.iit.it/) |
+| GTO0051 | CSIC | ES | RESEARCH | 科學研究 | [VERIFIED](https://www.csic.es/en) |
+| GTO0052 | SRI | US | RESEARCH | 研究與技術開發 | [VERIFIED](https://www.sri.com/) |
+| GTO0053 | Oak Ridge National Laboratory | US | RESEARCH | 國家實驗室研究 | [VERIFIED](https://www.ornl.gov/) |
+| GTO0054 | Boston Dynamics | US | ROBOTICS | Spot、Atlas、Stretch 與 Orbit 機械人相關產品 | [VERIFIED](https://bostondynamics.com/) |
+| GTO0055 | Intuitive | US | ROBOTICS | da Vinci 與 Ion 醫療機械人系統 | [VERIFIED](https://www.intuitive.com/en-us) |
+| GTO0056 | ABB | CH | AUTOMATION | 工業電氣與自動化 | [VERIFIED](https://www.abb.com/global/en) |
+| GTO0057 | Honda Robotics | JP | ROBOTICS | 機械人研究與技術 | [VERIFIED](https://global.honda/en/robotics/) |
+| GTO0058 | DJI | CN | AUTONOMY | 無人機產品 | [VERIFIED](https://www.dji.com/) |
+| GTO0059 | Unitree | CN | ROBOTICS | 四足與人形機械人產品 | [VERIFIED](https://www.unitree.com/) |
+| GTO0060 | Open Robotics | 跨國／未指派 | ROBOTICS | 機械人軟件研究與開發 | [VERIFIED](https://www.openrobotics.org/) |
+| GTO0061 | Broad Institute | US | BIOTECH | 生物醫學研究 | [VERIFIED](https://www.broadinstitute.org/) |
+| GTO0062 | EMBL | 跨國／未指派 | BIOTECH | 分子生物學研究 | [VERIFIED](https://www.embl.org/) |
+| GTO0063 | Helion | US | ENERGY | 核融合研發公開說明 | [VERIFIED](https://www.helionenergy.com/) |
+| GTO0064 | CATL | CN | ENERGY | 電池技術與產品 | [VERIFIED](https://www.catl.com/en/) |
+| GTO0065 | INPE | BR | SPACE | 太空與地球科學研究 | [VERIFIED](https://www.gov.br/inpe/pt-br) |
+| GTO0066 | CNPEM | BR | RESEARCH | UNKNOWN：本輪主頁讀取失敗 | [UNKNOWN](https://cnpem.br/en/) |
+| GTO0067 | Argonne National Laboratory | US | RESEARCH | UNKNOWN：本輪主頁讀取失敗 | [UNKNOWN](https://www.anl.gov/) |
+| GTO0068 | UKAEA | GB | ENERGY | UNKNOWN：本輪主頁讀取失敗 | [UNKNOWN](https://www.ukaea.uk/) |
+| GTO0069 | Commonwealth Fusion Systems | US | ENERGY | 高溫超導磁體與核融合研發；商業發電屬研發目標 | [VERIFIED](https://www.cfs.energy/) |
+| GTO0070 | The Cyprus Institute CaSToRC | CY | COMPUTE | UNKNOWN：官方頁面未取得足夠可讀內容；計算科學研究中心 | [UNKNOWN](https://www.cyi.ac.cy/index.php/zero-plus-overview/castorc-overview.html) |
+| GTO0071 | Applied Innovation Center | EG | AI | 應用創新研究中心 | [VERIFIED](https://www.aic.gov.eg/about/) |
+| GTO0072 | STACC | EE | AI | 人工智能與資料科學研究 | [VERIFIED](https://stacc.ee/research/) |
+| GTO0073 | CERTH | GR | RESEARCH | UNKNOWN：官方頁面未取得足夠可讀內容；希臘官方研究機構介紹 | [UNKNOWN](https://gsri.gov.gr/en/foreas/centre-for-research-technology-hellas/) |
+| GTO0074 | Athena Research Center | GR | RESEARCH | UNKNOWN：官方頁面未取得足夠可讀內容；信息、通信與知識技術研究 | [UNKNOWN](https://gsri.gov.gr/en/foreas/athena-research-innovation-information-tecnologies/) |
+| GTO0075 | Artificial Intelligence National Laboratory Hungary | HU | AI | 人工智能國家實驗室 | [VERIFIED](https://www.nemzetilaborok.nkfih.gov.hu/artificial-intelligence-national-laboratory/about) |
+| GTO0076 | Institut Teknologi Bandung STEI | ID | AI | UNKNOWN：官方頁面未取得足夠可讀內容；電機與信息學教研單位 | [UNKNOWN](https://stei.itb.ac.id/en/home-2026/) |
+| GTO0077 | Icelandic Institute for Intelligent Machines | IS | AI | 智能機械研究 | [VERIFIED](https://www.iiim.is/about-iiim/) |
+| GTO0078 | Institute of Information and Computational Technologies Kazakhstan | KZ | COMPUTE | 信息與計算技術研究 | [VERIFIED](https://iict.kz/en/) |
+| GTO0079 | Vilnius University Institute of Data Science and Digital Technologies | LT | AI | 資料科學與數字技術研究單位 | [VERIFIED](https://www.mii.lt/en/structure/scientific-subdivisions) |
+| GTO0080 | University of Luxembourg AI Research | LU | AI | UNKNOWN：官方頁面未取得足夠可讀內容；大學人工智能研究 | [UNKNOWN](https://www.uni.lu/research-en/research-areas/artificial-intelligence/ai-research/) |
+| GTO0081 | AI Malaysia Berhad / National AI Office | MY | AI_POLICY | 人工智能政策與生態組織 | [VERIFIED](https://ai.gov.my/ai-malaysia/) |
+| GTO0082 | NCAIR Nigeria | NG | AI | UNKNOWN：官方頁面未取得足夠可讀內容；人工智能與機械人研究中心 | [UNKNOWN](https://ncair.nitda.gov.ng/) |
+| GTO0083 | New Zealand Institute for Advanced Technology | NZ | RESEARCH | UNKNOWN：官方頁面未取得足夠可讀內容；紐西蘭官方先進技術研究機構介紹 | [UNKNOWN](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology) |
+| GTO0084 | NASTP Delta | PK | AEROSPACE_COMPUTE | 航空科技園區官方介紹 | [VERIFIED](https://www.stza.gov.pk/nastp-delta/) |
+| GTO0085 | DOST-ASTI | PH | AI | 人工智能研究業務 | [VERIFIED](https://asti.dost.gov.ph/artificial-intelligence/) |
+| GTO0086 | IDEAS Research Institute | PL | AI | 研究機構官方介紹 | [VERIFIED](https://www.ideas.edu.pl/en/instytut/) |
+| GTO0087 | Qatar University AI Research | QA | AI | UNKNOWN：官方頁面未取得足夠可讀內容；大學人工智能研究 | [UNKNOWN](https://home.qu.edu.qa/en-us/Colleges/engineering/academics/computer/research/Pages/artificial_Intelligence.aspx) |
+| GTO0088 | ICIA Mihai Draganescu | RO | AI | 羅馬尼亞官方人工智能研究機構介紹 | [VERIFIED](https://accelerate.gov.ro/ro/entities/mihai-draganescu-artificial-intelligence-research-institute-icia) |
+| GTO0089 | Rwanda Information Society Authority | RW | TECHNOLOGY_POLICY | 政府技術創新職能 | [VERIFIED](https://www.risa.gov.rw/divisions-and-units/technology-innovation-division) |
+| GTO0090 | SDAIA NCAI | SA | AI | UNKNOWN：官方頁面未取得足夠可讀內容；國家人工智能中心 | [UNKNOWN](https://sdaia.gov.sa/en/Sectors/Ncai/Pages/default.aspx) |
+| GTO0091 | IMDA National Multimodal LLM Programme | SG | AI | UNKNOWN：官方頁面未取得足夠可讀內容；多模態大型語言模型研發計畫 | [UNKNOWN](https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/national-multimodal-llm-programme) |
+| GTO0092 | Institute for Artificial Intelligence of Serbia | RS | AI | 塞爾維亞官方人工智能研究機構介紹 | [VERIFIED](https://www.ai.gov.rs/tekst/en/116/the-ai-institute.php) |
+| GTO0093 | KInIT | SK | AI | 智能技術研究機構 | [VERIFIED](https://kinit.sk/about-us/) |
+| GTO0094 | Jozef Stefan Institute AI Department | SI | AI | 人工智能研究部門 | [VERIFIED](https://ailab.ijs.si/) |
+| GTO0095 | TISTR | TH | RESEARCH | UNKNOWN：官方頁面未取得足夠可讀內容；科學與技術研究機構 | [UNKNOWN](https://www.tistr.or.th/) |
+| GTO0096 | TUBITAK | TR | RESEARCH | 科學與技術研究機構網絡 | [VERIFIED](https://tubitak.gov.tr/en/institutes) |
+| GTO0097 | Glushkov Institute of Cybernetics | UA | COMPUTE | 控制論研究機構 | [VERIFIED](https://incyb.kiev.ua/en/institut/about-institute) |
+| GTO0098 | Instituto Vidart | UY | AI | 烏拉圭官方人工智能中心介紹 | [VERIFIED](https://www.gub.uy/uruguay-innova/noticias/se-lanzo-el-instituto-vidart-el-centro-nacional-de-inteligencia-artificial) |
+| GTO0099 | Chile Ministry of Science AI Programme | CL | AI_POLICY | 人工智能政策業務 | [VERIFIED](https://minciencia.gob.cl/areas/inteligencia-artificial/Inteligencia-Artificial/) |
+| GTO0100 | Colombia Minciencias Colombia Inteligente | CO | AI_POLICY | 人工智能研究資助徵集計畫 | [VERIFIED](https://minciencias.gov.co/convocatorias/convocatoria-colombia-inteligente-2026) |
+| GTO0101 | Costa Rica MICITT | CR | TECHNOLOGY_POLICY | 科學、創新與數字政策部門 | [VERIFIED](https://www.micitt.go.cr/) |
+| GTO0102 | Vietnam Ministry of Science and Technology | VN | TECHNOLOGY_POLICY | 科學與技術政府部門 | [VERIFIED](https://english.mst.gov.vn/) |
+| GTO0103 | INSAIT | BG | AI | 人工智能與計算機科學研究機構；官方章程 | [VERIFIED](https://insait.ai/wp-content/uploads/2023/08/INSAIT-Regulations.pdf) |
+
+## 具名技術、產品、工具與平台
+
+版本、授權、獨立效能、全球排名與一般可用性未核實；除明示的特定監管條目外均為 UNKNOWN。
+
+| ID | 名稱 | 類型 | 用途／核實范围 | 證據／來源 |
+| --- | --- | --- | --- | --- |
+| GTT0001 | PyTorch | SOFTWARE_FRAMEWORK | 機器學習框架 | [VERIFIED](https://pytorch.org/) |
+| GTT0002 | TensorFlow | SOFTWARE_FRAMEWORK | 機器學習平台 | [VERIFIED](https://www.tensorflow.org/) |
+| GTT0003 | JAX | SOFTWARE_LIBRARY | 高效能陣列計算 | [VERIFIED](https://docs.jax.dev/en/latest/) |
+| GTT0004 | Qiskit | SOFTWARE_SDK | 量子計算軟件 | [VERIFIED](https://www.ibm.com/quantum/qiskit) |
+| GTT0005 | Cirq | SOFTWARE_FRAMEWORK | 量子電路 Python 框架 | [VERIFIED](https://github.com/quantumlib/Cirq) |
+| GTT0006 | PennyLane | SOFTWARE_LIBRARY | 量子計算與量子機器學習軟件 | [VERIFIED](https://github.com/PennyLaneAI/pennylane) |
+| GTT0007 | NASA cFS | SOFTWARE_FRAMEWORK | 核心飛行軟件框架 | [VERIFIED](https://github.com/NASA/cFS) |
+| GTT0008 | NASA F Prime | SOFTWARE_FRAMEWORK | 飛行與嵌入式軟件框架 | [VERIFIED](https://github.com/nasa/fprime) |
+| GTT0009 | OpenMDAO | SOFTWARE_FRAMEWORK | 多學科設計分析與優化框架 | [VERIFIED](https://github.com/OpenMDAO/OpenMDAO) |
+| GTT0010 | Polars | SOFTWARE_LIBRARY | 資料框架 | [VERIFIED](https://pola.rs/) |
+| GTT0011 | DuckDB | DATABASE | 分析型 SQL 資料庫 | [VERIFIED](https://duckdb.org/) |
+| GTT0012 | Kubernetes | SOFTWARE_PLATFORM | 容器編排 | [VERIFIED](https://kubernetes.io/) |
+| GTT0013 | PostgreSQL | DATABASE | 關聯資料庫 | [VERIFIED](https://www.postgresql.org/) |
+| GTT0014 | GDAL | SOFTWARE_LIBRARY | 地理空間資料處理 | [VERIFIED](https://gdal.org/en/stable/) |
+| GTT0015 | QGIS | SOFTWARE_APPLICATION | 地理信息系統 | [VERIFIED](https://qgis.org/) |
+| GTT0016 | Eclipse SUMO | SOFTWARE_SIMULATOR | 交通模擬 | [VERIFIED](https://eclipse.dev/sumo/) |
+| GTT0017 | CARLA | SOFTWARE_SIMULATOR | 自動駕駛模擬 | [VERIFIED](https://carla.org/) |
+| GTT0018 | OpenStreetMap | DATA_PLATFORM | 協作地圖資料項目 | [VERIFIED](https://www.openstreetmap.org/) |
+| GTT0019 | STAC | SPECIFICATION | UNKNOWN：本輪首頁不足以確認規範版本與內容 | [UNKNOWN](https://stacspec.org/) |
+| GTT0020 | MNE | SOFTWARE_LIBRARY | 神經資料分析軟件 | [VERIFIED](https://mne.tools/stable/index.html) |
+| GTT0021 | NITRC | RESOURCE_PLATFORM | 神經信息學資源平台 | [VERIFIED](https://www.nitrc.org/) |
+| GTT0022 | ROS 2 | SOFTWARE_FRAMEWORK | 機械人軟件框架 | [VERIFIED](https://github.com/ros2/ros2) |
+| GTT0023 | Orekit | SOFTWARE_LIBRARY | UNKNOWN：官方頁面訪問挑戰 | [UNKNOWN](https://www.orekit.org/) |
+| GTT0024 | Gazebo | SOFTWARE_SIMULATOR | UNKNOWN：本輪頁面沒有可讀內容 | [UNKNOWN](https://gazebosim.org/) |
+| GTT0025 | BCI2000 | SOFTWARE_PLATFORM | UNKNOWN：本輪頁面沒有可讀內容 | [UNKNOWN](https://www.bci2000.org/) |
+| GTT0026 | Layer 7-T | HARDWARE_COMPONENT | 暫時性皮質電極，FDA K242618；少於30天的記錄、監測與刺激用途 | [VERIFIED](https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242618.pdf) |
+| GTT0027 | Stentrode | DEVICE_PROJECT | 血管內植入式腦機介面研究產品 | [VERIFIED](https://synchron.com/) |
+| GTT0028 | Connexus | DEVICE_PROJECT | 植入式腦機介面研究產品 | [VERIFIED](https://paradromics.com/) |
+| GTT0029 | g.NAUTILUS | HARDWARE_COMPONENT | EEG 記錄產品系列 | [VERIFIED](https://www.gtec.at/) |
+| GTT0030 | Enobio | HARDWARE_COMPONENT | EEG 記錄產品系列 | [VERIFIED](https://www.neuroelectrics.com/) |
+| GTT0031 | Starstim | DEVICE_PLATFORM | EEG 與 tES 平台 | [VERIFIED](https://www.neuroelectrics.com/) |
+| GTT0032 | Deep TMS | DEVICE_PLATFORM | 非侵入式經顱磁刺激產品系列 | [VERIFIED](https://www.brainsway.com/) |
+| GTT0033 | Spot | ROBOT | 機械人產品 | [VERIFIED](https://bostondynamics.com/) |
+| GTT0034 | Atlas | ROBOT | 機械人研發與產品 | [VERIFIED](https://bostondynamics.com/) |
+| GTT0035 | Stretch | ROBOT | 物流機械人產品 | [VERIFIED](https://bostondynamics.com/) |
+| GTT0036 | Orbit | SOFTWARE_PLATFORM | 機械人相關管理平台 | [VERIFIED](https://bostondynamics.com/) |
+| GTT0037 | da Vinci | DEVICE_PLATFORM | 手術機械人系統 | [VERIFIED](https://www.intuitive.com/en-us) |
+| GTT0038 | Ion | DEVICE_PLATFORM | 醫療機械人系統 | [VERIFIED](https://www.intuitive.com/en-us) |
+| GTT0039 | Nexus | SOFTWARE_PLATFORM | 量子計算軟件平台 | [VERIFIED](https://www.quantinuum.com/) |
+| GTT0040 | TKET | SOFTWARE_TOOL | 量子軟件工具 | [VERIFIED](https://www.quantinuum.com/) |
+| GTT0041 | InQuanto | SOFTWARE_TOOL | 量子化學軟件 | [VERIFIED](https://www.quantinuum.com/) |
+| GTT0042 | Helios | HARDWARE_PLATFORM | 量子計算硬件 | [VERIFIED](https://www.quantinuum.com/) |
+| GTT0043 | 3DFabric | TECHNOLOGY_PLATFORM | 先進封裝技術平台 | [VERIFIED](https://www.tsmc.com/english) |
+| GTT0044 | Open Innovation Platform | ECOSYSTEM_PLATFORM | 晶圓設計生態平台 | [VERIFIED](https://www.tsmc.com/english) |
+
+## 神經科技：產品與目標分开
+
+[Layer 7-T 的 FDA 文件](https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242618.pdf)支持少於 30 天的皮質表面記錄、監測與刺激用途，描述 1024 接點、無無線功能及專業醫療環境使用。這個特定电極的 510(k) clearance 不等同研究中的長期無線 BCI 系統全面獲准；電極接點數也不能換算成語義信息頻寬。
+
+[DARPA N3 官方存檔](https://www.darpa.mil/research/programs/next-generation-nonsurgical-neurotechnology)標記計畫完成。非手術與雙向屬研發目標，沒有在本登記中當作已達成性能。[Neuroelectrics](https://www.neuroelectrics.com/)描述遠端下發治療協議至佩戴設備；這不是無設備的遠距讀腦。fNIRS 量測血氧動力學，不等於直接解讀思想。
+
+信息頻寬必須有任務、編碼、試驗條件、統計方法與 bits/s 證據；本批未建立可比較的頻寬證據。論文、專利、試驗登記狀態及正式臨床階段仍待逐項核實。官網人體研究說明以 VENDOR_DESCRIPTION 明示，不以網站宣傳當作試驗結果。ClinicalTrials.gov 兩個連結可辨識，但本輪頁面內容不足，狀態保留 UNKNOWN。N0～N7 評分必須先有固定定義與對應證據，本批不給任何國家或設備推測分數。
+
+| 機構／項目 | 侵入性 | 模態 | 方向 | 遠程／設備 | 證據 |
+| --- | --- | --- | --- | --- | --- |
+| Neuralink / UNSPECIFIED_PROJECT | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN |
+| Synchron / Stentrode | INVASIVE_ENDOVASCULAR | UNKNOWN | UNKNOWN | UNKNOWN | VERIFIED |
+| Precision Neuroscience / Layer 7-T | INVASIVE_CORTICAL_SURFACE | ECoG | READ_AND_STIMULATE | NO_WIRELESS_DEVICE | VERIFIED |
+| Paradromics / Connexus | IMPLANTABLE | UNKNOWN | READ_COMMUNICATION_INTENT | UNKNOWN | VERIFIED |
+| Blackrock Neurotech / UNSPECIFIED_PLATFORM | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | VERIFIED |
+| g.tec / g.NAUTILUS | NONINVASIVE_EEG | EEG | READ | UNKNOWN | VERIFIED |
+| Neuroelectrics / Starstim | NONINVASIVE | EEG;tES | READ_AND_STIMULATE | REMOTE_PROTOCOL_DELIVERY_VENDOR_DESCRIPTION | VERIFIED |
+| BrainGate / RESEARCH_CONSORTIUM | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | VERIFIED |
+| Artinis / fNIRS_RESEARCH_DEVICES | NONINVASIVE_OPTICAL | fNIRS | MEASURE_HEMODYNAMICS | UNKNOWN | VERIFIED |
+| NIRx / fNIRS_SYSTEMS | NONINVASIVE_OPTICAL | fNIRS | MEASURE_HEMODYNAMICS | UNKNOWN | VERIFIED |
+| Magstim / NEUROSTIMULATION_DEVICES | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | VERIFIED |
+| BrainsWay / Deep TMS | NONINVASIVE | TMS | STIMULATE | UNKNOWN | VERIFIED |
+| DARPA N3 / N3_TARGET_NOT_RESULT | NONSURGICAL_TARGET | UNKNOWN | BIDIRECTIONAL_TARGET | UNKNOWN | VERIFIED |
+
+## 249 地區逐地检索覆蓋
+
+「公開描述已核實」只計數該國候選下的機構說明，不證明法律所在地或國家頂尖能力。所有國家科技等級仍 UNKNOWN。實際查询、網址與檢索來源見 CSV 及原始檢索日誌。
+
+| ISO | 國家／地區 | 檢索線索 | 機構候選 | 候選公開描述已核實 | 全面核實／國家等級 |
+| --- | --- | --- | --- | --- | --- |
+| AW | Aruba | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| AF | Afghanistan | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| AO | Angola | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| AI | Anguilla | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| AX | Åland Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| AL | Albania | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| AD | Andorra | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| AE | United Arab Emirates | 4 | 2 | 2 | 未完成 / UNKNOWN |
+| AR | Argentina | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| AM | Armenia | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| AS | American Samoa | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| AQ | Antarctica | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TF | French Southern Territories | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| AG | Antigua and Barbuda | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| AU | Australia | 4 | 2 | 2 | 未完成 / UNKNOWN |
+| AT | Austria | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| AZ | Azerbaijan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BI | Burundi | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| BE | Belgium | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| BJ | Benin | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BQ | Bonaire, Sint Eustatius and Saba | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BF | Burkina Faso | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BD | Bangladesh | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BG | Bulgaria | 0 | 1 | 1 | 未完成 / UNKNOWN |
+| BH | Bahrain | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BS | Bahamas | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BA | Bosnia and Herzegovina | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BL | Saint Barthélemy | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BY | Belarus | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| BZ | Belize | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BM | Bermuda | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BO | Bolivia, Plurinational State of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BR | Brazil | 4 | 3 | 2 | 未完成 / UNKNOWN |
+| BB | Barbados | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| BN | Brunei Darussalam | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| BT | Bhutan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| BV | Bouvet Island | 0 | 0 | 0 | 未完成 / UNKNOWN |
+| BW | Botswana | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CF | Central African Republic | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CA | Canada | 4 | 7 | 5 | 未完成 / UNKNOWN |
+| CC | Cocos (Keeling) Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CH | Switzerland | 4 | 2 | 2 | 未完成 / UNKNOWN |
+| CL | Chile | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| CN | China | 4 | 17 | 5 | 未完成 / UNKNOWN |
+| CI | Côte d'Ivoire | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CM | Cameroon | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CD | Congo, The Democratic Republic of the | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CG | Congo | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CK | Cook Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CO | Colombia | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| KM | Comoros | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CV | Cabo Verde | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CR | Costa Rica | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| CU | Cuba | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CW | Curaçao | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CX | Christmas Island | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KY | Cayman Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| CY | Cyprus | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| CZ | Czechia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| DE | Germany | 4 | 15 | 7 | 未完成 / UNKNOWN |
+| DJ | Djibouti | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| DM | Dominica | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| DK | Denmark | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| DO | Dominican Republic | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| DZ | Algeria | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| EC | Ecuador | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| EG | Egypt | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| ER | Eritrea | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| EH | Western Sahara | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| ES | Spain | 4 | 3 | 3 | 未完成 / UNKNOWN |
+| EE | Estonia | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| ET | Ethiopia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| FI | Finland | 4 | 3 | 3 | 未完成 / UNKNOWN |
+| FJ | Fiji | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| FK | Falkland Islands (Malvinas) | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| FR | France | 4 | 15 | 11 | 未完成 / UNKNOWN |
+| FO | Faroe Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| FM | Micronesia, Federated States of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GA | Gabon | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GB | United Kingdom | 4 | 14 | 9 | 未完成 / UNKNOWN |
+| GE | Georgia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GG | Guernsey | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GH | Ghana | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GI | Gibraltar | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GN | Guinea | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GP | Guadeloupe | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GM | Gambia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GW | Guinea-Bissau | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GQ | Equatorial Guinea | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GR | Greece | 4 | 2 | 0 | 未完成 / UNKNOWN |
+| GD | Grenada | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GL | Greenland | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GT | Guatemala | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GF | French Guiana | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GU | Guam | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| GY | Guyana | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| HK | Hong Kong | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| HM | Heard Island and McDonald Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| HN | Honduras | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| HR | Croatia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| HT | Haiti | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| HU | Hungary | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| ID | Indonesia | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| IM | Isle of Man | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| IN | India | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| IO | British Indian Ocean Territory | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| IE | Ireland | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| IR | Iran, Islamic Republic of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| IQ | Iraq | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| IS | Iceland | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| IL | Israel | 4 | 4 | 3 | 未完成 / UNKNOWN |
+| IT | Italy | 4 | 2 | 2 | 未完成 / UNKNOWN |
+| JM | Jamaica | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| JE | Jersey | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| JO | Jordan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| JP | Japan | 4 | 5 | 4 | 未完成 / UNKNOWN |
+| KZ | Kazakhstan | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| KE | Kenya | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KG | Kyrgyzstan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KH | Cambodia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KI | Kiribati | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KN | Saint Kitts and Nevis | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KR | Korea, Republic of | 4 | 4 | 2 | 未完成 / UNKNOWN |
+| KW | Kuwait | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LA | Lao People's Democratic Republic | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LB | Lebanon | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LR | Liberia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LY | Libya | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LC | Saint Lucia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LI | Liechtenstein | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LK | Sri Lanka | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LS | Lesotho | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| LT | Lithuania | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| LU | Luxembourg | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| LV | Latvia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MO | Macao | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MF | Saint Martin (French part) | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MA | Morocco | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MC | Monaco | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MD | Moldova, Republic of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MG | Madagascar | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MV | Maldives | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MX | Mexico | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MH | Marshall Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MK | North Macedonia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| ML | Mali | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MT | Malta | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MM | Myanmar | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| ME | Montenegro | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MN | Mongolia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MP | Northern Mariana Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MZ | Mozambique | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MR | Mauritania | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MS | Montserrat | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MQ | Martinique | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MU | Mauritius | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MW | Malawi | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| MY | Malaysia | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| YT | Mayotte | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NA | Namibia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NC | New Caledonia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NE | Niger | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NF | Norfolk Island | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NG | Nigeria | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| NI | Nicaragua | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NU | Niue | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NL | Netherlands | 4 | 4 | 3 | 未完成 / UNKNOWN |
+| NO | Norway | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| NP | Nepal | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NR | Nauru | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| NZ | New Zealand | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| OM | Oman | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PK | Pakistan | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| PA | Panama | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PN | Pitcairn | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PE | Peru | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PH | Philippines | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| PW | Palau | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PG | Papua New Guinea | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PL | Poland | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| PR | Puerto Rico | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| KP | Korea, Democratic People's Republic of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PT | Portugal | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| PY | Paraguay | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PS | Palestine, State of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PF | French Polynesia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| QA | Qatar | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| RE | Réunion | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| RO | Romania | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| RU | Russian Federation | 4 | 2 | 0 | 未完成 / UNKNOWN |
+| RW | Rwanda | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| SA | Saudi Arabia | 4 | 2 | 1 | 未完成 / UNKNOWN |
+| SD | Sudan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SN | Senegal | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SG | Singapore | 4 | 3 | 0 | 未完成 / UNKNOWN |
+| GS | South Georgia and the South Sandwich Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SH | Saint Helena, Ascension and Tristan da Cunha | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SJ | Svalbard and Jan Mayen | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SB | Solomon Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SL | Sierra Leone | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SV | El Salvador | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SM | San Marino | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SO | Somalia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| PM | Saint Pierre and Miquelon | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| RS | Serbia | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| SS | South Sudan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| ST | Sao Tome and Principe | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SR | Suriname | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SK | Slovakia | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| SI | Slovenia | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| SE | Sweden | 4 | 4 | 2 | 未完成 / UNKNOWN |
+| SZ | Eswatini | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SX | Sint Maarten (Dutch part) | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SC | Seychelles | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| SY | Syrian Arab Republic | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TC | Turks and Caicos Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TD | Chad | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TG | Togo | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TH | Thailand | 4 | 1 | 0 | 未完成 / UNKNOWN |
+| TJ | Tajikistan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TK | Tokelau | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TM | Turkmenistan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TL | Timor-Leste | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TO | Tonga | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TT | Trinidad and Tobago | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TN | Tunisia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TR | Türkiye | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| TV | Tuvalu | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| TW | Taiwan, Province of China | 4 | 6 | 1 | 未完成 / UNKNOWN |
+| TZ | Tanzania, United Republic of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| UG | Uganda | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| UA | Ukraine | 4 | 2 | 1 | 未完成 / UNKNOWN |
+| UM | United States Minor Outlying Islands | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| UY | Uruguay | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| US | United States | 4 | 111 | 58 | 未完成 / UNKNOWN |
+| UZ | Uzbekistan | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| VA | Holy See (Vatican City State) | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| VC | Saint Vincent and the Grenadines | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| VE | Venezuela, Bolivarian Republic of | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| VG | Virgin Islands, British | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| VI | Virgin Islands, U.S. | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| VN | Viet Nam | 4 | 1 | 1 | 未完成 / UNKNOWN |
+| VU | Vanuatu | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| WF | Wallis and Futuna | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| WS | Samoa | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| YE | Yemen | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| ZA | South Africa | 4 | 2 | 2 | 未完成 / UNKNOWN |
+| ZM | Zambia | 4 | 0 | 0 | 未完成 / UNKNOWN |
+| ZW | Zimbabwe | 4 | 0 | 0 | 未完成 / UNKNOWN |
+
+## 下一輪查證清單與文件保留
+
+每個地區還需當地語言與各領域檢索，辨識本地機構、外地營運、研究合作與屬地／宗主國關係；搜尋線索先驗證國別相關性，再作為新實體。各前沿候選需補原始論文、可重現基準、專利公開號、監管原始文件與試驗方案，將目標、原型、人體研究、獲准用途及量產分開。
+
+原196筆登記及原宇航報告保持不變。本附錄是獨立增補，主生態報告仅附加連結與本批摘要；本輪已有使用者變更的主報告 HTML 保留，不能視為本附錄的最新渲染結果。完整項目雜湊掃描只證明版本變動與保留狀態，不代表全項目文字已逐句事實查核。
+
+
+<!-- GLOBAL_ISO249_B02_START -->
+## 全球科技第二批增補
+
+新增 [第二批科技與原始研究證據](Global_Technology_ISO249_Registry_B02.qmd)及 [HTML](Global_Technology_ISO249_Registry_B02.html)。完整整合表位於08目錄；累計335筆機構候選、54筆技術與16筆神經科技記錄。3篇人體BCI原始研究另列6筆數值與測試條件；論文報告結果不等於獨立重現或世界排名。首批與歷史批次保留，249地區全面核實仍未完成。
+<!-- GLOBAL_ISO249_B02_END -->
+
+
+<!-- GLOBAL_ISO249_B03_START -->
+## 全球科技第三批增補
+
+新增 [第三批量子、HPC與地區證據](Global_Technology_ISO249_Registry_B03.qmd)及 [HTML](Global_Technology_ISO249_Registry_B03.html)。完整整合表位於09目錄；累計371筆機構候選、59筆技術與16筆神經科技記錄。新增量子、HPC與科研設施資料；量子實驗結果、理論峰值與設施所在地分開記錄，不能推導國家排名。首批與歷史批次保留，249地區全面核實仍未完成。
+<!-- GLOBAL_ISO249_B03_END -->
+
+
+<!-- GLOBAL_ISO249_B04_START -->
+## 全球科技第四批增補
+
+新增[軍工AI、宇航影像與戰略服務平台](Global_Technology_ISO249_Registry_B04.qmd)及[HTML](Global_Technology_ISO249_Registry_B04.html)。12筆具名產品／服務、6筆帶前提規格與1筆公司公告事件；完整整合表位於10目錄。累計371筆機構候選、71筆技術／服務。官方描述與獨立效能、完整星座條件與實際服務開放分開；ISO249全面核實仍未完成。
+<!-- GLOBAL_ISO249_B04_END -->
+
+<!-- REGISTRY_CONTRACTS_20261007_BEGIN -->
+## 2026-10-07 資料契約與分範圍查詢增補
+
+[本輪資料契約報告](Global_Registry_Data_Contracts_20261007.qmd)為 B04 九表、135 個欄位提供粒度與業務用途，交付保留原值的可查詢 SQLite。344 筆未決欄位獲上下文定義，未決尚有424筆；定義仍待負責人簽核，未新增全球已核機構或能力。
+
+機構候選國別列表拆成341條橋接關係，原字串與候選狀態保留。全球主張中219條為公開描述核實，2條為研究隸屬核實，分別統計；7筆機構及對應主張仍缺來源ID。國家能力與N0～N7仍為UNKNOWN。欄位、關係與數字能查詢不代表全球查全或性能已獨立重現。
+
+新視圖保留249母表條目，區分任意範圍／僅公開描述／已核國別關係；未將跨國候選歸屬當作法人住所。原CSV、歷史批次、DGEF與使用者HTML均不覆寫。歸檔及更名的現行路徑見本輪報告與對照表，舊驗收只適用原雜湊版本。
+<!-- REGISTRY_CONTRACTS_20261007_END -->
+
+
+<!-- ISO_FIELD_REVIEW_20261007 -->
+
+## 國家／地區與行政區欄位核查（2026-10-07）
+
+[本地一致性與欄位合同](ISO_Baseline_Field_Review_20261007.qmd)補入 41 筆待審定義，未決欄位由 375 降至 334。三份本地 249 條目母表代碼一致；5,046 筆行政區的父級、國別與分區數量核查通過。每份母表仍有 76 筆正式英文名稱留空；本批未逐項驗證即時官方清單、現任元首或政治地位，原資料完整保留。
+
+
+<!-- OFFICIAL_EVIDENCE_B01_20261007 -->
+
+## 官方證據增補 B01（2026-10-07）
+
+[Earthian AI 與 NERAI 公開描述核查](Official_Evidence_B01_20261007.qmd)新增三條提供方來源、四條限定主張與四條技術／接口描述，補充兩個原無來源條目的公開資料。核實僅限 PUBLIC_DESCRIPTION_ONLY；法人、國別住所、性能、部署、監管、授權與排名仍未核實。原 B04 登記及 UNKNOWN 主張保留，未新增法人或國別能力認證。
+
+
+<!-- OFFICIAL_EVIDENCE_B02_20261007 -->
+
+## 官方證據增補 B02（2026-10-07）
+
+[經緯航太、創未來與 SPA 公開資料核查](Official_Evidence_B02_20261007.qmd)新增三條官方來源、三條限定主張與十四條名稱／服務描述。SPA 原複合名稱身份仍待查；VERIFIED 僅限公開描述，法人、性能、部署、監管與排名 UNKNOWN。原登記及 B01 資料保留。
+
+
+<!-- OFFICIAL_EVIDENCE_B03_20261007 -->
+
+## 官方證據增補 B03（2026-10-07）
+
+[HDS FUSION 與 8200 官方資料核查](Official_Evidence_B03_20261007.qmd)新增三條官方來源、四條限定主張、一條平台描述與三條機構／歷史合作關係。七個原缺來源條目均已有限定補充資料，SPA 複合身份仍待查；未新增國家能力或排名認證，原登記及此前批次保留。
+
+
+<!-- OFFICIAL_EVIDENCE_INTEGRATION_20261007 -->
+
+## 官方證據整合查詢（2026-10-07）
+
+[分批證據查詢與未決事項](Official_Evidence_Integration_20261007.qmd)提供獨立 SQLite 快照，保留 22 份輸入表的 1,577 筆記錄與所有解碼欄位，連結 371 個機構及 382 條主張。11 條補充主張與原 UNKNOWN 並存；各驗證範圍分開統計，未新增國家能力或排名認證。
+
+
+<!-- OFFICIAL_EVIDENCE_B04_20261007 -->
+
+## 官方證據增補 B04（2026-10-07）
+
+[SPA 技術目錄與複合名稱審查](Official_Evidence_B04_20261007.qmd)新增三條来源、三條限定主張、八項技術／服務描述與兩條關係。原複合名稱仍待查；AnyLogic 展示使用不等同所有權，ARCHER 與 ArcherEye 未擅自合併。原登記、歷史批次及查詢快照保留。
+
+
+<!-- OFFICIAL_EVIDENCE_B05_20261007 -->
+
+## 官方證據增補 B05（2026-10-07）
+
+[神經科技器件、人體研究與許可範圍](Official_Evidence_B05_20261007.qmd)新增五條來源、七條限定主張、三份器件概況及四條廠商試驗連結。Layer 7-T 的 FDA 決定限定於器件及少於 30 天的適用範圍；試驗登記正文未讀取成功，臨床階段與招募現況 UNKNOWN。未新增國家 N0～N7 能力或排名。
+
+
+<!-- OFFICIAL_EVIDENCE_B06_20261007 -->
+
+## 官方證據增補 B06（2026-10-07）
+
+[Synchron SWITCH 論文與更正核查](Official_Evidence_B06_20261007.qmd)新增兩條期刊來源、六條限定主張、一筆論文及七筆研究指標，保留樣本、測試條件與更正關係。訊號 Hz 不轉換為資訊 bits/s，BCI 配合眼動成績不當作 BCI 單獨性能；未新增國家能力或監管判定。
+
+
+<!-- OFFICIAL_EVIDENCE_B07_20261007 -->
+
+## 官方證據增補 B07（2026-10-07）
+
+[語音 BCI 機構研究與更正關係](Official_Evidence_B07_20261007.qmd)增補 UC Davis 研究單位、五筆分條件公告指標及 BrainGate 試驗關係；Crossmark 更正關係已確認，但更正正文未讀取，對原指標影響 UNKNOWN。未將機構公告當作原始論文驗證，舊數值及查詢快照保留。
+
+
+<!-- OFFICIAL_EVIDENCE_B08_20261007 -->
+
+## 官方證據增補 B08（2026-10-07）
+
+[Deep TMS 器件特定監管範圍](Official_Evidence_B08_20261007.qmd)新增四條 FDA 來源、五條限定主張及兩筆器件決定，分別登記成人 OCD 輔助治療與短期戒菸輔助。TMS 刺激功能未延伸為思想讀取、語義寫入或遠程能力；未宣稱系列監管歷史完整。原登記與查詢快照保留。
+
+
+<!-- OFFICIAL_EVIDENCE_INTEGRATION_V2_20261007 -->
+
+## 官方證據整合查詢 v2（2026-10-07）
+
+[研究、監管與更正整合視圖](Official_Evidence_Integration_v2_20261007.qmd)納入原全球 B04 及官方證據 B01～B08，保留46份表的1,657筆記錄，連結372個單位與407條主張。器件許可、論文結果及機構自述分開查詢；原371條主張、舊快照與歷史資料保留。未新增國家能力或排名。
+
+
+<!-- GLOBAL_LISTED_UNIVERSE_20261007 -->
+
+## 全球上市證券全量來源接收與神經互動證據
+
+[全量證券母表首批](Global_Listed_Company_Universe_20261007.qmd)已接收官方兩份完整名錄共13,285筆證券，保留全部原始欄位、249國家／地區覆蓋狀態及SQLite查詢；全球全部公司尚未完成，發行人解析仍有缺口。另登記BrainNet作者版本所支持的EEG／網路／TMS有限決策互動及能力界限。
+
+
+<!-- GLOBAL_LISTED_B02_20261007 -->
+
+## 全量上市名錄 B02
+
+[東證與港交所完整來源增補](Global_Listed_Company_Universe_B02_20261007.qmd)新增21,653筆記錄，連同首批累計34,938筆來源記錄；不是公司總數。全部上市公司的逐國收錄仍在進行，原始欄位、官方分類與覆蓋缺口均保留。
+
+
+<!-- CURRENCY_BROKER_B03_20261007 -->
+
+## 貨幣與證券行完整來源增補 B03
+
+[ISO4217與監管名錄](Global_Currency_and_Securities_Firms_B03_20261007.qmd)完整接收280條現行與169條歷史貨幣／基金記錄、FSA 1,951家業者（第一種旗標293家，含限制）及JPX 158條參與者。249條目貨幣來源關係已建立；每國全部實際貨幣、證券行與上市公司仍需逐項核對，未宣稱全球完成。
+
+
+<!-- FINANCIAL_UNIVERSE_B04_20261007 -->
+
+## 全球金融全量來源增補與統一查詢 B04
+
+[ASX與金融母表統一查詢](Global_Financial_Universe_B04_20261007.qmd)新增ASX官方全量目錄1,923條，上市來源記錄累計36,861條；統一18張輸入表共63,863條原表記錄，完整保留前三批欄位與快照，逐列還原驗證通過。印度四項官方下載被拒絕，缺口明列；全球唯一公司數及每國全部收錄仍未宣稱完成。
+
+
+<!-- FINANCIAL_UNIVERSE_B05_20261007 -->
+
+## 全球金融全量來源增補 B05
+
+[TMX與NZX來源與統一快照v2](Global_Financial_Universe_B05_20261007.qmd)新增TSX／TSXV 3,768條、NZX嵌入工具431條、主板明細179條及市場參與者26條。加拿大兩表總數對賬通過；NZX摘要180與明細179的差異明列。先前資料逐列完整保留，工具／目錄來源累計41,060條，並非公司總數。全球全量及唯一法人核對尚未完成。
+
+
+<!-- FINANCIAL_UNIVERSE_B06_20261007 -->
+
+## 全球金融市場與身份增補 B06
+
+[ISO市場全表、公司及券商對照](Global_Financial_Universe_B06_20261007.qmd)接收MIC全表2,883條、上市／上櫃／興櫃公司來源2,350條及两份各64條券商表，代碼集合對賬一致；新增11條官方統一編號來源匹配。統一快照v3逐列保留舊資料，來源工具／目錄／公司記錄累計43,410條，並非全球唯一公司數。逐國全量缺口仍明列。
+
+
+<!-- FINANCIAL_UNIVERSE_B07_20261007 -->
+
+## ISO 249 全球金融增補 B07
+
+[全部249條目覆蓋與ESMA完整登記](Global_Financial_Universe_B07_20261007.qmd)：747項逐國工作列保留實際來源與缺口；新增31個來源母國標籤的7,162條公司／分支記錄及75,368條活動／歷史。統一快照v4保留舊列，全球全部公司與券商仍待逐國完成，未宣稱收齊。
