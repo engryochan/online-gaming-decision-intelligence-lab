@@ -1,0 +1,34 @@
+---
+title: "全球上市名錄 B02：東證與港交所完整來源接收"
+lang: zh-Hant
+format: html
+---
+
+## 定義與覆蓋
+
+首批13,285是證券記錄，不是證券行、上市公司或全球總數。證券行屬金融服務機構；上市公司涵蓋全部產業，不按科技題材或知名度抽選。公司、證券、上市關係與市場所在地分表處理；跨市場和不同股類尚未取得身份證據前不合併、不報唯一公司數。
+
+本批完整讀取兩份官方工作簿所有工作表列，收錄 **21,653 筆上市／證券記錄**。全項目來源記錄累計 **34,938 筆**，未去重，亦非公司總數。
+
+|來源|資料列|截至日期|范围|
+|---|---:|---|---|
+|JPX_TSE|4,447|2026-09-30|完整來源全部列|
+|HKEX|17,206|Updated as at 07/10/2026|完整來源全部列|
+
+[JPX官方頁](https://www.jpx.co.jp/markets/statistics-equities/misc/01.html)提供東證月末上市銘柄，不能當成日本全部交易所。[HKEX官方頁](https://www.hkex.com.hk/Services/Trading/Securities/Securities-Lists?sc_lang=en)提供完整證券清單；含股票、衍生權證、牛熊證、債券、ETP與REIT，產品數不能當成公司數。兩地上市的外國公司也不能自動歸為該市場本地公司。
+
+## 全量資料與驗收
+
+- [上市記錄全部列](tables/20_global_listed_universe_b02_20261007/registry_listing_records.csv)
+- [工作簿逐列保留](tables/20_global_listed_universe_b02_20261007/workbook_rows_lossless.csv)：標題、日期、欄名、空白列也保留；原始 xlsx 另存來源批次。
+- [官方分類分析](tables/20_global_listed_universe_b02_20261007/category_analysis.csv)
+- [來源、日期與SHA256](tables/20_global_listed_universe_b02_20261007/source_manifest.csv)
+- [249國家／地區覆蓋](tables/20_global_listed_universe_b02_20261007/registry_country_market_coverage.csv)
+
+SQLite位於 `reports/2026-10-07/listed_universe_b02/listed_universe_b02.sqlite`。HKEX工作簿的宣告範圍僅到第8列；解析時重新掃描實際全部行，防止依宣告範圍而遺漏後續資料。完整欄位、空值與Excel列號保留，資料庫逐列還原驗證通過。來源列全收錄不等於來源自身及全國市場已無遺漏。
+
+## 每家公司不遺漏的完成條件
+
+249條目逐一確認交易所及監管機構；對每個交易所接收官方全量股票及公司名錄，核對來源總数與報表日期，解析發行人官方身份及公司全名，建立一家公司多項上市的關係。再按註冊地、總部及市場所在地分別歸國。基金、權證及其他證券保留在產品表，不混入上市公司總數；歷史退市另按有效日期保存。
+
+目前US、JP、HK有官方来源批次；其餘246條目尚未接收，三個已接收市場也未宣稱全國全部公司完成。公司唯一身份、完整交易所枚舉及全球總數仍UNKNOWN。這些缺口必須逐項閉合後，才可宣稱每國每家公司已收齊。
