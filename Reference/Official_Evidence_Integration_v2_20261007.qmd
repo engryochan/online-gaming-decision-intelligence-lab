@@ -1,0 +1,41 @@
+---
+title: "官方證據整合查詢 v2：B01～B08、研究指標與監管範圍"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+新版獨立快照納入原全球 B04 與官方證據 B01～B08，共 **372 個機構／研究單位、407 條主張**。其中原371條主張保留，另有36條限定補充主張及1個研究單位。舊快照保留；本輪是既有證據整合，沒有新增外部查證。
+
+## 查詢入口
+
+- [SQLite v2 快照](../reports/2026-10-07/evidence_integration_v2/global_registry_evidence_query_v2.sqlite)
+- [唯讀 SQL 範例](../reports/2026-10-07/evidence_integration_v2/queries.sql)
+- [來源指紋與筆數](../reports/2026-10-07/evidence_integration_v2/source_manifest.csv)
+- [各證據範圍統計](../reports/2026-10-07/evidence_integration_v2/claim_scope_counts.csv)
+- [視圖筆數](../reports/2026-10-07/evidence_integration_v2/view_counts.csv)、[驗收](../reports/2026-10-07/evidence_integration_v2/validation.json)
+
+| 視圖 | 用途與界線 |
+|---|---|
+| `regulatory_claims` | 器件特定決定／適用範圍，包含 Layer 7-T 與 Deep TMS；不是公司整體批准 |
+| `regulatory_decisions` | B08 的兩筆結構化監管決定；不能把筆數當成全部許可數 |
+| `study_metrics` | 原指標及 B06／B07 新值，保留單位、統計方式與條件；不是可直接排序的性能榜 |
+| `reported_study_claims` | 分別保留論文報告、機構公告及廠商人體使用自述 |
+| `publication_correction_records` | SWITCH 更正與 Metzger 更正元資料；後者對原數值影響仍 UNKNOWN |
+| `neurotechnology_records` | 原器件及新增概況；同名、不同適用症記錄不機械合併 |
+| `relationships` | 機構／合作／試驗關係；不推定產品所有權、法人合併或國家能力 |
+
+原全球登記使用 `GLOBAL_B04`，官方證據使用 `EVIDENCE_B01`～`EVIDENCE_B08`，避免兩種 B04 混淆。來源與主張按批次和 ID 聯結。
+
+## 保留與判讀
+
+`raw_records` 按文件路徑、行序與批次保存全部解碼後 CSV 欄位。專用視圖只投影常用欄位；未提供欄位保持 NULL，不擅自改成 VERIFIED、UNKNOWN 或零。各行的原始字段與空字串仍可在 JSON payload 中核對，原 CSV 字節保留並以指紋驗收。
+
+視圖的筆數是記錄數，不是唯一研究數、產品數或前沿能力等級。原 UNKNOWN 與限定 VERIFIED 並存；同一產品多個批次的描述不自動表示新產品或最新版本。372 個單位也不代表世界全部機構已納入。
+
+神經科技數值需保留樣本、任務、詞彙量、眼動配合與更正條件；Hz、字元／分鐘、詞準確率不可混用為 bits/s。器件許可只限相應申請及適用範圍；不能外推為通用讀心、語義寫入或無接觸遠程能力。
+
+來源、論文／公告閱讀限制及監管範圍詳見 [B04](Official_Evidence_B04_20261007.qmd)、[B05](Official_Evidence_B05_20261007.qmd)、[B06](Official_Evidence_B06_20261007.qmd)、[B07](Official_Evidence_B07_20261007.qmd)、[B08](Official_Evidence_B08_20261007.qmd)。最新試驗登記、身份未決、獨立重現及國家 N0～N7 能力仍需查證。本輪未重建國別投影，未新增排名或國家能力判定。
+
+[生成程式](../reports/2026-10-07/evidence_integration_v2/build_query.py)逐欄往返核對、檢查主外鍵與 SQLite 完整性；數據一致性不等於科學實質認證。此快照不自動同步，後續應另建版本；原宇航報告、舊快照、歷史資料及既有 HTML 保留。

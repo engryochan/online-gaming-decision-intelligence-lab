@@ -1,0 +1,35 @@
+---
+title: "官方證據增補 B07：語音 BCI 機構研究與更正關係"
+date: 2026-10-07
+format:
+  html:
+    embed-resources: true
+---
+
+本批新增 **2 條來源、4 條限定主張、1 個研究單位、1 份研究描述、5 筆指標、1 條試驗關係及1條更正關係**。原2023年語音 BCI 指標保留，未重複新增為新成果。
+
+## UC Davis 研究公告
+
+官方公告確認 UC Davis Neuroprosthetics Lab，描述單一 ALS 參與者的皮質內語音解碼研究及 BrainGate 入組關係。本批將研究單位獨立登記，不新造法人，也不把其結果歸為整個 BrainGate 的通用性能。
+
+| 公告指標 | 值 | 條件 |
+|---|---|---|
+| 詞準確率 | 99.6% | 首次會話、50詞詞彙 |
+| 詞準確率 | 90.2% | 第二次會話、125,000詞、另增1.4小時訓練資料 |
+| 詞準確率 | 97.5% | 持續收集資料後；不是第一天 |
+| 資料會話／跨度 | 84次／32週 | 同一參與者研究 |
+
+數值來自研究機構公告，未轉換為 bits/s、詞錯誤率或世界排名。期刊正文訪問返回403，故 VERIFIED 限於 INSTITUTION_REPORTED，不能標為本輪已核實原始論文結果。[UC Davis Health 公告，2024-08-14](https://health.ucdavis.edu/news/headlines/new-brain-computer-interface-allows-man-with-als-to-speak-again/2024/08)。
+
+## 既有語音論文的更正
+
+Crossmark 明列 Metzger 2023 論文（10.1038/s41586-023-06443-4）於2024-07-04發布更正，DOI 為10.1038/s41586-024-07735-z。本批確認更正關係；更正正文未讀取成功，其對舊數值的影響 UNKNOWN，不據搜尋摘要自動改写原指標。[Crossmark 出版更新元資料](https://crossmark.crossref.org/dialog/?doi=10.1038%2Fs41586-023-06443-4)。
+
+## 數據與未決範圍
+
+- [來源](tables/17_official_evidence_20261007_b07/registry_supplemental_sources.csv)、[研究單位](tables/17_official_evidence_20261007_b07/registry_supplemental_entities.csv)、[限定主張](tables/17_official_evidence_20261007_b07/registry_supplemental_claims.csv)
+- [研究描述](tables/17_official_evidence_20261007_b07/registry_neuro_study_descriptions.csv)、[分條件指標](tables/17_official_evidence_20261007_b07/registry_study_metrics.csv)
+- [BrainGate 關係](tables/17_official_evidence_20261007_b07/registry_supplemental_relationships.csv)、[更正關係](tables/17_official_evidence_20261007_b07/registry_publication_corrections.csv)
+- [讀取限制](../reports/2026-10-07/official_evidence_b07/access_attempts.csv)、[基線](../reports/2026-10-07/official_evidence_b07/baseline_manifest.csv)、[驗收](../reports/2026-10-07/official_evidence_b07/validation.json)、[生成程式](../reports/2026-10-07/official_evidence_b07/build_evidence.py)
+
+現有研究只涵蓋特定參與者的嘗試說話解碼，不能據此宣稱任意思想讀取、無接觸遠程讀取或語義寫入。临床階段、當前試驗登記、獨立重現、監管、資訊帶寬及國家 N0～N7 能力仍 UNKNOWN。來源以網頁工具文本閱讀，未保存原始 HTTP 回應；公開元資料不等同訓練授權。舊查詢快照、宇航報告、歷史資料及既有 HTML 保留。
