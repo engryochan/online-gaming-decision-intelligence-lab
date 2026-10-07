@@ -1,0 +1,49 @@
+---
+title: "全球金融母表 B05：TMX與NZX全量來源及一致性核對"
+lang: zh-Hant
+format: html
+---
+
+## 加拿大官方全量工作簿
+
+沿[TMX官方公司目錄](https://www.tsx.com/en/listings/listing-with-us/listed-company-directory?GetPage=ListedCompaniesViewPage)的完整名錄入口，取得[TSX／TSXV上市發行人工作簿](https://www.tsx.com/en/resource/571)。截至2026-08-31，TSX全部2,272條、TSXV全部1,496條，共3,768條，與兩張工作表的官方摘要數逐一相符。資料日期按工作簿採用，未將提取日視為公司狀態日期。
+
+所有行、標題、來源條款、空欄與資料欄位均保留，包括Co_ID、代碼、產業、總部地區、上市日期、市值、股數、交叉上市欄位及交易數據。Co_ID是TMX來源識別碼，不是經核實的全球法人識別碼；總部所在地也不是法人註冊地。發行人記錄含ETP、基金、CDR及其他類型，不等於3,768家普通上市公司；本批未枚舉加拿大其他交易所或宣稱全國收錄完成。
+
+- [TMX全部發行人記錄](tables/23_listed_universe_b05_20261007/registry_tmx_issuer_records.csv)
+- [完整工作簿逐行欄位](tables/23_listed_universe_b05_20261007/tmx_workbook_rows.csv)
+- [兩市場官方總數對賬](tables/23_listed_universe_b05_20261007/tmx_count_reconciliation.csv)
+
+## 紐西蘭上市與其他工具
+
+[NZX主板官方頁](https://www.nzx.com/markets/NZSX)含完整嵌入資料。本批收錄全部431條activeInstruments記錄，原碼分組為NZSX 179、NZDX 132、NZDXW 6、NZCX 21及U 93。U等原碼未自行解釋為特定上市市場；衍生工具及其他記錄不混算為普通上市公司。
+
+NZSX主板179條工具的代碼集合，在嵌入工具表、主板行情明細及可見表格間一致；主板可見摘要也為179。179條行情明細的全部欄位另保存，包括issuerCode、issuerName、ISIN、币别、價格、時間戳與財務欄位，避免只保存代碼而失去發行人信息。來源companyId／issuerCode皆是來源鍵，跨市場法人身份仍需官方註冊資料。
+
+**來源內部存在計數差異**：同頁嵌入marketInfo.instrumentCount為180，但上述三套明細及可見摘要均179。兩個數字及完整摘要原文均保存，狀態為INTERNAL_SOURCE_COUNT_DISCREPANCY；未補造第180項、未修改來源數，也未宣稱當地全部公司無遺漏。嵌入lastListedDate含3000年占位值，保留原值，不當成已知實際退市日期。行情欄位各有更新時間，不將其混同為來源名錄有效日。
+
+- [NZX全部431條嵌入工具](tables/23_listed_universe_b05_20261007/registry_nzx_active_instruments.csv)
+- [NZSX全部179條發行人及行情原文](tables/23_listed_universe_b05_20261007/registry_nzsx_quote_issuer_records.csv)
+- [NZX計數差異與摘要原文](tables/23_listed_universe_b05_20261007/nzx_count_reconciliation.csv)
+
+## 證券行相關市場資格
+
+[NZX全部市場參與者頁](https://new.nzx.com/services/market-participants/all-market-participants)的26條參與者記錄全收錄。現金市場、衍生市場及初級市場共12項資格欄位的文字、圖示引用及原始HTML均保留：只抽取文字會把打勾圖示錯看為空白資格。
+
+該頁包括銀行、托管、清算及其他參與者，不等於26家證券行；交易所資格也不等於監管牌照。頁面未提供明確名錄有效日期，本批只記錄提取日。頁面名錄源未經監管全表對賬，未宣稱所有紐西蘭證券行完成。
+
+- [全部26條市場參與者與資格圖示](tables/23_listed_universe_b05_20261007/registry_nzx_market_participants.csv)
+- [來源SHA256、日期及範圍](tables/23_listed_universe_b05_20261007/source_manifest.csv)
+
+## 統一快照與保留驗收
+
+新快照 `reports/2026-10-07/listed_universe_b05/financial_universe_v2.sqlite`從v1資料庫建立，保留v1原快照，新增本批資料。此前63,863條raw_records及36,861條來源工具／目錄記錄逐列比較完全保留；FSA 1,951條與貨幣449條仍可查詢。9張新CSV逐列全部欄位還原通過，資料庫完整性檢查通過。
+
+目前listing_records累計 **41,060條未去重來源工具／目錄記錄**，包含不同來源粒度及NZX非主板工具，不是全球上市公司數。新增9張CSV使raw_records累計72,310條；其中包含重複描述、工作簿行、摘要及覆蓋表，也不是法人總數。舊快照、原始資料、歷史報告及使用者修改均保留。國家覆蓋更新時，之前版本仍保留在原批次及raw_records。
+
+- [新批輸入清單與雜湊](tables/23_listed_universe_b05_20261007/integration_input_manifest.csv)
+- [249國家／地區覆蓋增量](tables/23_listed_universe_b05_20261007/registry_country_financial_coverage.csv)
+
+目前US、JP、HK、AU、CA、NZ有來源接收，其餘243條目尚未接收上市名錄；六地全部交易所、唯一法人、普通公司分類與歷史有效期間仍未全部核實。證券行監管全表仍主要為日本，NZX只新增市場資格來源。ISO4217來源保留，沒有將其提升為所有地方／實際使用貨幣已完成的證明。
+
+後續繼續逐國補交易所與監管全量名錄，核對官方總數與時間，解析法人識別及跨市場關係，再連結科技證據。印度來源存取缺口與NZX內部計數差異繼續保留；未以未取得資料推論當地沒有公司或證券行。
