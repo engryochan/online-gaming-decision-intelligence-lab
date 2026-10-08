@@ -1,0 +1,941 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>넥스트레이드</title>
+	<link rel="shortcut icon" href="/images/favicon.ico;jsessionid=E0F24AEB30DE4575BB9F2C7678ABD45C" type="image/x-icon">
+
+	
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="stylesheet" type="text/css" href="/css/daterangepicker.css?v=1.023" />
+<link rel="stylesheet" href="/css/ui.jqgrid.css">
+<link rel="stylesheet" href="/css/common.css?v=1.023">
+<link rel="stylesheet" href="/css/sub.css?v=1.023" />
+<link rel="stylesheet" href="/css/breakpoint.css?v=1.023" />
+
+<script src="/js/lib/jquery-3.6.1.min.js"></script>
+<script src="/js/lib/jquery-migrate-3.3.2.min.js"></script>
+<script src="/js/include-html.js?v=1.023"></script>
+
+<title>넥스트레이드</title>
+</head>
+
+
+<body>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header id="header" class="header">
+	<!-- S : 헤더 상단-->
+	<div class="header-wrap">
+	   <div class="container">
+			<!-- S : 표준 gnb-->
+			<div class="inner default">
+				<!-- S : 로고-->
+				<h1 class="logo">
+					<a href="/main.do" title="홈으로 가기">
+						<img src="/images/main/logo.svg" alt="넥스트레이드" class="white">
+						<img src="/images/main/header_logo_color.svg" alt="넥스트레이드" class="color">
+					</a>
+				</h1>
+				<!-- E : 로고-->
+				<!-- S : gnb nav-->
+				<nav class="gnb">
+					<!-- S : NXT 시장-->
+					<div class="depth-1" data-dp1="2">
+						<a href="/marketOverview/content.do" class="depth-1-tit"><img src="/images/main/nxt_txt.svg" alt="nxt" class="nxt-txt"> 시장</a>
+						<ul>
+							<li data-dp2="1">
+								<a href="/marketOverview/content.do" title="시장개요 및 거래제도">시장개요 및 거래제도</a>
+							</li>
+							<li data-dp2="2">
+								<a href="/menu/regulation01/menuList.do" title="규정 및 법규">규정 및 법규</a>
+							</li>
+							<li data-dp2="3">
+								<a href="/stockFirm/content.do" title="거래참가 증권사">거래참가 증권사</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : NXT 시장-->
+					<!-- S : NXT 시장정보-->
+					<div class="depth-1" data-dp1="3">
+						<a href="/menu/marketData/menuList.do" class="depth-1-tit">시장정보</a>
+						<ul>
+							<!-- <li data-dp2="1">
+								<a href="/menu/marketData/menuList.do" target="_blank" title="시장정보">시장정보</a>
+							</li> -->
+							<li data-dp2="1">
+								<a href="/menu/transactionStatusMain/menuList.do" title="거래현황">거래현황</a>
+							</li>
+							<li data-dp2="2">
+								<a href="/menu/marketInfo/menuList.do" title="시장안내">시장안내</a>
+							</li>
+							<li data-dp2="3">
+								<a href="/transactionSys/content.do" title="거래제도">거래제도</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : NXT 시장정보-->
+					<!-- S : 공지사항-->
+					<div class="depth-1" data-dp1="4">
+						<a href="/menu/notice/menuList.do" class="depth-1-tit">공지사항</a>
+						<ul>
+							<li data-dp2="1">
+								<a href="/menu/notice/menuList.do" title="공지사항">공지사항</a>
+							</li>
+							<li data-dp2="2">
+								<a href="/menu/manageDisclosure/menuList.do" title="경영공시">경영공시</a>
+							</li>
+							<li data-dp2="3">
+								<a href="/menu/ir/menuList.do" title="재무정보&IR">재무정보&IR</a>
+							</li>
+							<li data-dp2="4">
+								<a href="/menu/recruitInfo/menuList.do" title="채용정보">채용정보</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 공지사항-->
+					<!-- S : 회사소식-->
+					<div class="depth-1" data-dp1="5">
+						<a href="/menu/reportData/menuList.do" class="depth-1-tit">회사소식</a>
+						<ul>
+							<li data-dp2="1">
+								<a href="/menu/reportData/menuList.do" title="보도자료">보도자료</a>
+							</li>
+							<li data-dp2="2">
+								<a href="/menu/promotionData/menuList.do" title="홍보자료">홍보자료</a>
+							</li>
+							<li data-dp2="3">
+								<a href="/menu/mediaData/menuList.do" title="자료실">자료실</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 회사소식-->
+					<!-- S : NXT 소개-->
+					<div class="depth-1" data-dp1="1">
+						<a href="/ceo/content.do" class="depth-1-tit"><img src="/images/main/nxt_txt.svg" alt="nxt" class="nxt-txt"> 소개</a>
+						<ul>
+							<li data-dp2="1">
+								<a href="/ceo/content.do" title="CEO 인사말">CEO 인사말</a>
+							</li>
+							<li data-dp2="2">
+								<a href="/menu/company/menuList.do" title="회사소개">회사소개</a>
+							</li>
+							<li data-dp2="3">
+								<a href="/menu/history/menuList.do" title="연혁">연혁</a>
+							</li>
+							<li data-dp2="4">
+								<a href="/vision/content.do" title="비전 및 목표">비전 및 목표</a>
+							</li>
+							<li data-dp2="5">
+								<a href="/ci/content.do" title="CI">CI</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : NXT 소개-->
+					<!-- S : 정보포털 -->
+					<div class="depth-1 info-portal-menu">
+						<a href="https://portal.nextrade.co.kr/mdclient/" target="_blank" class="depth-1-tit outlink info-portal-link">
+							<img src="/images/icon/icon_portal.svg" alt="정보포털" class="portal-icon">
+							정보포털
+							<span class="info-portal-tooltip">정보이용사 전용 서비스 포털입니다</span>
+						</a>
+					</div>
+					<!-- E : 정보포털 -->
+					<!-- S : 푸터 링크-->
+					<div class="depth-1 d-none" data-dp1="6">
+						<a href="" class="depth-1-tit"></a>
+						<ul>
+							<li data-dp2="3">
+								<a href="" title="시장참여/정보이용">시장참여/정보이용</a>
+							</li>
+							<li data-dp2="5">
+								<a href="" title="오시는 길">오시는 길</a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 푸터 링크-->
+				</nav>
+				<!-- E : gnb nav-->
+				<!-- S : util-->
+				<div class="util-wrap">
+					<!-- S : 언어선택-->
+					<div class="select-lang">
+						<button type="button" class="current-lang">KR</button>
+						<ul>
+                            <li><a class="krUrl" href="">KR</a></li>
+                            <li><a class="enUrl" href="">EN</a></li>
+                        </ul>
+					</div>
+					<!-- E : 언어선택-->
+					<!-- S : 사이트맵 버튼-->
+					<button type="button" class="ham-btn">
+						<svg class="overpath" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" fill="none">
+							<path class="path_a path" fill-rule="evenodd" clip-rule="evenodd" d="M6.7037 5.18628L3 3V29.4605L6.7037 26.3772L6.7037 5.18628Z" fill="white"/>
+							<path class="path_b path" d="M24.2963 27.4073L28 29.4114V16.2057L28 3L24.2963 6.36351L24.2963 27.4073Z" fill="white"/>
+							<path class="path_c path" d="M12.0483 21.2163L13.7037 22.1121V9.18628L10 7V22.9215L12.0483 21.2163Z" fill="white"/>
+							<path class="path_d path" d="M17 23.6721L20.7037 25.6762L20.7037 10L18.6554 11.8601L17 10.8829V23.6721Z" fill="white"/>
+						</svg>
+					</button>
+					<!-- E : 사이트맵 버튼-->
+				</div>
+				<!-- E : util-->
+			</div>
+            <!-- E : 표준 gnb-->
+			<!-- S : 회원사 포털용 gnb-->
+            <div class="inner login">
+                <!-- S : 로고-->
+                <h1 class="logo">
+                    <a href="/index.html" title="홈으로 가기">
+                        <img src="/images/main/logo_login.svg" alt="넥스트레이드" class="white">
+                        <img src="/images/main/logo_login_color.svg" alt="넥스트레이드" class="color">
+                    </a>
+                </h1>
+                <!-- E : 로고-->
+                <div class="util-wrap">
+                    <nav></nav>
+                    <!-- S : 로그아웃 버튼-->
+                    <button type="button" class="logout">
+                        로그아웃
+                    </button>
+                    <!-- E : 로그아웃 버튼-->
+                </div>
+            </div>
+            <!-- E : 회원사 포털용 gnb-->
+			<!-- S : 시장정보 gnb-->
+            <div class="inner market">
+				<div class="left">
+                    <h1 class="logo">
+                        <a href="/main.do" title="홈으로 가기">
+                            <img src="/images/main/header_logo_color.svg" alt="넥스트레이드" class="">
+                        </a>
+                    </h1>
+                    <a href="/menu/marketData/menuList.do" class="market-logo">
+                        시장정보
+                    </a>
+                </div>
+                <div class="util-wrap">
+                    <nav>
+                        <ul data-dp1="1">
+                            <li data-dp2="1">
+                                <a href="/menu/transactionStatusMain/menuList.do">
+                                    거래현황
+                                </a>
+								<ul class="depth-2">
+                                    <li data-dp2="1">
+                                        <a href="/menu/transactionStatusMain/menuList.do" title="정규시장">정규시장</a>
+                                    </li>
+                                    <li data-dp2="2">
+                                        <a href="/menu/transactionStatusClosing/menuList.do" title="종가매매">종가매매</a>
+                                    </li>
+                                    <li data-dp2="3">
+                                        <a href="/menu/transactionStatusBasket/menuList.do" title="대량·바스켓매매">대량&middot;바스켓매매</a>
+                                    </li>
+                                    <li data-dp2="4">
+                                        <a href="/menu/transactionStatusConclusion/menuList.do" title="매매체결대상종목(정규시장)">매매체결대상종목(정규시장)</a>
+                                    </li>
+                                    <li data-dp2="5">
+                                        <a href="/menu/transactionStatusDaily/menuList.do" title="일별거래현황(정규시장)">일별거래현황(정규시장)</a>
+                                    </li>
+                                    <li data-dp2="6">
+                                        <a href="/menu/transactionStatusInvestor/menuList.do" title="투자자별 거래현황(정규시장)">투자자별 거래현황(정규시장)</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li data-dp2="2">
+                                <a href="/menu/marketInfo/menuList.do">
+                                    시장안내
+                                </a>
+                            </li>
+                            <li data-dp2="3">
+                                <a href="/transactionSys/content.do">
+                                    거래제도
+                                </a>
+								<ul class="depth-2">
+                                    <li data-dp2="1">
+                                        <a href="/transactionSys/content.do#1" title="시장구조">시장구조</a>
+                                    </li>
+                                    <li data-dp2="2">
+                                        <a href="/transactionSys/content.do#2" title="매매체결대상종목">매매체결대상종목</a>
+                                    </li>
+                                    <li data-dp2="3">
+                                        <a href="/transactionSys/content.do#3" title="호가유형">호가유형</a>
+                                    </li>
+                                    <li data-dp2="4">
+                                        <a href="/transactionSys/content.do#4" title="시장관리">시장관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- S : 사이트맵 버튼-->
+                    <button type="button" class="ham-btn">
+                        <svg class="overpath" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" fill="none">
+                            <path class="path_a path" fill-rule="evenodd" clip-rule="evenodd" d="M6.7037 5.18628L3 3V29.4605L6.7037 26.3772L6.7037 5.18628Z" fill="#222222"/>
+                            <path class="path_b path" d="M24.2963 27.4073L28 29.4114V16.2057L28 3L24.2963 6.36351L24.2963 27.4073Z" fill="#222222"/>
+                            <path class="path_c path" d="M12.0483 21.2163L13.7037 22.1121V9.18628L10 7V22.9215L12.0483 21.2163Z" fill="#222222"/>
+                            <path class="path_d path" d="M17 23.6721L20.7037 25.6762L20.7037 10L18.6554 11.8601L17 10.8829V23.6721Z" fill="#222222"/>
+                        </svg>
+                    </button>
+                    <!-- E : 사이트맵 버튼-->
+                </div>
+
+				<div class="right util-wrap">
+					<!-- S : 언어선택-->
+                    <div class="select-lang">
+                        <button type="button" class="current-lang">KR</button>
+                        <ul>
+                            <li><a class="krUrl" href="">KR</a></li>
+                            <li><a class="enUrl" href="">EN</a></li>
+                        </ul>
+                    </div>
+                    <!-- E : 언어선택-->
+				</div>
+            </div>
+            <!-- E : 시장정보 gnb-->
+	   </div>
+	</div>
+	<!-- E : 헤더 상단-->
+</header>
+<div class="sitemap">
+	<button type="button" class="close-sitemap">
+		<img src="/images/main/close_sitemap.svg" alt="닫기">
+	</button>
+	<div class="inner">
+		<div class="top">
+			<a href="/main.do">
+				<img src="/images/main/logo_color.svg" alt="넥스트레이드">
+			</a>
+			<h1 class="logo d-block d-lg-none">
+                <a href="/main.do" title="홈으로 가기">
+                    <img src="/images/main/header_logo_color.svg" alt="넥스트레이드" class="">
+                </a>
+            </h1>
+            <a href="/menu/marketData/menuList.do" class="market-logo d-block d-lg-none">
+                시장정보
+            </a>
+            <!-- <a href="/html/dashboard.html" class="market-logo">
+                <img src="/images/sub/market/market_logo.svg" alt="시장정보">
+            </a> -->
+			<!-- <a href="/menu/marketData/menuList.do" class="market-logo">
+                <picture>
+					<source media="(min-width: 768px)" srcset="/images/sub/market/market_logo.svg">
+					<source media="(min-width: 0px)" srcset="/images/sub/market/market_logo_m.svg">
+					<img src="" alt="시장정보">
+				</picture>
+            </a> -->
+		</div>
+		<div class="util-wrap">
+            <!-- <a href="javascript:void(0)" onclick="alert('3월 4일 시장 오픈 예정')" class="outlink">
+                <img src="/images/icon/icon_outlink.svg" alt="회원사 업무포털">
+                회원사 업무포털
+            </a> -->
+            <!-- S : 언어선택-->
+            <div class="select-lang">
+                <button type="button" class="current-lang">KR</button>
+                <ul>
+                    <li><a class="krUrl" href="">KR</a></li>
+                    <li><a class="enUrl" href="">EN</a></li>
+                </ul>
+            </div>
+        </div>
+		<div class="list-bx"></div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	var url = window.location.pathname;
+
+	url = url.replace("/view.do", "/menuList.do");
+	$(".krUrl").attr("href", url);
+
+	url = url.replace("/menu", "/menu/en");
+	if (!url.includes("/en")) {
+		url = "/en" + url;
+	}
+	$(".enUrl").attr("href", url);
+
+	$(document).on('click','.popup-link, .ham-btn',function(){
+		$('body').addClass('body-fixed');
+	  });
+	  $(document).on('click','.mfp-close, .mobile-nav-close',function(){
+		$('body').removeClass('body-fixed');
+	  });
+	  // ESC 키 눌렀을 때 팝업이 열려있는 경우
+	  $(document).keyup(function(e) {
+		if (e.key === "Escape" && $.magnificPopup.instance.isOpen) {
+			closePopup();
+		  	$('body').removeClass('body-fixed'); // ESC 키 눌렀을 때 body-fixed 클래스 제거
+		}
+	  });
+	  $(document).on('click', '.ham-btn',function() {
+		  $(this).addClass('active');
+		  $('.sitemap').addClass('active');
+		  $('body').addClass('body-fixed');
+	  });
+	  $(document).on('click', '.close-sitemap',function() {
+		$('.ham-btn').removeClass('active');
+		$('.sitemap').removeClass('active');
+		$('body').removeClass('body-fixed');
+	  });
+	  $(document).on('click', '.select-lang', function(e) {
+		  $(this).toggleClass('active');
+		  $(this).children('ul').slideToggle();
+	  });
+});
+</script>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	var P_dp1 = 1; /*depth1*/
+	var P_dp2 = 2; /*depth2*/
+</script>
+<body class="sub-body">
+<!-- S : 서브 비주얼-->
+<div class="sub-visual">
+    <p class="sub-tit">
+        <span class="wow fadeInLeft">KOREA'S FIRST</span> <br>
+        <span class="wow fadeInLeft" data-wow-delay="0.1s">ALTERNATIVE TRADING PLATFORM</span>
+    </p>
+    <div class="sub-nav"></div>
+</div>
+<!-- E : 서브 비주얼-->
+<!-- S : breadcrumb-->
+<ul class="breadcrumb">
+    <li>
+        <a href="/main.do">
+            <img src="/images/icon/icon_home.svg" alt="Home">
+        </a>
+    </li>
+</ul>
+<!-- E : breadcrumb-->
+<!-- S : 메인-->
+<main id="contents">
+        <!-- S : 섹션 1-->
+        <section class="section section-about about-1">
+            <div class="container">
+                <div class="flex-bx pl-xl-10 pr-xl-10">
+                    <p class="tit mb-7 font-weight-bold split-txt ani-effect d-block d-md-none">
+                        혁신적 거래 환경을 선도하는 <br> 
+                        넥스트레이드, <br>
+                        투자자의 미래를 열어갑니다.
+                    </p>
+                    <div class="img-bx wow fadeInUp">
+                        <img src="/images/sub/about/about_1_1.png" alt="배경 이미지">
+                        <img src="/images/sub/about/about_1_2.png" alt="넥스트레이드" class="logo-img wow fadeInUp" data-wow-delay="0.2s">
+                        <span class="circle circle-1"></span>
+                        <span class="circle circle-2"></span>
+                        <span class="circle circle-3"></span>
+                        <span class="circle circle-4"></span>
+                        <span class="circle circle-5"></span>
+                        <span class="circle circle-6"></span>
+                        <span class="circle circle-7"></span>
+                        <span class="circle circle-8"></span>
+                        <span class="circle circle-9"></span>
+                    </div>
+                    <div class="txt-bx">
+                        <h2 class="tit mb-7 split-txt ani-effect d-none d-md-block">
+                            혁신적 거래 환경을 선도하는 넥스트레이드, <br>
+                            투자자의 미래를 열어갑니다.
+                        </h2>
+                        <p class="txt txt-18 wow fadeInLeft" data-wow-delay="0.1s">
+                            넥스트레이드는 자본시장법상 다자간매매체결회사 입니다. <br>
+                            <span class="txt-16 text-gray-6">(2025.02 본인가 취득)</span>
+                        </p>
+                        <p class="txt txt-18 wow fadeInLeft" data-wow-delay="0.2s">
+                            다자간매매체결회사란 전산시스템·네트워크를 이용하여 동시에 다수의 자를 거래상대방으로 하여 <br class="d-none d-xxl-block">
+                            경쟁매매 등의 방법으로 상장주권 등을 매매하거나 중개·주선·대리업무를 하는 투자매매업자· <br class="d-none d-xxl-block">
+                            투자중개업자라고 정의하고 있습니다.
+                        </p>
+                        <p class="txt txt-18 wow fadeInLeft" data-wow-delay="0.3s">
+                            미국·유럽·일본 등 선진국에서는 ATS(alternative trading system), MTF(multilateral trading facility), <br>
+                            PTS(proprietary trading system) 등 다양한 이름으로 오래전에 도입되어 운영되고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- E : 섹션 1-->
+        <!-- S : 섹션 2 (주요현황)-->
+        <section class="section section-about about-2 wow fadeInUp">
+            <div class="container">
+                <!-- S : 섹션 타이틀-->
+                <div class="sec-tit">
+                    <h2 class="tit font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">주요현황</h2>
+                    <p class="sub-tit  wow fadeInLeft" data-wow-delay="0.4s">넥스트레이드는 혁신적인 거래 환경을 제공하는<br class="d-sm-none"> 금융 회사입니다.</p>
+                </div>
+                <!-- E : 섹션 타이틀-->
+                <!-- S : 관리자페이지에서 등록한 내용 출력-->
+                <ul class="list-bx">
+                    <li class="wow fadeInUp">
+                        <!-- S : 제목-->
+                        <div class="tit">
+                            <p>설립일</p>
+                        </div>
+                        <!-- E : 제목-->
+                        <!-- S : 정보-->
+                        <div class="info">
+                            <strong class="info-1">2022. 11. 11</strong>
+                            <p class="info-2"></p>
+                        </div>
+                        <!-- E : 정보-->
+                    </li>
+                    <li class="wow fadeInUp">
+                        <!-- S : 제목-->
+                        <div class="tit">
+                            <p>거래종목수</p>
+                        </div>
+                        <!-- E : 제목-->
+                        <!-- S : 정보-->
+                        <div class="info">
+                            <strong class="info-1">700</strong>
+                            <p class="info-2">2026년 01월 01일 기준</p>
+                        </div>
+                        <!-- E : 정보-->
+                    </li>
+                    <li class="wow fadeInUp">
+                        <!-- S : 제목-->
+                        <div class="tit">
+                            <p>다자간 매매체결회사</p>
+                        </div>
+                        <!-- E : 제목-->
+                        <!-- S : 정보-->
+                        <div class="info">
+                            <strong class="info-1">국내최초</strong>
+                            <p class="info-2">인가취득</p>
+                        </div>
+                        <!-- E : 정보-->
+                    </li>
+                    <li class="wow fadeInUp">
+                        <!-- S : 제목-->
+                        <div class="tit">
+                            <p>주주현황</p>
+                        </div>
+                        <!-- E : 제목-->
+                        <!-- S : 정보-->
+                        <div class="info">
+                            <strong class="info-1">34개사</strong>
+                            <p class="info-2">국내 주요 증권사 및 IT기업 등 출자</p>
+                        </div>
+                        <!-- E : 정보-->
+                    </li>
+                    <li class="wow fadeInUp">
+                        <!-- S : 제목-->
+                        <div class="tit">
+                            <p>거래참가 증권회사</p>
+                        </div>
+                        <!-- E : 제목-->
+                        <!-- S : 정보-->
+                        <div class="info">
+                            <strong class="info-1">32개사</strong>
+                            <p class="info-2"></p>
+                        </div>
+                        <!-- E : 정보-->
+                    </li>
+                </ul>
+                <!-- E : 관리자페이지에서 등록한 내용 출력-->
+            </div>
+        </section>
+        <!-- E : 섹션 2 (주요현황)-->
+        <!-- S : 섹션 3 (금융환경)-->
+        <section class="section section-about about-3 wow fadeInUp">
+            <div class="container">
+                <!-- S : 섹션 타이틀-->
+                <div class="sec-tit">
+                    <h2 class="tit wow fadeInLeft" data-wow-delay="0.3s">
+                        국내최초 다자간 매매체결 회사, <br>
+                        최상의 금융 환경을 제공합니다.
+                    </h2>
+                </div>
+                <!-- E : 섹션 타이틀-->
+                <!-- S : 리스트-->
+                <div class="slide-bx">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="inner wow fadeInUp">
+                                    <div class="icon-bx">
+                                        <img src="/images/sub/about/about_3_1.png" alt="거래시간 연장">
+                                    </div>
+                                    <div class="txt-bx">
+                                        <strong class="tit font-weight-bold">거래시간 연장</strong>
+                                        <p class="txt">
+                                            하루 12시간 거래 <br class="d-none d-xxxl-block">
+                                            (오전 8시 ~ 오후 8시)로 직장인 투자자도 퇴근 후 투자할 수 <br class="d-none d-xxxl-block">
+                                            있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inner wow fadeInUp">
+                                    <div class="icon-bx">
+                                        <img src="/images/sub/about/about_3_2.png" alt="낮아진 수수료">
+                                    </div>
+                                    <div class="txt-bx">
+                                        <strong class="tit font-weight-bold">낮아진 수수료</strong>
+                                        <p class="txt">
+                                            매매체결 수수료를 경쟁사보다 저렴하게 책정하여 투자자들에게 비용 절감 혜택을 제공합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inner wow fadeInUp">
+                                    <div class="icon-bx">
+                                        <img src="/images/sub/about/about_3_3.png" alt="통합관리 시스템 및
+                                        투자자 보호">
+                                    </div>
+                                    <div class="txt-bx">
+                                        <strong class="tit font-weight-bold">통합관리 시스템 및 투자자 보호</strong>
+                                        <p class="txt">
+                                            KRX와 동일한 시장 감시 및 청산 결제 시스템으로 거래의 안정성과 투명성을 보장하며, 증권사에 최선집행 기준을 마련하고 준수하도록 합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inner wow fadeInUp">
+                                    <div class="icon-bx">
+                                        <img src="/images/sub/about/about_3_4.png" alt="다양한 주문 방식">
+                                    </div>
+                                    <div class="txt-bx">
+                                        <strong class="tit font-weight-bold">다양한 주문 방식</strong>
+                                        <p class="txt">
+                                            중간가호가, 스톱지정가호가 등 <br class="d-none d-xxxl-block">
+                                            새로운 호가 유형 도입으로 다양한 거래 전략을 쉽게 사용할 수 <br class="d-none d-xxxl-block">
+                                            있습니다. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- E : 리스트-->
+            </div>
+        </section>
+        <!-- E : 섹션 3 (금융환경)-->
+    </main>
+<!-- E : 메인-->
+<script>
+        $(document).ready(function(){
+            /*about 슬라이드 1024px를 기준으로 슬라이드 기능 토글*/
+            let aboutSlide;
+
+            const initSwiper = function() {
+                if ($(window).innerWidth() <= 1200 && !aboutSlide) {
+                    aboutSlide = new Swiper('.slide-bx .swiper-container', {
+                        slidesPerView: 1.2,
+                        spaceBetween: 30,
+                        speed: 1000,
+                        breakpoints: {
+                            576: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                        },
+                        pagination: {
+                            el: ".slide-bx .swiper-pagination",
+                            clickable: true,    
+                        },
+                    });
+                } else if ($(window).innerWidth() > 1200 && aboutSlide) {
+                    aboutSlide.destroy(true, true);
+                    aboutSlide = null;
+                }
+                console.log('test')
+            };
+
+            let resizeTimeout;
+            $(window).on('resize', function() {
+                if (resizeTimeout) clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    initSwiper();
+                }, 200);
+            });
+
+            // 페이지 로드 시 초기화
+            initSwiper();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a472fdbddca6a4a3',t:'MTc5MTQzOTkxNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"59243a41fa5e40d8a1a74fdbb9f67bca","spa":2}' crossorigin="anonymous"></script>
+</body>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/lib/wow.min.js"></script>
+<script src="/js/lib/jquery.magnific-popup.min.js"></script>
+<script src="/js/lib/swiper.min.js"></script>
+<script src="/js/lib/jquery.scrollbar.min.js"></script>
+
+<!-- 부드러운 스크롤 사용시 주석 해제 -->
+<script src="/js/lib/SmoothScroll.js"></script>
+
+<!-- COMMON -->
+<script src="/js/common.js?v=1.023"></script>
+
+<div id="footer" class="footer">
+    <button type="button" class="top-btn">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="/images/icon/top_btn.svg">
+            <source media="(min-width: 0px)" srcset="/images/icon/top_btn_m.svg">
+            <img src="" alt="탑 버튼">
+        </picture>
+    </button>
+    <div class="container">
+        <div class="footer-inner">
+            <!-- S : footer 상단-->
+            <div class="footer-top">
+                <!-- S : NXT 시장-->
+                <ul>
+                    <li>
+                        <a href="/marketOverview/content.do" title="NXT 시장">NXT 시장</a>
+                    </li>
+                    <li>
+                        <a href="/marketOverview/content.do" title="시장개요 및 거래제도">시장개요 및 거래제도</a>
+                    </li>
+                    <li>
+                        <a href="/menu/regulation01/menuList.do" title="규정 및 법규">규정 및 법규</a>
+                    </li>
+                    <li>
+                        <a href="/stockFirm/content.do" title="거래참가 증권사">거래참가 증권사</a>
+                    </li>
+                </ul>
+                <!-- E : NXT 시장-->
+                <!-- S : NXT 시장정보-->
+                <ul>
+					<li>
+                        <a href="/menu/marketData/menuList.do" title="시장정보">시장정보</a>
+                    </li>
+                    <li>
+                        <a href="/menu/transactionStatusMain/menuList.do" title="거래현황">거래현황</a>
+                    </li>
+                    <li>
+                        <a href="/menu/marketInfo/menuList.do" title="시장안내">시장안내</a>
+                    </li>
+                    <li>
+                        <a href="/transactionSys/content.do" title="거래제도">거래제도</a>
+                    </li>
+                </ul>
+                <!-- E : NXT 시장정보-->
+                <!-- S : 공지사항-->
+                <ul>
+                    <li>
+                        <a href="/menu/notice/menuList.do" title="공지사항">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="/menu/notice/menuList.do" title="공지사항">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="/menu/manageDisclosure/menuList.do" title="경영공시">경영공시</a>
+                    </li>
+                    <li>
+                        <a href="/menu/ir/menuList.do" title="재무정보&IR">재무정보&IR</a>
+                    </li>
+                    <li>
+                        <a href="/menu/recruitInfo/menuList.do" title="채용정보">채용정보</a>
+                    </li>
+                </ul>
+                <!-- E : 공지사항-->
+                <!-- S : 회사소식-->
+                <ul>
+                    <li>
+                        <a href="/menu/reportData/menuList.do" title="회사소식">회사소식</a>
+                    </li>
+                    <li>
+                        <a href="/menu/reportData/menuList.do" title="보도자료">보도자료</a>
+                    </li>
+                    <li>
+                        <a href="/menu/promotionData/menuList.do" title="홍보자료">홍보자료</a>
+                    </li>
+                    <li>
+                        <a href="/menu/mediaData/menuList.do" title="자료실">자료실</a>
+                    </li>
+                </ul>
+                <!-- E : 회사소식-->
+                <!-- S : NXT 소개-->
+                <ul>
+                    <li>
+                        <a href="/ceo/content.do" title="NXT 소개">NXT 소개</a>
+                    </li>
+                    <li>
+                        <a href="/ceo/content.do" title="CEO 인사말">CEO 인사말</a>
+                    </li>
+                    <li>
+                        <a href="/menu/company/menuList.do" title="회사소개">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="/menu/history/menuList.do" title="연혁">연혁</a>
+                    </li>
+                    <li>
+                        <a href="/vision/content.do" title="비전 및 목표">비전 및 목표</a>
+                    </li>
+                    <li>
+                        <a href="/ci/content.do" title="CI">CI</a>
+                    </li>
+                </ul>
+                <!-- E : NXT 소개-->
+            </div>
+            <!-- E : footer 상단-->
+            <!-- S : footer 하단-->
+            <div class="footer-bottom">
+                <div class="util-wrap">
+                    <a href="/main.do">
+						<img src="/images/main/logo_color.svg" alt="넥스트레이드" class="logo">
+                    </a>
+                    <ul>
+                    	<li class="privacyPolicy">
+                            <a href="/menu/manageDisclosure/view.do?pageIndex=1&scNttNo=30&scBbsKndCode=manageDisclosure&scNttCl=general&scTopViewYn=&searchKeyword=" title="개인정보처리방침">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="/html/charge-info.html" title="수수료 안내" class="popup-link">수수료 안내</a>
+                        </li>
+                        <li>
+                            <a href="/siteMap/content.do" title="오시는길">오시는길</a>
+                        </li>
+                        <!-- S : Contact Us 연락처 팝업 링크 -->
+                        <li>
+                            <a href="/html/contact-us.html" title="Contact Us" class="popup-link">Contact Us</a>
+                        </li>
+                        <!-- E : Contact Us 연락처 팝업 링크 -->
+                        <!-- S : 정보포털 새창 링크 -->
+                        <li class="footer-portal-link">
+                            <a href="https://portal.nextrade.co.kr/mdclient/" title="정보포털" target="_blank">
+                                정보포털
+                                <img src="/images/icon/icon_link_ext.svg" alt="외부링크" class="footer-portal-icon">
+                            </a>
+                        </li>
+                        <!-- E : 정보포털 새창 링크 -->
+                    </ul>
+                </div>
+                <address>
+                    <p>서울특별시 영등포구 의사당대로 143, 금투센터</p>
+                    <p class="copyright">© 2024. <span>NEXTRADE</span>. All Right Reserved.</p>
+                </address>
+            </div>
+            <!-- E : footer 하단-->
+        </div>
+    </div>
+</div>
+<div class="login-bottom">
+    <p>© 2024. <span>NEXTRADE</span>. All Right Reserved.</p>
+</div>
+<div class="footer-bottom market-footer">
+	<div class="copyright">
+		<p>© 2024. <strong>NEXTRADE</strong>. All Right Reserved.</p>
+	</div>
+</div>
+
+<style>
+/* S : footer 정보포털 링크 강조 스타일 */
+.footer .container .footer-bottom .util-wrap ul li.footer-portal-link a {
+    color: #E7013A;
+    font-weight: 700;
+}
+.footer .container .footer-bottom .util-wrap ul li.footer-portal-link a:hover {
+    opacity: 0.8;
+}
+/* footer 입력창 아이콘 크기 조정 */
+.footer-portal-icon {
+    width: 14px;
+    vertical-align: middle;
+    margin-left: 3px;
+    filter: invert(9%) sepia(91%) saturate(6175%) hue-rotate(335deg) brightness(88%) contrast(116%);
+}
+/* E : footer 정보포털 링크 강조 스타일 */
+</style>
+
+
+
+<!-- // header_top -->
+
+</body>
+</html>

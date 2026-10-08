@@ -1,0 +1,697 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
+
+    <title>Membership &#8211; BOX Options Market LLC</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v11.3.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-38JMVRPVVD"  data-cfasync="false" data-wpfc-render="false" async></script>
+			<script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '11.3.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var MonsterInsightsDefaultLocations = {"page_location":"https:\/\/boxoptions.com\/membership\/"};
+								MonsterInsightsDefaultLocations.page_location = window.location.href;
+								if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations );
+				} else {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-38JMVRPVVD',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+					if ( MonsterInsightsLocations.page_location ) {
+						__gtagTracker('set', MonsterInsightsLocations);
+					}
+										__gtagTracker('config', 'G-38JMVRPVVD', {"forceSSL":"true","link_attribution":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+							<!-- / Google Analytics by MonsterInsights -->
+		<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://boxoptions.com/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://boxoptions.com/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-spacer-inline-css">
+.wp-block-spacer{clear:both}
+/*# sourceURL=https://boxoptions.com/wp-includes/blocks/spacer/style.min.css */
+</style>
+
+
+<link rel='stylesheet' id='awsm-ead-public-css' href='https://boxoptions.com/wp-content/plugins/embed-any-document/css/embed-public.min.css?ver=2.7.14' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary-300: #93c5fd;--wp--preset--color--primary-500: #044ea2;--wp--preset--color--primary-600: #044793;--wp--preset--color--primary-700: #033773;--wp--preset--color--primary-800: #022b59;--wp--preset--color--primary-900: #022144;--wp--preset--color--primary-light: #044ea2;--wp--preset--color--primary-default: #044793;--wp--preset--color--primary-dark: #033773;--wp--preset--color--secondary-300: #bef264;--wp--preset--color--secondary-400: #a3e635;--wp--preset--color--secondary-500: #84cc16;--wp--preset--color--secondary-600: #65a30d;--wp--preset--color--secondary-light: #bef264;--wp--preset--color--secondary-default: #a3e635;--wp--preset--color--secondary-dark: #84cc16;--wp--preset--color--tertiary-300: #fca5a5;--wp--preset--color--tertiary-400: #f87171;--wp--preset--color--tertiary-500: #ef4444;--wp--preset--color--tertiary-600: #dc2626;--wp--preset--color--tertiary-light: #f87171;--wp--preset--color--tertiary-default: #ef4444;--wp--preset--color--tertiary-dark: #dc2626;--wp--preset--color--contrast-300: #fcd34d;--wp--preset--color--contrast-400: #fbbf24;--wp--preset--color--contrast-500: #f59e0b;--wp--preset--color--contrast-600: #d97706;--wp--preset--color--contrast-light: #fbbf24;--wp--preset--color--contrast-default: #f59e0b;--wp--preset--color--contrast-dark: #d97706;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--xs: 0.75rem;--wp--preset--font-size--sm: 0.875rem;--wp--preset--font-size--base: 1rem;--wp--preset--font-size--lg: 1.125rem;--wp--preset--font-size--xl: 1.25rem;--wp--preset--font-size--2-xl: 1.5rem;--wp--preset--font-size--3-xl: 1.875rem;--wp--preset--font-size--4-xl: 2.25rem;--wp--preset--font-size--5-xl: 3rem;--wp--preset--font-size--6-xl: 3.75rem;--wp--preset--font-size--7-xl: 4.5rem;--wp--preset--font-size--8-xl: 6rem;--wp--preset--font-size--9-xl: 8rem;--wp--preset--font-family--sans: Jost,sans-serif;--wp--preset--font-family--serif: ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;--wp--preset--font-family--mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--wp--preset--font-family--display: Jost,sans-serif;--wp--preset--font-family--body: Open Sans,sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-300-color{color: var(--wp--preset--color--primary-300) !important;}.has-primary-500-color{color: var(--wp--preset--color--primary-500) !important;}.has-primary-600-color{color: var(--wp--preset--color--primary-600) !important;}.has-primary-700-color{color: var(--wp--preset--color--primary-700) !important;}.has-primary-800-color{color: var(--wp--preset--color--primary-800) !important;}.has-primary-900-color{color: var(--wp--preset--color--primary-900) !important;}.has-primary-light-color{color: var(--wp--preset--color--primary-light) !important;}.has-primary-default-color{color: var(--wp--preset--color--primary-default) !important;}.has-primary-dark-color{color: var(--wp--preset--color--primary-dark) !important;}.has-secondary-300-color{color: var(--wp--preset--color--secondary-300) !important;}.has-secondary-400-color{color: var(--wp--preset--color--secondary-400) !important;}.has-secondary-500-color{color: var(--wp--preset--color--secondary-500) !important;}.has-secondary-600-color{color: var(--wp--preset--color--secondary-600) !important;}.has-secondary-light-color{color: var(--wp--preset--color--secondary-light) !important;}.has-secondary-default-color{color: var(--wp--preset--color--secondary-default) !important;}.has-secondary-dark-color{color: var(--wp--preset--color--secondary-dark) !important;}.has-tertiary-300-color{color: var(--wp--preset--color--tertiary-300) !important;}.has-tertiary-400-color{color: var(--wp--preset--color--tertiary-400) !important;}.has-tertiary-500-color{color: var(--wp--preset--color--tertiary-500) !important;}.has-tertiary-600-color{color: var(--wp--preset--color--tertiary-600) !important;}.has-tertiary-light-color{color: var(--wp--preset--color--tertiary-light) !important;}.has-tertiary-default-color{color: var(--wp--preset--color--tertiary-default) !important;}.has-tertiary-dark-color{color: var(--wp--preset--color--tertiary-dark) !important;}.has-contrast-300-color{color: var(--wp--preset--color--contrast-300) !important;}.has-contrast-400-color{color: var(--wp--preset--color--contrast-400) !important;}.has-contrast-500-color{color: var(--wp--preset--color--contrast-500) !important;}.has-contrast-600-color{color: var(--wp--preset--color--contrast-600) !important;}.has-contrast-light-color{color: var(--wp--preset--color--contrast-light) !important;}.has-contrast-default-color{color: var(--wp--preset--color--contrast-default) !important;}.has-contrast-dark-color{color: var(--wp--preset--color--contrast-dark) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-300-background-color{background-color: var(--wp--preset--color--primary-300) !important;}.has-primary-500-background-color{background-color: var(--wp--preset--color--primary-500) !important;}.has-primary-600-background-color{background-color: var(--wp--preset--color--primary-600) !important;}.has-primary-700-background-color{background-color: var(--wp--preset--color--primary-700) !important;}.has-primary-800-background-color{background-color: var(--wp--preset--color--primary-800) !important;}.has-primary-900-background-color{background-color: var(--wp--preset--color--primary-900) !important;}.has-primary-light-background-color{background-color: var(--wp--preset--color--primary-light) !important;}.has-primary-default-background-color{background-color: var(--wp--preset--color--primary-default) !important;}.has-primary-dark-background-color{background-color: var(--wp--preset--color--primary-dark) !important;}.has-secondary-300-background-color{background-color: var(--wp--preset--color--secondary-300) !important;}.has-secondary-400-background-color{background-color: var(--wp--preset--color--secondary-400) !important;}.has-secondary-500-background-color{background-color: var(--wp--preset--color--secondary-500) !important;}.has-secondary-600-background-color{background-color: var(--wp--preset--color--secondary-600) !important;}.has-secondary-light-background-color{background-color: var(--wp--preset--color--secondary-light) !important;}.has-secondary-default-background-color{background-color: var(--wp--preset--color--secondary-default) !important;}.has-secondary-dark-background-color{background-color: var(--wp--preset--color--secondary-dark) !important;}.has-tertiary-300-background-color{background-color: var(--wp--preset--color--tertiary-300) !important;}.has-tertiary-400-background-color{background-color: var(--wp--preset--color--tertiary-400) !important;}.has-tertiary-500-background-color{background-color: var(--wp--preset--color--tertiary-500) !important;}.has-tertiary-600-background-color{background-color: var(--wp--preset--color--tertiary-600) !important;}.has-tertiary-light-background-color{background-color: var(--wp--preset--color--tertiary-light) !important;}.has-tertiary-default-background-color{background-color: var(--wp--preset--color--tertiary-default) !important;}.has-tertiary-dark-background-color{background-color: var(--wp--preset--color--tertiary-dark) !important;}.has-contrast-300-background-color{background-color: var(--wp--preset--color--contrast-300) !important;}.has-contrast-400-background-color{background-color: var(--wp--preset--color--contrast-400) !important;}.has-contrast-500-background-color{background-color: var(--wp--preset--color--contrast-500) !important;}.has-contrast-600-background-color{background-color: var(--wp--preset--color--contrast-600) !important;}.has-contrast-light-background-color{background-color: var(--wp--preset--color--contrast-light) !important;}.has-contrast-default-background-color{background-color: var(--wp--preset--color--contrast-default) !important;}.has-contrast-dark-background-color{background-color: var(--wp--preset--color--contrast-dark) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-300-border-color{border-color: var(--wp--preset--color--primary-300) !important;}.has-primary-500-border-color{border-color: var(--wp--preset--color--primary-500) !important;}.has-primary-600-border-color{border-color: var(--wp--preset--color--primary-600) !important;}.has-primary-700-border-color{border-color: var(--wp--preset--color--primary-700) !important;}.has-primary-800-border-color{border-color: var(--wp--preset--color--primary-800) !important;}.has-primary-900-border-color{border-color: var(--wp--preset--color--primary-900) !important;}.has-primary-light-border-color{border-color: var(--wp--preset--color--primary-light) !important;}.has-primary-default-border-color{border-color: var(--wp--preset--color--primary-default) !important;}.has-primary-dark-border-color{border-color: var(--wp--preset--color--primary-dark) !important;}.has-secondary-300-border-color{border-color: var(--wp--preset--color--secondary-300) !important;}.has-secondary-400-border-color{border-color: var(--wp--preset--color--secondary-400) !important;}.has-secondary-500-border-color{border-color: var(--wp--preset--color--secondary-500) !important;}.has-secondary-600-border-color{border-color: var(--wp--preset--color--secondary-600) !important;}.has-secondary-light-border-color{border-color: var(--wp--preset--color--secondary-light) !important;}.has-secondary-default-border-color{border-color: var(--wp--preset--color--secondary-default) !important;}.has-secondary-dark-border-color{border-color: var(--wp--preset--color--secondary-dark) !important;}.has-tertiary-300-border-color{border-color: var(--wp--preset--color--tertiary-300) !important;}.has-tertiary-400-border-color{border-color: var(--wp--preset--color--tertiary-400) !important;}.has-tertiary-500-border-color{border-color: var(--wp--preset--color--tertiary-500) !important;}.has-tertiary-600-border-color{border-color: var(--wp--preset--color--tertiary-600) !important;}.has-tertiary-light-border-color{border-color: var(--wp--preset--color--tertiary-light) !important;}.has-tertiary-default-border-color{border-color: var(--wp--preset--color--tertiary-default) !important;}.has-tertiary-dark-border-color{border-color: var(--wp--preset--color--tertiary-dark) !important;}.has-contrast-300-border-color{border-color: var(--wp--preset--color--contrast-300) !important;}.has-contrast-400-border-color{border-color: var(--wp--preset--color--contrast-400) !important;}.has-contrast-500-border-color{border-color: var(--wp--preset--color--contrast-500) !important;}.has-contrast-600-border-color{border-color: var(--wp--preset--color--contrast-600) !important;}.has-contrast-light-border-color{border-color: var(--wp--preset--color--contrast-light) !important;}.has-contrast-default-border-color{border-color: var(--wp--preset--color--contrast-default) !important;}.has-contrast-dark-border-color{border-color: var(--wp--preset--color--contrast-dark) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-xs-font-size{font-size: var(--wp--preset--font-size--xs) !important;}.has-sm-font-size{font-size: var(--wp--preset--font-size--sm) !important;}.has-base-font-size{font-size: var(--wp--preset--font-size--base) !important;}.has-lg-font-size{font-size: var(--wp--preset--font-size--lg) !important;}.has-xl-font-size{font-size: var(--wp--preset--font-size--xl) !important;}.has-2-xl-font-size{font-size: var(--wp--preset--font-size--2-xl) !important;}.has-3-xl-font-size{font-size: var(--wp--preset--font-size--3-xl) !important;}.has-4-xl-font-size{font-size: var(--wp--preset--font-size--4-xl) !important;}.has-5-xl-font-size{font-size: var(--wp--preset--font-size--5-xl) !important;}.has-6-xl-font-size{font-size: var(--wp--preset--font-size--6-xl) !important;}.has-7-xl-font-size{font-size: var(--wp--preset--font-size--7-xl) !important;}.has-8-xl-font-size{font-size: var(--wp--preset--font-size--8-xl) !important;}.has-9-xl-font-size{font-size: var(--wp--preset--font-size--9-xl) !important;}.has-sans-font-family{font-family: var(--wp--preset--font-family--sans) !important;}.has-serif-font-family{font-family: var(--wp--preset--font-family--serif) !important;}.has-mono-font-family{font-family: var(--wp--preset--font-family--mono) !important;}.has-display-font-family{font-family: var(--wp--preset--font-family--display) !important;}.has-body-font-family{font-family: var(--wp--preset--font-family--body) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='stirling-plugin-css' href='https://boxoptions.com/wp-content/mu-plugins/stirling-plugin/public/css/stirling-plugin-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='page-list-style-css' href='https://boxoptions.com/wp-content/plugins/page-list/css/page-list.css?ver=6.3' media='all' />
+<link rel='stylesheet' id='megamenu-css' href='https://boxoptions.com/assets/maxmegamenu/style.css?ver=e2ece9' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://boxoptions.com/wp-includes/css/dashicons.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='megamenu-google-fonts-css' href='//fonts.googleapis.com/css?family=Open%20Sans:400,700&#038;ver=7.1.2' media='all' />
+<link rel='stylesheet' id='megamenu-fontawesome-css' href='https://boxoptions.com/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=1.6.6' media='all' />
+<link rel='stylesheet' id='megamenu-genericons-css' href='https://boxoptions.com/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=1.6.6' media='all' />
+<link rel='stylesheet' id='app/0-css' href='https://boxoptions.com/wp-content/themes/box-options-v2/public/css/app.549a79.css' media='all' />
+<script async data-wp-strategy="async" id="monsterinsights-frontend-script-js" src="https://boxoptions.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=11.3.0"></script>
+<script data-cfasync="false" data-wpfc-render="false" id='monsterinsights-frontend-script-js-extra'>var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/boxoptions.com","hash_tracking":"false","v4_id":"G-38JMVRPVVD"};</script>
+<script id="jquery-core-js" src="https://boxoptions.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://boxoptions.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="stirling-plugin-js" src="https://boxoptions.com/wp-content/mu-plugins/stirling-plugin/public/js/stirling-plugin-public.js?ver=1.0.0"></script>
+<script data-wp-strategy="defer" defer id="stop-user-enumeration-js" src="https://boxoptions.com/wp-content/plugins/stop-user-enumeration/frontend/js/frontend.js?ver=1.7.8"></script>
+<link rel="https://api.w.org/" href="https://boxoptions.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://boxoptions.com/wp-json/wp/v2/pages/8578" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://boxoptions.com/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://boxoptions.com/membership/" />
+<link rel='shortlink' href='https://boxoptions.com/?p=8578' />
+<link rel="icon" href="https://boxoptions.com/assets/TM_OPT_box_logo_color.png" sizes="32x32" />
+<link rel="icon" href="https://boxoptions.com/assets/TM_OPT_box_logo_color.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://boxoptions.com/assets/TM_OPT_box_logo_color.png" />
+<meta name="msapplication-TileImage" content="https://boxoptions.com/assets/TM_OPT_box_logo_color.png" />
+<style id="wp-custom-css">
+.home .site-header {
+	background: linear-gradient(to bottom, rgba(2, 33, 68, 0.75), rgba(2, 33, 68, 0.71));
+}
+</style>
+  </head>
+
+  <body class="wp-singular page-template-default page page-id-8578 wp-custom-logo wp-embed-responsive wp-theme-box-options-v2 bg-dark-gradient mega-menu-primary-navigation membership">
+        
+    <div id="app">
+      <a class="sr-only focus:not-sr-only" href="#main">
+  Skip to content
+</a>
+
+<header class="site-header banner md:pt-2 relative z-50 md:sticky md:top-0 z-[70] relative">
+  <div class="container mx-auto flex flex-wrap lg:flex-nowrap md:justify-between gutter items-center">
+    <a class="brand hidden w-full my-2 md:w-auto md:basis-full lg:basis-auto md:flex md:flex-col md:mb-3 md:mt-0 lg:my-0" href="https://boxoptions.com/">
+            <img src="https://boxoptions.com/assets/2024-BOX-R-Logo_White-1-300x79.png" alt="BOX Options Market LLC Logo" class="mx-auto w-[13rem] h-auto">
+          </a>
+        <div class="main-menu-wrapper grow lg:grow-0">
+        <nav class="nav-primary" aria-label="Main Menu">
+          <div id="mega-menu-wrap-primary_navigation" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"><div class='mega-toggle-block mega-logo-block mega-toggle-block-1' id='mega-toggle-block-1'><a class='mega-menu-logo' href='http://boxoptions.com' target='_self'><img class='mega-menu-logo' src='https://boxoptions.com/assets/2024-BOX-R-Logo_White-1.png' /></a></div></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-2' id='mega-toggle-block-2'><button aria-controls="mega-menu-primary_navigation" aria-expanded="false" aria-haspopup="true" aria-label="Toggle Menu" class="mega-toggle-animated mega-toggle-animated-slider" type="button">
+                  <span class="mega-toggle-animated-box">
+                    <span class="mega-toggle-animated-inner"></span>
+                  </span>
+                </button></div></div></div><ul id="mega-menu-primary_navigation" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="slide" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-panel-width="body" data-panel-inner-width="#mega-menu-wrap-primary_navigation" data-mobile-force-width="body" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="767" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical"><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-menu-item mega-page_item mega-page-item-8578 mega-current_page_item mega-menu-item-8622" id="mega-menu-item-8622"><a class="mega-menu-link" href="https://boxoptions.com/membership/" aria-current="page">Membership</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-15519" id="mega-menu-item-15519"><a class="mega-menu-link" href="https://boxoptions.com/technology/">Technology</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-8625" id="mega-menu-item-8625"><a class="mega-menu-link" href="https://boxoptions.com/resources/" aria-expanded="false" aria-controls="mega-sub-menu-8625">Resources<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role='presentation' id='mega-sub-menu-8625'>
+<li class="mega-menu-row" id="mega-menu-8625-0">
+	<ul class="mega-sub-menu" style='--columns:12' role='presentation'>
+<li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-8625-0-0">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-15466" id="mega-menu-item-15466"><a class="mega-custom-icon mega-menu-link" href="https://boxoptions.com/resources/fee-schedule/"><div class="menu-item__subtitle">Fees</div></a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-right mega-menu-item-15666" id="mega-menu-item-15666"><a class="mega-custom-icon mega-menu-link" href="https://boxoptions.com/resources/notices/"><div class="menu-item__subtitle">Notices</div></a></li>		</ul>
+</li><li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-8625-0-1">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-15467" id="mega-menu-item-15467"><a class="mega-menu-link" href="https://boxoptions.com/resources/regulatory/"><div class="menu-item__subtitle">Regulatory</div></a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-15665" id="mega-menu-item-15665"><a class="mega-custom-icon mega-menu-link" href="https://boxoptions.com/resources/trading-calendar/"><div class="menu-item__subtitle">Trading Calendar</div></a></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-8621" id="mega-menu-item-8621"><a class="mega-menu-link" href="https://boxoptions.com/about/">About</a></li></ul></div>
+        </nav>
+    </div>
+        <div class="absolute right-[4.5rem] sm:right-[5.75rem] md:static">
+      <a href="http://boxoptions.com/box-system-alerts/"
+    class="system-alert-indicator system-alert-indicator--good group/indicator duration-300 transition-all ease-in-out flex items-center py-2 px-4 !text-white rounded-full antialiased relative bg-[rgba(2,33,68,0.1)] backdrop-blur-xl">
+    <div class="relative z-10">System Alerts</div>
+    <div class="relative ml-2 w-4 h-4">
+        <!--Good Indicator hide when there's an active alert-->
+        <img src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/system-alert-indicator-good.3cf7f2.svg"
+            alt="System Alerts Status Good" 
+            class="sa-status-good absolute w-4 h-4 opacity-100 transition-opacity duration-300 ease-in-out group-hover/indicator:opacity-0"/>
+        <img src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/system-alert-indicator-check.fb6b6a.svg"
+            alt="System Alerts Good Check" 
+            class="sa-status-check absolute w-4 h-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover/indicator:opacity-100"/>
+        <!--Active Indicator show when there's an active alert-->
+        <img src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/system-alert-indicator-poor.a4be2e.svg"
+            alt="System Alerts Status Bad" 
+            class="sa-status-active absolute w-4 h-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover/indicator:opacity-100"/>
+        <img src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/system-alert-indicator-exclaim.658e51.svg"
+            alt="System Alerts Poor Exclaimation" 
+            class="sa-status-exclaim absolute w-4 h-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover/indicator:opacity-100"/>
+    </div>
+</a>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('/wp-json/box/v1/alerts')
+            .then(response => response.json())
+            .then(data => {
+                const alertIndicator = document.querySelector('.system-alert-indicator');
+                // Check for 'outage' or 'incident' status on System Alert CPT to identify if there is an active alert
+                const hasActiveAlert = data.some(alert => alert.alert_status === 'outage' || alert.alert_status === 'incident');
+    
+                if (hasActiveAlert) {
+                    // If there's an active alert ('outage' or 'incident'), show the active indicator
+                    alertIndicator.classList.remove('system-alert-indicator--good');
+                    alertIndicator.classList.add('system-alert-indicator--active');
+                    // Adjust visibility of indicators for active alert
+                    alertIndicator.querySelector('.sa-status-good').style.opacity = 0;
+                    alertIndicator.querySelector('.sa-status-check').style.display = 'none';
+                    alertIndicator.querySelector('.sa-status-active').style.opacity = 1;
+                    alertIndicator.querySelector('.sa-status-exclaim').style.display = 'flex';
+                } else {
+                    // If all alerts are 'resolved', show the good indicator
+                    alertIndicator.classList.add('system-alert-indicator--good');
+                    alertIndicator.classList.remove('system-alert-indicator--active');
+                    // Reset visibility of indicators for good status
+                    alertIndicator.querySelector('.sa-status-good').style.opacity = 1;
+                    alertIndicator.querySelector('.sa-status-check').style.display = 'flex';
+                    alertIndicator.querySelector('.sa-status-active').style.opacity = 0;
+                    alertIndicator.querySelector('.sa-status-exclaim').style.display = 'none';
+                }
+            })
+            .catch(error => console.error('Error fetching system alerts:', error));
+    });
+</script>        </div>
+</div>
+</header>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', (event) => {
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+});
+</script>
+<style type="text/css">
+@media(min-width:768px){
+  .site-header.scrolled {
+    background: linear-gradient(100.5deg, rgba(2, 33, 68, 0.585) 6.92%, rgba(2, 33, 68, 0.65) 93.37%)!important;
+    backdrop-filter: blur(8px) !important;
+  }
+}
+</style>
+  <main id="main" class="main">
+           <div 
+  class="page-header relative md:min-h-[15rem] lg:min-h-[21rem] w-full md:flex md:items-end text-white antialiased pt-12 pb-6 md:pt-8 
+    
+  ">
+    <div class="md:absolute md:top-6 md:w-full mb-4 md:mb-0">
+      <div class="container mx-auto gutter">
+              </div>
+    </div>
+
+    <div class="container mx-auto gutter">
+        <h1 class="text-secondary md:!text-5xl mb-8 lg:mb-24 mt-5 md:mt-10 md:pr-[17%]">Membership</h1>
+    </div>
+
+  <div class="absolute top-0 md:top-8 right-0 w-1/2 md:w-1/3 h-20 md:h-full z-0 hidden md:block">
+    <img 
+      src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/hexagon-green-outline.385024.svg" 
+      alt="Hexagon Shape" 
+      class="w-full h-1/2 object-contain object-right-bottom">
+  </div>
+</div>    <div class="bg-white">
+      <div class="container mx-auto gutter">
+
+                  
+        
+        <div class="e-content py-8 md:py-12 xl:py-14">
+    
+<p class="wp-block-paragraph">Become a BOX Options Participant and experience the benefits of trading on BOX Options. Qualification and signing details are below.</p>
+
+
+
+<p class="wp-block-paragraph">Your firm must be a registered broker-dealer, registered with a Self Regulatory Organization (SRO) and connected with a clearing firm.</p>
+
+
+
+<h3 class="wp-block-heading">Documentation</h3>
+
+
+
+<h4 class="wp-block-heading">Required for All BOX Options Participants</h4>
+
+
+
+<p class="wp-block-paragraph">All brokers/dealers seeking trading privileges with BOX Options must complete the BOX Options Participant application documents, <a href="https://boxexchange.com/membership/" target="_blank" rel="noopener">located here</a>.&nbsp;</p>
+
+
+
+<h4 class="wp-block-heading">&nbsp;</h4>
+
+
+
+<h4 class="wp-block-heading">Membership Services</h4>
+
+
+
+<p class="wp-block-paragraph"><strong>Phone</strong>: (617) 235-2000<br><strong>Email</strong>: <a href="/cdn-cgi/l/email-protection#7b161e16191e090813120b3b1914031e0318131a151c1e55181416"><span class="__cf_email__" data-cfemail="0d6068606f687f7e65647d4d6f627568756e656c636a68236e6260">[email&#160;protected]</span></a><br><strong>Mail</strong>: 101 Arch St, Suite 610, Boston, MA 02110</p>
+</div>
+
+
+
+                
+        
+      </div>
+    </div>
+    </main>
+
+  
+<footer class="footer min-h-[30rem] items-end content-info py-4 md:py-16 lg:pt-28 text-white text-center md:text-left antialiased overflow-hidden relative">
+  <div class="mb-12 container mx-auto gutter sm:flex-wrap md:flex md:justify-between md:items-start relative z-10">
+
+    <div class="flex flex-col md:flex-row lg:flex-col items-center md:mb-6 lg:mb-0 md:items-start w-full lg:w-auto content-center md:content-start">
+      <a 
+        class="opacity-100 hover:border-secondary p-2 hover:opacity-70 border border-transparent transition-all duration-300 ease-in-out brand inline-block w-full md:w-auto my-4 md:mb-10 lg:mt-2" 
+        href="https://boxoptions.com/">
+                  <div class="footer-image-wrap" rel="home"><img width="720" height="189" src="https://boxoptions.com/assets/2024-BOX-R-Logo_White-1.png" class="footer-image mx-auto w-auto max-h-16" alt="BOX Options Market LLC" decoding="async" loading="lazy" srcset="https://boxoptions.com/assets/2024-BOX-R-Logo_White-1.png 720w, https://boxoptions.com/assets/2024-BOX-R-Logo_White-1-300x79.png 300w" sizes="auto, (max-width: 720px) 100vw, 720px" /></div>
+              </a>
+
+      <div class="flex items-start px-1">
+        <svg class="w-7 h-7 mr-4 lg:mr-6 text-white mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+</svg>        <div>
+          <div class="mb-4 md:max-w-[12rem]">101 Arch St. Suite 610 Boston, MA 02110</div>
+          <div class="mb-4 md:max-w-[16rem]">141 W. Jackson Blvd. Suite 280 Chicago, IL 60604</div>
+        </div>
+      </div>
+
+      <div class="flex flex-row items-center lg:my-8 max-w-[14rem] transition-all duration-300 ease-in-out p-1 rounded-sm bg-transparent hover:bg-secondary/50">
+
+        <div>
+        <svg class="w-7 h-7 mr-4 lg:mr-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+</svg>    </div>
+    
+            <a class="!text-white" href="/cdn-cgi/l/email-protection#90f9fef6ffd0f2ffe8ffe0e4f9fffee3bef3fffd" id=""><span class="__cf_email__" data-cfemail="94fdfaf2fbd4f6fbecfbe4e0fdfbfae7baf7fbf9">[email&#160;protected]</span></a>
+    
+</div>
+
+            <a href="https://www.linkedin.com/company/boxoptionsmarket"
+        class="sm:ml-4 md:mb-2 lg:mb-0 lg:ml-0 lg:mt-2 px-1">
+        <img 
+        src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/linkedin.a1366b.svg" 
+        alt="Icon of the Linkedin Logo" 
+        class="w-8 h-8" />
+        <span class="sr-only">Linkedin</span>
+      </a>
+      
+    </div>
+
+        <div class="md:ml-4 [&_h3]:text-lg">
+      <hr class="my-4 w-full md:hidden">
+      <section class="widget block-2 widget_block">
+<h3 class="wp-block-heading"><a href="http://boxoptions.com/membership/" data-type="page" data-id="8578"><strong>Membership</strong></a></h3>
+</section><section class="widget block-10 widget_block">
+<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
+</section><section class="widget nav_menu-3 widget_nav_menu"><div class="menu-footer-menu-membership-container"><ul id="menu-footer-menu-membership" class="menu"><li id="menu-item-15563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15563"><a href="https://boxexchange.com/membership/">Application Documents</a></li>
+<li id="menu-item-15564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15564"><a href="https://rules.boxexchange.com/browse/4e260fc07d1b10009f6f90b11c2ac4f101">Exchange Rules</a></li>
+</ul></div></section>    </div>
+    
+        
+    <div class="md:ml-4 [&_h3]:text-lg">
+      <hr class="my-4 w-full md:hidden">
+      <section class="widget block-4 widget_block">
+<h3 class="wp-block-heading"><a href="http://boxoptions.com/technology/" data-type="page" data-id="8601"><strong>Technology</strong></a></h3>
+</section><section class="widget block-8 widget_block">
+<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
+</section><section class="widget nav_menu-4 widget_nav_menu"><div class="menu-footer-menu-technology-container"><ul id="menu-footer-menu-technology" class="menu"><li id="menu-item-15628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15628"><a href="http://boxoptions.com/technology#Connectivity">Connectivity</a></li>
+<li id="menu-item-15629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15629"><a href="http://boxoptions.com/technology#technology">Interface Specifications</a></li>
+</ul></div></section>    </div>
+    
+        
+    <div class="md:ml-4 [&_h3]:text-lg">
+      <hr class="my-4 w-full md:hidden">
+      <section class="widget block-3 widget_block">
+<h3 class="wp-block-heading"><a href="http://boxoptions.com/resources/" data-type="page" data-id="8581"><strong>Resources</strong></a></h3>
+</section><section class="widget block-9 widget_block">
+<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
+</section><section class="widget nav_menu-5 widget_nav_menu"><div class="menu-footer-menu-resources-container"><ul id="menu-footer-menu-resources" class="menu"><li id="menu-item-15459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15459"><a href="https://boxoptions.com/resources/fee-schedule/">Fees</a></li>
+<li id="menu-item-15465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15465"><a href="https://boxexchange.com/notices">Notices</a></li>
+<li id="menu-item-15460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15460"><a href="https://boxoptions.com/resources/regulatory/">Regulatory</a></li>
+<li id="menu-item-15620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15620"><a href="https://boxoptions.com/box-system-alerts/">System Alerts</a></li>
+</ul></div></section>    </div>
+    
+        
+    <div class="md:ml-4 [&_h3]:text-lg">
+      <hr class="my-4 w-full md:hidden">
+      <section class="widget block-5 widget_block">
+<h3 class="wp-block-heading"><a href="http://boxoptions.com/about/" data-type="page" data-id="8577"><strong>About</strong></a></h3>
+</section><section class="widget block-6 widget_block">
+<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
+</section><section class="widget nav_menu-6 widget_nav_menu"><div class="menu-footer-menu-about-container"><ul id="menu-footer-menu-about" class="menu"><li id="menu-item-15461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15461"><a href="https://boxoptions.com/about/">About BOX</a></li>
+<li id="menu-item-15462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15462"><a href="https://boxoptions.com/employment/">Careers</a></li>
+<li id="menu-item-15584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15584"><a href="https://boxexchange.com/">BOX Exchange</a></li>
+</ul></div></section>    </div>
+    
+  </div>
+  <div class="container mx-auto gutter relative z-10">
+    <hr class="mb-4 md:mb-0 lg:my-8 w-full">
+    <div class="md:flex md:justify-between md:items-center">
+      <div class="text-sm">
+        &copy;2026 BOX Options Market LLC, All Rights Reserved. Website Design & Development by <a href="http://stirlingbrandworks.com/" class="underline">Stirling Brandworks</a>
+      </div>
+            <div class="mt-4 md:mt-0 flex items-center">
+        <nav 
+          class="p-0 mx-auto md:m-0" 
+          aria-label="Footer Menu - Bottom Right Links">
+          <div class="menu-footer-menu-bottom-right-links-container"><ul id="menu-footer-menu-bottom-right-links" class="nav footer-menu flex items-center text-white text-sm"><li id="menu-item-15455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15455"><a href="https://boxoptions.com/terms-conditions/">Terms &#038; Conditions</a></li>
+<li id="menu-item-15663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15663"><a href="https://boxoptions.com/legal-disclaimer/">Legal Disclaimer</a></li>
+</ul></div>
+        </nav>
+      </div>
+          </div>
+  </div>
+  <div class="absolute left-0 bottom-0 z-0">
+    <img 
+      src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/svg/hexagon-polygon.fee1c6.svg" 
+      alt="Image of a Hexagon" />
+  </div>
+</footer>
+<!-- External Link Warning Popup -->
+<div id="externalLinkPopup" 
+    class="fixed left-0 top-0 w-full h-full z-[1000] flex justify-center items-center bg-black bg-opacity-50"
+    style="display:none;">
+    <!-- Popup Content -->
+    <div id="popupContent" 
+        class="text-center bg-white p-4 md:p-8 md:pt-4 rounded-lg shadow md:min-w-[34rem]">
+        <div class="text-right mb-1">
+            <button id="closePopup" 
+                class="text-3xl font-bold text-gray-700 hover:text-black duration-300 transition-all ease-in-out">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+</svg>            </button>
+        </div>
+        <img src="https://boxoptions.com/wp-content/themes/box-options-v2/public/images/gif/rocket.4a3714.gif" 
+            alt="Rocket Ship floating in space" 
+            class="mx-auto w-26 h-26 md:w-[150px] md:h-[150px] object-contain" >
+        <h4 class="mt-0 font-bold text-2xl md:text-4xl">Attention</h4>
+        <p class="mt-2 mb-6">You are now leaving this page and being directed to</br> an external website.</p>
+        <div class="mx-auto flex flex-col items-center justify-center">
+            <a 
+href="#Continue" 
+target="_self"
+class="button button--secondary button--secondary-solid button--medium 
+button--icon-pos-right 
+icon-animated icon-animated--right   w-auto" id="continueButton">
+        <span class="button__title">Continue</span>
+            <svg class="button__icon h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"/>
+</svg>    </a>
+            <button id="cancelButton"
+                class="mx-auto mt-4 text-center hover:text-black duration-300 transition-all ease-in-out">Cancel</button>
+        </div>
+    </div>
+  </div>
+<style>
+#externalLinkPopup {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+}
+</style>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+jQuery(document).ready(function($) {
+    $(document).on('click', 'a', function(e) {
+        var link = $(this).attr('href');
+        var isExternal = link.indexOf(location.hostname) === -1 && !link.startsWith('#') && !link.includes('mailto:') && !link.includes('tel:');
+        
+        if (isExternal) {
+            e.preventDefault();
+            // Show the popup
+            $('#externalLinkPopup').show();
+            
+            // Continue
+            $('#continueButton').on('click', function() {
+                window.open(link, '_self').focus();
+                $('#externalLinkPopup').hide();
+            });
+            
+            // Cancel
+            $('#cancelButton').on('click', function() {
+                $('#externalLinkPopup').hide();
+            });
+
+            // Close Popup
+            $('#closePopup').on('click', function() {
+                $('#externalLinkPopup').hide();
+            });
+
+            //Close the popup when the user clicks outside of it
+            $(document).mouseup(function(e) {
+                var popup = $('#popupContent');
+                if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+                    $('#externalLinkPopup').hide();
+                }
+            });
+        }
+    });
+});
+</script>    </div>
+
+        <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/assets/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/box-options-v2/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+        <span class="pp-hide-empty-menu-config" data-hide-parent-div="0" hidden></span>
+        <script id="awsm-ead-pdf-object-js" src="https://boxoptions.com/wp-content/plugins/embed-any-document/js/pdfobject.min.js?ver=2.7.14"></script>
+<script id="awsm-ead-public-js-extra">
+var eadPublic = [];
+//# sourceURL=awsm-ead-public-js-extra
+</script>
+<script id="awsm-ead-public-js" src="https://boxoptions.com/wp-content/plugins/embed-any-document/js/embed-public.min.js?ver=2.7.14"></script>
+<script id="app/0-js-before">
+(()=>{"use strict";var r,e={},o={};function t(r){var a=o[r];if(void 0!==a)return a.exports;var n=o[r]={exports:{}};return e[r].call(n.exports,n,n.exports,t),n.exports}t.m=e,r=[],t.O=(e,o,a,n)=>{if(!o){var s=1/0;for(p=0;p<r.length;p++){o=r[p][0],a=r[p][1],n=r[p][2];for(var i=!0,l=0;l<o.length;l++)(!1&n||s>=n)&&Object.keys(t.O).every((r=>t.O[r](o[l])))?o.splice(l--,1):(i=!1,n<s&&(s=n));if(i){r.splice(p--,1);var f=a();void 0!==f&&(e=f)}}return e}n=n||0;for(var p=r.length;p>0&&r[p-1][2]>n;p--)r[p]=r[p-1];r[p]=[o,a,n]},t.d=(r,e)=>{for(var o in e)t.o(e,o)&&!t.o(r,o)&&Object.defineProperty(r,o,{enumerable:!0,get:e[o]})},t.o=(r,e)=>Object.prototype.hasOwnProperty.call(r,e),(()=>{var r={666:0};t.O.j=e=>0===r[e];var e=(e,o)=>{var a,n,s=o[0],i=o[1],l=o[2],f=0;if(s.some((e=>0!==r[e]))){for(a in i)t.o(i,a)&&(t.m[a]=i[a]);if(l)var p=l(t)}for(e&&e(o);f<s.length;f++)n=s[f],t.o(r,n)&&r[n]&&r[n][0](),r[n]=0;return t.O(p)},o=self.webpackChunk_roots_bud_sage_sage=self.webpackChunk_roots_bud_sage_sage||[];o.forEach(e.bind(null,0)),o.push=e.bind(null,o.push.bind(o))})()})();
+//# sourceURL=app%2F0-js-before
+</script>
+<script id="app/0-js" src="https://boxoptions.com/wp-content/themes/box-options-v2/public/js/259.6cf96b.js"></script>
+<script id="app/1-js" src="https://boxoptions.com/wp-content/themes/box-options-v2/public/js/540.2b5206.js"></script>
+<script id="app/2-js" src="https://boxoptions.com/wp-content/themes/box-options-v2/public/js/app.f5b584.js"></script>
+<script id="hoverIntent-js" src="https://boxoptions.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="megamenu-js" src="https://boxoptions.com/wp-content/plugins/megamenu/js/maxmegamenu.min.js?ver=3.10.8"></script>
+<script id="megamenu-pro-js" src="https://boxoptions.com/wp-content/plugins/megamenu-pro/assets/public.js?ver=1.6.6"></script>
+<script id="presspermit-front-js" src="https://boxoptions.com/wp-content/plugins/press-permit-core/common/js/frontend.js?ver=4.9.0"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://boxoptions.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://boxoptions.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+  </body>
+</html>

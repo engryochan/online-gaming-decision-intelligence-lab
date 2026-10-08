@@ -1,0 +1,210 @@
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- jQuery specific -->
+	<script type="text/javascript" src="/jhpt/resource/jquery/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/jhpt/resource/css/login.css"/>
+	<link rel="stylesheet" type="text/css" href="/jhpt/resource/module/css/module.css"/>
+	
+<script type="text/javascript" src="/jhpt/common/js/jQuery.md5.js"></script>
+<script type="text/javascript">
+	function vMiddle(){
+	    var middleDiv=document.getElementById("page");
+	    var divHeight=middleDiv.offsetHeight;
+		var bodyHeight=document.body.offsetHeight ;
+		if(bodyHeight>divHeight)
+		   middleDiv.style.marginTop=-divHeight/2+"px";
+		 else{
+		   middleDiv.style.marginTop=0;
+	       middleDiv.style.top=0;
+		 }
+	}
+</script>
+<style>
+.login-input{
+	width:180px;height:25px;
+}
+font{
+    font-family:"宋体","Arial Narrow";
+    font-size:12px;
+}
+a{text-decoration: none;font-family:'微软雅黑';}
+a:link,a:visited{color:#000;}
+a:hover,a:active,a:focus{color:#000;text-decoration: none;}
+</style>
+<title>监测信息交互处理平台</title>
+</head>
+
+<body onload="vMiddle();">
+<center>
+<div id=page>
+    <div id=logo><img src=/jhpt/resource/images/logo.gif border=0></div>
+    <div id=loginbg>
+    	<div id="login">
+	  		<form>
+				 <table>
+				 	<tr>
+				 		<td class="title">用户名:</td><td colspan="2"><input id="user" type="text" class="text login-input" style="width:150px;height:25px;"/></td>
+				 	</tr>
+				 	<tr>
+				 		<td class="title">密&emsp;码:</td><td colspan="2"><input id="pwd" type="password" name="userPsw" class="text login-input" style="width:150px;height:25px;"/></td>
+				 	</tr>
+				 	<tr>
+				 		<td class="title">验证码:</td>
+				 		<td><input id="jcaptchacode" type="text" class="text" style="width:68px;height:26px;"/></td><td><img id="jcaptcha" src="../jcaptcha" style=""></td>
+				 	</tr>
+				 	<tr>
+				 		<td colspan="2"><span id="errorMsg" style="font-size:11px;"></span></td><td class="textalignright"><input id="loginButton" type="button" class="btn002" value="" /></td>
+				 	</tr>
+				 </table>
+	 		</form>
+       </div>
+    </div>
+   	<!-- 底部开始 -->
+	<div id="boxbt">
+		<ul>
+    		<li>copyright&copy;2015 北京中证保信息科技股份有限公司</li>
+    		<li>技术支持电话:010-66580590&nbsp;&nbsp;Email:wangshuo@sipf.com.cn</li>
+    		<li><a href="https://beian.miit.gov.cn"><font color="#666666">京ICP备12035868号-1</font></a></li>
+		</ul>
+   </div>
+   <!-- 底部结束 -->
+</div>
+</center>
+
+<script>
+	var siteName='www.sipf.com.cn.jhpt';
+	
+	function   setCookie(name,value) {     
+		var   Days   =   30;   //此   cookie   将被保存   30   天     
+		var   exp     =   new   Date();         
+		//new   Date( "December   31,   9998 ");     
+		exp.setTime(exp.getTime()   +   Days*24*60*60*1000);     
+		document.cookie   =   name   +   "= "+   escape(value)   + ";expires= "+   exp.toGMTString(); 
+	} 
+	
+	function getCookie(objName){
+		//获取指定名称的cookie的值   
+		var arrStr = document.cookie.split("; ");   
+		for(var i = 0;i < arrStr.length;i ++){    
+			var temp = arrStr[i].split("=");    
+			if(temp[0] == objName) return unescape(temp[1]);   
+		} 
+	}
+	
+	$(document).ready(function() {
+		var fll = true;
+		if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0"){ 
+			alert("请升级成IE8+版本浏览器,且文档模式与浏览模式调整为相应版本号版本。"); 
+			fll = false;
+		} else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0"){ 
+			alert("请升级成IE8+版本浏览器,且文档模式与浏览模式调整为相应版本号版本。"); 
+			fll = false;
+		}
+	
+		if(fll){
+	 		$('#loginButton').click(function() {
+				if (!$('#user').val() || !$('#pwd').val() || !$('#jcaptchacode').val())
+					return;	
+				var user=$('#user').val();						
+				var str1 = $.md5($('#pwd').val());
+	        	var str2 = $.md5(str1 + user);
+	//			var pwdCookie=getCookie(user);	
+	/*								
+				if(typeof(pwdCookie)  ==   'undefined' && confirm("是否保存密码?")){
+					setCookie(user,pwd);
+				}
+				if(	typeof(pwdCookie)  !=   'undefined' && pwdCookie  !=   pwd  && confirm("新输入密码与原保存密码密码不一致,是否重新保存密码?")){
+					setCookie(user,pwd);
+				}		
+	*/
+				//加密cookie用户名  sunwl 20150906 
+				setCookie(siteName,zhname($('#user').val()));
+				$.post('security.jsp', {
+					m:'login',
+					lm : zhname($('#user').val()),//$('#user').val(),
+					swl : $.md5(str2 + $('#jcaptchacode').val()),//$('#pwd').val(),
+					jcaptchacode:$('#jcaptchacode').val()
+				}, function(status) {
+					if($.trim(status) == 'wrongcode'){
+						$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+						$('#errorMsg').html('验证码错误，请重新填写');
+					}else if ($.trim(status) == 'true') {
+						window.location.href = "../home/";
+					}else if ($.trim(status) == 'istemp') {
+						//修改跳转页面  wuranran  20210203  begin
+						window.location.href = "../home/indexOnly.jsp";
+						//修改跳转页面  wuranran  20210203  end
+					}else if($.trim(status) == 'deletedUser') {
+						$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+						$('#errorMsg').html('此用户已注销');
+					}else if($.trim(status) == 'errCounts') {
+						$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+						$('#errorMsg').html('<p style="color:#FF0000">账户已锁定</p>');
+						//$('#loginButton').hide();
+					}else {// ($.trim(status) == 'wrongPassOrUser') {
+						$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+						$('#errorMsg').html('用户名或密码错误，请重新填写');
+					}
+				});
+			});
+	 		$('#loginbg').keydown(function(event){
+	 			if (event.keyCode == '13') {
+	 				//if($('#loginButton:visible').is('#loginButton')){
+	     				$('#loginButton').trigger('click');
+	     			//}
+	   			}
+	 		});
+	 		function   retrivePwd() {     
+		 		var user=$('#user').val();			
+			} 
+			
+			function zhname(str1){
+				var str=str1;
+				var arr = "";
+				for(var i=0;i<str.length;i++){
+					if(i == str.length-1){
+						   arr += str.charCodeAt(i)+"";
+					}else{
+				   arr += str.charCodeAt(i)+"" + ",";
+				   }
+				}
+				return arr;
+			}
+			
+			function changeASCII2Str(str){
+				var strs=str.split(",")
+				var returnStr="";
+				for(var i=0;i<strs.length;i++){
+					returnStr=returnStr+String.fromCharCode(strs[i]);
+				}
+				return returnStr;
+			}
+			
+	 		$('#user').keydown(function(event){
+	 			if (event.keyCode == '9') {
+	     			retrivePwd();
+	   			}
+	 		});
+	 				
+	 		$('#user').mouseleave(function(){
+				retrivePwd();
+	 		});
+	 		 	
+	 		//解密cookie用户名  sunwl 20150906 
+	 		var user=changeASCII2Str(getCookie(siteName));	
+	 		$('#user').val(user);
+	 	}		
+	});
+</script>
+</body>
+</html>

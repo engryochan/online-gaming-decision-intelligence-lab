@@ -1,0 +1,2025 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="de">
+    <title>Brokerize Dashboard</title>
+    <!--
+        ====================================================
+        Developed and operated by the Smartbroker Holding AG
+                        https://smartbroker-holding.de/
+        ====================================================
+     //-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <meta name="content-language" content="de"/>
+    <meta name="author" content="www.wallstreet-online.de" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="shortcut icon" href="/media/2022/favicon.ico" type="image/ico"/>
+
+
+
+    <meta name="robots" content="noodp,index,follow" />
+    <link rel="canonical" href="/de/trading/brokerize" />
+<link rel="stylesheet" type="text/css" title="Standard" href="/assets/_shared/css/font-awesome.4.4.0.min.css" />
+<link rel="stylesheet" type="text/css" title="Standard" href="/assets/_ext/bootstrap5.3.8/bootstrap-icons.css" />
+<link rel="stylesheet" type="text/css" title="Standard" href="/style/base.scss?2026100808" />
+<style type="text/css">
+.chartContainer {
+  display: none !important;
+}
+#brokerize-modal-portal {
+  z-index: 1;
+  position: relative;
+}
+.carousel .carousel-inner .item>div {
+    height: auto;
+}
+
+@keyframes marquee {
+    0%   { text-indent: 1140px }
+    100% { text-indent: -1140px }
+}
+
+@-webkit-keyframes marquee {
+    0%   { text-indent: 1140px }
+    100% { text-indent: -1140px }
+}
+
+.marquee a {
+    color: red;
+
+}
+.marquee {
+    overflow: hidden;
+    font-weight: bold;
+    width:100%;
+    color: red;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    -webkit-animation: marquee 25s linear infinite;
+    margin-bottom: 5px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.marquee:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+</style></head>
+<body class="">
+<div class="clear"></div><div id="main_layout" class="page_layout " ><div class="mpe_container">
+
+            <nav class="navbar navbar-expand-lg fixed-top flex-column py-0" role="navigation">
+                                <div class="container align-items-start flex-row-reverse flex-sm-row">
+
+                    <button class="navbar-toggler mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                                            <button type="button" class="btn btn-outline-secondary ms-4 mt-3 search-toggle"
+                            data-bs-toggle="collapse" data-bs-target="#globalsearch" aria-controls="globalsearch" aria-expanded="false" aria-label="Suche">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    
+                    <a class="navbar-brand navbar col-7 col-sm-4 px-0 me-0"
+                       href="/" title="LS-Exchange">
+                        <img src="/media/2022/LSX Lang & Schwarz Exchange_LOGO_NEW.svg"
+                             class="img-fluid"
+                             style="width:auto" />
+                    </a>
+
+                    <div class="collapse navbar-collapse ms-auto justify-content-end" id="navbar-language-collapse">
+                        <div id="servicelinks">
+                            
+<ul  class="ul1 nav navbar-nav">
+<li class="li1 hidden-xs"><a class="a1 dropdown-item " href="/de/impressum" >Impressum</a></li>
+<li class="li1 hidden-xs"><a class="a1 dropdown-item " href="/de/nutzungsbedingungen" >Nutzungsbedingungen</a></li>
+<li class="li1 "><a class="a1 dropdown-item " href="/de/datenschutz" >Datenschutz</a></li>
+</ul>
+                        </div>
+                    </div>
+
+                                    </div>
+
+                <div class="container pb-3">
+                    <div class="collapse navbar-collapse col-12 col-md-10 float-start fw-bold" id="navbar-collapse">
+                        
+                        
+<ul  class="ul1 nav navbar-nav">
+<li class="li1 "><a class="a1 dropdown-item " href="/de/" ><span class="glyphicon glyphicon-home bi bi-house-door-fillbi bi-house-door-fill" title="Start"></span></a></li>
+<li class="li1  dropdown"><a class="a1 dropdown-item  dropdown-toggle" href="/de/aktien" data-bs-toggle="dropdown" >Aktien<span class="caret"></span></a>
+<ul  class="ul2  dropdown-menu">
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien" >Übersicht</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien/deutschland" >Deutschland</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien/europa" >Europa</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien/amerika" >USA</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien/asien" >Asien</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien/neu" >Neu bei LS</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/aktien-filter" >Filter</a></li>
+</ul>
+</li>
+<li class="li1  dropdown"><a class="a1 dropdown-item  dropdown-toggle" href="/de/etfs" data-bs-toggle="dropdown" >ETFs<span class="caret"></span></a>
+<ul  class="ul2  dropdown-menu">
+<li class="li2 "><a class="a2 dropdown-item " href="/de/etfs" >Übersicht</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/etf-filter" >Filter</a></li>
+</ul>
+</li>
+<li class="li1  dropdown"><a class="a1 dropdown-item  dropdown-toggle" href="/de/fonds" data-bs-toggle="dropdown" >Fonds<span class="caret"></span></a>
+<ul  class="ul2  dropdown-menu">
+<li class="li2 "><a class="a2 dropdown-item " href="/de/fonds" >Übersicht</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/fonds-filter" >Filter</a></li>
+</ul>
+</li>
+<li class="li1  dropdown"><a class="a1 dropdown-item  dropdown-toggle" href="/de/anleihen" data-bs-toggle="dropdown" >Anleihen<span class="caret"></span></a>
+<ul  class="ul2  dropdown-menu">
+<li class="li2 "><a class="a2 dropdown-item " href="/de/anleihen" >Übersicht</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/anleihen-filter" >Filter</a></li>
+</ul>
+</li>
+<li class="li1  active dropdown"><a class="a1 active dropdown-item  dropdown-toggle" href="/de/service" data-bs-toggle="dropdown" >Service<span class="caret"></span></a>
+<ul  class="ul2  dropdown-menu">
+<li class="li2 "><a class="a2 dropdown-item " href="/de/service" >Überblick</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/download" >Downloadbereich</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/wissen/handelszeiten" >Feiertagskalender</a></li>
+<li class="li2 "><a class="a2 dropdown-item " href="/de/service/partner" >Partner</a></li>
+<li class="li2  active"><a class="a2 active dropdown-item " href="/de/trading/brokerize" >Broker verknüpfen</a></li>
+</ul>
+</li>
+<li class="li1 "><a class="a1 dropdown-item " href="https://www.ls-tc.de/de/" >LS-TC</a></li>
+<li class="li1 "><a class="a1 dropdown-item " href="/de/watchlist" ><span class="visible-xl d-none d-xl-block float-start">Watchlist&nbsp;</span><span class="glyphicon glyphicon-eye-open bi bi-eye-fill" title="Watchlist"></span></a></li>
+</ul>
+                    </div>
+
+                                            <div class="col-12 col-md-2 float-end collapse search-collapse" id="globalsearch">
+                            <input type="text" class="form-control typeahead"
+                                placeholder="Suche"
+                                name="srch-term" id="sitesearch"/>
+                        </div>
+                                    </div>
+            </nav>
+
+            
+        <div id="disclaimer" class="modal" style="background: rgba(0,0,0,0.9)" data-backdrop="static" data-bs-backdrop="static">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <img src="/media/2022/LSX_Website_Logo.png" class="pull-right" style="vertical-align:middle;width:240px" />
+<h4 class="model-title">Besondere Nutzungsbedingungen</h4>
+<div class="clearfix"></div>
+                    </div>
+                    <div class="modal-body">
+                        <div style="height:55%;overflow-y:auto;">
+<strong>Nutzungsbedingungen für https://ls-x.de/de/</strong><br>
+<br>
+<strong>1.	Allgemein</strong><br>
+Bitte lesen Sie diese Nutzungsbedingungen genau durch.<br>
+Die Homepage „Lang & Schwarz Exchange“ ist eine Website der BÖAG Börsen AG. Die BÖAG Börsen AG ist Trägerin der Hanseatischen Wertpapierbörse Hamburg (Börse Hamburg) und der Niedersächsischen Börse zu Hannover (Börse Hannover). Unter der Bezeichnung „Lang & Schwarz Exchange“ wird an der Börse Hamburg ein elektronisches Handelssystem betrieben.
+Mit dem Zugriff auf diese Website erklärt der Nutzer, dass er die folgenden Nutzungsbedingungen und rechtlichen Informationen im Zusammenhang mit der Site (und den darin enthaltenen Elementen) verstanden hat und anerkennt. Wenn Sie mit den nachfolgenden Bedingungen insgesamt oder nur im Einzelnen nicht einverstanden sind, ist der Zugriff auf diese Site zu unterlassen.<br><br>
+Die Nutzung der abrufbaren Inhalte erfolgt auf eigene Gefahr des Nutzers und ist nicht für Personen aus Ländern bestimmt, in denen die Inhalte gesetzlichen, behördlichen oder sonstigen Beschränkungen unterliegen. Nutzer aus solchen Ländern handeln in eigener Verantwortung und Pflicht sich über landesübliche Beschränkungen selbst zu informieren und diese im erforderlichen Umfang zu beachten.<br><br>
+Alle Teile dieser Site, einschließlich Design sind rechtlich geschützt, insbesondere durch Urheber-, Marken- und andere Schutzrechte. Sämtliche Elemente gehören ausschließlich und umfassend der BÖAG Börsen AG / den Börsen Hamburg und Hannover sowie der Lang & Schwarz Aktiengesellschaft bzw. Lang & Schwarz TradeCenter AG & Co. KG, sofern nicht etwas anderes erwähnt ist. Lang & Schwarz Exchange ist eine eingetragene Marke der Lang & Schwarz Aktiengesellschaft. Die BÖAG Börsen AG hat mit der Lang & Schwarz TradeCenter AG & Co. KG einen Vertrag über den technischen Betrieb des elektronischen Handelssystem Lang & Schwarz Exchange geschlossen. Die Lang & Schwarz TradeCenter AG & Co. KG ist somit – insbesondere im Hinblick auf den nachfolgenden Haftungsausschluss – ein Vertragspartner der BÖAG Börsen AG.<br><br>
+Die Elemente dieser Site sind nur für Browsingzwecke frei nutzbar, insbesondere dürfen die Inhalte wie die auf der Site enthaltenen Angaben und Mitteilungen allein zu Informationszwecken verwendet werden. Die Site inklusive Quelltext und Software dürfen nicht verändert, kopiert, wiederveröffentlicht, verbreitet oder gespeichert werden. Reproduktionen gleich welcher Art sowie die Weitergabe in Datenverarbeitungsanlagen, Netzwerken oder die Weitergabe der Daten an Dritte bedürfen der vorherigen schriftlichen Genehmigung durch die BÖAG Börsen AG. Das gilt auch für Teile der Informationen bzw. Meldungen. Das Material darf ausschließlich zu privaten, nichtkommerziellen Zwecken unter strikter Berücksichtigung des Urheberrechts benutzt werden. Zulässig sind die Herstellung einer einzelnen Kopie und Downloads auf einem einzelnen Personal Computer, sofern die Inhalte hierdurch nicht verändert werden und die Kopie im Sinne des vorherigen Satzes ausschließlich für eine persönliche, private und nichtkommerzielle Verwendung erfolgt und alle Hinweise auf Urheber- und andere Schutzrechte in der Kopie enthalten sind bzw. entsprechend eingefügt werden. Dabei obliegt es dem Nutzer der Webseite dafür zu Sorge zu tragen, dass die Informationen und Inhalte, die er auf seine Systeme herunterlädt, auf Viren und sonstige zerstörerische Eigenschaften hin überprüft werden.<br><br>
+Die Übernahme aller oder einzelner Informationen bzw. Teile von Informationen in sogenannte Email-Newsletter bedarf der vorherigen Genehmigung durch die BÖAG Börsen AG. Die Einrichtung eines Internet-Links (Hyperlink) von eigenen Internet-Seiten auf eine der zu diesen Diensten gehörenden Seiten ist ohne Genehmigung durch die BÖAG Börsen AG untersagt. Insbesondere ist es nicht zulässig, solche Internet-Links innerhalb einer Rahmenstruktur (Frames) zu erstellen. Eine missbräuchliche Verwendung in diesem Sinne, insbesondere auch gegen den Inhalt der nachfolgenden Ziff. 2 „Kursinformationen“, führt zu einem sofortigen Nutzungsausschluss.<br>
+<br>
+<strong>2.	Kursinformationen</strong><br>
+Kursinformationen (Preise und Quotes) auf dieser Website dürfen nur zur privaten, nichtkommerziellen Zwecken abgerufen werden. Diese Informationen dürfen nicht durch automatische Abfragen aufgerufen werden. Das Recht einer Vervielfältigung, Verbreitung, öffentlichen Wiedergabe, Abruf der Daten von einem Datenserver, die Verwertung sowie die sonstige Verwendung der Kursinformationen bedarf des Abschlusses eines separaten Kursvermarktungsvertrages mit der BÖAG Börsen AG.<br><br>
+<strong>3.	Haftung und Haftungsausschluss</strong><br>
+Die BÖAG Börsen AG / die Börsen Hamburg und Hannover weisen darauf hin, dass Börsenengagements grundsätzlich mit Risiken verbunden sind. Der Totalverlust des eingesetzten Kapitals kann nicht ausgeschlossen werden. Der Nutzer sollte sich daher vor jeder Anlageentscheidung grundsätzlich eingehend persönlich beraten lassen, insbesondere im Hinblick auf seine individuelle Vermögens- und Anlagesituation.<br>
+DIE AUF DIESER SITE ENTHALTENEN ODER DURCH SIE - AUCH ÜBER HYPER-TEXT ODER ANDERE VERBINDUNGEN (LINKS) ZU FREMDEN INTERNETBEREICHEN ODER WEBSITES - ZUR VERFÜGUNG GESTELLTEN ODER ZUGÄNGLICH GEMACHTEN DATEN, KENNZAHLEN, STUDIEN, KOMMENTARE, EINSCHÄTZUNGEN, MEINUNGEN, DARSTELLUNGEN UND SONSTIGEN INFORMATIONEN STELLEN <strong><u>KEINE ANLAGEBERATUNG</u></strong> DAR. SIE DIENEN AUSSCHLIESSLICH INFORMATIONSZWECKEN UND SIND KEINESFALLS ALS AUFFORDERUNG ZUM KAUF ODER VERKAUF EINES WERTPAPIERS ZU VERSTEHEN.<br>
+Trotz größter Sorgfalt bei der Erstellung der Internetseiten können Fehler auftreten. Verbindlich für die Handelsabläufe sind nur die in den Regelwerken festgelegten Normen. DURCH NUTZUNG DIESER SITE WIRD <strong><u>KEIN BERATUNGS- UND/ODER AUSKUNFTSVERTRAG</u></strong> MIT DER BÖAG BÖRSEN AG / DEN BÖRSEN HAMBURG UND HANNOVER GESCHLOSSEN. Die Aussagen in den auf dieser Site enthaltenen oder in oben genannter Weise zugänglich gemachten Informationen stellen keine Garantie dar. Die auf der Site zum Ausdruck gebrachten Meinungen und Einschätzungen können sich ohne vorherige Ankündigung ändern.
+<br>
+<br>
+<strong>Zu Inhalten: </strong><br>
+Die BÖAG Börsen AG / die Börsen Hamburg und Hannover und ihre Vertragspartner sind bemüht, die Richtigkeit, Vollständigkeit und Aktualität sämtlicher auf dieser Site enthaltenen Informationen ständig sicherzustellen, übernehmen hierfür aber keine Gewähr.<br>
+<br>
+<strong>Funktion:</strong> Die BÖAG Börsen AG, die Börsen Hamburg und Hannover sowie ihre Vertragspartner übernehmen keine Verantwortung und geben keine Gewähr dafür ab, dass die Funktionen auf der Site nicht unterbrochen werden oder fehlerlos sind, dass Fehler behoben werden oder dass die Site und / oder der jeweilige Server frei von Viren oder schädlichen Bestandteilen sind.
+<br>
+<br>
+<strong>Haftungsausschluss:</strong><br>
+Haftungsausschluss: Die BÖAG Börsen AG sowie die Börsen Hamburg und Hannover und ihre Vertragspartner, insbesondere die Lang & Schwarz Aktiengesellschaft sowie die Lang & Schwarz TradeCenter AG & Co. KG, übernehmen keine Haftung für leicht fahrlässige Pflichtverletzungen, soweit nicht sog. Kardinalpflichten, Leben, Gesundheit oder Körper betroffen oder Ansprüche nach dem Produkthaftungsgesetz berührt sind. Dies gilt entsprechend für Pflichtverletzungen der Erfüllungsgehilfen der BÖAG Börsen AG sowie der Börsen Hamburg und Hannover.<br>
+Sämtliche auf dieser Site enthaltenen Informationen beruhen auf Quellen, die die BÖAG Börsen AG und die Börsen Hamburg und Hannover für zuverlässig halten. Dennoch ist die Haftung für Vermögensschäden, die aus der Heranziehung der Informationen für die eigene Anlageentscheidung des Nutzers möglicherweise resultieren können, nach Maßgabe des vorherigen Absatzes ausgeschlossen. Im Übrigen übernehmen die BÖAG Börsen AG sowie die Börsen Hamburg und Hannover keine Haftung für die Richtigkeit, Vollständigkeit und Aktualität der auf dieser Site enthaltenen Informationen und Angaben.
+
+<br><br>
+<strong>4.	Links zu anderen Websites und externe Verweise</strong><br>
+<br>
+Sofern auf dieser Site Links zu fremden Internetseiten gelegt sind oder in sonstiger Weise auf diese verwiesen wird, unterliegen deren Inhalt und Aktualisierung nicht dem Einflussbereich der BÖAG Börsen AG sowie der Börsen Hamburg und Hannover. Für alle diese Links und Verweise gilt:<br>
+Die BÖAG Börsen AG sowie die Börsen Hamburg und Hannover haben keinen Einfluss auf aktuelle und zukünftige Gestaltung und Inhalt fremder Internetseiten. Die BÖAG Börsen AG sowie die Börsen Hamburg und Hannover distanzieren sich daher ausdrücklich von allen fremden Inhalten, auch wenn von Internetseiten der BÖAG Börsen AG / der Börsen Hamburg und Hannover auf diese externen Seiten im Internet ein Link gesetzt oder sonst auf diese verwiesen wurde, insbesondere sofern die Inhalte nach der Linksetzung bzw. Verweisung verändert wurden.
+Diese Erklärung gilt für alle auf der Site angezeigten Links oder sonstige Verweise auf fremde Internetseiten. Für Inhalte, die fehlerhaft, unvollständig, illegal oder sonst rechtswidrig sind, und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcher Inhalte entstehen, haftet der Anbieter der Seite und nicht derjenige, der die Seite gelinkt oder auf diese verwiesen hat. Haftung des „Autors“ für die nicht in seinem Einflussbereich liegende Inhalte würde nur in dem Fall greifen, wenn er über die Rechtswidrigkeit der Inhalte Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die Nutzung solcher Inhalte zu verhindern. Daher erklären BÖAG Börsen AG bzw. Börsen Hamburg und Hannover hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung / Verweisung keine illegalen oder sonst rechtswidrigen Inhalte auf diesen Seiten erkennbar waren.<br><br>
+
+
+
+<strong>5. Datenschutz</strong><br>
+<br /><br />
+Datenschutzerklärung für die Nutzung von Google Analytics:<br />
+<br />
+
+Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
+<br /><br />
+Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringenDie im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.
+<br /><br />
+Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie auf folgenden Link klicken: <a href="javascript:gaOptout();">Google Analytics Opt-Out</a><br /><br />
+Alle Informationen zum Datenschutz finden Sie <a href="/de/datenschutz">hier</a>.
+
+
+<br><br>
+<strong>6. Sicherheit </strong><br>
+<br>
+Die BÖAG Börsen AG setzt angemessene, technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten vor zufälliger oder vorsätzlicher Manipulation, Verlust, Zerstörung oder vor dem Zugriff unberechtigter Personen zu schützen.  Die Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung laufend verbessert.
+Auskunftsrecht und andere Rechte 
+
+Auf Anforderung teilt Ihnen die BÖAG Börsen AG schriftlich entsprechend dem geltenden Recht mit, ob und wenn ja, welche persönlichen Daten über Sie bei uns gespeichert sind. Sollten trotz unserer Bemühungen um Richtigkeit und Aktualität der Daten falsche Informationen gespeichert sein, werden wir diese auf Ihre Aufforderung hin berichtigen. In unserem öffentlichen Verfahrensverzeichnis haben wir die gesetzlich geforderten Angaben zusammengefasst.
+
+Bei Fragen zur Verarbeitung der personenbezogenen Daten sowie Einwänden dagegen, bei Auskunftsersuchen oder sonstigen Anmerkungen zum Thema Datenschutz bei der BÖAG Börsen AG schreiben Sie bitte an: info@boersenag.de. <br><br>
+<strong>6. Markenrechte</strong><br>
+Die folgenden Namen oder Bezeichnungen sind eingetragene Marken der Lang & Schwarz Aktiengesellschaft: <br>
+Lang & Schwarz Exchange, LS Exchange, LS-Exchange, LS-X und LSX.<br><br>
+
+DAX, MDAX, SDAX, TecDAX, Xetra und Eurex sind eingetragene Marken der Deutsche Börse AG. Dow Jones EURO STOXX 50 ist eine eingetragene Marke der STOXX Limited. Euronext ist eine eingetragene Marke der Euronext. Andere Namen von Produkten und Gesellschaften, die gegebenenfalls auf dieser Site erwähnt werden, können ebenfalls geschützt bzw. Markenzeichen anderer Unternehmen sein.<br><br>
+<strong>7.	Salvatorische Klausel</strong><br>
+Sollten einzelne Bestimmungen dieser Nutzungsbedingungen ganz oder nur teilweise der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen und somit unwirksam sein bzw. werden, wird hiervon die Wirksamkeit der übrigen Bestimmungen nicht berührt.<br><br>
+<strong>8.	Anwendbares Recht</strong><br>
+Sämtliche Rechtsbeziehungen zwischen der BÖAG Börsen AG / den Börsen Hamburg und Hannover und dem Nutzer unterliegen ausschließlich dem Recht der Bundesrepublik Deutschland.<br><br>
+
+
+</div>
+<br>
+<div style="height:35%;overflow-y:scroll">
+Allgemeine Fragen oder Hinweise richten Sie bitte an:
+<br>
+<br>
+<div style="float:left; margin-right:25px">
+<span style="font-size:12px">
+
+LS Exchange<br>
+Börse Hamburg<br>
+Kleine Johannisstraße 4<br>
+20457 Hamburg<br>
+Tel.: +49 (0)40 361302-0<br>
+Fax: +49 (0)40 361302-23<br>
+Mail: <a href="mailto:info@boersenag.de">info@boersenag.de</a><br>
+Internet: <a href="http://www.boersenag.de" target="_blank">www.boersenag.de</a>
+</span>
+</div>
+
+<div style="float:left;">
+<span style="font-size:12px; text-align:right">
+Technischer Dienstleister:<br>
+Lang & Schwarz TradeCenter AG & Co. KG<br>
+Breite Strasse 34<br>
+40213 Düsseldorf<br>
+Servicetelefon: +49 (0)211 13840-404<br>
+Fax: +49 (0)211 13840-90<br>
+Mail: <a href="mailto:public-relations(at)ls-d.de">public-relations(at)ls-d.de</a>
+
+</span>
+</div>
+<div style="clear:both"></div>
+
+
+
+</div>                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-outline-secondary reject">Ablehnen</button>
+                        <button type="button" class="btn btn-primary accept">Akzeptieren</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+<!-- Google Tag Manager Opt-Out -->
+<script>
+    var gaDisableString = 'ga-disable-UA-122462708-1';
+
+    function gaOptin() {
+        document.cookie = gaDisableString + '=true; expires=Thu, 31 Dec 1970 23:59:59 UTC; secure; path=/';
+        window[gaDisableString] = false;
+        alert('Das Google Analytics Tracking ist jetzt wieder aktiviert.');
+    }
+    function gaOptout() {
+        document.cookie = gaDisableString + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; secure; path=/';
+        window[gaDisableString] = true;
+        alert('Das Google Analytics Tracking ist jetzt deaktiviert.');
+    }
+
+    if (document.cookie.indexOf(gaDisableString + '=true') > -1) {
+        window[gaDisableString] = true;
+    }
+</script>
+<!-- End Google Tag Manager Opt-Out -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122462708-1"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+ 
+
+  gtag('config', 'UA-122462708-1', {'anonymize_ip': true});
+
+</script>
+<div class="mpe_bootstrapgrid  container ">
+<div class="row">
+
+<div class="mpe_bootstrapgrid  col-md-12 ">
+
+</div>
+<div class="mpe_bootstrapgrid minicharts col-md-12 ">
+
+        <div id="chart1push" class="minichart">
+            <span class="displayName visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><a href="/de/index/lus-indikation">L&S Indikation</a></span>
+            <span class="mid quote visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70595@2" field="midWithCurrencySymbol" decimals="2">25.021,00&nbsp;Pkt</span></span>
+            <span class="midTime quoteTime visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70595@2" field="midTime" decimals="2">08:11:35</span></span>
+            <span class="midPerf1dRel quotePerf1dRel visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span class="quotePerf1d"><span source="lightstreamer" table="quotes" item="70595@2" field="midPerf1dWithCurrencySymbol" decimals="2"><span class="text-danger">-94,00&nbsp;Pkt</span></span></span> <span source="lightstreamer" table="quotes" item="70595@2" field="midPerf1dRelWithPercentSign" decimals="2"><span class="text-danger">-0,37&nbsp;%</span></span></span>
+            <div id="chart1" class="chartContainer"></div>
+        </div>
+
+        <div id="chart3push" class="minichart">
+            <span class="displayName visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><a href="/de/rohstoff/goldpreis">GOLD</a></span>
+            <span class="mid quote visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70586@2" field="midWithCurrencySymbol" decimals="4">4.120,8700&nbsp;$</span></span>
+            <span class="midTime quoteTime visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70586@2" field="midTime" decimals="4">08:11:37</span></span>
+            <span class="midPerf1dRel quotePerf1dRel visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span class="quotePerf1d"><span source="lightstreamer" table="quotes" item="70586@2" field="midPerf1dWithCurrencySymbol" decimals="4"><span class="text-success">+9,8200&nbsp;$</span></span></span> <span source="lightstreamer" table="quotes" item="70586@2" field="midPerf1dRelWithPercentSign" decimals="4"><span class="text-success">+0,24&nbsp;%</span></span></span>
+            <div id="chart3" class="chartContainer"></div>
+        </div>
+
+        <div id="chart5push" class="minichart">
+            <span class="displayName visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><a href="/de/rohstoff/silberpreis">SILBER</a></span>
+            <span class="mid quote visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70580@2" field="midWithCurrencySymbol" decimals="4">59,3520&nbsp;$</span></span>
+            <span class="midTime quoteTime visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70580@2" field="midTime" decimals="4">08:11:30</span></span>
+            <span class="midPerf1dRel quotePerf1dRel visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span class="quotePerf1d"><span source="lightstreamer" table="quotes" item="70580@2" field="midPerf1dWithCurrencySymbol" decimals="4"><span class="text-danger">-0,8430&nbsp;$</span></span></span> <span source="lightstreamer" table="quotes" item="70580@2" field="midPerf1dRelWithPercentSign" decimals="4"><span class="text-danger">-1,40&nbsp;%</span></span></span>
+            <div id="chart5" class="chartContainer"></div>
+        </div>
+
+        <div id="chart7push" class="minichart">
+            <span class="displayName visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><a href="/de/rohstoff/oelpreis">BRENT OIL</a></span>
+            <span class="mid quote visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70577@2" field="midWithCurrencySymbol" decimals="4">102,9050&nbsp;$</span></span>
+            <span class="midTime quoteTime visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="70577@2" field="midTime" decimals="4">08:11:24</span></span>
+            <span class="midPerf1dRel quotePerf1dRel visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span class="quotePerf1d"><span source="lightstreamer" table="quotes" item="70577@2" field="midPerf1dWithCurrencySymbol" decimals="4"><span class="text-success">+1,9500&nbsp;$</span></span></span> <span source="lightstreamer" table="quotes" item="70577@2" field="midPerf1dRelWithPercentSign" decimals="4"><span class="text-success">+1,93&nbsp;%</span></span></span>
+            <div id="chart7" class="chartContainer"></div>
+        </div>
+
+        <div id="chart9push" class="minichart">
+            <span class="displayName visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><a href="/de/waehrung/bitcoin-btc">Bitcoin (BTC)</a></span>
+            <span class="mid quote visible-sm-block visible-xs-inline visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="3477757@2" field="midWithCurrencySymbol" decimals="4">82.850,0000&nbsp;$</span></span>
+            <span class="midTime quoteTime visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span source="lightstreamer" table="quotes" item="3477757@2" field="midTime" decimals="4">08:11:33</span></span>
+            <span class="midPerf1dRel quotePerf1dRel visible-sm-block hidden-xs visible-md-inline visible-lg-inline"><span class="quotePerf1d"><span source="lightstreamer" table="quotes" item="3477757@2" field="midPerf1dWithCurrencySymbol" decimals="4"><span class="text-danger">-585,7500&nbsp;$</span></span></span> <span source="lightstreamer" table="quotes" item="3477757@2" field="midPerf1dRelWithPercentSign" decimals="4"><span class="text-danger">-0,70&nbsp;%</span></span></span>
+            <div id="chart9" class="chartContainer"></div>
+        </div>
+</div>
+<div style="height:30px;clear:both"></div>
+</div>
+</div>
+<div class="clear"></div><div id="page_content" class="page_content grid fs" ><div class="mpe_container">
+<div class="mpe_bootstrapgrid  container ">
+<div class="row">
+
+<div class="mpe_bootstrapgrid  container ">
+<div class="row">
+<div class="mpe_bootstrapgrid  col-md-12 ">
+<div class="clearfix">
+<ul class="ul1 nav nav-pills navbar-right">
+<li class="li1"><a class="a1" data-bs-toggle="modal" data-bs-target="#faq">FAQ</a></li>
+</ul>
+</div>
+<div id="content" class="brokerize-viewport"></div>
+
+<div id="brokerize-modal-portal"></div>
+<div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="faqLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="faq">FAQ</h5>
+      </div>
+      <div class="modal-body">
+
+<div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse1">Was ist brokerize?</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body"><p>Dank brokerize ist dein Depot sicher mit der Webseite der LSX verknüpft. Du behältst den Überblick über deine Anlagen und kannst Wertpapiere ohne Umwege direkt handeln – für mehr Effizienz und Komfort im täglichen Investment.</p></div>
+          </div>
+        </div>
+        
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse2">Wie funktioniert brokerize?</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body"><p>Wähle deinen Broker aus, authentifiziere dich über eine sichere Verbindung und verknüpfe dein Depot mit der Plattform der LSX. Danach stehen dir dein Depotbestand und der direkte Handel ohne Seitenwechsel oder erneute Anmeldung zur Verfügung – für einen reibungslosen und zeitsparenden Handelsablauf.</p></div>
+          </div>
+        </div>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse3">Warum brokerize über die LSX nutzen? 
+</a>
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body" style="max-height:260px;overflow:auto;">
+
+<p>Viele Broker ermöglichen heute eine schnelle Anmeldung per PIN, Face ID oder Fingerabdruck. brokerize geht darüber hinaus und schafft echten Mehrwert – in Verbindung mit der LSX profitierst du von einem besonders komfortablen und effizienten Handelserlebnis:</p>
+<p>Zentrale Depotverwaltung: Verbinde mehrere Depots bei unterschiedlichen Brokern auf einer Plattform und handele mit nur einem Login direkt über die LSX.</p>
+<p>Volle Transparenz: Behalte jederzeit den Überblick über alle Depotbestände, Orders und Transaktionen – ohne zwischen verschiedenen Plattformen wechseln zu müssen.</p>
+<p>Einheitliches Handelserlebnis: Nutze eine intuitive, einheitliche Oberfläche für den Handel an der LSX– unabhängig davon, bei welchem Broker du dein Depot führst.</p>
+<p>Höchste Sicherheit: Deine Zugangsdaten und Depotinformationen bleiben geschützt; weder die LSX noch brokerize haben Zugriff auf dein Depot oder deine Login-Daten.</p>
+<p>Keine Zusatzkosten: Du handelst zu den Konditionen deines Brokers – ohne zusätzliche Gebühren oder versteckte Aufschläge durch die Plattform.</p>
+<p>Flexibel und mobil: Greife von Desktop, Smartphone oder Tablet auf die über die Webseite der LSX zu und handle jederzeit sicher und bequem – auch unterwegs.</p>
+<p>Diese Vorteile schaffen ein effizientes, transparentes und sicheres Handelsumfeld und unterstützen dich dabei, deine Investments über die LSX einfach, flexibel und professionell zu managen.</p>
+
+            </div>
+          </div>
+        </div> 
+        
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse4">Datenschutz & Sicherheit
+</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+            
+            <p>Deine Daten sind bestmöglich geschützt: Die gesamte Kommunikation zwischen deinem Endgerät und deinem Broker erfolgt durchgehend verschlüsselt. Weder die LSX noch brokerize speichern deine Zugangsdaten oder haben Zugriff auf deinen Depotbestand oder deine Handelsaktivitäten.</p>
+<p>Als BaFin-registrierter Vermittler gewährleistet brokerize eine rechtskonforme und sichere technische Anbindung. Die Orderausführung selbst erfolgt ausschließlich über deinen Broker und liegt vollständig in dessen Verantwortung.</p>
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse5">Was ist die Handeln-Funktion?
+</a>
+            </h4>
+          </div>
+          <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body"><p>Die Funktion Handels ermöglicht dir, Wertpapiere direkt über die Webseite der LSX zu handeln, ohne dass man sich erneut bei seinem Broker einloggen muss.</p></div>
+          </div>
+         </div>
+         
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse6">Wie kann ich starten?</a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body"><p>Klicke einfach auf deinen Partner-Broker, verbinde dein Depot sicher mit der Plattform und handel ohne Umwege.</p></div>
+          </div>
+         </div>
+         
+ <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse7">Welche Kosten entstehen?</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <div class="panel-body"><p>Du handelst zu den originalen Konditionen deines Brokers. Weitere Gebühren oder Kosten fallen nicht an.</p>
+</div>
+          </div>
+         </div>   
+
+ <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse8">Wie sicher sind meine Daten?</a>
+            </h4>
+          </div>
+          <div id="collapse8" class="panel-collapse collapse">
+            <div class="panel-body"><p>Zugangsdaten werden nicht gespeichert und sind nur für dich sichtbar. Alle Daten werden alle verschlüsselt übertragen.</p>
+</div>
+          </div>
+         </div>
+
+<div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse9">Wer haftet für die Orderausführung?</a>
+            </h4>
+          </div>
+          <div id="collapse9" class="panel-collapse collapse">
+            <div class="panel-body"><p>Die Haftung für die Orderausführung übernimmt dein Broker. Die LSX und brokerzie stellen lediglich die technische Schnittstelle zur Verfügung.</p>
+</div>
+          </div>
+         </div>
+        
+   
+</div>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="mpe_bootstrapgrid  container ">
+<div class="row">
+<div class="mpe_bootstrapgrid  col-md-12 ">
+<div>
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="mpe_bootstrapgrid sitefooter ">
+<div class="mpe_bootstrapgrid sitefooter container ">
+<div class="row">
+<div class="mpe_bootstrapgrid m50 hidden-xs col-md-8 ">
+<div class="sitefooter" style="/* height:100%; */">
+<div>
+</br>
+</div>
+<h6>Lang & Schwarz Exchange
+</h6>
+<hr style="border:none; border-top: 1px dotted #fff">
+
+<div style="float:left; width:23%;margin-left: 12px">
+<h5 style="padding-top:0px !important">Aktien</h5>
+
+<ul style="padding-left:0%">
+	<li><span class="li-footer"><a href="/de/aktien">Überblick</a></span></li>
+  <li><a href="/de/aktien/deutschland" target="_self">Deutschland</a></li>
+    
+      <li><a href="/de/aktien/europa" target="_self">Europa</a></li>
+      <li><a href="/de/aktien/amerika" target="_self">Amerika</a></li>
+      <li><a href="/de/aktien/asien" target="_self">Asien</a></li>
+      <li><a href="/de/aktien/neu" target="_self">Neu bei LS</a></li>
+      <li><a href="/de/aktien-filter" target="_self">Aktien-Filter</a></li>
+    
+  </li>
+    
+
+</ul>
+</div>
+
+<div style="float:left;  width:23%">
+
+
+<h5 style="padding-top:0px !important">ETFs</h5>
+
+<ul style="padding-left:0%">
+	<li><span class="li-footer"><a href="/de/etfs" target="_self">ETFs</a></span>
+      
+     
+  </li>
+</ul>
+
+<h5 style="padding-top:0px !important">Fonds</h5>
+
+<ul style="padding-left:0%">
+	<li><span class="li-footer"><a href="/de/fonds" target="_self">Fonds</a></span>
+      
+     
+  </li>
+</ul>
+
+<h5 style="padding-top:0px !important">Anleihen</h5>
+
+<ul style="padding-left:0%">
+	<li><span class="li-footer"><a href="/de/anleihen" target="_self">Anleihen</a></span>
+      
+     
+  </li>
+</ul>
+
+</div>
+
+
+<div style="float:left;  width:23%; align-content:center">
+<h5 style="padding-top:0px !important">Wissen & Hilfe</h5>
+
+
+<ul style="padding-left:0%">
+	<li><span class="li-footer"><a href="/wissen" target="_self">Überblick</a></span></li>
+   
+	<li><a href="/wissen" target="_self">Feiertagskalender</a></li>
+	
+<li><a href="/wissen/handelszeiten" target="_self">Handelszeiten</a></li>
+
+</ul>
+
+
+</div>
+
+
+<div style="float:right;  width:23%; margin-right:30px">
+
+<h5 style="padding-top:0px !important">Service</h5>
+<ul style="padding-left:0%">
+
+ <li><span class="li-footer"><a href="/de/service" target="_self">Überblick</a></span></li>
+ <li><a href="/de/handelsuniversum" target="_self">Handelsuniversum</a></li>
+ <li><a href="/de/kursblatt" target="_self">Kursblatt</a></li>
+  <li><a href="/de/service" target="_self">Kontakt</a></li>
+
+ 
+</ul>
+</div>
+
+
+
+
+
+  <div style="clear:both"></div>
+</div>
+</div>
+<div class="mpe_bootstrapgrid  col-md-4 ">
+
+    <div>
+
+<div class="visible-xs">
+<br>
+        <a href="/impressum">Impressum</a>
+|
+        <a href="/nutzungsbedingungen">Nutzungsbedingungen</a>
+|
+        <a href="/datenschutz">Datenschutz</a>
+<br>
+</div>
+
+<div>
+<br>
+</div>
+
+    
+    
+    <h6>Kontakt</h6>
+<hr style="border:none; border-top: 1px dotted #fff">
+
+    
+<div>
+   
+    
+    
+    <div style="background-color: #0a0030;color: white;padding-bottom: 50px;">
+    
+    
+  <h3 style="color: white;">Lang &amp; Schwarz Exchange</h3>
+
+Börse Hamburg<br>
+Kleine Johannisstraße 4<br>
+20457 Hamburg<br>
+Tel.: +49 (0)40 361302-0<br>
+Fax: +49 (0)40 361302-23<br>
+Mail: <a href="mailto:info@boersenag.de">info@boersenag.de</a><br>  
+Internet: <a href="http://www.boersenag.de">www.boersenag.de</a>    
+    <p></p>
+    
+    
+    
+    </div>
+    
+    
+     <p></p>
+    
+    
+    
+    </div>
+    
+    
+    </div>
+    
+
+</div>
+</div>
+</div>
+</div>
+</div></div><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="/assets/_shared/js/html5shiv.js"></script>
+<script src="/assets/_shared/js/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">var _moo_ASSET_HOST='/assets/';var _moo_ASSET_INTERFIX_JS='';var _moo_ASSET_INTERFIX_CSS='';</script>
+<script type="text/javascript"><!--
+if (!Array.prototype.indexOf) {
+  Array.prototype.indexOf = function(searchElement, fromIndex) {
+
+    var k;
+
+    // 1. Let O be the result of calling ToObject passing
+    //    the this value as the argument.
+    if (this == null) {
+      throw new TypeError('"this" is null or not defined');
+    }
+
+    var O = Object(this);
+
+    // 2. Let lenValue be the result of calling the Get
+    //    internal method of O with the argument "length".
+    // 3. Let len be ToUint32(lenValue).
+    var len = O.length >>> 0;
+
+    // 4. If len is 0, return -1.
+    if (len === 0) {
+      return -1;
+    }
+
+    // 5. If argument fromIndex was passed let n be
+    //    ToInteger(fromIndex); else let n be 0.
+    var n = +fromIndex || 0;
+
+    if (Math.abs(n) === Infinity) {
+      n = 0;
+    }
+
+    // 6. If n >= len, return -1.
+    if (n >= len) {
+      return -1;
+    }
+
+    // 7. If n >= 0, then Let k be n.
+    // 8. Else, n<0, Let k be len - abs(n).
+    //    If k is less than 0, then let k be 0.
+    k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+
+    // 9. Repeat, while k < len
+    while (k < len) {
+      // a. Let Pk be ToString(k).
+      //   This is implicit for LHS operands of the in operator
+      // b. Let kPresent be the result of calling the
+      //    HasProperty internal method of O with argument Pk.
+      //   This step can be combined with c
+      // c. If kPresent is true, then
+      //    i.  Let elementK be the result of calling the Get
+      //        internal method of O with the argument ToString(k).
+      //   ii.  Let same be the result of applying the
+      //        Strict Equality Comparison Algorithm to
+      //        searchElement and elementK.
+      //  iii.  If same is true, return k.
+      if (k in O && O[k] === searchElement) {
+        return k;
+      }
+      k++;
+    }
+    return -1;
+  };
+}var JsTranslate = {"2":[]};function jsTranslate(text) {
+	if ( JsTranslate['2'][text] !== undefined ) {
+		return JsTranslate['2'][text];
+	} else {
+		return text;
+	}
+}
+var current_site = 'LS-Exchange';var current_site_id = '9';var current_locale = '2';var cookiedomain = '';var current_prefix = 'de/';var localeconv = {"decimal_point":",","thousands_sep":".","int_curr_symbol":"EUR ","currency_symbol":"\u20ac","mon_decimal_point":",","mon_thousands_sep":".","positive_sign":"","negative_sign":"-","int_frac_digits":2,"frac_digits":2,"p_cs_precedes":0,"p_sep_by_space":1,"n_cs_precedes":0,"n_sep_by_space":1,"p_sign_posn":1,"n_sign_posn":1,"grouping":[3,3],"mon_grouping":[3,3]};var months = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];var shortMonths = ["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"];var weekdays = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];//--></script><script type="text/javascript" src="/assets/_ext/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/assets/_ext/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="/assets/_ext/bootstrap5.3.8/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/_ext/bootstrap5.3.8/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/_shared/js/jquery.formatter.js"></script>
+<script type="text/javascript" src="/assets/_shared/js/lightstreamer/lightstreamer.js"></script>
+<script type="text/javascript" src="//www.ls-x.de/assets/_shared/js/lightstreamer/push.js?20201013b"></script>
+<script type="text/javascript" src="/assets/_shared/js/brokerize/bundle.umd.js"></script>
+<script type="text/javascript" src="/assets/_shared/js/brokerize/dashboard2.js"></script>
+<script type="text/javascript" src="/assets/_ext/js/typeahead.js"></script>
+<script type="text/javascript" src="/assets/_ext/js/handlebars-compiler.4.7.8.min.js"></script>
+<script type="text/javascript" src="/assets/_ext/js/highstock-12.4.0.min.js"></script>
+
+
+    <script type="text/javascript"><!--
+        
+                var timeRanges = {
+                    "day" : "Intraday",
+                    "week" : "1 Woche",
+                    "month" : "1 Monat",
+                    "month6" : "6 Monate",
+                    "year" : "1 Jahr",
+                    "year3" : "3 Jahre",
+                    "year5" : "$js_chart 5 year",
+                    "all" : "Alles"
+                };
+            
+Highcharts.setOptions({
+	lang: {
+		rangeSelectorZoom: '',
+		decimalPoint: localeconv.decimal_point,
+		thousandsSep: localeconv.thousands_sep,
+		weekdays: weekdays,
+		months: months,
+		shortMonths: shortMonths
+	}
+});
+
+function showInstrumentInChart(container, instrumentId, marketId, quotetype, series, type) {
+	var $chart = container.highcharts();
+	if ($chart === "undefined") {
+		return false;
+	}
+
+	$.getJSON("/_rpc/json/instrument/chart/dataForInstrument", {
+		container: container.attr("id"),
+		instrumentId: instrumentId,
+		marketId: marketId,
+		quotetype: quotetype,
+		series: series,
+		type: type,
+		localeId: current_locale
+	}, function (response) {
+		var $chart = $("#" + response.container).highcharts();
+
+		var $cs;
+		var minTime = Number.MAX_VALUE;
+		var maxTime = null;
+		for ($s in response.series) {
+			$cs = $chart.addSeries(response.series[$s]);
+			var serie = $chart.get(response.series[$s].id);
+			var e  = serie.xAxis.getExtremes();
+			maxTime = Math.max(e.dataMax, maxTime);
+			if(typeof response.series[$s].data[0] != 'undefined') {
+				minTime = Math.min(response.series[$s].data[0][0], minTime);
+			}
+			if (response.series[$s].timeline === "history") {
+				$cs.hide();
+			}
+		}
+
+		$chart.options.info = response.info;
+		$chart.options.info.minTime = minTime;
+		$chart.options.info.maxTime = maxTime;
+		var maxPlotlineValue = 0;
+		if(typeof $chart.options.info.plotlines !== 'undefined') {
+			for(i=0; i<$chart.options.info.plotlines.length; i++) {
+				maxPlotlineValue = Math.max($chart.options.info.plotlines[i].value, maxPlotlineValue);
+				addPlotLine(container, $chart.options.info.plotlines[i]);
+			}
+		}
+
+		$chart.hideLoading();
+
+		/**/
+		$chart.subscription = new Subscription("MERGE", [instrumentId + "@" + marketId], ["mid", "midTime"]);
+		$chart.subscription.setDataAdapter("QUOTE");
+		$chart.subscription.setRequestedSnapshot("no");
+                if(typeof $.push !== 'undefined') {
+                    $.push.client.subscribe($chart.subscription);
+                }
+		/**/
+
+		var $nav = $chart.get('navigator');
+		if ($nav) {
+			$nav.setData(response.data.history, false);
+		}
+
+		if($chart.options.info.chartType == 'mini') {
+			var yExtremes = $chart.yAxis[0].getExtremes();
+			var dataMax = Math.max(maxPlotlineValue, yExtremes.dataMax);
+			var relDistance = (yExtremes.max - dataMax) / (yExtremes.max - yExtremes.min) * 100;
+
+			if (relDistance > 10) {
+				$chart.yAxis[0].update({
+					tickInterval: $chart.yAxis[0].tickInterval / 10
+				});
+			}
+		}
+
+		$chart.xAxis[0].setExtremes();
+		if($chart.rangeSelector) {
+			setExtremes($chart.rangeSelector.buttonOptions[0], $chart.xAxis[0]);
+		}
+		disableTimeRangeButtons(container, true);
+
+		if (typeof $chart.options.info.flags != 'undefined') {
+			setHighLowMarker(container, instrumentId + quotetype + 'i');
+		}
+
+	});
+
+	return $chart;
+}
+
+
+var $chartsettings = {};
+$chartsettings['default'] = {
+	chart: {
+		plotBackgroundImage: "/media/2022/chartlsxbg.png",
+		style: {
+			fontFamily: "Sharp Grotesk M15",
+			fontSize: "16px"
+		},
+		animation: false,
+		zoomType: "",
+		pinchType: "",
+		spacingBottom: 0,
+		spacingTop: 0,
+		spacingLeft: 0,
+		spacingRight: 0,
+		events: {
+			redraw: function () {
+				var seriesI = this.series[0];
+				var seriesH = this.series[1];
+				if (typeof this.subscription == "undefined") return;
+				if (this.pushEnabled === true) return;
+				this.pushEnabled = true;
+
+				this.subscription.addListener({
+					onItemUpdate: function (obj) {
+						var time = Date.parse(obj.getValue("midTime") + "+00:00");
+						var value = parseFloat(obj.getValue("mid"));
+
+						seriesI.addPoint([time, value], true, false);
+						seriesH.addPoint([time, value], true, false);
+
+						var series = (seriesI.visible === false ? seriesH : seriesI);
+						series.xAxis.setExtremes(series.xAxis.getExtremes().min);
+						series.yAxis.setExtremes(Math.min(series.yAxis.min, value), Math.max(series.yAxis.max, value), true, false);
+					}
+				});
+			},
+			load: function() {
+			}
+		}
+	},
+	credits: {
+		enabled: false
+	},
+	rangeSelector: {
+		buttons: [{
+			type: 'day',
+			count: 1,
+			text: timeRanges.day,
+			width: 24 * 60 * 60 * 1000
+		}, {
+			type: 'month',
+			count: 1,
+			text: timeRanges.month,
+			width: 31 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'month',
+			count: 6,
+			text: "6 Monate",
+			width: 6 * 31 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'year',
+			count: 1,
+			text: timeRanges.year,
+			width: 365 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'year',
+			count: 3,
+			text: timeRanges.year3,
+			width: 3 * 365 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'all',
+			text: timeRanges.all,
+			width: Number.MAX_VALUE
+		}],
+		buttonTheme: {
+			fill: '#fff',
+			stroke: 'none',
+			width: 'auto',
+			padding: 5,
+			states: {
+				hover: {
+					fill: '#fff'
+				},
+				select: {
+					fill: '#fff',
+					style: {
+						color: '#d4007c'
+					}
+				}
+			}
+		},
+		inputEnabled: false,
+		allButtonsEnabled: true,
+		selected: 0
+	},
+	title: {
+		text: ""
+	},
+	scrollbar: {
+		enabled: false
+	},
+	navigator: {
+		enabled: false,
+		series: {
+			id: 'navigator'
+		}
+	},
+	legend: {
+		enabled: false
+	},
+	plotOptions: {
+		series: {animation: false, compare: null, lineWidth: 1, states: {hover: {enabled: false}}}
+	},
+	xAxis: {
+		ordinal: false,
+		minPadding:0.02,
+		maxPadding:0.02,
+		startOnTick: false,
+		tickmarkPlacement: 'on',
+		events: {
+			setExtremes: function (e) {
+				setExtremes(e, this);
+			}
+		},
+		labels: {
+			style: {
+				fontSize: "14px"
+			}
+		}
+	},
+	yAxis: {
+		labels: {
+			style: {
+				fontSize: "14px"
+			}
+		}
+	},
+	tooltip: {
+		style: {
+			fontSize: "14px"
+		},
+		formatter: function() {
+			return gettooltipFormatter(this);
+		}
+	}
+};
+
+$chartsettings['rangeButtons'] = {
+	chart: {
+		animation: false,
+		zoomType: "",
+		pinchType: "",
+		plotBackgroundImage: "/media/2022/chartlsxbg2.png",
+		plotBackgroundColor: "#eaeaea",
+		style: {
+			fontFamily: "Sharp Grotesk M15",
+			fontSize: "16px"
+		},
+		events: {
+			redraw: function () {
+				var seriesI = this.series[0];
+				var seriesH = this.series[1];
+				if (typeof this.subscription == "undefined") return;
+				if (this.pushEnabled === true) return;
+				this.pushEnabled = true;
+
+				this.subscription.addListener({
+					onItemUpdate: function (obj) {
+						var time = Date.parse(obj.getValue("midTime") + "+00:00");
+						var value = parseFloat(obj.getValue("mid"));
+
+						seriesI.addPoint([time, value], true, false);
+						seriesH.addPoint([time, value], true, false);
+
+						var series = (seriesI.visible === false ? seriesH : seriesI);
+						series.xAxis.setExtremes(series.xAxis.getExtremes().min);
+						series.yAxis.setExtremes(Math.min(series.yAxis.min, value), Math.max(series.yAxis.max, value), true, false);
+					}
+				});
+			}
+		}
+	},
+	credits: {
+		enabled: false
+	},
+	rangeSelector: {
+		buttons: [{
+			type: 'day',
+			count: 1,
+			text: timeRanges.day,
+			width: 24 * 60 * 60 * 1000
+		}, {
+			type: 'month',
+			count: 1,
+			text: timeRanges.month,
+			width: 31 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'year',
+			count: 1,
+			text: timeRanges.year,
+			width: 365 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'year',
+			count: 3,
+			text: timeRanges.year3,
+			width: 3 * 365 * 24 * 60 * 60 * 1000
+		}, {
+			type: 'all',
+			text: timeRanges.all,
+			width: Number.MAX_VALUE
+		}],
+		buttonTheme: {
+			fill: '#fff',
+			stroke: 'none',
+			width: 'auto',
+			padding: 5,
+			states: {
+				hover: {
+					fill: '#fff'
+				},
+				select: {
+					fill: '#fff',
+					style: {
+						color: '#d4007c'
+					}
+				}
+			}
+		},
+		inputEnabled: false,
+		allButtonsEnabled: true,
+		selected: 0
+	},
+	title: {
+		text: ""
+	},
+	scrollbar: {
+		enabled: false
+	},
+	navigator: {
+		enabled: false,
+		series: {
+			id: 'navigator'
+		}
+	},
+	legend: {
+		enabled: false
+	},
+	plotOptions: {
+		series: {animation: false, compare: null, lineWidth: 1, states: {hover: {enabled: false}}}
+	},
+	xAxis: {
+		ordinal: false,
+		events: {
+			setExtremes: function (e) {
+				setExtremes(e, this);
+			}
+		},
+		labels: {
+			style: {
+				fontSize: "14px"
+			}
+		}
+	},
+	yAxis: {
+		labels: {
+			style: {
+				fontSize: "14px"
+			}
+		}
+	},
+	tooltip: {
+		formatter: function() {
+			return gettooltipFormatter(this);
+		}
+	}
+};
+
+$chartsettings['mini'] = {
+	chart: {
+		plotBackgroundImage: "/media/2022/chartlsxbg.png",
+		style: {
+			fontFamily: "Sharp Grotesk M15",
+			fontSize: "16px"
+		},
+		type: "line",
+		animation: false,
+		zoomType: "",
+		pinchType: "",
+		spacingBottom: 0,
+		spacingTop: 0,
+		spacingLeft: 0,
+		spacingRight: 0,
+		marginTop: 0,
+		events: {
+			redraw: function () {
+				var series = this.series[0];
+				if (typeof this.subscription == "undefined") return;
+				if (this.pushEnabled === true) return;
+				this.pushEnabled = true;
+				var container = $('#'+$(this.container).parent().attr('id'));
+				var currentChart = container.highcharts();
+
+				this.subscription.addListener({
+					onItemUpdate: function (obj) {
+						var time = Date.parse(obj.getValue("midTime") + "+00:00");
+						var value = parseFloat(obj.getValue("mid"));
+						series.addPoint([time, value], true, false);
+						// currentChart.yAxis[0].setExtremes(Math.min(currentChart.yAxis[0].min, value), Math.max(currentChart.yAxis[0].max, value), true, false);
+					}
+				});
+
+			}
+		}
+	},
+	credits: {
+		enabled: false
+	},
+	rangeSelector: {
+		enabled: false
+	},
+	title: {
+		text: ""
+	},
+	scrollbar: {
+		enabled: false
+	},
+	navigator: {
+		enabled: false
+	},
+	legend: {
+		enabled: false
+	},
+	plotOptions: {
+		area: {
+			threshold: null,
+			fillOpacity: 0.1
+		},
+		series: {
+			animation: false,
+			compare: null,
+			lineWidth: 1,
+			states: {
+				hover: {
+					enabled: false
+				}
+			}
+		}
+	},
+	xAxis: {
+		ordinal: false,
+		tickWidth: 0,
+		labels: {
+			enabled: false
+		}
+	},
+	yAxis: {
+		labels: {
+			enabled: false
+		},
+		gridLineWidth: 0,
+		minPadding: 0,
+		maxPadding: 0
+	},
+	tooltip: {
+		outside: true,
+		formatter: function() {
+			return gettooltipFormatter(this);
+		}
+	}
+};
+
+function gettooltipFormatter(data) {
+	var str = strMaxMin = '';
+	if(data.points) {
+		jQuery.each(data.points, function(i, point) {
+			/*
+			if(typeof point !== 'undefined' && typeof point.series.dataMax !== 'undefined') {
+				strMaxMin += '<br/><span style="color:' + this.series.color + ';">' + point.series.chart.options.info.textMaxValue + ' </span><span><b>' + Highcharts.numberFormat(point.series.dataMax, point.series.dataMax < 1 ? 4 : 3) + '<b></span>';
+			}
+			if(typeof point !== 'undefined' && typeof point.series.dataMin !== 'undefined') {
+				strMaxMin += '<br/><span style="color:' + this.series.color + ';">' + point.series.chart.options.info.textMinValue + ' </span><span><b>' + Highcharts.numberFormat(point.series.dataMin, point.series.dataMin < 1 ? 4 : 3) + '<b></span>';
+			}
+			*/
+			if(this.series.options.timeline === 'intraday') {
+				str = '<span style="font-size: 14px">'+Highcharts.dateFormat('%A, %e. %B, %H:%M', this.x)+'</span>';
+			} else {
+				str = '<span style="font-size: 14px">'+Highcharts.dateFormat('%A, %e. %B, %Y', this.x)+'</span>';
+			}
+			str += '<br/><span style="color:' + this.series.color + ';">' + point.series.name + ': </span><span><b>' + Highcharts.numberFormat(this.y, this.y < 1 ? 4 : 3) + '<b></span>';
+			str += strMaxMin;
+		});
+	} else {
+		/*
+		if(typeof point !== 'undefined' && typeof point.series.dataMax !== 'undefined') {
+			strMaxMin += '<br/><span style="color:' + data.series.color + ';">' + point.series.chart.options.info.textMaxValue + ' </span><span><b>' + Highcharts.numberFormat(point.series.dataMax, point.series.dataMax < 1 ? 4 : 3) + '<b></span>';
+		}
+		if(typeof point !== 'undefined' && typeof point.series.dataMin !== 'undefined') {
+			strMaxMin += '<br/><span style="color:' + data.series.color + ';">' + point.series.chart.options.info.textMinValue + ' </span><span><b>' + Highcharts.numberFormat(point.series.dataMin, point.series.dataMin < 1 ? 4 : 3) + '<b></span>';
+		}
+		*/
+		if(data.series.options.timeline === 'intraday') {
+			str = '<span style="font-size: 10px">'+Highcharts.dateFormat('%A, %e. %B, %H:%M', data.x)+'</span>';
+		} else {
+			str = '<span style="font-size: 10px">'+Highcharts.dateFormat('%A, %e. %B, %Y', data.x)+'</span>';
+		}
+		str += '<br/><span style="color:' + data.series.color + ';">' + data.point.text + ' </span><span><b>' + Highcharts.numberFormat(data.point.yValue, data.point.yValue < 1 ? 4 : 3) + '<b></span>';
+		str += strMaxMin;
+	}
+
+	return str;
+}
+
+
+var iAmInSetExtremes = false;
+var previousSeries = -1;
+
+
+function setExtremes(button, axis) {
+	if (typeof(button.rangeSelectorButton) !== 'undefined') {
+		button = button.rangeSelectorButton;
+	}
+	if(typeof(button.text) === 'undefined') return;
+
+	if (iAmInSetExtremes) {
+		return;
+
+	}
+
+	iAmInSetExtremes = true;
+
+	var chart = axis.chart;
+	var bIdx;
+
+	for (var bs in chart.rangeSelector.buttons) {
+		if (chart.rangeSelector.buttonOptions[bs].type === button.type && chart.rangeSelector.buttonOptions[bs].count === button.count) {
+			bIdx = bs;
+		}
+	}
+	chart.options.currentTimeButtonIndex = bIdx;
+
+	if (typeof chart.rangeSelector.buttons[bIdx] != 'undefined' && chart.rangeSelector.buttons[bIdx].state != 3) {
+		if (chart.get('eventsLow') != null) {
+			chart.get('eventsLow').remove();
+		}
+		if (chart.get('eventsHigh') != null) {
+			chart.get('eventsHigh').remove();
+		}
+
+		if (chart.rangeSelector.buttonOptions[bIdx].type === "day") {
+			for (var s in chart.series) {
+				if ($.isNumeric(s)) {
+					if (chart.series[s].options.timeline === "intraday") {
+						if (!chart.series[s].visible) {
+							chart.series[s].show();
+						}
+					} else if (chart.series[s].options.type === 'flags') {
+					} else {
+						if (chart.series[s].visible) {
+							chart.series[s].hide();
+						}
+					}
+				}
+			}
+		} else {
+			for (var s in chart.series) {
+				if ($.isNumeric(s)) {
+					if (chart.series[s].options.timeline === "intraday") {
+						if (chart.series[s].visible)
+							chart.series[s].hide();
+					} else if (chart.series[s].options.type === 'flags') {
+					} else {
+						if (!chart.series[s].visible)
+							chart.series[s].show();
+					}
+				}
+			}
+		}
+
+		window.setTimeout(function() {
+			if (chart.rangeSelector.buttonOptions[bIdx].type === "day") {
+				// intraday, xAxis auf den Zeitraum setzen, den die Serie bietet
+				if(previousSeries != 0) {
+					var min;
+					var now = new Date();
+
+					now.setHours(0,0,0,0);
+					if(chart.rangeSelector.buttonOptions[bIdx].count == 1) {
+						min = now.getTime();
+					} else {
+						min = now.getTime() - ((chart.rangeSelector.buttonOptions[bIdx].count - 1) * 24 * 60 * 60 * 1000);
+					}
+					min = Math.max(chart.options.info.minTime, min);
+
+					// chart.xAxis[0].setExtremes(min, chart.options.info.maxTime);
+					chart.xAxis[0].setExtremes();
+					previousSeries = 0;
+				}
+			} else {
+				if(previousSeries == 0) {
+					// historisch, xAxis auf den Zeitraum setzen, der durch den Zeitraum vorgegeben ist
+					var min = chart.options.info.maxTime - chart.rangeSelector.buttonOptions[bIdx].width;
+					min = Math.max(chart.options.info.minTime, min);
+					chart.xAxis[0].setExtremes(min, chart.options.info.maxTime);
+					chart.yAxis[0].setExtremes();
+					previousSeries = 1;
+				}
+			}
+
+			if (chart.rangeSelector.buttonOptions[bIdx].type != 'day') {
+				// remove Plotlines
+				if (typeof chart.options.info.plotlines != 'undefined') {
+					for (i = 0; i < chart.options.info.plotlines.length; i++) {
+						removePlotLine($('#' + $(chart.container).parent().attr('id')), chart.options.info.plotlines[i]);
+					}
+					chart.series[1].yAxis.setExtremes();
+				}
+				setHighLowMarker($('#' + $(chart.container).parent().attr('id')), chart.series[1].options.id);
+			} else {
+
+				// add Plotlines
+				var max = 0;
+				var min = Number.MAX_VALUE;
+				if (typeof chart.options.info != 'undefined') {
+					if (typeof chart.options.info.plotlines != 'undefined') {
+						for (i = 0; i < chart.options.info.plotlines.length; i++) {
+							removePlotLine($('#' + $(chart.container).parent().attr('id')), chart.options.info.plotlines[i]);
+							addPlotLine($('#' + $(chart.container).parent().attr('id')), chart.options.info.plotlines[i]);
+
+							max = Math.max(chart.options.info.plotlines[i].value, max);
+							min = Math.min(chart.options.info.plotlines[i].value, min);
+						}
+						chart.series[0].yAxis.setExtremes(Math.min(min, isNaN(chart.series[0].dataMin) ? min : chart.series[0].dataMin), Math.max(max, isNaN(chart.series[0].dataMax) ? max : chart.series[0].dataMax), true, false);
+					}
+				}
+				setHighLowMarker($('#' + $(chart.container).parent().attr('id')), chart.series[0].options.id);
+			}
+
+
+
+			if (typeof chart.rangeSelector.buttons[bIdx] != 'undefined' && chart.rangeSelector.buttons[bIdx].state != 3) {
+
+				$('.highcharts-range-selector-buttons .active').attr('class', 'highcharts-button');
+				for (var bs in chart.rangeSelector.buttons) {
+					if ($.isNumeric(bs)) {
+						if (chart.rangeSelector.buttons[bs].state != 3) {
+							if (bs == bIdx) {
+								chart.rangeSelector.buttons[bs].setState(2);
+								$(chart.rangeSelector.buttons[bs]).addClass('active');
+							} else {
+								chart.rangeSelector.buttons[bs].setState(0);
+								$(chart.rangeSelector.buttons[bs]).removeClass('active');
+							}
+						} else {
+							if (bs == bIdx) {
+								chart.rangeSelector.buttons[bs].setState(2);
+								$(chart.rangeSelector.buttons[bs]).addClass('active');
+							} else {
+								$(chart.rangeSelector.buttons[bs]).removeClass('active');
+							}
+						}
+					}
+				}
+			}
+
+		}, 10);
+
+	}
+
+	iAmInSetExtremes = false;
+}
+
+function drawchart(container, charttype) {
+	charttype = charttype || "default";
+	return container.highcharts('StockChart', $chartsettings[charttype]);
+}
+
+
+function addPlotLine(container, plotline) {
+	var $chart = container.highcharts();
+	if($chart.options.benchmark == true || plotline.value == 0) {
+		return;
+	}
+	var textStr = '';
+	if(typeof plotline.label != 'undefined') {
+		textStr = plotline.label
+	}
+
+	max = Math.max(plotline.value, $chart.yAxis[0].max);
+	min = Math.min(plotline.value, $chart.yAxis[0].min);
+
+	$chart.yAxis[0].setExtremes(min, max, true, false);
+	$chart.yAxis[0].addPlotLine({
+		value: plotline.value,
+		color: plotline.color,
+		width: 1,
+		dashStyle: 'dash',
+		zIndex: 2,
+		id: plotline.id,
+		label: {
+			text: (textStr != '' ? textStr : ''),
+			align: plotline.align,
+			y: plotline.y,
+			x: 5,
+			style: {
+				'fontSize': '10px',
+				'color': plotline.color
+			}
+		}
+	});
+}
+function removePlotLine(container, plotline) {
+	var $chart = container.highcharts();
+	$chart.yAxis[0].removePlotLine(plotline.id);
+}
+
+var iAmInSetHighLowMarker = {};
+
+function setHighLowMarker(container, serieId) {
+	if (iAmInSetHighLowMarker[serieId] === true) {
+		return;
+	}
+	iAmInSetHighLowMarker[serieId] = true;
+
+	var $chart = container.highcharts();
+
+	if (typeof $chart.options.info == 'undefined') {
+		iAmInSetHighLowMarker[serieId] = false;
+		return;
+	}
+	if(typeof $chart.options.info.flags == 'undefined') {
+		iAmInSetHighLowMarker[serieId] = false;
+		return;
+	}
+	var serie = $chart.get(serieId);
+
+	if (!serie) {
+		iAmInSetHighLowMarker[serieId] = false;
+		return;
+	}
+
+	var x1, x2;
+	var minVal = Number.MAX_VALUE;
+	var maxVal = 0;
+	var xExtremes  = serie.xAxis.getExtremes();
+	var xMin = xExtremes.min;
+
+	var data = (serie.groupedData != null ? serie.groupedData : serie.yData);
+
+	$.each(data, function (i, point) {
+		if(typeof point == 'object') {
+			if(point.x >= xMin) {
+				maxVal = Math.max(point.y, maxVal);
+				minVal = Math.min(point.y, minVal);
+				// find high x
+				if (point.y === maxVal) {
+					x1 = point.x;
+				}
+
+				// find low x
+				if (point.y === minVal)
+					//x2 = point.x+8500;
+					x2 = point.x;
+			}
+		} else {
+			if(serie.xData[i] >= xMin) {
+				maxVal = Math.max(point, maxVal);
+				minVal = Math.min(point, minVal);
+				// find high x
+				if (point === maxVal)
+					x1 = serie.xData[i];
+
+				// find low x
+				if (point === minVal)
+					x2 = serie.xData[i];
+			}
+		}
+	});
+
+	if(typeof x1 != 'undefined') {
+		var seriesDataHigh = {'type': 'flags',
+			'data' : [{x: x1, text: $chart.options.info.flags.textHigh, title: $chart.options.info.flags.titleHigh, yValue: maxVal}],
+			'id' : 'eventsHigh',
+			'name' : 'eventsHigh',
+			'onSeries' : serieId,
+			'width' : 16,
+			'color' : $chart.options.info.flags.colorHigh,
+			'shape' : 'circlepin',
+			'timeline' : serie.options.timeline,
+			'style' : {
+				fontSize: '9px'
+			}
+		};
+		if($chart.get('eventsHigh') != null) {
+			$chart.get('eventsHigh').remove();
+		}
+		$chart.addSeries(seriesDataHigh);
+	}
+
+	if(typeof x2 != 'undefined') {
+		var seriesDataLow = {'type': 'flags',
+			'data' : [{x: x2, text: $chart.options.info.flags.textLow, title: $chart.options.info.flags.titleLow, yValue: minVal}],
+			'id' : 'eventsLow',
+			'name' : 'eventsLow',
+			'onSeries' : serieId,
+			'y': 5,
+			'width' : 16,
+			'color' : $chart.options.info.flags.colorLow,
+			'shape' : 'circlepin',
+			'timeline' : serie.options.timeline,
+			'style' : {
+				fontSize: '9px'
+			}
+		};
+		if($chart.get('eventsLow') != null) {
+			$chart.get('eventsLow').remove();
+		}
+		$chart.addSeries(seriesDataLow);
+	}
+
+	iAmInSetHighLowMarker[serieId] = false;
+}
+function disableTimeRangeButtons(container, initialLoad) {
+	var $chart = container.highcharts();
+	if(typeof $chart.rangeSelector != 'undefined') {
+		var currentDate = new Date().getTime();
+		var activeNext = '';
+		if(typeof $chart.options.currentTimeButtonIndex == 'undefined') {
+			$chart.options.currentTimeButtonIndex = 0;
+		}
+		for (var b in $chart.rangeSelector.buttons) {
+			if((typeof $chart.options.info != 'undefined' && typeof $chart.options.info.minTime != 'undefined') && currentDate-$chart.rangeSelector.buttonOptions[b].width < $chart.options.info.minTime) {
+				if(activeNext !== true && $chart.rangeSelector.buttonOptions[b].width !== Number.MAX_VALUE) {
+					$chart.rangeSelector.buttons[b].attr('style', '').setState(3);
+					$chart.rangeSelector.buttons[b].addClass('inactive');
+					if(initialLoad !== true) {
+						// deaktivierten Button simulieren
+						$('.highcharts-range-selector-buttons .inactive').css('opacity', '0.3');
+					}
+				}
+				activeNext = false;
+			} else {
+				if($chart.rangeSelector.buttons[b].state == 2) {
+					$chart.rangeSelector.buttons[b].addClass('active')
+				}
+				activeNext = true;
+			}
+		}
+	}
+}
+        //--></script>
+    <script type="text/javascript"><!--
+        jQuery(document).ready(function ($) {
+            $.ajax({
+    url: "/_rpc/json/.lstc/_shared/base/disclaimershow",
+                     data: {},
+                         type: 'POST',
+    dataType: "json",
+    success: function( response ) {
+        if(response.show) {
+            let mod = new bootstrap.Modal(document.getElementById('disclaimer'));
+            mod.show();
+        }
+    },
+    error: function() {
+    }
+ });
+
+$("#disclaimer .reject").on("click", function () {
+    document.location = "http://www.ls-d.de"
+});
+$("#disclaimer .accept").on("click", function () {
+    $.ajax({
+       url: "/_rpc/json/.lstc/_shared/base/disclaimer",
+                        data: {
+                            val: "2015040809",
+                            t: "30"
+                        },
+                            type: 'POST',
+       dataType: "json",
+       success: function( response ) {
+
+       },
+       error: function() {
+       }
+    });
+    const mod = bootstrap.Modal.getInstance(document.getElementById('disclaimer'));
+    if (mod) {
+        mod.hide();
+    }
+});
+var searchDefaults = [
+  {wkn:"LUSDAX", displayname:"Dax", categoryName:"Index", link: "/de/index/lus-dax"},
+  {wkn:"965515", displayname:"Gold", categoryName:"Rohstoff", link: "/de/rohstoff/goldpreis"},
+  {wkn:"965310", displayname:"Silber", categoryName:"Rohstoff", link: "/de/rohstoff/silberpreis"},
+  {wkn:"IOIL00", displayname:"Brent Oil", categoryName:"Rohstoff", link: "/de/rohstoff/oelpreis"},
+  {wkn:"965275", displayname:"EUR/USD", categoryName:"Währung", link: "/de/waehrung/70592"},
+];
+
+
+
+$.watchlist = {
+  cookie: "",
+  init: function() {
+    this.cookie = readCookie("watchlist");
+    $(".watchlist.check").each(function(){$.watchlist.check(this)});
+  },
+  check: function(element) {
+     let wkn = $(element).data("wkn");
+     $.ajax({
+           url: "/_rpc/json/.lstc/_shared/base/wlCheck",
+                                data: {
+                                wkn: wkn
+                            },
+                                type: 'POST',
+           dataType: "json",
+           success: function( response ) {
+                 if(response.status) {
+                    $(element).addClass("active").attr("title", "Von Watchlist entfernen");
+           if($(element).find("button span.plusminus").hasClass("bi-plus-lg")) {
+             $(element).find("button span.plusminus").removeClass("bi-plus-lg").addClass("bi-dash-lg");
+           } else {
+             $(element).find("button span.plusminus").removeClass("bi-plus").addClass("bi-dash");
+           }
+           $(element).find("button span:not(.plusminus)").removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+           }},
+           error: function() {
+           }
+     });
+  },
+  handle: function(trigger) {
+    if($(trigger).hasClass("active")) {
+      this.remove($(trigger).data("wkn"));
+      $(trigger).removeClass("active").attr("title", "Zur Watchlist hinzufügen");
+      if($(trigger).find("button span.plusminus").hasClass("bi-dash-lg")) {
+          $(trigger).find("button span.plusminus").removeClass("bi-dash-lg").addClass("bi-plus-lg");
+      } else {
+          $(trigger).find("button span.plusminus").removeClass("bi-dash").addClass("bi-plus");
+      }
+      $(trigger).find("button span:not(.plusminus)").removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+    } else {
+      this.add($(trigger).data("wkn"));
+      $(trigger).addClass("active").attr("title", "Von Watchlist entfernen");
+      if($(trigger).find("button span.plusminus").hasClass("bi-plus-lg")) {
+          $(trigger).find("button span.plusminus").removeClass("bi-plus-lg").addClass("bi-dash-lg");
+      } else {
+          $(trigger).find("button span.plusminus").removeClass("bi-plus").addClass("bi-dash");
+      }
+      $(trigger).find("button span:not(.plusminus)").removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+    }
+  }
+  ,add: function(wkn) {
+     $.ajax({
+           url: "/_rpc/json/.lstc/_shared/base/wlAdd",
+                                data: {
+                                wkn: wkn
+                            },
+                                type: 'POST',
+           dataType: "json",
+           success: function( response ) {
+                 
+           },
+           error: function() {
+           }
+     });
+  }
+  ,remove: function(wkn) {
+     $.ajax({
+           url: "/_rpc/json/.lstc/_shared/base/wlRm",
+                                data: {
+                                wkn: wkn
+                            },
+                                type: 'POST',
+           dataType: "json",
+           success: function( response ) {
+                 
+           },
+           error: function() {
+           }
+     });
+  }
+  ,save: function() {
+     createCookie("watchlist", this.cookie, 3650);
+  }
+};
+
+$.watchlist.init();
+
+
+$("body").on("click", "span.watchlist", function(){
+  $.watchlist.handle(this);
+});
+$("body").on("click", "span.watchlistremove", function(){
+  $.watchlist.remove($(this).data("wkn"));$(this).parents("tr").remove();
+});
+
+
+
+
+
+
+
+var instruments = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('displayname'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: '/_rpc/json/.lstc/instrument/search/main?q=%QUERY&' + "localeId=" + current_locale
+});
+
+instruments.initialize();
+
+function searchProxy(q, sync) {
+    if(q === '') {
+        sync(searchDefaults);
+    } else {
+        instruments.ttAdapter()(q, sync);
+    }
+}
+
+$('#globalsearch .typeahead').typeahead(
+    {
+        minLength: 0,
+        highlight: true
+    },
+    {
+    autoselect: true,
+    name: 'instrumentsearch',
+    displayKey: 'displayname',
+    source: searchProxy, /*instruments.ttAdapter(),*/
+    templates: {
+        suggestion: Handlebars.compile("<span class=\"displayName\">{{displayname}}</span><span class=\"wkn\">{{wkn}}</span><span class=\"categoryName\">{{categoryName}}</span>")
+    }
+});
+
+$('#globalsearch .typeahead').on("typeahead:cursorchanged typeahead:autocompleted", function (a, b, c) {
+});
+$('#globalsearch .typeahead').on("typeahead:selected", function (a, b, c) {
+    document.location = b.link;
+});
+
+/* hack to show suggestions on entering the search the first time */
+$('#globalsearch .typeahead').on('click', function (e) {
+    var ev = $.Event("keydown");
+    ev.keyCode = ev.which = 40;
+    $(this).trigger(ev);
+    return true;
+});
+
+$('#globalsearch .typeahead').on('keyup', function (e) {
+    if (e.which == 13) {
+        var suggestions = $("#globalsearch .tt-dataset-instrumentsearch .tt-suggestion");
+
+        if (suggestions.length > 1) {
+            suggestions.eq(0).trigger("mouseover");
+        } else {
+            suggestions.eq(0).trigger("click");
+        }
+    }
+});
+        drawchart($("#chart1"), "mini");
+        showInstrumentInChart($("#chart1"), "70595", 2, "mid", "intraday", "mini");
+
+        drawchart($("#chart3"), "mini");
+        showInstrumentInChart($("#chart3"), "70586", 2, "mid", "intraday", "mini");
+
+        drawchart($("#chart5"), "mini");
+        showInstrumentInChart($("#chart5"), "70580", 2, "mid", "intraday", "mini");
+
+        drawchart($("#chart7"), "mini");
+        showInstrumentInChart($("#chart7"), "70577", 2, "mid", "intraday", "mini");
+
+        drawchart($("#chart9"), "mini");
+        showInstrumentInChart($("#chart9"), "3477757", 2, "mid", "intraday", "mini");
+
+var domain = "push.ls-tc.de";
+var port = 443;
+
+$.push.options.bgNeutral = 'transparent';
+$.push.options.bgPositive = "#2ba278";
+$.push.options.bgNegative = "#d4007c";
+$.push.options.protocol = 'https:';
+
+
+$.push.init(domain, port);
+$.push.quotes();
+$.push.pushtable();
+$.push.realtime();
+$.push.animation = true;
+$.push.client.connectionOptions.MA("WS-STREAMING")
+
+
+$(window).on("resize", function(){
+  responsiveSearch();
+  $("body").css("padding-top", $("nav.navbar").height());
+});
+
+$(document).on("refreshContent", function() {
+  $.push.quotes();
+  $.watchlist.init();
+});
+
+function createCookie(name, value, days) {
+    var expires;
+
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    } else {
+        expires = "";
+    }
+    document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; secure; path=/";
+    return readCookie(name);
+}
+
+function readCookie(name) {
+    var nameEQ = encodeURIComponent(name) + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name, "", -1);
+}
+
+
+responsiveSearch = function () {
+     var previousWidth = $("body").data("previousWidthSearch");
+     var currentWidth = $(document).width();
+
+     if (previousWidth == currentWidth) {
+         return;
+     }
+
+     $("body").data("previousWidthSearch", currentWidth);
+
+     var mq = window.matchMedia("(min-width: 768px)");
+ 
+     if (mq.matches) {
+         $("#globalsearch").addClass("in show").css('display', 'table');
+     } else {
+         $("#globalsearch.in, #globalsearch.show").removeClass("in show").css('display', '');
+     }
+}
+responsiveSearch();
+$("body").css("padding-top", $("nav.navbar").height());
+window.setTimeout(function(){
+$("body").css("padding-top", $("nav.navbar").height());
+}, 500);
+
+
+
+
+
+refreshmodulesinit = function() {
+  $("module.refresh").each(function(){
+      var module = $(this);
+      var interval = module.data("refresh");
+
+      if(interval > 0) {
+        var id = module.attr("id");
+
+        if(!id) {
+           id = 'id' + Math.round(new Date().getTime() + (Math.random() * 100));
+           module.attr("id", id);
+        }
+        window.setTimeout(function(){ refreshmodule(id); }, interval*1000);
+      }
+    
+  });
+}
+
+refreshmodule = function(id) {
+  var module = $('#' + id);
+  var rpc = module.data("rpc");
+  var configid = module.data("configid");
+
+  $.get(rpc, {configid:configid}, function(response) {
+    var responseLen = response.length;
+    response = $(response);
+    response.attr("id", id);
+    var interval = response.data("refresh");
+
+    if(responseLen) {
+      module.replaceWith(response);
+    }
+
+
+    if(interval>0) {
+      window.setTimeout(function(){ refreshmodule(id); }, interval*1000);
+    }
+  });
+};
+
+
+refreshmodulesinit();
+
+        });
+
+                //--></script>
+
+</body>
+</html>

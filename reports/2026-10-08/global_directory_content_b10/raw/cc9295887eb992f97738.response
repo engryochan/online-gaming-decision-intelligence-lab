@@ -1,0 +1,2181 @@
+﻿
+<!doctype html>
+<html class="no-js">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	Empresas y Gobierno | Servicios Bancarios | Scotiabank México
+</title>
+        <link rel="canonical" href="https://www.scotiabank.com.mx/empresas-y-gobierno.aspx" hreflang="es-mx" />            
+    
+        <meta property="og:title" content="Empresas y Gobierno | Servicios Bancarios | Scotiabank México" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.scotiabank.com.mx/empresas-y-gobierno.aspx" />
+        <meta property="og:locale" content="es-mx" />
+
+        
+
+        <meta property="og:description" content="Obtén información sobre Soluciones Financieras, Administración de Flujo de Efectivo y Comercio Internacional. ¡Descúbrelo!" />
+
+        
+
+
+    <script type="text/javascript">
+        function ddlCountry_Change(e) {
+            document.location.href = $(e).val();
+        }
+
+        function handleKeyPressSearch(e) {
+            var key;
+            if (window.event)
+                key = window.event.keyCode;
+            else
+                key = e.which;
+
+            if (key == 13 || key == 10) {
+                var doPostBackArgs = /^javascript:__doPostBack\('([^']*)','([^']*)'\)$/i.exec($('#lnkMobilePopUpSearch').attr('href'));
+                if (doPostBackArgs && typeof __doPostBack === 'function') { __doPostBack(doPostBackArgs[1], doPostBackArgs[2]); }
+                return false;
+            }
+            else
+                return true;
+        }
+
+    </script>
+
+    <link href="Styles/Build/desktop.css" rel="stylesheet" media="(min-width: 600px) and (min-height: 400px)" /><link href="Styles/Build/mobile.css" rel="stylesheet" media="(max-width: 599px), (max-height: 399px)" /><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous"/><link href="Scripts/plugins/lity-2.3.1/lity.min.css" rel="stylesheet" /><link href="Styles/Redesign/icons.css" rel="stylesheet" /><link href="Styles/Build/redesign_desktop.css" rel="stylesheet" media="(min-width: 600px) and (min-height: 400px)" /><link href="Styles/Build/redesign_mobile.css" rel="stylesheet" media="(max-width: 599px), (max-height: 399px)" /><script src="/bundles/RedesignSBJs?v=6Br3OtLhxcnFnwCvMPaLS2l91gMzFZWh9m-ph5Hbjn41"></script>
+
+<meta name="description" content="Obtén información sobre Soluciones Financieras, Administración de Flujo de Efectivo y Comercio Internacional. ¡Descúbrelo!" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ScotiabankMX" />
+<meta name="twitter:title" content="Empresas y Gobierno | Scotiabank México" />
+<meta name="twitter:image" content="https://cdn.aglty.ioscotia-bank-mexico/digital-factory/twitter-cards-img/GettyImages-1198265458.jpg" />
+<meta name="twitter:description" content="Obtén información sobre Soluciones Financieras, Administración de Flujo de Efectivo y Comercio Internacional. ¡Descúbrelo!"/>
+<meta property="og:image" content="https://cdn.aglty.io/scotia-bank-mexico/digital-factory/twitter-cards-img/GettyImages-1198265458.jpg" />
+<meta http-equiv='content-language' content='es-mx'/>
+<!-- Inicio Estilo Flex Iconos Menu -->
+<style>
+.visible-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+</style>
+<!-- Fin Estilo Flex Iconos Menu -->
+
+<script>
+(function(){
+  var l = document.querySelectorAll('link[rel="stylesheet"]');
+  for(var i=0;i<l.length;i++){
+    if(l[i].href.indexOf('lity')>-1){
+      l[i].media='print';
+      l[i].onload=function(){this.media='all';};
+      break;
+    }
+  }
+})();
+</script>
+
+
+<!-- blog: feb 2026 - aspx -->
+<!-- blog routing rules - lowercase + .aspx rules -->
+<script>
+  (function () {
+    try {
+      var loc = window.location;
+      var origin = loc.origin;
+      var path = loc.pathname;       // path tal como llega
+      var lower = path.toLowerCase(); // path en minúsculas para decidir
+      var search = loc.search || "";
+      var hash = loc.hash || "";
+
+      // Solo actuar dentro de /blog
+      if (!lower.startsWith("/blog")) return;
+
+      // Normalizar dobles slashes
+      var normalizedLower = lower.replace(/\/{2,}/g, "/");
+
+      var targetPathLower = null;
+
+      // 1) Homepage: /blog -> /blog.aspx (todo en minúsculas)
+      if (normalizedLower === "/blog") {
+        targetPathLower = "/blog.aspx";
+      }
+      // 1b) /blog.aspx -> OK, no tocar
+      else if (normalizedLower === "/blog.aspx") {
+        targetPathLower = null; // stay
+      }
+      // 2) Categorías: /blog/categoria/... -> SIEMPRE con .aspx y en minúsculas
+      else if (normalizedLower.startsWith("/blog/categoria/")) {
+        if (!normalizedLower.endsWith(".aspx")) {
+          targetPathLower = normalizedLower + ".aspx";
+        } else {
+          // ya termina en .aspx -> solo asegurar minúsculas
+          if (path !== normalizedLower) {
+            targetPathLower = normalizedLower;
+          }
+        }
+      }
+      // 3) Notas: cualquier /blog/... que no sea homepage ni categoría -> SIN .aspx y en minúsculas
+      else if (normalizedLower.startsWith("/blog/")) {
+        var noAspxLower = normalizedLower.replace(/\.aspx$/i, "");
+        if (noAspxLower !== normalizedLower || path !== normalizedLower) {
+          targetPathLower = noAspxLower;
+        }
+      }
+
+      // Si hay destino y difiere de la URL actual, redirigir
+      if (targetPathLower && (targetPathLower !== path)) {
+        var newUrl = origin + targetPathLower + search + hash;
+
+        // Evitar loops (comparación exacta es suficiente porque imponemos minúsculas)
+        if (newUrl !== origin + path + search + hash) {
+          window.location.replace(newUrl);
+        }
+      }
+    } catch (e) {
+      // console.warn("Blog routing script error", e);
+    }
+  })();
+</script>
+
+<html lang="es">
+
+<!-- dafg: 27Abr2026 -->
+<meta name="google-site-verification" content="kXeppmRvaeonfxZx4l2D2g6lWRIev1xbUGYSIbGWTBY" />
+<!-- gmail: 30Jul2026 sin https -->
+<meta name="google-site-verification" content="BU0toig1BC8LNPEEDCxOiknjt1_ELpbZHukgtret8RE" />
+
+
+<link href="https://cdn.aglty.io/scotia-bank-mexico/digital-factory/fonts/icons.css" rel="stylesheet" integrity="sha384-JbjY5DUv0k/eKVzP1HMpLKuw20JitD/Qy+vgLpmZxy8gTK8Xm9yQNqoOxZzr9BrF" crossorigin="anonymous">
+
+<link rel="shortcut icon" href="//cdn.aglty.io/scotia-bank-mexico/spanish/icons/favicons/favicon.ico" integrity="sha384-Q4wXIz6HKhfewIUeXnZcpAJ+hOueDMb2diJNzb56J1FygZdNmTeISkTHatS9b4MS" crossorigin="anonymous">
+<link rel="apple-touch-icon" href="//cdn.aglty.io/scotia-bank-mexico/spanish/icons/favicons/favicon.ico" integrity="sha384-Q4wXIz6HKhfewIUeXnZcpAJ+hOueDMb2diJNzb56J1FygZdNmTeISkTHatS9b4MS" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="72x72" href="//cdn.aglty.io/scotia-bank-mexico/spanish/icons/favicons/favicon.ico" integrity="sha384-Q4wXIz6HKhfewIUeXnZcpAJ+hOueDMb2diJNzb56J1FygZdNmTeISkTHatS9b4MS" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="114x114" href="//cdn.aglty.io/scotia-bank-mexico/spanish/icons/favicons/favicon.ico" integrity="sha384-Q4wXIz6HKhfewIUeXnZcpAJ+hOueDMb2diJNzb56J1FygZdNmTeISkTHatS9b4MS" crossorigin="anonymous">
+
+<!-- breadcrumb on/off -->
+<style>
+@media only screen and (max-width: 720px) {
+    .breadcrumbContainer {
+         display: none !important;
+     } }
+@media (max-width: 1200px), handheld and (orientation: landscape){
+    .breadcrumbContainer {
+         display: none !important;
+     } }
+</style> 
+
+<!-- fix 1280px -->
+<style>
+.col {
+    max-width: 1280px;
+} </style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PW4F7T');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Meta domain -->
+<meta name="facebook-domain-verification" content="mmc3t5w1dqto7gvkpdkmv65bfo9dfe" />
+<!-- End Meta domain -->
+
+<!-- evitar cache PDF - nov 2024 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona todos los enlaces que terminan en .pdf
+    const pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+    // Genera una versión única basada en la marca de tiempo actual
+    const version = new Date().getTime();
+    // Itera sobre cada enlace y agrega el parámetro de versión
+    pdfLinks.forEach(link => {
+        // Verifica si el enlace ya tiene parámetros de consulta
+        if (link.href.includes('?')) {
+            link.href += `&v=${version}`;
+        } else {
+            link.href += `?v=${version}`;
+        }     }); }); 
+</script>
+<!-- fin cache - nov 2024 -->
+
+<link rel="stylesheet" href="https://cdn.aglty.io/scotia-bank-mexico/digital-factory/main.css" integrity="sha384-p1EkQYtVYp+EL2ik620ViT0XYNyQ4AdkH3mfy3C+EfPPY4pgObceBIo7MCgtPMFH" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.aglty.io/scotiabank-chile/fonts/font-face/web-font-2024/scotia-fonts-2024.css" integrity="sha384-fg/6tp+vtIDO9vNJSBYzJtLxI+ee+4tIqzoX0tiHQbxVfBRjSmHt4PHUU7n9fEdQ" crossorigin="anonymous">
+<meta name="generator" content="Agility CMS" />
+<meta name="agility_timestamp" content="2026/10/08 06:12:03 a. m." /><meta name="agility_attributes" content="Mode=Live, IsPreview=False, Language=es-mx, Machine=wn0sdwk000AZW" />
+<script src="/bundles/JqueryJswipeJs?v=5FIX-x1PiS2G0wsXpXt9sO3wYgOkdYiCW6o4PvOFBak1" async></script>
+</head>
+<body id="siteBody">
+           
+    <script type='text/javascript'>
+        var appInsights = window.appInsights || function (config) {
+            function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+            var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f; for (s.src = config.url || '//az416426.vo.msecnd.net/scripts/a/ai.0.js', u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Ajax']; i.length;) r('track' + i.pop()); return r('setAuthenticatedUserContext'), r('clearAuthenticatedUserContext'), config.disableExceptionTracking || (i = 'onerror', r('_' + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o), s }), t
+        }({ instrumentationKey: '511256b5-ac41-4f51-95ad-42081b1c24ec' });
+        window.appInsights = appInsights; appInsights.trackPageView();
+    </script>
+    <form method="post" action="./empresas-y-gobierno.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="csrfToken" id="csrfToken" value="93320b990adb49e6bd53c2156b178334" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="JN8jcjB2AdFpUALWtPiFvn1Bj2jg2IAWml2ctSL+go5SmrKkaTYDmIMasC8qKdR/stFuNhiCmtcF79otgkXPF+E3FzTn+GtN7tq/UL9iBJk=" />
+</div>
+
+        <div id="lightBox" class="visible-mobile">
+            <div class="wrapper">
+                <a class="close"></a>
+                <div id="lbContent"></div>
+            </div>
+        </div>
+        <!-- FreeFind Begin No Index -->
+        <header id="siteHeader">
+            
+            <div>
+                <div id="top">
+                    <div class="col">
+                        <div id="HeaderTabs_pnl_desktop_sectoinNavControl" class="visible-desktop siteTabs">
+	
+    <ul role="navigation">
+        
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_0">
+                    <a href='/'>Personas</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_1">
+                    <a href='/singular-by-scotiabank.aspx'>Singular by Scotiabank</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_2">
+                    <a href='/pymes.aspx'>PyME</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_3" class="active">
+                    <a href='/empresas-y-gobierno.aspx'>Empresas y Gobierno</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_4">
+                    <a href='https://www.scotiabank.com.mx/wealth-management.aspx'>Wealth Management</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_5">
+                    <a href='https://www.scotiabank.com.mx/promociones.aspx'>Promociones</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_6">
+                    <a href='https://www.scotiabank.com.mx/iniciativa-mujeres.aspx'>Iniciativa Mujeres</a>
+                </li>
+            
+                <li id="HeaderTabs_rptHeaderTabs_sectionTab_7">
+                    <a href='https://www.scotiabank.com.mx/acerca-de.aspx'>Acerca de Scotiabank</a>
+                </li>
+            
+    </ul>
+    <ul role="navigation" class="pull-right">
+        
+    </ul>
+
+</div>
+
+
+
+                    </div>
+                </div>
+                <div id="logoHeader">
+                    <div class="col">
+                        <a id="siteLogo" href="/" title="Scotiabank" target="_self">
+                            <img class="visible-desktop" src="https://cdn.aglty.io/scotia-bank-mexico/images/logo-scotiabank-rojo.png" alt="Scotiabank logotipo" />
+                            <img class="visible-mobile" src="https://cdn.aglty.io/scotia-bank-mexico/images/isotipo-scotiabank-rojo.png" alt="Scotiabank logo" />
+                        </a>
+                        <div class="searchForm visible-desktop">
+                            <!-- SERVICE MENU -->
+                            
+
+<script type="text/javascript">
+    var SearchDefaults =
+    {
+        SearchURL: '/personas/search.aspx'
+    };
+</script>
+<input name="ctl00$ServiceMenu1$txtSearchQuery" type="text" id="ServiceMenu1_txtSearchQuery" class="txtSearchQuery clear-on-focus" maxlength="100" aria-label="&lt;%: Customizations.SearchBoxWatermark %>" placeholder="Buscar" />
+<input type="image" id="websiteSearch" class="imgSearchSubmit" src="https://cdn.aglty.io/scotia-bank-mexico/2019-global-rebrand/icon_search.svg" alt="Search" />
+                            <!-- /SERVICE MENU -->
+                        </div>
+                        
+                                <div class="headerCta visible-desktop">
+                            
+                                <a id="rptDesktopeHeaderCTA_lnkCTA_0" class="headerCta-link" href="https://www.scotiabank.com.mx/sucursales-cajeros.aspx" target="_self"><i id="rptDesktopeHeaderCTA_icoCTA_0" class=""></i>
+                                    <span>Sucursales</span>
+                                </a>
+                            
+                                <a id="rptDesktopeHeaderCTA_lnkCTA_1" class="headerCta-link" href="https://www.scotiabank.com.mx/contacto.aspx" target="_self"><i id="rptDesktopeHeaderCTA_icoCTA_1" class=""></i>
+                                    <span>Contáctanos</span>
+                                </a>
+                            
+                                <a id="rptDesktopeHeaderCTA_lnkCTA_2" class="headerCta-link" href="https://www.scotiabank.com.mx/servicios-bancarios.aspx" target="_self"><i id="rptDesktopeHeaderCTA_icoCTA_2" class=""></i>
+                                    <span>Servicios Bancarios</span>
+                                </a>
+                            
+                                <a id="rptDesktopeHeaderCTA_lnkCTA_3" class="headerCta-link" href="/personas/cuentas-bancarias/cuenta-scotia.aspx" target="_self"><i id="rptDesktopeHeaderCTA_icoCTA_3" class=""></i>
+                                    <span>Quiero una Cuenta</span>
+                                </a>
+                            
+                                </div>
+                            
+
+                        <div id="newSignIn">
+                            <div id="pnlOnlineBanking">
+	
+                                <div class="newSignIn-dropDown">
+                                    <button type="button" id="lblSignInButtonWrapper" class="newSignIn-link" style="background-color: #ed0722;" data-analytics="btn-sign-in">
+                                        <i class="icon-Icon_SignInLock"></i>
+                                        <span class="newSignIn-text">INGRESA</span>
+                                    </button>
+                                    <div id="divDropDownDesktop">
+                                        <ul class="newSignIn-dropDownList" style="background-color: #ed0722;">
+                                            
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://scotiaweb.scotiabank.com.mx/auth/signin/form">ScotiaWeb</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://www.scotiabank.com.mx/link/cargando-scotia-en-linea.aspx">Scotia en Línea</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://ccop.scotiabank.com/login?countryId=MX">ScotiaConnect</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://www.scotiainlatrade.com/servlets/Scotiatrade/inlatrade/scotiatradeDB.htm">ScotiaTrade</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://www.scotiabank.com.mx/servicios-bancarios/herramientas-bancarias.aspx">Más opciones</a>
+                                                    </li>
+                                                
+                                        </ul>
+                                    </div>
+
+                                    <div id="divDropDownMobile" style="display: none;">
+                                        <ul class="newSignIn-dropDownList" style="background-color: #ed0722;">
+                                            
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://scotiaweb.scotiabank.com.mx/auth/signin/form">ScotiaWeb</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://www.scotiabank.com.mx/link/cargando-scotia-en-linea.aspx">Scotia en Línea</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://ccop.scotiabank.com/login?countryId=MX">ScotiaConnect</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://www.scotiainlatrade.com/servlets/Scotiatrade/inlatrade/scotiatradeDB.htm">ScotiaTrade</a>
+                                                    </li>
+                                                
+                                                    <li class="newSignIn-dropDownListItem">
+                                                        <a class="newSignIn-dropDownListLink" href="https://www.scotiabank.com.mx/servicios-bancarios/herramientas-bancarias.aspx">Más opciones</a>
+                                                    </li>
+                                                
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="newSignIn-activate">
+                                    <span>&iquest;A&uacute;n no tienes Banca en L&iacute;nea?<br /></span><a class="link link--important" id="sbmx_click_header_registroscotiaweb" href="https://scotiaweb.scotiabank.com.mx/user-enrollment/" target="_self">Reg&iacute;strate</a>
+                                </div>
+                            
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="siteNav">
+                <a href="#" id="showMegaMenu" role="button" class="visible-mobile" aria-label="Men&#250;"><span></span><span></span><span></span><span></span></a>
+
+                <div id="megaMenuHeader">
+                    <div class="searchForm visible-mobile">
+                        <!-- SERVICE MENU -->
+                        
+
+<script type="text/javascript">
+    var SearchDefaults =
+    {
+        SearchURL: '/personas/search.aspx'
+    };
+</script>
+<input name="ctl00$ServiceMenu$txtSearchQuery" type="text" id="ServiceMenu_txtSearchQuery" class="txtSearchQuery clear-on-focus" maxlength="100" aria-label="&lt;%: Customizations.SearchBoxWatermark %>" placeholder="Buscar" />
+<input type="image" id="websiteSearch" class="imgSearchSubmit" src="https://cdn.aglty.io/scotia-bank-mexico/2019-global-rebrand/icon_search.svg" alt="Search" />
+                        <!-- /SERVICE MENU -->
+                    </div>
+                    <div class="megaMenuWrapper col">
+                        <!-- MEGA MENU -->
+                        
+
+<ul id="mainMenu" class='megaMenu' role="navigation">
+    
+            <li id="MegaMenu_rptMegaMenu_liMMItem_0" class="parent">
+                <a href="/empresas-y-gobierno/scotia-en-linea.aspx"  target="_self" class="open_menu_item" data-overlaytext="Scotia en Línea">Scotia en Línea</a>
+                <span id="MegaMenu_rptMegaMenu_span_0"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_0" class="megaMenuWrapper" data-children="1">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/scotia-en-linea.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_0_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="https://www.scotiabank.com.mx/empresas-y-gobierno/scotia-en-linea.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_0_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/scotia-en-linea/sel.aspx' target='_self' title="Manual de Usuario: SEL">Manual de Usuario: SEL</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/scotia-en-linea.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_1" class="parent">
+                <a href="/empresas-y-gobierno/scotiaconnect.aspx"  target="_self" class="open_menu_item" data-overlaytext="ScotiaConnect">ScotiaConnect</a>
+                <span id="MegaMenu_rptMegaMenu_span_1"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_1" class="megaMenuWrapper" data-children="1">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/scotiaconnect.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_1_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="https://www.scotiabank.com.mx/empresas-y-gobierno/scotiaconnect.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_1_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/scotiaconnect/manuales-tutoriales-scotiaconnect.aspx' target='_self' title="Manuales y Tutoriales de ScotiaConnect">Manuales y Tutoriales de ScotiaConnect</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/scotiaconnect.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_2" class="parent">
+                <a href="/empresas-y-gobierno/inversiones.aspx"  target="_self" class="open_menu_item" data-overlaytext="Inversiones">Inversiones</a>
+                <span id="MegaMenu_rptMegaMenu_span_2"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_2" class="megaMenuWrapper" data-children="2">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/inversiones.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_2_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_2_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='/empresas-y-gobierno/inversiones/mercado-dinero.aspx' target='_self' title="Mercado de Dinero">Mercado de Dinero</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/administracion-fondos-ahorro.aspx' target='_self' title="Administración de Fondos de Ahorro">Administración de Fondos de Ahorro</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/inversiones/pagare-unico.aspx' target='_self' title="Pagare Único">Pagare Único</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/cambio-divisas.aspx' target='_self' title="Cambio de Divisas">Cambio de Divisas</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/inversiones/scotia-inversion-disponible.aspx' target='_self' title="Scotia Inversión Disponible">Scotia Inversión Disponible</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/scotia-cedes.aspx' target='_self' title="Scotia CEDES">Scotia CEDES</a></li>
+                                                
+                                                    <li><a href='/scotia-fondos/terceros-distribuidores.aspx' target='_self' title="Distribución Terceros Distribuidores">Distribución Terceros Distribuidores</a></li>
+                                                
+                                                    <li><a href='/scotia-fondos/fondos-inversion.aspx' target='_self' title="Fondos de Inversión Personas Morales">Fondos de Inversión Personas Morales</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_2_MegaMenuSubMenu_1" class="parent">
+                                    
+                                    <a href="/empresas-y-gobierno/inversiones/economia-mercados.aspx"  target="_self" target="Economía y  Mercados" class="open_menu_item">Economía y  Mercados</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_2_MegaMenuWrapper2_1" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='/empresas-y-gobierno/inversiones/economia-mercados/guia-diaria.aspx' target='_self' title="Guía Diaria">Guía Diaria</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/inversiones/economia-mercados/economia-semanal.aspx' target='_self' title="Economía semanal">Economía semanal</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/inversiones/economia-mercados/analisis-economico-politico.aspx' target='_self' title="Análisis Económico y Político">Análisis Económico y Político</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/inversiones/economia-mercados/calendario-indicadores.aspx' target='_self' title="Calendario de Indicadores">Calendario de Indicadores</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/inversiones.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_3" class="parent">
+                <a href="/empresas-y-gobierno/comercio-exterior.aspx"  target="_self" class="open_menu_item" data-overlaytext="Comercio Exterior">Comercio Exterior</a>
+                <span id="MegaMenu_rptMegaMenu_span_3"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_3" class="megaMenuWrapper" data-children="4">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/comercio-exterior.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior/banca-mercados-globales.aspx' target='_self' title="Banca y Mercados Globales">Banca y Mercados Globales</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior/cobranzas-documentarias.aspx' target='_self' title="Cobranzas Documentarias">Cobranzas Documentarias</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuSubMenu_1" class="parent">
+                                    
+                                    <a href="/empresas-y-gobierno/comercio-exterior/cartas-credito.aspx"  target="_self" target="Cartas de Crédito" class="open_menu_item">Cartas de Crédito</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuWrapper2_1" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/domesticas.aspx' target='_self' title="Domésticas">Domésticas</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/exportacion.aspx' target='_self' title="Exportación">Exportación</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/importacion.aspx' target='_self' title="Importación">Importación</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/prepagadas.aspx' target='_self' title="Prepagadas">Prepagadas</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/standby-garantias.aspx' target='_self' title="Standby y Garantías">Standby y Garantías</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/standby-prepagadas.aspx' target='_self' title="Standby Prepagadas">Standby Prepagadas</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/cartas-credito/tradexpress-elite-plus.aspx' target='_self' title="TRADEXPRESS Elite Plus">TRADEXPRESS Elite Plus</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuSubMenu_2" class="parent">
+                                    
+                                    <a href="/empresas-y-gobierno/comercio-exterior/financiamiento-exportacion.aspx"  target="_self" target="Financiamiento" class="open_menu_item">Financiamiento</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuWrapper2_2" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/financiamiento-exportacion/pre-exportacion.aspx' target='_self' title="Financiamiento Comercio Exterior">Financiamiento Comercio Exterior</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/financiamiento-exportacion/pago-anticipado.aspx' target='_self' title="Pago Anticipado Carta de Crédito de Exportación">Pago Anticipado Carta de Crédito de Exportación</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/comercio-exterior/financiamiento-exportacion/refinanciamiento-importacion.aspx' target='_self' title="Refinanciamiento Carta de Crédito de Importación">Refinanciamiento Carta de Crédito de Importación</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuSubMenu_3" class="parent">
+                                    
+                                    <a href="/empresas-y-gobierno/comercio-exterior/pago-electronico-comercio-exterior.aspx"  target="_self" target="Pago Electrónico Comercio Exterior (PECE)" class="open_menu_item">Pago Electrónico Comercio Exterior (PECE)</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_3_MegaMenuWrapper2_3" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/comercio-exterior.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_4" class="parent">
+                <a href="/empresas-y-gobierno/creditos.aspx"  target="_self" class="open_menu_item" data-overlaytext="Créditos">Créditos</a>
+                <span id="MegaMenu_rptMegaMenu_span_4"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_4" class="megaMenuWrapper" data-children="1">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/creditos.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_4_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_4_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/factoraje-cadena-productiva.aspx' target='_self' title="Factoraje Cadena Productiva">Factoraje Cadena Productiva</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/refaccionario.aspx' target='_self' title="Crédito Refaccionario">Crédito Refaccionario</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/habilitacion-avio.aspx' target='_self' title="Crédito de Habilitación o Avío">Crédito de Habilitación o Avío</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/apertura-simple.aspx' target='_self' title="Crédito de Apertura Simple">Crédito de Apertura Simple</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/linea-operativa.aspx' target='_self' title="Crédito de Línea Operativa">Crédito de Línea Operativa</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/apertura-cuenta-corriente.aspx' target='_self' title="Apertura de Cuenta Corriente">Apertura de Cuenta Corriente</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/plan-piso.aspx' target='_self' title="Plan Piso">Plan Piso</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/agronegocios.aspx' target='_self' title="Agronegocios">Agronegocios</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/creditos.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_5" class="parent">
+                <a href="/empresas-y-gobierno/cobranza.aspx"  target="_self" class="open_menu_item" data-overlaytext="Cobranza">Cobranza</a>
+                <span id="MegaMenu_rptMegaMenu_span_5"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_5" class="megaMenuWrapper" data-children="1">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/cobranza.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_5_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_5_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/con-recibo.aspx' target='_self' title="Cobranza con Recibo">Cobranza con Recibo</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/lite.aspx' target='_self' title="Cobranza Lite">Cobranza Lite</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/deposito-referenciado.aspx' target='_self' title="Depósito Referenciado">Depósito Referenciado</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/debito-inmediato.aspx' target='_self' title="Dispersión con Débito Inmediato">Dispersión con Débito Inmediato</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/domiciliada.aspx' target='_self' title="Cobranza Domiciliada">Cobranza Domiciliada</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/sin-recibo.aspx' target='_self' title="Cobranza sin Recibo">Cobranza sin Recibo</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/pago-en-linea-pemex.aspx' target='_self' title="Pago en Línea PEMEX">Pago en Línea PEMEX</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/codi.aspx' target='_self' title="CoDi® para Empresas y Gobierno">CoDi® para Empresas y Gobierno</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cobranza/referencia-virtual.aspx' target='_self' title="Cobranza Referencia Virtual">Cobranza Referencia Virtual</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/cobranza.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_6" class="parent">
+                <a href="/empresas-y-gobierno/cash-management.aspx"  target="_self" class="open_menu_item" data-overlaytext="Cash Management">Cash Management</a>
+                <span id="MegaMenu_rptMegaMenu_span_6"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_6" class="megaMenuWrapper" data-children="1">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/cash-management.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_6_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="/empresas-y-gobierno/cash-management.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_6_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/pagos-sua.aspx' target='_self' title="Pagos SUA">Pagos SUA</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cash-management/cuenta-balance-cero.aspx' target='_self' title="Cuenta Balance Cero">Cuenta Balance Cero</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/pagos-impuestos.aspx' target='_self' title="Impuesto y Cuota de Seguridad Social">Impuesto y Cuota de Seguridad Social</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cash-management/swift.aspx' target='_self' title="SWIFT">SWIFT</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/pagos-proveedores.aspx' target='_self' title="Pagos a Proveedores">Pagos a Proveedores</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/proteccion-cheques.aspx' target='_self' title="Protección de Cheques">Protección de Cheques</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cash-management/swift-101.aspx' target='_self' title="SWIFT 101 y pain.001">SWIFT 101 y pain.001</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/estado-cuenta-electronico.aspx' target='_self' title="Estado de Cuenta Electrónico">Estado de Cuenta Electrónico</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/tesoreria-corporativa.aspx' target='_self' title="Tesorería Corporativa">Tesorería Corporativa</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cash-management/host-to-host.aspx' target='_self' title="Host to Host">Host to Host</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cash-management/cash-pooling.aspx' target='_self' title="Cash Pooling Scotiabank">Cash Pooling Scotiabank</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/cash-management.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_7" class="parent">
+                <a href="/empresas-y-gobierno/cuentas-bancarias.aspx"  target="_self" class="open_menu_item" data-overlaytext="Cuentas Bancarias">Cuentas Bancarias</a>
+                <span id="MegaMenu_rptMegaMenu_span_7"></span>
+                <section id="MegaMenu_rptMegaMenu_MegaMenuWrapper_7" class="megaMenuWrapper" data-children="1">
+                    <a class="back visible-mobile" href="#">Regresa</a>
+                    <a class="viewall visible-mobile" href="/empresas-y-gobierno/cuentas-bancarias.aspx" target="_self">Ver Todo</a>
+                    <ul>
+                        
+                                <li id="MegaMenu_rptMegaMenu_rptMegaMenuContent_7_MegaMenuSubMenu_0" class="parent">
+                                    
+                                    <a href="/empresas-y-gobierno/cuentas-bancarias.aspx"  target="_self" target="Productos y Servicios" class="open_menu_item">Productos y Servicios</a>
+                                    
+                                    <span tabindex="0" role="button"></span>
+                                    <section id="MegaMenu_rptMegaMenu_rptMegaMenuContent_7_MegaMenuWrapper2_0" class="megaMenuWrapper">
+                                        <a class="back visible-mobile" href="#">Regresa</a>
+                                        <ul>
+                                            
+                                                    <li><a href='/empresas-y-gobierno/cuentas-bancarias/nomina-empresarial.aspx' target='_self' title="Nómina Empresarial">Nómina Empresarial</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cuentas-bancarias/cuenta-unica-dolares.aspx' target='_self' title="Cuenta Unica en Dólares">Cuenta Unica en Dólares</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cuentas-bancarias/cuenta-unica-empresarial.aspx' target='_self' title="Cuenta Unica Empresarial">Cuenta Unica Empresarial</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cuentas-bancarias/cuenta-unica-plus.aspx' target='_self' title="Cuenta Unica Plus">Cuenta Unica Plus</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cuentas-bancarias/debito-empresarial.aspx' target='_self' title="Débito Empresarial">Débito Empresarial</a></li>
+                                                
+                                                    <li><a href='https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/seguridad-cheques.aspx' target='_self' title="Seguridad en Cheques">Seguridad en Cheques</a></li>
+                                                
+                                                    <li><a href='/empresas-y-gobierno/cuentas-bancarias/alta-expres.aspx' target='_self' title="Alta Exprés">Alta Exprés</a></li>
+                                                
+                                        </ul>
+                                    </section>
+                                </li>
+                            
+                    </ul>
+                    
+                    <a class="viewall visible-desktop" href="/empresas-y-gobierno/cuentas-bancarias.aspx" target="_self">Ver Todo</a>
+                </section>
+            </li>
+        
+            <li id="MegaMenu_rptMegaMenu_liMMItem_8" class="parent">
+                <a href="/empresas-y-gobierno/terminales-pos.aspx"  target="_self" class="open_menu_item" data-overlaytext="Terminales POS">Terminales POS</a>
+                
+                
+            </li>
+        
+</ul>
+                        <!-- /MEGA MENU -->
+                        <div class="siteTabs visible-mobile">
+                            
+
+<div id="HeaderTabsMobile_pnl_mobile_sectionNavControl" class="topSelect visible-mobile siteTabsSelect">
+	
+        <select id="siteTabsSelect">
+            
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_0" data-href="/">Personas</option>
+                
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_1" data-href="/empresas-y-gobierno.aspx">Empresas y Gobierno</option>
+                
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_2" data-href="/pymes.aspx">PyME</option>
+                
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_3" data-href="/singular.aspx">Singular</option>
+                
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_4" data-href="https://www.scotiabank.com.mx/acerca-de.aspx">Acerca de Scotiabank</option>
+                
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_5" data-href="https://www.scotiabank.com.mx/promociones.aspx">Promociones</option>
+                
+                    <option id="HeaderTabsMobile_rptHeaderTabsMobile_sectionTabMobile_6" data-href="https://www.scotiabank.com.mx/wealth-management.aspx">Wealth Management</option>
+                
+        </select>
+
+</div>
+
+                            <ul class="siteTabsLinks">
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                            <div class="headerCta visible-mobile">
+                        
+                            <a id="rptMobileHeaderCTA_lnkCTA_0" class="headerCta-link" href="https://www.scotiabank.com.mx/sucursales-cajeros.aspx" target="_self"><i id="rptMobileHeaderCTA_icoCTA_0" class=""></i>
+                                <span>Sucursales</span>
+                            </a>
+                        
+                            <a id="rptMobileHeaderCTA_lnkCTA_1" class="headerCta-link" href="https://www.scotiabank.com.mx/contacto.aspx" target="_self"><i id="rptMobileHeaderCTA_icoCTA_1" class=""></i>
+                                <span>Contáctanos</span>
+                            </a>
+                        
+                            <a id="rptMobileHeaderCTA_lnkCTA_2" class="headerCta-link" href="https://www.scotiabank.com.mx/servicios-bancarios.aspx" target="_self"><i id="rptMobileHeaderCTA_icoCTA_2" class=""></i>
+                                <span>Servicios Bancarios</span>
+                            </a>
+                        
+                            <a id="rptMobileHeaderCTA_lnkCTA_3" class="headerCta-link" href="/personas/cuentas-bancarias/cuenta-scotia.aspx" target="_self"><i id="rptMobileHeaderCTA_icoCTA_3" class=""></i>
+                                <span>Quiero una Cuenta</span>
+                            </a>
+                        
+                            </div>
+                        
+
+                </div>
+            </nav>
+
+        </header>
+        <!-- FreeFind End No Index -->
+
+        <main>
+            
+            <!-- CONTENT -->
+            
+    <header id="main-header" class="col">
+        
+        
+    </header>
+    <section id="main-body" class="col">
+        <style>
+	.backToTop.active {
+		display: none;
+	}
+
+
+	.serif {
+		font-family: scotia_serifregular;
+		font-weight: 500;
+	}
+
+	.hero {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		min-height: 500px;
+	}
+
+	.hero-inner {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		min-height: 500px;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-content {
+		width: 46%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 64px 48px 64px 15px;
+		gap: 16px;
+		position: relative;
+		z-index: 2;
+	}
+
+	.hero-title {
+		font-family: Scotia-Headline;
+		font-size: 46px;
+		line-height: 1.2;
+		margin-top: 0px !important;
+	}
+
+	.hero-subtitle {
+		font-size: 16px;
+		line-height: 1.65;
+		max-width: 80%;
+	}
+
+	.hero-cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		margin-bottom: 8px;
+		border: 1px solid transparent;
+		font-weight: 800;
+		cursor: pointer;
+		border-radius: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 18px 30px;
+		box-sizing: border-box;
+		text-decoration: none;
+		-webkit-transition: .33s ease;
+		transition: .33s ease;
+	}
+
+	/* Imagen desktop: absoluta, pegada al borde derecho */
+	.hero-image-desk {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 50%;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	.hero-image-desk img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: right bottom;
+		display: block;
+	}
+
+	/* Imagen mobile: oculta en desktop */
+	.hero-image-mob {
+		display: none;
+	}
+
+	/* Breakpoints desktop */
+	@media (min-width: 1600px) {
+
+		.hero,
+		.hero-inner {
+			min-height: 460px;
+		}
+
+		.hero-title {
+			font-size: 46px;
+		}
+
+		.hero-content {
+			padding: 80px 64px 80px 48px;
+		}
+
+		.hero-subtitle {
+			font-size: 16px;
+			max-width: 460px;
+		}
+	}
+
+	@media (min-width: 2000px) {
+
+		.hero,
+		.hero-inner {
+			min-height: 30vw;
+		}
+
+		.hero-title {
+			font-size: 46px;
+		}
+
+		.hero-content {
+			padding: 100px 80px 100px 15px;
+			gap: 22px;
+		}
+
+		.hero-subtitle {
+			font-size: 16px;
+			max-width: 520px;
+		}
+
+		.hero-cta {
+			font-size: 16px;
+			padding: 16px 36px;
+		}
+	}
+
+	@media (max-width: 1024px) and (min-width: 768px) {
+
+		.hero,
+		.hero-inner {
+			min-height: 320px;
+		}
+
+		.hero-title {
+			font-size: 46px;
+		}
+
+		.hero-content {
+			padding: 48px 32px 48px 28px;
+			gap: 14px;
+		}
+
+		.hero-subtitle {
+			font-size: 16px;
+			max-width: 100%;
+		}
+
+		.hero-cta {
+			font-size: 16px;
+			padding: 11px 22px;
+		}
+	}
+
+	/* MOBILE */
+	@media (max-width: 767px) {
+		.hero {
+			min-height: 0;
+		}
+
+		/* Ocultamos la imagen desktop */
+		.hero-image-desk {
+			display: none;
+		}
+
+		/* Mostramos la imagen mobile arriba, en flujo normal */
+		.hero-image-mob {
+			display: block;
+			width: 100%;
+			height: 280px;
+			overflow: hidden;
+		}
+
+		.hero-image-mob img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right bottom;
+			display: block;
+		}
+
+		.hero-inner {
+			min-height: 0;
+			width: 100%;
+		}
+
+		.hero-content {
+			width: 100%;
+			padding: 36px 24px 44px;
+			align-items: center;
+			text-align: center;
+			gap: 14px;
+		}
+
+		.hero-title {
+			font-size: 40px;
+		}
+
+		.hero-subtitle {
+			max-width: 100%;
+		}
+
+		.hero-cta {
+			width: 100%;
+			max-width: 280px;
+		}
+	}
+</style>
+<!-- Imagen mobile: va ANTES del hero, en flujo normal -->
+<div class="hero-image-mob"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/empresas-gobierno/banner-EMP-GOB.webp" alt="Imagen de Empresas y Gobierno Scotiabank" /></div>
+<div class="hero grey" role="banner" aria-label="Promoci&oacute;n principal">
+<div class="hero-inner">
+<div class="hero-content">
+<h1 class="hero-title">Scotiabank para<br />Empresas y Gobierno</h1>
+<p class="hero-subtitle" id="hero-desc"></p>
+</div>
+</div>
+<!-- Imagen desktop: absoluta dentro del hero -->
+<div class="hero-image-desk"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/empresas-gobierno/banner-EMP-GOB.webp" alt="Imagen de Empresas y Gobierno Scotiabank M&eacute;xico" /></div>
+</div><style>
+@media only screen and (min-width: 720px) {
+.card--feature {
+width: 31%;
+}
+}
+</style>
+<div class="container container--color">
+<div class="spacer-top-32 spacer-bottom-32">
+<ul class="tabs-h" data-content="tabsH1">
+<li data-tab="1"><span>Cash Management</span></li>
+<li data-tab="2"><span>Cobranza</span></li>
+<li data-tab="3"><span>Inversiones</span></li>
+<li data-tab="4"><span>Comercio Exterior</span></li>
+<li data-tab="5"><span>Cr&eacute;ditos</span></li>
+<li data-tab="6"><span>Cuentas Bancarias</span></li>
+</ul>
+<div class="tabsContent" id="tabsH1">
+<div>
+<h2 class="subtitle centrado spacer-bottom-16 spacer-top-32">Cash Management</h2>
+<p class="centrado spacer-bottom-32">Consolida el futuro econ&oacute;mico de tu empresa con nuestra oferta integral de productos y servicios.</p>
+<div class="cardWrapper sameHeight">
+<article class="card card--feature">
+<h3>Cash Pooling Scotiabank</h3>
+<p>Facilita la gesti&oacute;n de la empresa a trav&eacute;s de la centralizaci&oacute;n y compensaci&oacute;n de saldos optimizando la liquidez.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/cash-pooling.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Swift</h3>
+<p>Env&iacute;a y recibe m&uacute;ltiples mensajes SWIFT en diferentes pa&iacute;ses alrededor del mundo, ya que Scotiabank es miembro de la Society for Worldwide Interbank Financial Telecommunication (SWIFT).</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/swift.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>SWIFT MT101 y pain.001</h3>
+<p>Impulsa tu operaci&oacute;n global con MT101 y pain.001 de Scotiabank, mensajes que te permiten instruir pagos nacionales e internacionales desde tus cuentas en MXN o USD, de forma segura, eficiente y bajo est&aacute;ndares internacionales SWIFT e ISO 20022.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/swift-101.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Host to Host</h3>
+<p>Para mayor seguridad, realiza una conexi&oacute;n directa entre tu servidor y el servidor de Scotiabank mediante un &ldquo;VPN", y efect&uacute;a las operaciones bancarias necesarias.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/host-to-host.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Tesorer&iacute;a Corporativa</h3>
+<p>Administra tu flujo de efectivo y optimiza tus recursos a trav&eacute;s de la concentraci&oacute;n de saldos y asignaci&oacute;n de l&iacute;mites en l&iacute;nea.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/tesoreria-corporativa.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Estado de Cuenta Electr&oacute;nico</h3>
+<p>Recibe informaci&oacute;n electr&oacute;nica de todos tus movimientos bancarios, realizados en tus cuentas de cheques a trav&eacute;s de archivos en diferentes formatos, y facilita la conciliaci&oacute;n de tus operaciones.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/estado-cuenta-electronico.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Protecci&oacute;n de Cheques</h3>
+<p>Concilia, protege y elimina en l&iacute;nea tus cheques emitidos a nivel nacional desde tu computadora personal, gracias a Scotia Protecci&oacute;n.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/proteccion-cheques.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Pagos a Proveedores</h3>
+<p>Efectua tus pagos a proveedores, acreedores u otros beneficiarios, mediante abonos en cuentas Scotiabank y otros bancos, con cheques de caja o efectivo.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/pagos-proveedores.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Pagos de Impuestos y Cuotas de Seguridad Social</h3>
+<p>Efectua el pago de diversos tipos de obligaciones fiscales y de seguridad social, de manera c&oacute;moda, f&aacute;cil y segura desde, ScotiaWeb, Scotia en L&iacute;nea o Sucursales Scotiabank.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/pagos-impuestos.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Pagos SUA</h3>
+<p>Con Scotiabank, realiza el pago de las cuotas obrero-patronales como Pagos SUA, Aportaciones IMSS, INFONAVIT y AFORES de manera c&oacute;moda, f&aacute;cil, y segura.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cash-management/pagos-sua.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+<div>
+<h2 class="subtitle centrado spacer-bottom-16 spacer-top-32">Cobranza Scotiabank</h2>
+<p class="centrado spacer-bottom-32">Te permite ampliar la cobertura de tu empresa para captar los recursos de tus diferentes clientes. Es un producto flexible que se adapta a tus necesidades de cobro, informaci&oacute;n, concentraci&oacute;n de recursos y operaci&oacute;n.</p>
+<div class="cardWrapper sameHeight">
+<article class="card card--feature">
+<h3>Scotia Dispersi&oacute;n con D&eacute;bito Inmediato</h3>
+<p>Un producto pensado para asegurar el cobro de los servicios proporcionados a tus clientes de forma autom&aacute;tica y en l&iacute;nea, con validaci&oacute;n de referencia para el cargo y recepci&oacute;n de reportes intrad&iacute;a o fin de d&iacute;a.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/debito-inmediato.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Scotia Cobranza Referencia Virtual</h3>
+<p>Asigna una referencia virtual a cada cliente para facilitar la conciliaci&oacute;n de tus dep&oacute;sitos con Scotiabank.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/referencia-virtual.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cobranza v&iacute;a Dep&oacute;sito Referenciado</h3>
+<p>Servicio en l&iacute;nea que te ayuda a identificar de manera r&aacute;pida y sencilla, a trav&eacute;s de una referencia num&eacute;rica con un d&iacute;gito verificador, qui&eacute;n de tus clientes realiz&oacute; el pago y el momento en que lo llev&oacute; a cabo.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/deposito-referenciado.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Scotia Cobranza con Recibo</h3>
+<p>Servicio que te permite optimizar tu cobranza, al aplicar descuentos por pronto pago, cobro de intereses por pagos vencidos y fechas l&iacute;mites de pago, utilizando l&iacute;neas de captura o referencias alfanum&eacute;ricas con c&aacute;lculo de d&iacute;gitos verificadores, para identificar cada uno de los pagos de tus clientes*.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/con-recibo.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cobranza sin Recibo</h3>
+<p>Tus clientes cuentan con el detalle exacto de sus pagos, ya que tu empresa env&iacute;a a Scotiabank el detalle de los cobros por realizar por medio de un sencillo archivo. Tus clientes podr&aacute;n consultar la informaci&oacute;n de sus pagos pendientes a trav&eacute;s de nuestra red de sucursales y de nuestras Bancas por Internet.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/sin-recibo.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cobranza Lite</h3>
+<p>Es la soluci&oacute;n para recibir los pagos de tus clientes con cargo a su cuenta de Scotiabank a trav&eacute;s de tu portal de Internet. Con este servicio mantendr&aacute;s un absoluto control sobre la informaci&oacute;n que tus clientes utilizan para realizar su pago. Cobranza Lite equivale a tener una ventanilla virtual de Scotiabank siempre a disposici&oacute;n de tus clientes.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/lite.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cobranza Domiciliada</h3>
+<p>A trav&eacute;s de este servicio podr&aacute;s realizar autom&aacute;ticamente tu cobranza con cargo a la cuenta de cheques (CLABE) o d&eacute;bito de tus clientes, siempre y cuando est&eacute;n establecidas en cualquier banco afiliado al sistema de domiciliaci&oacute;n y con previa autorizaci&oacute;n del titular.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/domiciliada.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Pago en L&iacute;nea PEMEX</h3>
+<p>Servicio exclusivo que te permite realizar en l&iacute;nea tus pagos de facturas por el suministro de gasolina, para cumplir con tus compromisos con PEMEX.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cobranza/pago-en-linea-pemex.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Scotia POS</h3>
+<p>ScotiaPOS&reg;, te ofrece soluciones integrales para la aceptaci&oacute;n de tarjetas bancarias que hacen crecer tu negocio, fortalecerlo y brindarte servicios de alto valor &uacute;nicos en el mercado.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/terminales-pos.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+<div>
+<h2 class="subtitle centrado spacer-bottom-16 spacer-top-32">Inversiones</h2>
+<p class="centrado spacer-bottom-32">Para Empresas y Gobierno</p>
+<div class="cardWrapper sameHeight">
+<article class="card card--feature">
+<h3>Mercado de Dinero</h3>
+<p>Con tu inversi&oacute;n en Mercado de Dinero tienes acceso a un mercado de inversi&oacute;n altamente sofisticado y obtendr&aacute;s rendimientos competitivos para hacer crecer tu patrimonio.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/mercado-dinero.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Administraci&oacute;n de Fondos de Ahorro</h3>
+<ul class="list list--green">
+<li>Ahorros importantes en la administraci&oacute;n de la empresa al contar con un servicio de administraci&oacute;n y asesor&iacute;a integral (outsourcing)</li>
+<li>Sistemas de individualizaci&oacute;n totalmente flexible. Adaptable a tus necesidades y pol&iacute;ticas</li>
+<li>Registros individualizados que desglosan Aportaci&oacute;n Empresa, Aportaci&oacute;n a Empleados y Aportaci&oacute;n Voluntaria</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/administracion-fondos-ahorro.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Pagar&eacute; Unico</h3>
+<p>Con Pagar&eacute; Unico Persona Moral conocer&aacute;s la tasa desde el momento en que realices tu inversi&oacute;n as&iacute; como el monto de los intereses que obtendr&aacute;s al vencimiento.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/pagare-unico.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cambio de Divisas</h3>
+<p>Nuestros especialistas proveen soluciones innovadoras para manejo de riesgos, combinando prudencia con oportunidad. Ofrecemos precios competitivos, dedicaci&oacute;n y servicio lo que permite a nuestros clientes llevar a cabo sus transacciones y cambiarlas de una manera f&aacute;cil y eficiente.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/cambio-divisas.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Scotia Inversi&oacute;n Disponible</h3>
+<p>Con Scotia Inversi&oacute;n Disponible, tendr&aacute;s la soluci&oacute;n financiera ideal para invertir el excedente del d&iacute;a de tu empresa, teni&eacute;ndolo siempre disponible y obteniendo excelentes rendimientos.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/scotia-inversion-disponible.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Scotia CEDES</h3>
+<p>Este tipo de instrumento es ideal para las empresas que buscan un mejor rendimiento por su dinero en un mediano y largo plazo y requieren recibir sus intereses mensualmente.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/scotia-cedes.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Terceros Distribuidores</h3>
+<p>Scotiabank dentro de su oferta de producto, cuenta con una selecta gama de fondos de inversi&oacute;n que tambi&eacute;n es distribuida a trav&eacute;s de Distribuidores Integrales externos al grupo.</p>
+<a href="https://www.scotiabank.com.mx/scotia-fondos.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Personas Morales</h3>
+<p>Los Fondos de Inversi&oacute;n son una opci&oacute;n muy atractiva para invertir, a trav&eacute;s de las cuales invierten en t&iacute;tulos emitidos por el Gobierno, Empresas o Instituciones Financieras. Es un instrumento que va acorde con la evoluci&oacute;n de los mercados, donde cada vez hay m&aacute;s instrumentos de inversi&oacute;n que permiten crear nuevas carteras o portafolios.</p>
+<a href="https://www.scotiabank.com.mx/scotia-fondos.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+<div>
+<h2 class="subtitle centrado spacer-bottom-16 spacer-top-32">Comercio Exterior</h2>
+<p class="centrado spacer-bottom-32">Scotiabank como parte del Grupo Scotiabank (Canad&aacute;) te ofrece acceso a los mercados internacionales gracias a su presencia directa en m&aacute;s de 50 pa&iacute;ses y una amplia cobertura con m&aacute;s de 2,000 sucursales bancarias, filiales y sociedades afiliadas en Norte, Centro y Sudam&eacute;rica, El Caribe, Europa y Asia, as&iacute; como una extensa red de bancos corresponsales.</p>
+<div class="cardWrapper sameHeight">
+<article class="card card--feature">
+<h3>Pago Electr&oacute;nico Comercio Exterior (PECE)</h3>
+<p>Pagos Masivos (PECE) es la forma m&aacute;s r&aacute;pida y segura de realizar pagos de contribuciones aduaneras. Optimiza tu gesti&oacute;n, protege tus pagos y evita contratiempos a trav&eacute;s de un agente aduanal.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior/pago-electronico-comercio-exterior.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cartas de Cr&eacute;dito</h3>
+<p>Encuentra toda la informaci&oacute;n referente a las Cartas de Cr&eacute;dito que Scotiabank te ofrece.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior/cartas-credito.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cobranzas Documentarias</h3>
+<p>Es un medio de pago internacional bajo el cual un banco realiza la gesti&oacute;n de cobro de documentos financieros y/o mercantiles.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior/cobranzas-documentarias.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Financiamiento de Exportaci&oacute;n</h3>
+<p>Encuentra toda la informaci&oacute;n referente a Financiamiento Exportaci&oacute;n que Scotiabank te ofrece.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/comercio-exterior/financiamiento-exportacion.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+<div>
+<h2 class="subtitle centrado spacer-bottom-16 spacer-top-32">Cr&eacute;ditos para Empresas y Gobierno</h2>
+<p class="centrado spacer-bottom-32">Ya sea que usted necesite fondos adicionales a corto o a largo plazo, Scotiabank tiene una soluci&oacute;n de pr&eacute;stamos para sus necesidades comerciales.</p>
+<div class="cardWrapper sameHeight">
+<article class="card card--feature">
+<h3>Agronegocios</h3>
+<ul class="list list--green">
+<li>Optimiza el uso de tus recursos financieros</li>
+<li>Crecimiento o consolidaci&oacute;n de tu negocio</li>
+<li>Asesor&iacute;a sobre alternativas de financiamiento</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/agronegocios.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Apertura de Cr&eacute;dito en Cuenta Corriente</h3>
+<ul class="list list--green">
+<li>Cubre necesidades de tesorer&iacute;a en forma inmediata</li>
+<li>Mejora la posici&oacute;n competitiva de tu empresa</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/apertura-cuenta-corriente.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Apertura de Cr&eacute;dito Simple</h3>
+<ul class="list list--green">
+<li>Obt&eacute;n fondos para la adquisici&oacute;n de bienes y servicios</li>
+<li>Contrae obligaciones por cuenta del acreditado</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/apertura-simple.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cr&eacute;dito de Habilitaci&oacute;n o Av&iacute;o</h3>
+<ul class="list list--green">
+<li>Compra de materia prima</li>
+<li>Pago de salarios</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/habilitacion-avio.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cr&eacute;dito Refaccionario</h3>
+<ul class="list list--green">
+<li>Adquisici&oacute;n, reposici&oacute;n o sustituci&oacute;n de maquinaria</li>
+<li>Construcci&oacute;n o realizaci&oacute;n de obras de desarrollo</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/refaccionario.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Factoraje &ldquo;Cadenas Productivas&rdquo;</h3>
+<ul class="list list--green">
+<li>Descuentos de documentos a trav&eacute;s de cadenas empresariales</li>
+<li>Financiamiento a tasas y plazos preferenciales</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/factoraje-cadena-productiva.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>L&iacute;nea Operativa</h3>
+<ul class="list list--green">
+<li>Disposiciones del cr&eacute;dito sin autorizaciones ni tr&aacute;mites</li>
+<li>Consulta del detalle de todos los movimientos</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/linea-operativa.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Plan Piso</h3>
+<ul class="list list--green">
+<li>Liquidez para compra de inventario, demostraci&oacute;n o flotillas</li>
+<li>Seguridad en el manejo de recursos</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/creditos/plan-piso.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+<div>
+<h2 class="subtitle centrado spacer-bottom-16 spacer-top-32">Cuentas Bancarias Scotiabank</h2>
+<p class="centrado spacer-bottom-32">Para Empresas y Gobierno</p>
+<div class="cardWrapper sameHeight">
+<article class="card card--feature">
+<h3>Scotia N&oacute;mina Empresarial</h3>
+<p>Realiza el pago de la n&oacute;mina de tu empresa con facilidad y seguridad, adem&aacute;s contar&aacute;s con todos los servicios financieros para la administraci&oacute;n y el pago de la n&oacute;mina de tu empresa.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/nomina-empresarial.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cuenta Unica en D&oacute;lares</h3>
+<p>Con Cuenta Unica en D&oacute;lares tu empresa tendr&aacute; la mejor opci&oacute;n ya que podr&aacute;s manejar tus flujos en d&oacute;lares americanos.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/cuenta-unica-dolares.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cuenta Unica Empresarial</h3>
+<p>Dise&ntilde;ada especialmente para apoyar tus necesidades financieras y el d&iacute;a a d&iacute;a de tu empresa con disponibilidad diaria de tus recursos a trav&eacute;s de sus diversos medios de acceso.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/cuenta-unica-empresarial.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Cuenta Unica Plus</h3>
+<p>Ideal para empresas en crecimiento que requieran aprovechar al m&aacute;ximo sus saldos por cheques en tr&aacute;nsito, obteniendo a cambio atractivas tasas de inter&eacute;s. Podr&aacute;s hacer todas tus operaciones bancarias sin tener que ir a ninguna sucursal, al emplear cualquiera de nuestros Medios de Acceso Interactivo.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/cuenta-unica-plus.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>D&eacute;bito Empresarial</h3>
+<p>Ahora cuentas con una poderosa herramienta para el control total de tus recursos financieros.</p>
+<ul class="list list--green">
+<li>Administraci&oacute;n segura de tu caja chica, vi&aacute;ticos y otros gastos</li>
+<li>La facilidad de establecer y administrar los l&iacute;mites m&aacute;ximos de disposici&oacute;n de recursos, desde la comodidad de tu oficina</li>
+<li data-base-size="15">La oportunidad de&nbsp;controlar&nbsp;los&nbsp;gastos por Tarjeta, decidiendo cu&aacute;ndo y d&oacute;nde se pueden utilizar</li>
+</ul>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/debito-empresarial.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Alta Expr&eacute;s de Cuentas</h3>
+<p>Servicio dirigido exclusivamente a Empresas y Entidades de Gobierno, que requieren abrir cuentas bancarias de manera f&aacute;cil, r&aacute;pida y segura desde sus instalaciones, sin que sus empleados o beneficiarios de programas gubernamentales tengan que acudir a la sucursal bancaria.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/alta-expres.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+<article class="card card--feature">
+<h3>Seguridad en Cheques</h3>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/cuentas-bancarias/seguridad-cheques.aspx" class="link link--important"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$(".tabs-h li:nth-child(1)").addClass('active');
+
+$('.tabsContent > div').hide();
+$('.tabsContent > div:nth-child(1)').show();
+
+$('.tabs-h li').click(function () {
+
+var tabsContent = '#' + $(this).parent().data('content');
+$(this).parent().children('li').removeClass('active');
+$(this).addClass('active');
+
+$(tabsContent + ' > div').hide();
+$(tabsContent + ' > div:nth-child(' + $(this).data('tab') + ')').fadeIn();
+});
+</script><style>
+.combo {
+align-items: flex-start;
+}
+</style>
+<div class="container container--color stone">
+<div>
+<h2 class="subtitle centrado spacer-top-32 spacer-bottom-64">Herramientas digitales para empresas</h2>
+<div class="combo combo--equal spacer-bottom-32">
+<div>
+<article class="card"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/outline/ico-out-laptop.svg" />
+<h3 class="spacer-top-16 spacer-bottom-16">ScotiaConnect</h3>
+<p>ScotiaConnect es la nueva Banca por Internet que te ofrece soluciones integrales para optimizar las necesidades operativas y administrativas de tu empresa.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/scotiaconnect.aspx" class="link link--important"> Conoce m&aacute;s</a></article>
+</div>
+<div>
+<article class="card"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/outline/ico-out-checklist.svg" />
+<h3 class="spacer-top-16 spacer-bottom-16">Scotia en Linea</h3>
+<p>Es el Servicio integral de Banca en L&iacute;nea de Scotiabank dirigido a empresas y personas f&iacute;sicas con actividad empresarial, con Doble Factor de Autenticaci&oacute;n y Operaciones Seguras.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/scotia-en-linea.aspx" class="link link--important"> Conoce m&aacute;s</a></article>
+</div>
+</div>
+<div class="combo combo--equal">
+<div>
+<article class="card"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/outline/ico-out-inversiones.svg" />
+<h3 class="spacer-top-16 spacer-bottom-16">ScotiaTrade: Inversiones por Internet</h3>
+<p>Es un avanzado sistema de Inversi&oacute;n en l&iacute;nea que te permite realizar tus operaciones desde la comodidad de tu casa u oficina o desde cualquier parte del mundo a trav&eacute;s de Internet.</p>
+<a href="https://www.scotiainlatrade.com/servlets/Scotiatrade/inlatrade/scotiatradeDB.htm" class="link link--important"> Conoce m&aacute;s</a></article>
+</div>
+<div>
+<article class="card"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/outline/ico-out-trade-world.svg" />
+<h3 class="spacer-top-16 spacer-bottom-16">TRADEXPRESS elite Plus</h3>
+<p>Es una soluci&oacute;n en l&iacute;nea dise&ntilde;ada para satisfacer tus necesidades de comercio exterior, de una manera f&aacute;cil y segura a trav&eacute;s de Internet.</p>
+<br /><a href="https://www.tradexpresseliteplus.scotiabank.com.mx/portal/PasswordLogon.jsp?organization=BNS&amp;branding=bnsmx&amp;locale=en_CA&amp;GL=Y&amp;_ga=2.208534290.1270708220.1779119912-1479980203.1778715183" class="link link--important"> Conoce m&aacute;s</a></article>
+</div>
+</div>
+</div>
+</div><style>
+
+.row4 {
+display: flex;
+justify-content: space-between;
+align-items: stretch;
+}
+
+.column4 {
+width: 23%;
+display: flex;
+flex-wrap: nowrap;
+}
+
+	/* MOBILE */
+	@media (max-width: 767px) {
+
+		.row4 {
+		flex-direction: column;
+		gap: 16px;
+		}
+
+		.column4 {
+		width: 100%;
+		}
+    }
+
+
+
+</style>
+<div class="container">
+<div>
+<h2 class="subtitle centrado spacer-top-64 spacer-bottom-64">M&aacute;s para tu empresa</h2>
+<div class="row4 spacer-bottom-64">
+<div class="column4">
+<article class="card">
+<h3 class="spacer-bottom-16">Soluciones Impulso Exterior PyME</h3>
+<p>Soluciones con condiciones preferenciales para ti que eres importador o exportador, o eres proveedor de una empresa extranjera.</p>
+<a href="https://www.scotiabank.com.mx/pymes/soluciones-impulso-exterior.aspx" class="link"> Conocer m&aacute;s</a></article>
+</div>
+<div class="column4">
+<article class="card">
+<h3 class="spacer-bottom-16">Scotiabank PyME</h3>
+<p>M&aacute;s que solo ofrecerte soluciones financieras, somos tu aliado en el desarrollo y crecimiento de tu negocio.</p>
+<a href="https://www.scotiabank.com.mx/pymes.aspx" class="link"> Conocer m&aacute;s</a></article>
+</div>
+<div class="column4">
+<article class="card">
+<h3 class="spacer-bottom-16">Estudios Economicos</h3>
+<p>Scotiabank M&eacute;xico realiza investigaci&oacute;n y an&aacute;lisis de las principales variables macroecon&oacute;micas, microecon&oacute;micas, sectoriales y regionales del pa&iacute;s y su entorno internacional.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/inversiones/economia-mercados.aspx" class="link"> Conocer m&aacute;s</a></article>
+</div>
+<div class="column4">
+<article class="card">
+<h3 class="spacer-bottom-16">Terminales ScotiaPOS</h3>
+<p>Atrae m&aacute;s clientes, aumenta tus ventas y mejora la seguridad de tu empresa, brindando una mejor experiencia de compra.</p>
+<a href="https://www.scotiabank.com.mx/empresas-y-gobierno/terminales-pos.aspx" class="link"> Conocer m&aacute;s</a></article>
+</div>
+</div>
+</div>
+</div><div class="band-banner grey">
+<div style="background-image: url('https://cdn.aglty.io/scotia-bank-mexico/images/empresas-gobierno/banner-divisas-scotiabank-mexico.webp');">
+<div>
+<div>
+<h2 class="subtitle">Tipo de Cambio</h2>
+<p>Encuentra el tipo de cambio de hoy y la evoluci&oacute;n de las divisas m&aacute;s consultadas en M&eacute;xico.</p>
+<a class="pill" href="https://www.scotiabank.com.mx/tipo-de-cambio.aspx"> <span>Conocer el Tipo de Cambio</span> </a></div>
+</div>
+</div>
+</div>
+    </section>
+
+            <!-- /CONTENT -->
+        </main>
+
+        <!-- FreeFind Begin No Index -->
+        <footer id="siteFooter">
+            <a href="#siteHeader" role="button" class="backToTop active" aria-label="Volver a la Cima"></a>
+            <div id="topFooter">
+                <style>
+	.new-footer {
+		padding: 0 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 1140px;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+	.footer-column {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.footer-column-two {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.footer-link {
+		color: inherit;
+		font-weight: 700;
+		text-decoration: underline;
+	}
+
+	.footer-icons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.footer-icons>a {
+		margin: 0 6px;
+		font-size: 1.5em;
+		color: #000;
+	}
+
+	.footer-icons>img {
+		margin: 0 6px;
+	}
+
+	.footer-icons > a > img{
+		width: 25px;
+	}
+
+	@media only screen and (max-width: 720px) {
+		.new-footer {
+			flex-direction: column;
+		}
+
+		.footer-column {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			flex-direction: column;
+		}
+
+		.footer-column-two {
+			width: 100%;
+			text-align: left;
+			display: flex;
+			margin-top: 25px;
+			flex-direction: row;
+		}
+
+		.footer-column-two i{
+			margin-right: 10%;
+			font-size: 1.9rem;
+		}
+
+		.footer-column i{
+			font-size: 1.9rem;
+			margin: 10px;
+		}
+
+		.footer-icons > a > img{
+			width: 45px;
+			margin: 10px;
+		}
+
+	}
+
+	.footer-tagline{
+	margin: 30px 0 70px 0;
+	}
+	.footer-tagline > img {
+	display: block;
+	margin: 0 auto;
+	width: 180px;
+	}
+	
+	.footer-tagline > div {
+	text-align: center;
+	margin-top: 8px;
+	font-size: 18px;
+	font-weight: 300;
+	}
+	
+</style>
+<div class="footer-tagline"><img src="https://cdn.aglty.io/scotia-bank-mexico/scotiabank-logo-footer.svg" alt="scotiabank logo" /> <!-- <p style="text-align: center;">Tienes más de lo que crees</p> --></div>
+<div class="new-footer"><!--<div class="footer-column-two"><i class="topFooter__column-icon icon-Icon_Question1"></i> -->
+<div class="footer-column-two"><i class="topFooter__column-icon fa fa-circle-question"></i>
+<div><span><a id="sbmx_click_footer_ayuda" class="footer-link" href="https://ayuda.scotiabank.com.mx/?_ga=2.76579797.1761995464.1685977986-1428842772.1679507345" target="_blank" rel="noopener noreferrer">Centro de Ayuda</a> y </span><span><a id="sbmx_click_footer_tutoriales" class="footer-link" href="https://www.scotiabank.com.mx/tutoriales.aspx" target="_blank" rel="noopener noreferrer">Tutoriales</a></span></div>
+</div>
+<!-- <div class="footer-column-two"><i class="topFooter__column-icon icon-Icon_Channel"></i> -->
+<div class="footer-column-two"><i class="topFooter__column-icon fa fa-newspaper"></i>
+<div><span><strong>Educaci&oacute;n financiera: </strong></span> <span><a id="sbmx_click_footer_blog" class="footer-link" href="https://www.scotiabank.com.mx/blog.aspx" target="_self">Blog</a>, <a id="sbmx_click_footer_glosario" class="footer-link" href="https://www.scotiabank.com.mx/glosario-financiero.aspx" target="_self">Glosario</a> , <a id="sbmx_click_footer_podcast" class="footer-link" href="https://www.scotiabank.com.mx/podcast.aspx" target="_self">Podcast</a> y <a id="sbmx_click_footer_educa_tu_cartera" class="footer-link link-intersticial" data-popup="popup2" target="_blank" href="https://webappsos.condusef.gob.mx/EducaTuCartera/" rel="noopener noreferrer">Educa tu Cartera</a></span></div>
+</div>
+<!-- <div class="footer-column-two"><i class="topFooter__column-icon icon-Icon_OldPhone"></i>  -->
+<div class="footer-column-two"><i class="topFooter__column-icon fa fa-phone"></i>
+<div><span><strong>Atenci&oacute;n a clientes:</strong></span> <span><a id="sbmx_click_footer_telefono" class="footer-link" href="tel:55 5728 1900" target="_blank" rel="noopener noreferrer">55 5728 1900</a><br /><a id="sbmx_click_footer_contacto" class="footer-link" href="https://www.scotiabank.com.mx/contacto.aspx" target="_self">M&aacute;s n&uacute;meros</a></span></div>
+</div>
+<!-- <div class="footer-column"><i class="topFooter__column-icon icon-Icon_Chat"></i> <span><strong>Redes Sociales</strong></span> -->
+<div class="footer-column"><i class="topFooter__column-icon fa fa-message"></i> <span><strong>Redes Sociales</strong></span>
+<div class="footer-icons"><a id="sbmx_click_footer_facebook" target="_blank" href="https://www.facebook.com/ScotiabankMX" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a><a id="sbmx_click_footer_twitter" target="_blank" href="https://twitter.com/ScotiabankMX" aria-label="Twitter" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a><a id="sbmx_click_footer_youtube" target="_blank" href="https://www.youtube.com/user/ScotiabankMX" aria-label="Youtube" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a><a id="sbmx_click_footer_linkedin" target="_blank" href="https://www.linkedin.com/company/scotiabank/" aria-label="Linkedin" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a><a id="sbmx_click_footer_instagram" target="_blank" href="https://www.instagram.com/scotiabankmx/" aria-label="Instagram" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></div>
+</div>
+<!-- <div class="footer-column"><i class="topFooter__column-icon icon-Icon_Phone"></i> <span><strong>Descarga ScotiaM&oacute;vil</strong></span> -->
+<div class="footer-column"><i class="topFooter__column-icon fa fa-mobile-screen"></i> <span><strong>Descarga ScotiaM&oacute;vil</strong></span>
+<div class="footer-icons"><a id="sbmx_click_footer_applestore" href="https://apps.apple.com/mx/app/scotiam%C3%B3vil-mx/id720812080" target="_blank" rel="noopener noreferrer"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-applestore.svg" alt="apple store icono" /></a>&nbsp;<a id="sbmx_click_footer_playstore" href="https://play.google.com/store/apps/details?id=com.scotiabankmx.scotiamovil&amp;hl=es" target="_blank" rel="noopener noreferrer"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-android.svg" alt="play store icono" /></a>&nbsp;<a id="sbmx_click_footer_appgallery" href="https://appgallery.huawei.com/app/C106307481" target="_blank" rel="noopener noreferrer"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-appgallery.svg" alt="app gallery icono" /></a></div>
+</div>
+</div>
+<div id="popup2" class="popup-intersticial"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/img-educa-tu-carrera-condusef.webp" />
+<p style="font-size: 24px;">Atenci&oacute;n</p>
+<p style="font-weight: 600;">Est&aacute;s saliendo de Scotiabank M&eacute;xico.<br />&iquest;Deseas continuar?</p>
+<p style="display: none;" id="url-intersticial"></p>
+<div class="buttons"><button class="salir button secondary redColor">Aceptar</button> <button class="cancelar button primary">Cancelar</button></div>
+</div>
+            </div>
+            <div id="bottomFooter">
+                <style>
+	.primary {
+		background-color: #ec111a;
+		color: #FFF;
+		border: 1px solid transparent;
+		font-weight: 800;
+		cursor: pointer;
+		border-radius: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 18px 30px;
+		box-sizing: border-box;
+		text-decoration: none;
+		display: inline-block;
+		-webkit-transition: .33s ease;
+		transition: .33s ease;
+	}
+
+	.primary:hover {
+		border-color: #a6000e;
+		background-color: #a6000e;
+	}
+
+	.secondary {
+		background-color: #FFF;
+		color: #333;
+		border: 1px solid #333;
+		cursor: pointer;
+		border-radius: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 18px 30px;
+		box-sizing: border-box;
+		text-decoration: none;
+		display: inline-block;
+		-webkit-transition: .33s ease;
+		transition: .33s ease;
+	}
+
+	.secondary:hover {
+		border-color: #ec111a;
+		color: #ec111a;
+
+	}
+
+	.secondary.redColor {
+		color: #ec111a;
+		border: 1px solid #ec111a;
+	}
+
+	.secondary.redColor:hover {
+		border-color: #333;
+		color: #333;
+	}
+
+	.popup-intersticial {
+		background-color: #333333;
+		color: #FFF;
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 32%;
+		transform: translate(-50%, -50%);
+		padding: 20px;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		box-shadow: 0 2px 10px 0 rgb(0 0 0 / 11%);
+		z-index: 9999;
+	}
+
+	@media only screen and (max-width:720px) {
+		.popup-intersticial {
+			width: 80%;
+		}
+	}
+
+	.button {
+		margin: 10px;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: right;
+	}
+</style>
+<ul class="footerLinks col" style="text-align: center;">
+<li><a id="sbmx_click_footerlegales_seguridad" href="/seguridad.aspx" target="_self">Seguridad y Fraudes</a></li>
+<li><a id="sbmx_click_footerlegales_avisoprivacidad" href="/transparencia/aviso-privacidad.aspx" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a></li>
+<li><a id="sbmx_click_footerlegales_transparencia" href="/transparencia.aspx" target="_self">Transparencia</a></li>
+<li><a id="sbmx_click_footerlegales_tycpromociones" href="https://www.scotiabank.com.mx/promociones/terminos-y-condiciones.aspx" target="_self">T&eacute;rminos y condiciones de Promociones</a></li>
+<li><a id="sbmx_click_footerlegales_empleos" href="https://www.scotiabank.com/careers/es/carreras.html" target="_blank" rel="noopener noreferrer">Ofertas de Empleo</a></li>
+<li><a id="sbmx_click_footerlegales_tipodecambio" href="/tipo-de-cambio.aspx" target="_blank" rel="noopener noreferrer">Tipo de Cambio</a></li>
+<li><a id="sbmx_click_footerlegales_fatca" href="https://www.scotiabank.com/global/es/ley-de-cumplimiento-fiscal-de-cuentas-en-el-extranjero.html" target="_blank" rel="noopener noreferrer">FATCA</a></li>
+<li><a id="sbmx_click_footerlegales_tycbancaelectronica" href="/transparencia/terminos-condiciones-banca-electronica.aspx" target="_self">T&eacute;rminos y condiciones de banca electr&oacute;nica</a></li>
+<li><a id="sbmx_click_footerlegales_bancamercadosglobales" href="https://www.gbm.scotiabank.com/es.html" rel="noopener">Banca y Mercados Globales</a></li>
+<li><a id="sbmx_click_footerlegales_directorioagencias" href="https://cdn.aglty.io/scotia-bank-mexico/pdf/acerca-de/comunicados/directorio-agencia-de-cobranzas.pdf" target="_blank" rel="noopener noreferrer">Directorio Agencias de Cobranza</a></li>
+<li><a id="sbmx_click_footerlegales_invierteenti" href="/invierte-en-ti.aspx" target="_blank" rel="noopener noreferrer">Invierte en Ti</a></li>
+<li><a id="sbmx_click_footerlegales_recursos" href="https://www.scotiabank.com.mx/acerca-de/recursos.aspx" target="_blank" rel="noopener noreferrer">Recursos Scotiabank</a></li>
+</ul>
+<ul class="footerLinks col" style="text-align: right; margin-top: -20px;">
+<li><a id="sbmx_click_footerlegales_persdesap" target="_blank" href="https://www.scotiabank.com.mx/personas-desaparecidas.aspx" rel="noopener noreferrer">Personas Desaparecidas</a></li>
+<li><a id="sbmx_click_footerlegales_condusef" class="link-intersticial" data-popup="popup1" target="_blank" href="https://www.condusef.gob.mx/" rel="noopener noreferrer">CONDUSEF</a></li>
+<li><a id="sbmx_click_footerlegales_burocredito" href="/transparencia/buro.aspx" target="_self"> <img loading="lazy" src="https://cdn.aglty.io/scotia-bank-mexico/images/BuroLogo.png" alt="logo buro credito" style="width: 25px; height: 25px;" /> </a></li>
+<li><a id="sbmx_click_footerlegales_ipab" style="background-image: url('https://cdn.aglty.io/scotia-bank-mexico/images/logo_ipab.png'); background-repeat: no-repeat; background-size: cover;" loading="lazy" class="link-intersticial" data-popup="popup1" target="_blank" href="https://www.ipab.org.mx/transparencia-ipab/acceso-a-la-informacion" rel="noopener noreferrer"> <!-- ><img loading="lazy" src="https://cdn.aglty.io/scotia-bank-mexico/images/logo_ipab.png" alt="logo ipab" style="width: 43px;" /> -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+<li><a id="sbmx_click_footerlegales_costoscomisiones" href="/transparencia/costos-comisiones.aspx" target="_self" rel="noopener">Consulta los Costos y las Comisiones de nuestros productos</a></li>
+</ul>
+<div id="popup1" class="popup-intersticial">
+<p style="font-size: 24px;">Atenci&oacute;n</p>
+<p style="font-weight: 600;">Est&aacute;s saliendo de Scotiabank M&eacute;xico.<br />&iquest;Deseas continuar?</p>
+<p style="display: none;" id="url-intersticial"></p>
+<div class="buttons"><button class="salir button secondary redColor">Aceptar</button> <button class="cancelar button primary">Cancelar</button></div>
+</div>
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+const links = document.querySelectorAll('.link-intersticial');
+
+links.forEach(link => {
+link.addEventListener('click', (event) => {
+event.preventDefault();
+const url = event.target.href;
+const popupId = link.dataset.popup;
+const popup = document.getElementById(popupId);
+const urlElement = popup.querySelector('#url-intersticial');
+urlElement.textContent = url;
+popup.style.display = 'block';
+});
+});
+
+const popups = document.querySelectorAll('.popup-intersticial');
+
+popups.forEach(popup => {
+const salirButton = popup.querySelector('.salir');
+const cancelarButton = popup.querySelector('.cancelar');
+
+salirButton.addEventListener('click', () => {
+const url = popup.querySelector('#url-intersticial').textContent;
+window.open(url);
+event.preventDefault();
+popup.style.display = 'none';
+});
+
+cancelarButton.addEventListener('click', () => {
+event.preventDefault();
+popup.style.display = 'none';
+});
+});
+});
+</script>
+            </div>
+            <div id="legalFooter">
+                <div class="col">&copy; 2026&nbsp;Scotiabank</div>
+            </div>
+        </footer>
+        <!-- FreeFind End No Index -->
+
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="34E3E63D" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="1JQOmuaA2zvdEfVkkAHeM3hr4zPTU+Rci4T05uEXLzmbHF4sDJG0ZoIcs7mtMNVNkjv4KqH3WQOh9YQSGbB9JOxnIuAM7GlRovnWjPgNnhlcS9aTdOVn21Ahr6RdxM4vUZ+2FxbaGynw4bgbZfgzCg==" />
+</div></form>
+<script>
+	var ico1 = document.getElementById("rptDesktopeHeaderCTA_icoCTA_0");
+        var ico2 = document.getElementById("rptDesktopeHeaderCTA_icoCTA_1");
+        var ico3 = document.getElementById("rptDesktopeHeaderCTA_icoCTA_2");
+	var ico4 = document.getElementById("rptDesktopeHeaderCTA_icoCTA_3");
+
+        ico1.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-sucursal-new.svg" alt="" decoding="async">';
+        ico2.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-phone.ringin.svg" alt="" decoding="async">';
+        ico3.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-world-money.svg" alt="" decoding="async">';
+	ico4.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-scotiamovil-mobile-app-red-v2.svg" alt="" decoding="async">';
+
+        var ico1Mob = document.getElementById("rptMobileHeaderCTA_icoCTA_0");
+        var ico2Mob = document.getElementById("rptMobileHeaderCTA_icoCTA_1");
+        var ico3Mob = document.getElementById("rptMobileHeaderCTA_icoCTA_2");
+	var ico4Mob = document.getElementById("rptMobileHeaderCTA_icoCTA_3");
+
+        ico1Mob.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-sucursal-new.svg" alt="" decoding="async">';
+        ico2Mob.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-phone.ringin.svg" alt="" decoding="async">';
+        ico3Mob.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-world-money.svg" alt="" decoding="async">';
+	ico4Mob.innerHTML = '<img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-scotiamovil-mobile-app-red-v2.svg" alt="" decoding="async">';
+</script>
+
+<script type="text/javascript"> _linkedin_data_partner_id = "31046"; </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script>
+
+<!-- style fixes -->
+<script>
+	(function(){
+    var megaMenuHeader = document.getElementById('megaMenuHeader');
+    if (megaMenuHeader) megaMenuHeader.style.borderTop = '1px solid #E2E8EE';
+
+    var top = document.getElementById('top');
+    if (top) top.style.backgroundColor = '#FAFBFD';
+
+    var logoHeader = document.getElementById('logoHeader');
+    if (logoHeader) logoHeader.style.borderTop = '1px solid #EEE';
+  })();
+</script>
+
+<!-- ===== ACCESIBILIDAD WIDGET ===== -->
+<div class="sc-access-widget"><!-- Botón flotante --> <button type="button" class="sc-access-toggle" aria-label="Opciones de accesibilidad"> <img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-accesibilidad.svg" alt="" /> </button> <!-- Panel -->
+<div class="sc-access-panel"><button type="button" data-access="font-plus"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-text-increase.svg" alt="" class="imgaccesibilidad" /><br />Aumentar texto</button> <button type="button" data-access="font-minus"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-text-decrease.svg" alt="" class="imgaccesibilidad" /><br />Disminuir texto</button> <button type="button" data-access="grayscale"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-grey-scale.svg" alt="" class="imgaccesibilidad" /><br />Escala de grises</button> <button type="button" data-access="underline"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/ico-text-underline.svg" alt="" class="imgaccesibilidad" /><br />Subrayar enlaces</button> <button type="button" data-access="read"><img src="https://cdn.aglty.io/scotia-bank-mexico/images/ico/icio-reader-voice.svg" alt="" class="imgaccesibilidad" /><br />Leer p&aacute;gina</button></div>
+</div>
+<style>
+	@media screen and (max-width: 768px) {
+		.sc-access-panel {
+			bottom: 56px !important;
+			left: 0px !important;
+			display: flex !important;
+			flex-direction: column !important;
+			width: 250% !important;
+			align-items: center !important;
+			gap: 0px !important;
+		}
+		.imgaccesibilidad {
+			width: 22px;
+		}	}
+	.contraste-alto {
+		background: black !important;
+		color: yellow !important;
+	}
+	body.escala-grises::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #808080;
+		mix-blend-mode: saturation;
+		pointer-events: none;
+		z-index: 1;
+	}
+	.subrayar a {
+		text-decoration: underline !important;
+	}
+	/* ===== CONTENEDOR ===== */
+	.sc-access-widget {
+		position: fixed;
+		bottom: 15px;
+		left: 24px;
+		/* cambia a right:24px si lo quieres a la derecha */
+		z-index: 99999;
+		font-family: Arial, sans-serif;
+	}
+	/* ===== BOTÓN ===== */
+	.sc-access-toggle {
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		border: none;
+		background: #e3121d;
+		color: #fff;
+		font-size: 24px;
+		cursor: pointer;
+		box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+		padding-top: 5px;
+	}
+	/* ===== PANEL ===== */
+	.sc-access-panel {
+		position: absolute;
+		bottom: 0;
+		left: 64px;
+		/* aparece hacia la derecha del botón */
+		background: #000000b5;
+		border-radius: 8px;
+		padding: 14px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+		transform: translateX(-20px);
+		opacity: 0;
+		pointer-events: none;
+		transition: all .25s ease;
+		display: flex;
+		flex-direction: row;
+		width: 1350%;
+		align-items: center;
+		gap: 16px;
+	}
+	/* Panel visible */
+	.sc-access-widget.open .sc-access-panel {
+		transform: translateX(0);
+		opacity: 1;
+		pointer-events: auto;
+	}
+	/* Título */
+	.sc-access-title {
+		font-weight: bold;
+		margin: 0 0 10px;
+		font-size: 14px;
+	}
+	/* Botones */
+	.sc-access-panel button {
+		width: 100%;
+		background-color: #FFF;
+		color: #333;
+		border: 1px solid #333;
+		cursor: pointer;
+		border-radius: 8px;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 16px 30px;
+		box-sizing: border-box;
+		text-decoration: none;
+		display: inline-block;
+		-webkit-transition: .33s ease;
+		transition: .33s ease;
+		margin-bottom: 7px;
+	}
+	.sc-access-panel button:hover {
+		border-color: #ec111a;
+		color: #ec111a;
+	}
+	/* ===== EFECTOS ACCESIBILIDAD ===== */
+	.sc-access-grayscale {
+		filter: grayscale(100%);
+	}
+	.sc-access-contrast {
+		filter: contrast(1.4);
+	}
+</style>
+<script>
+	(function(){
+  const widget = document.querySelector('.sc-access-widget');
+  const toggle = widget.querySelector('.sc-access-toggle');
+  const panel = widget.querySelector('.sc-access-panel');
+  /* ===== TOGGLE PANEL ===== */
+  toggle.addEventListener('click', () => {
+    widget.classList.toggle('open');  });
+  /* ===== ACCESIBILIDAD ===== */
+let fontScale = 1;
+const MIN_SCALE = 0.85;
+const MAX_SCALE = 1.4;
+function inicializarTamañosBase() {
+const elementos = document.querySelectorAll(
+"p, h1, h2, h3, h4, h5, h6, span, li, a");
+elementos.forEach(el => {
+if (!el.dataset.baseSize) {
+const size = window.getComputedStyle(el).fontSize;
+el.dataset.baseSize = parseFloat(size); }});}
+function aplicarEscalaTexto() {
+const elementos = document.querySelectorAll(
+"p, h1, h2, h3, h4, h5, h6, span, li, a" );
+elementos.forEach(el => {
+const baseSize = parseFloat(el.dataset.baseSize);
+if (!baseSize) return;
+el.style.fontSize = (baseSize * fontScale) + "px"; }); }
+function aumentarTexto() {
+if (fontScale >= MAX_SCALE) return;
+fontScale += 0.1;
+aplicarEscalaTexto(); }
+function disminuirTexto() {
+if (fontScale <= MIN_SCALE) return; fontScale -=0.1; aplicarEscalaTexto(); }
+function alternarEscalaGrises() {
+document.body.classList.toggle("escala-grises"); }
+function alternarSubrayado() {
+document.body.classList.toggle("subrayar"); }
+document.addEventListener("DOMContentLoaded", () => {
+  inicializarTamañosBase(); });
+/* ===== LECTOR DE PAGINA INICIO ===== */
+let lectorActivo = false;
+let speech;
+function leerPagina(){
+if(lectorActivo){
+speechSynthesis.cancel();
+lectorActivo = false;
+return; }
+const contenido =
+document.querySelector("main") ||
+document.querySelector("#content") ||
+document.querySelector(".main-content") ||
+document.body;
+const texto = contenido.innerText;
+speech = new SpeechSynthesisUtterance(texto);
+speech.lang = "es-MX";
+speech.rate = 1;
+speech.pitch = 1;
+speechSynthesis.speak(speech);
+lectorActivo = true; }
+/* ===== LECTOR DE PAGINA FIN ===== */
+/* =========================
+BIND DE BOTONES DEL PANEL
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+const panel = document.querySelector(".sc-access-panel");
+if (!panel) return;
+panel.addEventListener("click", (e) => {
+const btn = e.target.closest("button");
+if (!btn) return;
+const action = btn.dataset.access;
+switch (action) {
+case "font-plus":
+aumentarTexto();
+break;
+case "font-minus":
+disminuirTexto();
+break;
+case "contrast":
+alternarContraste();
+break;
+case "grayscale":
+alternarEscalaGrises();
+break;
+case "underline":
+alternarSubrayado();
+break;
+case "read":
+leerPagina();
+break;
+} }); }); })();
+</script>
+
+
+
+
+
+
+
+
+<!-- ===== COOKIE BANNER ===== -->
+<style>
+.cookie-banner {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+display: grid;
+grid-template-columns: 0;
+grid-template-areas:
+"spacer content"
+"spacer action";
+gap: 16px;
+padding: 16px 16px 20px;
+background: #f4f4f4;
+box-shadow: 0 -2px 6px rgba(0,0,0,.12);
+z-index: 9000;
+font-size: 15px;
+}
+.cookie-spacer {
+grid-area: spacer;
+}
+.cookie-content {
+max-width: 90%;
+}
+.cookie-content p {
+margin: 0;
+line-height: 1.4;
+}
+.cookie-action {
+grid-area: action;
+padding-right: 25%;
+padding-left: 15%;
+}
+.cookie-action button {
+width: 100%;
+padding: 14px;
+font-size: 16px;
+border: none;
+border-radius: 6px;
+background: #ec111a;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+.cookie-action button:hover {
+background-color: #b70d14; 
+}
+/* DESKTOP */
+@media (min-width: 769px) {
+.cookie-banner {
+grid-template-columns: 5% 1fr 15%;
+grid-template-areas: "spacer content action";
+align-items: center;
+}
+.cookie-action button {
+width: auto;
+padding: 10px 20px;
+} }
+</style>
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Aviso de privacidad">
+<div class="cookie-spacer" aria-hidden="true"></div>
+<div class="cookie-content">
+
+<p>Le informamos que utilizamos cookies y otras tecnologías para monitorear su comportamiento como usuario, brindarle un mejor servicio y experiencia de navegación en nuestro portal. <a class="link" href="https://www.scotiabank.com.mx/transparencia/aviso-privacidad.aspx">Aviso de Privacidad.</a></p> </div>
+<div class="cookie-action"><button id="cookie-close" type="button"> Aceptar </button></div>
+</div>
+<script>
+	(function () {
+  var STORAGE_KEY = 'cookieBannerAccepted_v1';
+  var SIX_MONTHS = 1000 * 60 * 60 * 24 * 182;
+  function hasConsent() {
+    try {
+      var v = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      return v && Date.now() < v.expires;
+    } catch {
+      return false; 
+       }  }
+  function saveConsent() {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ expires: Date.now() + SIX_MONTHS })
+    );  }
+  var banner = document.getElementById('cookie-banner');
+  var btn = document.getElementById('cookie-close');
+  if (!banner || !btn) return;
+  if (hasConsent()) {
+    banner.remove();
+    return;  }
+  btn.addEventListener('click', function () {
+    saveConsent();
+    banner.remove();
+  }); })();
+</script></body>
+</html>

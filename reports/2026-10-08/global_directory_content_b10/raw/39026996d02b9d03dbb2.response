@@ -1,0 +1,1411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta property="og:title"
+              content="Register a Company">
+        <meta property="og:description"
+              content="">
+        
+            
+            
+            <meta property="og:image" content="/media/images/Register_a_Company_bSD6kFj.original.jpg">
+        
+        <meta property="og:url" content="http://localhost/for-businesses/register-a-company/">
+        <title>
+            
+                
+                    Register a Company
+                
+            
+            
+                
+                - Securities and Exchange Commission, Nigeria
+            
+        </title>
+        <meta name="keywords" content="" />
+        <meta name="description"
+              content="" />
+        
+            
+            <meta name="image" content="/media/images/Register_a_Company_bSD6kFj.original.jpg" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        
+        
+        
+        
+            
+            <link rel="alternate" type="application/rss+xml" 
+                  title="SEC Nigeria News Feed" 
+                  href="/feeds/news.rss">
+            
+            <link rel="alternate" type="application/rss+xml" 
+                  title="SEC Nigeria Events Feed" 
+                  href="/feeds/events.rss">
+            
+            
+            
+        
+        
+        
+        <link rel="stylesheet"
+              type="text/css"
+              href="/static/fonts/Montserrat.css"
+              preload>
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/custom_styles.css">
+        <link rel="shortcut icon"
+              href="/static/images/favicon.png"
+              type="image/x-icon" />
+        <style>
+            
+            [x-cloak] {
+                display: none;
+            }
+    
+            .animate-pause {
+               animation-play-state: paused;
+            }
+            
+        </style>        
+        <script src="/static/js/htmx.min.js" defer></script>
+        <script src="/static/js/htmx-alpine-morph.js" defer></script>
+        <script src="/static/js/alpine-collapse.min.js" defer></script>
+        <script src="/static/js/alpine-morph.min.js" defer></script>
+        <script src="/static/js/alpine.min.js" defer></script>
+        
+    </head>
+    <body hx-ext="multi-swap"
+          hx-headers='{"X-CSRFToken": "xGHXtk5n9V44rIrWbVjZY5mDEg1gB0Tg0B9l4enbsCR4RVCCgsQfYLa9pmX7WLP0"}'
+          x-data="{showNav: false}"
+          :class="showNav ? 'overflow-hidden' : ''"
+          class="
+">
+        
+        
+<nav x-data="{toggleHeight: false}"
+     :class="{ 'h-full bg-blue-500 text-white': showNav, 'h-auto bg-white text-gray-500': !showNav }"
+     class="w-full h-auto fixed top-0 z-[999] transition-all duration-300 overflow-y-auto"
+     @scroll.window="toggleHeight = (window.pageYOffset > 40) ? true : false">
+    <div :class="toggleHeight ? 'py-2 sm:py-4' : 'py-4 sm:py-8'"
+         class="px-6 sm:px-20 z-[200] relative">
+        <div class="grid grid-cols-3 justify-between items-center">
+            <div class="sm:w-full flex">
+                <a href="/search/"
+                   class="text-current inline-flex items-center">
+                    <svg class="icon w-10 h-10 sm:w-12 sm:h-12 mr-2 fill-current">
+                        <use href="/static/icons/symbol-defs.svg#search"></use>
+                    </svg>
+                    <span class="hidden sm:block">SEARCH</span>
+                </a>
+            </div>
+            <div class="text-center flex justify-center items-center">
+                <a href="/" class="mx-auto w-auto text-center">
+                    <img :src="!showNav ? '/static/icons/logo.svg' : '/static/icons/logo-white.svg'"
+                         width="auto"
+                         height="auto"
+                         :class="toggleHeight ? ' w-24 md:w-28' : 'w-36 md:w-44' "
+                         class=" transition-all duration-300 mx-auto logo-img"
+                         alt="SEC" 
+                         />
+                </a>    
+            </div>
+            <div class="sm:w-full flex flex-row">
+                <a href="https://www.pebec.gov.ng/reportgov-ng"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:opacity-80 transition-opacity flex flex-col mt-3">
+                    <img src="/static/images/ReportGovLogo.png"
+                        class="rep-img h-auto"
+                        width="100"
+                        height="auto"
+                        alt="report gov" />
+                    <!-- <span class="mt-2 text-blue-500"></span> -->
+                </a>
+                <button @click="showNav = !showNav"
+                        aria-controls="navbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        class="text-current inline-flex items-center ml-auto">
+                    <svg class="icon w-10 h-10 sm:w-12 sm:h-12 mr-2 fill-current">
+                        <use :href="!showNav ? '/static/icons/symbol-defs.svg#menu' : '/static/icons/symbol-defs.svg#close'"></use>
+                    </svg>
+                    <span class="hidden sm:block" x-html="showNav ? 'CLOSE' : 'MENU'"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="px-6 sm:px-20 w-full h-auto z-[100] pb-16 text-white"
+         x-show="showNav"
+         x-transition
+         x-collapse
+         id="navbar">
+        <div>
+            <ol class="flex flex-col">
+                
+                
+
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 1 ? selected = 1 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 1 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/for-investors/"
+                   class="hover:text-blue-200  mx-auto text-center">For Investors</a>
+                <button @click="selected !== 1 ? selected = 1 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 1 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 1, 'max-h-auto': selected === 1 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-investors/find-a-registered-operator/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Find a Registered Operator</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-investors/keep-track-of-circulars/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Keep Track of Circulars</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-investors/whistleblowing/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Whistleblowing</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-investors/known-investment-scams/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Known Investment Scams</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 2 ? selected = 2 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 2 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/for-operators/"
+                   class="hover:text-blue-200  mx-auto text-center">For Operators</a>
+                <button @click="selected !== 2 ? selected = 2 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 2 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 2, 'max-h-auto': selected === 2 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-operators/operator-registration/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Operator Registration</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 2 ? selectedChild = 2 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 2 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/for-operators/keep-track-of-capital-market-data/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Keep Track of Capital Market Data</a>
+                <button @click="selectedChild !== 2 ? selectedChild = 2 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 2 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 2, 'max-h-auto': selectedChild === 2 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/for-operators/keep-track-of-capital-market-data/statistical-bulletin/" class="hover:text-blue-200">Statistical Bulletin</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/for-operators/keep-track-of-capital-market-data/net-asset-value-data/" class="hover:text-blue-200">Net Asset Value Data</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/for-operators/keep-track-of-capital-market-data/quarterly-update-on-private-equity-and-infrastructure-funds/" class="hover:text-blue-200">Quarterly PE &amp; Infra. Funds</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/for-operators/keep-track-of-capital-market-data/executed-transactions/" class="hover:text-blue-200">Executed Transactions</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/for-operators/keep-track-of-capital-market-data/market-review-and-outlook/" class="hover:text-blue-200">Market Review and Outlook</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-operators/mergers-acquisitions-and-takeovers/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Mergers, Acquisitions &amp; Takeovers</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 3 ? selected = 3 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 3 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/for-businesses/"
+                   class="hover:text-blue-200 text-blue-200 mx-auto text-center">For Businesses</a>
+                <button @click="selected !== 3 ? selected = 3 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 3 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 3, 'max-h-auto': selected === 3 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-businesses/register-a-company/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Register a Company</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-businesses/become-an-operator/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Become an Operator</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-businesses/raising-capital/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Raising Capital</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/for-businesses/procurements-and-tenders/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Procurements and Tenders</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 4 ? selected = 4 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 4 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/our-mandate/"
+                   class="hover:text-blue-200  mx-auto text-center">Our Mandate</a>
+                <button @click="selected !== 4 ? selected = 4 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 4 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 4, 'max-h-auto': selected === 4 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 1 ? selectedChild = 1 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 1 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/our-mandate/regulation/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Regulation</a>
+                <button @click="selectedChild !== 1 ? selectedChild = 1 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 1 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 1, 'max-h-auto': selectedChild === 1 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/regulation/acts/" class="hover:text-blue-200">Acts</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/regulation/rules-and-regulations/" class="hover:text-blue-200">Rules and Regulations</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/regulation/codes-of-conduct/" class="hover:text-blue-200">Codes of Conduct</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/regulation/guidelines/" class="hover:text-blue-200">Guidelines</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/regulation/policies/" class="hover:text-blue-200">Policies</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 2 ? selectedChild = 2 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 2 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/our-mandate/development/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Development</a>
+                <button @click="selectedChild !== 2 ? selectedChild = 2 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 2 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 2, 'max-h-auto': selectedChild === 2 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/development/investor-education/" class="hover:text-blue-200">Investor Education</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/development/operators-insights/" class="hover:text-blue-200">Insights for Operators</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/our-mandate/development/business-insights/" class="hover:text-blue-200">Insights for Businesses</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/our-mandate/the-nigerian-capital-market-master-plan/"
+                   class="text-base sm:text-lg  hover:text-blue-200">The Capital Market Master Plan</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 5 ? selected = 5 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 5 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/enforcements/"
+                   class="hover:text-blue-200  mx-auto text-center">Enforcements</a>
+                <button @click="selected !== 5 ? selected = 5 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 5 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 5, 'max-h-auto': selected === 5 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/enforcements/companies-facing-enforcement-action/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Cos. Facing Enforcement Action</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/enforcements/referred-cases/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Referred Cases</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/enforcements/apc-matters/"
+                   class="text-base sm:text-lg  hover:text-blue-200">A.P.C. Matters</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/enforcements/litigation/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Litigation</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/enforcements/keep-track-of-enforcement-updates/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Keep Track of Enforcement Updates</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/enforcements/information-for-harmed-investors/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Information for Harmed Investors</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 6 ? selected = 6 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 6 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/about/"
+                   class="hover:text-blue-200  mx-auto text-center">About</a>
+                <button @click="selected !== 6 ? selected = 6 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 6 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 6, 'max-h-auto': selected === 6 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 1 ? selectedChild = 1 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 1 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/about/our-role/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Our Role</a>
+                <button @click="selectedChild !== 1 ? selectedChild = 1 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 1 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 1, 'max-h-auto': selectedChild === 1 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/our-role/who-we-are/" class="hover:text-blue-200">Who We Are</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/our-role/how-we-function/" class="hover:text-blue-200">How We Function</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/our-role/who-we-regulate/" class="hover:text-blue-200">Who We Regulate</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 2 ? selectedChild = 2 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 2 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/about/organizational-chart/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Organizational Chart</a>
+                <button @click="selectedChild !== 2 ? selectedChild = 2 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 2 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 2, 'max-h-auto': selectedChild === 2 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/organizational-chart/board-of-directors/" class="hover:text-blue-200">Board of Directors</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/organizational-chart/divisional-structure/" class="hover:text-blue-200">Divisional Structure</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/organizational-chart/organogram/" class="hover:text-blue-200">Organogram</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 3 ? selectedChild = 3 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 3 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/about/corporate-governance/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Corporate Governance</a>
+                <button @click="selectedChild !== 3 ? selectedChild = 3 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 3 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 3, 'max-h-auto': selectedChild === 3 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/corporate-governance/our-principles/" class="hover:text-blue-200">Our Principles</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/corporate-governance/performance-pledges/" class="hover:text-blue-200">Performance Pledges</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/corporate-governance/independent-panels-and-tribunals/" class="hover:text-blue-200">Independent Panels and Tribunals</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 4 ? selectedChild = 4 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 4 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/about/international-relations/"
+                   class="text-base sm:text-lg  hover:text-blue-200">International Relations</a>
+                <button @click="selectedChild !== 4 ? selectedChild = 4 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 4 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 4, 'max-h-auto': selectedChild === 4 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/mou-with-other-countries/" class="hover:text-blue-200">MOU with Other Countries</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/sec-and-iosco/" class="hover:text-blue-200">SEC and IOSCO</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/sec-and-nigsac/" class="hover:text-blue-200">SEC and NIGSAC</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/sec-and-wasra/" class="hover:text-blue-200">SEC and WASRA</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/sec-and-fatf/" class="hover:text-blue-200">SEC and FATF</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/sec-and-giaba/" class="hover:text-blue-200">SEC and GIABA</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/international-relations/sec-and-ifsb/" class="hover:text-blue-200">SEC and IFSB</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 5 ? selectedChild = 5 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 5 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/about/resources/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Resources</a>
+                <button @click="selectedChild !== 5 ? selectedChild = 5 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 5 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 5, 'max-h-auto': selectedChild === 5 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/resources/checklists/" class="hover:text-blue-200">Checklists</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/resources/forms/" class="hover:text-blue-200">Forms</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/resources/templates/" class="hover:text-blue-200">Templates</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/resources/frequently-asked-questions/" class="hover:text-blue-200">Frequently Asked Questions</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/resources/papers-and-publications/" class="hover:text-blue-200">Papers and Publications</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/resources/annual-reports/" class="hover:text-blue-200">Annual Reports</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/about/news/"
+                   class="text-base sm:text-lg  hover:text-blue-200">News</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/about/media-gallery/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Media Gallery</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-blue-200">
+                <button @click="selectedChild !== 8 ? selectedChild = 8 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 8 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+                <a href="/about/careers/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Careers At SEC</a>
+                <button @click="selectedChild !== 8 ? selectedChild = 8 : selectedChild = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selectedChild == 8 ? '/static/icons/symbol-defs.svg#chevron-up' : '/static/icons/symbol-defs.svg#chevron-down'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selectedChild !== 8, 'max-h-auto': selectedChild === 8 }">
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/careers/openings/" class="hover:text-blue-200">Openings</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/careers/working-with-us/" class="hover:text-blue-200">Working With Us</a>
+                    </li>
+                
+                    <li class="border-b-2 border-blue-400 py-4 text-center">
+                        <a href="/about/careers/talk-to-us/" class="hover:text-blue-200">Talk to Us</a>
+                    </li>
+                
+            </ul>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/about/contact-us/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Contact Us</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+    <li x-data="{selected:null}"
+        class="uppercase has-submenu">
+        
+            <div class="grid grid-cols-[0.5fr_1fr_0.5fr] items-center py-4 text-lg sm:text-xl border-b-2 border-white">
+                <button @click="selected !== 7 ? selected = 7 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl mr-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 7 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+                <a href="/fintech-and-innovation-hub-finport/"
+                   class="hover:text-blue-200  mx-auto text-center">Fintech and Innovation Hub (FinPort)</a>
+                <button @click="selected !== 7 ? selected = 7 : selected = null"
+                        class="text-current hover:text-blue-200 font-bold text-3xl ml-auto cursor-pointer">
+                    <svg class="icon w-6 h-6 sm:w-8 sm:h-8 stroke-none">
+                        <use :href="selected == 7 ? '/static/icons/symbol-defs.svg#minus' : '/static/icons/symbol-defs.svg#plus'"></use>
+                    </svg>
+                </button>
+            </div>
+            <ul class="relative overflow-hidden transition-all max-h-0 duration-700"
+                :class="{ 'max-h-0': selected !== 7, 'max-h-auto': selected === 7 }">
+                
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/fintech-and-innovation-hub-finport/about-finport/"
+                   class="text-base sm:text-lg  hover:text-blue-200">About FinPort</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/fintech-and-innovation-hub-finport/finport-programs-ri-and-arip/"
+                   class="text-base sm:text-lg  hover:text-blue-200">FinPort Programs (RI and ARIP)</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/fintech-and-innovation-hub-finport/registered-fintech-operators/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Registered FinTech Operators</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/fintech-and-innovation-hub-finport/checklists-for-fintechs/"
+                   class="text-base sm:text-lg  hover:text-blue-200">Checklists for Fintechs</a>
+            </div>
+        
+    </li>
+
+    <li x-data="{selectedChild:null}" class="text-center">
+        
+            <div class="block py-4 border-b-2 border-blue-200">
+                <a href="/fintech-and-innovation-hub-finport/faqs-on-fintech-and-innovation-programs/"
+                   class="text-base sm:text-lg  hover:text-blue-200">FAQs on FinTech and Innovation Programs</a>
+            </div>
+        
+    </li>
+
+
+            </ul>
+            
+        
+    </li>
+
+
+            </ol>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<div class="pt-[160px] md:pt-72 -mb-40 md:-mb-64 md:pb-5 px-6 md:px-20 overflow-auto" >
+    <div class="news-bar group relative w-full  text-gray-700 py-1 border-0 border-b-[3px] border-blue-500 z-50 overflow-hidden rounded-sm text-sm" aria-label="Latest News">
+
+        <div class="news-bar__content flex  whitespace-nowrap animate-scroll-left group-hover:animate-pause transform-gpu w-[200%]">
+    
+             
+                
+                
+                    <span class="news-bar__item inline-block px-2 md:text-sm last:mr-2">
+                        
+                            <a href="https://sec.gov.ng/for-investors/keep-track-of-circulars/commencement-of-full-electronic-registration-e-registration-on-the-commissions-eportal/"
+                                class="text-gray-200 hover:text-blue-500 hover:underline transition-colors duration-200 ease-in-out"
+                                target="_blank"  rel="noopener noreferrer">
+                                Full Electronic Registration (e-Registration) now available on the ePortal
+                            </a>
+                        
+                    </span>
+                    
+                    <span class="news-bar__separator inline-block px-2 text-gray-500 md:text-sm">|</span>
+                
+                
+                    <span class="news-bar__item inline-block px-2 md:text-sm last:mr-2">
+                        
+                            In a major boost to capital market regulation in Nigeria, President Ahmed Bola Tinubu GCFR, has assented to the Investments and Securities Bill (ISB) 2025, which repeals the Investments and Securities Act No. 29 of 2007 
+                        
+                    </span>
+                    
+                    <span class="news-bar__separator inline-block px-2 text-gray-500 md:text-sm">|</span>
+                
+             
+                
+                
+                    <span class="news-bar__item inline-block px-2 md:text-sm last:mr-2">
+                        
+                            <a href="https://sec.gov.ng/for-investors/keep-track-of-circulars/commencement-of-full-electronic-registration-e-registration-on-the-commissions-eportal/"
+                                class="text-gray-200 hover:text-blue-500 hover:underline transition-colors duration-200 ease-in-out"
+                                target="_blank"  rel="noopener noreferrer">
+                                Full Electronic Registration (e-Registration) now available on the ePortal
+                            </a>
+                        
+                    </span>
+                    
+                    <span class="news-bar__separator inline-block px-2 text-gray-500 md:text-sm">|</span>
+                
+                
+                    <span class="news-bar__item inline-block px-2 md:text-sm last:mr-2">
+                        
+                            In a major boost to capital market regulation in Nigeria, President Ahmed Bola Tinubu GCFR, has assented to the Investments and Securities Bill (ISB) 2025, which repeals the Investments and Securities Act No. 29 of 2007 
+                        
+                    </span>
+                    
+                    <span class="news-bar__separator inline-block px-2 text-gray-500 md:text-sm">|</span>
+                
+            
+
+            <!-- <span class="pr-8"></span> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        
+    <main class="pt-44 sm:pt-64">
+        <section class="grid  md:grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(50%,1fr))] ">
+            <div class="sm:pt-16 px-6 sm:px-20 mb-8 sm:mb-0">
+                <h1 class="text-3xl md:text-2xl tracking-normal sm:leading-snug text-blue-500 font-semibold uppercase">
+                    Register
+                    
+                        <br />
+                        a Company
+                    
+                    
+                        <span class="text-sm text-gray-400 font-normal">Published: August 14, 2023</span>
+                    
+                </h1>
+                
+                    <p class="text-base sm:text-xl text-gray-500 max-w-prose  tracking-normal whitespace-pre-line">
+                        Initiate company registration seamlessly with our platform, working in conjunction with the Corporate Affairs Commission (CAC).
+Transform your business dreams into a legal reality!
+                    </p>
+                
+                
+                
+            </div>
+            
+                <figure class="w-full">
+                    <picture><source srcset="/media/images/Register_a_Company_bSD6kFj.format-avif.width-1200.avif 1200w, /media/images/Register_a_Company_bSD6kFj.format-avif.width-2160.avif 2160w" sizes="50vh" type="image/avif"><source srcset="/media/images/Register_a_Company_bSD6kFj.format-webp.width-1200.webp 1200w, /media/images/Register_a_Company_bSD6kFj.format-webp.width-2160.webp 2160w" sizes="50vh" type="image/webp"><img alt="Register a Company" class="h-[50vh] max-h-[50vh] min-w-full object-cover bg-blue-50" height="400" loading="eager" sizes="50vh" src="/media/images/Register_a_Company_bSD6kFj.format-jpeg.width-1200.jpg" srcset="/media/images/Register_a_Company_bSD6kFj.format-jpeg.width-1200.jpg 1200w, /media/images/Register_a_Company_bSD6kFj.format-jpeg.width-2160.jpg 2160w" width="1200"></picture>
+                </figure>
+            
+        </section>
+        
+            <section class="bg-white text-gray-500 px-6 sm:px-20 py-10  gap-8">
+                <div class="block-paragraph_block">
+<p data-block-key="a618c">Are you an enterprising entrepreneur in Nigeria looking to establish your business as a legal entity? Registering your company with the Corporate Affairs Commission (CAC) is a vital step in the process. However, navigating the registration procedure can be intricate, especially if you are a first-time business owner. This in-depth guide aims to simplify the CAC registration process for you, ensuring you have all the necessary information to set your business on the path to success.</p><p data-block-key="8o46f">Keep in mind that this page serves as a vital first step, preparing your business for potential registration as a capital market operator with the SEC. While our focus here is on CAC registration, it&#x27;s a crucial foundational stage in your journey toward becoming a registered capital market operator.</p><p data-block-key="2ru6p"></p><h2 data-block-key="3o4jv">Section 1: Understanding CAC and Its Significance</h2><p data-block-key="9bpvf"></p><h3 data-block-key="5b05v">Exploring CAC and Its Crucial Role</h3><p data-block-key="dcc78">The Corporate Affairs Commission (CAC) serves as the governmental body responsible for overseeing the formation and management of companies in Nigeria. Established under the Companies and Allied Matters Act (CAMA) in 1990, the CAC plays a pivotal role in the registration and regulation of companies and businesses operating within Nigeria.</p><p data-block-key="8pvqp">The primary reason for <a href="https://www.cac.gov.ng/companies/">registering your company with the CAC</a> is legal compliance. Nigerian law mandates all businesses to complete this process, and failure to do so can result in substantial fines, legal actions, and even the dissolution of your enterprise.</p><p data-block-key="65nuf">CAC registration additionally extends legal protection to your company&#x27;s name and brand, enhancing your capacity to safeguard intellectual property rights and prevent unauthorized usage of your brand identity.</p><p data-block-key="o9qu"></p><h2 data-block-key="4d2r2">Section 2: Prerequisites for CAC Registration</h2><p data-block-key="ae9if"></p><h3 data-block-key="6d0er">Step 1: Selecting a Distinct Company Name</h3><p data-block-key="e814o">Commencing the registration process involves choosing an exclusive company name that does not infringe upon existing trademarks or company names. Verify the availability of your chosen name on the <a href="https://www.cac.gov.ng/">CAC Website</a> or by visiting any CAC office nationwide.</p><p data-block-key="drj9k"></p><h3 data-block-key="c9325">Step 2: Establishing an Account on the CAC Portal</h3><p data-block-key="b56c3">After confirming the name&#x27;s availability, proceed to create an account on the <a href="https://pre.cac.gov.ng/register/new">CAC Registration Portal</a>. This straightforward step necessitates the provision of personal details such as your name, email address, and phone number. Account creation is a fundamental prerequisite for company registration.</p><p data-block-key="4bq94"></p><h3 data-block-key="62vjp">Step 3: Completing the Online CAC Registration Form</h3><p data-block-key="1aa5q">With your account in place, the next stage involves the completion of the online registration form on the portal. This form collects vital information about your company, including its name, address, directors, shareholders, and other pertinent details.</p><p data-block-key="2unf6"></p><h3 data-block-key="7dg3e">Step 4: Submission of Required Documents</h3><p data-block-key="1hnt6">In addition to form completion, you will be required to upload specified documents. These documents include your company&#x27;s memorandum and articles of association, identification documents for directors and shareholders, and proof of your company&#x27;s registered office address.</p><p data-block-key="4k572"></p><h3 data-block-key="8tt61">Step 5: Settling Registration Fees</h3><p data-block-key="dvum0">Upon successful form submission and document uploads, the next step involves payment of <a href="https://www.cac.gov.ng/schedule-of-fees/">registration fees</a>. Fee structures differ based on your company&#x27;s type and size, typically ranging from ₦10,000 to ₦50,000.</p><p data-block-key="d2f2j"></p><h3 data-block-key="f2sjt">Step 6: Monitoring Your Application</h3><p data-block-key="d8eir">Following submission and fee payment, you can track the progress of your application on the CAC portal. Regular updates regarding your application status, any supplementary document requests, or additional information will be provided.</p><p data-block-key="46u2i"></p><h3 data-block-key="fpvbe">Step 7: Reception of Your Certificate of Incorporation</h3><p data-block-key="7fgpt">Upon approval, you will receive your certificate of incorporation. This official document validates your company&#x27;s registration with the CAC, featuring essential information about your company, such as its name, address, directors, and shareholders.</p><p data-block-key="8n4di"></p><h2 data-block-key="3bqr">Section 3: Post-CAC Registration Obligations</h2><p data-block-key="ad2vg"></p><h3 data-block-key="eilfm">Step 1: Attaining a Tax Identification Number (TIN)</h3><p data-block-key="amss9">Post-CAC registration, securing a Tax Identification Number (TIN) from the Federal Inland Revenue Service (FIRS) is imperative. The TIN is indispensable for tax-related matters, bank account establishment, tax return filing, and various financial transactions.</p><p data-block-key="4vm0i"></p><h3 data-block-key="cptja">Step 2: Registration for Value-Added Tax (VAT)</h3><p data-block-key="e9740">If your business involves the sale of goods or services, you may be required to register for Value-Added Tax (VAT) with the Federal Inland Revenue Service (FIRS). VAT is a tax levied on the value added to goods and services throughout production and distribution, typically at a rate of 5%.</p><p data-block-key="6v4ng"></p><h3 data-block-key="7t6fb">Step 3: Registration with Additional Regulatory Bodies</h3><p data-block-key="49j27">Depending on your business&#x27;s nature, you may need to register with other regulatory bodies such as the National Agency for Food and Drug Administration and Control (NAFDAC), the Nigerian Communications Commission (NCC), or the Central Bank of Nigeria (CBN). This is where registration with us - the Securities and Exchange Commission (SEC) - comes in, if your business would involve the Nigerian capital market in any way.</p><p data-block-key="9nljq"></p><h2 data-block-key="1fatl">Conclusion</h2><p data-block-key="90vd">The process of registering your business with the CAC may seem intricate, but it is a fundamental step in establishing your enterprise as a legitimate entity in Nigeria. By diligently following this comprehensive guide, you will navigate the CAC registration process seamlessly, ensuring your business adheres to Nigerian legal regulations. Beyond legal compliance, CAC registration endows your business with credibility and authenticity, instilling confidence in prospective customers and investors. Waste no time; initiate the registration process today, embarking on the journey to construct a prosperous business in Nigeria.</p><p data-block-key="5dnpa"></p><p data-block-key="5ah3s"><i>Remember: Successful CAC registration serves as a preliminary stage for potential SEC registration as a capital market operator, a vital aspect of your business&#x27;s growth and development.</i></p>
+</div>
+            </section>
+        
+        
+    </main>
+    
+
+<section class="bg-white text-gray-500 px-6 sm:px-20 grid grid-cols-1 gap-4">
+    
+    
+
+    <div aria-label="Breadcrumb" class="py-10">
+        <ol class="flex flex-wrap items-center text-gray-400 gap-1 uppercase">
+            
+                
+                    <li>
+                        <a href="/" class="underline hover:text-black">
+                            
+                                Back to Home
+                            
+                        </a>
+                    </li>
+                    <li>/</li>
+                
+            
+                
+                    <li>
+                        <a href="/for-businesses/" class="underline hover:text-black">
+                            
+                                For Businesses
+                            
+                        </a>
+                    </li>
+                    <li>/</li>
+                
+            
+                
+                    <li aria-current="page">Register a Company</li>
+                
+            
+        </ol>
+        <!-- Share Buttons -->
+        <div class="flex items-center gap-2 mt-4">
+            <span class="text-gray-400 text-sm font-semibold underline uppercase">Share:</span>
+            <!-- X (Twitter) -->
+            <a href="https://twitter.com/intent/tweet?url=https://www.sec.gov.ng/for-businesses/register-a-company/&text="
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-black transition-colors"
+               aria-label="Share on X">
+                <svg class="w-5 h-5"
+                     fill="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.sec.gov.ng/for-businesses/register-a-company/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-black transition-colors"
+               aria-label="Share on LinkedIn">
+                <svg class="w-5 h-5"
+                     fill="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/?text=%20https://www.sec.gov.ng/for-businesses/register-a-company/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-black transition-colors"
+               aria-label="Share on WhatsApp">
+                <svg class="w-5 h-5"
+                     fill="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.sec.gov.ng/for-businesses/register-a-company/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-black transition-colors"
+               aria-label="Share on Facebook">
+                <svg class="w-5 h-5"
+                     fill="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:?subject=&body=Check out this page: https://www.sec.gov.ng/for-businesses/register-a-company/"
+               class="text-gray-400 hover:text-black transition-colors"
+               aria-label="Share via Email">
+                <svg class="w-5 h-5"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+</section>
+<footer class="pt-20">
+    <div class="px-0 sm:px-20">
+        <address class="text-xs sm:text-base font-semibold not-italic text-center mb-8 text-blue-500 uppercase max-w-[60ch] mx-auto px-3">
+            Since our inception in 1979, our overarching statutory purpose has been to promote and facilitate the growth of equitable, effective,
+            and open financial markets for Nigeria.
+        </address>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b-4 text-blue-500 border-blue-500 text-xs sm:text-base px-6 sm:px-0 py-4">
+            <!-- Left: Phone numbers -->
+            <div class="flex flex-col items-center space-y-1">
+                <a href="tel:+2342094621168" class="inline-flex space-x-1 items-center">
+                    <svg class="text-icon icon stroke-none">
+                        <use href="/static/icons/symbol-defs.svg#phone"></use>
+                    </svg>
+                    <span>+234 209 462 1168 (Landline)</span>
+                </a>
+                <a href="tel:+2349167723240" class="inline-flex space-x-1 items-center">
+                    <svg class="text-icon icon stroke-none">
+                        <use href="/static/icons/symbol-defs.svg#phone"></use>
+                    </svg>
+                    <span>+234 916 772 3240 (Mobile)</span>
+                </a>
+            </div>
+            <!--  FIND US -->
+            <a href="/about/contact-us/" class="flex justify-center">CONTACT US</a>
+            <!-- Right: Email links -->
+            <div class="flex flex-col space-y-1 items-center md:ml-auto">
+                <a href="https://mail.sec.gov.ng/owa/auth/logon.aspx"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex space-x-1 items-center hover:underline">
+                    <svg class="text-icon icon stroke-none">
+                        <use href="/static/icons/symbol-defs.svg#mail"></use>
+                    </svg>
+                    <span>SEC INTERNAL MAIL</span>
+                </a>
+                <a href="mailto:sec@sec.gov.ng"
+                   class="inline-flex space-x-1 items-center">
+                    <svg class="text-icon icon stroke-none">
+                        <use href="/static/icons/symbol-defs.svg#mail"></use>
+                    </svg>
+                    <span>SEC@SEC.GOV.NG</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-links-container flex flex-col gap-10 my-10">
+            <a href="https://revop.gov.ng/payments/generate-bill?org=0220009001000"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="hover:opacity-80 transition-opacity flex flex-col">
+                <img src="/static/images/RevopLogo.svg"
+                     class="rem-img h-auto"
+                     width="100"
+                     height="auto"
+                     alt="revop" />
+                <span class="mt-1 text-blue-500">CLICK HERE TO MAKE PAYMENTS</span>
+            </a>
+            <a href="https://eportal.sec.gov.ng/non-mandated"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="hover:opacity-80 transition-opacity flex flex-col">
+                <img src="/static/images/e-Dividends.png"
+                     class="div-img h-auto"
+                     width="200"
+                     height="auto"
+                     alt="remita" />
+                <span class="mt-1 text-blue-500">CLICK HERE TO CHECK FOR UNCLAIMED DIVIDENDS</span>
+            </a>
+            <!-- <a href="https://www.pebec.gov.ng/reportgov-ng"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="hover:opacity-80 transition-opacity flex flex-col">
+                <img src="/static/images/ReportGovLogo.png"
+                     class="rep-img h-auto"
+                     width="100"
+                     height="auto"
+                     alt="report gov" />
+                <span class="mt-2 text-blue-500">CLICK HERE TO MAKE COMPLAINTS</span>
+            </a> -->
+        </div>
+    </div>
+    <div class="bg-green-500 px-0 sm:px-20 py-8">
+        
+            <div class="flex flex-row border-b-4 text-white border-white text-xs sm:text-base px-6 sm:px-0 py-4 justify-center gap-2">
+                <a href="https://facebook.com/people/Securities-and-Exchange-Commission-Nigeria"
+                   target="_blank"
+                   title="facebook"
+                   rel="noreferrer"
+                   class="p-[2px] rounded-full text-green-500 bg-white hover:bg-green-50">
+                    <svg class="w-5 h-5">
+                        <use href="/static/icons/symbol-defs.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/secnigeria"
+                   target="_blank"
+                   title="twitter"
+                   rel="noreferrer"
+                   class="p-[2px] rounded-full text-green-500 bg-white hover:bg-green-50">
+                    <svg class="w-5 h-5">
+                        <use href="/static/icons/symbol-defs.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/secnigeria/"
+                   target="_blank"
+                   title="instagram"
+                   rel="noreferrer"
+                   class="p-[2px] rounded-full text-green-500 bg-white hover:bg-green-50">
+                    <svg class="w-5 h-5">
+                        <use href="/static/icons/symbol-defs.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/securities-and-exchange-commission-nigeria"
+                   target="_blank"
+                   title="linkedin"
+                   rel="noreferrer"
+                   class="p-[2px] rounded-full text-green-500 bg-white hover:bg-green-50">
+                    <svg class="w-5 h-5">
+                        <use href="/static/icons/symbol-defs.svg#linkedin"></use>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@securitiesandexchangecommi7102"
+                   target="_blank"
+                   title="youtube"
+                   rel="noreferrer"
+                   class="p-[2px] rounded-full text-green-500 bg-white hover:bg-green-50">
+                    <svg class="w-5 h-5">
+                        <use href="/static/icons/symbol-defs.svg#youtube"></use>
+                    </svg>
+                </a>
+            </div>
+        
+        <img src="/static/icons/logo-white.svg"
+             class="w-36 sm:w-48 h-auto mx-auto my-16"
+             width="auto"
+             height="auto"
+             alt="SEC" />
+        <div class="grid grid-cols-3 border-b-4 text-white border-white text-xs sm:text-base px-6 sm:px-0 py-4 uppercase">
+            <div class="text-left">
+                <a href="/website-privacy-policy/"
+                   class="hover:text-green-300">Privacy Policy</a>
+            </div>
+            <div class="text-center">
+                <a href="/sitemap.html" class="hover:text-green-300">Sitemap</a>
+            </div>
+            <div class="text-right">
+                <a href="https://sec.gov.ng/website-terms-of-use/"
+                   class="hover:text-green-300">Terms of Use</a>
+            </div>
+        </div>
+        <div class=" flex justify-center  pb-8" style="min-height: 60vh;">
+            <img src="/static/icons/ngr.svg"
+                 class=" w-48 md:w-36 h-auto m-auto "
+                 width="auto"
+                 height="auto"
+                 alt="SEC"
+                 style="margin-top: 10%" />
+        </div>
+    </div>
+</footer>
+<style>
+    .footer-links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        padding-left: 1rem !important;
+    }
+
+    .footer-links-container a {
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+    .footer-links-container span {   
+        font-size: 12px !important;
+    }
+
+    .rem-img{
+        width: 100px !important;
+    }
+    .div-img,.rep-img {
+        width: 150px !important;
+    }
+
+    
+    @media (min-width: 768px) {
+         .find-us-link {
+            justify-content: center;
+        }
+
+        .footer-links-container {
+            flex-direction: row !important;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .footer-links-container a {
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+        .footer-links-container span {   
+        font-size: 15px !important;
+    }
+
+        .rem-img,.rep-img {
+            width: 100px !important;
+        }
+
+         .div-img {
+            width: 200px !important;
+        }
+    }
+</style>
+
+
+        
+        <script type="text/javascript" src="/static/js/main.js"></script>
+        
+        
+        <script>
+            document.body.addEventListener('htmx:afterSwap', function(event) {
+                if (window.Alpine) {
+                    Alpine.initTree(event.detail.target);
+                }
+            });
+        </script>
+        
+        
+    </body>
+</html>
