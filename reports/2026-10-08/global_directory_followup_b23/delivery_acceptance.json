@@ -1,0 +1,111 @@
+{
+  "pagination": {
+    "candidate_observations": 4305,
+    "candidate_review_reasons": {
+      "NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 1726,
+      "PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 850,
+      "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1729
+    },
+    "selected_pages": 100,
+    "fetched_additional_pages": 100,
+    "additional_table_rows": 457,
+    "pending_gap_records": 378,
+    "new_link_observations_pending_review": 3733,
+    "all_observed_in_scope_page_links_attempted": false,
+    "source_directory_total_completeness": "UNKNOWN"
+  },
+  "downloads": {
+    "download_observations": 44,
+    "unique_links": 29,
+    "selected_links": 29,
+    "saved_or_reused": 29,
+    "reused": 3,
+    "new_saved": 26,
+    "pending_unselected": 0,
+    "remaining_errors": 0,
+    "archive_members": 335,
+    "workbook_rows": 30730,
+    "csv_rows": 0,
+    "global_complete": false
+  },
+  "structure": {
+    "all_table_rows": 457,
+    "tables": 37,
+    "structured_source_records": 80,
+    "source_urls_with_structured_records": 8,
+    "role_counts": {
+      "DIRECTORY_RECORD_REVIEW": 80
+    },
+    "distinct_company_count": "UNKNOWN",
+    "source_rows_not_dropped": true
+  },
+  "ledger": {
+    "original_queue": 4849,
+    "state_counts": {
+      "HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1931,
+      "FETCH_ERROR_OR_NON200_REVIEW": 86,
+      "NOT_YET_ATTEMPTED": 2828,
+      "HTTP200_BODY_TRUNCATED_REVIEW": 4
+    },
+    "total_attempt_receipts": 2746,
+    "unique_attempted_urls": 2733,
+    "country_mother_rows": 249,
+    "countries_with_source_association": 151,
+    "global_complete": false
+  },
+  "sqlite_counts": {
+    "direct_file_fetch_manifest": 29,
+    "pagination_fetch_manifest": 100,
+    "registry_all_4849_work_progress": 4849,
+    "registry_all_country_cumulative_source_progress": 249,
+    "registry_all_download_workqueue": 29,
+    "registry_all_page_content_review": 100,
+    "registry_carried_historical_archive_gaps": 25,
+    "registry_download_archive_members": 335,
+    "registry_download_links": 33,
+    "registry_download_workbook_rows": 30730,
+    "registry_file_business_scope_review": 29,
+    "registry_pagination_all_table_rows": 457,
+    "registry_pagination_candidate_review": 4305,
+    "registry_pagination_download_links": 11,
+    "registry_pagination_gaps": 378,
+    "registry_pagination_link_observations": 3733,
+    "registry_pagination_links": 77,
+    "registry_source_country_association_evidence": 2837,
+    "registry_source_table_semantic_review": 37,
+    "registry_structured_directory_records": 80
+  },
+  "raw_verified": 129,
+  "protected": [
+    {
+      "path": "Reference/Aerospace_Ecosystem_Report.qmd",
+      "sha256": "4cf895c4ddcb883594507d7ed5faccb87c910df729e699afb4056c8d4fd019a7",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd",
+      "sha256": "bcd7bcc11dafefbfe1933dc55475c857d0c8b5bc034fbf8af04772108b3ef05d",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Inteligent_egaming_platform_ref_v000.000.001.qmd",
+      "sha256": "4cf398da80a502e8edb921163cfe34065362cb2a9869782f8abe055c1c12e51a",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/geo_defense_space_handoff_v2_3_0.md",
+      "sha256": "92f2e38d1f066c449c3176a8560c97184d2c32f668e11293aba2e8f3875d6aa4",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/geo_defense_space_handoff_v2_3_0_baseline_sha256.csv",
+      "sha256": "f90fc0bdc94cace1ad77a09cf555290e73971c019f212e7009d2fe7e09e72cc2",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/geo_defense_space_handoff_v2_3_0_source_registry.csv",
+      "sha256": "fd940d2921237edc1a88d8c6a803500d8d48c53f1de960e7cab124b812def6ba",
+      "batch_action": "NO_WRITE"
+    }
+  ]
+}

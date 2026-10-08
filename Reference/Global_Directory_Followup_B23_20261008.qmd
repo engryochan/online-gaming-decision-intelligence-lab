@@ -1,0 +1,36 @@
+---
+title: "全球清單續作 B23：分頁核查、直接檔案及業務用途"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪完成範圍
+
+接續 B22 的 77 條頁面連結、B21 的 4,009 條新連結及 219 條未選候選，共覆核 4305 條觀測。分類 `{"NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 1726, "PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 850, "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1729}`；去重後嘗試 100 个合資格候選網址，HTTP 狀態分布 `{"200": 100}`，保存 457 條物理表格行、37 個表格及 80 條初步來源角色投影。數字、next 與 page 參數僅是分頁排程訊號，並非內容完整性的證明。
+
+新增 3733 條連結留待下一輪核查；本輪未選候選數為 378；不等於全站或所有遞迴分頁完成。所有 4,849 項原始工作列及 249 條現行母表保留，累計工作狀態 `{"HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1931, "FETCH_ERROR_OR_NON200_REVIEW": 86, "NOT_YET_ATTEMPTED": 2828, "HTTP200_BODY_TRUNCATED_REVIEW": 4}`。網站來源關係不代表企業註冊地，歷史政治實體仍沿用既有登記。
+
+## 下載與業務定義
+
+全部 44 條直接檔案觀測去重為 29 個網址，全部保留工作列；本輪嘗試 29 個非 GLEIF 歷史發號機構封存包網址，29 個保存或沿用已核對的原始檔，其中 3 個沿用、26 個新增，0 個失敗保留逐檔錯誤及 HTTP 狀態。另 0 個歷史封存包明確待檔案大小、版次及內容去重核查，未下載，不能宣稱全部下載完成。保存 335 個壓縮成員雜湊、30730 條 XLSX 行及 0 條直接 CSV 邏輯行（含表頭與空行）。
+
+本輪下載可能包含技術文件、歷史行情、申報、申請範本或會員資料，逐檔來源角色另表覆核。來源文件不自動成為公司名錄。ZIP 內嵌文件本輪保留原始壓縮檔並核對成員雜湊；僅直接 CSV/XLSX 行已抽取，內嵌 CSV、舊 XLS、PDF 與完整工作簿物件待後續解析。B19 的 25 個歷史發號機構封存包另保留於 registry_carried_historical_archive_gaps.csv，未因本輪下載工作完成而消除。本輪 XLSX 行表只保存單元格值與公式，不覆蓋頁首頁尾、圖片、圖表或完整工作簿物件；原始文件位元組仍保留，不能宣稱全部物件已解析。全球完整性仍為 UNKNOWN。
+
+遵循 [來源覆核合同](../V2.0.1/governance/source_review_contract.md)，未匯入 Windows Downloads 文件或明細；本批來源為網站清單的公開回應。
+
+## 可回溯交付
+
+[分頁候選覆核](tables/48_global_directory_followup_b23_20261008/registry_pagination_candidate_review.csv)、[分頁收據](tables/48_global_directory_followup_b23_20261008/pagination_fetch_manifest.csv)、[逐檔用途](tables/48_global_directory_followup_b23_20261008/registry_file_business_scope_review.csv)、[下載缺口](tables/48_global_directory_followup_b23_20261008/registry_file_acquisition_gaps.csv)、[完整工作進度](tables/48_global_directory_followup_b23_20261008/registry_all_4849_work_progress.csv)、[SQLite](tables/48_global_directory_followup_b23_20261008/global_directory_followup_b23.sqlite)。
+
+129 個原始回應／下載收據位元組雜湊核對通過，SQLite 完整性檢查通過，來源 URL、原始行及內容雜湊可回溯。既有批次、兩份主報告及使用者文件修改未覆寫。
+
+## 發佈與解析核查
+
+頁面解析及來源語義完整性仍待逐項核定；原始回應位元組保留。憑證模式掃描發現 9 個原始頁面候選檔，僅留本機並排除推送；未輸出候選值。
+
+## 衍生資料暫緩發布
+
+工作簿內嵌 XML 出現疑似憑證模式。本輪完整工作表行表及 SQLite 保留本機且排除推送，待逐欄血統覆核；報告中的工作表行數及資料庫驗收指本機成果，不能當作已公開交付。完整資料未刪除。
