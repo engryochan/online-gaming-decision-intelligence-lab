@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/assets/asset_injector/js/sf_hide_login_menu_with_click_outside_block-fd49e265ce7aa0c4a7a411715e4be737.js. */
+(function($){$(document).on("click",function(e){if(!$(e.target).closest('.user-menu-area, #user-menu-toggle-js').length)$('.user-menu-area').removeClass("user-menu-area__show")})})(jQuery)
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/assets/asset_injector/js/sf_hide_login_menu_with_click_outside_block-fd49e265ce7aa0c4a7a411715e4be737.js. */

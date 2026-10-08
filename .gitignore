@@ -56,6 +56,10 @@ docker-compose.override.yml
 *.pem
 secrets/
 
+# Reproducible verification copies; originals and QMD sources remain tracked.
+reports/2026-10-07/git_publish_and_html_recovery/preview/
+reports/2026-10-07/global_expansion_b02/raw/euronext_script_63.js
+
 # Classified, reviewable table assets and migration index.
 !Reference/tables/**/*.csv
 !Reference/tables/**/*.xlsx

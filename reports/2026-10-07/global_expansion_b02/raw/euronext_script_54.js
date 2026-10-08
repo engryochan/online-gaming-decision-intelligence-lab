@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/modules/contrib/datalayer/js/datalayer.js. */
+(function(){Drupal.behaviors.dataLayer={langPrefixes:function langPrefixes(){var languages=Drupal.settings.dataLayer.languages,langList=[];for(var lang in languages)if(languages[lang].prefix!=='')langList.push(languages[lang].prefix);return langList},attach:function(){return}}})()
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/modules/contrib/datalayer/js/datalayer.js. */

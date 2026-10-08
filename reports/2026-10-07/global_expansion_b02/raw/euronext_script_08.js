@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/sites/default/files/languages/en_C71hGhW3amlBX2BbeGUzc2EPwoUobLUirvF3ga8Y8SA.js. */
+window.drupalTranslations={strings:{"":{All:"All",Apply:"Apply"}}}
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/sites/default/files/languages/en_C71hGhW3amlBX2BbeGUzc2EPwoUobLUirvF3ga8Y8SA.js. */

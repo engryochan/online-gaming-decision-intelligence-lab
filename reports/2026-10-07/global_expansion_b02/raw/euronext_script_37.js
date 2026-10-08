@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/assets/asset_injector/js/webteam_specific_elio_underlying_accordion-2b6d9f881258ca88d4f9849861f67c47.js. */
+(function($){$(function(){$('#underlying').parent().addClass('card-closed')});$('#underlying').parent().find('div.card-header').click(function(){$('#underlying').parent().toggleClass('card-closed card-open')})}(jQuery))
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/assets/asset_injector/js/webteam_specific_elio_underlying_accordion-2b6d9f881258ca88d4f9849861f67c47.js. */

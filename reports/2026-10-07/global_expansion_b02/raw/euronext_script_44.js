@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/themes/contrib/bootstrap_sass/js/custom.js. */
+(function($,Drupal){'use strict';Drupal.behaviors.bootstrap_sass={attach:function(context,settings){}}})(jQuery,Drupal)
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/themes/contrib/bootstrap_sass/js/custom.js. */

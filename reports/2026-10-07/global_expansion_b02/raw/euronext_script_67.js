@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/themes/custom/euronext_live/js/mobile.js. */
+(function($,Drupal,drupalSettings){function isMobile(){if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||$(window).width()<426)return true;return false}})(jQuery,Drupal,drupalSettings)
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/themes/custom/euronext_live/js/mobile.js. */

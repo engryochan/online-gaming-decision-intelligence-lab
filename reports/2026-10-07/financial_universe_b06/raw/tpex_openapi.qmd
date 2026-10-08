@@ -1,0 +1,94 @@
+---
+format: html
+execute:
+  enabled: false
+recovery-kind: lossless-html-snapshot
+original-html: "reports/2026-10-07/financial_universe_b06/raw/tpex_openapi.html"
+original-sha256: 059c412bf8096d779a3a3adee82f89e24b21c71f5a2ad6d335c082682d3285dc
+---
+
+<!-- Byte-exact renderer: reports/2026-10-07/git_publish_and_html_recovery/recover_html.py --render. Quarto default rendering is not byte-exact. -->
+
+````````{=html}
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <style>
+      html
+      {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after
+      {
+        box-sizing: inherit;
+      }
+
+      body
+      {
+        margin:0;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+
+    <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+    <script>
+    window.onload = function() {
+      
+      
+      
+      
+      
+      
+      
+      
+      // Begin Swagger UI call region
+      const ui = SwaggerUIBundle({
+        "dom_id": "#swagger-ui",
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout",
+        requestInterceptor: function(req) { req.headers['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT'; req.headers['Cache-Control'] = 'no-cache'; req.headers['Pragma'] = 'no-cache'; return req; },
+        url: "https://www.tpex.org.tw/openapi/swagger.json",
+      })
+      
+      
+      // End Swagger UI call region
+
+
+
+
+
+
+
+
+
+      window.ui = ui;
+    };
+  </script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"7e9d47872c064adca23d98a0fa8b533b","spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a46c9edd4e4f5e15',t:'MTc5MTM3MzExNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+````````

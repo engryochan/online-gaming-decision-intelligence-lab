@@ -1,0 +1,4 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/modules/custom/dynamic_quotes_display/js/quote-field.js. */
+jQuery(function(){if(jQuery('[data*="qf-"]').length){jQuery('[data-toggle="tooltip"]').tooltip();setInterval(function(){refreshField()},drupalSettings.dynamic_quotes_display.config.timer*1e3)}})
+function refreshField(){var arr=[];jQuery('[data*="qf-"]').each(function(){var data=jQuery(this).attr("data");if(typeof data!==typeof undefined&&data!==false)arr.push(data)});jQuery.ajax({type:"POST",url:"/"+drupalSettings.path.pathPrefix+"ajax/dynamic_quotes_display/refresh",data:{data:arr},success:function(json){for(var item in json.data)jQuery('[data='+item+']').replaceWith(json.data[item]);jQuery('[data-toggle="tooltip"]').tooltip()}})}
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/modules/custom/dynamic_quotes_display/js/quote-field.js. */

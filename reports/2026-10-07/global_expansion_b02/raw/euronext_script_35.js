@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/assets/asset_injector/js/sf_fix_breadcrumb_spaces-e8f769f253c8fea8fe07fa3b57d2cc88.js. */
+(function($){$("#block-system-breadcrumb-block a").each(function(){if($.trim($(this).text())==='')$(this).remove();if($(this).text()=='Home > ')$(this).text('Home')})})(jQuery)
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/assets/asset_injector/js/sf_fix_breadcrumb_spaces-e8f769f253c8fea8fe07fa3b57d2cc88.js. */

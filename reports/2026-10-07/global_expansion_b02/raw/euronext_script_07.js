@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://live.euronext.com/modules/contrib/slick/js/jquery-type-polyfill.min.js. */
+!function(n){n&&"function"!=typeof n.type&&(n.type=function(n){return null===n?"null":Array.isArray(n)?"array":typeof n})}((window,window.jQuery))
+/* Source and licensing information for the above line(s) can be found at https://live.euronext.com/modules/contrib/slick/js/jquery-type-polyfill.min.js. */

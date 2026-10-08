@@ -1,0 +1,74 @@
+﻿path,column_name,definition,definition_locator,owner_approval,facts_verified
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,registry_id,歷史名錄批次行鍵，不能直接當永久法人鍵,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:171,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,registry_name,歷史名錄展示名稱，未重新消歧,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:171,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,registry_status,對照時讀取的名錄狀態，非今日認證,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:171,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,registry_status_after_batch01,採用第一批提案後的對照狀態，與原名錄狀態分開,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:172,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,doc_entry,原文名錄条目編號，非全項目共用鍵,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:172,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,doc_marks,原文條目符號標記；不能自動等價 V/P/U,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:172,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,doc_line,對照時文本的行號，後續編輯可能移動,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:173,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,relation,名錄狀態與原文符號的程式對照分類，不是機構業務關係,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:105,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,doc_source_url,原文可配對的引用 URL，非本批即時核實,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:175,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,doc_source_line,原文引用定位行號，受歷史文本版本限定,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:175,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,doc_source_basis,原文來源匹配的文字基礎，不能擴張證據範圍,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:175,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/mark_crosswalk.csv,proposal,狀態／標記一致性處理提案，非已執行改判,reports/2026-10-04/cross_document_consistency/build_mark_crosswalk.py:128,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,id,所屬批次的名錄行鍵，非永久實體根號,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,name,所屬種子／審阅／抽取批次的展示名稱，非法人認證,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,prior_status,本批提案前的歷史狀態,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,proposed_status,本批建議狀態，與後續採納及今日有效性分開,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,finding,本批審阅發現摘要，須保留證據與限制,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,secondary_url,補充來源 URL，不單獨代表主來源或現行可達性,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,evidence_type,當批證據來源性質標記，非完整品質評分,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv,limits,當批判定限制，不得在聚合中省略,reports/2026-10-04/cross_document_consistency/tables/u_review_batch01.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch02_urls.csv,id,所屬批次的名錄行鍵，非永久實體根號,reports/2026-10-04/cross_document_consistency/tables/u_review_batch02_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch02_urls.csv,terms,供 URL 檢查的預定匹配詞，竪線分隔；命中不等於语義主張核實,reports/2026-10-04/cross_document_consistency/tables/u_review_batch02_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch03_urls.csv,id,所屬批次的名錄行鍵，非永久實體根號,reports/2026-10-04/cross_document_consistency/tables/u_review_batch03_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch03_urls.csv,terms,供 URL 檢查的預定匹配詞，竪線分隔；命中不等於语義主張核實,reports/2026-10-04/cross_document_consistency/tables/u_review_batch03_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch04_urls.csv,id,所屬批次的名錄行鍵，非永久實體根號,reports/2026-10-04/cross_document_consistency/tables/u_review_batch04_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch04_urls.csv,terms,供 URL 檢查的預定匹配詞，竪線分隔；命中不等於语義主張核實,reports/2026-10-04/cross_document_consistency/tables/u_review_batch04_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch05_urls.csv,id,所屬批次的名錄行鍵，非永久實體根號,reports/2026-10-04/cross_document_consistency/tables/u_review_batch05_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/cross_document_consistency/tables/u_review_batch05_urls.csv,terms,供 URL 檢查的預定匹配詞，竪線分隔；命中不等於语義主張核實,reports/2026-10-04/cross_document_consistency/tables/u_review_batch05_urls.csv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,table,覆蓋對賬所指的實體表名,DGEF/report_public_ingestion.py:21,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,name_zh,覆蓋對賬中的表中文名稱,DGEF/report_public_ingestion.py:21,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,grain,覆蓋對賬采用的表記錄粒度,DGEF/report_public_ingestion.py:20,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,records,生成該歷史對賬時的表行數，非今日數量或機構總數,DGEF/report_public_ingestion.py:21,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,status,本歷史表的局部狀態／施工標記；不同表不可混用,DGEF/report_public_ingestion.py:21,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,source_route,對賬說明的來源追溯路徑，不表示所有來源已接入,DGEF/report_public_ingestion.py:21,PENDING,NOT_REVERIFIED
+reports/2026-10-04/dgef/tables/coverage/表施工与数据覆盖对账.csv,gap_reason,對賬記錄的資料缺口或非窮盡限制,DGEF/report_public_ingestion.py:21,PENDING,NOT_REVERIFIED
+reports/2026-10-04/table_reclassification/数据表分类总索引.csv,old_path,分類搬移前的工作區相對路徑，不強制恢復原位置,DGEF/reclassify_tables.py:35,PENDING,NOT_REVERIFIED
+reports/2026-10-04/table_reclassification/数据表分类总索引.csv,new_path,該次分類搬移的目標路徑，後續改名需另按版本定位,DGEF/reclassify_tables.py:35,PENDING,NOT_REVERIFIED
+reports/2026-10-04/table_reclassification/数据表分类总索引.csv,category,本表用途下的編輯分類；不是事實核實等級,DGEF/reclassify_tables.py:4,PENDING,NOT_REVERIFIED
+reports/2026-10-04/table_reclassification/数据表分类总索引.csv,moved,歷史分類记录的搬移標記，非本批執行動作,DGEF/reclassify_tables.py:35,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv,category,本表用途下的編輯分類；不是事實核實等級,reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv,name,所屬種子／審阅／抽取批次的展示名稱，非法人認證,reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv,aliases,種子匹配用的名稱／別名清單，竪線分隔，不完成實體合併,reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv,role,種子清單的編輯用途／角色，非性能認證,reports/2026-10-04/tables/02_catalogue_extraction/catalogue_seed.tsv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/gaming_70_entries.csv,number,原文抽取的條目序號，非永久實體根號,reports/2026-10-04/build_catalogue.py:44,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/gaming_70_entries.csv,name,所屬種子／審阅／抽取批次的展示名稱，非法人認證,reports/2026-10-04/build_catalogue.py:5,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/gaming_70_entries.csv,original_description,原文表格說明文字的抽取，不代表本批認可內容,reports/2026-10-04/build_catalogue.py:54,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/gaming_70_entries.csv,path,本表用途所引用的歷史文件路徑；需按版本與搬移映射定位,reports/2026-10-04/build_catalogue.py:1,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/gaming_70_entries.csv,line,來源抽取文本的行號；不保證當前文件相同行仍對應,reports/2026-10-04/build_catalogue.py:6,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/gaming_70_entries.csv,status,本歷史表的局部狀態／施工標記；不同表不可混用,reports/2026-10-04/build_catalogue.py:35,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,number,原文抽取的條目序號，非永久實體根號,reports/2026-10-04/build_catalogue.py:44,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,category,本表用途下的編輯分類；不是事實核實等級,reports/2026-10-04/build_catalogue.py:35,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,label,原文條目的展示標籤，未重新消歧,reports/2026-10-04/build_catalogue.py:44,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,boundary,原文條目附帶的範圍／限制文字，須與主張合讀,reports/2026-10-04/build_catalogue.py:44,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,path,本表用途所引用的歷史文件路徑；需按版本與搬移映射定位,reports/2026-10-04/build_catalogue.py:1,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,line,來源抽取文本的行號；不保證當前文件相同行仍對應,reports/2026-10-04/build_catalogue.py:6,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/02_catalogue_extraction/original_172_entries.csv,status,本歷史表的局部狀態／施工標記；不同表不可混用,reports/2026-10-04/build_catalogue.py:35,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/entity_source_evidence.csv,id,所屬批次的名錄行鍵，非永久實體根號,reports/2026-10-04/build_catalogue.py:7,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/entity_source_evidence.csv,name,所屬種子／審阅／抽取批次的展示名稱，非法人認證,reports/2026-10-04/build_catalogue.py:5,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/entity_source_evidence.csv,path,本表用途所引用的歷史文件路徑；需按版本與搬移映射定位,reports/2026-10-04/build_catalogue.py:1,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/entity_source_evidence.csv,line,來源抽取文本的行號；不保證當前文件相同行仍對應,reports/2026-10-04/build_catalogue.py:6,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/entity_source_evidence.csv,context,名稱匹配的歷史局部上下文，不等於完整原文,reports/2026-10-04/build_catalogue.py:30,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/live_checks.tsv,key,歷史人工／來源核查的名稱匹配鍵，不是全局主鍵,reports/2026-10-04/tables/03_sources_evidence/live_checks.tsv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/live_checks.tsv,status,歷史種子核查的 V/P/U 等狀態，须与范围及日期合讀,reports/2026-10-04/tables/03_sources_evidence/live_checks.tsv:1; historical header and row context; proposed,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/source_urls.csv,path,本表用途所引用的歷史文件路徑；需按版本與搬移映射定位,reports/2026-10-04/audit_project.py:1,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/03_sources_evidence/source_urls.csv,line,來源抽取文本的行號；不保證當前文件相同行仍對應,reports/2026-10-04/audit_project.py:17,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/04_file_audit/file_inventory.csv,path,本表用途所引用的歷史文件路徑；需按版本與搬移映射定位,reports/2026-10-04/audit_project.py:1,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/04_file_audit/file_inventory.csv,lines,歷史抽取文本行數，非文件內容已實質核查程度,reports/2026-10-04/audit_project.py:17,PENDING,NOT_REVERIFIED
+reports/2026-10-04/tables/04_file_audit/file_inventory.csv,review_method,歷史讀取／抽取方法及成功失敗說明，不等於事實核實完成,reports/2026-10-04/audit_project.py:22,PENDING,NOT_REVERIFIED
+reports/2026-10-06/global_technology_iso249_b03/workspace_delta.csv,path,本表用途所引用的歷史文件路徑；需按版本與搬移映射定位,reports/2026-10-06/global_technology_iso249_b03/audit_delta.py:1,PENDING,NOT_REVERIFIED
+reports/2026-10-06/global_technology_iso249_b03/workspace_delta.csv,state,兩次 B03 快照的 ADDED／REMOVED／MODIFIED 比較結果，不推定改動原因,reports/2026-10-06/global_technology_iso249_b03/audit_delta.py:10,PENDING,NOT_REVERIFIED
+reports/2026-10-06/global_technology_iso249_b03/workspace_delta.csv,category,B03 交付／運行時變更的粗分類；按路徑生成，不證明改動因果,reports/2026-10-06/global_technology_iso249_b03/audit_delta.py:11,PENDING,NOT_REVERIFIED
+reports/2026-10-06/global_technology_iso249_b03/workspace_delta.csv,before_sha256,前次工作區快照內容指紋；未有該文件時空值,reports/2026-10-06/global_technology_iso249_b03/audit_delta.py:11,PENDING,NOT_REVERIFIED
+reports/2026-10-06/global_technology_iso249_b03/workspace_delta.csv,after_sha256,後次工作區快照內容指紋；後次沒有該文件時空值,reports/2026-10-06/global_technology_iso249_b03/audit_delta.py:11,PENDING,NOT_REVERIFIED
