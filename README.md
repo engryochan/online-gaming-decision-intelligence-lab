@@ -113,3 +113,9 @@ online-gaming-decision-intelligence-lab
 [大秦天下万物实体织网：已施工数据表与验收](DGEF/README.md)。全球范围、稳定身份、多表关联、来源与未知状态分职；保留现有CSV粒度。
 
 [全项目数据表分类总索引](reports/2026-10-04/table_reclassification/README.md)：65份数据表及数据库文件，列明分类、现址、旧址与SHA256；[Reference参考表分类](Reference/tables/README.md)。
+
+
+<!-- DOWNLOADS_ESSENCE_REVIEW_20261008 -->
+## 外部下載資料的核查與精華採用
+
+[15 檔只讀審閱與採用結果](Reference/Downloads_Essence_Review_20261008.qmd)；[來源治理合同](V2.0.1/governance/source_review_contract.md)。只整合经覆核的研究方法與更正，不複製原始下載檔或匯入業務明細。

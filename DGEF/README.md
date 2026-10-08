@@ -58,6 +58,8 @@ CSV导出按九个用途目录分类，由`table_layout.py`统一决定位置，
 
 `source → dataset → identity bridge → entity → typed domain → claim/evidence/observation → approved feature view`。
 
+外部下載資料的精華採用另遵守[來源覆核合同](../V2.0.1/governance/source_review_contract.md)。LEI 身份、會計合併 RR 關係及 REPEX 例外分職；ISIC 分類節點、SDG 採集聯絡表及統計觀測不能混成法人明細。此輪僅强化合同與研究方法，未將下載資料寫入 `artifacts/dgef.sqlite`，亦未增加獲准訓練資料。
+
 实体不因名字相似自动合籍，模型不拥有实体身份裁决权；预测不得倒写canonical事实。数据字典见 `contracts/data_dictionary.csv`，DDL见 `schema.sql`；领域表各守自身记录粒度。框架只接入公开非操作性设施资料，不推断未公开设施坐标或现实攻击路径。
 
 ## ActionPlan／施工与验收

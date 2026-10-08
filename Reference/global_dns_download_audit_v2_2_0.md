@@ -29,3 +29,9 @@
 - blueprint：來源發現 → DNS → TCP/TLS → HTTP/重定向 → 檔案讀取 → 雜湊 → 格式驗證 → 正式入庫 → 追溯。
 - cheatsheet：DNS_ERROR≠HTTP_403；UNSUPPORTED_MIME≠ACCESS_DENIED；INDEXED≠DOWNLOADED；DOWNLOADED≠VERIFIED。
 - actionplan：第一步僅在您有權管理的本機執行 `global_dns_download_diagnostic_v2_2_0.ps1`；第二步通過官方網站正常下載分類文件並核對 SHA-256；第三步使用 v2.1.0 匯入器沙盒驗收；第四步才將正式來源受控寫入資料庫。全球 249 個 ISO 3166-1 地區全部保留，分級標註來源和缺口。
+
+
+<!-- LOCAL_DOWNLOAD_REVIEW_20261008 -->
+## 本機已有下載文件的後續核查
+
+原 DNS／網頁工具觀測是當時環境證據，保留原文。2026-10-08 在 Windows Downloads 發現並核查本地 GLEIF、ISIC 與 SDG 文件；本地存在不證明前次容器 DNS 已恢復，也不能由檔名或雜湊獨立驗證官方下載鏈。RAR 可由本機 tar 逐成員讀取，先前文本「沒有 RAR 工具」不適用於本次 Windows 環境。ISIC CSV 不能預設 UTF8；編碼、文件格式、HTTP 及 DNS 狀態應分別記錄。本輪僅採用精華，未匯入來源文件。詳見 [核查報告](Downloads_Essence_Review_20261008.qmd)。
