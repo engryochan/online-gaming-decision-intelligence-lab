@@ -1,0 +1,13 @@
+﻿gate_id,result,measured,note
+COUNTRY_PK,PASS,249,base inherited
+DOMAIN_COUNT,PASS,85,base inherited
+COUNTRY_DOMAIN_COUNT,PASS,21165,base inherited
+COVERAGE_INITIALIZATION,PASS,21165,all NOT_VERIFIED
+FOREIGN_KEY_INTEGRITY,PASS,0,no violations
+SQLITE_INTEGRITY,PASS,ok,pragma
+INVALID_COUNTRY_REJECT,PASS,1,red-team test
+INVERTED_INTERVAL_REJECT,PASS,1,red-team test
+REAL_ENTITIES_IMPORTED,BLOCKED,0,no actual legal entity data loaded
+ISIC_REV5_FULL_IMPORT,BLOCKED,0,official source not imported
+CPC_COMPLETE_IMPORT,BLOCKED,0,official structure not imported
+HISTORICAL_ENTITY_EVIDENCE,BLOCKED,0,no verified historical entities
