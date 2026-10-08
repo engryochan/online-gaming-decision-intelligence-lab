@@ -1,0 +1,28 @@
+---
+title: "全球登記 B28：官方登記機關全表與逐地區身份來源索引"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 實測交付
+
+保存 GLEIF RA v1.9 全部 1181 條來源行、1138 個唯一機關代碼，包含 234 個非空國家／地區代碼及 3 條空國碼來源。249條母表全部保留，231 個母表地區有來源機關，18 個未在此版觀測到。
+
+同一機關代碼可能跨司法管轄區重複出現，保留全部來源行與多重性表，不能按機關代碼機械丟棄。
+
+## 法人身份橋與時間
+
+六個B27 LEI全部匹配RA000156；當地登記號保持字串及前導零。RA000156對應Croatian Court Registry。分開記錄法人創建日期、LEI初始登記、最後更新及下次續期；續期不是法人或上市有效期。六個工商查詢工作列完整展開，尚未取得逐家公司工商提取結果，不升級為獨立身份核實。
+
+## 官方證據與限制
+
+[GLEIF官方來源頁](https://www.gleif.org/en/lei-data/code-lists/gleif-registration-authorities-list)提供[2026-09-30 RA v1.9 CSV](https://www.gleif.org/lei-data/code-lists/gleif-registration-authorities-list/2026-09-30_ra-list-v1.9.csv)。來源包含登記或驗證機關，不能視為全球工商來源全集，更不能視為全部公司名錄。
+
+[Croatian Court Registry](https://sudreg.pravosudje.hr/)的官方搜索頁提供MBS與OIB查詢欄位；本輪只核定入口及RA映射，未提交每家公司查詢，不虛報已取得工商結果。未在此RA版出現不代表該地區沒有政府登記機關。母表是沿用現有249版次，未宣稱重新核定現行ISO全集；歷史政治實體另庫保留。
+
+## 可對賬成果
+
+[全機關表](tables/53_global_registration_authorities_b28_20261008/registry_registration_authorities_v1_9.csv)、[249逐地區索引](tables/53_global_registration_authorities_b28_20261008/registry_all_country_authority_coverage.csv)、[身份橋](tables/53_global_registration_authorities_b28_20261008/registry_lei_local_registration_bridge.csv)、[工商待辦](tables/53_global_registration_authorities_b28_20261008/registry_local_registry_workqueue.csv)、[SQLite](tables/53_global_registration_authorities_b28_20261008/global_registration_authorities_b28.sqlite)。全表、CSV／SQLite、來源雜湊及保護文件核對通過。七向文件更新；原清單2608項未嘗試及所有歷史／分頁待辦未結案。未匯入Windows Downloads文件。全球完整性UNKNOWN。
