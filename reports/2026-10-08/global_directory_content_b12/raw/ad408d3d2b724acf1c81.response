@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<title>证券市场交易结算资金监控系统投资者资金查询平台</title>
+</head>
+
+
+
+	<!-- jQuery specific -->
+	<script type="text/javascript" src="/investorservice/common/resource/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/investorservice/common/resource/easyUI/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/investorservice/common/resource/easyUI/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="/investorservice/common/js/hanzi2pinyin.js"></script>
+	<script type="text/javascript" src="/investorservice/common/js/json2.js"></script>
+	<link rel="stylesheet" type="text/css" href="/investorservice/common/resource/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/investorservice/common/resource/themes/icon.css">
+
+
+
+<style>
+font{
+    font-family:"宋体","Arial Narrow";
+    font-size:12px;
+}
+a{text-decoration: none;font-family:'微软雅黑';}
+a:link,a:visited{color:#000;}
+a:hover,a:active,a:focus{color:#000;text-decoration: none;}
+</style>
+<body>
+<center>
+<div id="page">
+	<div id="loginbg">
+		<div id="login">
+			<form id="loginForm">
+	        	<p>
+	        		<span style="display: inline-block; width: 80px; text-align:right;">用&nbsp;户 </span>
+	        		<input id="user" name="user" type="text" class="textbox text" value="" />
+	        	</p>
+		        <p>
+		        	<span style="display: inline-block; width: 80px; text-align:right;">密&nbsp;码 </span>
+		        	<input id="pwd" type="password" name="pwd" class="textbox text"/>
+		        </p>
+	            <p>
+	            	<span style="display: inline-block; width: 80px; text-align:right;">验证码</span>
+	            	<input id="jcaptchacode"  name="jcaptchacode" type="text" class="textbox text1" />
+	            	<img id="jcaptcha" src="../jcaptcha" style="height:22px;width:75px" />
+	            </p>
+	            <p></p>
+	            <div style="display: none;" id="divErrorMsg">
+	            	<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong id="errorMsg" style="color: #F70615">请输入验证码</strong></p>
+	            </div>
+	            <p class="p01" style="padding-left: 112px">
+	            	<input id="loginButton" type="button" class="btn002" value="" />&nbsp; &nbsp;
+	            	<input id="resetButton" type="button" class="btn003" value="" />
+	            </p>
+	            <p style="padding-left: 90px">
+	            	<br /><br />
+	            	<a href="/investorservice/security/forgotPwd.jsp">忘记密码</a>&nbsp;&nbsp;
+	            	<a href="/investorservice/security/register.jsp">用户注册</a>&nbsp;&nbsp;
+	            	<a href="/investorservice/book.doc">操作指南</a>
+	            </p>
+	        	</form>
+	        </div>
+	</div>
+	<div id="boxbt">
+	   <div style="height: 38px;display: table-cell;vertical-align: bottom;"> 
+	       <a href="https://beian.miit.gov.cn">
+	           京ICP备12035868号-1
+	       </a>
+	   </div>
+       <table width="668" border="0">
+		  <tbody>
+		    <tr>
+		    	<td></td>
+		      <td height="28" align="left" valign="bottom" style="font-size:14px"><strong>查询提示:</strong></td>
+		          </tr>
+		          <tr><td colspan="2">&nbsp;</td></tr>
+		          <tr>
+		            <td width="43" valign="top"><div align="right">1.</div></td>
+		            <td width="615" align="left" valign="top"  style="font-size:14px"><p>提供投资者查询服务，是中国证监会保障投资者保证金安全和服务市场的重要举措。</p></td>
+		          </tr>
+		          <tr>
+		            <td valign="top"><div align="right">2.</div></td>
+		            <td width="615" align="left" valign="top"  style="font-size:14px"><p>投资者可通过访问查询平台，对自身资金安全进行监督。</p></td>
+		          </tr>
+		          <tr>
+		            <td valign="top"><div align="right">3.</div></td>
+		            <td width="615" align="left" valign="top"  style="font-size:14px"><p>本查询平台提供的所有查询数据信息均来自于证券公司向&ldquo;中国证监会证券市场交易结算资金监控系统&rdquo;报送的数据信息，数据信息的真实性、准确性和完整性由证券公司负责。投资者如有疑问，可拨打&ldquo;12386&rdquo;热线向我司反映。</p></td>
+		          </tr>
+		          <tr>
+		            <td valign="top"><div align="right">4.</div></td>
+		            <td width="615" align="left" valign="top"  style="font-size:14px"><p>目前，&ldquo;投资者资金查询平台&rdquo;向投资者提供其本人参与证券交易所股票期权交易的资金余额及变动情况。</p>
+		              <p>&nbsp;</p>
+		            <p align="right"><strong>中国证券投资者保护基金有限责任公司</strong></p></td>
+		    </tr>
+		    </tbody>
+	</table>
+   </div>
+</div>
+</center>
+
+<script>
+
+	var siteName='www.sipf.com.cn.gzqq';
+	function   setCookie(name,value) {     
+		var   Days   =   30;   //此   cookie   将被保存   30   天     
+		var   exp     =   new   Date();         
+		//new   Date( "December   31,   9998 ");     
+		exp.setTime(exp.getTime()   +   Days*24*60*60*1000);     
+		document.cookie   =   name   +   "= "+   escape(value)   + ";expires= "+   exp.toGMTString(); 
+	} 
+	
+	function getCookie(objName){
+		//获取指定名称的cookie的值   
+		var arrStr = document.cookie.split("; ");   
+		for(var i = 0;i < arrStr.length;i ++){    
+			var temp = arrStr[i].split("=");    
+			if(temp[0] == objName) return unescape(temp[1]);   
+		} 
+	}
+
+	$(document).ready(function() {
+	 	var fll = true;
+ 		if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0"){ 
+			alert("请升级成IE8+版本浏览器,且文档模式与浏览模式调整为相应版本号版本"); 
+			fll = false;
+		} else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0"){ 
+			alert("请升级成IE8+版本浏览器,且文档模式与浏览模式调整为相应版本号版本"); 
+			fll = false;
+		}
+		
+		if(fll){
+	
+		$('#resetButton').click(function(){
+			$('#loginForm')[0].reset();
+			$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+			$('#errorMsg').html('');
+			$('#divErrorMsg').hide();
+		});
+	
+		$('#loginButton').click(function() {
+			if($("#jcaptchacode").val()!=""){
+			 if($("#user").val()!="" && $("#pwd").val() !=""){
+			 	 if(checkwc()){
+						var message = {};
+						 message.lm= zhname($("#user").val());
+						 message["swl"]= zhname($("#pwd").val());
+						 message.jcaptchacode=$("#jcaptchacode").val();
+						 message.method='login';
+						//"{user:" + $("#user").val() + ",pwd:'" + $("#pwd").val()  + "',jcaptchacode:"+$("#jcaptchacode").val()+",method:login}";		
+						$.ajax({
+						 		type: "Post", 
+					            contentType: "application/json; charset=utf-8",
+					            url: "/investorservice/security/login.action", 
+					            dataType: 'html',
+					            async : false, 
+					            data: JSON.stringify(message),
+					            success: function (data) {
+						            if(data == 'wrongcode'){
+										$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+										$('#divErrorMsg').show();
+										$('#errorMsg').html('验证码错误，请重新填写');
+									}else if (data == 'success1') {
+										window.location.href = "../home/index.jsp";
+									}else if(data == 'deletedUser') {
+										$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+										$('#divErrorMsg').show();
+										$('#errorMsg').html('此用户已注销');
+									}else if(data == 'errCounts') {
+										$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+										$('#divErrorMsg').show();
+										$('#errorMsg').html('<p style="color:#FF0000">账户已锁定</p>');
+										//$('#loginButton').hide();
+									}else {// ($.trim(status) == 'wrongPassOrUser') {
+										$('#jcaptcha').attr('src','../jcaptcha?t='+(Date.parse(new Date())));
+										$('#divErrorMsg').show();
+										$('#errorMsg').html('用户名或密码错误，请重新填写');
+									}
+					            },
+					            error:function(){
+					            }
+					});
+				}
+		  }else{
+		  	$('#divErrorMsg').show();
+			$('#errorMsg').html('请输入用户名或密码');
+		  }
+		}else{
+			$('#divErrorMsg').show();
+			$('#errorMsg').html('请输入验证码');
+		}
+	});
+	$('#loginbg').keydown(function(event){
+ 			if (event.keyCode == '13') {
+ 				//if($('#loginButton:visible').is('#loginButton')){
+     				$('#loginButton').trigger('click');
+     			//}
+   			}
+ 		});
+ 		
+ 	function   retrivePwd() {
+	 		var user=$('#user').val();			
+			if(typeof(getCookie(user))   !=   'undefined')    {      
+//				alert(typeof(getCookie(user)));  
+				var pwd=getCookie(user);
+//				alert("pwd="+pwd);
+				$('#pwd').val(pwd);
+			} 
+		} 
+ 		$('#user').keydown(function(event){
+ 			if (event.keyCode == '9') {
+     			retrivePwd();
+   			}
+ 		});		
+ 		$('#user').mouseleave(function(){
+			retrivePwd();
+ 		});
+ 		
+ 		$('#user').blur(function(){
+ 			if($("#user").val()!=""){
+		 		var LoginNamereg = /^[A-Za-z0-9]{6,12}$/;
+				var LoginNameisok= LoginNamereg.test($("#user").val());
+				if(!LoginNameisok){
+					$('#divErrorMsg').show();
+					$('#errorMsg').html('用户名请输入字母和数字长度为6-12！');
+				}else{
+					$('#divErrorMsg').hide();
+				}
+			}
+	 	});
+	 	
+		$('#pwd').blur(function(){
+		 	if($("#pwd").val()!=""){
+		 		var PassWordreg = /^[0-9]{8}$/;
+				var PassWordisok= PassWordreg.test($("#pwd").val());
+				 if(! PassWordisok){
+				   $('#divErrorMsg').show();
+				   $('#errorMsg').html('密码请输入数字，长度为8位数字');
+				}else{
+					$('#divErrorMsg').hide();
+				}
+		 	}
+		});		
+		
+			function checkwc(){
+				var fl = true;
+				var LoginNamereg = /^[A-Za-z0-9]{6,12}$/;
+				var LoginNameisok= LoginNamereg.test($("#user").val());
+				
+				var PassWordreg = /^[0-9]{8}$/;
+				var PassWordisok= PassWordreg.test($("#pwd").val());
+				
+				if(!LoginNameisok){
+					fl=false;
+					$('#divErrorMsg').show();
+					$('#errorMsg').html('用户名请输入字母和数字长度为6-12！');
+				}else if(! PassWordisok){
+				   fl=false;
+				   $('#divErrorMsg').show();
+				   $('#errorMsg').html('密码请输入数字，长度为8位数字');
+				}
+				if(fl){
+					$('#divErrorMsg').hide();
+				}
+				
+				return fl;
+			}
+			
+		function zhname(str1){
+			var str=str1;
+			var arr = "";
+			for(var i=0;i<str.length;i++){
+				if(i == str.length-1){
+					  arr += str.charCodeAt(i)+"";
+				}else{
+			   		arr += str.charCodeAt(i)+"" + ",";
+			   }
+			}
+			return arr;
+		}
+ 		/**
+ 			var user=getCookie(siteName);	
+ 			var pwd=getCookie(user);
+ 			$('#user').val(user);
+ 			$('#pwd').val(pwd); 	
+ 		**/
+ 	}
+});
+</script>
+</body>
+

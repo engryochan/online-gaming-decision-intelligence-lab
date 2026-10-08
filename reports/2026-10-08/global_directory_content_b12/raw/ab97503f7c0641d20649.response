@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Tf9RPT1CV6chSi4Stbhu31KFATbqyFsTjEll9ckx">
+
+    <title>Balkan Gas Hub</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- Styles -->
+    <link href="/css/app.css?id=eefd94427a86e275749e3b98316e9a50" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/alertify.css" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/daterangepicker.css" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/Chart.min.css" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css"/>
+
+
+</head>
+<body>
+    <div class="js-cookie-consent cookie-consent">
+
+    <span class="cookie-consent__message">
+        Your experience on this site will be improved by allowing cookies. By continuing to use this site, you agree to our use of cookies.
+    </span>
+
+    <button class="js-cookie-consent-agree cookie-consent__agree">
+        Allow cookies
+    </button>
+
+</div>
+
+    <script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'www.balkangashub.bg';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 7);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+
+    <div id="app">
+        <nav id="navbar-top" class="navbar navbar-expand-md navbar-light bg-white">
+    <div class="container">
+        <div class="navbar-collapse navbar-expand">
+            <ul class="navbar-nav ml-auto float-right">
+                <!-- Authentication Links -->
+<li class="nav-item">
+    <a class="nav-link login-link" href="https://www.balkangashub.bg/en/login">Login</a>
+</li>
+                <li class="nav-item flag-icon flag-icon-gb">
+                    <a class="nav-link lang-link " href="https://www.balkangashub.bg/en/about-us/company"></a>
+                </li>
+                <li class="nav-item flag-icon flag-icon-bg ml-2">
+                    <a class="nav-link lang-link " href="https://www.balkangashub.bg/bg/about-us/company"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg-white">
+    <div class="container logo">
+        <a class="navbar-brand" href="https://www.balkangashub.bg">
+            <img src="https://www.balkangashub.bg/imgs/logo_1.png" />
+        </a>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbar-main">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/management-statement">Management Statement</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/company">About The Company</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/ownership">Ownership</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/structure">Structure</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/monthly-reports">Monthly Reports</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/statements-and-reports">Financial Statements</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/links">Useful links</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/privacy">Data Protection</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/disclaimer">Conditions for use of the website</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/contacts">Contact Us</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products And Services</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/balancing-actions">TSO Balancing actions</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-calendars">Trading Calendars</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/short-term-products">Short-term Exchange Segment</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/long-term-products">Long-term Exchange Segment</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/lng-auction">LNG Auction Service</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/auction-settings">Auction Setting Service</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-ugs-chiren">Trading point UGS Chiren</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-igb-locational">Тrading point IGB Locational</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-ip-stara-zagora">Тrading point IP Stara Zagora</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-gis-galata">Тrading point GIS GALATA</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/rulebook">Rulebook</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/api-services">API Services</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/fees">Fees</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Membership</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/membership/admission">Registration Process</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/membership/members">Members</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle " href="https://www.balkangashub.bg/en/remit">REMIT</a>
+                                                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle " href="https://www.balkangashub.bg/en/news">News</a>
+                                                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle " href="https://www.balkangashub.bg/en/market-surveillance">Market Surveillance</a>
+                                                                                    </li>
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle text-color-animation" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clearing and Settlement</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/clearing-documents">Clearing Documents</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/clearing-selection-procedure">Clearing selection procedure</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle" href="https://iip.balkangashub.bg">iip</a>
+                                                                                    </li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+        <main class="py-0">
+                <div id="content-wrapper">
+    <div class="content-header ">
+        <div class="container">
+            <p class="breadcrumbs-wrapper"><a href="https://www.balkangashub.bg/en">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;<span>About The Company</span></p>
+            <h1>About The Company</h1>
+        </div>
+    </div>
+
+    <div class="container content" id="">
+        <div class="card">
+            <div class="card-body">
+                <section>
+            <h5>Short info about BGH</h5>
+
+            <p>Balkan Gas Hub ЕAD was established by &quot;Bulgartransgaz&quot; EAD in January 2019. With regard to the realization of the concept for establishment of a gas distribution hub on the territory of Bulgaria.</p>
+            <p>Balkan Gas Hub ЕAD operates trading platforms servicing the needs of the natural gas markets within the Balkan gas hub. In synergy with the physical infrastructure of the gas distribution hub, it provides the prerequisites required for establishment of the first, Bulgaria based, liquid trading gas hub in the South Eastern Europe region.</p>
+            <p>The activity of &quot;Balkan Gas Hub&quot; EAD is fully aligned with the European goal of building an interconnected and unified pan-European gas market and supports the plans for the development of gas infrastructure throughout Europe. The concept of creating and developing a gas distribution center on the territory of the Republic of Bulgaria, as well as creating a gas exchange, is actively supported by the European Commission and is strictly in line with the needs identified by the Group for high support of gas connectivity of the Central and South Eastern Europe (CESEC).</p>
+            <p>&quot;Balkan Gas Hub&quot; EAD is part of the Memorandum of Understanding for cross-border cooperation regarding the development of an integrated natural gas market in Southeast and Eastern Europe - SEEGAS.</p>
+        </section>
+
+        <section>
+            <h5>Mission, vision, objectives</h5>
+
+            <p><strong>Mission</strong></p>
+            <p>The company Balkan Gas Hub EAD (BGH EAD) was incorporated in January 2019 with a mission to establish and operate a natural gas trading exchange. The electronic platform with segment also for bilateral trade, offers contemporary physical products, including products for exchange of ownership on a stock exchange basis at a virtual trading point (VTP) and at some of the physical points of the networks.</p>
+            <p>The company provides market participants with a natural gas trading platform (TP) with all the necessary functionalities. It is established according to the requirements of Art. 10 of Regulation (EU) No 312/2014 establishing a Network Code on Gas Balancing of Transmission Networks and of the applicable national and European legislation and regulations.</p>
+
+            <p><strong>Vision</strong></p>
+            <p>The vision of the trading platform Balkan Gas Hub EAD is directly related to the implementation of the strategic and operational goals set by the company.</p>
+            <p>Among the planned activities, which are of key importance for the successful development of Balkan Gas Hub EAD, are the introduction of clearing services for transactions carried out on the platform, which will provide additional security for market participants. In this regard, an increase in the activity of traders is expected and we contemplate the conclusion of agreements with market makers and market-forming participants, which will further increase market liquidity and increase competition in supply, and will inevitably affect price signals.</p>
+            <p>Another important aspect of the activity is the study and use of opportunities for regional integration of the Bulgarian gas market with neighboring markets, based on various models for market associations. At the level of organized markets, one of the possible and most common services used in the EU is the trading of spreads (price differences) between two different markets.</p>
+
+            <p><strong>Objectives</strong></p>
+            <p>Regarding its long-term development plans, Balkan Gas Hub EAD identifies and acts in pursuance of the following strategic objectives:</p>
+            <ul>
+                <li>Enhance the transparency and liquidity of the natural gas markets in the South-east European region;</li>
+                <li>Create a reliable, stable and integrated regional gas market capable of meeting the needs of traders, customers and users in the long and short term;</li>
+                <li>Enhance energy security and create additional opportunities for diversification of the sources of natural gas supply.</li>
+            </ul>
+            <p>For implementation of these key strategic objectives, priority is given to ensuring further interconnection and sustainable regional cooperation between South-east European markets, which creates conditions for ensuring security of supply, enhance liberalization and increase the liquidity of the national gas markets.</p>
+            <p>In this regard, the following operational objectives have been developed in the long and short term:</p>
+            <ul>
+                <li>Provide environment ensuring competitive prices for users and traders;</li>
+                <li>Provide conditions for trading with standardized products with minimized risks for the parties involved;</li>
+                <li>Ensure transactions transparency and non-discriminatory access to the electronic platform for all market participants.</li>
+            </ul>
+            <!--<p>Introduction of clearing services for transactions carried out on the platform, which will provide additional security for market participants.</p>-->
+            <!--<p>Balkan Gas Hub EAD guarantees its readiness to adjust its business development to the specific needs of the users and market dynamics. The main objective of the company is the gradual expansion of the product range and support of natural gas trade, making it an easily accessible and attractive activity for all participants.</p>-->
+        </section>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </main>
+        <div class="footer container-fluid">
+    <div class="contain row justify-content-center">
+                                <div class="col">
+                <h1>About Us</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/management-statement">Management Statement</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/company">About The Company</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/ownership">Ownership</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/structure">Structure</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/monthly-reports">Monthly Reports</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/statements-and-reports">Financial Statements</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/links">Useful links</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/privacy">Data Protection</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/disclaimer">Conditions for use of the website</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/contacts">Contact Us</a></li>
+                                    </ul>
+            </div>
+                                            <div class="col">
+                <h1>Products And Services</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/products/balancing-actions">TSO Balancing actions</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-calendars">Trading Calendars</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/short-term-products">Short-term Exchange Segment</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/long-term-products">Long-term Exchange Segment</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/lng-auction">LNG Auction Service</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/auction-settings">Auction Setting Service</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-ugs-chiren">Trading point UGS Chiren</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-igb-locational">Тrading point IGB Locational</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-ip-stara-zagora">Тrading point IP Stara Zagora</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-gis-galata">Тrading point GIS GALATA</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/rulebook">Rulebook</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/api-services">API Services</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/fees">Fees</a></li>
+                                    </ul>
+            </div>
+                                            <div class="col">
+                <h1>Membership</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/membership/admission">Registration Process</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/membership/members">Members</a></li>
+                                    </ul>
+            </div>
+                                                                                                                                                                                            <div class="col">
+                <h1>Clearing and Settlement</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/clearing-documents">Clearing Documents</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/clearing-selection-procedure">Clearing selection procedure</a></li>
+                                    </ul>
+            </div>
+                                                                            <div class="clearfix"></div>
+    </div>
+    <div class="footer-copyright text-center py-2" style="background: #2a475a;">© 2019 Copyright:
+        <a href="https://www.balkangashub.bg">Balkan Gas Hub</a>
+    </div>
+</div>
+    </div>
+
+    <script src="https://www.balkangashub.bg/js/alertify.min.js"></script>
+    <script src="https://www.balkangashub.bg/js/moment.min.js"></script>
+    <script src="/js/app.js?id=a49b6550310642e91057ca12c15642d0" ></script>
+    <script src="https://www.balkangashub.bg/js/bootstrap4-toggle.min.js"></script>
+
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+
+    
+    <script>
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function() {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+              $dropdown.hover(
+                function() {
+                  const $this = $(this);
+                  $this.addClass(showClass);
+                  $this.find($dropdownToggle).attr("aria-expanded", "true");
+                  $this.find($dropdownMenu).addClass(showClass);
+                },
+                function() {
+                  const $this = $(this);
+                  $this.removeClass(showClass);
+                  $this.find($dropdownToggle).attr("aria-expanded", "false");
+                  $this.find($dropdownMenu).removeClass(showClass);
+                }
+              );
+            } else {
+                $dropdown.off("mouseenter mouseleave");
+            }
+        });
+
+        setTimeout(function() {
+            $(".js-cookie-consent").slideDown(500);
+        }, 1000);
+
+        
+            </script>
+
+</body>
+</html>

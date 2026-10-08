@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="bg" xml:lang="bg"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=12.0.0" /><link type="text/css" rel="stylesheet" href="RES_NOT_FOUND" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=12.0.0" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=12.0.0" /><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><script type="text/javascript" src="/javax.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><script type="text/javascript" src="/javax.faces.resource/moment/moment.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><script type="text/javascript" src="/javax.faces.resource/chartjs/chartjs.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/css/components_over.css.xhtml" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/css/main.css.xhtml" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/css/cookieconsent.min.css.xhtml" /><script type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">if(window.PrimeFaces){PrimeFaces.settings.locale='bg';PrimeFaces.settings.viewId='/members/memberStatistics.xhtml';PrimeFaces.settings.contextPath='';PrimeFaces.settings.cookiesSecure=false;}</script><script type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){if(window.PrimeFaces){PrimeFaces.csp.init('MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy');};;});</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+        <title>CSD Home</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair Display SC" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" type="image/png" href="/resources/images/logo_only.png" /></head><body><script type="text/javascript" src="/javax.faces.resource/js/cookieconsent.min.js.xhtml" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy"></script> 
+
+
+        <script nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">
+            window.onload = function () {
+                var element = document.getElementById("textarea_simulator");
+                element.remove();
+            }
+
+            window.addEventListener("load", function () {
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#006a23"
+                        },
+                        "button": {
+                            "background": "#f1d600"
+                        }
+                    },
+                    "theme": "edgeless",
+                    "content": {
+                        "message": "Този сайт използва \"бисквитки\", за да работи оптимално за Вас. Чрез посещението си Вие приемате използването на \"бисквитки\". ",
+                        "dismiss": "Разбрах!",
+                        "link": "Повече информация!",
+                        "href": "/resources/docfiles/cookies_policy.pdf"
+                    }
+                })
+            });
+        </script>
+        <style>
+
+            @media screen and (min-width : 800px) {
+                .inputHeader {
+                    color: #495057;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* padding-right: 32px; */
+                    text-indent: 10px;
+                    text-decoration: none;
+                    padding: 15px 16px;
+                    height: 21px;
+                    width: 320px;
+                    border: 1px solid #B6B6B6;
+                    border-radius: 16px;
+                    -webkit-border-radius: 16px;
+                }
+                .ui-inputgroup .ui-inputgroup-addon, .ui-inputgroup .ui-inputgroup-addon-checkbox {
+                    display: inline-block;
+                    text-align: center;
+                    min-width: 3em;
+                    font-size: 1rem;
+                    /* height: 43px; */
+                    height: 53px;
+                    border-bottom-left-radius: 16px;
+                    border-top-left-radius: 16px;
+                    border-width: 1px 0px 1px 1px;
+                    border-style: solid;
+                    border-color: #B6B6B6;
+                    /* border: 1px solid #B6B6B6; */
+                    -webkit-border-top-left-radius: 16px;
+                    -webkit-border-bottom-left-radius: 16px;
+                }
+                .headerLeftMenuBtn .ui-widget .ui-icon.pi, .headerLeftMenuBtn .ui-icon.pi {
+                    background: none repeat scroll 0 0 transparent !important;
+                    text-indent: 0 !important;
+                    font-size: 3em;
+                }
+                .headerLeftMenu .ui-button-icon-only .ui-icon, .headerLeftMenu .ui-button-text-icon-left .ui-icon, .headerLeftMenu .ui-button-text-icon-right .ui-icon {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -25x;
+                }
+
+                #header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    /* padding: 12px 40px; */
+                    gap: 71px;
+                    max-width: 1440px;
+                    width: 100%;
+                    height: 88px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+                }
+
+                #headerLogo {
+                    margin: 12px 40px;
+                    width: 152.23px;
+                    height: 64px;
+                }
+
+                .headerLogo-1 {
+                    max-width:100%;
+                    height:auto;
+                }
+
+               
+            }
+            @media screen and (max-width : 800px) {
+                .inputHeader {
+                    color: #495057;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* padding-right: 32px; */
+                    text-indent: 10px;
+                    text-decoration: none;
+                    padding: 15px 16px;
+                    height: 16px;
+                    width: 160px;
+                    border: 1px solid #B6B6B6;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                }
+                .ui-inputgroup .ui-inputgroup-addon, .ui-inputgroup .ui-inputgroup-addon-checkbox {
+                    display: inline-block;
+                    text-align: center;
+                    min-width: 3em;
+                    font-size: 1rem;
+                    /* height: 43px; */
+                    height: 48px;
+                    border-bottom-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    border-width: 1px 0px 1px 1px;
+                    border-style: solid;
+                    border-color: #B6B6B6;
+                    /* border: 1px solid #B6B6B6; */
+                    -webkit-border-top-left-radius: 10px;
+                    -webkit-border-bottom-left-radius: 10px;
+                }
+                .headerLeftMenuBtn .ui-widget .ui-icon.pi, .headerLeftMenuBtn .ui-icon.pi {
+                    background: none repeat scroll 0 0 transparent !important;
+                    text-indent: 0 !important;
+                    font-size: 1.5em;
+                }
+                .headerLeftMenu .ui-button-icon-only .ui-icon, .headerLeftMenu .ui-button-text-icon-left .ui-icon, .headerLeftMenu .ui-button-text-icon-right .ui-icon {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -10px;
+                }
+
+                #header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    /* padding: 12px 40px; */
+                    gap: 10px;
+                    max-width: 800px;
+                    width: 100%;
+                    height: 88px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+                }
+                #headerLogo {
+                    margin: 12px 40px;
+                    width: 152.23px;
+                    height: 64px;
+                    min-width: 75px;
+                }
+
+                .headerLogo-1 {
+                    max-width:100%;
+                    height:auto;
+                    margin-top: 25%;
+                }
+				
+				.center-sh-right-1 {
+                    display: none;
+                }
+
+               
+            }
+
+
+        </style>
+            <div id="header">
+
+                <div id="headerLogo">
+                    <a href="/index.xhtml"><img src="/javax.faces.resource/images/Logo_GreenBG.svg.xhtml" class="headerLogo-1" /></a>
+                </div>	
+
+                <div id="headerLeft">
+<form id="searchSiteText" name="searchSiteText" method="post" action="/members/memberStatistics.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="searchSiteText" value="searchSiteText" />
+
+                        <div class="ui-inputgroup">
+                            <!--  &lt;div class="ui-inputgroup-addon"&gt;&lt;i class="pi pi-search" style="padding-top: 14px;"&gt;&lt;/i&gt;&lt;/div&gt;--><button id="searchSiteText:j_idt16" name="searchSiteText:j_idt16" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-inputgroup-addon" style="padding-top: 14px;" type="submit"><span class="ui-button-icon-left ui-icon ui-c pi pi-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="searchSiteText:j_idt16_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("CommandButton","widget_searchSiteText_j_idt16",{id:"searchSiteText:j_idt16"});});</script><input id="searchSiteText:search" name="searchSiteText:search" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all inputHeader" placeholder="Търсене" /><script id="searchSiteText:search_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("InputText","widget_searchSiteText_search",{id:"searchSiteText:search"});});</script>
+                        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="3884148633643030058:9008741383762941474" autocomplete="off" />
+</form>
+
+
+
+                    <div class="headerLeftMenu">
+                        <span class="headerLeftMenuText">Меню</span>
+                        <div><div id="menuPanel" class="ui-selectbooleanbutton ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only headerLeftMenuBtn"><div class="ui-helper-hidden-accessible"><input id="menuPanel_input" name="menuPanel_input" type="checkbox" /></div><span class="ui-button-icon-left ui-icon ui-c pi pi-bars"></span><span class="ui-button-text ui-c">ui-button</span></div><script id="menuPanel_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("SelectBooleanButton","wMenuPanel",{id:"menuPanel",onLabel:"ui\-button",offLabel:"ui\-button",onIcon:"pi pi\-times",offIcon:"pi pi\-bars"});});</script><div id="overMenuPanel" class="ui-overlaypanel ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-overlaypanel-content">
+    <style>
+        .hidden{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+    <script nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">
+        function mouseOverAus() {
+            const div = document.getElementById("aboutuselement");
+            div.classList.remove('hidden');
+        }
+
+        function mouseOverOth() {
+            const div = document.getElementById("aboutuselement");
+            div.classList.add('hidden');
+        }
+    </script>
+        <div class="sRightPanel">
+            <div class="sRightPanel-left">
+                <div class="sRightPanel-left-1-2">
+                    <div class="sRightPanel-left-1">
+                        <span><a class="mysliderLink" href="/au/aboutUs.xhtml" id="a-e1dc0078-240d-46d1-9153-7905f880fbbb">ЗА НАС</a> </span>
+                        <span><a class="mysliderLink" href="/md/mainDocuments.xhtml" id="a-f3a83a5b-a56a-49e9-bf6b-4bd2c6d9dce0">ОСНОВНИ ДОКУМЕНТИ</a> </span>
+                        <span><a class="mysliderLink" href="/ec/europeanConnectivity.xhtml" id="a-f090e512-9546-4bed-a234-1e1dc674485f">ЕВРОПЕЙСКА СВЪРЗАНОСТ</a> </span>
+                        <span><a class="mysliderLink" href="/issuers/issuers.xhtml" id="a-7729d808-b034-4aab-9fb6-6851c37a69f4">ЕМИТЕНТИ</a> </span> 
+                        <span><a class="mysliderLink" href="/members/members.xhtml" id="a-04c95409-3093-4f2b-9324-fb2048b15894">ЧЛЕНОВЕ</a> </span>	
+                        <span><a class="mysliderLink" href="/investors.xhtml" id="a-08a90796-6b83-4ece-a827-cc01fa093eec">ИНВЕСТИТОРИ</a>  </span>
+                        <span><a class="mysliderLink" href="/sp/specialPledges.xhtml" id="a-38d878dc-dc01-401b-a5bd-03ef0c5bc73b">ОСОБЕНИ ЗАЛОЗИ</a>  </span>
+                        <span><a class="mysliderLink" href="/others/others.xhtml" id="a-73c1094b-3141-4bbb-8d47-36d3d21c6f9f">ДРУГИ</a> </span>
+                        <span><a class="mysliderLink" href="/mainFAQ.xhtml" id="a-6725455b-3245-4e08-9664-4cf302d58b47">ЧЕСТО ЗАДАВАНИ ВЪПРОСИ (FAQ)</a>  </span>
+                    </div>
+                    <div id="aboutuselement" class="sRightPanel-left-2 hidden">
+                        <span><a class="mysliderLink" href="/au/activityCompany.xhtml">Дейност</a> </span>
+                        <span><a class="mysliderLink" href="/au/financialInformation.xhtml">Финансова информация</a> </span>
+                        <span><a class="mysliderLink" href="/au/boardDirectors.xhtml">Съвет на директорите</a> </span>
+                        <span><a class="mysliderLink" href="/au/shareholders.xhtml">Акционери</a> </span>
+                        <span><a class="mysliderLink" href="/au/organization.xhtml">Организация</a> </span> 
+                        <span><a class="mysliderLink" href="/au/courtArbitration.xhtml">Арбитражен съд</a> </span>	
+                        <span><a class="mysliderLink" href="/au/userCommittee.xhtml">Комитет на ползвателите</a>  </span>
+                        <span><a class="mysliderLink" href="/au/generalMeetings.xhtml">Общи събрания</a>  </span>
+                        <span><a class="mysliderLink" href="/au/news.xhtml">Новини</a>  </span>
+                        <span><a class="mysliderLink" href="/au/complaintsProcedure.xhtml">Процедура за разглеждане на жалби</a>  </span>
+                    </div>
+                </div>
+                <a class="left-panel-menu-16" href="http://enter.csd-bg.bg/" target="_blank">
+                    <span class="sRightPanel-left-3">
+                        <span class="left-panel-menu-15">E-Portal</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>               
+                    </span> 
+                </a>
+                <a class="left-panel-menu-16" href="https://lei.csd-bg.bg/" target="_blank">
+                    <span class="sRightPanel-left-3">
+                        <span class="left-panel-menu-15">LEI Portal</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>               
+                    </span> 
+                </a>
+
+                <!-- &lt;div&gt;
+                     &lt;p:graphicImage name="images/slider_portal_login.svg"/&gt;
+                 &lt;/div&gt;-->
+            </div>
+
+            <div class="sRightPanel-right">
+                <div class="sRightPanel-right-1">
+                    <span><b>Контакти</b></span>
+                    <span>а: гр. София, 1000, ул. “Три уши” № 6, ет. 4</span>
+                    <span>т: +359 2 939 19 81; +359 2 400 12 41</span>
+                    <span>e: info@csd-bg.bg</span>
+					<span><b>За информация за боновите книжки от масовата приватизация:</b></span>
+					<span>т: +359 2 4001 228</span>
+  
+
+                </div>
+                <div class="sRightPanel-right-2">
+                    <a href="https://www.facebook.com/CentralDepository" target="_blank"><img id="j_idt21" src="/javax.faces.resource/images/slider_Facebook.svg.xhtml" alt="" ismap="false" /></a>
+                    <a href="https://www.linkedin.com/company/central-depository/" target="_blank"><img id="j_idt23" src="/javax.faces.resource/images/slider_LinkedIn.svg.xhtml" alt="" ismap="false" /></a>
+                    <a href="https://www.youtube.com/channel/UCtpgISArYmjrdkx3xvIfhyQ" target="_blank"><img id="j_idt25" src="/javax.faces.resource/images/slider_Youtube.svg.xhtml" alt="" ismap="false" /></a>
+                    <!-- &lt;p:graphicImage name="images/slider_Facebook.svg"/&gt;
+                     &lt;p:graphicImage name="images/slider_LinkedIn.svg"/&gt;
+                     &lt;p:graphicImage name="images/slider_Youtube.svg"/&gt;-->
+                </div>
+            </div>
+        </div></div></div><script id="overMenuPanel_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("OverlayPanel","widget_overMenuPanel",{id:"overMenuPanel",target:"menuPanel",onHide:function(){PF('wMenuPanel').uncheck()}});});</script>
+                        </div>
+                    </div>
+
+                    <div class="headerLeftBorder"> </div>
+                    <div class="headerLeftBtn">
+<form id="j_idt28" name="j_idt28" method="post" action="/members/memberStatistics.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt28" value="j_idt28" />
+<button id="j_idt28:j_idt29" name="j_idt28:j_idt29" class=" langButtonBG" title="БГ" type="submit"><span class="ui-button-text ui-c">БГ</span></button><script id="j_idt28:j_idt29_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt28_j_idt29",{id:"j_idt28:j_idt29"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="3884148633643030058:9008741383762941474" autocomplete="off" />
+</form>
+<form id="j_idt30" name="j_idt30" method="post" action="/members/memberStatistics.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt30" value="j_idt30" />
+<button id="j_idt30:j_idt31" name="j_idt30:j_idt31" class=" langButtonEN" title="EN" type="submit"><span class="ui-button-text ui-c">EN</span></button><script id="j_idt30:j_idt31_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt30_j_idt31",{id:"j_idt30:j_idt31"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="3884148633643030058:9008741383762941474" autocomplete="off" />
+</form>
+                    </div>
+                </div>	 
+
+            </div>
+            <style>
+                .ui-paginator .ui-paginator-page, .ui-paginator .ui-paginator-next, .ui-paginator .ui-paginator-last, .ui-paginator .ui-paginator-first, .ui-paginator .ui-paginator-prev {
+                    cursor: pointer;
+                    color: #048282;
+                }
+            </style>
+                <div id="center">
+                    <div class="center-actv-comp">
+                        <div class="center-actv-comp1">
+                            <span class="center-actv-comp11">Статистика</span>
+                            <span class="center-actv-comp12">
+                                <a class="centerBannerLinkA" href="/index.xhtml">Начало</a>   ❯  
+                                <a class="centerBannerLinkA" href="/members/members.xhtml">Членове</a>   ❯   
+                                Статистика
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="center-actv-comp-panel">
+        <div class="center-panel-menu">
+            <div class="center-panel-menu-1">
+                <span><a class="left-panel-menu-12 " href="/members/memberServices.xhtml">Услуги</a> </span>
+                <span><a class="left-panel-menu-12 " href="/members/membership.xhtml">Членство</a> </span>    
+                <span><a class="left-panel-menu-12 " href="/members/memberCommunication.xhtml">Комуникация</a> </span>
+                <span><a class="left-panel-menu-12 " href="/members/dailySchedule.xhtml">Дневен график</a> </span>
+				<span><a class="left-panel-menu-12 " href="/members/memberTradingCalendar.xhtml">Сетълмент календар</a> </span>
+                <span><a class="left-panel-menu-12 " href="/members/memberTariff.xhtml">Тарифа</a> </span>        
+                <span><a class="left-panel-menu-12 " href="/members/settGuaranteeFund.xhtml">Фонд за гарантиране на сетълмента</a> </span>
+                <span><a class="left-panel-menu-12 " href="/members/memberForms.xhtml">Формуляри и документи</a> </span>
+                <span><a class="left-panel-menu-12 activel" href="/members/memberStatistics.xhtml">Статистика</a> </span>                
+                <span><a class="left-panel-menu-12 " href="/members/memberQuestions.xhtml">ЧЗВ (FAQ) - Членове</a> </span>
+            </div>
+            <div class="center-panel-menu-2">
+                <a class="left-panel-menu-16" href="http://enter.csd-bg.bg/" target="_blank">
+                    <span class="left-panel-menu-14">
+                        <span class="left-panel-menu-15">E-Portal</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>              
+                    </span> 
+                </a>
+                <a class="left-panel-menu-16" href="https://lei.csd-bg.bg/" target="_blank">
+                    <span class="left-panel-menu-14">
+                        <span class="left-panel-menu-15">LEI Portal</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>               
+                    </span> 
+                </a>
+                <a class="left-panel-menu-16" href="http://epos.csd-bg.bg/" target="_blank">
+                    <span class="left-panel-menu-14">
+                        <span class="left-panel-menu-15">ЕПОС</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i>  </span>             
+                    </span>
+                </a> 
+                <!--
+                            &lt;p:graphicImage name="images/lei_portal-img.svg"/&gt;
+                            &lt;p:graphicImage name="images/epos-img.svg"/&gt;
+                -->
+            </div>
+        </div>
+
+                        <div class="center-panel-right">
+
+                            <div class="center-panel-right-1">
+                                <span class="center-panel-right-12">
+                                    Централен депозитар предоставя достъп до официална статистика, която включва данни относно обработените от системата сделките (общ брой, пазар, вид инструмент, брой единици, сума) и информация за неуспешен сетълмент, ако такава е налична.
+                                </span>
+                            </div>
+                            <div class="center-panel-right-1">
+<form id="formWB" name="formWB" method="post" action="/members/memberStatistics.xhtml" enctype="application/x-www-form-urlencoded" style="height: 100%;width: 100%;font-family: 'Montserrat';">
+<input type="hidden" name="formWB" value="formWB" />
+<fieldset id="formWB:j_idt37" class="ui-fieldset ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-fieldset-toggleable" style="margin-bottom:20px;padding:20px;height: 90%;width: 90%;font-family: 'Montserrat';" data-widget="widget_formWB_j_idt37"><legend class="ui-fieldset-legend ui-corner-all ui-state-default" tabindex="0"><span class="ui-fieldset-toggler ui-icon ui-icon-minusthick"></span>Седмичен бюлетин</legend><div class="ui-fieldset-content">
+                                        <br /><div id="formWB:j_idt39" class="ui-dataview ui-widget ui-dataview-list"><div class="ui-dataview-header ui-widget-header ui-helper-clearfix ui-corner-top"><div class="ui-dataview-layout-options ui-selectonebutton ui-buttonset"><div class="ui-button ui-button-icon-only ui-state-default ui-state-active" tabindex="0"><input id="formWB:j_idt39_list" name="formWB:j_idt39" type="radio" value="list" class="ui-helper-hidden-accessible" tabindex="-1" checked="checked" /><span class="ui-button-icon-left ui-icon ui-c ui-icon-grip-dotted-horizontal"></span><span class="ui-button-text ui-c">ui-button</span></div></div></div><div id="formWB:j_idt39_content" class="ui-dataview-content ui-widget-content"><ul class="ui-dataview-list-container"><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20261005.pdf" target="_blank">Седмичен Бюлетин номер 1345 от дата 2026-09-28 до дата 2026-10-04</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260928.pdf" target="_blank">Седмичен Бюлетин номер 1344 от дата 2026-09-21 до дата 2026-09-27</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260921.pdf" target="_blank">Седмичен Бюлетин номер 1343 от дата 2026-09-14 до дата 2026-09-20</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260914.pdf" target="_blank">Седмичен Бюлетин номер 1342 от дата 2026-09-07 до дата 2026-09-13</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260907.pdf" target="_blank">Седмичен Бюлетин номер 1341 от дата 2026-08-31 до дата 2026-09-06</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260831.pdf" target="_blank">Седмичен Бюлетин номер 1340 от дата 2026-08-24 до дата 2026-08-30</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260824.pdf" target="_blank">Седмичен Бюлетин номер 1339 от дата 2026-08-17 до дата 2026-08-23</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260817.pdf" target="_blank">Седмичен Бюлетин номер 1338 от дата 2026-08-10 до дата 2026-08-16</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260803.pdf" target="_blank">Седмичен Бюлетин номер 1336 от дата 2026-07-27 до дата 2026-08-02</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/bulletin/20260727.pdf" target="_blank">Седмичен Бюлетин номер 1335 от дата 2026-07-20 до дата 2026-07-26</a></i> <br /><br /><br /></li></ul></div><div id="formWB:j_idt39_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination"><span class="ui-paginator-current">(1 of 24)</span><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page" tabindex="-1"><span class="ui-icon ui-icon-seek-first">F</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page" tabindex="-1"><span class="ui-icon ui-icon-seek-prev">P</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">6</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">7</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">8</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">9</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">10</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">N</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">E</span></a></div></div><script id="formWB:j_idt39_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("DataView","widget_formWB_j_idt39",{id:"formWB:j_idt39",paginator:{id:['formWB:j_idt39_paginator_bottom'],rows:10,rowCount:236,page:0,currentPageTemplate:'({currentPage} of {totalPages})'}});});</script></div><input id="formWB:j_idt37_collapsed" name="formWB:j_idt37_collapsed" type="hidden" autocomplete="off" value="false" /></fieldset><script id="formWB:j_idt37_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("Fieldset","widget_formWB_j_idt37",{id:"formWB:j_idt37",toggleable:true,collapsed:false,toggleSpeed:500});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="3884148633643030058:9008741383762941474" autocomplete="off" />
+</form>
+<form id="formFF" name="formFF" method="post" action="/members/memberStatistics.xhtml" enctype="application/x-www-form-urlencoded" style="height: 100%;width: 100%;font-family: 'Montserrat';">
+<input type="hidden" name="formFF" value="formFF" />
+<fieldset id="formFF:j_idt44" class="ui-fieldset ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-fieldset-toggleable" style="margin-bottom:20px;padding:20px;height: 90%;width: 90%;font-family: 'Montserrat';" data-widget="widget_formFF_j_idt44"><legend class="ui-fieldset-legend ui-corner-all ui-state-default" tabindex="0"><span class="ui-fieldset-toggler ui-icon ui-icon-minusthick"></span>Free Float</legend><div class="ui-fieldset-content">
+                                        <br /><div id="formFF:j_idt46" class="ui-dataview ui-widget ui-dataview-list"><div class="ui-dataview-header ui-widget-header ui-helper-clearfix ui-corner-top"><div class="ui-dataview-layout-options ui-selectonebutton ui-buttonset"><div class="ui-button ui-button-icon-only ui-state-default ui-state-active" tabindex="0"><input id="formFF:j_idt46_list" name="formFF:j_idt46" type="radio" value="list" class="ui-helper-hidden-accessible" tabindex="-1" checked="checked" /><span class="ui-button-icon-left ui-icon ui-c ui-icon-grip-dotted-horizontal"></span><span class="ui-button-text ui-c">ui-button</span></div></div></div><div id="formFF:j_idt46_content" class="ui-dataview-content ui-widget-content"><ul class="ui-dataview-list-container"><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20261007.pdf" target="_blank">Free Float за 2026-10-07</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20261006.pdf" target="_blank">Free Float за 2026-10-06</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20261005.pdf" target="_blank">Free Float за 2026-10-05</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20261002.pdf" target="_blank">Free Float за 2026-10-02</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20261001.pdf" target="_blank">Free Float за 2026-10-01</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20260930.pdf" target="_blank">Free Float за 2026-09-30</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20260929.pdf" target="_blank">Free Float за 2026-09-29</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20260928.pdf" target="_blank">Free Float за 2026-09-28</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20260925.pdf" target="_blank">Free Float за 2026-09-25</a></i> <br /><br /><br /></li><li class="ui-dataview-row">
+                                                <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/ffloat/FREE_FLOAT_20260924.pdf" target="_blank">Free Float за 2026-09-24</a></i> <br /><br /><br /></li></ul></div><div id="formFF:j_idt46_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination"><span class="ui-paginator-current">(1 of 123)</span><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page" tabindex="-1"><span class="ui-icon ui-icon-seek-first">F</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page" tabindex="-1"><span class="ui-icon ui-icon-seek-prev">P</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-state-active ui-corner-all" tabindex="0" href="#">1</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">2</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">3</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">4</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">5</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">6</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">7</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">8</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">9</a><a class="ui-paginator-page ui-state-default ui-corner-all" tabindex="0" href="#">10</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">N</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all" aria-label="Last Page" tabindex="0"><span class="ui-icon ui-icon-seek-end">E</span></a></div></div><script id="formFF:j_idt46_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("DataView","widget_formFF_j_idt46",{id:"formFF:j_idt46",paginator:{id:['formFF:j_idt46_paginator_bottom'],rows:10,rowCount:1222,page:0,currentPageTemplate:'({currentPage} of {totalPages})'}});});</script></div><input id="formFF:j_idt44_collapsed" name="formFF:j_idt44_collapsed" type="hidden" autocomplete="off" value="false" /></fieldset><script id="formFF:j_idt44_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("Fieldset","widget_formFF_j_idt44",{id:"formFF:j_idt44",toggleable:true,collapsed:false,toggleSpeed:500});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:4" value="3884148633643030058:9008741383762941474" autocomplete="off" />
+</form><fieldset id="j_idt51" class="ui-fieldset ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-fieldset-toggleable" style="margin-bottom:20px;padding:20px;height: 90%;width: 90%;font-family: 'Montserrat';" data-widget="widget_j_idt51"><legend class="ui-fieldset-legend ui-corner-all ui-state-default" tabindex="0"><span class="ui-fieldset-toggler ui-icon ui-icon-minusthick"></span>Доклади за случаите на неуспешен сетълмент, които се оповестяват на годишна база</legend><div class="ui-fieldset-content">
+                                    <br /> 
+                                    <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/resources/bulletin/Annual_Report_2022.zip" target="_blank">Доклад за случаите на неуспешен сетълмент за 2022 г.</a></i> <br /><br /><br />
+									<br /> 
+                                    <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/resources/bulletin/Annual_Report_2023.zip" target="_blank">Доклад за случаите на неуспешен сетълмент за 2023 г.</a></i> <br /><br /><br />
+									<br /> 
+                                    <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/resources/bulletin/Annual_Report_2024.zip" target="_blank">Доклад за случаите на неуспешен сетълмент за 2024 г.</a></i> <br /><br /><br />
+									<br /> 
+                                    <i class="pi pi-file-o" style="color: #048282;"><a class="center-panel-right-13" href="/resources/bulletin/Annual_Report_2025.zip" target="_blank">Доклад за случаите на неуспешен сетълмент за 2025 г.</a></i> <br /><br /><br /></div><input id="j_idt51_collapsed" name="j_idt51_collapsed" type="hidden" autocomplete="off" value="false" /></fieldset><script id="j_idt51_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("Fieldset","widget_j_idt51",{id:"j_idt51",toggleable:true,collapsed:false,toggleSpeed:500});});</script>
+                            </div>
+
+                            <div><div id="j_idt62" class="ui-chart"><canvas id="j_idt62_canvas" style="width: 100%; height: 500px;"></canvas></div><script id="j_idt62_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("BarChart","widget_j_idt62",{id:"j_idt62","config":{"type":"bar","data":{"datasets":[{"type":"bar","data":[174598333,309311999,372425281,228202773,203688522,424660846],"label":"БРОЙ","hidden":false,"backgroundColor":"rgba(255, 205, 86, 0.2)","borderColor":"rgb(255, 205, 86)","borderWidth":1}],"labels":["2019","2020","2021","2022","2023","2024"]},"options":{"barPercentage":0.9,"indexAxis":"x","scales":{"y": {"offset":true,"stacked":false,"reverse":false,"beginAtZero":true,"ticks":{"autoSkip":true,"mirror":false}}},"animation":{"loop":false,"duration":0},"plugins":{"title":{"display":true,"text":"Прехвърлени ценни книжа"},"legend":{"display":true,"position":"top","fullWidth":true,"reverse":false,"rtl":false,"labels":{"usePointStyle":false,"color":"#2980B9","font":{"size":24,"style":"italic"}}}}}}});});</script>
+                            </div>
+
+                            <div><div id="j_idt64" class="ui-chart"><canvas id="j_idt64_canvas" style="width: 100%; height: 500px;"></canvas></div><script id="j_idt64_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("BarChart","widget_j_idt64",{id:"j_idt64","config":{"type":"bar","data":{"datasets":[{"type":"bar","data":[42886,61173,86861,101023,67641,77350],"label":"Борсови","hidden":false,"backgroundColor":"rgba(255, 99, 132, 0.2)","borderColor":"rgb(255, 99, 132)","borderWidth":1},{"type":"bar","data":[1054,926,1246,1172,844,906],"label":"Извънборсови","hidden":false,"backgroundColor":"rgba(255, 159, 64, 0.2)","borderColor":"rgb(255, 159, 64)","borderWidth":1}],"labels":["2019","2020","2021","2022","2023","2024"]},"options":{"barPercentage":0.9,"indexAxis":"x","plugins":{"title":{"display":true,"text":"Прехвърляния \/ Сделки"}}}}});});</script>
+                            </div>
+
+                            <div><div id="j_idt66" class="ui-chart"><canvas id="j_idt66_canvas" style="width: 100%; height: 500px;"></canvas></div><script id="j_idt66_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("LineChart","widget_j_idt66",{id:"j_idt66","config":{"type":"line","data":{"datasets":[{"type":"line","data":[1277,670,707,499,426,719],"label":"Сделки с обект на търговия КИ","hidden":false,"borderColor":"rgb(255, 99, 132)","fill":false,"tension":0.1,"showLine":true,"spanGaps":false},{"type":"line","data":[128,92,59,43,39,61],"label":"Регистрирани плащания с КИ към държавни институции","hidden":false,"borderColor":"rgb(255, 159, 64)","fill":false,"tension":0.1,"showLine":true,"spanGaps":false},{"type":"line","data":[112,58,53,50,47,80],"label":"Трансфери от наследства","hidden":false,"borderColor":"rgb(75, 192, 192)","fill":false,"tension":0.1,"showLine":true,"spanGaps":false},{"type":"line","data":[1965,807,711,783,748,684],"label":"Дубликат на депозитарна разписка","hidden":false,"borderColor":"rgb(153, 102, 255)","fill":false,"tension":0.1,"showLine":true,"spanGaps":false}],"labels":["2019","2020","2021","2022","2023","2024"]},"options":{"showLine":true,"spanGaps":false,"plugins":{"title":{"display":true,"text":"Търговия"}}}}});});</script>
+                            </div>
+
+                            <div><div id="j_idt68" class="ui-chart"><canvas id="j_idt68_canvas" style="width: 100%; height: 500px;"></canvas></div><script id="j_idt68_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("BarChart","widget_j_idt68",{id:"j_idt68","config":{"type":"bar","data":{"datasets":[{"type":"bar","data":[121,660,1199,581,67,1809],"label":"Брой сделки","hidden":false,"backgroundColor":"rgba(255, 205, 86, 0.2)","borderColor":"rgb(255, 205, 86)","borderWidth":1}],"labels":["2019","2020","2021","2022","2023","2024"]},"options":{"barPercentage":0.9,"indexAxis":"y","plugins":{"title":{"display":true,"text":"Борсови сделки за търговия с права"}}}}});});</script>
+                            </div>
+                            
+                            <div><div id="j_idt70" class="ui-chart"><canvas id="j_idt70_canvas" style="width: 100%; height: 500px;"></canvas></div><script id="j_idt70_s" type="text/javascript" nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">$(function(){PrimeFaces.cw("BarChart","widget_j_idt70",{id:"j_idt70","config":{"type":"bar","data":{"datasets":[{"type":"bar","data":[74391093,174136428,188058920,47622784,8564271,197819840],"label":"Прехвърлени права","hidden":false,"backgroundColor":"rgba(75, 192, 192, 0.2)","borderColor":"rgb(75, 192, 192)","borderWidth":1}],"labels":["2019","2020","2021","2022","2023","2024"]},"options":{"barPercentage":0.9,"indexAxis":"y","plugins":{"title":{"display":true,"text":"Борсови сделки за търговия с права"}}}}});});</script>
+                            </div>
+
+                            <div class="center-sh-right-1"><img id="j_idt150" src="/javax.faces.resource/images/Plane.png.xhtml" alt="" ismap="false" />
+
+                            </div>
+                        </div>
+                    </div>                
+
+                </div>
+
+
+
+            <div id="footer">
+                <div class="footer-border">
+                    <div class="footer-in">
+                        <div class="footerLeft">
+                            <a href="index.xhtml"><img src="/javax.faces.resource/images/Logo_FooterBG.svg.xhtml" /></a>
+
+                            <div class="footerLeft-in">
+                                <div>
+                                    <span><a class="footerLink" href="/au/aboutUs.xhtml">ЗА НАС</a> </span>
+                                    <span><a class="footerLink" href="/md/mainDocuments.xhtml">ОСНОВНИ ДОКУМЕНТИ</a> </span>
+                                    <span><a class="footerLink" href="/ec/europeanConnectivity.xhtml">ЕВРОПЕЙСКА СВЪРЗАНОСТ</a> </span>
+                                    <span><a class="footerLink" href="/issuers/issuers.xhtml">ЕМИТЕНТИ</a> </span>
+                                    <span><a class="footerLink" href="/others/others.xhtml">ДРУГИ</a> </span>
+
+                                </div>
+                                <div>
+                                    <span><a class="footerLink" href="/members/members.xhtml">ЧЛЕНОВЕ</a> </span>	
+                                    <span><a class="footerLink" href="/investors.xhtml">ИНВЕСТИТОРИ</a>  </span>
+                                    <span><a class="footerLink" href="/sp/specialPledges.xhtml">ОСОБЕНИ ЗАЛОЗИ</a>  </span>
+                                    <span><a class="footerLink" href="/mainFAQ.xhtml">ЧЕСТО ЗАДАВАНИ ВЪПРОСИ (FAQ)</a>  </span>          
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footerRight">
+                            <div class="footerRight-up">
+                                <span class="footerLink1-1">Контакти</span>
+                                <span class="footerLink1">а: гр. София, 1000, ул. “Три уши” № 6, ет. 4</span>
+                                <span class="footerLink1">т: +359 2 939 19 81; +359 2 400 12 41</span>
+                                <span class="footerLink1">e: info@csd-bg.bg</span>
+								<span class="footerLink1"><b>За информация за боновите книжки от масовата приватизация:</b></span>
+                                <span class="footerLink1">т: +359 2 4001 228</span>
+                            </div>
+                            <div class="footerRight-down">
+                                <a href="https://www.facebook.com/CentralDepository" target="_blank"><img src="/javax.faces.resource/images/Logo_Facebook.svg.xhtml" /></a>
+                                <a href="https://www.linkedin.com/company/central-depository/" target="_blank"><img src="/javax.faces.resource/images/Logo_LinkedIn.svg.xhtml" /></a>
+                                <a href="https://www.youtube.com/channel/UCtpgISArYmjrdkx3xvIfhyQ" target="_blank"><img src="/javax.faces.resource/images/Logo_Youtube.svg.xhtml" /></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div><script nonce="MzZkOTgxMjgtOTE0Zi00NDczLTk4OWEtZGE2ZjcxMGQ0MzUy">PrimeFaces.csp.register('a\-e1dc0078\-240d\-46d1\-9153\-7905f880fbbb','onmouseover',function(event){mouseOverAus()});PrimeFaces.csp.register('a\-08a90796\-6b83\-4ece\-a827\-cc01fa093eec','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('j_idt30:j_idt31','onclick',function(event){});PrimeFaces.csp.register('a\-f090e512\-9546\-4bed\-a234\-1e1dc674485f','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('a\-73c1094b\-3141\-4bbb\-8d47\-36d3d21c6f9f','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('j_idt28:j_idt29','onclick',function(event){});PrimeFaces.csp.register('a\-f3a83a5b\-a56a\-49e9\-bf6b\-4bd2c6d9dce0','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('a\-7729d808\-b034\-4aab\-9fb6\-6851c37a69f4','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('a\-04c95409\-3093\-4f2b\-9324\-fb2048b15894','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('a\-38d878dc\-dc01\-401b\-a5bd\-03ef0c5bc73b','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('searchSiteText:j_idt16','onclick',function(event){PrimeFaces.ab({s:"searchSiteText:j_idt16",f:"searchSiteText",p:"searchSiteText",u:"@widgetVar(searchFormText)"});return false;});PrimeFaces.csp.register('a\-6725455b\-3245\-4e08\-9664\-4cf302d58b47','onmouseover',function(event){mouseOverOth()});</script></body>
+
+
+</html>
