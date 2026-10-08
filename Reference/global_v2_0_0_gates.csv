@@ -1,0 +1,12 @@
+﻿gate_id,criterion,status,evidence
+G01,ISO 3166-1 249 coverage,PASS,249
+G02,Legacy domain count preserved,PASS,85
+G03,Country domain matrix preserved,PASS,21165
+G04,Strict reject rolls back all records,PASS,nonzero exit
+G05,Quarantine accepts valid and logs invalid,PASS,"{""status"": ""COMMITTED"", ""read"": 2, ""accepted"": 1, ""rejected"": 1, ""input_sha256"": ""6ed59d73a5a722adcf2d54b722e495a93dc518f971b53850d83c101b6f5ce99a"", ""integrity"": ""ok"", ""fk_errors"": 0}"
+G06,Duplicate file fingerprint blocks second ingest,PASS,nonzero exit
+G07,Production synthetic data contamination,PASS,0 production v20 LEI records
+G08,SQLite integrity and foreign keys,PASS,ok; fk=0
+G09,Authentic GLEIF full bulk ingest,BLOCKED,Official bytes not available in runtime
+G10,ISIC Rev.5 full 4-level ingest,BLOCKED,Official file not downloaded
+G11,CPC 3.0 structure ingest,BLOCKED,Official file not downloaded

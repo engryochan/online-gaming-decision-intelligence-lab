@@ -1,0 +1,13 @@
+﻿gate,result,evidence
+ISO_249,PASS,249 unique ISO alpha2
+DOMAIN_85,PASS,85 domains
+COVERAGE_21165,PASS,249 x 85
+STRICT_ROLLBACK,PASS,fixture 1 valid 1 invalid -> 0 committed
+QUARANTINE,PASS,fixture 1 valid 1 invalid -> 1 committed test DB only
+SOURCE_DEDUP,PASS,same SHA256 blocked
+UNSUPPORTED_HEADER,PASS,incomplete GLEIF CSV blocked
+INTEGRITY,PASS,PRAGMA integrity_check=ok
+FK,PASS,PRAGMA foreign_key_check empty
+OFFICIAL_LEI_DATA,BLOCKED,DNS failure; no source bytes obtained
+ISIC_CPC_FULL,BLOCKED,official CSV not downloaded and verified
+GOLDENCOPY_FORMAT,NOT_TESTED,actual official CSV/ZIP not available to validate adapter
