@@ -1,0 +1,3052 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="https://www.nsx.com.au/" target="_self">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Official site of the National Stock Exchange of Australia, the market of choice for innovative and growth style Australian and International companies.">
+		<meta name="keywords" content="NSX, equities, company floats, IPO, investing, brokers, listed companies, stock exchange, Newcastle NSW">
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="manifest" href="/webmanifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		
+		
+		<link rel="alternate" type="application/rss+xml" title="NSX Company Announcements" href="/ftp/rss/nsx_rss_announcements.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Exchange News" href="/ftp/rss/nsx_rss_news.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Floats" href="/ftp/rss/nsx_rss_floats.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Official List" href="/ftp/rss/nsx_rss_officiallist.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Weekly Diary" href="/ftp/rss/nsx_rss_diary.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Prices Table" href="/ftp/rss/nsx_rss_prices.xml">
+		<title>Delisted & Suspended</title>
+	 <!-- link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7/js/carousel.js"></script>
+		<link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.17.custom.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/js/addons/pager/jquery.tablesorter.pager.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/css/jquery.autocomplete.css" type="text/css" media="all">
+		
+		
+		<script type="text/javascript" src="/js/alljavascript.js"></script>
+		<script type="text/javascript" src="/js/header.js.asp"></script>
+		<script type="text/javascript" src="/js/jquery.validate.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('.noAutoComplete').attr('autocomplete', 'off');
+		
+		});
+			
+		String.prototype.toTitleCase = function(){
+			var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
+			return this.replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function(match, index, title){
+				if (index > 0 && index + match.length !== title.length &&
+					match.search(smallWords) > -1 && title.charAt(index - 2) !== ":" &&
+					(title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') &&
+					title.charAt(index - 1).search(/[^\s-]/) < 0) {
+					return match.toLowerCase();
+				}
+				if (match.substr(1).search(/[A-Z]|\../) > -1) {
+					return match;
+				}
+				return match.charAt(0).toUpperCase() + match.substr(1);
+			});
+		};
+		</script>
+		<script type="text/javascript" src="/js/cms_page.js"></script>
+		<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+		<script type="text/javascript" src="/js/addons/pager/jquery.tablesorter.pager.js"></script>
+		<script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+		
+
+        <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+		
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-10NQNQEF99"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-10NQNQEF99', {
+  cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+		
+		<script>
+		$(document).ready(function() {
+			$("#topnavul li.dropdown").mouseover(function() {
+				$("#topnav").addClass("blue-back");
+			}).mouseout(function() {
+				$("#topnav").removeClass("blue-back")
+			});
+			$('#topnavul li.dropdown').on('shown.bs.dropdown', function () {
+				if ( window.innerWidth < 991 ){
+					window.scrollTo(0, $(this).offset().top );
+				}
+			})
+			$('#topsearch .topsearch-toggle').click(function() {
+				$('#nsx-primary-nav').toggleClass('topsearch-open');
+			});
+			$('#topsearch').on('hide.bs.dropdown', function(){
+				if ( $('#nsx-primary-nav').hasClass('topsearch-open') ){
+					$('#nsx-primary-nav').removeClass('topsearch-open');
+				}
+			});
+
+            $("#searchbox").autocomplete("../default_search2.asp", {
+    	        width: 231,
+    	        selectFirst: false,
+    	        cacheLength: 0
+            }); 
+		});
+			</script>
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-default topnav" role="navigation" id="topnav">
+			<div class="container">
+				
+				<!-- nav -->
+				<div class="navbar-header">
+					<a class="toplogo" href="/"><div class="nsx-logo-new" ></div></a>
+					
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nsx-primary-nav" aria-expanded="false">
+						<i class="fa fa-align-right fa-lg" aria-hidden="true"></i>
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="nsx-primary-nav">
+					<ul class="nav navbar-nav" id="topnavul">
+						<li class="dropdown ">
+							<a href="/listing/">LISTING</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Listing menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="sub-nav horizontal">
+										<li><a href="/listing/why-list-with-us/">Why List with Us</a></li>
+										<li><a href="/listing/how-to-list/">How to List</a></li>
+										<li><a href="/listing/getting-started/">Getting Started</a></li>
+										<li><a href="/listing/nominated-adviser/">Nominated Adviser</a></li>
+										<li><a href="/listing/trading-models/">Trading Models</a></li>
+                                        <li><a href="/regulation/companies/company-fees/">Fees</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown  ">
+							<a href="/investing/">INVESTING</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Investing menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="sub-nav horizontal">
+										<li><a href="/investing/upcoming-listings/">Upcoming Listings</a></li>
+										<li><a href="/investing/recent-listings/">Recent Listings</a></li>
+										<li><a href="/investing/broker-directory/">Broker Directory</a></li>
+										<li><a href="/regulation/exchange/settlement/">Settlement</a></li>
+										<li><a href="/regulation/exchange/trading-hours-and-calendar/">Trading Hours &amp; Calendar</a></li>
+										<li><a href="/investing/security-types/">Security Types</a></li>
+									
+                                        <!-- li><a href="/investing/research/">Research</a></li -->
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown active">
+							<a href="/marketdata/">MARKET DATA</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Market Data menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="sub-nav horizontal">
+										<li><a href="/marketdata/official-list/">Official List</a></li>
+										<li><a href="/marketdata/market-summary/">Market Summary</a></li>
+										<li><a href="/marketdata/prices/">Prices</a></li>
+										<li><a href="/marketdata/announcements/">Announcements</a></li>
+										<li><a href="/marketdata/statistics/">Statistics</a></li>
+										<li><a href="/marketdata/daily-diary/">Daily Diary</a></li>
+										<li><a href="/marketdata/delisted-suspended/">Delisted &amp; Suspended</a></li>
+										<li><a href="/investing/indices/">Indices</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown ">
+							<a href="/regulation/">REGULATION</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Regulation menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="row sub-nav vertical">
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/regulation/companies/listing-rules/">COMPANIES</a></h4>
+											<ul>
+												<li><a href="/regulation/companies/listing-rules/">Listing Rules &amp; Practice Notes</a></li>
+												<li><a href="/regulation/companies/company-forms/">Forms</a></li>
+												<li><a href="/regulation/companies/company-fees/">Fees</a></li>
+												<li><a href="/regulation/companies/waivers/">Waivers</a></li>
+												<li><a href="/regulation/companies/reporting-calendar/">Reporting Calendar</a></li>
+											</ul>
+										</li>
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/regulation/brokers/business-rules/">BROKERS</a></h4>
+											<ul>
+												<li><a href="/regulation/brokers/business-rules/">Business Rules &amp; Practice Notes</a></li>
+												<li><a href="/regulation/brokers/broker-forms/">Forms</a></li>
+												<li><a href="/regulation/brokers/broker-fees/">Fees</a></li>
+												<li><a href="/regulation/brokers/market-access/">Market Access</a></li>
+												<li><a href="/regulation/brokers/broker-supervision/">Broker Supervision</a></li>
+												<li><a href="/investing/broker-directory/">Broker Directory</a></li>
+											</ul>
+										</li>
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/listing/nominated-adviser/">ADVISERS</a></h4>
+											<ul>
+												<li><a href="/regulation/advisers/adviser-forms/">Forms</a></li>
+												<li><a href="/regulation/advisers/adviser-fees/">Fees</a></li>
+												<li><a href="/listing/adviser-list/">Adviser Directory</a></li>
+											</ul>
+										</li>
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/regulation/exchange/market-supervision/">EXCHANGE</a></h4>
+											<ul>
+												<li><a href="/regulation/exchange/trading-codes/">Trading Codes</a></li>
+												<li><a href="/regulation/exchange/trading-hours-and-calendar/">Trading Hours &amp; Calendar</a></li>
+												<li><a href="/regulation/exchange/settlement/">Settlement</a></li>
+												<li><a href="/regulation/exchange/market-supervision/">Market Supervision</a></li>
+												<li><a href="/regulation/exchange/connectivity/">Connectivity</a></li>
+												<li><a href="/regulation/exchange/complaints/">Complaints</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						
+						
+						<li class="dropdown">
+							<span class="login-item" tabindex="0"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</span>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Login menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container" id="lin"></div>
+							</div>
+						</li>
+						
+					</ul>
+
+					<div class="navbar-form topsearch dropdown" id="topsearch">
+						<button class="topsearch-toggle" data-toggle="dropdown" aria-expanded="false">
+							<i class="fa fa-search fa-lg open" aria-hidden="true"></i>
+							<i class="fa fa-times fa-lg close" aria-hidden="true"></i>
+							<span class="sr-only">Toggle search</span>
+						</button>
+						<div class="topsearch-form dropdown-menu" id="nsx-primary-nav-search">
+							<form class="form" role="search" id="marketsearch" name="marketsearch" action="search.asp" method="get">
+								<input name="id" type="hidden" id="id">
+								<input name="t" type="hidden" id="t">
+								<div class="input-group">
+									<div class="input-group-input">
+										<input type="text" class="form-control" id="searchbox" name="q" value="" placeholder="Company code or name">
+									</div>
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-primary" onclick="$('#marketsearch').submit()">Search</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div><!-- /nav .navbar-collapse -->
+			</div>
+		</nav>
+<script type="text/javascript">
+$(document).ready(function() 
+{
+    $.tablesorter.addParser({
+        // set a unique id          
+        id: 'delisted',
+        is: function(s) {
+            // return false so this parser is not auto detected
+            return false;
+        },
+        format: function(s) {
+            var x = s.split(";")
+            return x[1];
+        },
+        // set type, either numeric or text
+        type: 'numeric'
+    });
+
+    $.tablesorter.addParser({
+        // set a unique id          
+        id: 'suspended',
+        is: function (s) {
+            // return false so this parser is not auto detected
+            return false;
+        },
+        format: function (s) {
+            var x = s.split(";")
+            return x[1];
+        },
+        // set type, either numeric or text
+        type: 'numeric'
+    });
+
+    // call the tablesorter plugin 
+    $("#myTable").tablesorter({ 
+        // sort on the first column and third column, order asc 
+        widgets: ["zebra"],
+        headers: { 
+          2: {sorter:'suspended'} 
+        }          
+    });
+
+    $("#myTable_delisted").tablesorter({
+        // sort on the first column and third column, order asc 
+        widgets: ["zebra"],
+        headers: {
+            2: { sorter: 'delisted' }
+        }
+    });
+    
+    var pagesize = 20;
+
+    if ($("#pager select").length > 0) {
+        pagesize = $("#pager select").val();
+    }
+    $("#myTable").tablesorter({ widgets: ["zebra"] });
+    $("#myTable").tablesorterPager({ container: $("#pager"), positionFixed: false, size: pagesize });
+
+    $("#myTable_delisted").tablesorter({ widgets: ["zebra"] });
+    $("#myTable_delisted").tablesorterPager({ container: $("#pager"), positionFixed: false, size: pagesize });
+
+    //$("#myTable").tablesorter( { widgets: ["zebra"] } );
+});
+</script>
+
+
+<div class="subnav-cont  " style="border:none;background:none;">
+<div class="container">
+
+
+<div class="row subnav-holder"><div class="col-sm-8 breadcrumb-nav"><ol class="breadcrumb">
+        <li><a href="/">home</a></li>
+        <li><a href="/marketdata/">Market Data</a></li>
+
+    
+            <li><a href="/marketdata/delisted-suspended/">delisted & suspended</a></li>
+    </ol></div></div>
+
+
+
+
+
+
+
+</div><!-- /row --> 
+</div><!-- /container -->
+</div><!-- /subnav cont -->
+<div class="hero-banner subpage">
+      <div class="hero-banner-img"><img src="images/banners/market_hero_banner.jpg" /></div>
+    <div class="container hero-banner-cont">
+        <div class="container hero-banner-content-holder subpage">
+            <div class="col-sm-12 hero-banner-left">
+                <h1>Delisted & Suspended</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="subnav-cont content-page-cont">
+<div class="container">
+<div class="row"><div class="col-sm-12 leftnav"><div class="subpage-subnav content-page-subnav">
+<ul class="side-bar-menu">
+    <li><a href="/marketdata/official-list/">OFFICIAL LIST</a></li>
+    <li><a href="/marketdata/market-summary/">SUMMARY</a></li>
+    <li><a href="/marketdata/prices/">PRICES</a></li>
+    <li><a href="/marketdata/announcements/">ANNOUNCEMENTS</a></li>
+	<li><a href="/marketdata/statistics/">STATISTICS</a></li>
+	<li><a href="/marketdata/daily-diary/">DIARY</a></li>
+	<li><a class="active" href="/marketdata/delisted-suspended/">DELISTED</a></li>
+</ul>
+</div></div></div>
+</div><!-- /row -->
+</div><!-- /container -->
+</div><!-- /subnav cont -->
+
+<div class="container subpage">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="subpage-center">
+            <div class="prop min600px"></div>
+
+
+<h2>Suspended Listings</h2>
+<div><p>Below is a list of Issuers currently suspended on the Exchange for various reasons.  Click on the link to show more detail about the Issuer.  Review the Market Announcements for each Issuer for reasons as to why the Issuer is suspended.</p></div>
+<div class="table-responsive"><table id="myTable" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Code</th> 
+    <th>Security Name</th>
+    <th>Suspended Date</th>
+</tr> 
+</thead> 
+<tbody>
+
+  <tr> 
+      <td><h3>8EP</h3></td> 
+      <td><a href="/summary/8EP">E-Plus Limited - FPO</a></td> 
+      <td>04-Apr-2024<span style="display:none">;20240404</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>A2H</h3></td> 
+      <td><a href="/summary/A2H">Anti-Aging House Holding Limited - CDI</a></td> 
+      <td>17-Sep-2025<span style="display:none">;20250917</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>A88</h3></td> 
+      <td><a href="/summary/A88">AdvanceTC Limited - FPO</a></td> 
+      <td>03-Apr-2025<span style="display:none">;20250403</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ACT</h3></td> 
+      <td><a href="/summary/ACT">Actcelerate International Group Limited - FPO</a></td> 
+      <td>18-Sep-2024<span style="display:none">;20240918</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>KEM</h3></td> 
+      <td><a href="/summary/KEM">Kemao Industries Limited - FPO</a></td> 
+      <td>17-Sep-2025<span style="display:none">;20250917</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PYX</h3></td> 
+      <td><a href="/summary/PYX">Pyx Resources Limited - FPO</a></td> 
+      <td>19-Mar-2026<span style="display:none">;20260319</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VIP</h3></td> 
+      <td><a href="/summary/VIP">VIP Gloves Ltd</a></td> 
+      <td>03-Oct-2025<span style="display:none">;20251003</span></td> 
+  </tr> 
+
+</tbody>
+</table></div>
+<br />
+<!-- /suspended -->
+
+<h2>Delisted Listings</h2>
+<div><p>Below is a list of Issuers that have been removed from the Official List.  The information is provided for historical and research purposes only.</p></div>
+
+<div class="pager2" id="pager">	
+  <form action="javascript:void(0)" method="get">
+	<span>
+        <i class="first fa fa-step-backward"></i>
+        <i class="prev fa fa-backward"></i>
+        <input type="text" class="pagedisplay" style="border:none;width:70px;text-align:center">
+        <i class="next fa fa-forward"></i>
+        <i class="last fa fa-step-forward"></i>
+
+		<select class="pagesize">
+			<option value="20" selected="selected">20</option>
+			<option value="40">40</option>
+			<option value="100">100</option>
+			<option value="200">200</option>
+		</select>
+	</span>
+	</form>
+</div>
+
+<!-- delisted -->
+<div class="table-responsive"><table id="myTable_delisted" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Code</th> 
+    <th>Security Name</th>
+    <th>Delisted Date</th>
+</tr> 
+</thead> 
+<tbody>
+
+  <tr> 
+      <td><h3>789</h3></td> 
+      <td><a href="/summary/789">789 Holdings Limited - FPO</a></td> 
+      <td>10-Jan-2022<span style="display:none">;20220110</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>A01</h3></td> 
+      <td><a href="/summary/A01">Angy (China) Medical Limited CDI</a></td> 
+      <td>08-Dec-2021<span style="display:none">;20211208</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>A2A</h3></td> 
+      <td><a href="/summary/A2A">A2A GN Ltd - FPO</a></td> 
+      <td>16-Sep-2024<span style="display:none">;20240916</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AAW</h3></td> 
+      <td><a href="/summary/AAW">Arcadia Worldwide Limited FPO</a></td> 
+      <td>05-Apr-2018<span style="display:none">;20180405</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AAY</h3></td> 
+      <td><a href="/summary/AAY">Albany (WA) Community Finanial Services Limited</a></td> 
+      <td>18-Jul-2008<span style="display:none">;20080718</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AB9</h3></td> 
+      <td><a href="/summary/AB9">Aobo Environmental Technology Limited - FPO</a></td> 
+      <td>13-Jan-2026<span style="display:none">;20260113</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ACI</h3></td> 
+      <td><a href="/summary/ACI">Anchor Capital Investments Limited CDI</a></td> 
+      <td>27-Nov-2017<span style="display:none">;20171127</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AFOA</h3></td> 
+      <td><a href="/summary/AFOA">Australian United Retailers non cumulative redeem pref RESTRICTED</a></td> 
+      <td>28-Feb-2017<span style="display:none">;20170228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AFOC</h3></td> 
+      <td><a href="/summary/AFOC">Australian United Retailers Redeemable Preference Share RESTRICTED</a></td> 
+      <td>15-Jun-2009<span style="display:none">;20090615</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AG1</h3></td> 
+      <td><a href="/summary/AG1">Australia Sunny Glass Group Limited - FPO</a></td> 
+      <td>18-Dec-2025<span style="display:none">;20251218</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AGS</h3></td> 
+      <td><a href="/summary/AGS">AGRI Skylight Limited FPO</a></td> 
+      <td>11-Oct-2024<span style="display:none">;20241011</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AGT</h3></td> 
+      <td><a href="/summary/AGT">Alliance Global Capital Ltd CDI</a></td> 
+      <td>27-Nov-2017<span style="display:none">;20171127</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AHH</h3></td> 
+      <td><a href="/summary/AHH">Al Hamra Hotels and Resorts Ltd CDI</a></td> 
+      <td>27-Nov-2017<span style="display:none">;20171127</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AID</h3></td> 
+      <td><a href="/summary/AID">Australia &amp; International Holdings Limited - FPO</a></td> 
+      <td>23-Dec-2025<span style="display:none">;20251223</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AMJ</h3></td> 
+      <td><a href="/summary/AMJ">Ascend Group Limited FPO</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AMJO</h3></td> 
+      <td><a href="/summary/AMJO">Ascend Group Ltd Opt 30JUN2015</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AMJOD</h3></td> 
+      <td><a href="/summary/AMJOD">Ascend Group Ltd Opt Ser D 30JUN2015</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ANJ</h3></td> 
+      <td><a href="/summary/ANJ">Anomaly Resources Limited</a></td> 
+      <td>02-Nov-2009<span style="display:none">;20091102</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AOB</h3></td> 
+      <td><a href="/summary/AOB">Australian Small Scale Offerings Board Limited FPO</a></td> 
+      <td>15-Apr-2015<span style="display:none">;20150415</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AOBO</h3></td> 
+      <td><a href="/summary/AOBO">Australian Small Scale Offerings Board Limited OPT 31DEC2009</a></td> 
+      <td>31-Dec-2009<span style="display:none">;20091231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AOQ</h3></td> 
+      <td><a href="/summary/AOQ">African Petroleum Corporation Limited</a></td> 
+      <td>31-Dec-2015<span style="display:none">;20151231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>APF</h3></td> 
+      <td><a href="/summary/APF">Australian Property Growth Fund</a></td> 
+      <td>20-Jan-2014<span style="display:none">;20140120</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>APO</h3></td> 
+      <td><a href="/summary/APO">Australian Property Systems Limited FPO</a></td> 
+      <td>16-Sep-2013<span style="display:none">;20130916</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>APR</h3></td> 
+      <td><a href="/summary/APR">APN Regional Property Fund</a></td> 
+      <td>21-Jun-2019<span style="display:none">;20190621</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>APRCA</h3></td> 
+      <td><a href="/summary/APRCA">APN Regional Property Partly Paid</a></td> 
+      <td>29-Oct-2004<span style="display:none">;20041029</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>APRDD</h3></td> 
+      <td><a href="/summary/APRDD">APN Regional Property Deferred Delivery</a></td> 
+      <td>29-Oct-2004<span style="display:none">;20041029</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ARD</h3></td> 
+      <td><a href="/summary/ARD">A-Cap Resources Limited FPO</a></td> 
+      <td>18-May-2006<span style="display:none">;20060518</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ARF</h3></td> 
+      <td><a href="/summary/ARF">Acacia Ridge Financial Services Limted Ordinary</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AA</h3></td> 
+      <td><a href="/summary/ASJ1AA">Angas Securities 1yr deb 8.5% 31Mar2009</a></td> 
+      <td>31-Mar-2009<span style="display:none">;20090331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AB</h3></td> 
+      <td><a href="/summary/ASJ1AB">Angas Securities 1yr deb 9.0% 30Apr2009</a></td> 
+      <td>30-Apr-2009<span style="display:none">;20090430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AC</h3></td> 
+      <td><a href="/summary/ASJ1AC">Angas Securities 1yr deb 9.0% 31May2009</a></td> 
+      <td>31-May-2009<span style="display:none">;20090531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AD</h3></td> 
+      <td><a href="/summary/ASJ1AD">Angas Securities 1yr deb 9.0% 30Jun2009</a></td> 
+      <td>30-Jun-2009<span style="display:none">;20090630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AE</h3></td> 
+      <td><a href="/summary/ASJ1AE">Angas Securities 1yr deb 9.0% 31JUL2009</a></td> 
+      <td>31-Jul-2009<span style="display:none">;20090731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AF</h3></td> 
+      <td><a href="/summary/ASJ1AF">Angas Securities 1yr deb 9.0% 31AUG2009</a></td> 
+      <td>31-Aug-2009<span style="display:none">;20090831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AG</h3></td> 
+      <td><a href="/summary/ASJ1AG">Angas Securities 1yr deb 9.0% 30SEP2009</a></td> 
+      <td>30-Sep-2009<span style="display:none">;20090930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AH</h3></td> 
+      <td><a href="/summary/ASJ1AH">Angas Securities 1yr deb 9.0% 31OCT2009</a></td> 
+      <td>31-Oct-2009<span style="display:none">;20091031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AI</h3></td> 
+      <td><a href="/summary/ASJ1AI">Angas Securities 1yr deb 9.0% 30NOV2009</a></td> 
+      <td>30-Nov-2009<span style="display:none">;20091130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AJ</h3></td> 
+      <td><a href="/summary/ASJ1AJ">Angas Securities 1yr deb 9.0% 31DEC2009</a></td> 
+      <td>31-Dec-2009<span style="display:none">;20091231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AK</h3></td> 
+      <td><a href="/summary/ASJ1AK">Angas Securities 1yr deb 8.0% 31JAN2010</a></td> 
+      <td>31-Jan-2010<span style="display:none">;20100131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AL</h3></td> 
+      <td><a href="/summary/ASJ1AL">Angas Securities 1yr deb 8.0% 28FEB2010</a></td> 
+      <td>28-Feb-2010<span style="display:none">;20100228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AM</h3></td> 
+      <td><a href="/summary/ASJ1AM">Angas Securities 1yr deb 7.75% 31MAR2010</a></td> 
+      <td>31-Mar-2010<span style="display:none">;20100331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AN</h3></td> 
+      <td><a href="/summary/ASJ1AN">Angas Securities 1yr deb 7.75% 30APR2010</a></td> 
+      <td>30-Apr-2010<span style="display:none">;20100430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AO</h3></td> 
+      <td><a href="/summary/ASJ1AO">Angas Securities 1yr deb 7.50% 31MAY2010</a></td> 
+      <td>31-May-2010<span style="display:none">;20100531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AP</h3></td> 
+      <td><a href="/summary/ASJ1AP">Angas Securities 1yr deb 7.50% 30JUN2010</a></td> 
+      <td>30-Jun-2010<span style="display:none">;20100630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AQ</h3></td> 
+      <td><a href="/summary/ASJ1AQ">Angas Securities 1yr deb 7.50% 31JUL2010</a></td> 
+      <td>30-Jul-2010<span style="display:none">;20100730</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AR</h3></td> 
+      <td><a href="/summary/ASJ1AR">Angas Securities 1yr deb 7.50% 31AUG2010</a></td> 
+      <td>31-Aug-2010<span style="display:none">;20100831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AS</h3></td> 
+      <td><a href="/summary/ASJ1AS">Angas Securities 1yr deb 7.50% 30SEP2010</a></td> 
+      <td>30-Sep-2010<span style="display:none">;20100930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AT</h3></td> 
+      <td><a href="/summary/ASJ1AT">Angas Securities 1yr deb 7.50% 31OCT2010</a></td> 
+      <td>31-Oct-2010<span style="display:none">;20101031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AU</h3></td> 
+      <td><a href="/summary/ASJ1AU">Angas Securities 1yr deb 7.50% 30NOV2010</a></td> 
+      <td>30-Nov-2010<span style="display:none">;20101130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AV</h3></td> 
+      <td><a href="/summary/ASJ1AV">Angas Securities 1yr deb 7.50% 31DEC2010</a></td> 
+      <td>31-Dec-2010<span style="display:none">;20101231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AW</h3></td> 
+      <td><a href="/summary/ASJ1AW">Angas Securities 1yr deb 8.00% 31JAN2011</a></td> 
+      <td>31-Jan-2011<span style="display:none">;20110131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AX</h3></td> 
+      <td><a href="/summary/ASJ1AX">Angas Securities 1yr deb 8.00% 28FEB2011</a></td> 
+      <td>28-Feb-2011<span style="display:none">;20110228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AY</h3></td> 
+      <td><a href="/summary/ASJ1AY">Angas Securities 1yr deb 8.00% 31MAR2011</a></td> 
+      <td>31-Mar-2011<span style="display:none">;20110331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1AZ</h3></td> 
+      <td><a href="/summary/ASJ1AZ">Angas Securities 1yr deb 8.00% 30APR 2011</a></td> 
+      <td>30-Apr-2011<span style="display:none">;20110430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BA</h3></td> 
+      <td><a href="/summary/ASJ1BA">Angas Securities 1yr deb 8.00% 31MAY2011</a></td> 
+      <td>31-May-2011<span style="display:none">;20110531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BB</h3></td> 
+      <td><a href="/summary/ASJ1BB">Angas Securities 1yr deb 8.00% 30JUN2011</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BC</h3></td> 
+      <td><a href="/summary/ASJ1BC">Angas Securities 1yr deb 8.00% 31JUL2011</a></td> 
+      <td>31-Jul-2011<span style="display:none">;20110731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BD</h3></td> 
+      <td><a href="/summary/ASJ1BD">Angas Securities 1yr deb 8.00% 31AUG2011</a></td> 
+      <td>31-Aug-2011<span style="display:none">;20110831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BE</h3></td> 
+      <td><a href="/summary/ASJ1BE">Angas Securities 1yr deb 8.00% 30SEP2011</a></td> 
+      <td>30-Sep-2011<span style="display:none">;20110930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BF</h3></td> 
+      <td><a href="/summary/ASJ1BF">Angas Securities 1yr deb 8.00% 31OCT2011</a></td> 
+      <td>30-Oct-2011<span style="display:none">;20111030</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BG</h3></td> 
+      <td><a href="/summary/ASJ1BG">Angas Securities 1yr deb 8.00% 30NOV2011</a></td> 
+      <td>30-Nov-2011<span style="display:none">;20111130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BH</h3></td> 
+      <td><a href="/summary/ASJ1BH">Angas Securities 1yr deb 8.00% 31DEC2011</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BI</h3></td> 
+      <td><a href="/summary/ASJ1BI">Angas Securities 1yr deb 8.00% 31JAN2012</a></td> 
+      <td>31-Jan-2012<span style="display:none">;20120131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BJ</h3></td> 
+      <td><a href="/summary/ASJ1BJ">Angas Securities 1yr deb 8.00% 29FEB2012</a></td> 
+      <td>29-Feb-2012<span style="display:none">;20120229</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BK</h3></td> 
+      <td><a href="/summary/ASJ1BK">Angas Securities 1yr deb 8.00% 31MAR2012</a></td> 
+      <td>31-Mar-2012<span style="display:none">;20120331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BL</h3></td> 
+      <td><a href="/summary/ASJ1BL">Angas Securities 1yr deb 8.00% 30APR2012</a></td> 
+      <td>30-Apr-2012<span style="display:none">;20120430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BM</h3></td> 
+      <td><a href="/summary/ASJ1BM">Angas Securities 1yr Deb 8.00% 31May2012</a></td> 
+      <td>31-May-2012<span style="display:none">;20120531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BN</h3></td> 
+      <td><a href="/summary/ASJ1BN">Angas Securities 1yr deb 8.00% 30JUN2012</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BO</h3></td> 
+      <td><a href="/summary/ASJ1BO">Angas Securities 1yr deb 8.00% 31JUL2012</a></td> 
+      <td>31-Jul-2012<span style="display:none">;20120731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BP</h3></td> 
+      <td><a href="/summary/ASJ1BP">Angas Securities 1yr deb 8.00% 31AUG2012</a></td> 
+      <td>31-Aug-2012<span style="display:none">;20120831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BQ</h3></td> 
+      <td><a href="/summary/ASJ1BQ">Angas Securities 1yr deb 8.00% 30SEP2012</a></td> 
+      <td>30-Sep-2012<span style="display:none">;20120930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BR</h3></td> 
+      <td><a href="/summary/ASJ1BR">Angas Securities 1yr deb 8.00% 31OCT2012</a></td> 
+      <td>31-Oct-2012<span style="display:none">;20121031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BS</h3></td> 
+      <td><a href="/summary/ASJ1BS">Angas Securities 1 yr deb 8.00% 30NOV2012</a></td> 
+      <td>30-Nov-2012<span style="display:none">;20121130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BT</h3></td> 
+      <td><a href="/summary/ASJ1BT">Angas Securities 1 yr deb 8.00% 31DEC2012</a></td> 
+      <td>31-Dec-2012<span style="display:none">;20121231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BU</h3></td> 
+      <td><a href="/summary/ASJ1BU">Angas Securities 1 yr deb 8.00% 31JAN2013</a></td> 
+      <td>31-Jan-2013<span style="display:none">;20130131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BV</h3></td> 
+      <td><a href="/summary/ASJ1BV">Angas Securities 1 yr deb 8.00% 28FEB2013</a></td> 
+      <td>28-Feb-2013<span style="display:none">;20130228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BW</h3></td> 
+      <td><a href="/summary/ASJ1BW">Angas Securities 1 yr deb 7.5% 31MAR2013</a></td> 
+      <td>31-Mar-2013<span style="display:none">;20130331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BX</h3></td> 
+      <td><a href="/summary/ASJ1BX">Angas Securities 1 yr deb 7.5% 30APR2013</a></td> 
+      <td>30-Apr-2013<span style="display:none">;20130430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BY</h3></td> 
+      <td><a href="/summary/ASJ1BY">Angas Securities 1 yr deb 7.5% 31MAY2013</a></td> 
+      <td>31-May-2013<span style="display:none">;20130531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1BZ</h3></td> 
+      <td><a href="/summary/ASJ1BZ">Angas Securities 1 yr deb 7.5% 30JUN2013</a></td> 
+      <td>30-Jun-2013<span style="display:none">;20130630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CA</h3></td> 
+      <td><a href="/summary/ASJ1CA">Angas Securities 1yr deb 7.5% 31JUL2013</a></td> 
+      <td>31-Jul-2013<span style="display:none">;20130731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CB</h3></td> 
+      <td><a href="/summary/ASJ1CB">Angas Securities 1yr deb 7.5% 31AUG2013</a></td> 
+      <td>31-Aug-2013<span style="display:none">;20130831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CC</h3></td> 
+      <td><a href="/summary/ASJ1CC">Angas Securities 1yr deb 7.5% 30 Sept 2013</a></td> 
+      <td>30-Sep-2013<span style="display:none">;20130930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CD</h3></td> 
+      <td><a href="/summary/ASJ1CD">Angas Securities 1 yr deb 7.5% 31 Oct 2013</a></td> 
+      <td>31-Oct-2013<span style="display:none">;20131031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CE</h3></td> 
+      <td><a href="/summary/ASJ1CE">Angas Securities 1 yr deb 7.5% 30 Nov 2013</a></td> 
+      <td>30-Nov-2013<span style="display:none">;20131130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CF</h3></td> 
+      <td><a href="/summary/ASJ1CF">Angas Securities 1 yr deb 7.5% 31 Dec 2013</a></td> 
+      <td>31-Dec-2013<span style="display:none">;20131231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CG</h3></td> 
+      <td><a href="/summary/ASJ1CG">Angas Securities 1 yr deb 7.5% 31 Jan 2014</a></td> 
+      <td>31-Jan-2014<span style="display:none">;20140131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CH</h3></td> 
+      <td><a href="/summary/ASJ1CH">Angas Securities 1yr deb 7.00% 28 Feb 2014</a></td> 
+      <td>28-Feb-2014<span style="display:none">;20140228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CI</h3></td> 
+      <td><a href="/summary/ASJ1CI">Angas Securities 1 yr deb 7.0% 31 March 2014</a></td> 
+      <td>31-Mar-2014<span style="display:none">;20140331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CJ</h3></td> 
+      <td><a href="/summary/ASJ1CJ">Angas Securities 1yr deb 7.0% 30 Apr 2014</a></td> 
+      <td>30-Apr-2014<span style="display:none">;20140430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CK</h3></td> 
+      <td><a href="/summary/ASJ1CK">Angas Securities 1yr deb 7.0% 31 May 2014</a></td> 
+      <td>31-May-2014<span style="display:none">;20140531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CL</h3></td> 
+      <td><a href="/summary/ASJ1CL">Angas Securities 1yr deb 7.0% 30 June 2014</a></td> 
+      <td>30-Jun-2014<span style="display:none">;20140630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CM</h3></td> 
+      <td><a href="/summary/ASJ1CM">Angas Securities 1yr deb 7.0% 31 Jul 2014</a></td> 
+      <td>31-Jul-2014<span style="display:none">;20140731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CN</h3></td> 
+      <td><a href="/summary/ASJ1CN">Angas Securities 1 yr deb 7.0%  31 Aug 2014</a></td> 
+      <td>31-Aug-2014<span style="display:none">;20140831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CO</h3></td> 
+      <td><a href="/summary/ASJ1CO">Angas Securities 1 yr deb 7.0% 30 Sep2014</a></td> 
+      <td>30-Sep-2014<span style="display:none">;20140930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CP</h3></td> 
+      <td><a href="/summary/ASJ1CP">Angas Securities 1 yr deb 7.0% 31 Oct 2014</a></td> 
+      <td>31-Oct-2014<span style="display:none">;20141031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CQ</h3></td> 
+      <td><a href="/summary/ASJ1CQ">Angas Securities 1 yr deb 6.5% 30 Nov 2014</a></td> 
+      <td>30-Nov-2014<span style="display:none">;20141130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CR</h3></td> 
+      <td><a href="/summary/ASJ1CR">Angas Securities 1 yr deb 6.5% 31 Dec 2014</a></td> 
+      <td>31-Dec-2014<span style="display:none">;20141231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ1CS</h3></td> 
+      <td><a href="/summary/ASJ1CS">Angas Securities 1 yr deb 6.5% 31 Jan 2015</a></td> 
+      <td>31-Jan-2015<span style="display:none">;20150131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AA</h3></td> 
+      <td><a href="/summary/ASJ3AA">Angas Securities 3yr deb 9.0% 31Mar2011</a></td> 
+      <td>31-Mar-2011<span style="display:none">;20110331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AB</h3></td> 
+      <td><a href="/summary/ASJ3AB">Angas Securities 3yr deb 9.0% 30Apr2011</a></td> 
+      <td>30-Apr-2011<span style="display:none">;20110430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AC</h3></td> 
+      <td><a href="/summary/ASJ3AC">Angas Securities 3yr deb 9.0% 31May2011</a></td> 
+      <td>31-May-2011<span style="display:none">;20110531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AD</h3></td> 
+      <td><a href="/summary/ASJ3AD">Angas Securities 3yr deb 9.0% 30Jun2011</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AE</h3></td> 
+      <td><a href="/summary/ASJ3AE">Angas Securities 3yr deb 9.0% 31JUL2011</a></td> 
+      <td>31-Jul-2011<span style="display:none">;20110731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AF</h3></td> 
+      <td><a href="/summary/ASJ3AF">Angas Securities 3yr deb 9.0% 31AUG2011</a></td> 
+      <td>31-Aug-2011<span style="display:none">;20110831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AG</h3></td> 
+      <td><a href="/summary/ASJ3AG">Angas Securities 3yr deb 9.0% 30SEP2011</a></td> 
+      <td>30-Sep-2011<span style="display:none">;20110930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AH</h3></td> 
+      <td><a href="/summary/ASJ3AH">Angas Securities 3yr deb 9.0% 31OCT2011</a></td> 
+      <td>31-Oct-2011<span style="display:none">;20111031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AI</h3></td> 
+      <td><a href="/summary/ASJ3AI">Angas Securities 3yr deb 9.0% 30NOV2011</a></td> 
+      <td>30-Nov-2011<span style="display:none">;20111130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AJ</h3></td> 
+      <td><a href="/summary/ASJ3AJ">Angas Securities 3yr deb 9.0% 31DEC2011</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AK</h3></td> 
+      <td><a href="/summary/ASJ3AK">Angas Securities 3yr deb 8.0% 31JAN2012</a></td> 
+      <td>31-Jan-2012<span style="display:none">;20120131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AL</h3></td> 
+      <td><a href="/summary/ASJ3AL">Angas Securities 3yr deb 8.0% 29FEB2012</a></td> 
+      <td>29-Feb-2012<span style="display:none">;20120229</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AM</h3></td> 
+      <td><a href="/summary/ASJ3AM">Angas Securities 3yr deb 7.75% 31MAR2012</a></td> 
+      <td>31-Mar-2012<span style="display:none">;20120331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AN</h3></td> 
+      <td><a href="/summary/ASJ3AN">Angas Securities 3yr deb 7.75% 30APR2012</a></td> 
+      <td>30-Apr-2012<span style="display:none">;20120430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AO</h3></td> 
+      <td><a href="/summary/ASJ3AO">Angas Securities 3yr deb 7.50% 31MAY2012</a></td> 
+      <td>31-May-2012<span style="display:none">;20120531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AP</h3></td> 
+      <td><a href="/summary/ASJ3AP">Angas Securities 3yr deb 7.50% 30JUN2012</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AQ</h3></td> 
+      <td><a href="/summary/ASJ3AQ">Angas Securities 3yr deb 7.50% 31JUL2012</a></td> 
+      <td>31-Jul-2012<span style="display:none">;20120731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AR</h3></td> 
+      <td><a href="/summary/ASJ3AR">Angas Securities 3yr deb 7.50% 31AUG2012</a></td> 
+      <td>31-Aug-2012<span style="display:none">;20120831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AS</h3></td> 
+      <td><a href="/summary/ASJ3AS">Angas Securities 3yr deb 7.50% 30SEP2012</a></td> 
+      <td>30-Sep-2012<span style="display:none">;20120930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AT</h3></td> 
+      <td><a href="/summary/ASJ3AT">Angas Securities 3yr deb 7.50% 31OCT2012</a></td> 
+      <td>31-Oct-2012<span style="display:none">;20121031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AU</h3></td> 
+      <td><a href="/summary/ASJ3AU">Angas Securities 3yr deb 7.50% 30NOV2012</a></td> 
+      <td>30-Nov-2012<span style="display:none">;20121130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AV</h3></td> 
+      <td><a href="/summary/ASJ3AV">Angas Securities 3yr deb 7.50% 31DEC2012</a></td> 
+      <td>30-Dec-2012<span style="display:none">;20121230</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AW</h3></td> 
+      <td><a href="/summary/ASJ3AW">Angas Securities 3yr deb 9.00% 31JAN2013</a></td> 
+      <td>31-Jan-2013<span style="display:none">;20130131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AX</h3></td> 
+      <td><a href="/summary/ASJ3AX">Angas Securities 3yr deb 9.00% 28FEB2013</a></td> 
+      <td>28-Feb-2013<span style="display:none">;20130228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AY</h3></td> 
+      <td><a href="/summary/ASJ3AY">Angas Securities 3yr deb 9.00% 31MAR2013</a></td> 
+      <td>31-Mar-2013<span style="display:none">;20130331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3AZ</h3></td> 
+      <td><a href="/summary/ASJ3AZ">Angas Securities 3yr deb 9.00% 30APR2013</a></td> 
+      <td>30-Apr-2013<span style="display:none">;20130430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BA</h3></td> 
+      <td><a href="/summary/ASJ3BA">Angas Securities 3yr deb 9.00% 31MAY2013</a></td> 
+      <td>31-May-2013<span style="display:none">;20130531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BB</h3></td> 
+      <td><a href="/summary/ASJ3BB">Angas Securities 3yr deb 9.00% 30JUN2013</a></td> 
+      <td>30-Jun-2013<span style="display:none">;20130630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BC</h3></td> 
+      <td><a href="/summary/ASJ3BC">Angas Securities 3yr deb 9.00% 31JUL2013</a></td> 
+      <td>31-Jul-2013<span style="display:none">;20130731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BD</h3></td> 
+      <td><a href="/summary/ASJ3BD">Angas Securities 3yr deb 9.00% 31AUG2013</a></td> 
+      <td>31-Aug-2013<span style="display:none">;20130831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BE</h3></td> 
+      <td><a href="/summary/ASJ3BE">Angas Securities 3yr deb 9.00% 30SEP2013</a></td> 
+      <td>30-Sep-2013<span style="display:none">;20130930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BF</h3></td> 
+      <td><a href="/summary/ASJ3BF">Angas Securities 3yr deb 9.00% 31OCT2013</a></td> 
+      <td>31-Oct-2013<span style="display:none">;20131031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BG</h3></td> 
+      <td><a href="/summary/ASJ3BG">Angas Securities 3yr deb 9.00% 30NOV2013</a></td> 
+      <td>30-Nov-2013<span style="display:none">;20131130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BH</h3></td> 
+      <td><a href="/summary/ASJ3BH">Angas Securities 3yr deb 9.00% 31DEC2013</a></td> 
+      <td>31-Dec-2013<span style="display:none">;20131231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BI</h3></td> 
+      <td><a href="/summary/ASJ3BI">Angas Securities 3yr deb 9.00% 31JAN2014</a></td> 
+      <td>31-Jan-2014<span style="display:none">;20140131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BJ</h3></td> 
+      <td><a href="/summary/ASJ3BJ">Angas Securities 3yr deb 9.00% 28FEB2014</a></td> 
+      <td>28-Feb-2014<span style="display:none">;20140228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BK</h3></td> 
+      <td><a href="/summary/ASJ3BK">Angas Securities 3yr deb 9.00% 31MAR2014</a></td> 
+      <td>31-Mar-2014<span style="display:none">;20140331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BL</h3></td> 
+      <td><a href="/summary/ASJ3BL">Angas Securities 3yr deb 9.00% 30APR2014</a></td> 
+      <td>30-Apr-2014<span style="display:none">;20140430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BM</h3></td> 
+      <td><a href="/summary/ASJ3BM">Angas Securities 3yr Deb 9.00% 31MAY2014</a></td> 
+      <td>31-May-2014<span style="display:none">;20140531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BN</h3></td> 
+      <td><a href="/summary/ASJ3BN">Angas Securities 3yr deb 9.00% 30JUN2014</a></td> 
+      <td>30-Jun-2014<span style="display:none">;20140630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BO</h3></td> 
+      <td><a href="/summary/ASJ3BO">Angas Securities 3yr deb 9.00% 31JUL2014</a></td> 
+      <td>31-Jul-2014<span style="display:none">;20140731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BP</h3></td> 
+      <td><a href="/summary/ASJ3BP">Angas Securities 3yr deb 9.00% 31AUG2014</a></td> 
+      <td>31-Aug-2014<span style="display:none">;20140831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BQ</h3></td> 
+      <td><a href="/summary/ASJ3BQ">Angas Securities 3yr deb 9.00% 30SEP2014</a></td> 
+      <td>30-Sep-2014<span style="display:none">;20140930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BR</h3></td> 
+      <td><a href="/summary/ASJ3BR">Angas Securities 3yr deb 9.00% 31OCT2014</a></td> 
+      <td>31-Oct-2014<span style="display:none">;20141031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BS</h3></td> 
+      <td><a href="/summary/ASJ3BS">Angas Securities 3yr Deb 9.00% 30NOV2014</a></td> 
+      <td>30-Nov-2014<span style="display:none">;20141130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BT</h3></td> 
+      <td><a href="/summary/ASJ3BT">Angas Securities 3 yr deb 9.00% 31DEC2014</a></td> 
+      <td>31-Dec-2014<span style="display:none">;20141231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BU</h3></td> 
+      <td><a href="/summary/ASJ3BU">Angas Securities 3 yr deb 9.00% 31JAN2015</a></td> 
+      <td>31-Jan-2015<span style="display:none">;20150131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BV</h3></td> 
+      <td><a href="/summary/ASJ3BV">Angas Securities 3 yr deb 9.00% 28FEB2015</a></td> 
+      <td>28-Feb-2015<span style="display:none">;20150228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BW</h3></td> 
+      <td><a href="/summary/ASJ3BW">Angas Securities 3 yr deb 8.00% 31MAR2015</a></td> 
+      <td>31-Mar-2015<span style="display:none">;20150331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BX</h3></td> 
+      <td><a href="/summary/ASJ3BX">Angas Securities 3 yr deb 8.00% 30APR2015</a></td> 
+      <td>30-Apr-2015<span style="display:none">;20150430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BY</h3></td> 
+      <td><a href="/summary/ASJ3BY">Angas Securities 3 yr deb 8.00% 31MAY2015</a></td> 
+      <td>31-May-2015<span style="display:none">;20150531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3BZ</h3></td> 
+      <td><a href="/summary/ASJ3BZ">Angas Securities 3 yr deb 8% 30JUN2015</a></td> 
+      <td>30-Jun-2015<span style="display:none">;20150630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CA</h3></td> 
+      <td><a href="/summary/ASJ3CA">Angas Securities 3 yr  deb 8% 31JUL2015</a></td> 
+      <td>31-Jul-2015<span style="display:none">;20150731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CB</h3></td> 
+      <td><a href="/summary/ASJ3CB">Angas Securities 3 yr Deb 8% 31AUG2015</a></td> 
+      <td>31-Aug-2015<span style="display:none">;20150831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CC</h3></td> 
+      <td><a href="/summary/ASJ3CC">Angas Securities 3 yr Deb 8% 30 Sep 2015</a></td> 
+      <td>30-Sep-2015<span style="display:none">;20150930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CD</h3></td> 
+      <td><a href="/summary/ASJ3CD">Angas Securities 3 yr deb 8% 31 Oct 2015</a></td> 
+      <td>31-Oct-2015<span style="display:none">;20151031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CE</h3></td> 
+      <td><a href="/summary/ASJ3CE">Angas Securities 3yr Deb 8.00% 30 Nov 2015</a></td> 
+      <td>30-Nov-2015<span style="display:none">;20151130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CF</h3></td> 
+      <td><a href="/summary/ASJ3CF">Angas Securities 3 yr 8% 31 Dec 2015</a></td> 
+      <td>31-Dec-2015<span style="display:none">;20151231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CG</h3></td> 
+      <td><a href="/summary/ASJ3CG">Angas Securities 3 yr deb 8% 31 Jan 2016</a></td> 
+      <td>31-Jan-2016<span style="display:none">;20160131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CH</h3></td> 
+      <td><a href="/summary/ASJ3CH">Angas Securities 3yr deb 7.50% 28 Feb 2016</a></td> 
+      <td>28-Feb-2016<span style="display:none">;20160228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CI</h3></td> 
+      <td><a href="/summary/ASJ3CI">Angas Securities 3yr deb 7.50% 31 March 2016</a></td> 
+      <td>31-Mar-2016<span style="display:none">;20160331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CJ</h3></td> 
+      <td><a href="/summary/ASJ3CJ">Angas Securities 3yr Deb 7.5% 30 Apr 2016</a></td> 
+      <td>30-Apr-2016<span style="display:none">;20160430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CK</h3></td> 
+      <td><a href="/summary/ASJ3CK">Angas Securities 3yr deb 7.5% 31MAY2016</a></td> 
+      <td>31-May-2016<span style="display:none">;20160531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CL</h3></td> 
+      <td><a href="/summary/ASJ3CL">Angas Securities 3yr deb 7.5% 30 June 2016</a></td> 
+      <td>30-Jun-2016<span style="display:none">;20160630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CM</h3></td> 
+      <td><a href="/summary/ASJ3CM">Angas Securities 3yr Deb 7.5% 31 Jul 2016</a></td> 
+      <td>31-Jul-2016<span style="display:none">;20160731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CN</h3></td> 
+      <td><a href="/summary/ASJ3CN">Angas Securities 3yr deb 7.5% 31 Aug 2016</a></td> 
+      <td>31-Aug-2016<span style="display:none">;20160831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CO</h3></td> 
+      <td><a href="/summary/ASJ3CO">Angas Securities 3 yr deb 7.5% 30 Sep2016</a></td> 
+      <td>30-Sep-2016<span style="display:none">;20160930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CP</h3></td> 
+      <td><a href="/summary/ASJ3CP">Angas Securities 3 yr deb 7.5% 31 Oct 2016</a></td> 
+      <td>31-Oct-2016<span style="display:none">;20161031</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CQ</h3></td> 
+      <td><a href="/summary/ASJ3CQ">Angas Securities 3 yr deb 7.0% 30 Nov 2016</a></td> 
+      <td>30-Nov-2016<span style="display:none">;20161130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CR</h3></td> 
+      <td><a href="/summary/ASJ3CR">Angas Securities 3 yr deb 31 Dec 2016</a></td> 
+      <td>31-Dec-2016<span style="display:none">;20161231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJ3CS</h3></td> 
+      <td><a href="/summary/ASJ3CS">Angas Securities 3 yr deb 7.0% 31 Jan 2017</a></td> 
+      <td>31-Jan-2017<span style="display:none">;20170131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJPA</h3></td> 
+      <td><a href="/summary/ASJPA">Angas Securities Redeemable Preference</a></td> 
+      <td>12-Apr-2019<span style="display:none">;20190412</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJPC</h3></td> 
+      <td><a href="/summary/ASJPC">Angas Securities Redeemable Preference Series 3</a></td> 
+      <td>12-Apr-2019<span style="display:none">;20190412</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASJPD</h3></td> 
+      <td><a href="/summary/ASJPD">Angas Securities Redeemable Preference</a></td> 
+      <td>30-Oct-2015<span style="display:none">;20151030</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ASS</h3></td> 
+      <td><a href="/summary/ASS">Asset Resolution Limited FPO</a></td> 
+      <td>29-Jul-2022<span style="display:none">;20220729</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AUE</h3></td> 
+      <td><a href="/summary/AUE">Ausminerals Limited FPO</a></td> 
+      <td>05-Nov-2010<span style="display:none">;20101105</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AUG</h3></td> 
+      <td><a href="/summary/AUG">Augusta &amp; District Community Financial Services Ltd</a></td> 
+      <td>06-May-2008<span style="display:none">;20080506</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWH</h3></td> 
+      <td><a href="/summary/AWH">Allwellness Holdings Group Ltd - FPO</a></td> 
+      <td>30-Jul-2021<span style="display:none">;20210730</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXCHA</h3></td> 
+      <td><a href="/summary/AWXCHA">Clarendon Hills `Astralis` Shiraz 2001 Preference</a></td> 
+      <td>12-Jan-2004<span style="display:none">;20040112</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXCHL</h3></td> 
+      <td><a href="/summary/AWXCHL">Clarendon Hills Liandra Shiraz 1999 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXCHS</h3></td> 
+      <td><a href="/summary/AWXCHS">Clarendon Hills `Moritz` Shiraz 1999 Preference</a></td> 
+      <td>10-Jul-2003<span style="display:none">;20030710</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXHBS</h3></td> 
+      <td><a href="/summary/AWXHBS">Hewitson `Barossa` Shiraz 2000 Preference</a></td> 
+      <td>10-Jul-2003<span style="display:none">;20030710</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXHPC</h3></td> 
+      <td><a href="/summary/AWXHPC">Howard Park Cabernet Sauvignon Merlot 1998 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXKEM</h3></td> 
+      <td><a href="/summary/AWXKEM">Katnook Estate Cabernet 2000 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXKEP</h3></td> 
+      <td><a href="/summary/AWXKEP">Katnook Estate `Prodigy` Shiraz 1999 Preference</a></td> 
+      <td>10-Jul-2003<span style="display:none">;20030710</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXKES</h3></td> 
+      <td><a href="/summary/AWXKES">Katnook Estate Shiraz 2000 Preference</a></td> 
+      <td>10-Jul-2003<span style="display:none">;20030710</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXKLP</h3></td> 
+      <td><a href="/summary/AWXKLP">Knappstein Lenswood Vineyards `The Palatine` 1999 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXMAM</h3></td> 
+      <td><a href="/summary/AWXMAM">Mountadam Merlot 1998 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXOHS</h3></td> 
+      <td><a href="/summary/AWXOHS">Orlando Lawson`s Padthaway Shiraz 1998 Preference</a></td> 
+      <td>10-Jul-2003<span style="display:none">;20030710</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXOJC</h3></td> 
+      <td><a href="/summary/AWXOJC">Orlando Jacob''s Creek Limited Release Shiraz Cabernet 1999 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXSPC</h3></td> 
+      <td><a href="/summary/AWXSPC">Sally''s Paddock 2000 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXTWP</h3></td> 
+      <td><a href="/summary/AWXTWP">TarraWarra Estate Pinot Noir 2001 Preference</a></td> 
+      <td>10-Jul-2003<span style="display:none">;20030710</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>AWXXLC</h3></td> 
+      <td><a href="/summary/AWXXLC">Xanadu Cabernet Reserve (Lagan Estate) 1998 Preference</a></td> 
+      <td>14-Apr-2003<span style="display:none">;20030414</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>B3L</h3></td> 
+      <td><a href="/summary/B3L">Beaver Entech Limited CDI</a></td> 
+      <td>30-Apr-2020<span style="display:none">;20200430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BAB</h3></td> 
+      <td><a href="/summary/BAB">Babinda Community Financial Services Limited</a></td> 
+      <td>30-Jun-2009<span style="display:none">;20090630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BBA</h3></td> 
+      <td><a href="/summary/BBA">Baribunma Holdings Limited FPO</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BBH</h3></td> 
+      <td><a href="/summary/BBH">Brumby''s Bakeries Holdings Limited</a></td> 
+      <td>31-Jul-2007<span style="display:none">;20070731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BDE</h3></td> 
+      <td><a href="/summary/BDE">Beida New Energy Limited - FPO</a></td> 
+      <td>15-Jun-2020<span style="display:none">;20200615</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BFI</h3></td> 
+      <td><a href="/summary/BFI">Bidgee Finance Limited FPO</a></td> 
+      <td>23-Dec-2008<span style="display:none">;20081223</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BMR</h3></td> 
+      <td><a href="/summary/BMR">Biomax Rubber Industries Ltd FPO</a></td> 
+      <td>18-Sep-2017<span style="display:none">;20170918</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BPB</h3></td> 
+      <td><a href="/summary/BPB">Bellarine Peninsula Community Branch Limited FPO</a></td> 
+      <td>30-Jun-2017<span style="display:none">;20170630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BPI</h3></td> 
+      <td><a href="/summary/BPI">BBX Property Investment Fund Limited</a></td> 
+      <td>14-Sep-2015<span style="display:none">;20150914</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BRF</h3></td> 
+      <td><a href="/summary/BRF">Balmain / Rozelle Financial Services Ltd Ordinary</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BRI</h3></td> 
+      <td><a href="/summary/BRI">Bright Community Financial Services Limited</a></td> 
+      <td>30-Jun-2009<span style="display:none">;20090630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BSZ</h3></td> 
+      <td><a href="/summary/BSZ">Betta Stores Limited FPO</a></td> 
+      <td>15-Jul-2007<span style="display:none">;20070715</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BTT</h3></td> 
+      <td><a href="/summary/BTT">Blue Tower Trust</a></td> 
+      <td>03-Oct-2006<span style="display:none">;20061003</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BWR</h3></td> 
+      <td><a href="/summary/BWR">Berowra &amp; District Financial Services Limited</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BXL</h3></td> 
+      <td><a href="/summary/BXL">Bell IXL Investments Limited FPO</a></td> 
+      <td>30-Jun-2013<span style="display:none">;20130630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>BXLA</h3></td> 
+      <td><a href="/summary/BXLA">Bell IXL Investments Ltd Restricted Voting FPO</a></td> 
+      <td>30-Jun-2013<span style="display:none">;20130630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CAP</h3></td> 
+      <td><a href="/summary/CAP">Capilano Honey Limited Ordinary</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CAX</h3></td> 
+      <td><a href="/summary/CAX">CoAssets Limited FPO</a></td> 
+      <td>02-Sep-2016<span style="display:none">;20160902</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CCH</h3></td> 
+      <td><a href="/summary/CCH">Circle International Holdings Limited - FPO</a></td> 
+      <td>01-Mar-2024<span style="display:none">;20240301</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CCS</h3></td> 
+      <td><a href="/summary/CCS">The Capital Collection Syndicate</a></td> 
+      <td>28-Jul-2003<span style="display:none">;20030728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CCT</h3></td> 
+      <td><a href="/summary/CCT">Concentrated Capital Limited FPO</a></td> 
+      <td>13-Dec-2007<span style="display:none">;20071213</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CEI</h3></td> 
+      <td><a href="/summary/CEI">Community Merchant Solutions, Ltd. FPO</a></td> 
+      <td>14-Sep-2015<span style="display:none">;20150914</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CFW</h3></td> 
+      <td><a href="/summary/CFW">CTG Fibersway International Limited - FPO</a></td> 
+      <td>17-Feb-2026<span style="display:none">;20260217</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CFY</h3></td> 
+      <td><a href="/summary/CFY">Clifroy Limited FPO</a></td> 
+      <td>31-May-2019<span style="display:none">;20190531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CHE</h3></td> 
+      <td><a href="/summary/CHE">China Puda High-Tech Holdings Ltd FPO</a></td> 
+      <td>31-Mar-2015<span style="display:none">;20150331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CHI</h3></td> 
+      <td><a href="/summary/CHI">China Herbal Medicine Limited FPO</a></td> 
+      <td>11-Nov-2016<span style="display:none">;20161111</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CLG</h3></td> 
+      <td><a href="/summary/CLG">Coolalinga &amp; District Community Finance Limited Ordinary</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CMA</h3></td> 
+      <td><a href="/summary/CMA">Cosmedics Australia Limited FPO</a></td> 
+      <td>31-Dec-2008<span style="display:none">;20081231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CMAN</h3></td> 
+      <td><a href="/summary/CMAN">Cosmedics Australia Ltd Options 31Dec2005</a></td> 
+      <td>30-Dec-2005<span style="display:none">;20051230</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CMAO</h3></td> 
+      <td><a href="/summary/CMAO">Cosmedics Australia Ltd Options 31Dec2005</a></td> 
+      <td>22-Dec-2005<span style="display:none">;20051222</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CMAOB</h3></td> 
+      <td><a href="/summary/CMAOB">Cosmedics Australia Limited Options Series B 31Dec07</a></td> 
+      <td>08-Jan-2008<span style="display:none">;20080108</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>COB</h3></td> 
+      <td><a href="/summary/COB">Cobden &amp; District Community Financial Finance Limited</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CRA</h3></td> 
+      <td><a href="/summary/CRA">Consolidated Africa Limited - FPO</a></td> 
+      <td>05-Sep-2025<span style="display:none">;20250905</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CUX</h3></td> 
+      <td><a href="/summary/CUX">Crossland Uranium Mines Limited FPO</a></td> 
+      <td>12-Apr-2007<span style="display:none">;20070412</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>CYM</h3></td> 
+      <td><a href="/summary/CYM">Chew Yak Mong - Synerpac Limited FPO</a></td> 
+      <td>08-Feb-2007<span style="display:none">;20070208</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>DCE</h3></td> 
+      <td><a href="/summary/DCE">Manningham Community Enterprises Limited - FPO</a></td> 
+      <td>30-Jun-2023<span style="display:none">;20230630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>DEFAE</h3></td> 
+      <td><a href="/summary/DEFAE">Vertua Limited - Proportional Takeover Def Delivery</a></td> 
+      <td>01-Sep-2014<span style="display:none">;20140901</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>DRL</h3></td> 
+      <td><a href="/summary/DRL">Diatreme Resources Limited FPO</a></td> 
+      <td>21-Jun-2005<span style="display:none">;20050621</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>DWL</h3></td> 
+      <td><a href="/summary/DWL">Doclocker Worldwide Limited FPO</a></td> 
+      <td>31-Jan-2013<span style="display:none">;20130131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>DWYA</h3></td> 
+      <td><a href="/summary/DWYA">Hamilton Securities Limited A Class Ord non voting</a></td> 
+      <td>13-Dec-2013<span style="display:none">;20131213</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>DWYB</h3></td> 
+      <td><a href="/summary/DWYB">Hamilton Securities Limited B Class Ord</a></td> 
+      <td>13-Dec-2013<span style="display:none">;20131213</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>E72</h3></td> 
+      <td><a href="/summary/E72">East 72 Holdings Limited FPO</a></td> 
+      <td>29-Jun-2023<span style="display:none">;20230629</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EAG</h3></td> 
+      <td><a href="/summary/EAG">Eagle IG Limited FPO</a></td> 
+      <td>08-Nov-2017<span style="display:none">;20171108</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EBF</h3></td> 
+      <td><a href="/summary/EBF">Ettalong Beach Financial Services Limited Ordinary</a></td> 
+      <td>02-Jun-2016<span style="display:none">;20160602</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EBS</h3></td> 
+      <td><a href="/summary/EBS">e-Business Systems Ltd</a></td> 
+      <td>19-Oct-2012<span style="display:none">;20121019</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ECL</h3></td> 
+      <td><a href="/summary/ECL">Emerging Capital Ltd CDI</a></td> 
+      <td>27-Nov-2017<span style="display:none">;20171127</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EIC</h3></td> 
+      <td><a href="/summary/EIC">Heidelberg District Community Enterprise Limited - FPO</a></td> 
+      <td>30-Jun-2023<span style="display:none">;20230630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EMU</h3></td> 
+      <td><a href="/summary/EMU">Emu Park &amp; District Financial Services Limited Ordinary</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ENS</h3></td> 
+      <td><a href="/summary/ENS">Enprise Group Limited FPO</a></td> 
+      <td>30-Sep-2014<span style="display:none">;20140930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ESL</h3></td> 
+      <td><a href="/summary/ESL">Energy Solutions International Ltd CDI</a></td> 
+      <td>18-Sep-2017<span style="display:none">;20170918</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ETG</h3></td> 
+      <td><a href="/summary/ETG">Edtrin Group Limited CDI</a></td> 
+      <td>18-Sep-2017<span style="display:none">;20170918</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EXX</h3></td> 
+      <td><a href="/summary/EXX">Exoil Limited FPO</a></td> 
+      <td>17-Jun-2011<span style="display:none">;20110617</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>EXXO</h3></td> 
+      <td><a href="/summary/EXXO">Exoil Ltd Options 30JUN2012</a></td> 
+      <td>17-Jun-2011<span style="display:none">;20110617</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FCA</h3></td> 
+      <td><a href="/summary/FCA">AgriNurture Inc Depository Receipts</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FEU</h3></td> 
+      <td><a href="/summary/FEU">Fleurieu Community Enterprises Limited</a></td> 
+      <td>04-May-2009<span style="display:none">;20090504</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FIR</h3></td> 
+      <td><a href="/summary/FIR">First Debenture Limited</a></td> 
+      <td>05-Aug-2013<span style="display:none">;20130805</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FIRO</h3></td> 
+      <td><a href="/summary/FIRO">First Debenture Limited Opt</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FIROC</h3></td> 
+      <td><a href="/summary/FIROC">First Debenture Limited Opt Ser C</a></td> 
+      <td>05-Aug-2013<span style="display:none">;20130805</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FIROD</h3></td> 
+      <td><a href="/summary/FIROD">First Debenture Limited Opt Ser D</a></td> 
+      <td>05-Aug-2013<span style="display:none">;20130805</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FMI</h3></td> 
+      <td><a href="/summary/FMI">Florin Mining Investment Company Limited - FPO</a></td> 
+      <td>11-May-2026<span style="display:none">;20260511</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FMIOA</h3></td> 
+      <td><a href="/summary/FMIOA">Florin Mining Investment Company Limited Option Series A 15Dec06</a></td> 
+      <td>15-Dec-2006<span style="display:none">;20061215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FMIOB</h3></td> 
+      <td><a href="/summary/FMIOB">Florin Mining Investment Company Limited Option Series B 15Dec08</a></td> 
+      <td>15-Dec-2008<span style="display:none">;20081215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>FMIOC</h3></td> 
+      <td><a href="/summary/FMIOC">Florin Mining Investment Company Limited OPT Ser C 15DEC2010</a></td> 
+      <td>10-Dec-2010<span style="display:none">;20101210</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GCO</h3></td> 
+      <td><a href="/summary/GCO">Golden Circle Limited FPO</a></td> 
+      <td>19-Dec-2008<span style="display:none">;20081219</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GHC</h3></td> 
+      <td><a href="/summary/GHC">Goodwood/Highgate Community Financial Services Ltd Ordinary</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GO8</h3></td> 
+      <td><a href="/summary/GO8">GoConnect Limited - FPO</a></td> 
+      <td>27-Sep-2024<span style="display:none">;20240927</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GOS</h3></td> 
+      <td><a href="/summary/GOS">Gosnells Financial Services Ltd Ordinary</a></td> 
+      <td>29-Feb-2016<span style="display:none">;20160229</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GPD</h3></td> 
+      <td><a href="/summary/GPD">Austral Waste Group Limited  FPO</a></td> 
+      <td>16-Feb-2006<span style="display:none">;20060216</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GSP</h3></td> 
+      <td><a href="/summary/GSP">Garden Square Porperty Trust</a></td> 
+      <td>28-Jul-2003<span style="display:none">;20030728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GSS</h3></td> 
+      <td><a href="/summary/GSS">Garden Square Property Syndicate</a></td> 
+      <td>28-Jul-2003<span style="display:none">;20030728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GTF</h3></td> 
+      <td><a href="/summary/GTF">Greentech Flagship Limited FPO</a></td> 
+      <td>15-Nov-2013<span style="display:none">;20131115</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>GYD</h3></td> 
+      <td><a href="/summary/GYD">Gympie &amp; District Finanical Services Ltd</a></td> 
+      <td>28-Feb-2010<span style="display:none">;20100228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HAD</h3></td> 
+      <td><a href="/summary/HAD">Heatcote &amp; District Financial Services Ltd</a></td> 
+      <td>30-Jun-2010<span style="display:none">;20100630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HAO</h3></td> 
+      <td><a href="/summary/HAO">Haodex Limited - FPO</a></td> 
+      <td>24-Sep-2026<span style="display:none">;20260924</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HBD</h3></td> 
+      <td><a href="/summary/HBD">Harbord Financial Services Limited</a></td> 
+      <td>30-Jun-2015<span style="display:none">;20150630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HDL</h3></td> 
+      <td><a href="/summary/HDL">Hindmarsh Resources Ltd FPO</a></td> 
+      <td>08-Jul-2005<span style="display:none">;20050708</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HDLO</h3></td> 
+      <td><a href="/summary/HDLO">Hindmarsh Resources Limited Options</a></td> 
+      <td>08-Jul-2005<span style="display:none">;20050708</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HEY</h3></td> 
+      <td><a href="/summary/HEY">Heyfield &amp; District Community Financial Services Ltd</a></td> 
+      <td>30-Jun-2009<span style="display:none">;20090630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HGD</h3></td> 
+      <td><a href="/summary/HGD">Heritage Gold NZ Limited FPO</a></td> 
+      <td>27-Aug-2007<span style="display:none">;20070827</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HGDOA</h3></td> 
+      <td><a href="/summary/HGDOA">Heritage Gold Options 20NOV2007</a></td> 
+      <td>23-Nov-2005<span style="display:none">;20051123</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HGDOB</h3></td> 
+      <td><a href="/summary/HGDOB">Heritage Gold NZ Options 20NOV2008</a></td> 
+      <td>23-Nov-2005<span style="display:none">;20051123</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HGDOC</h3></td> 
+      <td><a href="/summary/HGDOC">Heritage Gold NZ Options</a></td> 
+      <td>27-Aug-2007<span style="display:none">;20070827</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HGDXHA</h3></td> 
+      <td><a href="/summary/HGDXHA">Heritage Gold NZ Limited Warrants</a></td> 
+      <td>27-Jun-2007<span style="display:none">;20070627</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HOB</h3></td> 
+      <td><a href="/summary/HOB">Hobsons Bay Community Financial Services Limited</a></td> 
+      <td>30-Jun-2013<span style="display:none">;20130630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>HVB</h3></td> 
+      <td><a href="/summary/HVB">Hervey Bay &amp; District Financial Services Limited</a></td> 
+      <td>31-Jul-2011<span style="display:none">;20110731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IAD</h3></td> 
+      <td><a href="/summary/IAD">Inverloch &amp; District Financial Enterprises Limited FPO</a></td> 
+      <td>31-May-2021<span style="display:none">;20210531</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IFRHA</h3></td> 
+      <td><a href="/summary/IFRHA">Incitec Fertilizers Ltd Redeemable Preference Share</a></td> 
+      <td>23-Nov-2004<span style="display:none">;20041123</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IICO</h3></td> 
+      <td><a href="/summary/IICO">Illuminator Investment Company Limited Opt 15DEC2006</a></td> 
+      <td>15-Dec-2006<span style="display:none">;20061215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IICOA</h3></td> 
+      <td><a href="/summary/IICOA">Illuminator Investment Company Limited Opt 15Dec2007</a></td> 
+      <td>15-Dec-2007<span style="display:none">;20071215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IM1</h3></td> 
+      <td><a href="/summary/IM1">I M Quarries Limited - CDI</a></td> 
+      <td>06-Aug-2025<span style="display:none">;20250806</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>INW</h3></td> 
+      <td><a href="/summary/INW">Inglewood &amp; Districts Community Enterprises Limited</a></td> 
+      <td>30-Jun-2015<span style="display:none">;20150630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IOP</h3></td> 
+      <td><a href="/summary/IOP">International Petroleum Limited FPO</a></td> 
+      <td>30-Sep-2019<span style="display:none">;20190930</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IOS</h3></td> 
+      <td><a href="/summary/IOS">Inosite Limited FPO</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IQG</h3></td> 
+      <td><a href="/summary/IQG">The IQ Group Global Ltd - FPO</a></td> 
+      <td>19-Sep-2022<span style="display:none">;20220919</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IQX</h3></td> 
+      <td><a href="/summary/IQX">IQX Limited FPO</a></td> 
+      <td>19-Sep-2022<span style="display:none">;20220919</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IVL</h3></td> 
+      <td><a href="/summary/IVL">Innovance Limited FPO</a></td> 
+      <td>15-Oct-2010<span style="display:none">;20101015</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>IXS</h3></td> 
+      <td><a href="/summary/IXS">Invest Nexus Limited FPO</a></td> 
+      <td>14-Sep-2015<span style="display:none">;20150914</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JBL</h3></td> 
+      <td><a href="/summary/JBL">John Bridgeman Limited FPO</a></td> 
+      <td>23-Oct-2020<span style="display:none">;20201023</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JBLOA</h3></td> 
+      <td><a href="/summary/JBLOA">John Bridgeman Ltd Opts $1.10 31/3/20</a></td> 
+      <td>23-Oct-2020<span style="display:none">;20201023</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JBLOB</h3></td> 
+      <td><a href="/summary/JBLOB">John Bridgeman Ltd Opts $1.20 31/3/20</a></td> 
+      <td>23-Oct-2020<span style="display:none">;20201023</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JBLOC</h3></td> 
+      <td><a href="/summary/JBLOC">John Bridgeman Ltd Opts $1.50 31/3/20</a></td> 
+      <td>23-Oct-2020<span style="display:none">;20201023</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JBLOD</h3></td> 
+      <td><a href="/summary/JBLOD">John Bridgeman Ltd Opts $2.20 31/3/20</a></td> 
+      <td>23-Oct-2020<span style="display:none">;20201023</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JBLOE</h3></td> 
+      <td><a href="/summary/JBLOE">John Bridgeman Ltd Opts $3.50 31/3/20</a></td> 
+      <td>23-Oct-2020<span style="display:none">;20201023</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JCB</h3></td> 
+      <td><a href="/summary/JCB">Jinchi Biotech Ltd CDI</a></td> 
+      <td>25-Aug-2017<span style="display:none">;20170825</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>JCL</h3></td> 
+      <td><a href="/summary/JCL">Juhe Capital Holdings Limited CDI</a></td> 
+      <td>20-Oct-2017<span style="display:none">;20171020</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>KEL</h3></td> 
+      <td><a href="/summary/KEL">King Equipment Limited</a></td> 
+      <td>13-Nov-2008<span style="display:none">;20081113</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>KELO</h3></td> 
+      <td><a href="/summary/KELO">King Equipment Limited Opt 30JUN2009</a></td> 
+      <td>13-Nov-2008<span style="display:none">;20081113</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>KEW</h3></td> 
+      <td><a href="/summary/KEW">Kew East Financial Services Limited</a></td> 
+      <td>30-Jun-2015<span style="display:none">;20150630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>KGI</h3></td> 
+      <td><a href="/summary/KGI">Kaizen Global Investments Limited FPO</a></td> 
+      <td>01-Oct-2024<span style="display:none">;20241001</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>KTE</h3></td> 
+      <td><a href="/summary/KTE">K2 Energy Limited - FPO</a></td> 
+      <td>28-Jun-2024<span style="display:none">;20240628</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LCT</h3></td> 
+      <td><a href="/summary/LCT">Living Cell Technologies Limited FPO</a></td> 
+      <td>01-Sep-2004<span style="display:none">;20040901</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LGP</h3></td> 
+      <td><a href="/summary/LGP">Lion Selection Group Limited</a></td> 
+      <td>12-Mar-2013<span style="display:none">;20130312</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LGPOA</h3></td> 
+      <td><a href="/summary/LGPOA">Lion Selection Group Limited Options 12DEC2014</a></td> 
+      <td>12-Mar-2013<span style="display:none">;20130312</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LLP</h3></td> 
+      <td><a href="/summary/LLP">Our Community Company Limited</a></td> 
+      <td>30-Jun-2014<span style="display:none">;20140630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LPC</h3></td> 
+      <td><a href="/summary/LPC">Lakeside Pakenham Community Enterprise Limited</a></td> 
+      <td>30-Jun-2014<span style="display:none">;20140630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LTS</h3></td> 
+      <td><a href="/summary/LTS">LabTech Systems Limited</a></td> 
+      <td>28-Jul-2006<span style="display:none">;20060728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LTSOA</h3></td> 
+      <td><a href="/summary/LTSOA">LabTech Systems Limited Opt 30JUN2012</a></td> 
+      <td>28-Jul-2006<span style="display:none">;20060728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>LTSOB</h3></td> 
+      <td><a href="/summary/LTSOB">LabTech Systems Limited Opt 30JUN2013</a></td> 
+      <td>28-Jul-2006<span style="display:none">;20060728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MBA</h3></td> 
+      <td><a href="/summary/MBA">Mareeba &amp; Dimbulah Financial Services Limited</a></td> 
+      <td>30-Jun-2010<span style="display:none">;20100630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MBK</h3></td> 
+      <td><a href="/summary/MBK">Mooroolbark &amp; District Financial Services Limited FPO</a></td> 
+      <td>10-May-2019<span style="display:none">;20190510</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MBS</h3></td> 
+      <td><a href="/summary/MBS">Metropolitan Collection Property Syndicate</a></td> 
+      <td>28-Jul-2003<span style="display:none">;20030728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MBT</h3></td> 
+      <td><a href="/summary/MBT">Metropolitan Collection Property Trust</a></td> 
+      <td>28-Jul-2003<span style="display:none">;20030728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MDH</h3></td> 
+      <td><a href="/summary/MDH">Mandurah Community Financial Services Limited</a></td> 
+      <td>30-Jun-2016<span style="display:none">;20160630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MEK</h3></td> 
+      <td><a href="/summary/MEK">Meridien Capital Limited FPO</a></td> 
+      <td>15-Sep-2014<span style="display:none">;20140915</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MEV</h3></td> 
+      <td><a href="/summary/MEV">Mt Evelyn &amp; Districts Financial Services Limited FPO</a></td> 
+      <td>31-Jan-2019<span style="display:none">;20190131</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MGS</h3></td> 
+      <td><a href="/summary/MGS">MGT Resources Limited FPO</a></td> 
+      <td>14-Dec-2012<span style="display:none">;20121214</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MIE</h3></td> 
+      <td><a href="/summary/MIE">Mie Pay Limited - FPO</a></td> 
+      <td>24-Sep-2026<span style="display:none">;20260924</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MLA</h3></td> 
+      <td><a href="/summary/MLA">Murrimboola Financial Services Limited</a></td> 
+      <td>14-Jul-2008<span style="display:none">;20080714</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MLG</h3></td> 
+      <td><a href="/summary/MLG">Moralltach Global Plc CDI</a></td> 
+      <td>30-Apr-2019<span style="display:none">;20190430</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMT</h3></td> 
+      <td><a href="/summary/MMT">Mt Rommel Mining Limited FPO</a></td> 
+      <td>15-Apr-2020<span style="display:none">;20200415</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTCA</h3></td> 
+      <td><a href="/summary/MMTCA">Mt Rommel Mining Limited Partly Paid</a></td> 
+      <td>01-Aug-2006<span style="display:none">;20060801</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTCB</h3></td> 
+      <td><a href="/summary/MMTCB">Mount Rommel Mining Limited Partly Paid</a></td> 
+      <td>07-Mar-2007<span style="display:none">;20070307</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTCC</h3></td> 
+      <td><a href="/summary/MMTCC">Mount Rommel Mining Limited Partly Paid</a></td> 
+      <td>31-Aug-2010<span style="display:none">;20100831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTCD</h3></td> 
+      <td><a href="/summary/MMTCD">Mount Rommel Mining Limited Partly Paid $0.03</a></td> 
+      <td>15-Apr-2020<span style="display:none">;20200415</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTO</h3></td> 
+      <td><a href="/summary/MMTO">Mt Rommel Mining Limited Opt 28Feb2007</a></td> 
+      <td>28-Feb-2007<span style="display:none">;20070228</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTOA</h3></td> 
+      <td><a href="/summary/MMTOA">Mt Rommel Mining Limited Opt 28Aug2008</a></td> 
+      <td>28-Aug-2008<span style="display:none">;20080828</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTOB</h3></td> 
+      <td><a href="/summary/MMTOB">Mt Rommel Mining Limited Opt 31AUG2009</a></td> 
+      <td>01-Sep-2009<span style="display:none">;20090901</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTOC</h3></td> 
+      <td><a href="/summary/MMTOC">Mt Rommel Mining Limited Opt 31AUG2010</a></td> 
+      <td>05-Feb-2010<span style="display:none">;20100205</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MMTPA</h3></td> 
+      <td><a href="/summary/MMTPA">Mt Rommel Mining Cum Redem Pref Shares</a></td> 
+      <td>15-Apr-2020<span style="display:none">;20200415</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MRW</h3></td> 
+      <td><a href="/summary/MRW">Meridien Resources Limited Ord</a></td> 
+      <td>06-Apr-2011<span style="display:none">;20110406</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>MVF</h3></td> 
+      <td><a href="/summary/MVF">Meander Valley Financial Services Limited</a></td> 
+      <td>30-Jun-2010<span style="display:none">;20100630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>NCS</h3></td> 
+      <td><a href="/summary/NCS">NuCannaCo Science Limited FPO</a></td> 
+      <td>18-Sep-2018<span style="display:none">;20180918</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>NFM</h3></td> 
+      <td><a href="/summary/NFM">NFM Group Limited CDI</a></td> 
+      <td>14-Sep-2020<span style="display:none">;20200914</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>NMD</h3></td> 
+      <td><a href="/summary/NMD">New Millenium Publications Limited FPO</a></td> 
+      <td>14-Dec-2006<span style="display:none">;20061214</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>NRC</h3></td> 
+      <td><a href="/summary/NRC">North Ryde Community Finance Limited FPO</a></td> 
+      <td>30-Jun-2018<span style="display:none">;20180630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>NRN</h3></td> 
+      <td><a href="/summary/NRN">Nuren Group Limited</a></td> 
+      <td>30-Jun-2026<span style="display:none">;20260630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCT</h3></td> 
+      <td><a href="/summary/OCT">Octanex NL FPO</a></td> 
+      <td>05-Nov-2009<span style="display:none">;20091105</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCTN</h3></td> 
+      <td><a href="/summary/OCTN">Octanex NL Options March 2005</a></td> 
+      <td>31-Mar-2005<span style="display:none">;20050331</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCTOA</h3></td> 
+      <td><a href="/summary/OCTOA">Octanex NL Options March 2005</a></td> 
+      <td>22-Mar-2005<span style="display:none">;20050322</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCTOB</h3></td> 
+      <td><a href="/summary/OCTOB">Octanex Options $0.25 30JUN2008</a></td> 
+      <td>30-Jun-2008<span style="display:none">;20080630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCTOF</h3></td> 
+      <td><a href="/summary/OCTOF">Octanex Options $0.25 30JUN2009</a></td> 
+      <td>05-Nov-2009<span style="display:none">;20091105</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCTOL</h3></td> 
+      <td><a href="/summary/OCTOL">Octanex NL Opt $0.25 31DEC2010</a></td> 
+      <td>05-Nov-2009<span style="display:none">;20091105</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OCX</h3></td> 
+      <td><a href="/summary/OCX">OceanEthix International Holdings Limited  FPO</a></td> 
+      <td>12-May-2015<span style="display:none">;20150512</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>OLX</h3></td> 
+      <td><a href="/summary/OLX">OliveX Holdings Limited - FPO</a></td> 
+      <td>21-Jul-2023<span style="display:none">;20230721</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PBS</h3></td> 
+      <td><a href="/summary/PBS">Pioneer Permanent Building Society Limited FPO</a></td> 
+      <td>11-Aug-2006<span style="display:none">;20060811</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PBSHA</h3></td> 
+      <td><a href="/summary/PBSHA">Pioneer Income Notes</a></td> 
+      <td>11-Aug-2006<span style="display:none">;20060811</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PBSHB</h3></td> 
+      <td><a href="/summary/PBSHB">Pioneer Term Subordinated Capital Notes</a></td> 
+      <td>11-Aug-2006<span style="display:none">;20060811</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PEQOA</h3></td> 
+      <td><a href="/summary/PEQOA">Pritchard Equity Ltd Ser A Opt 10DEC2008</a></td> 
+      <td>10-Dec-2008<span style="display:none">;20081210</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PEQOB</h3></td> 
+      <td><a href="/summary/PEQOB">Pritchard Equity Ltd Ser B Opt 10DEC2010</a></td> 
+      <td>10-Dec-2010<span style="display:none">;20101210</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PEQOC</h3></td> 
+      <td><a href="/summary/PEQOC">Pritchard Equity Ltd Ser C Opt 10DEC2015</a></td> 
+      <td>15-Dec-2015<span style="display:none">;20151215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PEQPA</h3></td> 
+      <td><a href="/summary/PEQPA">PEQ Preferred Income Equity Securities</a></td> 
+      <td>30-Aug-2013<span style="display:none">;20130830</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PEQPAN</h3></td> 
+      <td><a href="/summary/PEQPAN">PEQ Preferred Income Equity Securities DefDev</a></td> 
+      <td>09-Mar-2009<span style="display:none">;20090309</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PFAA</h3></td> 
+      <td><a href="/summary/PFAA">Property Fox No 1 Limited A Class</a></td> 
+      <td>09-Apr-2010<span style="display:none">;20100409</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PFD</h3></td> 
+      <td><a href="/summary/PFD">Mirvac PFA Diversified Property Trust</a></td> 
+      <td>29-Jul-2009<span style="display:none">;20090729</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PIN</h3></td> 
+      <td><a href="/summary/PIN">Premium Income Fund</a></td> 
+      <td>24-Dec-2015<span style="display:none">;20151224</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PJA</h3></td> 
+      <td><a href="/summary/PJA">Pinjarra Community Financial Services Limited</a></td> 
+      <td>30-Jun-2016<span style="display:none">;20160630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PMZ</h3></td> 
+      <td><a href="/summary/PMZ">Precious Metals Investments Limited FPO</a></td> 
+      <td>15-Sep-2014<span style="display:none">;20140915</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PNT</h3></td> 
+      <td><a href="/summary/PNT">Print Mail Logistics Limited FPO</a></td> 
+      <td>18-Jan-2019<span style="display:none">;20190118</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PTB</h3></td> 
+      <td><a href="/summary/PTB">PTB Group Limited FPO</a></td> 
+      <td>15-Dec-2006<span style="display:none">;20061215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>PYV</h3></td> 
+      <td><a href="/summary/PYV">Paynesville &amp; District Financial Services Limited</a></td> 
+      <td>31-Jul-2010<span style="display:none">;20100731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>QPFG</h3></td> 
+      <td><a href="/summary/QPFG">Queensland Pailownia Forests Limited Convertable Notes</a></td> 
+      <td>31-Aug-2007<span style="display:none">;20070831</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>QPTXXI</h3></td> 
+      <td><a href="/summary/QPTXXI">Quantum Property Trust No 9</a></td> 
+      <td>29-Jan-2008<span style="display:none">;20080129</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>QPTXXK</h3></td> 
+      <td><a href="/summary/QPTXXK">Quantum Property Trust No.11</a></td> 
+      <td>29-Jan-2008<span style="display:none">;20080129</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>QPTXXL</h3></td> 
+      <td><a href="/summary/QPTXXL">Quantum Property Trust No 12</a></td> 
+      <td>15-Apr-2010<span style="display:none">;20100415</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RDL</h3></td> 
+      <td><a href="/summary/RDL">Redlands Community Financial Services Ltd</a></td> 
+      <td>15-Feb-2013<span style="display:none">;20130215</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RFP</h3></td> 
+      <td><a href="/summary/RFP">RFM Poultry</a></td> 
+      <td>29-May-2020<span style="display:none">;20200529</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RFT</h3></td> 
+      <td><a href="/summary/RFT">Riverdale Property Trust</a></td> 
+      <td>28-Jul-2003<span style="display:none">;20030728</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RGWB</h3></td> 
+      <td><a href="/summary/RGWB">Ricegrowers Limited B Class restricted voting RESTRICTED</a></td> 
+      <td>05-Apr-2019<span style="display:none">;20190405</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RKC</h3></td> 
+      <td><a href="/summary/RKC">Rockingham Community Financial Services Limited</a></td> 
+      <td>30-Mar-2016<span style="display:none">;20160330</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ROS</h3></td> 
+      <td><a href="/summary/ROS">Rosewood &amp; District Financial Services Limited</a></td> 
+      <td>30-Nov-2012<span style="display:none">;20121130</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RTN</h3></td> 
+      <td><a href="/summary/RTN">Rattoon Holdings Limited FPO</a></td> 
+      <td>08-Mar-2011<span style="display:none">;20110308</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RVC</h3></td> 
+      <td><a href="/summary/RVC">Revetec Holdings Limited FPO</a></td> 
+      <td>15-Apr-2010<span style="display:none">;20100415</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>RYE</h3></td> 
+      <td><a href="/summary/RYE">Rye &amp; District Community Financial Services Limited FPO</a></td> 
+      <td>28-Jun-2019<span style="display:none">;20190628</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SAA</h3></td> 
+      <td><a href="/summary/SAA">Siwa Group Limited -  FPO</a></td> 
+      <td>24-Dec-2021<span style="display:none">;20211224</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SBB</h3></td> 
+      <td><a href="/summary/SBB">South Burdekin Community Financial Services Limited</a></td> 
+      <td>31-Jul-2009<span style="display:none">;20090731</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SDC</h3></td> 
+      <td><a href="/summary/SDC">Sarina and District Community Financial Services Limited FPO</a></td> 
+      <td>28-Jun-2019<span style="display:none">;20190628</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SDF</h3></td> 
+      <td><a href="/summary/SDF">State Development Fund Limited</a></td> 
+      <td>16-Feb-2009<span style="display:none">;20090216</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SDH</h3></td> 
+      <td><a href="/summary/SDH">Sandringham Community Financial Services Ltd</a></td> 
+      <td>28-Jun-2019<span style="display:none">;20190628</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SKV</h3></td> 
+      <td><a href="/summary/SKV">SHKL Group Limited CDI</a></td> 
+      <td>14-Jul-2020<span style="display:none">;20200714</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SON</h3></td> 
+      <td><a href="/summary/SON">Stacpoole Investments Ltd FPO</a></td> 
+      <td>18-Sep-2017<span style="display:none">;20170918</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SRD</h3></td> 
+      <td><a href="/summary/SRD">San Remo District Financial Services Ltd FPO</a></td> 
+      <td>30-Jun-2017<span style="display:none">;20170630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>SWP</h3></td> 
+      <td><a href="/summary/SWP">SwepDri Limited FPO</a></td> 
+      <td>04-Aug-2005<span style="display:none">;20050804</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TCB</h3></td> 
+      <td><a href="/summary/TCB">Tongala and District Financial Services Limited FPO</a></td> 
+      <td>08-Feb-2019<span style="display:none">;20190208</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TG8</h3></td> 
+      <td><a href="/summary/TG8">Saramanis Limited - FPO</a></td> 
+      <td>22-Oct-2025<span style="display:none">;20251022</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TLZ</h3></td> 
+      <td><a href="/summary/TLZ">Telezon Limited FPO</a></td> 
+      <td>12-May-2015<span style="display:none">;20150512</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TLZOB</h3></td> 
+      <td><a href="/summary/TLZOB">Telezon Limited Opts $0.20 Exp 14 June 2016</a></td> 
+      <td>12-May-2015<span style="display:none">;20150512</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TMH</h3></td> 
+      <td><a href="/summary/TMH">Timah Resources Limited FPO</a></td> 
+      <td>15-Sep-2015<span style="display:none">;20150915</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TOO</h3></td> 
+      <td><a href="/summary/TOO">Toodyay &amp; Districts Community Financial Services Limited</a></td> 
+      <td>30-Jun-2011<span style="display:none">;20110630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>TUG</h3></td> 
+      <td><a href="/summary/TUG">Tuggeranong Valley Financial Services Limited</a></td> 
+      <td>07-Nov-2008<span style="display:none">;20081107</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>UCE</h3></td> 
+      <td><a href="/summary/UCE">Upper Yarra Community Enterprises Limited</a></td> 
+      <td>30-Jun-2009<span style="display:none">;20090630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>UPE</h3></td> 
+      <td><a href="/summary/UPE">Ultimate Power and Energy Ltd FPO</a></td> 
+      <td>14-Mar-2016<span style="display:none">;20160314</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>URF</h3></td> 
+      <td><a href="/summary/URF">US Masters Residential Property Fund</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VAX</h3></td> 
+      <td><a href="/summary/VAX">VentureAxess Group Limited FPO</a></td> 
+      <td>16-Sep-2013<span style="display:none">;20130916</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VAXO</h3></td> 
+      <td><a href="/summary/VAXO">VentureAxess Group Limited Opt 31Dec2009</a></td> 
+      <td>31-Dec-2009<span style="display:none">;20091231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VAXOA</h3></td> 
+      <td><a href="/summary/VAXOA">VentureAxess Group Limited Opt 30 Aug 2012</a></td> 
+      <td>30-Aug-2012<span style="display:none">;20120830</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VAXOB</h3></td> 
+      <td><a href="/summary/VAXOB">VentureAxess Group Limited Opt 30 Aug 2014</a></td> 
+      <td>16-Sep-2013<span style="display:none">;20130916</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VAXOC</h3></td> 
+      <td><a href="/summary/VAXOC">VentureAxess Group Limited Opt 30 Aug 2014</a></td> 
+      <td>16-Sep-2013<span style="display:none">;20130916</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VLE</h3></td> 
+      <td><a href="/summary/VLE">Victorian Livestock Exchange</a></td> 
+      <td>01-May-2008<span style="display:none">;20080501</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VLY</h3></td> 
+      <td><a href="/summary/VLY">Valley Community Financial Services Limited</a></td> 
+      <td>30-Jun-2016<span style="display:none">;20160630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VTL</h3></td> 
+      <td><a href="/summary/VTL">Invictus Therapeutics Limited - FPO</a></td> 
+      <td>04-Sep-2026<span style="display:none">;20260904</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>VTN</h3></td> 
+      <td><a href="/summary/VTN">Veratin Limited - FPO</a></td> 
+      <td>16-Sep-2024<span style="display:none">;20240916</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>WTA</h3></td> 
+      <td><a href="/summary/WTA">Wantirna Community Financial Services Limited</a></td> 
+      <td>30-Jun-2012<span style="display:none">;20120630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>YAR</h3></td> 
+      <td><a href="/summary/YAR">South Burnett Community Enterprises Limited FPO</a></td> 
+      <td>30-Jun-2021<span style="display:none">;20210630</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ZKP</h3></td> 
+      <td><a href="/summary/ZKP">ZKP Group Limited FPO</a></td> 
+      <td>28-Aug-2018<span style="display:none">;20180828</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ZOD</h3></td> 
+      <td><a href="/summary/ZOD">Zodiac Capital Limited FPO</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+  <tr> 
+      <td><h3>ZODO</h3></td> 
+      <td><a href="/summary/ZODO">Zodiac Capital Limited Opt 31DEC2012</a></td> 
+      <td>31-Dec-2011<span style="display:none">;20111231</span></td> 
+  </tr> 
+
+</tbody>
+</table></div>  
+<!-- /delisted -->
+
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+</div>
+<!-- begin footer -->
+
+</div><!-- /end container -->
+
+<footer class="footer">
+    <div class="subfooter-back">
+        <div class="container subfooter-cont">
+            <div class="row">
+              
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-col4">
+                              	       
+              	 <a href="/"><img src="images/nsx_logo_inverted.svg" height="auto" width="80%" aria-hidden="true"></a></br>
+					<div class="socials-title"><p style="font-weight:500;">Connect with NSX</p></div>
+					<div class="socials-icons fa-2x"  >						
+					   <a href="https://www.linkedin.com/company/nsxa/" target="_blank" title="Linkedin feed"  class="NoDecoration">
+							<i aria-hidden="true" class="fa fa-linkedin-square"></i>
+					</a>
+					&nbsp;
+                   <a href="https://www.youtube.com/@TickerTalkPodcast" target="_blank" title="youtube podcast" class="NoDecoration" >
+							<i aria-hidden="true" class="fa fa-youtube-play"></i>
+					</a>
+															&nbsp;
+					   <a href="https://www.instagram.com/tickertalkpodcast" target="_blank" title="instagram podcast" class="NoDecoration">
+							<i aria-hidden="true" class="fa fa-instagram"></i>
+					</a>
+					&nbsp;
+					   <a href="https://www.facebook.com/people/Ticker-Talk/61584190927809" target="_blank" title="facebook podcast" class="NoDecoration">
+							<i aria-hidden="true" class="fa fa-facebook-square" ></i>
+					</a>
+
+					</div>
+                   
+		        </div>
+			              
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-col2">
+                    <h3><a href="/listing/why-list-with-us/">NSX MARKET</a></h3>
+                     <ul class="sub-footer-links">
+                         <li><a href="/listing/why-list-with-us/">Why List with Us</a></li>
+                         <li><a href="/listing/getting-started/">Getting Started</a></li>
+						 <li><a href="/marketdata/official-list/">Official List</a></li>
+                         <li><a href="/investing/upcoming-listings/">Upcoming Listings</a></li>
+                         <li><a href="/investing/recent-listings/">Recent Listings</a></li>
+                     </ul>
+                     <div class="clearfix"></div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-col3">
+					<h3><a href="/about/our-business/">ABOUT NSX</a></h3>
+                    <ul class="sub-footer-links">
+                        <li><a href="/about/our-business/">Our Business</a></li>
+                        <li><a href="/about/governance/">Governance</a></li>
+                        <!--  li><a href="/about/investor-relations/">Investor Relations</a></li -->
+                        <li><a href="/about/media-centre/">Media Centre</a></li>
+                        <li><a href="/about/contact-us/">Contact us</a></li>
+                        <li><a href="/regulation/exchange/complaints/">Complaints</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>				
+				 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-col1">
+				 <h3><a href="/listing/why-list-with-us/">List with the NSX</a></h3><p class="sub-footer-links ">Contact the Business Development team and arrange a time to discuss your business.</p>
+                    <div class="footer-listing-box"> 
+              	        <div class="footer-listing-button">
+					        <button id="request-btn-2" href="https://au.bigin.online/national_stock_exchange/forms/nsx-listing-kit-request" class="btn btn-default"  onclick="location.href='https://au.bigin.online/national_stock_exchange/forms/nsx-listing-kit-request';" >Request Listing Kit</button>   
+					        </div>
+                    </div>
+		        </div>
+		 <div class="clearfix"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container lower-footer">
+        <div class="row">
+            <div class="footer-bottom-cont">
+                <div class="col-sm-8 footer-left">
+                    <span>&copy; Copyright 2026&nbsp;</span><span>National Stock Exchange of Australia Limited</span> <span class="spacer"><i style="display:none;">-</i>ABN 11 000 902 063</span>
+                </div>
+                <div class="col-sm-4 footer-right">
+                    <a href="/privacy">Privacy</a> <a href="/legal">Legal</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+	
+</body>
+</html>

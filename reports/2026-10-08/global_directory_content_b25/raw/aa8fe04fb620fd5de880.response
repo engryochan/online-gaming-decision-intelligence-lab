@@ -1,0 +1,1208 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=11" /><meta name="viewport" content="width=1080" /><meta name="Author" content="Denis Petrescu, Cosmin Alexe, Florin Duminica" /><title>
+	BVB - Obligatiuni
+</title>
+        <script src="/bundles/modernizr?v="></script>
+
+    <link href="/Content/css?v=5KyQCvvRIVHICHP_qkqatsa-hLElHMKVYdERMm68Pgk1" rel="stylesheet"/>
+<link href="/bundles/cssbndl?v=GUM1I1AKMzSy5Cm2S8PG1Rrd1htqPVGDV_DbBMoQp3g1" rel="stylesheet"/>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./IssuingBonds" id="aspnetForm" autocomplete="off">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="IiyiphaP0lChAZaXCjhy9a6kA3uNZzMiqT9Iu6XmTZCTvWSX5AkUToVepCcfkyGSuKkm0K2vN2IYEfCuGQYKmQrjp0Ek2dNoCRT896/jtANnCzb/v86l2NIkZRTjAO9cbQXvVr4uoO7GTC56D+Ng7lqqj7rAQhV7pBa6iv4rJRlNkqOVMf3H8Z+ee/G6cJkJmJzwKp9bhDj/pFlGkrcpAnHLfninoaShLr33FwYmwB8=" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"ro-RO","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"lei","NaNSymbol":"NaN (nu este un număr)","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-Infinit","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"Infinit","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"a.m.","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402293599999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":".","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy H:mm:ss","LongDatePattern":"d MMMM yyyy","LongTimePattern":"H:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"p.m.","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd.MM.yyyy","ShortTimePattern":"H:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["D","L","Ma","Mi","J","V","S"],"ShortestDayNames":["D","L","Ma","Mi","J","V","S"],"DayNames":["duminică","luni","marți","miercuri","joi","vineri","sâmbătă"],"AbbreviatedMonthNames":["ian.","feb.","mar.","apr.","mai.","iun.","iul.","aug.","sep.","oct.","nov.","dec.",""],"MonthNames":["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie",""],"IsReadOnly":false,"NativeCalendarName":"Calendar gregorian","AbbreviatedMonthGenitiveNames":["ian.","feb.","mar.","apr.","mai.","iun.","iul.","aug.","sep.","oct.","nov.","dec.",""],"MonthGenitiveNames":["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yKn6S0XO-cOQfsHPT7Sa_hkgjtNFZpdQWSe4PtHVkaFqY2LFF8sZmlOjsgrlCRB-3dYAZgA_w3tBaxb0CZ5U7sWxY7fsu0q2a33yyp4oXPoKlg3R7hlgVLezSwFVNZwk7TLTut_kZTZjhFU2_bYwfkw1&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="44717C1E" />
+       
+        
+          <script type="text/javascript"> var sk = ''; </script>
+        <header class="content">
+            
+            <script src="/bundles/mainscripts?v=auziiMPxLwKLqPjtTi8U-XiYZ9zjuopqF6dAl2c6bsw1"></script>
+
+            <script type="text/javascript">
+                var currentCulture = 'ro-RO';
+                var lengthMenu = "Afiseaza _MENU_ inregistrari";
+                var decimalLang = ",";
+                var thousandsLang = ".";
+                var searchLang = "Cauta";
+                var noData = "Nu exista date.";
+                var infoLang = "Afisare _START_ - _END_ din _TOTAL_ inregistrari";
+                var paginateFirst = "Inceput";
+                var paginateLast = "Sfarsit";
+                var paginateNext = "Inainte";
+                var paginatePrevious = "Inapoi";
+                var zeroRecordsLang = "Nicio inregistrare gasita";
+                var infoEmptyLang = "Afisare 0 - 0 din 0 inregistrari";
+                var infoFilteredLang = "(selectate din _MAX_ inregistrari)";
+                Globalize.culture(currentCulture);
+                moment.locale(currentCulture);
+            </script>                
+  
+            <script src="/Scripts/cookie-bar-master/cookiebar-latest.min.js?forceLang=ro&noGeoIp=1&remember=364" type="text/javascript"></script>
+            
+            <script src="/bundles/bdltvcha?v=gBptZXijeZq8jJ9EeLZuFEOoSjkUDC9hvdjiXYD7QeA1"></script>
+
+
+            <div class="container top-content header-banner">
+                <div class="header-bvb">
+                    <div class="headerLogo">
+                        <a href="/">
+                            <img id="LogBVB" src="/Intro/img/BVB_Logo_white_RO.png" style="width: 1px; height: 1px;" />
+                        </a>
+                    </div>
+                    <div class="p-0 mTop5">
+                        
+
+<div class="black">
+    <div class="mTop5 d-flex">
+        <div class="col-lg-1 mTop3 hidden-xs">
+
+<div class="clock">
+  <div class="clock__second"></div>
+  <div class="clock__minute"></div>
+    <div class="clock__hour"></div>
+  <div class="clock__axis"></div>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+</div>
+
+<style>
+
+
+ .clock {
+	 height: 30px;
+	 width: 30px;
+	 border-radius: 0px;
+	 display: flex;
+	 justify-content: center;
+	 position: relative;
+     font-family: sans-serif;
+}
+ .clock__second, .clock__minute, .clock__hour, .clock__indicator {
+	 position: absolute;
+	 /*left: calc(50% - 10px);*/
+     left:0px;
+	 width: 1.5px;
+	 background: #004762;
+	 transform-origin: bottom center;
+	 z-index: 2;
+	 border-radius: 1px;
+}
+ /*.clock__second {
+height: 15px;
+    margin-top: 4.5px;
+    background: #3e3e3e;
+    animation: time 60s infinite steps(60);
+    z-index: 3;
+    opacity: 0.3;
+    left: 7.5px;
+}*/
+ .clock__minute {
+    height: 14px;
+    margin-top: 6px;
+    opacity: 0.75;
+    animation: time 3600s linear infinite;
+    left: 7px;
+}
+ .clock__hour {
+    height: 10.5px;
+    margin-top: 10px;
+    animation: time 43200s linear infinite;
+    left: 7px;
+}
+ .clock__indicator {
+    height: 20px;
+    width: 15px;
+    border-top: 1px solid #004762;
+	 background: none;
+     opacity: 0.75;
+
+}
+ /*.clock__indicator:nth-of-type(5n) {
+	 height: 0px;
+	 border-top: none;
+}*/
+ .clock__axis {
+	 background: #004762;
+	 width: 5px;
+	 height: 5px;
+	 border-radius: 3px;
+	 position: absolute;
+	 z-index: 4;
+    top: 17.5px;
+    left: calc(50% - 10px);
+}
+ section.clock__indicator:nth-of-type(1) {
+	 transform: rotateZ(calc(6deg * 1));
+}
+ section.clock__indicator:nth-of-type(2) {
+	 transform: rotateZ(calc(6deg * 2));
+     
+}
+ section.clock__indicator:nth-of-type(3) {
+	 transform: rotateZ(calc(6deg * 3));
+}
+ section.clock__indicator:nth-of-type(4) {
+	 transform: rotateZ(calc(6deg * 4));
+}
+ section.clock__indicator:nth-of-type(5) {
+	 transform: rotateZ(calc(6deg * 5));
+}
+ section.clock__indicator:nth-of-type(6) {
+	 transform: rotateZ(calc(6deg * 6));
+}
+ section.clock__indicator:nth-of-type(7) {
+	 transform: rotateZ(calc(6deg * 7));
+}
+ section.clock__indicator:nth-of-type(8) {
+	 transform: rotateZ(calc(6deg * 8));
+}
+ section.clock__indicator:nth-of-type(9) {
+	 transform: rotateZ(calc(6deg * 9));
+}
+ section.clock__indicator:nth-of-type(10) {
+	 transform: rotateZ(calc(6deg * 10));
+}
+ section.clock__indicator:nth-of-type(11) {
+	 transform: rotateZ(calc(6deg * 11));
+}
+ section.clock__indicator:nth-of-type(12) {
+	 transform: rotateZ(calc(6deg * 12));
+}
+ section.clock__indicator:nth-of-type(13) {
+	 transform: rotateZ(calc(6deg * 13));
+}
+ section.clock__indicator:nth-of-type(14) {
+	 transform: rotateZ(calc(6deg * 14));
+}
+ section.clock__indicator:nth-of-type(15) {
+	 transform: rotateZ(calc(6deg * 15));
+}
+ section.clock__indicator:nth-of-type(16) {
+	 transform: rotateZ(calc(6deg * 16));
+}
+ section.clock__indicator:nth-of-type(17) {
+	 transform: rotateZ(calc(6deg * 17));
+}
+ section.clock__indicator:nth-of-type(18) {
+	 transform: rotateZ(calc(6deg * 18));
+}
+ section.clock__indicator:nth-of-type(19) {
+	 transform: rotateZ(calc(6deg * 19));
+}
+ section.clock__indicator:nth-of-type(20) {
+	 transform: rotateZ(calc(6deg * 20));
+}
+ section.clock__indicator:nth-of-type(21) {
+	 transform: rotateZ(calc(6deg * 21));
+}
+ section.clock__indicator:nth-of-type(22) {
+	 transform: rotateZ(calc(6deg * 22));
+}
+ section.clock__indicator:nth-of-type(23) {
+	 transform: rotateZ(calc(6deg * 23));
+}
+ section.clock__indicator:nth-of-type(24) {
+	 transform: rotateZ(calc(6deg * 24));
+}
+ section.clock__indicator:nth-of-type(25) {
+	 transform: rotateZ(calc(6deg * 25));
+}
+ section.clock__indicator:nth-of-type(26) {
+	 transform: rotateZ(calc(6deg * 26));
+}
+ section.clock__indicator:nth-of-type(27) {
+	 transform: rotateZ(calc(6deg * 27));
+}
+ section.clock__indicator:nth-of-type(28) {
+	 transform: rotateZ(calc(6deg * 28));
+}
+ section.clock__indicator:nth-of-type(29) {
+	 transform: rotateZ(calc(6deg * 29));
+}
+ section.clock__indicator:nth-of-type(30) {
+	 transform: rotateZ(calc(6deg * 30));
+}
+ section.clock__indicator:nth-of-type(31) {
+	 transform: rotateZ(calc(6deg * 31));
+}
+ section.clock__indicator:nth-of-type(32) {
+	 transform: rotateZ(calc(6deg * 32));
+}
+ section.clock__indicator:nth-of-type(33) {
+	 transform: rotateZ(calc(6deg * 33));
+}
+ section.clock__indicator:nth-of-type(34) {
+	 transform: rotateZ(calc(6deg * 34));
+}
+ section.clock__indicator:nth-of-type(35) {
+	 transform: rotateZ(calc(6deg * 35));
+}
+ section.clock__indicator:nth-of-type(36) {
+	 transform: rotateZ(calc(6deg * 36));
+}
+ section.clock__indicator:nth-of-type(37) {
+	 transform: rotateZ(calc(6deg * 37));
+}
+ section.clock__indicator:nth-of-type(38) {
+	 transform: rotateZ(calc(6deg * 38));
+}
+ section.clock__indicator:nth-of-type(39) {
+	 transform: rotateZ(calc(6deg * 39));
+}
+ section.clock__indicator:nth-of-type(40) {
+	 transform: rotateZ(calc(6deg * 40));
+}
+ section.clock__indicator:nth-of-type(41) {
+	 transform: rotateZ(calc(6deg * 41));
+}
+ section.clock__indicator:nth-of-type(42) {
+	 transform: rotateZ(calc(6deg * 42));
+}
+ section.clock__indicator:nth-of-type(43) {
+	 transform: rotateZ(calc(6deg * 43));
+}
+ section.clock__indicator:nth-of-type(44) {
+	 transform: rotateZ(calc(6deg * 44));
+}
+ section.clock__indicator:nth-of-type(45) {
+	 transform: rotateZ(calc(6deg * 45));
+}
+ section.clock__indicator:nth-of-type(46) {
+	 transform: rotateZ(calc(6deg * 46));
+}
+ section.clock__indicator:nth-of-type(47) {
+	 transform: rotateZ(calc(6deg * 47));
+}
+ section.clock__indicator:nth-of-type(48) {
+	 transform: rotateZ(calc(6deg * 48));
+}
+ section.clock__indicator:nth-of-type(49) {
+	 transform: rotateZ(calc(6deg * 49));
+}
+ section.clock__indicator:nth-of-type(50) {
+	 transform: rotateZ(calc(6deg * 50));
+}
+ section.clock__indicator:nth-of-type(51) {
+	 transform: rotateZ(calc(6deg * 51));
+}
+ section.clock__indicator:nth-of-type(52) {
+	 transform: rotateZ(calc(6deg * 52));
+}
+ section.clock__indicator:nth-of-type(53) {
+	 transform: rotateZ(calc(6deg * 53));
+}
+ section.clock__indicator:nth-of-type(54) {
+	 transform: rotateZ(calc(6deg * 54));
+}
+ section.clock__indicator:nth-of-type(55) {
+	 transform: rotateZ(calc(6deg * 55));
+}
+ section.clock__indicator:nth-of-type(56) {
+	 transform: rotateZ(calc(6deg * 56));
+}
+ section.clock__indicator:nth-of-type(57) {
+	 transform: rotateZ(calc(6deg * 57));
+}
+ section.clock__indicator:nth-of-type(58) {
+	 transform: rotateZ(calc(6deg * 58));
+}
+ section.clock__indicator:nth-of-type(59) {
+	 transform: rotateZ(calc(6deg * 59));
+}
+ section.clock__indicator:nth-of-type(60) {
+	 transform: rotateZ(calc(6deg * 60));
+}
+ @keyframes time {
+	 to {
+		 transform: rotateZ(360deg);
+	}
+}
+ 
+</style>
+<script>
+
+var currentSec = getSecondsToday();
+
+//var seconds = (currentSec / 60) % 1;
+var minutes = (currentSec / 3600) % 1;
+var hours = (currentSec / 43200) % 1;
+
+//setTime(60 * seconds , "second");
+setTime(3600 * minutes, "minute");
+setTime(43200 * hours, "hour");
+
+
+function setTime(left, hand) {
+  $(".clock__" + hand).css("animation-delay", "" + left * -1 + "s");
+}
+
+function getSecondsToday() {
+  var now = new Date();
+
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  var diff = now - today; 
+  return Math.round(diff / 1000);
+}
+</script></div>        
+        <div class="col-lg-10 pLeft10 d-grid" style="line-height:22px;">
+            <div id="data">
+                <b>joi</b> |
+            08 octombrie, 2026 | 
+            <span id="current-time" class="bold"></span>
+            </div>
+            <div id="status">
+                Starea pietei: 
+            <span id="statusMarket">DESCHISA</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        <div class="mTop10">
+                            <a href="/AboutUs/Overview" class="whiteLink">Despre noi si Guvernanta</a> <span class="mLeft5 mRight5 white">|</span>
+                            <a href="/InvestorRelations/Overview" class="whiteLink">Relatia cu Investitorii</a><span class="mLeft5 mRight5 white">|</span>
+                            <a href="/AboutUs/Contact" class="whiteLink">Contact</a>
+                        </div>
+                    </div>
+                    <div class="float-right text-right mTop10">
+                        <div class="pull-right d-grid-4cols">
+                            <div class="d-flex d-2">
+                                <a id="ctl00_ctl00_userRedir" class="black pRight5 text-uppercase" href="https://www.bvb.ro/LoginPage" target="_parent" style="vertical-align: middle; font-size: 12px;">Login</a>
+                                <a href="/UsersAd/NewAccount" id="ctl00_ctl00_NewAcc" class="black pRight5 text-uppercase" style="vertical-align: middle; font-size: 12px;">Inregistrare</a>
+                            </div>
+                            
+  
+
+
+                            <div class="d-grid-5cols mRight10">
+                                <a href="https://www.facebook.com/bursadevaloribucuresti?fref=ts">
+                                    <i class="fa fa-facebook fa-headerBVB"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/bucharest-stock-exchange?trk=company_logo">
+                                    <i class="fa fa-linkedin fa-headerBVB"></i>
+                                </a>
+                                <a href="https://www.instagram.com/bursadevaloribucuresti">
+                                    <i class="fa fa-instagram fa-headerBVB"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UC51OrBw6_8mww15TYXpT2ug">
+                                    <i class="fa fa-youtube-play fa-headerBVB"></i>
+                                </a>
+                                <a href="https://twitter.com/BVB_Ro">
+                                    <i class="fa fa-twitter fa-headerBVB"></i>
+                                </a>
+                            </div>
+                            <input type="checkbox" id="lang-checkbox"  data-on-text="RO" data-off-text="EN" />
+                        </div>
+                        <div class="col-lg-12 col-xs-12 p-0 text-right float-right mTop15">
+                            
+
+<div class="search pull-right">
+    <input type="text" class="search-field form-control input-styled searchWidth" id="autocomplete-form" placeholder="Nume, simbol sau ISIN" />
+    <button type="button" class="search-button">
+        <div class="fi-btn-search" style="line-height: 33px;"></div>
+    </button>
+    <a href="/FinancialInstruments/Markets/AdvancedSearch" class="whiteLink text-uppercase mLeft5">Cautare avansata</a>
+</div>
+
+
+
+<script>
+    $(function () {
+        $.extend($.ui.autocomplete.prototype, {
+            _renderItem: function (ul, item) {
+                var term = this.element.val(),
+                    html = item.label.replace(term, "<strong>$&</strong>");
+                return $("<li></li>")
+                    .data("item.autocomplete", item)
+                    .append($("<a></a>").html(html))
+                    .appendTo(ul);
+            }
+        });
+        $('#autocomplete-form').autocomplete({
+            source: function (request, response) {
+                fetch("/proxyshld.aspx/GetInstrumentsList",
+                    {
+                        method: "POST",
+                        headers: { 'Content-Type': 'application/json'},
+                        body: "{'searchtext':'" + request.term + "'}"
+                    }
+                ).then(response => response.json())
+                    .then(data => response($.map(data.d, function (item) {
+                        return { label: item, value: item.Symbol };
+                    })));
+                    //.then(error => console.log(error));
+            },
+            select: function(event, ui){
+                window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + ui.item.label.Symbol;
+            },
+            minLength: 1,
+            autoFocus: true,
+        }).data("ui-autocomplete")._renderItem = function (ul, item) {           
+          
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                .append("<a href='/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=" + item.label.Symbol + "'>" + item.label.Symbol + " / " + item.label.Name + " / " + item.label.Isin  + "</a>")
+               //  .append("<a href='/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=" + item.label.Symbol + "'>" + item.label.Symbol + " / " + item.label.Status + "</a>")
+                .addClass(item.label.Status == 'D' ? 'delisted' : '')
+                .appendTo(ul);
+        };
+    });
+    
+    $(".search-button").on("click", function () {
+        window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + $("#autocomplete-form").val();
+    });
+
+    $("#autocomplete-form").keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            console.log(window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + $(this).val())
+            window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + $(this).val();
+        }
+    });
+</script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container top-content">
+                
+
+
+
+<nav class="navbar yamm navbar-default pLeft0 pRight0 navbarRO" role="navigation" style="display: flex; align-items: center; justify-content: center; background: #000000 !important">
+    <div id="ctl00_ctl00_MegaMenuControl_menuPanel" class="w100">
+	<ul class="nav navbar-nav nav-d" style="grid-template-columns: auto auto auto auto auto auto ;"><li class="dropdown yamm-fw"><a class="dropdown-toggle active-dropdown" data-toggle="dropdown" href="/ForCompanies">Pentru Companii</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-3 list-unstyled"><li><a href="/ForCompanies/WhyBvb/Overview#" class="root-submenu">De ce Bursa de Valori Bucuresti?</a><ul class="fa-ul sublist"><li><a href="/ForCompanies/WhyBvb/Overview" class="submenu-item">Prezentare generala</a></li><li><a href="/ForCompanies/WhyBvb/FinancingInstruments" class="submenu-item">Instrumente pentru finantare</a></li><li><a href="/ForCompanies/WhyBvb/ListingBenefits" class="submenu-item">Beneficiile listarii</a></li><li><a href="/ForCompanies/WhyBvb/Infographics" class="submenu-item">Infografice</a></li></ul></li></ul><ul class="fa-ul col-xs-2 list-unstyled"><li><a href="/ForCompanies/MainMarket/IssuingShares#" class="root-submenu">Piata Principala</a><ul class="fa-ul sublist"><li><a href="/ForCompanies/MainMarket/IssuingShares" class="submenu-item">Actiuni</a></li><li><a href="/ForCompanies/MainMarket/IssuingBonds" class="submenu-item">Obligatiuni</a></li><li><a href="/ForCompanies/MainMarket/Intermediaries" class="submenu-item">Intermediari</a></li><li><a href="/ForCompanies/MainMarket/Faq" class="submenu-item">Intrebari frecvente</a></li></ul></li></ul><ul class="fa-ul col-xs-2 list-unstyled"><li><a href="/ForCompanies/AeroMarket/IssuingShares#" class="root-submenu">Piata AeRO</a><ul class="fa-ul sublist"><li><a href="/ForCompanies/AeroMarket/IssuingShares" class="submenu-item">Actiuni</a></li><li><a href="/ForCompanies/AeroMarket/IssuingBonds" class="submenu-item active-dropdown submenu-itemActive" style="border-bottom: none !important;padding: 0px !important;">Obligatiuni</a></li><li><a href="/ForCompanies/AeroMarket/AuthorizedAdvisors" class="submenu-item">Consultanti Autorizati</a></li><li><a href="/ForCompanies/AeroMarket/Faq" class="submenu-item">Intrebari frecvente</a></li></ul></li></ul><ul class="fa-ul col-xs-3 list-unstyled"><li><a href="/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf" class="root-submenu">Materiale utile</a><ul class="fa-ul sublist"><li><a href="/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf" class="submenu-item">Ghidul privind raportarea ESG</a></li><li><a href="/juridic/files/RO CGC BVB 2025.pdf" class="submenu-item">Codul de Guvernanta Corporativa</a></li></ul></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/FinancialInstruments">Instrumente Financiare</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/FinancialInstruments/Markets/Shares#" class="root-submenu">Piete</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/Markets/Shares" class="submenu-item">Actiuni </a></li><li><a href="/FinancialInstruments/Markets/Bonds" class="submenu-item">Obligatiuni </a></li><li><a href="/FinancialInstruments/Markets/FundUnits" class="submenu-item">Unitati de fond</a></li><li><a href="/FinancialInstruments/Markets/Certificates" class="submenu-item">Certificate</a></li><li><a href="/FinancialInstruments/Markets/Warrants" class="submenu-item">Warrants</a></li><li><a href="/FinancialInstruments/Markets/AdvancedSearch" class="submenu-item">Cautare avansata</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/FinancialInstruments/Indices/Overview#" class="root-submenu">Indici</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/Indices/Overview" class="submenu-item">Privire generala</a></li><li><a href="/FinancialInstruments/Indices/IndicesProfiles" class="submenu-item">Profile indici</a></li><li><a href="/FinancialInstruments/Indices/Factsheets" class="submenu-item">Factsheets indici</a></li><li><a href="/FinancialInstruments/Indices/IndicesPerformance" class="submenu-item">Performanta indici</a></li><li><a href="/FinancialInstruments/Indices/BMRInformation" class="submenu-item">Informatii BMR</a></li></ul></li><li><a href="/FinancialInstruments/CorporateActions/InfoDividend#" class="root-submenu">Operatiuni corporative</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/CorporateActions/InfoDividend" class="submenu-item">Info dividend</a></li><li><a href="/FinancialInstruments/CorporateActions/ShareCapitalChanges" class="submenu-item">Modificari capital social</a></li><li><a href="/FinancialInstruments/CorporateActions/SpinOffResultedCompanies" class="submenu-item">Societati provenite din divizari</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/FinancialInstruments/SelectedData/CurrentReports#" class="root-submenu">Informatii selective</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/SelectedData/CurrentReports" class="submenu-item">Rapoarte curente </a></li><li><a href="/FinancialInstruments/SelectedData/FinancialResults" class="submenu-item">Rezultate financiare </a></li><li><a href="/FinancialInstruments/SelectedData/Indicators" class="submenu-item">Indicatori</a></li><li><a href="/FinancialInstruments/SelectedData/FinancialCalendar" class="submenu-item">Calendar Financiar</a></li><li><a href="/FinancialInstruments/SelectedData/GMSCalendar" class="submenu-item">Calendar Adunari Generale</a></li><li><a href="/FinancialInstruments/SelectedData/MarketOperations" class="submenu-item">Operatiuni de piata</a></li><li><a href="/FinancialInstruments/SelectedData/ReportedShareholders" class="submenu-item">Raportari actionari</a></li><li><a href="/FinancialInstruments/SelectedData/MonitoringList" class="submenu-item">Lista monitorizare</a></li></ul></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/TradingAndStatistics">Tranzactionare si Statistici</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/TradingAndStatistics/Trading/MarketsToday#" class="root-submenu">Tranzactionare</a><ul class="fa-ul sublist"><li><a href="/TradingAndStatistics/Trading/MarketsToday" class="submenu-item">Pietele astazi </a></li><li><a href="/TradingAndStatistics/Trading/CurrentTradingDay" class="submenu-item">Ziua curenta</a></li><li><a href="/TradingAndStatistics/Trading/MarketsStatistics" class="submenu-item">Statistici toate pietele</a></li><li><a href="/TradingAndStatistics/Trading/HistoricalTradingInfo" class="submenu-item">Sumare tranzactionare</a></li><li><a href="/TradingAndStatistics/Trading/PublicOffers" class="submenu-item">Oferte publice in derulare</a></li><li><a href="/TradingAndStatistics/Trading/SpecialSellingMethod" class="submenu-item">Vanzari speciale la ordin</a></li><li><a href="/TradingAndStatistics/Trading/MiFIDIIData" class="submenu-item">Date MiFiD II</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/TradingAndStatistics/Statistics/GeneralStatistics#" class="root-submenu">Statistici </a><ul class="fa-ul sublist"><li><a href="/TradingAndStatistics/Statistics/GeneralStatistics" class="submenu-item">Statistici generale</a></li><li><a href="/TradingAndStatistics/Statistics/MarketEvolution" class="submenu-item">Evolutia pietei (actiuni)</a></li><li><a href="/TradingAndStatistics/Statistics/Top10ByTradingData" class="submenu-item">Top tranzactionare</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/TradingAndStatistics/Publications/DailyReport#" class="root-submenu">Publicatii</a><ul class="fa-ul sublist"><li><a href="/TradingAndStatistics/Publications/DailyReport" class="submenu-item">Rapoarte zilnice</a></li><li><a href="/TradingAndStatistics/Publications/MonthlyReports" class="submenu-item">Rapoarte lunare</a></li></ul></li><li><a href="/TradingAndStatistics/TradingSessionSchedule" class="root-submenu">Program de tranzactionare</a></li><li><a href="/TradingAndStatistics/MarketsLive" class="root-submenu">Bursa in direct</a></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/Intermediaries">Intermediari</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Intermediaries/ListOfIntermediaries/GeneralIndex#" class="root-submenu">Liste intermediari</a><ul class="fa-ul sublist"><li><a href="/Intermediaries/ListOfIntermediaries/GeneralIndex" class="submenu-item">Toti intermediarii</a></li><li><a href="/Intermediaries/ListOfIntermediaries/TopOfIntermediaries" class="submenu-item">Top intermediari</a></li><li><a href="/Intermediaries/ListOfIntermediaries/MarketMakersList" class="submenu-item">Lista Market Makeri</a></li><li><a href="/Intermediaries/ListOfIntermediaries/LiquidityProvidersList" class="submenu-item">Lista Furnizori Lichiditate</a></li><li><a href="/Intermediaries/ListOfIntermediaries/MMAndLPPerformance" class="submenu-item">Performanta MM si LP</a></li><li><a href="/Intermediaries/ListOfIntermediaries/ListOfTiedAgents" class="submenu-item">Lista Agenti Delegati</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Intermediaries/HowToBecomeAMember" class="root-submenu">Cum devin intermediar</a></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/Services">Servicii</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Services/DataVending/ForDataVendors#" class="root-submenu">Vanzare date</a><ul class="fa-ul sublist"><li><a href="/Services/DataVending/ForDataVendors" class="submenu-item">Pentru distribuitori de date</a></li><li><a href="/Services/DataVending/ForProfessionals" class="submenu-item">Pentru profesionisti</a></li><li><a href="/Services/DataVending/ForInvestors" class="submenu-item">Pentru investitori</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Services/IndexLicensing/HowDoILicenseAnIndex#" class="root-submenu">Licentiere indici</a><ul class="fa-ul sublist"><li><a href="/Services/IndexLicensing/HowDoILicenseAnIndex" class="submenu-item">Cum licentiez un indice BVB?</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Services/Connectivity/ArenaSystem#" class="root-submenu">Conectivitate</a><ul class="fa-ul sublist"><li><a href="/Services/Connectivity/ArenaSystem" class="submenu-item">Sistemul de tranzactionare Arena</a></li><li><a href="/Services/Connectivity/BrokerageSystem/ArenaXTPlatform#?" class="submenu-item">Sistem de brokeraj</a></li></ul></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/Regulations">Reglementari</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Regulations/LegalFramework/BvbRegulations#" class="root-submenu">Legislatie</a><ul class="fa-ul sublist"><li><a href="/Regulations/LegalFramework/LawsAndRegulations" class="submenu-item">Legi si regulamente</a></li><li><a href="/Regulations/LegalFramework/BvbRegulations" class="submenu-item">Reglementari BVB</a></li><li><a href="/Regulations/LegalFramework/MiFIRReports" class="submenu-item">Raportari MiFID II / MiFIR</a></li><li><a href="/Regulations/LegalFramework/ArbitrationChamber" class="submenu-item">Camera Arbitrala</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Regulations/Tools/UsefulLinks#" class="root-submenu">Utile</a><ul class="fa-ul sublist"><li><a href="/Regulations/Tools/UsefulLinks" class="submenu-item">Link-uri utile</a></li><li><a href="/Regulations/Tools/CapitalMarketInstitutions" class="submenu-item">Institutiile pietei de capital</a></li></ul></li></ul></div></div></li></ul></li></ul>
+</div>
+</nav>
+
+
+
+
+            </div>
+
+        </header>
+        <div class="container main-content min-vh75">
+            
+    <div class="col-lg-12 d-inline-flex p-0">
+        <div class="col-lg-3 min-vh75 p-0">
+            
+    
+
+
+
+<div class="navbar-default sidebar">
+    <div class="sidebar-nav navbar-collapse">
+        <div id="ctl00_ctl00_body_leftMenuPlaceHolder_LeftMenuControl_LeftMenuPanel">
+	
+        <ul class="nav" id="side-menu"><li><a href="/ForCompanies/WhyBvb/Overview#" style="border-left: none !important;">De ce Bursa de Valori Bucuresti?<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li><a href="/ForCompanies/WhyBvb/Overview">Prezentare generala</a></li><li><a href="/ForCompanies/WhyBvb/FinancingInstruments">Instrumente pentru finantare</a></li><li><a href="/ForCompanies/WhyBvb/ListingBenefits">Beneficiile listarii</a></li><li><a href="/ForCompanies/WhyBvb/Infographics">Infografice</a></li></ul></li><li><a href="/ForCompanies/MainMarket/IssuingShares#" style="border-left: none !important;">Piata Principala<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li><a href="/ForCompanies/MainMarket/IssuingShares">Actiuni</a></li><li><a href="/ForCompanies/MainMarket/IssuingBonds">Obligatiuni</a></li><li><a href="/ForCompanies/MainMarket/Intermediaries">Intermediari</a></li><li><a href="/ForCompanies/MainMarket/Faq">Intrebari frecvente</a></li></ul></li><li class="active"><a href="/ForCompanies/AeroMarket/IssuingShares#" style="border-left: none !important;">Piata AeRO<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li><a href="/ForCompanies/AeroMarket/IssuingShares">Actiuni</a></li><li class="active active-li-sidemenu"><a href="/ForCompanies/AeroMarket/IssuingBonds">Obligatiuni</a><div class="active-line"></div></li><li><a href="/ForCompanies/AeroMarket/AuthorizedAdvisors">Consultanti Autorizati</a></li><li><a href="/ForCompanies/AeroMarket/Faq">Intrebari frecvente</a></li></ul></li><li><a href="/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf" style="border-left: none !important;">Materiale utile<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li><a href="/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf">Ghidul privind raportarea ESG</a></li><li><a href="/juridic/files/RO CGC BVB 2025.pdf">Codul de Guvernanta Corporativa</a></li></ul></li></ul>
+</div>
+    </div>
+    
+</div>
+<script>
+    function setSideBarHeight() {
+        //$('.navbar-default.sidebar').height(0);
+        //$('.navbar-default.sidebar').height($('.main-content .row').height());
+    }
+</script>
+
+
+
+
+
+
+        </div>
+        <div class="col-lg-9 col-body-content p-0 pBot15">
+            
+
+    <style>
+        .back-to-top {
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+    </style>
+
+    <div class="col-xs-12 mBot20">
+
+        <p class="mTop20">
+            
+
+<div id="divFCRC" class="col-xs-4 pull-right pRight0">
+
+    <div class="boxed-panel">
+        <h2 class="styled small">Ghiduri pentru listare</h2>
+
+        <p class="mTop20">
+            <a href="/info/Rapoarte/Ghiduri/_BVB_Finanteaza-ti_Compania-2026-02-05.pdf" target="_blank">
+                <b>Listarea la BVB - Brosura</b>
+                <img class="img-responsive img-thumbnail" src='https://www.bvb.ro/images/Listarea la BVB-Brosura_2024.png' />
+            </a>
+        </p>
+
+    </div>
+
+    <div class="boxed-panel">
+        <h2 class="styled small">Contactati-ne</h2>
+
+        
+
+        
+
+        <h2 class="smaller styled thin mTop10"><span><strong>Ana-Maria Neatu</strong></span></h2>
+        <h2 class="date">Specialist Business Development</h2>
+
+        <p class="mTop20">
+            <span>
+                <strong>Email:</strong></span> <a href="mailto:antreprenori@bvb.ro">antreprenori@bvb.ro</a>
+        </p>
+
+        <p class="mTop10">
+            <span><strong>Telefon:</strong></span> (+40) (21) 307 95 00
+        </p>
+    </div>
+
+</div>
+
+        </p>
+
+        <h1 class="mTop20">
+            Obligatiuni
+        </h1>
+
+        
+        
+
+        <p class="mLeft15">
+            <a href="#l1"><span class="subTitleBig">Cerinte pentru listare</span></a><br />
+            <a href="#l2"><span class="subTitleBig">Cum sa te listezi</span></a><br />
+            <a href="#l3"><span class="subTitleBig">Procesul listarii</span></a><br />
+            <a href="#l4"><span class="subTitleBig">Comisioane pentru listare</span></a><br />
+            <a href="#l5"><span class="subTitleBig">Oferte recente</span></a>
+        </p>
+
+        <div id="l1">
+            <h2 class="styled mTop30">
+                <strong><span class="subTitleBig">Cerinte de listare</span></strong>
+            </h2>
+
+            <p>
+                In ceea ce priveste emisiunea de obligatiuni pe AeRO, singura cerinta unei companii este sa fie societate pe actiuni (SA). Nu exista nicio cerinta privind valoarea minima a ofertei.
+            </p>
+        </div>
+
+        <div id="l2">
+            <h2 class="styled mTop20">
+                <strong><span class="subTitleBig">Cum sa te listezi</span></strong>
+            </h2>
+
+            <p>
+                <strong>Oferta publica </strong>– cea mai uzuala modalitate de a atrage o baza larga de investitori este printr-o oferta publica, dedicata tuturor investitorilor, atat investitori de retail, cat si institutionali. Ofertele publice inseamna prima vanzare a obligatiunilor catre public si listarea acestor obligatiuni la bursa de valori, dupa indeplinirea celor de mai sus. Pentru oferta publica de obligatiuni pe AeRO este necesar doar un memorandum*.
+            </p>
+            <p>
+                <strong>Plasament privat </strong>– este o oferta de obligatiuni adresata unui numar limitat de investitori, prin care pot fi distribuite obligatiuni nou emise inainte de listarea acestora. O serie de conditii trebuie indeplinite pentru a putea realiza un plasament privat, una dintre acestea fiind un numar de maxim 149 investitori catre care se adreseaza oferta. Pentru plasamentul privat de obligatiuni pe AeRO este necesar doar un memorandum*.
+            </p>
+            <p class="mTop30">
+                * Memorandumul este un document scurt de prezentare a companiei si care include, totodata, si informatii privind destinatia fondurilor atrase de la investitori, procedura de selectare a potentialilor cumparatori, numarul de obligatiuni emise si pretul obtinut, metoda de alocare si alte informatii relevante. Dupa admiterea la tranzactionare, memorandumul este publicat pe site-ul Bursei de Valori Bucuresti, in sectiunea dedicata emitentului.
+            </p>
+            <p>
+                Memorandumul este un document mult mai scurt si concis decat Prospectul, care este necesar pentru orice tip de listare la Bursa de Valori Bucuresti.
+            </p>
+
+        </div>
+
+        <div class="col-lg-12" id="l3">
+            <h2 class="styled mTop20">
+                <strong><span class="subTitleBig">Procesul de listare</span></strong>
+            </h2>
+
+            <p class="mTop10">
+                Etapele procesului de listare a unei companii pe AeRO sunt descrise in continuare:
+            </p>
+
+            <div class="inner-process mTop10" style="float: initial">
+
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Actionarii companiei decid, in Adunarea Generala a Actionarilor, emisiunea de obligatiuni corporative si stabilesc caracteristicile principale ale emisiunii
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Compania selecteaza Consultantul Autorizat (AA) cu care va coopera
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Compania impreuna cu Consultantul Autorizat stabilesc principalele caracteristici ale emisunii de obligatiuni
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Compania impreuna cu Consultantul Autorizat pregatesc memorandumul
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Compania impreuna cu Consultantul Autorizat deruleaza oferta publica sau plasamentul privat
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    ASF inregistreaza actiunile
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Compania inregistreaza actiunile la Depozitarul Central
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Consultantul Autorizat depune un set de documente la Bursa de Valori Bucuresti pentru aprobarea admiterii obligatiunilor la tranzactionare
+                </label>
+                <label class="process-row">
+                    <span class="bullet"></span>
+                    <input type="checkbox">
+                    Prima zi de tranzactionare a obligatiunilor
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-12" id="l4">
+            <h2 class="styled mTop30">
+                <strong><span class="subTitleBig">Tarifele listarii</span></strong>
+            </h2>
+
+            <p>
+                Costul emisiunii de actiuni pe AeRO nu este fix si implica urmatoarele tarife:
+            </p>
+            <ul class="default-ul pLeft20">
+                <li>Comisionul Consultantului Autorizat pentru prospectului sau a memorandumului;</li>
+                <li>Tarif perceput de ASF pentru inregistrarea obligatiunilor</li>
+                <li>Tarife aferente Depozitarului Central</li>
+                <li>Taxele aferente Bursei de Valori Bucuresti, care sunt specificate mai jos</li>
+            </ul>
+
+            <div class="wrapped-table smaller-table mBot20">
+                <table class="table table-hover dataTable no-footer generic-table compact">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Tarif</th>
+                            <th class="text-center">Descriere</th>
+                            <th class="text-center">Suma (RON, exclusiv TVA)</th>
+                            <th class="text-center">Observatii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    Tarif de procesare
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Tarif pentru procesarea documentatiei pentru admiteresa la tranzactionare sau pentru promovare
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    1.540
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    - Se plateste odata cu depunerea documentelor
+                                </p>
+                                <p>
+                                    - Nu se restituie
+                                </p>
+                                <div>
+                                    
+
+<div class="myNote mTop10 main-info">
+    <i id="noteIcon" class="fa fa-exclamation-circle fa-2x float-left pRight5"></i>
+    &nbsp;Nu se percepe Emitentilor care depun la BVB pentru prima data o cerere de admitere. Tariful de procesare va fi perceput odata cu cea de-a doua cerere de admitere a unui Emitent.
+</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Tarif de admitere
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Tarif platit o singura data, pentru admiterea la tranzactionare pe AeRO
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    1.077
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    - Se plateste dupa obtinerea aprobarii cotarii
+                                </p>
+                                <p>
+                                    - Conditioneaza inceperea tranzactionarii
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Tarif de mentinere
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Platibil anual, pentru mentinerea instrumentelor financiare pe AeRO
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    3.081
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    - Se plateste in termen de 15 zile de la inceperea tranzactionarii si anual, pana la 31 ianuarie in anul pentru care se datoreaza
+                                </p>
+                                <p>
+                                    - Conditioneaza mentinerea instrumentelor financiare
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <a href="/Juridic/files/Lista%20tarife%20aplicabile%20Emitentilor%20si%20Consultantilor%20Autorizati%20din%2003.01.2022%20RI_RO_19%20ian%202022.pdf" target="_blank"><strong>Vezi lista completa de tarife</strong></a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12" id="l5">
+            <h2 class="styled mTop30">
+                <strong><span class="subTitleBig">Listari recente</span></strong>
+            </h2>
+
+            <table class="mTop20">
+                <tr>
+                    <td style="width: 15%;">
+                        <img src="../../Images/NUSCO.png" class="img-responsive" />
+                    </td>
+                    <td>
+                        <p>
+                            <strong><a href="https://www.bvb.ro/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=NUSCO28">Obligatiuni corporative Nusco Imobiliara (NUSCO28)</a></strong>
+                        </p>
+                        <ul class="default-ul">
+                            <li>Plasament privat de obligatiuni derulat in perioada 17 decembrie 2024 – 31 ianuarie 2025.</li>
+                            <li>Compania a atras 25 milioane lei (5 milioane euro). Obligatiunile au o dobanda fixa de 9% p.a., platibila trimestrial (4 ani maturitate).</li>
+                            <li>Operatiunea a fost intermediata de <a href="https://www.brk.ro/" target="_blank">BRK Financial Group</a>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table>
+                <tr>
+                    <td style="width: 15%;">
+                        <img src="../../Images/IMPI.png" class="img-responsive" />
+                    </td>
+                    <td>
+                        <p>
+                            <strong>Obligatiuni corporative Impetum Investments (<a href="https://www.bvb.ro/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=IMPI26E">IMPI26E</a> si <a href="https://www.bvb.ro/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=IMPI27E">IMPI27E</a>)</strong>
+                        </p>
+                        <ul class="default-ul">
+                            <li>IMPI26E – 3 milioane euro
+                                 <ul>
+                                     <li>Plasament privat de obligatiuni derulat in perioada 8 – 29 noiembrie 2023.</li>
+                                     <li>Dobanda fixa 9% p.a., platita trimestrial.</li>
+                                     <li>Maturitate de 3 ani</li>
+                                 </ul>
+                            </li>
+                            <li>IMPI27E – 2,1 milioane euro
+                                 <ul>
+                                     <li>Plasament privat de obligatiuni derulat in perioada 30 mai – 14 iunie 2024.</li>
+                                     <li>Dobanda fixa 9% p.a., platita trimestrial.</li>
+                                     <li>Maturitate de 3 ani.</li>
+                                 </ul>
+                            </li>
+                            <li>Operatiunile au fost intermediate de <a href="https://www.goldring.ro/" target="_blank"><strong>Goldring</strong></a>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table>
+                <tr>
+                    <td style="width: 15%">
+                        <img src="../../Images/OMRO.png" class="img-responsive" />
+                    </td>
+                    <td>
+                        <p>
+                            <strong><a href="https://www.bvb.ro/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=OMRO32">Obligatiuni corporative OMRO IFN (OMRO32)</a></strong>
+                        </p>
+                        <ul class="default-ul">
+                            <li>A patra emisiune de obligatiuni pe care OMRO IFN a listat-o la BVB incepand cu anul 2020</li>
+                            <li>Plasament privat de obligatiuni derulat in perioada februarie 2025.</li>
+                            <li>OMRO IFN a atras 12,3 milioane lei (aproape 3 milioane euro). Obligatiunile au o dobanda variabila calculate ca suma a Ratei de Politica Monetara + 5,5% p.a., platibila semestrial (7 ani maturitate).</li>
+                            <li>Operatiunea a fost intermediata de <a href="https://www.brk.ro/" target="_blank">BRK Financial Group</a>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+
+        
+    </div>
+
+    <a id="back-to-top" href="#" class="btn btn-cyan btn-lg back-to-top" style="opacity: 0.5; padding: 6px 12px 12px 14px;" role="button"><span class="glyphicon glyphicon-chevron-up white"></span></a>
+
+    <script>
+        function ProgressCheckbox() {
+            // progress functionality on checkbox change        
+            $('.process-row input[type="checkbox"]').change(function (e) {
+                if ($(this).closest('.process-row').is('.done')) {
+                    var pos = $(this).closest('.process-row').index() - 1;
+                } else {
+                    var pos = $(this).closest('.process-row').index();
+                }
+                $('.process-row').each(function (i) {
+                    if (i <= pos) {
+                        $(this).addClass('done').find('input[type="checkbox"]').prop('checked', true);
+                    } else {
+                        $(this).removeClass('done').find('input[type="checkbox"]').prop('checked', false);
+                    }
+                })
+            })
+        }
+
+        $(document).ready(ProgressCheckbox);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(ProgressCheckbox);
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            $('#back-to-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+
+    </script>
+
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer class="container ">
+            
+
+
+<div class="column">
+    <h2 class="bold">Pentru Companii</h2>
+    <ul>
+        <li><a href="/ForCompanies/WhyBvb/Overview">Prezentare generala</a></li>
+        <li><a href="/ForCompanies/WhyBvb/FinancingInstruments">Instrumente pentru finantare</a></li>
+        <li><a href="/ForCompanies/WhyBvb/ListingBenefits">Beneficiile listarii</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: -25px;">
+    <h2 class="bold">Pentru Investitori</h2>
+    <ul>
+        <li><a href="/ForInvestors/IWantToKnow/GettingStarted">Pentru inceput </a></li>
+        <li><a href="/ForInvestors/IWantToTrade/BecomeAnInvestor">Devino Investitor La Bursa</a></li>
+        
+        
+    <li><a href="https://youtu.be/OaZ_MV3gqaY" target="_blank" >Exchange Live 2.0</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: -25px;">
+    <h2 class="bold">Tranzactionare si Statistici</h2>
+    <ul>
+        <li><a href="/TradingAndStatistics/Trading/MarketsToday">Pietele astazi </a></li>
+        <li><a href="/TradingAndStatistics/Statistics/GeneralStatistics">Statistici generale</a></li>
+        <li><a href="/TradingAndStatistics/Statistics/Top10ByTradingData">Top tranzactionare</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: 30px;">
+    <h2 class="bold">Despre noi si Guvernanta</h2>
+    <ul>
+        <li><a href="/AboutUs/Overview">Descriere generala</a></li>
+        <li><a href="/AboutUs/ManagementStructure">Structura de conducere</a></li>
+        <li><a href="/AboutUs/MediaCenter/PressReleases">Comunicate de presa</a></li>
+        <li><a href="/AboutUs/Careers">Cariere</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: 20px;">
+    <h2 class="bold">Relatia cu Investitorii</h2>
+    <ul>
+        <li><a href="/InvestorRelations/Overview">Privire generala</a></li>
+        <li><a href="/InvestorRelations/GeneralShareholdersMeetings">Adunari Generale ale Actionarilor</a></li>
+        <li><a href="/InvestorRelations/FinancialFigures/FinancialReports">Raportari financiare</a></li>
+    </ul>
+</div>
+
+<div class="column" style="margin-left: 0px;">
+    <h2 class="bold">Site-uri din Grupul BVB</h2>
+    <ul>
+        <li><a href="http://www.depozitarulcentral.ro/home/index.aspx">Depozitarul Central</a></li>
+        
+    </ul>
+</div>
+
+
+<p class="copyright" style="font-size: 12px;">
+    <a href="https://m.bvb.ro" target="_parent" class="whiteCyanLink" style="height:27px;">Website mobile</a> <span class="mLeft5 mRight5 white">|</span>
+    <a href="/Disclaimer.aspx" class="whiteCyanLink" style="height:27px;">Termeni de Utilizare</a> <span class="mLeft5 mRight5 white">|</span>
+    
+    <a href="/AboutUs/Contact" class="whiteCyanLink" style="height:27px;">Contact</a><span class="mLeft5 mRight5 white">|</span>
+    <span class="white">© 2026 Bursa de Valori Bucuresti</span>
+</p>
+
+<div id="footer-tools" class="d-none col-lg-12">
+    
+    
+
+  
+    <div class="col-lg-12 col-xs-12 p-0 text-right mTop20">
+        <div class="col-lg-12 col-xs-12">
+        Distribuie: 
+        <a id="mail-share" class="cyanLink" href="mailto:?subject=Recomandare site: https://www.bvb.ro/ForCompanies/AeroMarket/IssuingBonds &body=Am gasit aceasta pagina pe www.bvb.ro si cred ca te-ar interesa.%0A%0APentru a vedea pagina viziteaza: https://www.bvb.ro/ForCompanies/AeroMarket/IssuingBonds%0A%0ABursa de Valori Bucuresti (BVB) construieste in prezent o piata competitiva in Europa Centrala si de Est. BVB ofera oportunitati de finantare pentru companiile care vor sa atraga investitii din piata de capital din Romania. In ultima perioada, BVB a inregistrat o crestere a fluxurilor de capital, din partea investitorilor institutionali si de retail, atat din Romania, cat si internationali. Piata de capital din Romania s-a pozitionat pe o traiectorie ambitioasa spre dezvoltare, iar perspectivele de crestere sunt optimiste">
+            <i class="fa fa-envelope-o fa-lg"></i>
+        </a>
+        <a id="linkedin-share" class="cyanLink" href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.bvb.ro/ForCompanies/AeroMarket/IssuingBonds&title=Bursa de Valori Bucuresti&summary=Bursa de Valori Bucuresti (BVB) construieste in prezent o piata competitiva in Europa Centrala si de Est. BVB ofera oportunitati de finantare pentru companiile care vor sa atraga investitii din piata de capital din Romania. In ultima perioada, BVB a inregistrat o crestere a fluxurilor de capital, din partea investitorilor institutionali si de retail, atat din Romania, cat si internationali. Piata de capital din Romania s-a pozitionat pe o traiectorie ambitioasa spre dezvoltare, iar perspectivele de crestere sunt optimiste..">
+            <i class="fa fa-linkedin-square fa-lg"></i>
+        </a>
+
+        <a id="twitter-share" class="cyanLink" href="https://twitter.com/intent/tweet?text=Bursa de Valori Bucuresti %0A&url=https://www.bvb.ro/ForCompanies/AeroMarket/IssuingBonds">
+            <i class="fa fa-twitter fa-lg"></i>
+        </a>
+
+        <a id="facebook-share" class="cyanLink" href="https://www.facebook.com/sharer.php?u=https://www.bvb.ro/ForCompanies/AeroMarket/IssuingBonds">
+            <i class="fa fa-facebook-square fa-lg"></i>
+        </a>
+            </div>
+    </div>
+
+    
+</div>
+
+        </footer>
+
+
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+ $('#statusMarket').addClass('white'); $(document).ready(function () {
+                   $('.myNote p').each(function () {
+                    $(this).contents().unwrap();
+                    });
+               });//]]>
+</script>
+</form>
+
+
+
+    <script type="text/javascript">
+        // init tab functionality in popover
+        $('.tooltip-tabs ul li').click(function () {
+            $(this).siblings('li').removeClass('active disabled_effect');
+            $(this).addClass('active disabled_effect');
+        });
+
+        $('.serverTabs ul li').click(function () {
+            $(this).siblings('li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        
+        function customDropDown() {
+            $('.selectpicker').each(function () {
+                $(this).selectpicker();
+            });
+        }
+        $(document).ready(customDropDown);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(customDropDown);
+
+        $(document).ready(function () {
+            var _style = 'height: 75px;width:173px;margin: 8px 10px 0px 10px;';
+            $('#LogBVB').attr('style', _style);
+
+            $('.col-body-content').append($('#footer-tools').html());
+            $('.financial-instrument-details').append($('#footer-tools').html());
+            $('.home-page').append($('#footer-tools').html());
+            $('.press-item').append($('#footer-tools').html());
+
+            $("#lang-checkbox").bootstrapSwitch('size', 'small');
+            $('.bootstrap-switch-id-lang-checkbox').click(function () {
+                $.cookie("BVBCulturePref", 'en-US', { path: '/' });
+            });
+
+            $('.bootstrap-switch-label').text('RO');
+
+            $('#lang-checkbox').on("switchChange.bootstrapSwitch", function (event, state) {
+                location.reload(true);
+            });
+
+            ApplyIconsAttr();
+        });
+        function ApplyIconsAttr() {
+            $('.realTimeImg').attr({
+                'src': '/Images/icons/realtime.png'
+                , 'width': '16px'
+                , 'data-original-title': 'Date in timp real'
+                , 'data-toggle': 'tooltip'
+                , 'data-container': 'body'
+                , 'data-placement': 'auto top'
+            });
+            $('.delayedTimeImg').attr({
+                'src': '/Images/icons/delayed.png'
+                , 'width': '16px'
+                , 'data-original-title': 'Date de tranzactionare intarziate cu 15 min  '
+                , 'data-toggle': 'tooltip'
+                , 'data-container': 'body'
+                , 'data-placement': 'auto top'
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(ApplyIconsAttr);
+
+        startTime = new Date('10/8/2026 3:30:23 PM');
+        document.addEventListener('DOMContentLoaded', startTimerNew);
+
+
+
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+    function EndRequestHandler(sender, args){
+        if (args.get_error() != undefined){
+            console.log(args.get_error().message);
+            args.set_errorHandled(true);
+        }
+    }
+    </script>
+
+
+
+
+    <!-- Google tag (gtag.min.js) -->
+  asp:PlaceHolder runat="server">
+    
+        <script async src="/Scripts/gtag.min.js?id=G-4V2E2WRQG8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+            gtag('config', 'G-4V2E2WRQG8');
+        </script>
+    
+</asp:PlaceHolder>
+
+
+    <!-- Google Code for Remarketing Tag -->
+    <!-- ------------------------------------------------
+    Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+    ------------------------------------------------- -->
+   <!-- comentez pt localhost -->
+
+
+</body>
+</html>
