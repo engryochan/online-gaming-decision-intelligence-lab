@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>
+	BNY ConvergEx > G-Trade Services
+</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><meta name="KEYWORDS" content="algorithmic trading, agency brokerage, dark pool, electronic trading, liquidity, execution, commission management, investment technology, clearing, crossing engine, order management, research, transition management" />
+    <!--ADR, Algorithm, Algorithmic Trading, Advanced Direct Market Access, APEX, Asset Manager, Agency Brokerage, Agency Broker, Algorithmic Suite, ADR Direct, ATS, Broker-Assisted Trading, Buyback, Block Crossing, BNY CMS, BNY Brokerage, BNY Jaywalk, Broker Dealer, Buy-side Trading, Buyside, Broker Network, Block Trading, Corporate Buyback, ConvergEx Cross, Commission Management, Commission Recapture, Commission Management Solutions, CMS, Commission Sharing Arrangements, Commission Sharing, CSA, Clearing, Connectivity, ConvergEx Global Markets, Conflict-free, Crossing engine, Compliance, Dark Liquidity, DerivatEx, DMA, Direct Market Access, Execution, Equities, Electronic Trading, Execution Management System, EMS, Execution Solutions, Eze Castle, Eze Castle Software, ECN, Exchanges, Fixed Income, Fixed Income Trading, Foreign Exchange, Futures, Global Trading, G-Port, Global Markets, Global Broker Network, Global Trading Network, HEAT, Hedge Fund, Institutional Investors, Institutional Investing, InterComm, IRPs, IRP, Independent Research, Investment Technology, I-Spread, Intermediary, Jaywalk 360, Jaywalk, Jaywalk Consensus, Jaywalk Meritocracy, Jaywalk Consultancy, Liquidity, LJR, Lynch, Jones & Ryan, LiquidPoint, LJR Direct, LJR Recapture Services, Multi-Asset Class Trading, Options, Order Management System, OMS, Options Trading, Operations, Program Trading, Portfolio Trading, Perform-Ex, Performance Measurement, Portfolio Analytics, Project Management, Portfolio Optimizer, Plan Sponsor, Portfolio Restructuring, Portfolio Management, Risk Management, Research, Reg NMS, Registered Investment Advisor, Settlement, Sonic, Soft Dollar, SHAREx, Smart Order Routing, Sell-side, Share Repurchase, Transaction Analysis, Transaction Cost Analysis, TactEx, Transition Management, TOPx, Torch, Thought Leaders, Trading, Un-conflicted, VortEx, WRA, Westminster Research Associates, Wholesale, BNY Wholesale Services-->
+    
+    <meta name="ROBOTS" content="ALL" /><meta name="REVISIT-AFTER" content="30 Days" /><meta name="PRAGMA" content="no-cache" /><link rel="stylesheet" type="text/css" href="/css/default.css" media="screen, projection" /><link rel="stylesheet" type="text/css" href="/css/inner.css" media="screen, projection" /><link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+	<script type="text/javascript" language="javascript" src="/js/javas.js"></script>
+</head>
+
+<body>
+<form name="Form1" method="post" action="GTradeServices.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzUxNTIwNDY1D2QWAgIDD2QWCgIBDxYEHg9TdGFydGluZ05vZGVVcmwFFy9jb21wYW5pZXMvZGVmYXVsdC5hc3B4HhBTaG93U3RhcnRpbmdOb2RlaGQCBw9kFgRmDxYCHgtfIUl0ZW1Db3VudAIDFgYCAQ9kFgJmDxUECWxpcXVpZGl0eQlsaXF1aWRpdHkXL2xpcXVpZGl0eS9kZWZhdWx0LmFzcHgiTGlxdWlkaXR5IGFuZCBFeGVjdXRpb24gTWFuYWdlbWVudGQCAg9kFgJmDxUECmludmVzdG1lbnQKaW52ZXN0bWVudBgvaW52ZXN0bWVudC9kZWZhdWx0LmFzcHgXSW52ZXN0bWVudCBUZWNobm9sb2dpZXNkAgMPZBYCZg8VBAhzZXJ2aWNlcwhzZXJ2aWNlcxYvc2VydmljZXMvZGVmYXVsdC5hc3B4IUludGVtZWRpYXJ5IGFuZCBDbGVhcmluZyBTZXJ2aWNlc2QCAg8WAh8CAgMWBgIBD2QWBGYPFQEJbGlxdWlkaXR5ZAIBDxYCHwICBRYKZg9kFgICAQ8WBh4FY2xhc3MFDmdsb2JhbF90cmFkaW5nHgtvbm1vdXNlb3ZlcgUMbXRvcGVuKHRoaXMpHgpvbm1vdXNlb3V0BQ1tdGNsb3NldGltZSgpFgRmDxUBJi9saXF1aWRpdHkvZ2xvYmFsX3RyYWRpbmcvZGVmYXVsdC5hc3B4ZAIBDxYCHwICAxYGAgEPZBYCZg8VAxFlbGVjdHJvbmljdHJhZGluZzAvbGlxdWlkaXR5L2dsb2JhbF90cmFkaW5nL2VsZWN0cm9uaWN0cmFkaW5nLmFzcHgSRWxlY3Ryb25pYyBUcmFkaW5nZAICD2QWAmYPFQMRUG9ydGZvbGlvX1RyYWRpbmcwL2xpcXVpZGl0eS9nbG9iYWxfdHJhZGluZy9Qb3J0Zm9saW9fVHJhZGluZy5hc3B4EVBvcnRmb2xpbyBUcmFkaW5nZAIDD2QWAmYPFQMMU2FsZXNUcmFkaW5nKy9saXF1aWRpdHkvZ2xvYmFsX3RyYWRpbmcvU2FsZXNUcmFkaW5nLmFzcHgNU2FsZXMgVHJhZGluZ2QCAQ9kFgICAQ8WBh8DBRpsaXF1aWRpdHlfbWFuYWdlbWVudF90b29scx8EBQxtdG9wZW4odGhpcykfBQUNbXRjbG9zZXRpbWUoKRYEZg8VATIvbGlxdWlkaXR5L2xpcXVpZGl0eV9tYW5hZ2VtZW50X3Rvb2xzL2RlZmF1bHQuYXNweGQCAQ8WAh8CAgcWDgIBD2QWAmYPFQMJQURSRGlyZWN0NC9saXF1aWRpdHkvbGlxdWlkaXR5X21hbmFnZW1lbnRfdG9vbHMvQURSRGlyZWN0LmFzcHglQURSIERpcmVjdDxkaXYgY2xhc3M9InN1cGVyIj5TTTwvZGl2PmQCAg9kFgJmDxUDGUNvbnZlcmdFeEFsZ29yaXRobWljU3VpdGVEL2xpcXVpZGl0eS9saXF1aWRpdHlfbWFuYWdlbWVudF90b29scy9Db252ZXJnRXhBbGdvcml0aG1pY1N1aXRlLmFzcHgbQ29udmVyZ0V4IEFsZ29yaXRobWljIFN1aXRlZAIDD2QWAmYPFQMJQ29udmVyZ0V4NC9saXF1aWRpdHkvbGlxdWlkaXR5X21hbmFnZW1lbnRfdG9vbHMvQ29udmVyZ0V4LmFzcHgrQ29udmVyZ0V4IENyb3NzPGRpdiBjbGFzcz0ic3VwZXIiPlNNIDwvZGl2PmQCBA9kFgJmDxUDDEVNU1BsYXRmb3JtczcvbGlxdWlkaXR5L2xpcXVpZGl0eV9tYW5hZ2VtZW50X3Rvb2xzL0VNU1BsYXRmb3Jtcy5hc3B4DUVNUyBQbGF0Zm9ybXNkAgUPZBYCZg8VAwlQZXJmb3JtRXg0L2xpcXVpZGl0eS9saXF1aWRpdHlfbWFuYWdlbWVudF90b29scy9QZXJmb3JtRXguYXNweCZQZXJmb3JtLUV4PGRpdiBjbGFzcz0ic3VwZXIiPlNNIDwvZGl2PmQCBg9kFgJmDxUDBlRhY3RFeDEvbGlxdWlkaXR5L2xpcXVpZGl0eV9tYW5hZ2VtZW50X3Rvb2xzL1RhY3RFeC5hc3B4BlRhY3RFeGQCBw9kFgJmDxUDGVZvcnRFeFNNZGFya2xpcXVpZGl0eXBvb2xEL2xpcXVpZGl0eS9saXF1aWRpdHlfbWFuYWdlbWVudF90b29scy9Wb3J0RXhTTWRhcmtsaXF1aWRpdHlwb29sLmFzcHgiVm9ydEV4PGRpdiBjbGFzcz0ic3VwZXIiPlNNPC9kaXY+IGQCAg9kFgICAQ8WBh8DBRxnbG9iYWxfdHJhbnNpdGlvbl9tYW5hZ2VtZW50HwQFDG10b3Blbih0aGlzKR8FBQ1tdGNsb3NldGltZSgpFgRmDxUBNC9saXF1aWRpdHkvZ2xvYmFsX3RyYW5zaXRpb25fbWFuYWdlbWVudC9kZWZhdWx0LmFzcHhkAgEPFgIfAgIDFgYCAQ9kFgJmDxUDFk11bHRpQXNzZXRDbGFzc1RyYWRpbmdDL2xpcXVpZGl0eS9nbG9iYWxfdHJhbnNpdGlvbl9tYW5hZ2VtZW50L011bHRpQXNzZXRDbGFzc1RyYWRpbmcuYXNweBlNdWx0aS1Bc3NldCBDbGFzcyBUcmFkaW5nZAICD2QWAmYPFQMRUHJvamVjdE1hbmFnZW1lbnQ+L2xpcXVpZGl0eS9nbG9iYWxfdHJhbnNpdGlvbl9tYW5hZ2VtZW50L1Byb2plY3RNYW5hZ2VtZW50LmFzcHgSUHJvamVjdCBNYW5hZ2VtZW50ZAIDD2QWAmYPFQMOUmlza01hbmFnZW1lbnQ7L2xpcXVpZGl0eS9nbG9iYWxfdHJhbnNpdGlvbl9tYW5hZ2VtZW50L1Jpc2tNYW5hZ2VtZW50LmFzcHgPUmlzayBNYW5hZ2VtZW50ZAIDD2QWAgIBDxYGHwMFFWNvbW1pc3Npb25fbWFuYWdlbWVudB8EBQxtdG9wZW4odGhpcykfBQUNbXRjbG9zZXRpbWUoKRYEZg8VAS0vbGlxdWlkaXR5L2NvbW1pc3Npb25fbWFuYWdlbWVudC9kZWZhdWx0LmFzcHhkAgEPFgIfAgIEFggCAQ9kFgJmDxUDHUNvbW1pc3Npb25TaGFyaW5nQXJyYW5nZW1lbnRzQy9saXF1aWRpdHkvY29tbWlzc2lvbl9tYW5hZ2VtZW50L0NvbW1pc3Npb25TaGFyaW5nQXJyYW5nZW1lbnRzLmFzcHgfQ29tbWlzc2lvbiBTaGFyaW5nIEFycmFuZ2VtZW50c2QCAg9kFgJmDxUDFExKUlJlY2FwdHVyZVNlcnZpY2VzOi9saXF1aWRpdHkvY29tbWlzc2lvbl9tYW5hZ2VtZW50L0xKUlJlY2FwdHVyZVNlcnZpY2VzLmFzcHgWTEpSIFJlY2FwdHVyZSBTZXJ2aWNlc2QCAw9kFgJmDxUDElRoaXJkUGFydHlSZXNlYXJjaDgvbGlxdWlkaXR5L2NvbW1pc3Npb25fbWFuYWdlbWVudC9UaGlyZFBhcnR5UmVzZWFyY2guYXNweBRUaGlyZC1QYXJ0eSBSZXNlYXJjaGQCBA9kFgJmDxUDCldSQU5ldHdvcmswL2xpcXVpZGl0eS9jb21taXNzaW9uX21hbmFnZW1lbnQvV1JBTmV0d29yay5hc3B4C1dSQSBOZXR3b3JrZAIED2QWAgIBDxYGHwMFCHJlc2VhcmNoHwQFDG10b3Blbih0aGlzKR8FBQ1tdGNsb3NldGltZSgpFgRmDxUBIC9saXF1aWRpdHkvcmVzZWFyY2gvZGVmYXVsdC5hc3B4ZAIBDxYCHwICBBYIAgEPZBYCZg8VAxBKYXl3YWxrQ29uc2Vuc3VzKS9saXF1aWRpdHkvcmVzZWFyY2gvSmF5d2Fsa0NvbnNlbnN1cy5hc3B4MkpheXdhbGsgQ29uc2Vuc3VzPGRpdiBjbGFzcz0ic3VwZXIiPlNNPC9kaXY+Jm5ic3A7ZAICD2QWAmYPFQMaamF5d2Fsa0NvbnN1bHRhbmN5U2VydmljZXMzL2xpcXVpZGl0eS9yZXNlYXJjaC9qYXl3YWxrQ29uc3VsdGFuY3lTZXJ2aWNlcy5hc3B4HEpheXdhbGsgQ29uc3VsdGFuY3kgU2VydmljZXNkAgMPZBYCZg8VAy5JbmRlcGVuZGVudFJlc2VhcmNoTWVyaXRvY3JhY3nCrmZyb21CTllKYXl3YWxrRy9saXF1aWRpdHkvcmVzZWFyY2gvSW5kZXBlbmRlbnRSZXNlYXJjaE1lcml0b2NyYWN5wq5mcm9tQk5ZSmF5d2Fsay5hc3B4M0luZGVwZW5kZW50IFJlc2VhcmNoIE1lcml0b2NyYWN5wq4gZnJvbSBCTlkgSmF5d2Fsa2QCBA9kFgJmDxUDK0pheXdhbGvCrkluZGVwZW5kZW50UmVzZWFyY2hQcm92aWRlck5ldHdvcmtEL2xpcXVpZGl0eS9yZXNlYXJjaC9KYXl3YWxrwq5JbmRlcGVuZGVudFJlc2VhcmNoUHJvdmlkZXJOZXR3b3JrLmFzcHgvSmF5d2Fsa8KuIEluZGVwZW5kZW50IFJlc2VhcmNoIFByb3ZpZGVyIE5ldHdvcmtkAgIPZBYEZg8VAQppbnZlc3RtZW50ZAIBDxYCHwICAhYEZg9kFgICAQ8WBh8DBRdvcmRlcl9tYW5hZ2VtZW50X3N5c3RlbR8EBQxtdG9wZW4odGhpcykfBQUNbXRjbG9zZXRpbWUoKRYEZg8VATAvaW52ZXN0bWVudC9vcmRlcl9tYW5hZ2VtZW50X3N5c3RlbS9kZWZhdWx0LmFzcHhkAgEPFgIfAgIEFggCAQ9kFgJmDxUDCkNvbXBsaWFuY2UzL2ludmVzdG1lbnQvb3JkZXJfbWFuYWdlbWVudF9zeXN0ZW0vQ29tcGxpYW5jZS5hc3B4CkNvbXBsaWFuY2VkAgIPZBYCZg8VAwpPcGVyYXRpb25zMy9pbnZlc3RtZW50L29yZGVyX21hbmFnZW1lbnRfc3lzdGVtL09wZXJhdGlvbnMuYXNweApPcGVyYXRpb25zZAIDD2QWAmYPFQMTUG9ydGZvbGlvTWFuYWdlbWVudDwvaW52ZXN0bWVudC9vcmRlcl9tYW5hZ2VtZW50X3N5c3RlbS9Qb3J0Zm9saW9NYW5hZ2VtZW50LmFzcHgUUG9ydGZvbGlvIE1hbmFnZW1lbnRkAgQPZBYCZg8VAwdUcmFkaW5nMC9pbnZlc3RtZW50L29yZGVyX21hbmFnZW1lbnRfc3lzdGVtL1RyYWRpbmcuYXNweAdUcmFkaW5nZAIBD2QWAgIBDxYGHwMFFG9wdGlvbnNfdGVjaG5vbG9naWVzHwQFDG10b3Blbih0aGlzKR8FBQ1tdGNsb3NldGltZSgpFgRmDxUBLS9pbnZlc3RtZW50L29wdGlvbnNfdGVjaG5vbG9naWVzL2RlZmF1bHQuYXNweGQCAQ8WAh8CAgMWBgIBD2QWAmYPFQMHaGVhdFN5cy0vaW52ZXN0bWVudC9vcHRpb25zX3RlY2hub2xvZ2llcy9oZWF0U3lzLmFzcHgLSEVBVCBTeXN0ZW1kAgIPZBYCZg8VAwdJU3ByZWFkLS9pbnZlc3RtZW50L29wdGlvbnNfdGVjaG5vbG9naWVzL0lTcHJlYWQuYXNweAxpU3ByZWFkcyBQcm9kAgMPZBYCZg8VAwpXaGl0ZUxhYmVsMC9pbnZlc3RtZW50L29wdGlvbnNfdGVjaG5vbG9naWVzL1doaXRlTGFiZWwuYXNweBdXaGl0ZSBMYWJlbCBPcHRpb25zIEVNU2QCAw9kFgRmDxUBCHNlcnZpY2VzZAIBDxYCHwICAxYGZg9kFgICAQ8WAh8DBSxsaXF1aWRpdHlfYW5kX2V4ZWN1dGlvbl9tYW5hZ2VtZW50X3NvbHV0aW9ucxYEZg8VAUMvc2VydmljZXMvbGlxdWlkaXR5X2FuZF9leGVjdXRpb25fbWFuYWdlbWVudF9zb2x1dGlvbnMvZGVmYXVsdC5hc3B4ZAIBDxYCHwIC/////w9kAgEPZBYCAgEPFgIfAwUfaW52ZXN0bWVudF90ZWNobm9sb2d5X3NvbHV0aW9ucxYEZg8VATYvc2VydmljZXMvaW52ZXN0bWVudF90ZWNobm9sb2d5X3NvbHV0aW9ucy9kZWZhdWx0LmFzcHhkAgEPFgIfAgL/////D2QCAg9kFgICAQ8WAh8DBRJjbGVhcmluZ19zb2x1dGlvbnMWBGYPFQEpL3NlcnZpY2VzL2NsZWFyaW5nX3NvbHV0aW9ucy9kZWZhdWx0LmFzcHhkAgEPFgIfAgL/////D2QCCQ9kFgJmDxYCHwICBhYMAgEPZBYEZg8VAwVhYm91dBMvYWJvdXQvZGVmYXVsdC5hc3B4CEFib3V0IFVzZAIBDxYCHwICBRYKAgEPZBYCZg8VAhMvYWJvdXQvQ29udGFjdC5hc3B4CENvbnRhY3RzZAICD2QWAmYPFQIdL2Fib3V0L091ckxlYWRlcnNoaXBUZWFtLmFzcHgTT3VyIExlYWRlcnNoaXAgVGVhbWQCAw9kFgJmDxUCGC9hYm91dC9PdXJMb2NhdGlvbnMuYXNweA1PdXIgTG9jYXRpb25zZAIED2QWAmYPFQIUL2Fib3V0L091clN0b3J5LmFzcHgJT3VyIFN0b3J5ZAIFD2QWAmYPFQIhL2Fib3V0L2F3YXJkc2FuZHJlY29nbml0aW9ucy5hc3B4F0F3YXJkcyBhbmQgUmVjb2duaXRpb25zZAICD2QWBGYPFQMJY29tcGFuaWVzFy9jb21wYW5pZXMvZGVmYXVsdC5hc3B4DU91ciBDb21wYW5pZXNkAgEPFgIfAgIHFg4CAQ9kFgJmDxUCHC9jb21wYW5pZXMvQk5ZQ29udmVyZ0V4LmFzcHghQk5ZIENvbnZlcmdFeCBFeGVjdXRpb24gU29sdXRpb25zZAICD2QWAmYPFQIaL2NvbXBhbmllcy9CTllKYXl3YWxrLmFzcHgLQk5ZIEpheXdhbGtkAgMPZBYCZg8VAiYvY29tcGFuaWVzL0NvbnZlcmdFeEdsb2JhbE1hcmtldHMuYXNweBhDb252ZXJnRXggR2xvYmFsIE1hcmtldHNkAgQPZBYCZg8VAiEvY29tcGFuaWVzL0V6ZUNhc3RsZVNvZnR3YXJlLmFzcHgTRXplIENhc3RsZSBTb2Z0d2FyZWQCBQ9kFgJmDxUCHi9jb21wYW5pZXMvR1RyYWRlU2VydmljZXMuYXNweBBHLVRyYWRlIFNlcnZpY2VzZAIGD2QWAmYPFQIbL2NvbXBhbmllcy9MaXF1aWRQb2ludC5hc3B4C0xpcXVpZFBvaW50ZAIHD2QWAmYPFQItL2NvbXBhbmllcy9XZXN0bWluc3RlclJlc2VhcmNoQXNzb2NpYXRlcy5hc3B4H1dlc3RtaW5zdGVyIFJlc2VhcmNoIEFzc29jaWF0ZXNkAgMPZBYEZg8VAwhwYXJ0bmVycxYvcGFydG5lcnMvZGVmYXVsdC5hc3B4DE91ciBQYXJ0bmVyc2QCAQ8WAh8CAgEWAgIBD2QWAmYPFQIeL3BhcnRuZXJzL0ZJWERlc3RpbmF0aW9ucy5hc3B4EEZJWCBEZXN0aW5hdGlvbnNkAgQPZBYEZg8VAwdjbGllbnRzFS9jbGllbnRzL2RlZmF1bHQuYXNweAtPdXIgQ2xpZW50c2QCAQ8WAh8CAgYWDAIBD2QWAmYPFQIbL2NsaWVudHMvQXNzZXRNYW5hZ2Vycy5hc3B4DkFzc2V0IE1hbmFnZXJzZAICD2QWAmYPFQIbL2NsaWVudHMvQnJva2VyRGVhbGVycy5hc3B4DkJyb2tlci1EZWFsZXJzZAIDD2QWAmYPFQIaL2NsaWVudHMvQ29ycG9yYXRpb25zLmFzcHgMQ29ycG9yYXRpb25zZAIED2QWAmYPFQIlL2NsaWVudHMvRmluYW5jaWFsSW50ZXJtZWRpYXJpZXMuYXNweBhGaW5hbmNpYWwgSW50ZXJtZWRpYXJpZXNkAgUPZBYCZg8VAhgvY2xpZW50cy9IZWRnZUZ1bmRzLmFzcHgLSGVkZ2UgRnVuZHNkAgYPZBYCZg8VAhovY2xpZW50cy9QbGFuU3BvbnNvcnMuYXNweA1QbGFuIFNwb25zb3JzZAIFD2QWBGYPFQMEbmV3cxIvbmV3cy9kZWZhdWx0LmFzcHgST3VyIE5ld3MgYW5kIFZpZXdzZAIBDxYCHwICBRYKAgEPZBYCZg8VAhYvbmV3cy9OZXdzbGV0dGVycy5hc3B4C05ld3NsZXR0ZXJzZAICD2QWAmYPFQIYL25ld3MvUHJlc3NDb250YWN0cy5hc3B4DVByZXNzIENvbnRhY3RkAgMPZBYCZg8VAh4vbmV3cy9NYXJrZXRpbmdMaXRlcmF0dXJlLmFzcHgUTWFya2V0aW5nIExpdGVyYXR1cmVkAgQPZBYCZg8VAhwvbmV3cy9UaG91Z2h0TGVhZGVyc2hpcC5hc3B4ElRob3VnaHQgTGVhZGVyc2hpcGQCBQ9kFgJmDxUCIS9uZXdzL3ByZXNzX3JlbGVhc2VzL2RlZmF1bHQuYXNweA5QcmVzcyBSZWxlYXNlc2QCBg9kFgRmDxUDBHRlYW0SL3RlYW0vZGVmYXVsdC5hc3B4DUpvaW4gT3VyIFRlYW1kAgEPFgIfAgIEFggCAQ9kFgJmDxUCFS90ZWFtL291cmN1bHR1cmUuYXNweAtPdXIgQ3VsdHVyZWQCAg9kFgJmDxUCFC90ZWFtL291cnBlb3BsZS5hc3B4Ck91ciBQZW9wbGVkAgMPZBYCZg8VAjAvdGVhbS9jdXJyZW50am9ib3BlbmluZ3NhdGV6ZWNhc3RsZXNvZnR3YXJlLmFzcHgrQ3VycmVudCBKb2IgT3BlbmluZ3MgYXQgRXplIENhc3RsZSBTb2Z0d2FyZWQCBA9kFgJmDxUCLi90ZWFtL290aGVyam9ib3BlbmluZ3NhdGJueWNvbnZlcmdleGdyb3VwLmFzcHgpT3RoZXIgSm9iIE9wZW5pbmdzIGF0IEJOWSBDb252ZXJnRXggR3JvdXBkAgsPZBYCZg8WAh8CAgcWDgIBD2QWAgIBD2QWAmYPFQIcL2NvbXBhbmllcy9CTllDb252ZXJnRXguYXNweCFCTlkgQ29udmVyZ0V4IEV4ZWN1dGlvbiBTb2x1dGlvbnNkAgIPZBYCAgEPZBYCZg8VAhovY29tcGFuaWVzL0JOWUpheXdhbGsuYXNweAtCTlkgSmF5d2Fsa2QCAw9kFgICAQ9kFgJmDxUCJi9jb21wYW5pZXMvQ29udmVyZ0V4R2xvYmFsTWFya2V0cy5hc3B4GENvbnZlcmdFeCBHbG9iYWwgTWFya2V0c2QCBA9kFgICAQ9kFgJmDxUCIS9jb21wYW5pZXMvRXplQ2FzdGxlU29mdHdhcmUuYXNweBNFemUgQ2FzdGxlIFNvZnR3YXJlZAIFD2QWAgIBDxYCHwMFDmN1cnJlbnRTZWN0aW9uFgJmDxUCHi9jb21wYW5pZXMvR1RyYWRlU2VydmljZXMuYXNweBBHLVRyYWRlIFNlcnZpY2VzZAIGD2QWAgIBD2QWAmYPFQIbL2NvbXBhbmllcy9MaXF1aWRQb2ludC5hc3B4C0xpcXVpZFBvaW50ZAIHD2QWAgIBD2QWAmYPFQItL2NvbXBhbmllcy9XZXN0bWluc3RlclJlc2VhcmNoQXNzb2NpYXRlcy5hc3B4H1dlc3RtaW5zdGVyIFJlc2VhcmNoIEFzc29jaWF0ZXNkAhEPZBYCZg8WAh8CAgUWCgIBD2QWBGYPFQINcHJlc3NfcmVsZWFzZQ5QUkVTUyBSRUxFQVNFU2QCAQ8WAh8CAgMWBmYPZBYIAgEPDxYGHghJbWFnZVVybGUeC05hdmlnYXRlVXJsBVovQVNTRVRTLzU0OUNCMjNGMjkyRDRBRENCMzFDNEE4N0FDMjE0NUM1L0JOWSBDb252ZXJnRXggR3JvdXAgQW5ub3VuY2VzIEdyZXkgT3JkZXIgVHlwZS5wZGYeB1Zpc2libGVoZBYCZg8VAS1CTlkgQ29udmVyZ0V4IEdyb3VwIEFubm91bmNlcyBHcmV5IE9yZGVyIFR5cGVkAgMPDxYCHwcFWi9BU1NFVFMvNTQ5Q0IyM0YyOTJENEFEQ0IzMUM0QTg3QUMyMTQ1QzUvQk5ZIENvbnZlcmdFeCBHcm91cCBBbm5vdW5jZXMgR3JleSBPcmRlciBUeXBlLnBkZmQWAmYPFQEtQk5ZIENvbnZlcmdFeCBHcm91cCBBbm5vdW5jZXMgR3JleSBPcmRlciBUeXBlZAIFDxYCHwhoFgJmDxUBLUJOWSBDb252ZXJnRXggR3JvdXAgQW5ub3VuY2VzIEdyZXkgT3JkZXIgVHlwZWQCBw8WAh4EVGV4dGVkAgEPZBYIAgEPDxYGHwZlHwcFdC9BU1NFVFMvQTM5RDUyRjZDMjg2NDdEOEJBODNENkMyQjdFMjJDRDIvQk5ZIENvbnZlcmdFeCBHcm91cCBBbm5vdW5jZXMgTmV3IEdsb2JhbCBTbWFydCBPcmRlciBSb3V0aW5nIGZvciBFdXJvcGUucGRmHwhoZBYCZg8VAUdCTlkgQ29udmVyZ0V4IEdyb3VwIEFubm91bmNlcyBOZXcgR2xvYmFsIFNtYXJ0IE9yZGVyIFJvdXRpbmcgZm9yIEV1cm9wZWQCAw8PFgIfBwV0L0FTU0VUUy9BMzlENTJGNkMyODY0N0Q4QkE4M0Q2QzJCN0UyMkNEMi9CTlkgQ29udmVyZ0V4IEdyb3VwIEFubm91bmNlcyBOZXcgR2xvYmFsIFNtYXJ0IE9yZGVyIFJvdXRpbmcgZm9yIEV1cm9wZS5wZGZkFgJmDxUBR0JOWSBDb252ZXJnRXggR3JvdXAgQW5ub3VuY2VzIE5ldyBHbG9iYWwgU21hcnQgT3JkZXIgUm91dGluZyBmb3IgRXVyb3BlZAIFDxYCHwhoFgJmDxUBR0JOWSBDb252ZXJnRXggR3JvdXAgQW5ub3VuY2VzIE5ldyBHbG9iYWwgU21hcnQgT3JkZXIgUm91dGluZyBmb3IgRXVyb3BlZAIHDxYCHwllZAICD2QWCAIBDw8WBh8GZR8HBYgBL0FTU0VUUy85RUQ5RjM5MTkyRDk0NkYwQUM2MURERUY1MEM1MUExOS9CTlkgQ29udmVyZ0V4IEdyb3VwIE5hbWVkIFRvcCBQcm92aWRlciBpbiBUaGUgVHJhZGVzIDIwMDggR2xvYmFsIEFsZ29yaXRobWljIFRyYWRpbmcgQXdhcmRzLnBkZh8IaGQWAmYPFQFiQk5ZIENvbnZlcmdFeCBHcm91cCBOYW1lZCBUb3AtUmF0ZWQgUHJvdmlkZXIgaW4gVGhlIFRyYWRlJ3MgMjAwOCBHbG9iYWwgQWxnb3JpdGhtaWMgVHJhZGluZyBBd2FyZHNkAgMPDxYCHwcFiAEvQVNTRVRTLzlFRDlGMzkxOTJEOTQ2RjBBQzYxRERFRjUwQzUxQTE5L0JOWSBDb252ZXJnRXggR3JvdXAgTmFtZWQgVG9wIFByb3ZpZGVyIGluIFRoZSBUcmFkZXMgMjAwOCBHbG9iYWwgQWxnb3JpdGhtaWMgVHJhZGluZyBBd2FyZHMucGRmZBYCZg8VAWJCTlkgQ29udmVyZ0V4IEdyb3VwIE5hbWVkIFRvcC1SYXRlZCBQcm92aWRlciBpbiBUaGUgVHJhZGUncyAyMDA4IEdsb2JhbCBBbGdvcml0aG1pYyBUcmFkaW5nIEF3YXJkc2QCBQ8WAh8IaBYCZg8VAWJCTlkgQ29udmVyZ0V4IEdyb3VwIE5hbWVkIFRvcC1SYXRlZCBQcm92aWRlciBpbiBUaGUgVHJhZGUncyAyMDA4IEdsb2JhbCBBbGdvcml0aG1pYyBUcmFkaW5nIEF3YXJkc2QCBw8WAh8JZWQCAg9kFgRmDxUCEXJlbGF0ZWRfc29sdXRpb25zEVJFTEFURUQgU09MVVRJT05TZAIBDxYCHwICBBYIZg9kFggCAQ8PFgYfBmUfBwU/L0FTU0VUUy82MEE3REJFRUEzODQ0NTBFOTlDNEFEMkMzQkI2QzQ4Ni9Db252ZXJnRXggT3ZlcnZpZXcucGRmHwhoZBYCZg8VARJDb252ZXJnRXggT3ZlcnZpZXdkAgMPDxYCHwcFPy9BU1NFVFMvNjBBN0RCRUVBMzg0NDUwRTk5QzRBRDJDM0JCNkM0ODYvQ29udmVyZ0V4IE92ZXJ2aWV3LnBkZmQWAmYPFQESQ29udmVyZ0V4IE92ZXJ2aWV3ZAIFDxYCHwhoFgJmDxUBEkNvbnZlcmdFeCBPdmVydmlld2QCBw8WAh8JZWQCAQ9kFggCAQ8PFgYfBmUfBwVgL0FTU0VUUy9DQUZENUU0MkJGRkM0NzJBQUI0QjczRUIyQ0VGOUU5Qy9Db252ZXJnRXggLSBHbG9iYWwgRWxlY3Ryb25pYyBUcmFkaW5nIEJyb2NodXJlLTIwMDgucGRmHwhoZBYCZg8VASJHbG9iYWwgRWxlY3Ryb25pYyBUcmFkaW5nIEJyb2NodXJlZAIDDw8WAh8HBWAvQVNTRVRTL0NBRkQ1RTQyQkZGQzQ3MkFBQjRCNzNFQjJDRUY5RTlDL0NvbnZlcmdFeCAtIEdsb2JhbCBFbGVjdHJvbmljIFRyYWRpbmcgQnJvY2h1cmUtMjAwOC5wZGZkFgJmDxUBIkdsb2JhbCBFbGVjdHJvbmljIFRyYWRpbmcgQnJvY2h1cmVkAgUPFgIfCGgWAmYPFQEiR2xvYmFsIEVsZWN0cm9uaWMgVHJhZGluZyBCcm9jaHVyZWQCBw8WAh8JZWQCAg9kFggCAQ8PFgYfBmUfBwVAL0FTU0VUUy8zOTkyMTUyRkNGODg0QjUxOUI0QTU2QjhBNkVDNzEyNi9HbG9iYWwgU21hcnQgUm91dGVyLnBkZh8IaGQWAmYPFQETR2xvYmFsIFNtYXJ0IFJvdXRlcmQCAw8PFgIfBwVAL0FTU0VUUy8zOTkyMTUyRkNGODg0QjUxOUI0QTU2QjhBNkVDNzEyNi9HbG9iYWwgU21hcnQgUm91dGVyLnBkZmQWAmYPFQETR2xvYmFsIFNtYXJ0IFJvdXRlcmQCBQ8WAh8IaBYCZg8VARNHbG9iYWwgU21hcnQgUm91dGVyZAIHDxYCHwllZAIDD2QWCAIBDw8WBh8GZR8HBSkvQVNTRVRTL0U4QjM2OTk1MTc0MjQxMzk5OTlCRTg3RTM5MDBCRkZGLx8IaGQWAmYPFQESRWxlY3Ryb25pYyBUcmFkaW5nZAIDDw8WAh8HBSkvQVNTRVRTL0U4QjM2OTk1MTc0MjQxMzk5OTlCRTg3RTM5MDBCRkZGL2QWAmYPFQESRWxlY3Ryb25pYyBUcmFkaW5nZAIFDxYCHwhoFgJmDxUBEkVsZWN0cm9uaWMgVHJhZGluZ2QCBw8WAh8JZWQCAw9kFgRmDxUCEnRob3VnaHRfbGVhZGVyc2hpcBJUSE9VR0hUIExFQURFUlNISVBkAgEPFgIfAgICFgRmD2QWCAIBDw8WBh8GZR8HBVcvQVNTRVRTL0ZBOTFFRUFGNDA1NjQ3ODBBNUExRTQwQjQwRDc5MTAwL1RSQURFUlMgTWFnYXppbmUgLSAwNC0yMDA4IC0gRGF2aWQgUXVpbmxhbi5wZGYfCGhkFgJmDxUBSk1heSAyMDA4LCBUcmFkZXJzIE1hZ2FpbmUsIFVuY29uZmxpY3RlZCBBcHByb2FoIHRvIERlZXAgYW5kIERhcmsgTGlxdWlkaXR5ZAIDDw8WAh8HBVcvQVNTRVRTL0ZBOTFFRUFGNDA1NjQ3ODBBNUExRTQwQjQwRDc5MTAwL1RSQURFUlMgTWFnYXppbmUgLSAwNC0yMDA4IC0gRGF2aWQgUXVpbmxhbi5wZGZkFgJmDxUBSk1heSAyMDA4LCBUcmFkZXJzIE1hZ2FpbmUsIFVuY29uZmxpY3RlZCBBcHByb2FoIHRvIERlZXAgYW5kIERhcmsgTGlxdWlkaXR5ZAIFDxYCHwhoFgJmDxUBSk1heSAyMDA4LCBUcmFkZXJzIE1hZ2FpbmUsIFVuY29uZmxpY3RlZCBBcHByb2FoIHRvIERlZXAgYW5kIERhcmsgTGlxdWlkaXR5ZAIHDxYCHwllZAIBD2QWCAIBDw8WBh8GZR8HBT0vQVNTRVRTLzYyMTAwNEFBM0M0RDRGMEE5NzUyNTEwMThCNjJBNTg4L0JleW9uZCBFeGVjdXRpb24ucGRmHwhoZBYCZg8VAUVHdWlkZSB0byBMaXF1aWRpdHksIEJleW9uZCBFeGVjdXRpb246IFRoZSBDaGFuZ2luZyBSb2xlIG9mIHRoZSBUcmFkZXJkAgMPDxYCHwcFPS9BU1NFVFMvNjIxMDA0QUEzQzRENEYwQTk3NTI1MTAxOEI2MkE1ODgvQmV5b25kIEV4ZWN1dGlvbi5wZGZkFgJmDxUBRUd1aWRlIHRvIExpcXVpZGl0eSwgQmV5b25kIEV4ZWN1dGlvbjogVGhlIENoYW5naW5nIFJvbGUgb2YgdGhlIFRyYWRlcmQCBQ8WAh8IaBYCZg8VAUVHdWlkZSB0byBMaXF1aWRpdHksIEJleW9uZCBFeGVjdXRpb246IFRoZSBDaGFuZ2luZyBSb2xlIG9mIHRoZSBUcmFkZXJkAgcPFgIfCWVkAgQPZBYEZg8VAgZhd2FyZHMGQVdBUkRTZAIBDxYCHwICARYCZg9kFggCAQ8PFgYfBmUfB2UfCGhkFgJmDxUBZVRvcC1SYXRlZCBBbGdvcml0aG1pYyBUcmFkaW5nIFByb3ZpZGVyLVRoZSBUcmFkZeKAmXMgQWxnb3JpdGhtaWMgVHJhZGluZyBTdXJ2ZXkgQnJva2VyIFJvbGwgb2YgSG9ub3VyZAIDDw8WBB8HZR8IaGQWAmYPFQFlVG9wLVJhdGVkIEFsZ29yaXRobWljIFRyYWRpbmcgUHJvdmlkZXItVGhlIFRyYWRl4oCZcyBBbGdvcml0aG1pYyBUcmFkaW5nIFN1cnZleSBCcm9rZXIgUm9sbCBvZiBIb25vdXJkAgUPZBYCZg8VAWVUb3AtUmF0ZWQgQWxnb3JpdGhtaWMgVHJhZGluZyBQcm92aWRlci1UaGUgVHJhZGXigJlzIEFsZ29yaXRobWljIFRyYWRpbmcgU3VydmV5IEJyb2tlciBSb2xsIG9mIEhvbm91cmQCBw8WAh8JZWQCBQ9kFgRmDxUCB2NvbnRhY3QHQ09OVEFDVGQCAQ8WAh8CAgEWAmYPZBYIAgEPDxYGHwZlHwdlHwhoZBYCZg8VARNCTlkgQ29udmVyZ0V4IEdyb3VwZAIDDw8WBB8HZR8IaGQWAmYPFQETQk5ZIENvbnZlcmdFeCBHcm91cGQCBQ9kFgJmDxUBE0JOWSBDb252ZXJnRXggR3JvdXBkAgcPFgIfCQUMODAwLjM2Ny44OTk4ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUXVG9wU2VhcmNoMSRidXR0b25TZWFyY2iv+PIsCbqARbQnFP5x9bf0HCTCKA==" />
+
+
+
+	<div id="container">
+	
+		<div id="header">
+			<div class="header">
+			
+				<a href="/" title="BNY ConvergEx - Home">
+					<img onerror="this.remove();" src="/images/logo.gif" class="logo">
+				</a>
+				
+				<ul class="corner_nav">
+					
+
+<li class="home"><a href="/" title="Home">Home<span></span><span class="off"></span></a></li>
+<li class="pipe">|<span></span><span class="off"></span></li>
+<li class="contact"><a href="/ContactUs.aspx" title="Contact Us">Contact Us<span></span><span class="off"></span></a></li>
+<li class="pipe">|<span></span><span class="off"></span></li>
+<li class="map"><a href="/SiteMap.aspx" title="Site Map">Site Map<span></span><span class="off"></span></a></li>
+				</ul>
+				
+				<div class="search">
+				    
+
+<img onerror="this.remove();" src="/images/search.gif" alt="SEARCH:" />
+<input name="TopSearch1$inputSearchTerm" type="text" id="TopSearch1_inputSearchTerm" class="field" />
+<input type="image" name="TopSearch1$buttonSearch" id="TopSearch1_buttonSearch" title="Search!" src="/images/go.gif" border="0" />
+				</div>
+				
+				
+<ul class="nav_top"> 
+
+    <li class="liquidity" onmouseover="mopen('liquidity_level2')" onmouseout="mclosetime()">
+		<a href="/liquidity/default.aspx">Liquidity and Execution Management<span></span><span class="off"></span></a>
+	</li>
+
+    <li class="investment" onmouseover="mopen('investment_level2')" onmouseout="mclosetime()">
+		<a href="/investment/default.aspx">Investment Technologies<span></span><span class="off"></span></a>
+	</li>
+
+    <li class="services" onmouseover="mopen('services_level2')" onmouseout="mclosetime()">
+		<a href="/services/default.aspx">Intemediary and Clearing Services<span></span><span class="off"></span></a>
+	</li>
+
+</ul>
+
+
+
+<div class="navBottomCont">
+
+	<ul class="nav_bottom" id="liquidity_level2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"> 
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl01_repeaterLevel2_ctl00_liLevel2" class="global_trading" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/liquidity/global_trading/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="electronictrading"><a href="/liquidity/global_trading/electronictrading.aspx"><span>></span>Electronic Trading</a></li>
+			
+			    <li class="thirdLevelItem" id="Portfolio_Trading"><a href="/liquidity/global_trading/Portfolio_Trading.aspx"><span>></span>Portfolio Trading</a></li>
+			
+			    <li class="thirdLevelItem" id="SalesTrading"><a href="/liquidity/global_trading/SalesTrading.aspx"><span>></span>Sales Trading</a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl01_repeaterLevel2_ctl01_liLevel2" class="liquidity_management_tools" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/liquidity/liquidity_management_tools/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="ADRDirect"><a href="/liquidity/liquidity_management_tools/ADRDirect.aspx"><span>></span>ADR Direct<div class="super">SM</div></a></li>
+			
+			    <li class="thirdLevelItem" id="ConvergExAlgorithmicSuite"><a href="/liquidity/liquidity_management_tools/ConvergExAlgorithmicSuite.aspx"><span>></span>ConvergEx Algorithmic Suite</a></li>
+			
+			    <li class="thirdLevelItem" id="ConvergEx"><a href="/liquidity/liquidity_management_tools/ConvergEx.aspx"><span>></span>ConvergEx Cross<div class="super">SM </div></a></li>
+			
+			    <li class="thirdLevelItem" id="EMSPlatforms"><a href="/liquidity/liquidity_management_tools/EMSPlatforms.aspx"><span>></span>EMS Platforms</a></li>
+			
+			    <li class="thirdLevelItem" id="PerformEx"><a href="/liquidity/liquidity_management_tools/PerformEx.aspx"><span>></span>Perform-Ex<div class="super">SM </div></a></li>
+			
+			    <li class="thirdLevelItem" id="TactEx"><a href="/liquidity/liquidity_management_tools/TactEx.aspx"><span>></span>TactEx</a></li>
+			
+			    <li class="thirdLevelItem" id="VortExSMdarkliquiditypool"><a href="/liquidity/liquidity_management_tools/VortExSMdarkliquiditypool.aspx"><span>></span>VortEx<div class="super">SM</div> </a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl01_repeaterLevel2_ctl02_liLevel2" class="global_transition_management" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/liquidity/global_transition_management/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="MultiAssetClassTrading"><a href="/liquidity/global_transition_management/MultiAssetClassTrading.aspx"><span>></span>Multi-Asset Class Trading</a></li>
+			
+			    <li class="thirdLevelItem" id="ProjectManagement"><a href="/liquidity/global_transition_management/ProjectManagement.aspx"><span>></span>Project Management</a></li>
+			
+			    <li class="thirdLevelItem" id="RiskManagement"><a href="/liquidity/global_transition_management/RiskManagement.aspx"><span>></span>Risk Management</a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl01_repeaterLevel2_ctl03_liLevel2" class="commission_management" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/liquidity/commission_management/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="CommissionSharingArrangements"><a href="/liquidity/commission_management/CommissionSharingArrangements.aspx"><span>></span>Commission Sharing Arrangements</a></li>
+			
+			    <li class="thirdLevelItem" id="LJRRecaptureServices"><a href="/liquidity/commission_management/LJRRecaptureServices.aspx"><span>></span>LJR Recapture Services</a></li>
+			
+			    <li class="thirdLevelItem" id="ThirdPartyResearch"><a href="/liquidity/commission_management/ThirdPartyResearch.aspx"><span>></span>Third-Party Research</a></li>
+			
+			    <li class="thirdLevelItem" id="WRANetwork"><a href="/liquidity/commission_management/WRANetwork.aspx"><span>></span>WRA Network</a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl01_repeaterLevel2_ctl04_liLevel2" class="research" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/liquidity/research/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="JaywalkConsensus"><a href="/liquidity/research/JaywalkConsensus.aspx"><span>></span>Jaywalk Consensus<div class="super">SM</div>&nbsp;</a></li>
+			
+			    <li class="thirdLevelItem" id="jaywalkConsultancyServices"><a href="/liquidity/research/jaywalkConsultancyServices.aspx"><span>></span>Jaywalk Consultancy Services</a></li>
+			
+			    <li class="thirdLevelItem" id="IndependentResearchMeritocracyÂ®fromBNYJaywalk"><a href="/liquidity/research/IndependentResearchMeritocracyÂ®fromBNYJaywalk.aspx"><span>></span>Independent Research MeritocracyÂ® from BNY Jaywalk</a></li>
+			
+			    <li class="thirdLevelItem" id="JaywalkÂ®IndependentResearchProviderNetwork"><a href="/liquidity/research/JaywalkÂ®IndependentResearchProviderNetwork.aspx"><span>></span>JaywalkÂ® Independent Research Provider Network</a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	</ul>
+
+	<ul class="nav_bottom" id="investment_level2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"> 
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl02_repeaterLevel2_ctl00_liLevel2" class="order_management_system" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/investment/order_management_system/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="Compliance"><a href="/investment/order_management_system/Compliance.aspx"><span>></span>Compliance</a></li>
+			
+			    <li class="thirdLevelItem" id="Operations"><a href="/investment/order_management_system/Operations.aspx"><span>></span>Operations</a></li>
+			
+			    <li class="thirdLevelItem" id="PortfolioManagement"><a href="/investment/order_management_system/PortfolioManagement.aspx"><span>></span>Portfolio Management</a></li>
+			
+			    <li class="thirdLevelItem" id="Trading"><a href="/investment/order_management_system/Trading.aspx"><span>></span>Trading</a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl02_repeaterLevel2_ctl01_liLevel2" class="options_technologies" onmouseover="mtopen(this)" onmouseout="mtclosetime()">
+			<a href="/investment/options_technologies/default.aspx" ><span></span><span class="off"></span></a>
+			
+			<ul class="thirdLevel" onmouseover="mtcancelclosetime()">
+			
+			    <li class="thirdLevelItem" id="heatSys"><a href="/investment/options_technologies/heatSys.aspx"><span>></span>HEAT System</a></li>
+			
+			    <li class="thirdLevelItem" id="ISpread"><a href="/investment/options_technologies/ISpread.aspx"><span>></span>iSpreads Pro</a></li>
+			
+			    <li class="thirdLevelItem" id="WhiteLabel"><a href="/investment/options_technologies/WhiteLabel.aspx"><span>></span>White Label Options EMS</a></li>
+			
+			</ul>
+			
+        </li>
+	    
+	</ul>
+
+	<ul class="nav_bottom" id="services_level2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"> 
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl03_repeaterLevel2_ctl00_liLevel2" class="liquidity_and_execution_management_solutions">
+			<a href="/services/liquidity_and_execution_management_solutions/default.aspx" ><span></span><span class="off"></span></a>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl03_repeaterLevel2_ctl01_liLevel2" class="investment_technology_solutions">
+			<a href="/services/investment_technology_solutions/default.aspx" ><span></span><span class="off"></span></a>
+			
+        </li>
+	    
+	    <li id="TopNav1_repeaterLevel1_ctl03_repeaterLevel2_ctl02_liLevel2" class="clearing_solutions">
+			<a href="/services/clearing_solutions/default.aspx" ><span></span><span class="off"></span></a>
+			
+        </li>
+	    
+	</ul>
+
+</div>
+
+	
+
+
+
+				
+			</div>
+		</div>
+		
+		<div id="main">
+			
+			<div class="left_col">
+				
+				
+<ul class="left_nav">
+
+    <li class="about" onmouseover="mlnopen(this)" onmouseout="mlnclosetime()">
+        <a href="/about/default.aspx"><span>></span> About Us<span></span><span class="off"></span></a>
+        
+        <ul class="thirdLevel" onmouseover="mlncancelclosetime()">
+        
+            <li class="thirdLevelItem"><a href="/about/Contact.aspx"><span>></span>Contacts</a></li>
+        
+            <li class="thirdLevelItem"><a href="/about/OurLeadershipTeam.aspx"><span>></span>Our Leadership Team</a></li>
+        
+            <li class="thirdLevelItem"><a href="/about/OurLocations.aspx"><span>></span>Our Locations</a></li>
+        
+            <li class="thirdLevelItem"><a href="/about/OurStory.aspx"><span>></span>Our Story</a></li>
+        
+            <li class="thirdLevelItem"><a href="/about/awardsandrecognitions.aspx"><span>></span>Awards and Recognitions</a></li>
+        
+        </ul>
+        
+    </li>                              
+
+    <li class="companies" onmouseover="mlnopen(this)" onmouseout="mlnclosetime()">
+        <a href="/companies/default.aspx"><span>></span> Our Companies<span></span><span class="off"></span></a>
+        
+        <ul class="thirdLevel" onmouseover="mlncancelclosetime()">
+        
+            <li class="thirdLevelItem"><a href="/companies/BNYConvergEx.aspx"><span>></span>BNY ConvergEx Execution Solutions</a></li>
+        
+            <li class="thirdLevelItem"><a href="/companies/BNYJaywalk.aspx"><span>></span>BNY Jaywalk</a></li>
+        
+            <li class="thirdLevelItem"><a href="/companies/ConvergExGlobalMarkets.aspx"><span>></span>ConvergEx Global Markets</a></li>
+        
+            <li class="thirdLevelItem"><a href="/companies/EzeCastleSoftware.aspx"><span>></span>Eze Castle Software</a></li>
+        
+            <li class="thirdLevelItem"><a href="/companies/GTradeServices.aspx"><span>></span>G-Trade Services</a></li>
+        
+            <li class="thirdLevelItem"><a href="/companies/LiquidPoint.aspx"><span>></span>LiquidPoint</a></li>
+        
+            <li class="thirdLevelItem"><a href="/companies/WestminsterResearchAssociates.aspx"><span>></span>Westminster Research Associates</a></li>
+        
+        </ul>
+        
+    </li>                              
+
+    <li class="partners" onmouseover="mlnopen(this)" onmouseout="mlnclosetime()">
+        <a href="/partners/default.aspx"><span>></span> Our Partners<span></span><span class="off"></span></a>
+        
+        <ul class="thirdLevel" onmouseover="mlncancelclosetime()">
+        
+            <li class="thirdLevelItem"><a href="/partners/FIXDestinations.aspx"><span>></span>FIX Destinations</a></li>
+        
+        </ul>
+        
+    </li>                              
+
+    <li class="clients" onmouseover="mlnopen(this)" onmouseout="mlnclosetime()">
+        <a href="/clients/default.aspx"><span>></span> Our Clients<span></span><span class="off"></span></a>
+        
+        <ul class="thirdLevel" onmouseover="mlncancelclosetime()">
+        
+            <li class="thirdLevelItem"><a href="/clients/AssetManagers.aspx"><span>></span>Asset Managers</a></li>
+        
+            <li class="thirdLevelItem"><a href="/clients/BrokerDealers.aspx"><span>></span>Broker-Dealers</a></li>
+        
+            <li class="thirdLevelItem"><a href="/clients/Corporations.aspx"><span>></span>Corporations</a></li>
+        
+            <li class="thirdLevelItem"><a href="/clients/FinancialIntermediaries.aspx"><span>></span>Financial Intermediaries</a></li>
+        
+            <li class="thirdLevelItem"><a href="/clients/HedgeFunds.aspx"><span>></span>Hedge Funds</a></li>
+        
+            <li class="thirdLevelItem"><a href="/clients/PlanSponsors.aspx"><span>></span>Plan Sponsors</a></li>
+        
+        </ul>
+        
+    </li>                              
+
+    <li class="news" onmouseover="mlnopen(this)" onmouseout="mlnclosetime()">
+        <a href="/news/default.aspx"><span>></span> Our News and Views<span></span><span class="off"></span></a>
+        
+        <ul class="thirdLevel" onmouseover="mlncancelclosetime()">
+        
+            <li class="thirdLevelItem"><a href="/news/Newsletters.aspx"><span>></span>Newsletters</a></li>
+        
+            <li class="thirdLevelItem"><a href="/news/PressContacts.aspx"><span>></span>Press Contact</a></li>
+        
+            <li class="thirdLevelItem"><a href="/news/MarketingLiterature.aspx"><span>></span>Marketing Literature</a></li>
+        
+            <li class="thirdLevelItem"><a href="/news/ThoughtLeadership.aspx"><span>></span>Thought Leadership</a></li>
+        
+            <li class="thirdLevelItem"><a href="/news/press_releases/default.aspx"><span>></span>Press Releases</a></li>
+        
+        </ul>
+        
+    </li>                              
+
+    <li class="team" onmouseover="mlnopen(this)" onmouseout="mlnclosetime()">
+        <a href="/team/default.aspx"><span>></span> Join Our Team<span></span><span class="off"></span></a>
+        
+        <ul class="thirdLevel" onmouseover="mlncancelclosetime()">
+        
+            <li class="thirdLevelItem"><a href="/team/ourculture.aspx"><span>></span>Our Culture</a></li>
+        
+            <li class="thirdLevelItem"><a href="/team/ourpeople.aspx"><span>></span>Our People</a></li>
+        
+            <li class="thirdLevelItem"><a href="/team/currentjobopeningsatezecastlesoftware.aspx"><span>></span>Current Job Openings at Eze Castle Software</a></li>
+        
+            <li class="thirdLevelItem"><a href="/team/otherjobopeningsatbnyconvergexgroup.aspx"><span>></span>Other Job Openings at BNY ConvergEx Group</a></li>
+        
+        </ul>
+        
+    </li>                              
+
+</ul>
+
+
+				
+				<div class="content">
+					<div id="sectionCont">
+					
+<div id="inThisSection">
+    <ul>
+
+        <li id="withinNav1_repeaterSection_ctl01_sectionLi"><a href="/companies/BNYConvergEx.aspx">BNY ConvergEx Execution Solutions</a></li>
+
+        <li id="withinNav1_repeaterSection_ctl02_sectionLi"><a href="/companies/BNYJaywalk.aspx">BNY Jaywalk</a></li>
+
+        <li id="withinNav1_repeaterSection_ctl03_sectionLi"><a href="/companies/ConvergExGlobalMarkets.aspx">ConvergEx Global Markets</a></li>
+
+        <li id="withinNav1_repeaterSection_ctl04_sectionLi"><a href="/companies/EzeCastleSoftware.aspx">Eze Castle Software</a></li>
+
+        <li id="withinNav1_repeaterSection_ctl05_sectionLi" class="currentSection"><a href="/companies/GTradeServices.aspx">G-Trade Services</a></li>
+
+        <li id="withinNav1_repeaterSection_ctl06_sectionLi"><a href="/companies/LiquidPoint.aspx">LiquidPoint</a></li>
+
+        <li id="withinNav1_repeaterSection_ctl07_sectionLi"><a href="/companies/WestminsterResearchAssociates.aspx">Westminster Research Associates</a></li>
+
+    </ul>
+</div>
+
+					</div>
+				
+					<img onerror="this.remove();" id="Image1_img1" Title="Commission Management" src="/ASSETS/F3AE0CA61B414224ACC7AC8B76E72038/banner4.jpg" alt="Commission Management" border="0" />
+					
+					<span id="SiteMapPath1" class="breadcrumb"><a href="#SiteMapPath1_SkipLink"><img onerror="this.remove();" alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=uNwvN0v2kEQSf8Oa6SijEQ2&amp;t=633246858936406250" border="0" /></a><span><a href="/default.aspx">Home</a></span><span> &gt; </span><span><a title="Our Companies" href="/companies/default.aspx">Our Companies</a></span><span> &gt; </span><span>G-Trade Services</span><a id="SiteMapPath1_SkipLink"></a></span>
+					
+					<h1>G-Trade Services</h1>
+					
+					<H2>Performance, Speed, Reliability - Worldwide</H2>
+<P>As a member company of BNY ConvergEx Group and a Member of SIPC, G-Trade Services is an agency broker-dealer specializing in global execution services in over 50 markets worldwide.&nbsp; Through G-Tradeâs fully automated platform, clients can interact directly with every major global exchange while maintaining control of their order flow in a conflict-free, anonymous environment.&nbsp; Our sophisticated global Direct Market Access capabilities allow clients access to all major sources of liquidity and help them route to global markets quickly and efficiently.&nbsp; Clients can also leverage G-Tradeâs suite of global algorithms, tailored to each market, that use both historical and real-time market data to determine the appropriate execution timing and methodology. These orders can be executed in a matter of seconds or over an entire trading day, depending on the strategy, size of the order and volume of stock.&nbsp; G-Tradeâs state-of-the-art technology and robust, reliable connectivity are designed to handle large volumes rapidly and effectively, supporting active trading styles and rapid executions with ease.*&nbsp; G-Trade also maintains a 24-hour customer support desk and settlement team for all global markets â regardless of your location.</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt">* Market volume and volatility, or system technical problems, may delay system access and trade execution.</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 8pt"></SPAN></SPAN>&nbsp;</P>
+					<div class="b10Form">
+					
+					</div>
+					<script language="javascript" type="text/javascript">
+					replaceServiceMark();
+					</script>
+					<br style="clear:both;" />
+					
+				</div>
+			</div>
+
+			<div class="right_col">
+				<img onerror="this.remove();" src="/images/mindOverMarkets.jpg">
+				
+    <ul>
+
+    <li class="press_release">
+	    <h2>PRESS RELEASES</h2>
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl01_repeaterLinks_ctl00_linkTitle" href="/ASSETS/549CB23F292D4ADCB31C4A87AC2145C5/BNY%20ConvergEx%20Group%20Announces%20Grey%20Order%20Type.pdf">BNY ConvergEx Group Announces Grey Order Type</a>
+            
+	        
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl01_repeaterLinks_ctl01_linkTitle" href="/ASSETS/A39D52F6C28647D8BA83D6C2B7E22CD2/BNY%20ConvergEx%20Group%20Announces%20New%20Global%20Smart%20Order%20Routing%20for%20Europe.pdf">BNY ConvergEx Group Announces New Global Smart Order Routing for Europe</a>
+            
+	        
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl01_repeaterLinks_ctl02_linkTitle" href="/ASSETS/9ED9F39192D946F0AC61DDEF50C51A19/BNY%20ConvergEx%20Group%20Named%20Top%20Provider%20in%20The%20Trades%202008%20Global%20Algorithmic%20Trading%20Awards.pdf">BNY ConvergEx Group Named Top-Rated Provider in The Trade's 2008 Global Algorithmic Trading Awards</a>
+            
+	        
+	    
+    </li>
+
+    <li class="related_solutions">
+	    <h2>RELATED SOLUTIONS</h2>
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl02_repeaterLinks_ctl00_linkTitle" href="/ASSETS/60A7DBEEA384450E99C4AD2C3BB6C486/ConvergEx%20Overview.pdf">ConvergEx Overview</a>
+            
+	        
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl02_repeaterLinks_ctl01_linkTitle" href="/ASSETS/CAFD5E42BFFC472AAB4B73EB2CEF9E9C/ConvergEx%20-%20Global%20Electronic%20Trading%20Brochure-2008.pdf">Global Electronic Trading Brochure</a>
+            
+	        
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl02_repeaterLinks_ctl02_linkTitle" href="/ASSETS/3992152FCF884B519B4A56B8A6EC7126/Global%20Smart%20Router.pdf">Global Smart Router</a>
+            
+	        
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl02_repeaterLinks_ctl03_linkTitle" href="/ASSETS/E8B3699517424139999BE87E3900BFFF/">Electronic Trading</a>
+            
+	        
+	    
+    </li>
+
+    <li class="thought_leadership">
+	    <h2>THOUGHT LEADERSHIP</h2>
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl03_repeaterLinks_ctl00_linkTitle" href="/ASSETS/FA91EEAF40564780A5A1E40B40D79100/TRADERS%20Magazine%20-%2004-2008%20-%20David%20Quinlan.pdf">May 2008, Traders Magaine, Unconflicted Approah to Deep and Dark Liquidity</a>
+            
+	        
+	    
+	        
+	        <a id="Sidebar1_repeaterSidebar_ctl03_repeaterLinks_ctl01_linkTitle" href="/ASSETS/621004AA3C4D4F0A975251018B62A588/Beyond%20Execution.pdf">Guide to Liquidity, Beyond Execution: The Changing Role of the Trader</a>
+            
+	        
+	    
+    </li>
+
+    <li class="awards">
+	    <h2>AWARDS</h2>
+	    
+	        
+	        
+            
+                <p>Top-Rated Algorithmic Trading Provider-The Tradeâs Algorithmic Trading Survey Broker Roll of Honour</p>
+            
+	        
+	    
+    </li>
+
+    <li class="contact">
+	    <h2>CONTACT</h2>
+	    
+	        
+	        
+            
+                <p>BNY ConvergEx Group</p>
+            
+	        800.367.8998
+	    
+    </li>
+
+    </ul>
+    <br style="clear:both" />
+
+			</div>
+			
+		</div>
+		
+		<div id="footer">
+		
+            		
+
+<ul class="footer">
+    <li>&copy; 2009 BNY ConvergEx Group. All Rights Reserved</li>
+	<li class="pipe">|</li>
+	<li><a href="/Privacy.aspx" title="Privacy">Privacy</a></li>
+	<li class="pipe">|</li>
+	<li><a href="/Disclaimer.aspx" title="Disclaimer">Disclaimer</a></li>
+	<li class="pipe">|</li>
+	<li><a href="/Terms.aspx" title="Terms of Service">Terms of Service</a></li>
+	<li class="pipe">|</li>
+	<li><a href="/BusinessContinuityPlan.aspx" title="Business Continuity Plan">Business Continuity Plan</a></li>
+	<li class="pipe">|</li>
+	<li><a href="/ComplianceStatement.aspx" title="Compliance Statement">Compliance Statement</a></li>
+	<li class="pipe">|</li>
+	<li>1-800-367-8998</li>
+</ul>
+		
+		</div>
+		<div id="theMark"><img onerror="this.remove();" src="/images/theMark.gif"></div>
+	</div>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLRwr3iDwKvuvXtCALNyZPlAR1K/9ZhYjsWwhajJRS+Wyn27rDm" /></form>
+
+
+<script src="/google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-708683-6";
+urchinTracker();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"d0499c6a79474421a5051262d4f80440","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

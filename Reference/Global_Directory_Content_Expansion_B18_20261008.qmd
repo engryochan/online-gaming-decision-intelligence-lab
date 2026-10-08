@@ -1,0 +1,34 @@
+---
+title: "全球多市場施工 B18：續採未處理網站及完整工作進度"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 實測交付
+
+承接全部 4,849 項原始工作列，排除 B05、B06、B07、B10、B12、B13、B14、B15、B16、B17 已嘗試的網址，依路徑與查詢參數名錄訊號排序，優先先前較少採集的主機。本輪嘗試 220 個網址、152 個不同主機，其中 213 個 HTTP 200；保留 1677 條物理表格行、193 個表格、28 條初步角色投影。投影不是獨立上市公司或持牌券商數，網址訊號不是權威性證明。
+
+## 全清單與逐國進度
+
+所有 4,849 項工作列與 249 條現行國家／地區母表完整保留。累計狀態為 `{"HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1501, "FETCH_ERROR_OR_NON200_REVIEW": 74, "NOT_YET_ATTEMPTED": 3272, "HTTP200_BODY_TRUNCATED_REVIEW": 2}`。逐國表沿用 MIC 網站與 ANNA 前綴來源關係，不將主機等同公司註冊地或國家完整覆蓋；歷史政治實體沿用既有資料，249 並非歷史國家總量上限。
+
+新觀測 60 條下載連結及 46 條頁面連結，全部列入後續核查表。本輪未宣稱這些下載已取得或所有連結都是分頁；須核定重複、來源用途、完整範圍及實際頁碼。B11 已交付的 1,848 個歷史 CSV 保留，不用重複下載增加覆蓋數。
+
+## 可回溯數據及價值
+
+本批次遵循 [來源覆核與精華採用合同](../V2.0.1/governance/source_review_contract.md)：資料身份、來源粒度、樣本範圍與可發布內容分開核定。Windows Downloads 的本地 GLEIF、ISIC、SDG 原始文件與明細維持只讀審阅，沒有複製或匯入本批次；本批次來源為清單中的公開網站回應。採集與解析數量不提升法人、關係或能力主張的證據等級。
+
+[來源收據](tables/43_global_directory_content_b18_20261008/directory_fetch_manifest.csv)、[全部工作進度](tables/43_global_directory_content_b18_20261008/registry_all_4849_work_progress.csv)、[逐國來源進度](tables/43_global_directory_content_b18_20261008/registry_all_country_cumulative_source_progress.csv)、[原始表格行](tables/43_global_directory_content_b18_20261008/registry_all_table_rows.csv)、[來源語義覆核](tables/43_global_directory_content_b18_20261008/registry_source_table_semantic_review.csv)、[SQLite](tables/43_global_directory_content_b18_20261008/global_directory_content_b18.sqlite)。逐頁來源 URL、原始 cells_json、HTTP 狀態、截斷標記與 SHA256 保留，用於公司、證券、會員或牌照資料的後續辨識及去重，動態空表與非名錄內容仍待判定。
+
+SQLite 完整性及 CSV 行數入庫核對通過；215 個已保存回應的原始位元組雜湊核對通過。舊批次、兩份主報告與使用者修改均未覆寫。全球所有上市公司、券商、貨幣與科技資料完整性仍為 UNKNOWN，不能以 HTTP 200 代替內容完整性驗收。
+
+## 發佈與解析核查
+
+所有頁面文字解析完整性列為待覆核，原始回應位元組保留，不據此宣稱文字無遺漏。憑證模式掃描發現 15 個原始頁面候選檔，僅留本機並排除推送；未輸出候選值。
+
+## 網址計數口徑
+
+4,849 個完整網址去除頁內 fragment 後為 4,768 個請求地址。累計收據按去 fragment 地址關聯；同一請求可覆蓋多個錨點工作列，故未嘗試行減少數不必等於本輪请求数，錨點不能當獨立資料來源。

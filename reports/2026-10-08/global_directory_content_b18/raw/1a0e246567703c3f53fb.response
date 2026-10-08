@@ -1,0 +1,362 @@
+
+<html lang="en">
+    
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="The official website of the Cayman Islands Stock Exchange." />
+        <title>Product Guide Equities | Cayman Islands Stock Exchange</title>
+        <!-- Bootstrap -->
+        <link href="/Content/bootstrap.min.css" rel="stylesheet">
+		<link href="/Content/bootstrap-datepicker3.min.css" rel="stylesheet">
+        <link href="/Content/style.css" rel="stylesheet" />
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Scripts go here -->
+        <script src="/scripts/TickerTape3.js?v101" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/Scripts/html5shiv.min.js"></script>
+      <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+    <body>
+        <div id="not-home-page-wrapper" class="not-home-page-wrapper">
+            <div id="main-body" class="not-home-page container">
+                
+                
+				<div id="branding" class="row">
+                    <div class="col-xs-5">
+                        <a href="https://www.csx.ky"><img id="csx-logo" class="pull-left" src="/images/csx-logo-gold250.png"  title="Home"/></a>
+                    </div>
+                    <div class="col-7 brand-right" style="vertical-align: text-top;">
+                        <div class="col-xs-4 abouttime smallcaper pull-right reverse-gold">
+                            Cayman Time | 06:30 - 
+                            GMT Time | 11:30
+                            <!-- /input-group -->
+                            <form id="main-search" action="/companies/search.asp" method="post" role="form">
+                                <div class="form-group fadeaway">
+                                    <div class="input-group pull-right">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default fadeaway" type="submit">Search</button>
+                                        </span>
+                                        <input type="text" name="SearchText" class="form-control fadeaway">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="col-xs-4 top-links col-xs-offset-3">
+                            <a class="color-red" href="#">CUSIP/ISINs and LEI Services</a>
+                        </div> -->
+                    </div>
+<!--					
+                    <div class="row" >
+                        <div class="col-xs-10" style="margin-top: 20px;">
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick">
+                                    <script type="text/javascript">var ticker2 = new TickerTape('/_data/TickerDataMF.asp', 'HTickerTape', true, 100, 20);</script>
+                                </div>
+                            </div>
+							
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick" style="padding-top:5px;">
+                                    <script type="text/javascript">var ticker3 = new TickerTape('/_data/TickerDataAN.asp', 'HTickerTape', true, 100, 40);</script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+-->
+                </div><nav id="main-nav" class="navbar navbar-default navbar-static-top smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+                            <li class="dropdown"><a href="/" class="nav-level-1">Home</a></li>
+							
+                            <li class="dropdown nav-level-1">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; About Us &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/aboutus/overview.asp">Overview</a></li>
+									<li><a href="/aboutus/benefits.asp">Benefits</a></li>
+                                    <li><a href="/aboutus/news.asp">News and Events</a></li>
+                                    <li><a href="/aboutus/affiliations.asp">Affiliations</a></li>
+									 <li><a href="/aboutus/recognitions.asp">Recognitions</a></li>
+                                    <!--<li><a href="/aboutus/csx-on-xetra.asp">CSX on XETRA</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Exchange Holidays</a></li>
+									<!--<li><a href="/aboutus/contact-us.asp">Contact Us</a></li>-->
+									<li><a href="/aboutus/applicationform.asp">Employment Application Form</a></li>
+<!--                                    <li><a href="/aboutus/faqs.asp">FAQs</a></li>
+-->
+                                </ul>
+                            </li>
+ 
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Companies &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/companies/announcements.asp">Announcements</a></li>
+                                    <li><a href="/companies/investment-funds.asp">Investment Funds</a></li>
+                                    <li><a href="/companies/specialist-debts.asp">Specialist Debt</a></li>
+                                    <li><a href="/companies/corporate-debts.asp">Corporate Debt</a></li>
+                                    <li><a href="/companies/ils-cat-bonds.asp">ILS / CAT Bonds</a></li>
+									<li><a href="/companies/retail-debts.asp">Retail Debt</a></li>
+                                    <li><a href="/companies/equities.asp">Equity</a></li>
+                                    <li><a href="/companies/daily-official-list.asp">Official List</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Listing &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/listing/listing-on-csx.asp">Listing on CSX</a></li>
+                                    <li><a href="/listing/product-guides.asp">Product Guides</a></li>
+									<li><a href="/listing/listing-rules-and-forms.asp">Listing Rules and Forms</a></li>
+                                    <li><a href="/listing/listing-checklists.asp">Listing Checklists</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+<!-- 									<li><a href="/listing/fact-sheets.asp">Fact Sheets</a></li>
+-->
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Trading &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/trading/trading-on-csx.asp">Trading on CSX</a></li>
+                                    <li><a href="/trading/daily-trading-summary.asp">Daily Trading Summary</a></li>
+                                    <!-- <li><a href="/trading/trading-procedures.asp">Trading Procedures</a></li>
+                                    <li><a href="/trading/settlement-procedures.asp">Settlement Procedures</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Trading Calendar</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+                                </ul>
+                            </li>
+<!--
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">CSX FundStream <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/fundstream/csx-fundstream.asp">CSX FundStream</a></li>
+                                </ul>
+                            </li>
+-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; ISIN &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/isin/isin-cusip.asp">ISIN-CUSIP Services</a></li>
+                                    <li><a href="/isin/apply-for-isin.asp">Apply for ISIN</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Agents &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/listing-agent/listing-agents.asp">Listing Agents</a></li>
+                                    <li><a href="/listing-agent/listing-agent-guide.asp">Listing Agent Guide</a></li>
+									<li><a href="/listing-agent/listing-agent-benefits.asp">Listing Agent Benefits</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Members &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-members.asp">Broker Members</a></li>
+                                    <li><a href="/broker/broker-membership-rules-forms.asp">Broker Membership Rules and Forms</a></li>
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Fees &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+							
+							<li class="dropdown">
+							  <a href="#" class="esg" data-toggle="dropdown">&nbsp; ESG &nbsp;<b class="caret"></b></a>
+							     <ul class="dropdown-menu">
+                                    <li><a href="/companies/esg.asp">CSX ESG Market</a></li>
+								 </ul>
+                            </li>
+							
+							<!-- <li class="dropdown"><a href="/Documents/Covid-19 Business Continuity Messsage.docx" class="nav-level-1">Covid-19 Business Continuity</a></li>-->
+							<li class="dropdown"><a href="/aboutus/contact-us.asp" class="nav-level-1">&nbsp;Contact Us &nbsp;</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+				<nav id="sub-nav" class="navbar navbar-default smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+
+							<li class="dropdown"><a href="listing-on-csx.asp">Listing on CSX</a></li>
+
+							<li class="dropdown"><a href="product-guides.asp">Product Guides</a></li>
+
+							<li class="dropdown"><a href="listing-rules-and-forms.asp">Listing Rules and Forms</a></li>
+
+							<li class="dropdown"><a href="listing-checklists.asp">Listing Checklists</a></li>
+
+							<li class="dropdown"><a href="listing-fees.asp">Listing Fees</a></li>
+
+						</ul>
+					</div>
+				</nav>
+
+<ol class="breadcrumb">			
+<li><a href="/">Home</a></li><li>Listing</li>
+
+<li><a href="product-guides.asp"> Product Guides</a></li>
+<li class="active">Product Guide Equities</li>
+
+</ol>
+
+				
+                <div id="content" class="row addtop">
+                    <div class="col-xs-12 main-content">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs smallcaper">
+                            <li class="active"><a href="#background" data-toggle="tab">What the CSX has to offer</a></li>
+                            <li><a href="#conditions" data-toggle="tab">Conditions for listing</a></li>
+                            <li><a href="#document" data-toggle="tab">Listing document content</a></li>
+                            <li><a href="#obligations" data-toggle="tab">Continuing obligations</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="background">
+								<div class="col-xs-12">
+									<h3>Timely response</h3>
+									<p>The CSX is aware of the time pressures under which issuers and their advisers operate and will make every effort to accommodate an issuer’s timetable.</p>
+									<h3>Flexibility</h3>
+									<p>Unlike many European exchanges the CSX is not bound by the European Prospectus Directive and so can be more flexible in its approach. Companies are free to use an existing prospectus or offering memorandum as a base for a listing document.</p>
+									<h3>Competitive costs</h3>
+									<p>CSX fees for a primary listing of equity securities are:</p>
+									<table>
+									<tr><th width="150px">Market Cap</th><th width="150px">(to US $10m)</th><th width="150px">(to US $100m)</th><th width="150px">((Over US $100m)</th></tr>
+									<tr><td>Listing fee</td><td>US $10,000</td><td>US $15,000</td><td>US $20,000</td></tr>
+									<tr><td>Annual fee</td><td>US $10,000</td><td>US $10,000</td><td>US $10,000</td></tr>
+									</table>
+									<p>Listing and annual fees for secondary listings are half those of a corresponding primary listing. There are NO CSX trading fees.</p>
+									<h3>Recognitions </h3>
+									<p>The CSX is accredited by HM Revenue and Customs, the United Kingdom tax authority, as a recognised stock exchange meaning that CSX listed securities may be eligible investments for certain savings and pension products and payments on listed securities may be made without deduction of withholding tax.</p>
+									<p>The CSX is the only offshore stock exchange to be a member of the Inter Market Surveillance Group, a surveillance focused group of over 30 major exchanges from around the world. </p>
+									<p>The CSX is an affiliate member of IOSCO.</p>
+									<h3>Specialist rules</h3>
+									<p>The CSX listing rules, which are based on IOSCO standards, are tailored to allow for offerings to specialist investors meaning a progmatic approach can be taken without the need for the more onerous requirements of the retail offerings.</p>
+									<h3>Trading </h3>
+									<p>Listing of equity securities on the CSX provides admission to the CSX trading platform. </p>
+									
+									
+								</div>
+                            </div>
+
+                            <div class="tab-pane fade" id="conditions">
+                                <div class="row">
+									<div class="col-xs-12">
+										<h3>Liquid market</h3>
+										<ul>
+										<li>the new applicant must have an expected market capitalisation of at least US$5 million with a sufficiently liquid market, normally at least 25% of equity securities in public hands (which excludes holdings of directors, substantial shareholders or their associates) unless the applicant is a specialist company limited to sophisticated investors in which case the requirement for a liquid market can be relaxed</li>
+										</ul>
+										<h3>History of operations</h3>
+										<ul>
+										<li>companies must have an adequate operating record under substantially the same management </li>
+										<li>the normal requirement for three years prior operations can be varied for certain specialist issuers such as technology, shipping or mineral companies which are able to supply instead a satisfactory business plan or expert valuation on the company and its operations </li>
+										<li>the directors of the issuer must collectively have appropriate expertise and experience for the management of its business</li>
+										</ul>
+										<h3>Financial information and working capital</h3>
+										<ul>
+										<li>the normal requirement is for audited financial statements, prepared in accordance with IAS or acceptable local GAAP, covering at least the last three years </li>
+										<li>this can be varied for certain specialist issuers, see above</li>
+										<li>an accountants report is required where therehas been any material change to the group structure, accounting policies, or a qualified audit in the past three years</li>
+										<li>newly formed companies must have sufficient working capital for at least 12 months although specialist companies and companies with an established track record need only provide an explanation as to how the necessary working capital will be obtained</li>
+										</ul>
+										<h3>Trading and transferability</h3>
+										<ul>
+										<li>the equity securities must be freely transferable except to the extent that any restrictions are approved by the CSX</li>
+										<li>share “lock-up” provisions will be required for recently formed start-up companies</li>
+										<li>securities must have adequate clearing and settlement arrangements </li>
+										<li>there must be a registrar and paying agent which can be basedin the Cayman Islands or any acceptable financial centre</li>
+										<li>the issuer must make arrangements with a CSX registered broker for share dealing </li>
+										</ul>
+										<p>The company must be properly registered and its constitution must meet certain governance standards specified in the CSX rules, including a requirement for a minimum of three directors. Unless a company is a specialist company there is a requirement for a majority of the company’s directors to be independent of management and any other conflicting interests.</p>
+										<div class="col-xs-12 bg-success" style="margin:10px 10px 10px 0px;">
+											<img class="pull-left img-needs-space-1a" src="/images/pen-color-graph.jpg" />
+											<h3>The CSX is able to offer fast track listing to specialist companies such as start-ups and companies with a sophisticated investor base.</h3>
+										</div>
+                                    </div>
+								</div>
+							</div>
+
+                            <div class="tab-pane fade" id="document">
+								<div class="col-xs-12">
+									<p>The general requirement is that a company must include in its listing document all information necessary for an investor to make an informed investment decision. In particular the listing document must disclose details of the following:</p>
+									<ul>
+									<li>general information on the company and its management</li>
+									<li>the securities for which application is being made</li>
+									<li>the company’s capital</li>
+									<li>the company’s business activities</li>
+									<li>financial information on the group</li>
+									<li>material contracts</li>
+									</ul>
+									<p>The company must make certain documents available for public inspection including its constitutional documents and financial statements</p>
+									<p>Specialist issuing companies will be required to include in the listing document additional information such as expert reports and business plans</p>
+									<div class="col-xs-12 bg-success" style="margin:10px 10px 10px 0px;">
+										<img class="pull-left img-needs-space-1a" src="/images/sky-between-towers.jpg" />
+										<h3>A listing on the CSX is a cost-efficient way to increase your company’s visibility and ability to raise funds.</h3>
+									</div>
+								</div>
+							</div>
+							
+                            <div class="tab-pane fade" id="obligations">
+								<div class="col-xs-12">
+									<p>The CSX has a duty to protect investors and to maintain a fair and orderly market in the securities. In order to fulfil this responsibility the CSX requires listed issuers to undertake to comply with its continuing obligations. The principal obligations are as follows:/p>
+									<h3>General obligation of disclosure</h3>
+									<p>A company must notify the CSX immediately of any price sensitive information, material new developments or operational changes and any material change in its performance or financial position for dissemination by the CSX. In certain cases the CSX will also require that a circular be sent to shareholders and where the company proposes a change that will fundamentally alter its business operations or a significant transaction with a related party the CSX may require the company to obtain prior shareholder approval. </p>
+									<h3>Financial statements</h3>
+									<p>The issuer must publish audited annual financial statements within six months of its year end and prepare semi annual interim financial statements, which may be unaudited.</p>
+									<h3>Equality of treatment</h3>
+									<p>The issuer must ensure equal treatment of all holders of the same class of listed equity securities.</p>
+									<h3>New issues</h3>
+									<p>Any new issues of equity securities must be approved by the CSX.</p>
+									<h3>Exercise of rights</h3>
+									<p>The necessary information and facilities must be made available to holders of securities to enable them to exercise their rights.</p>
+								</div>
+							</div>
+
+						</div> <!-- Tab panes End -->
+
+                    </div> <!-- main content -->
+                    
+                </div>
+
+                
+
+
+<div id="footer" class="row addtop smallcaper reverse-gold">
+	<p class="reverse-gold"><a class="reverse-gold" href="/aboutus/contact-us.asp">Contact us</a> | 
+<!--	<a class="reverse-gold" href="/aboutus/faqs.asp">FAQs</a> | -->
+	<a class="reverse-gold" href="/disclaimer.asp">Disclaimer</a> |
+	<a class="reverse-gold" href="/terms-of-use.asp">Terms of use</a> |
+	<a class="reverse-gold" target="_blank" href="/Documents/CSX_Privacy_Notice.pdf">Privacy Notice</a>
+	 </p>
+    <p class="reverse-gold">Copyright &copy; 2026 Cayman Islands Stock Exchange Ltd. All rights reserved.</p>
+</div>
+
+                                
+            </div>
+        </div>
+    
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/Scripts/jquery-1.9.0.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/Scripts/bootstrap.min.js"></script>
+    
+    </body>
+</html>

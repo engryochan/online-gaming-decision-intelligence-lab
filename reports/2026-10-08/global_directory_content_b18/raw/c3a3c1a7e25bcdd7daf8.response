@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/favicon.png" sizes="any" />
+
+    <link rel="stylesheet" media="all" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <script type="text/plain" data-cookiecategory="analytics">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-11082354-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<noscript><img alt="" src="https://secure.smart-enterprise-52.com/267056.png" style="display:none;" /></noscript>
+<script type="text/javascript" src="https://secure.smart-enterprise-52.com/js/267056.js" ></script>
+    
+<title>CSR | TISE</title>
+<meta property="og:title" content="CSR | TISE">
+<meta name="twitter:title" content="CSR | TISE">
+
+<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://tisegroup.com/company-profile/corporate-social-responsibility/">
+
+    <meta property="og:image" content="https://tisegroup.com//media/qy1nrd5x/csr.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c5b619ce10">
+    <meta name="twitter:image" content="https://tisegroup.com//media/qy1nrd5x/csr.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c5b619ce10">
+
+<meta property="og:description" content="TISE is managed in a responsible and sustainable manner, supporting our transition to a low-carbon and sustainable economy. Our vision, mission and values are underpinned by a strong focus on responsible and sustainable business practices. ">
+<meta name="twitter:description" content="TISE is managed in a responsible and sustainable manner, supporting our transition to a low-carbon and sustainable economy. Our vision, mission and values are underpinned by a strong focus on responsible and sustainable business practices. ">
+<meta name="description" content="TISE is managed in a responsible and sustainable manner, supporting our transition to a low-carbon and sustainable economy. Our vision, mission and values are underpinned by a strong focus on responsible and sustainable business practices. ">
+</head>
+<body>
+
+    <div class="page blue">
+        
+<div id="navigation" v-cloak v-clickout="closeSearch">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-inner-brand">
+                <a href="/"><img src="/media/ezbnvbj3/tise-master-a-miax-company-logo-rgb-white.png?width=200&height=103&quality=80&v=1dbd56b4cd472d0" alt="TISE Logo" /></a>
+            </div>
+            <div class="header-inner-nav" v-tracked>
+                <ul :class="{'on': open}">
+                    <li v-for="i in structure" :class="[{'on': openNavs.includes(i.Id)}, {'hide-from-ml' : i.Special}]">
+                        <div class="header-item">
+                            <a v-if="i.Children && i.Children.length > 0" class="header-item-link" @click="toggleNav(i)">{{i.Name}} <i class="fas fa-chevron-down"></i></a>
+                            <a v-if="!i.Children || (i.Children && i.Children.length == 0)" class="header-item-link" :href="i.Url">{{i.Name}} </a>
+                        </div>
+                        <div class="header-drop" :class="{'on': openNavs.includes(i.Id)}">
+                            <template v-for="c in i.Children">
+                                <a :href="c.Url" :class="{ hasgc: i.HasGrandchildren }">{{c.Name}}</a>
+                                <div class="header-drop-sub" v-if="i.HasGrandchildren">
+                                    <a v-for="p in c.Children" :href="p.Url"><span>&mdash;</span> {{p.Name}}</a>
+                                </div>
+                            </template>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-inner-burger-wrap">
+                    <a class="btn small white" v-tracked href="https://apps.tisegroup.com/Identity/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dtise-portal%26redirect_uri%3Dhttps%253A%252F%252Fapps.tisegroup.com%252Fmy-tise%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520TISEAPI%26nonce%3D28c5ae753640fc10c766c1317bffd4a829RufsNki%26state%3Dfd59249a2eeff0b1326c77958c4e7e9c34pA5Avrk%26code_challenge%3Di9aYC48siflcen0jUgPiXFrl7-F91eJligrY8qDLRsA%26code_challenge_method%3DS256"><span>MyTISE</span></a>
+                    <a class="search" @click="toggleSearch"><i class="fas fa-search"></i></a>
+                <div class="header-inner-burger-wrap-burger" :class="{'on': open}" @click="toggleNav(null)">
+                    <svg viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" rx="2" ry="2" />
+                        <rect y="9" width="32" height="2" rx="2" ry="2" />
+                        <rect y="18" width="32" height="2" rx="2" ry="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="burger-nav" :class="{'on': open}">
+        <div class="burger-nav-left">
+            <div class="burger-nav-left-inner">
+                <ul>
+                    <li v-for="i in structure" :class="[{'on' : curPage != null && curPage.Id == i.Id}, {'hide-from-xl' : i.Special}]">
+                        <a v-if="i.Children && i.Children.length > 0" @click="curPage = i">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                        <a v-if="!i.Children || (i.Children && i.Children.length == 0)" :href="i.Url">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+
+
+</li>
+                </ul>
+            </div>
+        </div>
+        <div class="burger-nav-mid">
+            <div class="burger-nav-mid-inner" v-if="curPage != null">
+                <h3>{{curPage.Title}}</h3>
+                <p>{{curPage.Copy}}</p>
+                <p>&nbsp;</p>
+                <div class="burger-nav-mid-inner-cols" v-if="curPage.HasGrandchildren">
+                    <div v-for="c in curPage.Children" class="burger-nav-mid-inner-cols-col" :class="'c' + curPage.Children.length">
+                        <ul>
+                            <li class="overview"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                            <li v-for="gc in c.Children"><a :href="gc.Url">{{gc.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-nav-mid-inner-cols" v-if="!curPage.HasGrandchildren">
+                    <div class="burger-nav-mid-inner-cols-col c1">
+                        <ul>
+                            <li v-for="c in curPage.Children"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-nav-right">
+                <p>About TISE</p>
+                <a href="/company-profile/">Company Profile</a>
+                <a href="/company-profile/meet-the-team/">Meet the Team</a>
+                <a href="/news/">News</a>
+                <a href="/company-profile/careers/">Careers</a>
+                <a href="/company-profile/corporate-social-responsibility/">CSR</a>
+                <a href="/business-days/">Business Days</a>
+                <a href="/contact/">Contact</a>
+        </div>
+    </div>
+
+        <div class="burger-search" :class="{'on' : searchOpen}">
+            <form action="/search/" method="get">
+                <input type="text" name="query" placeholder="Enter Keywords or Mnemonic" />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+</div>
+        
+
+<div class="pagenav">
+    <div class="pagenav-inner">
+        <a class="title">On this page</a>
+        <ul class="pagenav-inner-items">
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_83f9fff4b8324fc3aa2fbf477bfb5ef0"><a href="#_83f9fff4b8324fc3aa2fbf477bfb5ef0">Our Values</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_0d3dfd3e2b094282b666843ca27918a0"><a href="#_0d3dfd3e2b094282b666843ca27918a0">Our Environment</a></li>
+                            <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_55263f0964f54943bbc732f5f3466319"><a href="#_55263f0964f54943bbc732f5f3466319">Our Community</a></li>
+        </ul>
+        <p class="pad"></p>
+    </div>
+</div>
+<div class="hero   lazy blue opacity-after-4" data-bg="/media/qy1nrd5x/csr.jpg?width=1920&height=840&quality=80&v=1db18c5b619ce10" id="_f77998428cca401cb4b80dd9ff817416">
+    <div class="hero-content">
+        <div class="hero-content-text">
+            <h1>Corporate Social Responsibility</h1>
+            <p class="intro  " >TISE is managed in a responsible and sustainable manner, supporting our transition to a low-carbon and sustainable economy</p>
+        </div>
+    </div>
+</div>
+<div class="textscrolltext mt-4" id="_83f9fff4b8324fc3aa2fbf477bfb5ef0">
+    <div class="textscrolltext-pin">
+        <div class="textscrolltext-pin-inner">
+            <div class="content-wrap">
+                <div class="rte">
+                    <h2>Corporate Sustainability</h2>
+<p>As part of our commitment to deliver a business model which is sustainable over the longer term, we are continuing to work toward our ambition of being Net Zero on Scope 1 and Scope 2 in our business operations by 2050. We have also committed to taking practical steps to minimise our Scope 3 (value chain) emissions, whilst offsetting any remaining Scope 3 emissions.</p>
+<p><a href="/media/qwdc1zg2/corporate-sustainability-statement-2026.pdf" title="Corporate Sustainability Statement 2026" class="btn">Sustainability Statement</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="textscrolltext-blocks">
+        
+<div class="content-wrap mb-6 box-bg" id="_6d90562bcd7640aaab4a77f24375e76b" style="">
+    <div class="rte narrow">
+        <h2>Our Business</h2>
+<h4>Built on a culture of responsiveness and innovation, TISE provides financial markets and securities services to companies globally.</h4>
+<p>TISE is best known as one of Europe’s major professional bond markets. Issuers choose TISE because the products are provided through an efficient and cost-effective service from a venue which is internationally recognised and operates to global standards. TISE attracts issuers from around the world, including companies operating across a spectrum of environmental, social and sustainable sectors, such as, education, healthcare, municipal infrastructure, social housing and renewable energy.</p>
+<p>We are a Partner Exchange of the United Nations’ Sustainable Stock Exchanges Initiative (UN SSE) and use feedback from our network to stay informed about industry developments and ensure that we retain our competitive edge. We work closely with our Listing Agents and Sponsors to deliver our market-leading listing service and have recently invested significantly in modernising our technology platform to help us deliver our services in a more efficient way.</p>
+<p>Further information about TISE is available on the&nbsp;<strong><a href="/company-profile/" title="Company Profile">Company Profile page</a></strong>.</p>
+<p>&nbsp;</p>
+<p><img src="/media/04enzamo/asset-1.svg?rmode=max&amp;height=500" alt="" width="485" height="500"></p>
+    </div>
+</div>
+    </div>
+</div><div class="imagescrolltext mb-4 rev" id="_0d3dfd3e2b094282b666843ca27918a0">
+    <div class="imagescrolltext-blocks">
+        
+<div class="content-wrap  box-bg" id="_71904a2b2be5404f8e45f1e48d779c86" style="">
+    <div class="rte wide">
+        <h2>Our Environment</h2>
+<h4>We are committed to being part of the sustainable capital markets ecosystem, both in terms of how we manage our business responsibly and facilitate capital flows into environmental, social and sustainable initiatives.</h4>
+    </div>
+</div><div class="content-wrap mt-2 mb-6 box-bg" id="_bef415dd524b4ce1885f2366555a6276" style="">
+    <div class="rte wide">
+        <p><strong>Supporting Sustainable Finance</strong></p>
+<p>TISE Sustainable is our comprehensive and reputable&nbsp;sustainable finance segment which facilitates the flow of&nbsp;capital into investments that promote environmental, social or&nbsp;sustainable activities.</p>
+<p>Since launching in 2021, sustainable and ESG-rated issuers, green bonds, sustainable bonds, sustainability-linked bonds and humanitarian catastrophe bonds have been admitted to TISE Sustainable.</p>
+<p>During 2025 we welcomed new admissions to the segment from: German real estate company D.V.I. Deutsche Vermogensund Immobilienverwaltungs GmbH which listed its inaugural EUR350 million green bond on TISE; and ContourGlobal Power Holdings S.A., which listed two green bonds (EUR500 million and USD510 million). At 31 December 2025, the total value of all listings on TISE supporting environmental, social and sustainable initiatives grew to £32.2 billion [31 December 2024: £25.7 billion], reflecting the continued increase in capital being allocated to these asset classes by a wide range of investor groups.</p>
+<p>We continue to engage with our network at a local and international level to ensure that we are at the forefront of thought leadership and innovative action focused on facilitating sustainable investment. Whilst we continue to list securities which are not within the sustainable sector, we remain mindful of the need to appropriately manage and support issuers and investors with their transition to a low carbon and sustainable economy.</p>
+<p>Further information is available on the <a href="/sustainable/" title="Sustainable">Sustainable page</a>.</p>
+<p><strong>Managing our Environmental Impact</strong></p>
+<p>We recognise the need to address climate change and will continue working to reduce the impact of our business operations on the environment. In 2023, we set out our Net- Zero targets and commitments focused on long-term value creation and preservation. Our target is to be Net-Zero on Scope 1 and 2 (operational) emissions by 2050. We have also committed to taking practical steps to minimise our Scope 3 (value chain) emissions, whilst offsetting any remaining Scope 3 emissions.</p>
+<p>To enable us to measure progress against our Net-Zero targets and commitments, TISE undertakes a data gathering and emissions benchmarking exercise each year. Our reported emissions footprints are shown in the graph below.</p>
+<p><img src="/media/ti1glenz/chart.svg?rmode=max&amp;width=500" alt="" width="500" height="354"></p>
+<p>The significant increase in the total reported emissions footprint in 2025 was due almost exclusively to an increase in long haul flights to the US. This reverses the position in 2024 where, measured on a like for like basis, our reported Scope 3 emissions fell substantially against the prior year due to a reduction in emissions from our data centres and IT hardware.&nbsp;</p>
+<p>Alongside our international business development activities, the acquisition of TISE by Miami International Holdings, Inc. in June 2025 is expected to result in a sustained increase in long haul business travel in future years. In addition to business travel, TISE’s Scope 3 reporting includes emissions from staff commuting and working from home, waste generation in our offices, data centres, IT hardware, promotional merchandise and client drinks receptions. In future years, as more data becomes available to us, we expect to continue to increase the breadth of our Scope 3 reporting.</p>
+<p>We offset our reported 2025 Scope 3 emissions by supporting a gold standard offset project in Bucharest, Romania which transforms aluminium scrap into new products using advanced recycling technology. The project reduces CO2 emissions, cuts landfill waste and provides social and economic benefits through long-term employment and training opportunities.</p>
+    </div>
+</div>
+    </div>
+    <div class="imagescrolltext-img lazy" data-bg="/media/khznncxo/sustainable.jpg?width=1200&height=1300&quality=80&v=1db18c52d571fb0"></div>
+</div><div class="imagescrolltext mb-6 " id="_dcbc447fdf4b44f5a36e0960dca2b52e">
+    <div class="imagescrolltext-blocks">
+        
+<div class="content-wrap  box-bg" id="_55263f0964f54943bbc732f5f3466319" style="">
+    <div class="rte wide">
+        <h2>Our Community</h2>
+<h4>As the operator of an international exchange and an active participant in the global capital markets, we connect and engage with a broad range of external stakeholders, both large and small.</h4>
+    </div>
+</div><div class="content-wrap mb-2 box-bg" id="_1204930bf1c14778ba2ae6807eb4a6e4" style="">
+    <div class="rte wide">
+        <p><strong>Providing Employment &amp; Development&nbsp;Opportunities</strong></p>
+<p>Our success is founded on the quality of our staff. TISE offers unique career opportunities and employs staff with a diverse range of skills and experience. Our internal Career Development Programme is designed to attract and develop talent and we make a significant investment in staff training and professional development to help our staff progress in their chosen careers.</p>
+<p>We are an equal opportunities employer and are committed to ensuring that all staff are treated fairly and with respect. Our employment policies follow best practice and, in so doing, ensure that staff are supported and protected in all aspects of their employment.</p>
+<p>Our health and well-being programme is designed to support our staff both inside and outside of the workplace. Alongside private health insurance and dental insurance, we offer staff an annual subsidy which they can put towards supporting their wellbeing, for example, gym membership or yoga classes.</p>
+<p>TISE supports a number of initiatives aimed at maintaining staff wellbeing, including Mental Health Awareness Week, and several staff have received training as Mental Health First Aiders and Safer Spaces Champions.</p>
+<p>Further information is available on the <a href="/company-profile/careers/" title="Careers">Careers page</a>.</p>
+<p><strong>Partnering with our Communities</strong></p>
+<p>Our Corporate Social Responsibility (CSR) programme helps us to support and engage with the communities in which our staff live and work. Each year staff choose a local community project or not-for-profit organisation to partner with and provide support through both fundraising and volunteering days. All funds raised by our staff through CSR activities are matched by TISE. Our selected charity of choice for 2026 is Dementia Friendly Guernsey, which raises awareness and provides support to people living with dementia.</p>
+<p>Last year we raised more than £16,000 for Guernsey Cheshire Home, a charity based in Guernsey which provides care and opportunities for people with serious physical difficulties. We also made smaller donations to charities providing similar services in Jersey and London.</p>
+<p>We were also pleased to support our communities by providing corporate sponsorship for the Guernsey men’s netball team, Guernsey women’s team netballer McKenzie Rich, Guernsey women’s team footballer Scarlett Kenneally, the Dolphin Discovery Trail, the Durrell Wildlife Conservation Trust Founder’s Ball, the Jersey International Air Display, and world championship sailor Andrew Bridgman.</p>
+    </div>
+</div>
+    </div>
+    <div class="imagescrolltext-img lazy" data-bg="/media/cpfmetl5/tise-sustainable-4-web-small.jpg?width=1200&height=1300&quality=80&v=1db18c58192d830"></div>
+</div><div class="dualcta dots blue opacity-before-9" data-bg="" id="_fb382ba6592145d09ac5d15817986580">
+    <div class="dualcta-content">
+            <div class="dualcta-content-item">
+                <h2>Careers</h2>
+                <p><p>Our success is founded in the quality of our staff. At TISE we have a true passion for providing the right support for our staff so that they can achieve their full potential.</p></p>
+                    <a class="btn mt-3 tracked white" href="/company-profile/careers/">
+                        <span>
+                            Careers
+                        </span>
+                    </a>
+            </div>
+            <div class="dualcta-content-item">
+                    <img src="/media/uazh5gpb/tise-sustainable-master-logo-green-white-nov-2021-15percent-96dpi.png" />
+                <h2></h2>
+                <p><p>Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.</p></p>
+                    <a class="btn mt-3 tracked white" href="/sustainable/">
+                        <span>
+                            Sustainable
+                        </span>
+                    </a>
+            </div>
+    </div>
+</div>
+		<div class="page-contact" data-scroll-progress="100" data-scroll-class="inline" data-scroll-target="#_f77998428cca401cb4b80dd9ff817416">
+			<div class="page-contact-inner">
+				<div class="page-contact-inner-img lazy" data-bg="/media/b4rfpqk4/emily-humphry-web.jpg?rxy=0.5484021155981814,0.3775&width=200&height=180&quality=80&v=1db18c5d07fec30">
+				</div>
+				<div class="page-contact-inner-detail">
+					<a href="/company-profile/meet-the-team/emily-humphry/">
+						<p>Contact</p>
+						<h4>Emily Humphry</h4>
+						<h5>Chief Governance Officer</h5>
+					</a>
+					<a class="ctc blue" href="tel:&#x2B;44 (0) 1481 753014">&#x2B;44 (0) 1481 753014</a>
+					<a class="ctc blue" href="mailto:emily.humphry@tisegroup.com">emily.humphry@tisegroup.com</a>
+				</div>
+			</div>
+		</div>
+
+        <footer class="footer articles">
+    <div class="footer-top">
+        <div class="content-wrap">
+                <h3>Latest Articles</h3>
+                <div class="footer-articles">
+                        <div class="footer-articles-item">
+                            <div class="footer-articles-item-inner">
+                                <p class="tag mid">Wednesday, 9 Sep 2026</p>
+                                <h4>Beyond bricks and mortar: Financing the intangible economy</h4>
+                                <p class="read"><a class="blue" href="/news/2026/beyond-bricks-and-mortar-financing-the-intangible-economy/">Read Article</a></p>
+                            </div>
+                        </div>
+                        <div class="footer-articles-item">
+                            <div class="footer-articles-item-inner">
+                                <p class="tag mid">Thursday, 13 Aug 2026</p>
+                                <h4>TISE Reports H1 2026 Listing Results; Sets Records for Total Number and Value of Listings</h4>
+                                <p class="read"><a class="blue" href="/news/2026/tise-reports-h1-2026-listing-results-sets-records-for-total-number-and-value-of-listings/">Read Article</a></p>
+                            </div>
+                        </div>
+                        <div class="footer-articles-item">
+                            <div class="footer-articles-item-inner">
+                                <p class="tag mid">Wednesday, 17 Jun 2026</p>
+                                <h4>Financing the next wave of global industry: Why bond markets matter</h4>
+                                <p class="read"><a class="blue" href="/news/2026/financing-the-next-wave-of-global-industry-why-bond-markets-matter/">Read Article</a></p>
+                            </div>
+                        </div>
+                </div>
+            <div class="footer-inner">
+                <div class="footer-inner-social">
+                        <a href="https://www.facebook.com/The-International-Stock-Exchange-106784734024704" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/the-international-stock-exchange/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/tisegroup" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/theinternationalstockexchange" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-inner-news">
+                    <a class="btn blue tracked" href="/subscribe/"><span>Subscribe to our email newsletters</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="locations">
+            <span>Dublin.</span>
+            <span>Guernsey.</span>
+            <span>Isle of Man.</span>
+            <span>Jersey.</span>
+            <span>London.</span>
+        </p>
+        <p class="address">
+            The International Stock Exchange Group Limited, PO&nbsp;Box&nbsp;623, Helvetia&nbsp;Court, 
+            Block&nbsp;B, 3rd&nbsp;Floor,
+            Les&nbsp;Echelons, St&nbsp;Peter&nbsp;Port, Guernsey&nbsp;GY1&nbsp;4PJ
+        </p>
+        <ul class="links">
+                <li><a href="/privacy-statement/">Privacy Statement</a></li>
+                <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+                <li><a href="/legal-and-regulatory/">Legal and Regulatory</a></li>
+                <li><a href="/complaints/">Complaints</a></li>
+                <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <p class="copyright">© The International Stock Exchange Group Limited 2026. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    </div>
+    
+    <script>
+        var navData = [{"Id":1814,"Name":"Listing","Title":"Listing","Copy":"We’re a leading stock exchange for listing a wide range of bonds and equities, with issuers attracted by our competitive fees and high quality, efficient service.  ","Url":"/listing/","HasGrandchildren":true,"Children":[{"Name":"Bonds","Url":"/listing/bonds/","Children":[{"Name":"High Yield Bonds","Url":"/listing/bonds/high-yield-bonds/"},{"Name":"Private Equity Debt","Url":"/listing/bonds/private-equity-debt/"},{"Name":"Securitisations","Url":"/listing/bonds/securitisations/"},{"Name":"Collateralised Loan Obligations (CLOs)","Url":"/listing/bonds/collateralised-loan-obligations-clos/"},{"Name":"Bond Programmes","Url":"/listing/bonds/bond-programmes/"},{"Name":"Aviation Finance","Url":"/listing/bonds/aviation-finance/"},{"Name":"Sukuks","Url":"/listing/bonds/sukuks/"},{"Name":"Defence","Url":"/listing/bonds/defence/"},{"Name":"Insurance Linked Securities (ILS)","Url":"/listing/bonds/insurance-linked-securities-ils/"},{"Name":"Bond Market Listing Rules","Url":"/listing/bonds/bond-market-listing-rules/"},{"Name":"Bond Market Listing Fees","Url":"/listing/bonds/bond-market-listing-fees/"}]},{"Name":"Equities","Url":"/listing/equities/","Children":[{"Name":"Funds","Url":"/listing/equities/funds/"},{"Name":"REITs","Url":"/listing/equities/reits/"},{"Name":"Specialist Companies","Url":"/listing/equities/specialist-companies/"},{"Name":"Trading Companies","Url":"/listing/equities/trading-companies/"},{"Name":"Equity Market Listing Rules","Url":"/listing/equities/equity-market-listing-rules/"},{"Name":"Specialist Companies Listing Rules","Url":"/listing/equities/specialist-companies-listing-rules/"},{"Name":"Equity Market Listing Fees","Url":"/listing/equities/equity-market-listing-fees/"}]}]},{"Id":1816,"Name":"Trading","Title":"Trading","Copy":"Our bespoke auction-based trading system, NOVA, combines choice and transparency to facilitate concentrated liquidity events.","Url":"/trading/","HasGrandchildren":false,"Children":[{"Name":"Trading Overview","Url":"/trading/trading-overview/","Children":[]},{"Name":"NOVA - TISE Trading System","Url":"/trading/nova-tise-trading-system/","Children":[]}]},{"Id":1819,"Name":"Sustainable","Title":"Sustainable","Copy":"Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.","Url":"/sustainable/","HasGrandchildren":false,"Children":[]},{"Id":1820,"Name":"Market","Title":"Market","Copy":"We have 2,600+ issuers from over 40+ countries listing 4,500+ bonds and equity securities on our market.","Url":"/market/","HasGrandchildren":false,"Children":[{"Name":"Market Overview","Url":"/market/market-overview/","Children":[]},{"Name":"Listed Securities","Url":"/market/securities/","Children":[]},{"Name":"Market News","Url":"/market/news/","Children":[]},{"Name":"Trade Price Data","Url":"/market/trade-price-data/","Children":[]}]},{"Id":1824,"Name":"Membership","Title":"Membership","Copy":"Becoming a Member is simple. We already serve international firms who benefit from being able to facilitate listing or trading on our market.","Url":"/membership/","HasGrandchildren":false,"Children":null},{"Id":1826,"Name":"Why TISE?","Title":"Why TISE","Copy":"TISE stands out from the crowd because of our culture of responsiveness and innovation.","Url":"/why-tise/","HasGrandchildren":false,"Children":[]},{"Id":-1,"Name":"About TISE","Special":true,"Copy":"","Url":"","HasGranndchildren":false,"Children":[{"Name":"Company Profile","Url":"/company-profile/"},{"Name":"Meet the Team","Url":"/company-profile/meet-the-team/"},{"Name":"News","Url":"/news/"},{"Name":"Careers","Url":"/company-profile/careers/"},{"Name":"CSR","Url":"/company-profile/corporate-social-responsibility/"},{"Name":"Business Days","Url":"/business-days/"},{"Name":"Contact","Url":"/contact/"}]}]
+    </script>
+    <script src="/main.js?v=zsdbg3c"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"965014478cea41e1bb80cae092c8f988","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
