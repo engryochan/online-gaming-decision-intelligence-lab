@@ -1,0 +1,9 @@
+﻿environment,endpoint,layer,result,evidence,status
+container,unstats.un.org,DNS,FAIL,gaierror Errno -3,VERIFIED_LOCAL
+container,www.gleif.org,DNS,FAIL,gaierror Errno -3,VERIFIED_LOCAL
+container,api.gleif.org,DNS,FAIL,gaierror Errno -3,VERIFIED_LOCAL
+container,www.google.com,DNS,FAIL,gaierror Errno -3,VERIFIED_LOCAL
+web_reader,unstats.un.org/unsd/classifications/Econ/isic,HTML,PASS,HTML page fetched,VERIFIED_REMOTE
+web_reader,ISIC_Rev_5_english_structure.csv,CSV_ATTACHMENT,UNSUPPORTED_MIME,application/octet-stream,VERIFIED_REMOTE
+web_reader,ISIC5_Exp_Notes_19_Aug_2026.xlsx,XLSX_ATTACHMENT,UNSUPPORTED_MIME,XLSX MIME,VERIFIED_REMOTE
+web_reader,api.gleif.org/api/v1/lei-records,API,INCONCLUSIVE,reader not accessible,NOT_VERIFIED
