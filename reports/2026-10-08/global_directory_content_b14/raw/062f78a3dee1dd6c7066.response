@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="https://www.nsx.com.au/" target="_self">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Official site of the National Stock Exchange of Australia, the market of choice for innovative and growth style Australian and International companies.">
+		<meta name="keywords" content="NSX, equities, company floats, IPO, investing, brokers, listed companies, stock exchange, Newcastle NSW">
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="manifest" href="/webmanifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		
+		
+		<link rel="alternate" type="application/rss+xml" title="NSX Company Announcements" href="/ftp/rss/nsx_rss_announcements.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Exchange News" href="/ftp/rss/nsx_rss_news.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Floats" href="/ftp/rss/nsx_rss_floats.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Official List" href="/ftp/rss/nsx_rss_officiallist.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Weekly Diary" href="/ftp/rss/nsx_rss_diary.xml">
+		<link rel="alternate" type="application/rss+xml" title="NSX Prices Table" href="/ftp/rss/nsx_rss_prices.xml">
+		<title>listing rules</title>
+	 <!-- link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7/js/carousel.js"></script>
+		<link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.17.custom.css" type="text/css" media="all">
+		
+		
+		<script type="text/javascript" src="/js/alljavascript.js"></script>
+		<script type="text/javascript" src="/js/header.js.asp"></script>
+		<script type="text/javascript" src="/js/jquery.validate.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('.noAutoComplete').attr('autocomplete', 'off');
+		
+		});
+			
+		String.prototype.toTitleCase = function(){
+			var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
+			return this.replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function(match, index, title){
+				if (index > 0 && index + match.length !== title.length &&
+					match.search(smallWords) > -1 && title.charAt(index - 2) !== ":" &&
+					(title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') &&
+					title.charAt(index - 1).search(/[^\s-]/) < 0) {
+					return match.toLowerCase();
+				}
+				if (match.substr(1).search(/[A-Z]|\../) > -1) {
+					return match;
+				}
+				return match.charAt(0).toUpperCase() + match.substr(1);
+			});
+		};
+		</script>
+		<script type="text/javascript" src="/js/jquery.lightbox.js"></script>
+		<script type="text/javascript" src="/js/cms_page.js"></script>
+		
+
+        <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+		
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-10NQNQEF99"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-10NQNQEF99', {
+  cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+		
+		<script>
+		$(document).ready(function() {
+			$("#topnavul li.dropdown").mouseover(function() {
+				$("#topnav").addClass("blue-back");
+			}).mouseout(function() {
+				$("#topnav").removeClass("blue-back")
+			});
+			$('#topnavul li.dropdown').on('shown.bs.dropdown', function () {
+				if ( window.innerWidth < 991 ){
+					window.scrollTo(0, $(this).offset().top );
+				}
+			})
+			$('#topsearch .topsearch-toggle').click(function() {
+				$('#nsx-primary-nav').toggleClass('topsearch-open');
+			});
+			$('#topsearch').on('hide.bs.dropdown', function(){
+				if ( $('#nsx-primary-nav').hasClass('topsearch-open') ){
+					$('#nsx-primary-nav').removeClass('topsearch-open');
+				}
+			});
+
+            $("#searchbox").autocomplete("../default_search2.asp", {
+    	        width: 231,
+    	        selectFirst: false,
+    	        cacheLength: 0
+            }); 
+		});
+			</script>
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-default topnav" role="navigation" id="topnav">
+			<div class="container">
+				
+				<!-- nav -->
+				<div class="navbar-header">
+					<a class="toplogo" href="/"><div class="nsx-logo-new" ></div></a>
+					
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nsx-primary-nav" aria-expanded="false">
+						<i class="fa fa-align-right fa-lg" aria-hidden="true"></i>
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="nsx-primary-nav">
+					<ul class="nav navbar-nav" id="topnavul">
+						<li class="dropdown ">
+							<a href="/listing/">LISTING</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Listing menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="sub-nav horizontal">
+										<li><a href="/listing/why-list-with-us/">Why List with Us</a></li>
+										<li><a href="/listing/how-to-list/">How to List</a></li>
+										<li><a href="/listing/getting-started/">Getting Started</a></li>
+										<li><a href="/listing/nominated-adviser/">Nominated Adviser</a></li>
+										<li><a href="/listing/trading-models/">Trading Models</a></li>
+                                        <li><a href="/regulation/companies/company-fees/">Fees</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown  ">
+							<a href="/investing/">INVESTING</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Investing menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="sub-nav horizontal">
+										<li><a href="/investing/upcoming-listings/">Upcoming Listings</a></li>
+										<li><a href="/investing/recent-listings/">Recent Listings</a></li>
+										<li><a href="/investing/broker-directory/">Broker Directory</a></li>
+										<li><a href="/regulation/exchange/settlement/">Settlement</a></li>
+										<li><a href="/regulation/exchange/trading-hours-and-calendar/">Trading Hours &amp; Calendar</a></li>
+										<li><a href="/investing/security-types/">Security Types</a></li>
+									
+                                        <!-- li><a href="/investing/research/">Research</a></li -->
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown ">
+							<a href="/marketdata/">MARKET DATA</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Market Data menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="sub-nav horizontal">
+										<li><a href="/marketdata/official-list/">Official List</a></li>
+										<li><a href="/marketdata/market-summary/">Market Summary</a></li>
+										<li><a href="/marketdata/prices/">Prices</a></li>
+										<li><a href="/marketdata/announcements/">Announcements</a></li>
+										<li><a href="/marketdata/statistics/">Statistics</a></li>
+										<li><a href="/marketdata/daily-diary/">Daily Diary</a></li>
+										<li><a href="/marketdata/delisted-suspended/">Delisted &amp; Suspended</a></li>
+										<li><a href="/investing/indices/">Indices</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown active">
+							<a href="/regulation/">REGULATION</a>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Regulation menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container">
+									<ul class="row sub-nav vertical">
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/regulation/companies/listing-rules/">COMPANIES</a></h4>
+											<ul>
+												<li><a href="/regulation/companies/listing-rules/">Listing Rules &amp; Practice Notes</a></li>
+												<li><a href="/regulation/companies/company-forms/">Forms</a></li>
+												<li><a href="/regulation/companies/company-fees/">Fees</a></li>
+												<li><a href="/regulation/companies/waivers/">Waivers</a></li>
+												<li><a href="/regulation/companies/reporting-calendar/">Reporting Calendar</a></li>
+											</ul>
+										</li>
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/regulation/brokers/business-rules/">BROKERS</a></h4>
+											<ul>
+												<li><a href="/regulation/brokers/business-rules/">Business Rules &amp; Practice Notes</a></li>
+												<li><a href="/regulation/brokers/broker-forms/">Forms</a></li>
+												<li><a href="/regulation/brokers/broker-fees/">Fees</a></li>
+												<li><a href="/regulation/brokers/market-access/">Market Access</a></li>
+												<li><a href="/regulation/brokers/broker-supervision/">Broker Supervision</a></li>
+												<li><a href="/investing/broker-directory/">Broker Directory</a></li>
+											</ul>
+										</li>
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/listing/nominated-adviser/">ADVISERS</a></h4>
+											<ul>
+												<li><a href="/regulation/advisers/adviser-forms/">Forms</a></li>
+												<li><a href="/regulation/advisers/adviser-fees/">Fees</a></li>
+												<li><a href="/listing/adviser-list/">Adviser Directory</a></li>
+											</ul>
+										</li>
+										<li class="col-xs-12 col-sm-6 col-md-3">
+											<h4><a href="/regulation/exchange/market-supervision/">EXCHANGE</a></h4>
+											<ul>
+												<li><a href="/regulation/exchange/trading-codes/">Trading Codes</a></li>
+												<li><a href="/regulation/exchange/trading-hours-and-calendar/">Trading Hours &amp; Calendar</a></li>
+												<li><a href="/regulation/exchange/settlement/">Settlement</a></li>
+												<li><a href="/regulation/exchange/market-supervision/">Market Supervision</a></li>
+												<li><a href="/regulation/exchange/connectivity/">Connectivity</a></li>
+												<li><a href="/regulation/exchange/complaints/">Complaints</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						
+						
+						<li class="dropdown">
+							<span class="login-item" tabindex="0"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</span>
+							<button data-toggle="dropdown" aria-expanded="false">
+								<i class="fa fa-plus open" aria-hidden="true"></i>
+								<i class="fa fa-minus close" aria-hidden="true"></i>
+								<span class="sr-only">Toggle Login menu</span>
+							</button>
+							<div class="dropdown-menu">
+								<div class="container" id="lin"></div>
+							</div>
+						</li>
+						
+					</ul>
+
+					<div class="navbar-form topsearch dropdown" id="topsearch">
+						<button class="topsearch-toggle" data-toggle="dropdown" aria-expanded="false">
+							<i class="fa fa-search fa-lg open" aria-hidden="true"></i>
+							<i class="fa fa-times fa-lg close" aria-hidden="true"></i>
+							<span class="sr-only">Toggle search</span>
+						</button>
+						<div class="topsearch-form dropdown-menu" id="nsx-primary-nav-search">
+							<form class="form" role="search" id="marketsearch" name="marketsearch" action="search.asp" method="get">
+								<input name="id" type="hidden" id="id">
+								<input name="t" type="hidden" id="t">
+								<div class="input-group">
+									<div class="input-group-input">
+										<input type="text" class="form-control" id="searchbox" name="q" value="" placeholder="Company code or name">
+									</div>
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-primary" onclick="$('#marketsearch').submit()">Search</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div><!-- /nav .navbar-collapse -->
+			</div>
+		</nav>
+
+<div class="subnav-cont  " style="border:none;background:none;">
+<div class="container">
+
+
+<div class="row subnav-holder"><div class="col-sm-8 breadcrumb-nav"><ol class="breadcrumb">
+    <li><a href="/">home</a></li>
+    <li><a href="/regulation/">Regulation</a></li>
+    <li><a href="/regulation/companies/listing-rules/">Companies</a></li>
+
+    
+    <li><a href="/regulation/companies/listing-rules/">listing rules</a></li>
+</ol></div></div>
+
+
+
+
+
+
+
+</div><!-- /row --> 
+</div><!-- /container -->
+</div><!-- /subnav cont -->
+
+<div class="hero-banner subpage ">
+    <div class="hero-banner-img">
+       
+        
+            <img src="images/banners/compfees_hero_banner.jpg" />
+			        
+    </div>
+    <div class="container hero-banner-cont">
+        <div class="container hero-banner-content-holder subpage">
+            <div class="col-sm-12 hero-banner-left">
+                
+					<h1>listing rules</h1>
+                
+            </div>
+        </div>
+    </div>
+</div><!-- /hero-banner -->
+
+
+<div class="subnav-cont content-page-cont">
+<div class="container">
+<div class="row"><div class="col-sm-12 leftnav"><div class="subpage-subnav content-page-subnav">
+<ul class="side-bar-menu">
+    <li><a class="active" href="/regulation/companies/listing-rules/">Listing Rules &amp; Practice Notes</a></li>
+    <li><a href="/regulation/companies/company-forms/">Company Forms</a></li>
+    <li><a href="/regulation/companies/company-fees/">Fees</a></li>
+    <li><a href="/regulation/companies/waivers/">Waivers</a></li>
+    <li><a href="/regulation/companies/reporting-calendar/">Reporting Calendar</a></li>
+    
+</ul>
+</div></div></div>
+</div><!-- /row -->
+</div><!-- /container -->
+</div><!-- /subnav cont -->
+
+
+<div class="container subpage main-content">
+
+    
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="subpage-center">
+                    <div class="prop min600px"></div>
+                    <div class="editarea"><h2>Listing Rules</h2>
+<p>NSX Listing Rules are used by NSX listed entities and it is recommended that they are read in conjuction with NSX's Practice Notes.</p>
+<div class="f-w-table">
+<table>
+    <tbody>
+        <tr class="sub-header">
+            <td align="left">Document</td>
+            <td style="text-align: center;">For Issuers</td>
+            <td width="65">Type</td>
+            <td width="90">Open</td>
+        </tr>
+        <tr class="alt">
+            <td align="left">NSX Market Listing Rules - Effective Date 4 July 2018</td>
+            <td style="text-align: center;">All</td>
+            <td width="65">
+            <p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p>
+            </td>
+            <td width="90"><a class="btn-blue small" href="/documents/listing_rules/NSX-Listing-Rules.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td align="left">Operating Rule Definitions - Effective Date 23 November 2020</td>
+            <td style="text-align: center;">All</td>
+            <td width="65">
+            <p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p>
+            </td>
+            <td width="90"><a class="btn-blue small" href="/documents/listing_rules/NSX-Operating-Rules-Definitions.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td align="left">Sample NSX Compliant Constitution</td>
+            <td style="text-align: center;">All</td>
+            <td width="65">
+            <p class="fa fa-1x fa-color-rust fa-file-word">&nbsp;</p>
+            </td>
+            <td width="90"><a class="btn-blue small" href="/documents/issuers/NSX%20Standard%20Company%20Constitution.doc" target="_blank">Open</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<h2>Practice Notes</h2>
+<p>NSX issues practice notes to promote commercial certainty, reduce costs to business and assist market participants. As a practice note is only a guide to NSX practice, issuers are advised to contact NSX to discuss their particular circumstances and the application of the listing rules.</p>
+<p>NSX may replace practice notes at any time. Issuers should contact NSX to ensure they have the latest version of a practice note.</p>
+<p>NSX cannot give legal advice to issuers and recommends that they consider taking advice from a qualified <a href="/listing/nominated-adviser/">Nominated Adviser</a>.</p>
+<div class="f-w-table">
+<table>
+    <tbody>
+        <tr class="sub-header">
+            <td width="30">Note</td>
+            <td align="left">Document</td>
+            <td width="65">Type</td>
+            <td width="90">Open</td>
+        </tr>
+        <tr class="alt">
+            <td width="30">1</td>
+            <td align="left">Issuer Fees</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN01-ListingFees.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">2</td>
+            <td align="left">Trading, Business &amp; Settlement Day Calendar | <a href="/regulation/exchange/trading-hours-and-calendar/">Previous&nbsp;Calendars</a></td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN02-TradingDays2026.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30" style="vertical-align:bottom;">3</td>
+            <td align="left" style="vertical-align:bottom;">Reporting of Mineral Resources and Oil Reserves - JORC 2012 Standard</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90" style="vertical-align:bottom !important;"><a class="btn-blue small" href="/documents/practice_notes/PN03-JORC2021.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">4</td>
+            <td align="left">Waiver Requests &amp; Procedures</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN04-Waivers.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">5</td>
+            <td align="left">Investor Compensation Arrangements</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN05-CompensationArrangements.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">6</td>
+            <td align="left">Continuous Disclosure</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN06-ContinuousDisclosure.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">7</td>
+            <td align="left">Wholesale Securities - Trading &amp; Procedures</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN07-WholesaleSecurities.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">8</td>
+            <td align="left">Sugar Terminals Limited - Trading &amp; Procedures<br />
+            <a href="/documents/practice_notes/SUG-RegistryConfirmationForm.pdf" target="_blank">Sugar Terminals Registry Confirmation Form</a> | <a href="/documents/practice_notes/STL-MemberStatusDeclaration(Growers).pdf" target="_blank">Sugar Terminals Member Status Declaration Form</a></td>
+            <td width="65">
+            <p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p>
+            </td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN08-SugarTerminals.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">9</td>
+            <td align="left">Periodic Disclosure Obligations</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN09-PeriodicDisclosure.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">10</td>
+            <td align="left">Multiple Listed Issuers</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN10-MultipleListedIssuers.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">11</td>
+            <td align="left">Foreign Issuers</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN11-ForeignIssuers.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">12</td>
+            <td align="left">Restricted Securities</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN12-RestrictedSecurities.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">13</td>
+            <td align="left">Settlement of Certificated Securities</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN13-CertificatedSecurities.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">14</td>
+            <td align="left">Corporate Governance Disclosure in Annual Reports</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN14-CorporateGovernance.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">15</td>
+            <td align="left">Disciplinary Panels</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN15-DisciplinaryPanels.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">16</td>
+            <td align="left">Property Issuers - Trading Windows</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN16-TradingWindows.pdf">Open</a></td>
+        </tr>
+        <tr class="alt">
+            <td width="30">17</td>
+            <td align="left">CHESS Settlement - Primary Market Facility</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN17-Primary Market Facility.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">18</td>
+            <td align="left">Timetables</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN18-Timetables.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">19</td>
+            <td align="left">Automated Order Processing</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN19-Automated Trading.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">20</td>
+            <td align="left">Suitability for Listing</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN20-Suitability for Listing.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">21</td>
+            <td align="left">Suspended Securities</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN21-Suspended Securities.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">22</td>
+            <td align="left">Nominated Advisers</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN22-Nominated Advisers.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">23</td>
+            <td align="left">Trade Acceptance Service</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN23-Trade Acceptance Service.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">24</td>
+            <td align="left">Anomalous Order Thresholds, Extreme Trade Ranges &amp; the NSX Trade Cancellation Policy</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN24-AOT ETR And Trade Cancellations.pdf" target="_blank">Open</a></td>
+        </tr>
+        <tr>
+            <td width="30">25</td>
+            <td align="left">Reporting of Transactions executed outside of the NSX Order Book</td>
+            <td width="65"><p class="fa fa-1x fa-color-rust fa-file-pdf">&nbsp;</p></td>
+            <td width="90"><a class="btn-blue small" href="/documents/practice_notes/PN25-Reporting of Transactions.pdf" target="_blank">Open</a></td>
+        </tr>
+    </tbody>
+</table>
+</div></div>
+                </div>
+            </div>
+        <div style="clear:both;"></div>
+        </div> 
+
+    
+  
+</div>
+<!-- begin footer -->
+
+</div><!-- /end container -->
+
+<footer class="footer">
+    <div class="subfooter-back">
+        <div class="container subfooter-cont">
+            <div class="row">
+              
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-col4">
+                              	       
+              	 <a href="/"><img src="images/nsx_logo_inverted.svg" height="auto" width="80%" aria-hidden="true"></a></br>
+					<div class="socials-title"><p style="font-weight:500;">Connect with NSX</p></div>
+					<div class="socials-icons fa-2x"  >						
+					   <a href="https://www.linkedin.com/company/nsxa/" target="_blank" title="Linkedin feed"  class="NoDecoration">
+							<i aria-hidden="true" class="fa fa-linkedin-square"></i>
+					</a>
+					&nbsp;
+                   <a href="https://www.youtube.com/@TickerTalkPodcast" target="_blank" title="youtube podcast" class="NoDecoration" >
+							<i aria-hidden="true" class="fa fa-youtube-play"></i>
+					</a>
+															&nbsp;
+					   <a href="https://www.instagram.com/tickertalkpodcast" target="_blank" title="instagram podcast" class="NoDecoration">
+							<i aria-hidden="true" class="fa fa-instagram"></i>
+					</a>
+					&nbsp;
+					   <a href="https://www.facebook.com/people/Ticker-Talk/61584190927809" target="_blank" title="facebook podcast" class="NoDecoration">
+							<i aria-hidden="true" class="fa fa-facebook-square" ></i>
+					</a>
+
+					</div>
+                   
+		        </div>
+			              
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-col2">
+                    <h3><a href="/listing/why-list-with-us/">NSX MARKET</a></h3>
+                     <ul class="sub-footer-links">
+                         <li><a href="/listing/why-list-with-us/">Why List with Us</a></li>
+                         <li><a href="/listing/getting-started/">Getting Started</a></li>
+						 <li><a href="/marketdata/official-list/">Official List</a></li>
+                         <li><a href="/investing/upcoming-listings/">Upcoming Listings</a></li>
+                         <li><a href="/investing/recent-listings/">Recent Listings</a></li>
+                     </ul>
+                     <div class="clearfix"></div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-col3">
+					<h3><a href="/about/our-business/">ABOUT NSX</a></h3>
+                    <ul class="sub-footer-links">
+                        <li><a href="/about/our-business/">Our Business</a></li>
+                        <li><a href="/about/governance/">Governance</a></li>
+                        <!--  li><a href="/about/investor-relations/">Investor Relations</a></li -->
+                        <li><a href="/about/media-centre/">Media Centre</a></li>
+                        <li><a href="/about/contact-us/">Contact us</a></li>
+                        <li><a href="/regulation/exchange/complaints/">Complaints</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>				
+				 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-col1">
+				 <h3><a href="/listing/why-list-with-us/">List with the NSX</a></h3><p class="sub-footer-links ">Contact the Business Development team and arrange a time to discuss your business.</p>
+                    <div class="footer-listing-box"> 
+              	        <div class="footer-listing-button">
+					        <button id="request-btn-2" href="https://au.bigin.online/national_stock_exchange/forms/nsx-listing-kit-request" class="btn btn-default"  onclick="location.href='https://au.bigin.online/national_stock_exchange/forms/nsx-listing-kit-request';" >Request Listing Kit</button>   
+					        </div>
+                    </div>
+		        </div>
+		 <div class="clearfix"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container lower-footer">
+        <div class="row">
+            <div class="footer-bottom-cont">
+                <div class="col-sm-8 footer-left">
+                    <span>&copy; Copyright 2026&nbsp;</span><span>National Stock Exchange of Australia Limited</span> <span class="spacer"><i style="display:none;">-</i>ABN 11 000 902 063</span>
+                </div>
+                <div class="col-sm-4 footer-right">
+                    <a href="/privacy">Privacy</a> <a href="/legal">Legal</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+	
+</body>
+</html>

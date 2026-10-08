@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>globalCOAL - Bespoke Cargo Brokerage</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="application/octet-stream" >
+	<meta http-equiv="Content-Disposition" content="attachment" >
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="As well as online trading, globalCOAL offers a fully bespoke brokerage service for non-standardised physical coal cargoes." /> <meta name="keywords" content="Bespoke coal cargo brokerage" />
+	<link rel="shortcut icon" href="/images/faviconOr.ico" />
+
+	<link type="text/css" rel="stylesheet" href="https://www.globalcoal.com/css/jquery-ui.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="https://www.globalcoal.com/css/jquery-ui.structure.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="https://www.globalcoal.com/css/jquery-ui.theme.min.css" media="screen,projection" />
+
+	<link type="text/css" rel="stylesheet" href="https://www.globalcoal.com/css/gcDigital.css?v=1.6" media="all" />
+    <!--[if IE]> --->
+		<link type="text/css" rel="stylesheet" href="https://www.globalcoal.com/css/ie.css" media="screen,projection" />
+	<!--[endif]-->
+	<script src="https://use.typekit.net/ulg1rkz.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script type="text/javascript" src="https://www.globalcoal.com/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="https://www.globalcoal.com/js/core.js?v=1.1"></script>
+	<script type="text/javascript" src="https://www.globalcoal.com/js/intlTelInput-jquery.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script type="text/javascript" src="https://www.innovative-astute.com/js/797970.js" ></script>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WT3XJQ25');</script>
+<!-- End Google Tag Manager -->
+
+	<script type="text/javascript" language="JavaScript">
+		
+		   var jsHomeURL = "https://www.globalcoal.com";
+;
+		
+	 </script>
+
+	<script type="text/javascript" src="https://www.globalcoal.com/js/jquery-ui.min.js"></script>
+<script>
+	$(function(){
+    	$( ".accordion" ).accordion({
+    		collapsible: true,
+    		heightStyle: "content",
+    		active: false,
+    		activate: function( event, ui ) {
+        		if(!$.isEmptyObject(ui.newHeader.offset())) {
+        		    $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top }, 'fast');
+        		}
+    		}
+    	});
+  });
+</script>
+
+	<script src="https://www.globalcoal.com/js/consent.js" type="text/javascript" charset="UTF-8"></script>
+
+<script type="text/javascript">
+
+function OptanonWrapper() { }
+
+</script>
+	<script>
+	var $buoop = {vs:{i:10,f:-4,o:-4,s:8,c:-4},mobile:false,api:4}; 
+	function $buo_f(){ 
+	 var e = document.createElement("script"); 
+	 e.src = "//browser-update.org/update.min.js"; 
+	 document.body.appendChild(e);
+	};
+	try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+	catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+<script type="text/javascript">
+	(function() {
+		window.siqConfig = {
+			engineKey: "d356937f3e6a471aa1099cd496ff4ef5"
+		};
+		window.siqConfig.baseUrl = "//pub.searchiq.co/";
+		var script = document.createElement("SCRIPT");
+		script.src = window.siqConfig.baseUrl + '/js/container/siq-container-2.js?cb=' + (Math.floor(Math.random()*999999)) + '&engineKey=' + siqConfig.engineKey;
+		script.id = "siq-container";
+		document.getElementsByTagName("HEAD")[0].appendChild(script);
+	})();
+</script>
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'ENPM8';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};g.event=function(i,v){g('event',{n:i,p:v})};
+    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+    g.consent=function(a){g("consent",!arguments.length||a)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+
+var user_FS = 0;
+if(user_FS !== 0){
+	FS.identify('0', {
+	  displayName: ' ',
+	  email: '',
+	  // TODO: Add your own custom user variables here, details at
+	  // http://help.fullstory.com/develop-js/setuservars
+	  reviewsWritten_int: 14,
+	});
+}
+</script>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT3XJQ25"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<noscript><img src="https://www.innovative-astute.com/797970.png" style="display:none;" /></noscript>
+	<div id="overlay"></div>
+	<div id="bgcontainer">
+	<header class="header">
+		<a href="#content" accesskey ="k" class="full-hide">Skip to content</a>
+		<a href="#main-nav" class="full-hide">Skip to main navigation</a>
+		<a href="#sideNav" accesskey="n" class="full-hide">Skip to side navigation</a> 
+		<a href="https://www.globalcoal.com/login/" accesskey="4" class="full-hide">Login</a>
+		<div class="top-nav">
+			<div class="mobile-nav-button">
+				<div id="nav-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+				<div class="logo"><a href="https://www.globalcoal.com" accesskey="z"><img src="https://www.globalcoal.com/images/gC-logo.svg" /></a></div>
+				<div class="search-cont" style="padding-top: 15px;">
+					<div class="search"><a id="search"><img src="https://www.globalcoal.com/images/search-icon.svg" /></a></div>
+					<div class="search-box" id="search-form">
+						<form id="siq_searchForm" action="https://www.globalcoal.com/utilities/search.cfm">
+  							<input name="s" size="75" type="text" placeholder="Search globalCOAL"/>
+  							<button class="search_button" id="q_button" alt="Search"></button>
+						</form>
+					</div>
+				</div>	
+				<div class="hp-account">
+					<div style="width:max-content;" class="login-box top-pad"><a href="https://www.globalcoal.com/login/" class="btn-prim_two login-but" style="background:transparent;border-style:solid;border-width:thin;">Client Login</a>&nbsp;&nbsp;&nbsp;<a href="https://www.globalcoal.com/enquire.cfm" style="border-width:thin; border-style:solid; border-color:#ec6806;" class="btn-spn-prim_one login-but">Contact us</a></div>
+					<div class="cb"></div>
+					
+				</div>
+				<nav class="top-menu" style="width:400px; margin-right:65px;">
+					<ul>
+						<li><a href="https://www.globalcoal.com/about/about.cfm">About</a></li>
+						<li><a href="https://www.globalcoal.com/news-events/news.cfm" accesskey ="5">News &amp; Events</a></li>
+						
+						
+					</ul>
+				</nav>
+		</div>
+		<nav class="mobile-nav-container">
+			<div class="mobile-search-box">
+				<form id="searchbox_008097192820605844629:3imwvvucjdm" action="https://www.globalcoal.com/utilities/search.cfm">
+					<input value="008097192820605844629:3imwvvucjdm" name="cx" type="hidden"/>
+					<input id="q" name="q" size="75" type="text" placeholder="Search globalCOAL"/>
+					<button class="search_button" id="q_button" alt="Search"></button>
+				</form>
+			</div>
+				
+			<ul class="mobile-nav">
+				
+					<li><a href="https://www.globalcoal.com/login/">Login</a></li>
+				
+				<li class="cPrices" id="coalP"><a>Coal Prices</a>
+					<ul id="cpSub">			
+						<li><a href="https://www.globalcoal.com/coalprices/" accesskey="1">Coal Price Data</a>
+							<ul>
+								<li><a href="https://www.globalcoal.com/coalprices/newcindex.cfm">The NEWC Index</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/newcindexmethodology.cfm">NEWC Index Methodology</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/publicationcalendar.cfm?iType=2">NEWC Index Publication Calendar</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/rbindex.cfm">The RB &amp; DES ARA Index</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/rbindexmethodology.cfm">gC RB Index Methodology</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/desaraindexmethodology.cfm">DES ARA Index Methodology</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/publicationcalendar.cfm?iType=2">gC RB and DES ARA Index Publication Calendar</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/IndoIndex.cfm">The INDO Index</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/publicationcalendar.cfm?iType=4">INDO Index Publication Calendar</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/metmarketdata.cfm">Met Coal Market Data</a></li>		
+								<li><a href="https://www.globalcoal.com/coalprices/marketroundup.cfm">Market Round-Up</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/closingcurves.cfm">Closing Curves</a></li>
+								
+								<li><a href="https://www.globalcoal.com/coaltrading/compliancestatements.cfm">Compliance Statements</a></li>
+								<li><a href="https://www.globalcoal.com/coalprices/indexgovernance.cfm">Index Governance</a></li>
+							</ul>
+						</li>
+						<li><a href="https://www.globalcoal.com/coalprices/coalmarketreport.cfm">Coal Market Report</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/delayedpricefeed.cfm">Delayed Price Feed</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/realtimepricefeed.cfm">Real-time Prices</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/historicalindices.cfm">Historical Indices</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/ourlicensingmodel.cfm">Our Licensing Model</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/requirements.cfm">UK Benchmarks Regulation </a> </li>
+					</ul>
+					
+				</li>
+				<li class="mSCoTA" id="mSTC"><a>Standard Trading Contract</a>
+					<ul id="scSub">
+						
+						
+	<li><a href="https://www.globalcoal.com/scota/aboutscota.cfm">About SCoTA</a></li>
+	<li><a href="https://www.globalcoal.com/scota/specifications.cfm">SCoTA Specifications and Definitions</a></li>
+	<li><a href="https://www.globalcoal.com/scota/licensedusers.cfm">Licensed Entities</a></li>
+	<li><a href="https://www.globalcoal.com/scota/scotatraining.cfm">SCoTA Training</a></li>
+
+					</ul>
+				</li>
+				<li  class="cTrading" id="coalT"><a>Coal Trading</a>
+					<ul id="ctSub">
+						<li><a href="https://www.globalcoal.com/coaltrading/tradingwithglobalcoal.cfm">Trading with globalCOAL</a>
+						<ul>
+							<li><a href="https://www.globalcoal.com/coaltrading/thermalcoaltrading.cfm">Thermal Coal Trading</a></li>
+							<li><a href="https://www.globalcoal.com/coaltrading/metallurgicalcoaltrading.cfm">Metallurgical Coal Trading</a></li>
+							<li><a href="https://www.globalcoal.com/coaltrading/financialcoaltrading.cfm">Financial Coal Trading</a></li>
+							<li><a href="https://www.globalcoal.com/coaltrading/howitworks.cfm">How it works</a></li>
+							<li><a href="https://www.globalcoal.com/coaltrading/joiningglobalcoal.cfm">Joining globalCOAL &amp; fees</a></li>
+						</ul>
+						</li>
+						<li><a href="https://www.globalcoal.com/coaltrading/bespokecargobrokerage.cfm">Bespoke Cargo Brokerage</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/ourtradingcommunity.cfm">Our Trading Community</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/compliancestatements.cfm">Compliance Statements</a></li>
+					</ul>
+				</li>
+				<li class="mAbot mobile-grey" id="mAbout"><a>About</a>
+					<ul id="abSub">
+						<li><a href="https://www.globalcoal.com/about/about.cfm">About the company</a></li>
+						<li><a href="https://www.globalcoal.com/about/whatwedo.cfm">What we do</a></li>
+						<li><a href="https://www.globalcoal.com/enquire.cfm">Contact Us</a></li>
+						<li><a href="https://www.globalcoal.com/about/ourpeople.cfm">Our people</a></li>
+						<li><a href="https://www.globalcoal.com/about/careers.cfm">Careers</a></li>
+					</ul>
+				</li>
+				<li class="mNew mobile-grey" id="mNews"><a>News &amp; Events</a>
+					<ul id="neSub">
+						<li><a href="https://www.globalcoal.com/news-events/news.cfm">News</a></li>
+						<li><a href="https://www.globalcoal.com/news-events/events.cfm">Events</a></li>
+						<li><a href="https://www.globalcoal.com/news-events/pressreleases.cfm">Press Releases</a></li>
+						<li><a href="https://www.globalcoal.com/news-events/presskit.cfm">Press Kit</a></li>
+						<li><a href="https://www.globalcoal.com/news-events/futuresnewsletter.cfm">Coal Futures Newsletter</a></li>
+					</ul>
+				</li>
+				
+				<li class="mobile-grey-lt" id="mContact"><a>Contact us</a></li>
+			</ul>
+			<div class="cb"></div>
+		</nav>
+		<style>
+		.card {
+  max-width: 300px;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 500px;
+  height: auto;
+  padding: 35px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(5px);
+}
+
+.card-footer {
+  font-size: 0.65em;
+  color: #446;
+}
+
+.cta-box {
+            position: absolute;
+            left: 40px;
+            bottom: 75%;
+			border: 1px solid #FF7F27;
+            transform: translateY(-50%);
+            background-color: #FF7F27;
+            padding: 15px 20px;
+            border-radius: 4px;
+            width: 280px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+.cta-box:hover {
+	cursor: pointer;
+  transform: translateY(-48px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.cta-text {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            margin: 0;
+            line-height: 1.4;
+}
+</style>
+		<div class="subpage subheader-img coaltrading-bg" style="background-size:cover;">
+			<div class="sub-slogan">
+			
+				<h1>Coal Trading</h1>
+			
+			</div>
+		</div>
+	<section class="main-nav-bg">
+		<nav id="main-nav" class="main-nav">
+			<ul>
+				<li class="prices"><a href="https://www.globalcoal.com/coalprices/default.cfm" accesskey="1"><span>Coal Prices</span></a>
+					<ul>
+						<li><a href="https://www.globalcoal.com/coalprices/default.cfm" accesskey="1">Coal Price Data</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/coalmarketreport.cfm">Coal Market Report</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/delayedpricefeed.cfm">Delayed Price Feed</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/realtimepricefeed.cfm">Real-time Prices</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/historicalindices.cfm">Historical Indices</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/ourlicensingmodel.cfm">Our Licensing Model</a></li>
+						<li><a href="https://www.globalcoal.com/coalprices/requirements.cfm">UK Benchmarks Regulation</a></li>
+					</ul>
+				</li>
+				<li class="scota"><a href="https://www.globalcoal.com/scota/aboutscota.cfm" accesskey="2"><span>Standard Trading Contract</span></a>
+					<ul>
+						
+						
+	<li><a href="https://www.globalcoal.com/scota/aboutscota.cfm">About SCoTA</a></li>
+	<li><a href="https://www.globalcoal.com/scota/specifications.cfm">SCoTA Specifications and Definitions</a></li>
+	<li><a href="https://www.globalcoal.com/scota/licensedusers.cfm">Licensed Entities</a></li>
+	<li><a href="https://www.globalcoal.com/scota/scotatraining.cfm">SCoTA Training</a></li>
+
+								   
+					</ul>
+				</li>
+				<li class="trading"><a href="https://www.globalcoal.com/coaltrading/tradingwithglobalcoal.cfm" accesskey="3"><span>Coal Trading</span></a>
+					<ul>
+						<li><a href="https://www.globalcoal.com/coaltrading/tradingwithglobalcoal.cfm">Trading with globalCOAL</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/thermalcoaltrading.cfm">Thermal Coal Trading</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/metallurgicalcoaltrading.cfm">Metallurgical Coal Trading</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/financialcoaltrading.cfm">Financial Coal Trading</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/bespokecargobrokerage.cfm">Bespoke Cargo Brokerage</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/ourtradingcommunity.cfm">Our Trading Community</a></li>
+						<li><a href="https://www.globalcoal.com/coaltrading/compliancestatements.cfm">Compliance Statements</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</header>
+
+	<script src="https://www.globalcoal.com/js/hideShowPassword.min.js"></script> 
+			<script>
+				$('#password').hideShowPassword({
+				  // Make the password visible right away.
+				  show: false,
+				  // Create the toggle goodness.
+				  innerToggle: true,
+				  // Give the toggle a custom class so we can style it
+				  // separately from the previous example.
+				  toggleClass: 'my-toggle-class-header',
+				  // Don't show the toggle until the input triggers
+				  // the 'focus' event.
+				  hideToggleUntil: 'focus'
+				});
+				$('#password').hideShowPassword({
+				  // Make the password visible right away.
+				  show: false,
+				  // Create the toggle goodness.
+				  innerToggle: true,
+				  // Give the toggle a custom class so we can style it
+				  // separately from the previous example.
+				  toggleClass: 'my-toggle-class-header',
+				  // Don't show the toggle until the input triggers
+				  // the 'focus' event.
+				  hideToggleUntil: 'focus'
+				});
+			</script>
+
+<div class="subpage-bg subpage">
+	<div class="container_12">
+		<div class="side-nav">
+			<nav id="sideNav" class="left-nav">
+				<ul>
+					<li class="" ><a href="https://www.globalcoal.com/coaltrading/tradingwithglobalcoal.cfm">Trading with globalCOAL</a>
+					<ul Style="display:none;" >
+						<li class="" ><a href="https://www.globalcoal.com/coaltrading/thermalcoaltrading.cfm">Thermal Coal Trading</a></li>
+						<li class="" ><a href="https://www.globalcoal.com/coaltrading/metallurgicalcoaltrading.cfm">Metallurgical Coal Trading</a></li>
+						<li class="" ><a href="https://www.globalcoal.com/coaltrading/financialcoaltrading.cfm">Financial Coal Trading</a></li>
+						<li class="" ><a href="https://www.globalcoal.com/coaltrading/howitworks.cfm">How it works</a></li>
+						<li class="" ><a href="https://www.globalcoal.com/coaltrading/joiningglobalcoal.cfm">Joining globalCOAL & fees</a></li>
+					</ul>
+				</li>
+					<li class="active" ><a href="https://www.globalcoal.com/coaltrading/bespokecargobrokerage.cfm">Bespoke Cargo Brokerage</a></li>
+					<li class="" ><a href="https://www.globalcoal.com/coaltrading/ourtradingcommunity.cfm">Our Trading Community</a></li>
+					<li class="" ><a href="https://www.globalcoal.com/coaltrading/compliancestatements.cfm">Compliance Statements</a></li>
+				</ul>
+			</nav>
+		</div>
+
+
+		
+		
+
+		<div class="main-content-bg">
+			<div id="content" class="main-content">
+				<h2>Bespoke Cargo Brokerage</h2>
+				<p>In parallel to our online trading platform, we offer a fully bespoke brokerage service for non-standardised physical coal cargoes to buyers, sellers and traders of coal worldwide.</p>
+				<p>Leveraging our in-depth physical market expertise and global network of contacts, we can help you to place or source any coal regardless of spec, volume or delivery requirements.</p>
+				<p>Using SCoTA terms as the basis of all our bids and offers, we match buyers and sellers of cargoes originating from the key markets of Indonesia, Australia and South Africa, as well as the USA, Canada and Colombia.</p>
+				<p>Our expertise covers both thermal and coking coal.</p>
+				<br />
+				<h3>Market insight and information</h3>
+				<p>We provide our clients with the most relevant and up-to-the-minute information on market prices and sources of supply or demand.</p>
+				<p>Our brokers in London and Singapore are at your service throughout Asian and European trading hours.</p>	
+				<br />
+				<section class="section-box-top">
+					<section class="blue-sales-box">
+						<h3>The globalCOAL difference</h3>
+						<ul>
+							<li>The world's largest physical coal broker</li>
+							<li>Unequalled physical coal contract expertise</li>
+							<li>Experts in SCoTA</li>
+							<li>Huge network of coal buyers and sellers worldwide</li>
+							<li>Twenty years of experience in the physical coal market</li>
+						</ul>
+					</section>
+				</section>
+			<section class="section-box">
+			<h3>How it works</h3>	
+
+				<div class="accordion">
+					<h3><span class="multiline-q">How is this service different from your online trading platform?</span></h3>
+					<div>
+						<p>Looking to source or place a cargo of coal which differs in quality, delivery or other terms from the standardised coal traded on the globalCOAL screen? Our bespoke brokerage service fits the bill.</p>
+						<p>Negotiate and execute over the phone, by email or in person, rather than via our electronic trading platform.</p>
+					</div>
+					<h3><span class="multiline-q">How can you help me?</h3>
+					<div>
+						<p>With a vast network of contacts around the world, we can help you achieve the best price by putting you in touch with a wide range of buyers and sellers across Asia, Europe and the Americas.</p>
+					</div>
+					<h3><span class="multiline-q">What is SCoTA v8 General Terms and Conditions (GTC)?</span></h3>
+					<div>
+						<p>SCoTA GTC has all the benefits of a standard contract, without being a Master Agreement:<br />
+						By using this pre-agreed set of general terms and conditions, you can quickly and easily reflect the commercial terms of a transaction, such as coal specifications, price adjustments for CV and the procedures for selecting surveyors and inspection companies, giving notices and calculating demurrage and despatch</p>
+					</div>
+					<h3><span class="multiline-q">How much does it cost?</span></h3>
+					<div>
+						<p>We charge a small volume-based commission, which is negotiable and dependent on the complexity of the transaction.</p>
+					</div>
+					<h3><span class="multiline-q">How can I get involved?</span></h3>
+					<div>
+						<p>Firstly, contact our brokers in London or Singapore to discuss your requirements.</p>
+						<p>If we can help, we will ask you to:</p>
+						<ol class="numbered">
+							<li>Complete a Client Information Form, which includes the data we need for our KYC checks</li>
+							<li>Sign a Brokerage Agreement</li>
+						</ol>
+						<p>You can then request to receive price updates by email and begin to share bids or offers for physical coal to our powerful network of contacts.</p>
+					</div>
+					<h3><span class="multiline-q">Do you guarantee the performance of my counterparty?</span></h3>
+					<div>
+						<p>Any transaction we broker results in a bilateral contractual relationship between you and your counterparty, in which globalCOAL has no liability. Non-performance must be handled according to the terms of your contract with your counterparty.</p>
+						<p>We recommend using globalCOAL's SCoTA (Standard Coal trading Agreement) as a contract template because of its tried and tested provisions for non-performance.</p>
+					</div>
+				</div>
+			</section>
+			<section class="orange-box">
+				<p class="center bannerAd">Start a conversation about your bespoke coal requirements</p>
+				<br />
+				<p class="center"><a href="https://www.globalcoal.com/enquire.cfm" class="btn-spn-prim_one"><span>Enquire now</span></a></p>
+		</section>
+				<div class="cb"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="container_12">
+		<section class="offices">
+			<h4><strong>Our Offices</strong></h4>
+				<article class="off-ldn">
+				<p class="medium"><strong>globalCOAL London</strong><br />30 Coleman Street<br />London EC2R 5AL<br />United Kingdom <br/><strong>T:</strong> +44 (0)20 7776 5904<br /><strong>F:</strong> +44 (0)20 7776 5902<br />E: <strong><a href="/cdn-cgi/l/email-protection#ef86818980af8c808282808b869b868a9cc18883808d8e83"><span class="__cf_email__" data-cfemail="6f060109002f0c000202000b061b060a1c410803000d0e03">[email&#160;protected]</span></a></strong></p>
+			</article>
+			<article class="off-sing">
+				<p class="medium"><strong>globalCOAL Singapore</strong><br />Collyer Quay Centre<br />16 Collyer Quay #23-02<br />Singapore<br />049318<br />T: +65 6311 4570<br />F: +65 6223 2448<br />E: <strong><a href="/cdn-cgi/l/email-protection#fc95929a93bc9f9391919398958895998fd29b90939e9d90"><span class="__cf_email__" data-cfemail="1970777f76597a767474767d706d707c6a377e75767b7875">[email&#160;protected]</span></a></strong> </p>
+			</article>
+		</section>
+		<section class="Utility">
+			<h4><strong>Utility</strong></h4>
+			<ul>
+				<li><strong><a href="https://www.globalcoal.com/utilities/sitemap.cfm" accesskey="m">Sitemap</a></strong></li>
+				<li><strong><a href="https://www.globalcoal.com/utilities/accessibility.cfm" accesskey="a">Accessibility</a></strong></li>
+				<li><strong><a href="https://www.globalcoal.com/utilities/disclaimer.cfm" accesskey="t">Disclaimer</a></strong></li>
+				
+				<li><strong><a  href="https://www.globalcoal.com/files/siteFiles/Privacy Notice External(incorporating_cookie_policy).pdf" target="_blank">Privacy &amp; Cookie Policy</a></strong></li>
+			</ul>
+		</section>
+		<section class="copyright">
+			<p class="small">All rights reserved 1998-2026. &copy; Global Commodities Holdings Limited Registered company number 04007764 <a style='color:#0069c2;' href='https://www.globalcoal.com/files/general/Terms And Conditions.pdf' target='blank'> Terms and Conditions</a></p>
+		</section>
+	</div>
+</footer>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleMenu(sub,cont){
+
+	cont = cont.replace(' __ghostlab-hover__','');
+	cont = cont.replace(' activated','');
+	cont = cont.replace(' mobile-grey','');
+
+	if($("." + cont).hasClass('activated') == true){
+		$("ul[id$='Sub']").hide();
+	}else{
+		$("ul[id$='Sub']").hide();
+		$("#"+ sub).toggle();
+	}
+
+	if($("." + cont).hasClass('activated') == true){
+		$("li").removeClass('activated');
+	}else{
+		$("li").removeClass('activated');
+		$("." + cont).toggleClass('activated');	
+	}
+};
+
+$(document).ready(function () {
+	var logbox = 0;
+
+	$('#nav-icon').click(function(){
+		if(logbox !== 1){
+			$("ul[id$='Sub']").hide();
+			$("li").removeClass('activated');
+			$(this).toggleClass('open');
+			$(".mobile-nav-button").toggleClass('mobile-active');
+			$(".mobile-nav-container").toggle();
+			$("#overlay").toggle();
+			$(".subpage").show();
+			$(".homepage").show();
+			$(".footer").show();
+		}else{
+			$(".mobile-nav-container").css({'position': 'fixed'});
+			$("#bgcontainer").css({'position': 'unset'});
+			$("#overlay").css({'position': 'fixed'});
+			$(".mobile-nav").show();
+			$(".mobile-search-box").show();
+			$(".mobile-login").hide();
+			logbox = 0;
+		}
+	});
+
+	$("#coalP").on("click",function(){
+		toggleMenu('cpSub',$(this).attr('class'));
+	});
+
+	$("#mSTC").on("click",function(){
+		toggleMenu('scSub',$(this).attr('class'));
+	});
+
+	$("#gcAccount").on("click",function(){
+		toggleMenu('accSub',$(this).attr('class'));
+	});
+
+	$("#coalT").on("click",function(){
+		toggleMenu('ctSub',$(this).attr('class'));
+	});
+
+	//grey buttons
+	$("#mAbout").on("click",function(){
+		toggleMenu('abSub',$(this).attr('class'));
+	});
+
+	$("#mNews").on("click",function(){
+		toggleMenu('neSub',$(this).attr('class'));
+	});
+
+	$("#mTools").on("click",function(){
+		toggleMenu('fmSub',$(this).attr('class'));
+	});
+
+	$("#mContact").on("click", function(){
+		window.location.replace('https://www.globalcoal.com/enquire.cfm');
+	});
+	
+	$("#mobLogin").on("click", function(){
+		if(logbox == 0){
+			$(".mobile-nav-container").css({'position': 'fixed'});	
+		}else{
+			$(".mobile-nav-container").css({'position': 'absolute'});
+		}
+		$(".mobile-nav").hide();
+		$(".mobile-search-box").hide();
+		$(".mobile-account").hide();
+		$(".mobile-login").show();
+		$("#bgcontainer").css({'position': 'absolute'});
+		$("#overlay").css({'position': 'absolute'});
+		$(".subpage").hide();
+		$(".homepage").hide();
+		$(".footer").hide();
+		logbox = 1;
+	});
+	
+});
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47336266f595e15',t:'MTc5MTQ0MjIyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

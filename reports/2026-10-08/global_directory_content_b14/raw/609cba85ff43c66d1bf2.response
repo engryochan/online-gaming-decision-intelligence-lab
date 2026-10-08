@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/favicon.png" sizes="any" />
+
+    <link rel="stylesheet" media="all" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <script type="text/plain" data-cookiecategory="analytics">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-11082354-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<noscript><img alt="" src="https://secure.smart-enterprise-52.com/267056.png" style="display:none;" /></noscript>
+<script type="text/javascript" src="https://secure.smart-enterprise-52.com/js/267056.js" ></script>
+    
+<title>Bonds | TISE</title>
+<meta property="og:title" content="Bonds | TISE">
+<meta name="twitter:title" content="Bonds | TISE">
+
+<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://tisegroup.com/listing/bonds/qibm/">
+
+    <meta property="og:image" content="https://tisegroup.com//media/wveg4tp0/harbour-tise.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c5480458f0">
+    <meta name="twitter:image" content="https://tisegroup.com//media/wveg4tp0/harbour-tise.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c5480458f0">
+
+<meta property="og:description" content="TISE is one of Europe&#x2019;s leading stock exchanges for international bond listings. ">
+<meta name="twitter:description" content="TISE is one of Europe&#x2019;s leading stock exchanges for international bond listings. ">
+<meta name="description" content="TISE is one of Europe&#x2019;s leading stock exchanges for international bond listings. ">
+</head>
+<body>
+
+    <div class="page purple">
+        
+<div id="navigation" v-cloak v-clickout="closeSearch">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-inner-brand">
+                <a href="/"><img src="/media/ezbnvbj3/tise-master-a-miax-company-logo-rgb-white.png?width=200&height=103&quality=80&v=1dbd56b4cd472d0" alt="TISE Logo" /></a>
+            </div>
+            <div class="header-inner-nav" v-tracked>
+                <ul :class="{'on': open}">
+                    <li v-for="i in structure" :class="[{'on': openNavs.includes(i.Id)}, {'hide-from-ml' : i.Special}]">
+                        <div class="header-item">
+                            <a v-if="i.Children && i.Children.length > 0" class="header-item-link" @click="toggleNav(i)">{{i.Name}} <i class="fas fa-chevron-down"></i></a>
+                            <a v-if="!i.Children || (i.Children && i.Children.length == 0)" class="header-item-link" :href="i.Url">{{i.Name}} </a>
+                        </div>
+                        <div class="header-drop" :class="{'on': openNavs.includes(i.Id)}">
+                            <template v-for="c in i.Children">
+                                <a :href="c.Url" :class="{ hasgc: i.HasGrandchildren }">{{c.Name}}</a>
+                                <div class="header-drop-sub" v-if="i.HasGrandchildren">
+                                    <a v-for="p in c.Children" :href="p.Url"><span>&mdash;</span> {{p.Name}}</a>
+                                </div>
+                            </template>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-inner-burger-wrap">
+                    <a class="btn small white" v-tracked href="https://apps.tisegroup.com/Identity/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dtise-portal%26redirect_uri%3Dhttps%253A%252F%252Fapps.tisegroup.com%252Fmy-tise%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520TISEAPI%26nonce%3D28c5ae753640fc10c766c1317bffd4a829RufsNki%26state%3Dfd59249a2eeff0b1326c77958c4e7e9c34pA5Avrk%26code_challenge%3Di9aYC48siflcen0jUgPiXFrl7-F91eJligrY8qDLRsA%26code_challenge_method%3DS256"><span>MyTISE</span></a>
+                    <a class="search" @click="toggleSearch"><i class="fas fa-search"></i></a>
+                <div class="header-inner-burger-wrap-burger" :class="{'on': open}" @click="toggleNav(null)">
+                    <svg viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" rx="2" ry="2" />
+                        <rect y="9" width="32" height="2" rx="2" ry="2" />
+                        <rect y="18" width="32" height="2" rx="2" ry="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="burger-nav" :class="{'on': open}">
+        <div class="burger-nav-left">
+            <div class="burger-nav-left-inner">
+                <ul>
+                    <li v-for="i in structure" :class="[{'on' : curPage != null && curPage.Id == i.Id}, {'hide-from-xl' : i.Special}]">
+                        <a v-if="i.Children && i.Children.length > 0" @click="curPage = i">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                        <a v-if="!i.Children || (i.Children && i.Children.length == 0)" :href="i.Url">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+
+
+</li>
+                </ul>
+            </div>
+        </div>
+        <div class="burger-nav-mid">
+            <div class="burger-nav-mid-inner" v-if="curPage != null">
+                <h3>{{curPage.Title}}</h3>
+                <p>{{curPage.Copy}}</p>
+                <p>&nbsp;</p>
+                <div class="burger-nav-mid-inner-cols" v-if="curPage.HasGrandchildren">
+                    <div v-for="c in curPage.Children" class="burger-nav-mid-inner-cols-col" :class="'c' + curPage.Children.length">
+                        <ul>
+                            <li class="overview"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                            <li v-for="gc in c.Children"><a :href="gc.Url">{{gc.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-nav-mid-inner-cols" v-if="!curPage.HasGrandchildren">
+                    <div class="burger-nav-mid-inner-cols-col c1">
+                        <ul>
+                            <li v-for="c in curPage.Children"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-nav-right">
+                <p>About TISE</p>
+                <a href="/company-profile/">Company Profile</a>
+                <a href="/company-profile/meet-the-team/">Meet the Team</a>
+                <a href="/news/">News</a>
+                <a href="/company-profile/careers/">Careers</a>
+                <a href="/company-profile/corporate-social-responsibility/">CSR</a>
+                <a href="/business-days/">Business Days</a>
+                <a href="/contact/">Contact</a>
+        </div>
+    </div>
+
+        <div class="burger-search" :class="{'on' : searchOpen}">
+            <form action="/search/" method="get">
+                <input type="text" name="query" placeholder="Enter Keywords or Mnemonic" />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+</div>
+        
+
+<div class="pagenav">
+    <div class="pagenav-inner">
+        <a class="title">On this page</a>
+        <ul class="pagenav-inner-items">
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_b3db17ab939c46608cb82d5291fc5ba8"><a href="#_b3db17ab939c46608cb82d5291fc5ba8">Products</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_51ad1bfbb6054d189592c8812b8f5f1b"><a href="#_51ad1bfbb6054d189592c8812b8f5f1b">How to List</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_128e8864bb7944228b56106016b9442a"><a href="#_128e8864bb7944228b56106016b9442a">Market Data</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_5d389228784e48cebd8c7ac629747229"><a href="#_5d389228784e48cebd8c7ac629747229">Documents</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_456005fa51f54cc08f30343bbd7ae02b"><a href="#_456005fa51f54cc08f30343bbd7ae02b">Latest QIBM News</a></li>
+        </ul>
+        <p class="pad"></p>
+    </div>
+</div>
+<div class="hero   lazy purple opacity-after-6" data-bg="/media/wveg4tp0/harbour-tise.jpg?width=1920&height=840&quality=80&v=1db18c5480458f0" id="_0253b4893e284b748549d758f6ed6d93">
+        <video loop autoplay muted playsinline><source src="/media/3ktlwy0v/qibm-hero-video-1.mov" type="video/mp4"></video>
+    <div class="hero-content">
+        <div class="hero-content-text">
+                <img src="/media/3fsjyjxi/qibm-logo.png" />
+            <h1></h1>
+            <p class="intro  " style=max-width:500px;>TISE is one of Europe&#x2019;s leading stock exchanges for international bond listings</p>
+        </div>
+    </div>
+</div>
+<div class="content-wrap mt-5 mb-2" id="_20f9e920a1c641f48832bc03e0566d93">
+    <div class="infopanels">
+        <div class="infopanels-head">
+            <h2>Responsive. Innovative.</h2>
+            <p style="text-align: center;">Dedicated to listing bonds marketed to Qualified Investors, our Qualified Investor Bond Market (QIBM) provides a streamlined approach to listing bonds on a globally recognised stock exchange. </p>
+        </div>
+        <div class="infopanels-items" data-key="_20f9e920a1c641f48832bc03e0566d93">
+                <div class="infopanels-items-item " data-index="0">
+                    <div class="infopanels-items-item-img">
+                        <img src="/media/0xwj2gfp/fast-turnaround-tise-rgb-qibm.svg" />
+                    </div>
+                    <div class="infopanels-items-item-copy">
+                        <h4>Fast turnaround</h4>
+                        <p>We provide a quick review of all listing applications via our TISE Express 24-hour fast-track service, TISE Guarantee (2&#x2B;1) turnaround  for CLOs and standard TISE Guarantee (3&#x2B;1).</p>
+                    </div>
+                </div>
+                <div class="infopanels-items-item " data-index="0">
+                    <div class="infopanels-items-item-img">
+                        <img src="/media/gphhaap1/fees-tise-rgb-qibm.svg" />
+                    </div>
+                    <div class="infopanels-items-item-copy">
+                        <h4>Competitive Fees</h4>
+                        <p>Attractive listing fees including one-off &#x2018;lifetime&#x2019; payment solutions can save issuers significant sums on both listing &amp; administration costs versus other European listing venues.</p>
+                    </div>
+                </div>
+                <div class="infopanels-items-item " data-index="0">
+                    <div class="infopanels-items-item-img">
+                        <img src="/media/unqphoq4/qualified-investor-tise-rgb-qibm.svg" />
+                    </div>
+                    <div class="infopanels-items-item-copy">
+                        <h4>Proportionate regulation</h4>
+                        <p>A globally recognised stock exchange, including for the Quoted Eurobond Exemption, where UK and EU rules do not apply and listing requirements are streamlined.</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="infopanels-popout" data-key="_20f9e920a1c641f48832bc03e0566d93">
+        <i class="fas fa-times"></i>
+        <div class="infopanels-popout-slider">
+        </div>
+    </div>
+</div>
+<div class="products mt-5" id="_b3db17ab939c46608cb82d5291fc5ba8">
+    <div class="content-wrap">
+        <h2>Bond Products</h2>
+        <div class="products-list">
+                <a class="products-list-item " href="/listing/bonds/high-yield-bonds/" target="" data-id="_2b686c564fe943618d18cf5fd411b429">
+                    <div class="products-list-item-inner">
+                        <h4>High Yield Bonds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/private-equity-debt/" target="" data-id="_b5b49a8ea3eb43d3a47b090aa23dd77a">
+                    <div class="products-list-item-inner">
+                        <h4>Private Equity Debt</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/securitisations/" target="" data-id="_6c56f80c48a64cbab94344eed970f4d0">
+                    <div class="products-list-item-inner">
+                        <h4>Securitisations</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/clos/" target="" data-id="_bdbdb950e02a4d219794af34d01c3cbf">
+                    <div class="products-list-item-inner">
+                        <h4>Collateralised Loan Obligations (CLOs)</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/bond-programmes/" target="" data-id="_277fd8cb6184448b9b06183edc3ba73d">
+                    <div class="products-list-item-inner">
+                        <h4>Bond Programmes</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/aviation-finance/" target="" data-id="_5a616ae50a89419282cf4408296706d2">
+                    <div class="products-list-item-inner">
+                        <h4>Aviation Finance</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/sukuks/" target="" data-id="_5f4e68e3961447f8b0228686c6f81840">
+                    <div class="products-list-item-inner">
+                        <h4>Sukuks</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/defence/" target="" data-id="_716130482268428d81dc89496e8c6152">
+                    <div class="products-list-item-inner">
+                        <h4>Defence</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/bonds/ils/" target="" data-id="_11e7ebbf194d490a92b5d06d318e513c">
+                    <div class="products-list-item-inner">
+                        <h4>Insurance Linked Securities (ILS)</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item popup"  data-id="_a2fbe2b1bb48470d8de9aa59eb1f3ae1">
+                    <div class="products-list-item-inner">
+                        <h4>Convertible Bonds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item popup"  data-id="_4fed73f303c94850aeec5ca98e334dd0">
+                    <div class="products-list-item-inner">
+                        <h4>Investment Grade Corporate Bonds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item popup"  data-id="_176c14d1e67e4e8e976e074c27b2423b">
+                    <div class="products-list-item-inner">
+                        <h4>Sovereign, Supranational &amp; Agency Bonds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/sustainable/" target="" data-id="_fac5f504d807437896609fca477af9c6">
+                    <div class="products-list-item-inner">
+                        <h4>Sustainable Bonds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item popup"  data-id="_6e67909a70654458a41e790baf7d0663">
+                    <div class="products-list-item-inner">
+                        <h4>Hybrid Capital Securities</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item popup"  data-id="_3846d74077c147f08b9667437ba00ba1">
+                    <div class="products-list-item-inner">
+                        <h4>Structured Products</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item popup"  data-id="_9f151c62c58b49e9aa3ce761d4d1caae">
+                    <div class="products-list-item-inner">
+                        <h4>Nordic Bonds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+        </div>
+    </div>
+</div>
+    <div class="products-popup" data-id="_a2fbe2b1bb48470d8de9aa59eb1f3ae1">
+        <div class="desc"><h4>Convertible Bonds</h4><p>We are increasingly seen as the exchange of choice for listing convertible bonds because we a recognised stock exchange with a pragmatic admissions process which provides for speedy and cost-effective listings.</p><p><br>This is proving attractive to a growing number of companies from a wide variety of sectors, including aerospace, banking, construction, (renewable) energy, food retailing, mobile telecommunications and property. Brands which have listed convertibles on TISE include Aberdeen, Inmarsat, J Sainsbury, McClaren Racing and Vertical Aerospace.</p><p><br>Convertible bonds are classified as Specialist Debt Securities under our <strong>Bond Market Listing Fees</strong>. Issuers may benefit from a range of listing fee options, including a one-off 'lifetime' fee of <strong>£15,000</strong>.</p></div>
+    </div>
+    <div class="products-popup" data-id="_4fed73f303c94850aeec5ca98e334dd0">
+        <div class="desc"><h4>Investment Grade Corporate Bonds</h4><p>We are uniquely positioned to offer both a cost-effective and proportionate listing solution to corporate (bank and company) issuers of investment grade bonds.</p><p><br>Brands listing investment grade corporate bonds on our market include Blackstone, Canary Wharf Group, HSBC Continental Europe, Société Générale and Willis North America.</p><p><br>Issuers may benefit from a range of listing fee options, including a one-off 'lifetime' fee of <strong>£15,000</strong>. Further details are available on our page for <strong>Bond Market Listing Fees</strong>.</p></div>
+    </div>
+    <div class="products-popup" data-id="_176c14d1e67e4e8e976e074c27b2423b">
+        <div class="desc"><h4>Sovereign, Supranational &amp; Agency Bonds</h4><p>Sovereign, supranational and agency (SSA) bonds play an important role in the international capital markets, providing governments, multilateral institutions and public sector entities with access to diversified sources of funding. These issuers use bond markets to finance public expenditure, infrastructure investment, economic development and other long-term funding requirements.</p><p><br></p><p>TISE has supported bond listings for a range of issuers in this market, including government issuers from the Crown Dependencies of Guernsey, Jersey and the Isle of Man. These issuers have access to an established stock exchange offering an efficient and flexible admission process for international debt issuances.</p><p><br></p><p></p><p>Our Qualified Investor Bond Market (QIBM) provides a cost-effective listing framework, streamlined admission requirements, clear continuing obligations and responsive, commercially focused support from an experienced listing team. SSA issuers may also benefit from a range of listing fee options, including a one-off 'lifetime' fee of <strong>£15,000</strong>. Further details are available on our page for <strong>Bond Market Listing Fees</strong>.</p></div>
+    </div>
+    <div class="products-popup" data-id="_6e67909a70654458a41e790baf7d0663">
+        <div class="desc"><h4 data-pm-slice="1 1 []">Hybrid Capital Securities</h4><p><span>Hybrid capital securities play an important role in issuer capital management, combining features of debt and equity to support balance sheet optimisation and long-term funding objectives. They are widely issued by banks and insurers to satisfy Basel and Solvency II capital requirements, and by corporates seeking flexible capital solutions.</span></p><p><span><br>TISE has significant experience listing a broad range of hybrid capital instruments, helping issuers access capital markets efficiently while meeting regulatory and strategic capital objectives. These instruments include Additional Tier 1 (AT1) and Restricted Tier 1 (RT1) securities, perpetual securities, preference shares and capital notes.</span></p><p><span><br>Our Qualified Investor Bond Market (QIBM) provides a responsive and commercially focused listing environment, combining efficient execution with access to an internationally recognised stock exchange. Eligible ESG-focused hybrid securities may also be admitted to TISE Sustainable.</span></p></div>
+    </div>
+    <div class="products-popup" data-id="_3846d74077c147f08b9667437ba00ba1">
+        <div class="desc"><h4 data-pm-slice="1 1 []">Structured Products</h4><p><span>Structured products are an established feature of the international capital markets, enabling issuers to create securities linked to the performance of one or more underlying assets, indices or reference measures. Used across investment, financing and risk management strategies, they provide tailored solutions to meet a broad range of investment and funding objectives.</span></p><p><span><br>Our Qualified Investor Bond Market (QIBM) provides a flexible and commercially focused listing framework for structured products issued by banks, financial institutions, corporates and special purpose vehicles. It accommodates both public and privately placed transactions, including standalone issuances, established issuance programmes and repeat issuers. TISE lists a broad range of structured products across multiple asset classes, including products linked to equity, credit, interest rates and foreign exchange, as well as other bespoke structures.</span></p></div>
+    </div>
+    <div class="products-popup" data-id="_9f151c62c58b49e9aa3ce761d4d1caae">
+        <div class="desc"><h4 data-pm-slice="1 1 []">Nordic Bonds</h4><p><span>Nordic bonds have become an established source of funding for corporates, financial institutions and private equity-backed businesses, particularly within the Nordic high yield market. Renowned for flexible documentation, efficient execution and an active institutional investor base, they continue to attract issuers from across the Nordic region and international markets.</span></p><p><span> <br>TISE has supported a growing number of Nordic bond issuances across a variety of sectors, providing a recognised listing venue that complements the established Nordic debt capital markets. The Qualified Investor Bond Market (QIBM) is well suited to both high yield and investment grade transactions, offering cost-effective listings, efficient admission and the flexibility to accommodate cross-border issuances and repeat issuance programmes.</span></p></div>
+    </div>
+<div class="content-wrap mt-5 mb--2 box-bg" id="_51ad1bfbb6054d189592c8812b8f5f1b" style="">
+    <div class="rte wide">
+        <h2>How to List Bonds on TISE</h2>
+<h4 style="color: #923091;">The submission process</h4>
+<p>The procedure for listing comprises four stages</p>
+    </div>
+</div>
+<div class="accordion mt-5" id="_09f3dba440d34dee8b07b1f25a292032">
+    <div class="content-wrap">
+        <h2></h2>
+            <div class="accordion-item">
+                <h4 class="img">
+                    1. Satisfying Listing Conditions
+                </h4>
+                <p class="nowrap">Before an application to list a security is considered for submission to TISE, the appointed Listing Agent is required to vet the application against certain conditions for listing prescribed within the QIBM Listing Rules.</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+            <div class="accordion-item">
+                <h4 class="img">
+                    2. Application for Listing
+                </h4>
+                <p class="nowrap">The applicant, through its appointed Listing Agent, must submit certain documents as required by the QIBM Listing Rules. Documentation requirements include a Listing Document (which can also take the form of an existing published prospectus, offering memorandum or equivalent document) together with supporting documentation such as accounts or certain material contracts (where applicable) as well as the TISE 1 Form &amp; Listing Agent’s Declaration.</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+            <div class="accordion-item">
+                <h4 class="img">
+                    3. Approval
+                </h4>
+                <p class="nowrap">All applications for listing will be processed by the team in our Listing Department. Once satisfied with an application they will submit a report, including their recommendations to TISE’s Listing and Membership Committee (LMC) for the LMC’s consideration.</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+            <div class="accordion-item">
+                <h4 class="img">
+                    4. Listing
+                </h4>
+                <p class="nowrap">If the LMC approves the application, the Listing Document is then filed and the securities are admitted to the Official List. </p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+    </div>
+</div><div class="content-wrap mt-5 box-bg" id="_4d141835233f4ee2b692dcc79150929c" style="">
+    <div class="rte wide">
+        <h3 style="color: #923091;">Key reference points</h3>
+<p>The key points of reference for the listing process:</p>
+    </div>
+</div><div class="content-wrap pt-2 box-bg" id="_72df5d6c09d34a2a92f8ee706e0dee2e" style="">
+    <div class="rte wide">
+        <div class="cols">
+                <div class="col-item">
+                    <h4>Appoint a Listing Agent </h4>
+<p>A listing application must be made via one of our dedicated listing members</p>
+<p><a href="/membership/#_6d3688901cb44e2bb1deba669d44f24d" title="Home" class="btn">View our Listing Agents</a></p>
+                </div>
+                <div class="col-item">
+                    <h4>Listing Rules&nbsp;</h4><p>We provide a dedicated all-inclusive rule book which sets out a proportionate disclosure regime for all bond products &amp; structures</p><p><a data-router-slot="disabled" class="btn" href="/rules" title="Rules" type="external">View our QIBM Listing Rules</a></p>
+                </div>
+                <div class="col-item">
+                    <h4>Listing Fees </h4>
+<p>We offer payment solutions that can save issuers significant sums on both listing &amp; admin costs versus other European listing venues</p>
+<p><a href="/listing/bonds/bond-market-listing-fees/" title="Home" class="btn">View our QIBM Listing Fees</a></p>
+                </div>
+                <div class="col-item">
+                    <h4>Continuing Obligations </h4>
+<p>Post listing continuing obligations can be located at chapter 3 of the QIBM Listing Rules</p>
+<p><a href="/listing/bonds/QIBM-Continuing-Obligations" title="QIBM Continuing Obligations" class="btn">View our QIBM Continuing Obligations</a></p>
+<div class="cols"></div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="marketdata mt-5 mb-10" id="_128e8864bb7944228b56106016b9442a">
+    <div class="content-wrap">
+        <h2>
+            QIBM Market Data
+        </h2>
+            <div class="marketdata-highlight">
+                    <div class="marketdata-highlight-item">
+                        <div class="marketdata-highlight-item-inner">
+                            <h2>
+                                2,600&#x2B;
+                            </h2>
+                            <h3>Issuers</h3>
+                        </div>
+                    </div>
+                        <span class="line"></span>
+                    <div class="marketdata-highlight-item">
+                        <div class="marketdata-highlight-item-inner">
+                            <h2>
+                                40&#x2B;
+                            </h2>
+                            <h3>Countries</h3>
+                        </div>
+                    </div>
+                        <span class="line"></span>
+                    <div class="marketdata-highlight-item">
+                        <div class="marketdata-highlight-item-inner">
+                            <h2>
+                                4,500&#x2B;
+                            </h2>
+                            <h3>Bonds</h3>
+                        </div>
+                    </div>
+            </div>
+        <div class="marketdata-intro">
+            <p style="text-align: center;">A comprehensive list of securities listed on our Qualified Investor Bond Market</p>
+        </div>
+        <div id="securities-vm" v-cloak>
+                <securitiesembed theme="purple" empty-message="" :page-size="7" :filter="{securityType: 'Bond', domicile: '', currency: '', hyb: false}" />
+        </div>
+    </div>
+</div><div class="content-wrap mt-10 mb-8 box-bg" id="_5d389228784e48cebd8c7ac629747229" style="">
+    <div class="rte wide">
+        <h2 style="text-align: center;">QIBM Documents<a id="QIBM-Documents"></a></h2>
+    </div>
+</div>
+<div class="childlisting " id="_7d614d7fa37548a7adf035c193bd5eec">
+    <div class="childlisting-list cards c8">
+        <div class="content-wrap">
+                <a class="childlisting-list-item" href="/rules/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>QIBM Listing Rules</h4>
+                        <p>Effective May 2026</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/listing/bonds/bond-market-listing-fees/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>QIBM Listing Fees</h4>
+                        <p>Effective January 2026</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/media/v3thf2p2/tise-bond-market-quick-guide-2026.pdf" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>QIBM Quick Guide</h4>
+                        <p>Published September 2026</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/media/lnjgq3jx/qibm-brochure-aug-2026.pdf" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>QIBM Brochure</h4>
+                        <p>Published August 2026</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/media/jcxpgrfl/tise-recognitions-memberships-2025.pdf" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>TISE Recognitions Brochure</h4>
+                        <p>Published June 2025</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix I</h4>
+                        <p>Listing application form (TISE 1 form)</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix II</h4>
+                        <p>Listing agent's declaration form</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Disclosure Obligations checklist</h4>
+                        <p>For QIBM Issuers</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+        </div>
+    </div>
+</div><div class="dualcta lazy purple opacity-before-9" data-bg="/media/r4yd1c4h/bg-image-text.png?width=1920&height=840&quality=80&v=1db18c523360b90" id="_68bfced8de2e4b65ba22d69d139ad4c5">
+    <div class="dualcta-content">
+            <div class="dualcta-content-item">
+                    <img src="/media/uazh5gpb/tise-sustainable-master-logo-green-white-nov-2021-15percent-96dpi.png" />
+                <h2></h2>
+                <p><p>Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.</p></p>
+                    <a class="btn mt-3 tracked white" href="/sustainable/">
+                        <span>
+                            Sustainable
+                        </span>
+                    </a>
+            </div>
+            <div class="dualcta-content-item">
+                <h2>Membership</h2>
+                <p><p>Becoming a Member is simple. We serve international firms who benefit from being able to facilitate listing and trading on our market.</p></p>
+                    <a class="btn mt-3 tracked white" href="/membership/">
+                        <span>
+                            Membership
+                        </span>
+                    </a>
+            </div>
+    </div>
+</div>
+<div class="content-wrap mt-5 box-bg" id="_456005fa51f54cc08f30343bbd7ae02b" style="">
+    <div class="rte wide">
+        <h3 style="text-align: center;">Latest QIBM News</h3>
+    </div>
+</div>
+<div class="childlisting mt-8 mb-3" id="_528d6ca69b3a430e99bd8af82cbe8f07">
+    <div class="childlisting-list cards c3">
+        <div class="content-wrap">
+                <div class="childlisting-list-item">
+                    <div class="childlisting-list-item-inner">
+                        <div>
+                            <p class="tag mid">Wednesday, 9 Sep 2026</p>
+                            <h4><a href="/news/2026/beyond-bricks-and-mortar-financing-the-intangible-economy/">Beyond bricks and mortar: Financing the intangible economy</a></h4>
+                        </div>
+                        <p class="view"><a class="blue" href="/news/2026/beyond-bricks-and-mortar-financing-the-intangible-economy/">Read Article</a></p>
+                    </div>
+                </div>
+                <div class="childlisting-list-item">
+                    <div class="childlisting-list-item-inner">
+                        <div>
+                            <p class="tag mid">Thursday, 13 Aug 2026</p>
+                            <h4><a href="/news/2026/tise-reports-h1-2026-listing-results-sets-records-for-total-number-and-value-of-listings/">TISE Reports H1 2026 Listing Results; Sets Records for Total Number and Value of Listings</a></h4>
+                        </div>
+                        <p class="view"><a class="blue" href="/news/2026/tise-reports-h1-2026-listing-results-sets-records-for-total-number-and-value-of-listings/">Read Article</a></p>
+                    </div>
+                </div>
+                <div class="childlisting-list-item">
+                    <div class="childlisting-list-item-inner">
+                        <div>
+                            <p class="tag mid">Wednesday, 17 Jun 2026</p>
+                            <h4><a href="/news/2026/financing-the-next-wave-of-global-industry-why-bond-markets-matter/">Financing the next wave of global industry: Why bond markets matter</a></h4>
+                        </div>
+                        <p class="view"><a class="blue" href="/news/2026/financing-the-next-wave-of-global-industry-why-bond-markets-matter/">Read Article</a></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>		<div class="page-contact" data-scroll-progress="100" data-scroll-class="inline" data-scroll-target="#_0253b4893e284b748549d758f6ed6d93">
+			<div class="page-contact-inner">
+				<div class="page-contact-inner-img lazy" data-bg="/media/0v0j3tel/alex-taylor.jpg?rxy=0.4731182795698925,0.405&width=200&height=180&quality=80&v=1dceeb632b12140">
+				</div>
+				<div class="page-contact-inner-detail">
+					<a href="/company-profile/meet-the-team/alex-taylor/">
+						<p>Contact</p>
+						<h4>Alex Taylor</h4>
+						<h5>Business Development Lead</h5>
+					</a>
+					<a class="ctc blue" href="tel:&#x2B;44 (0) 7818 031007">&#x2B;44 (0) 7818 031007</a>
+					<a class="ctc blue" href="mailto:alex.taylor@tisegroup.com">alex.taylor@tisegroup.com</a>
+				</div>
+			</div>
+		</div>
+
+        <footer class="footer ">
+    <div class="footer-top">
+        <div class="content-wrap">
+            <div class="footer-inner">
+                <div class="footer-inner-social">
+                        <a href="https://www.facebook.com/The-International-Stock-Exchange-106784734024704" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/the-international-stock-exchange/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/tisegroup" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/theinternationalstockexchange" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-inner-news">
+                    <a class="btn blue tracked" href="/subscribe/"><span>Subscribe to our email newsletters</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="locations">
+            <span>Dublin.</span>
+            <span>Guernsey.</span>
+            <span>Isle of Man.</span>
+            <span>Jersey.</span>
+            <span>London.</span>
+        </p>
+        <p class="address">
+            The International Stock Exchange Group Limited, PO&nbsp;Box&nbsp;623, Helvetia&nbsp;Court, 
+            Block&nbsp;B, 3rd&nbsp;Floor,
+            Les&nbsp;Echelons, St&nbsp;Peter&nbsp;Port, Guernsey&nbsp;GY1&nbsp;4PJ
+        </p>
+        <ul class="links">
+                <li><a href="/privacy-statement/">Privacy Statement</a></li>
+                <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+                <li><a href="/legal-and-regulatory/">Legal and Regulatory</a></li>
+                <li><a href="/complaints/">Complaints</a></li>
+                <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <p class="copyright">© The International Stock Exchange Group Limited 2026. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    </div>
+    
+    <script>
+        var navData = [{"Id":1814,"Name":"Listing","Title":"Listing","Copy":"We’re a leading stock exchange for listing a wide range of bonds and equities, with issuers attracted by our competitive fees and high quality, efficient service.  ","Url":"/listing/","HasGrandchildren":true,"Children":[{"Name":"Bonds","Url":"/listing/bonds/","Children":[{"Name":"High Yield Bonds","Url":"/listing/bonds/high-yield-bonds/"},{"Name":"Private Equity Debt","Url":"/listing/bonds/private-equity-debt/"},{"Name":"Securitisations","Url":"/listing/bonds/securitisations/"},{"Name":"Collateralised Loan Obligations (CLOs)","Url":"/listing/bonds/collateralised-loan-obligations-clos/"},{"Name":"Bond Programmes","Url":"/listing/bonds/bond-programmes/"},{"Name":"Aviation Finance","Url":"/listing/bonds/aviation-finance/"},{"Name":"Sukuks","Url":"/listing/bonds/sukuks/"},{"Name":"Defence","Url":"/listing/bonds/defence/"},{"Name":"Insurance Linked Securities (ILS)","Url":"/listing/bonds/insurance-linked-securities-ils/"},{"Name":"Bond Market Listing Rules","Url":"/listing/bonds/bond-market-listing-rules/"},{"Name":"Bond Market Listing Fees","Url":"/listing/bonds/bond-market-listing-fees/"}]},{"Name":"Equities","Url":"/listing/equities/","Children":[{"Name":"Funds","Url":"/listing/equities/funds/"},{"Name":"REITs","Url":"/listing/equities/reits/"},{"Name":"Specialist Companies","Url":"/listing/equities/specialist-companies/"},{"Name":"Trading Companies","Url":"/listing/equities/trading-companies/"},{"Name":"Equity Market Listing Rules","Url":"/listing/equities/equity-market-listing-rules/"},{"Name":"Specialist Companies Listing Rules","Url":"/listing/equities/specialist-companies-listing-rules/"},{"Name":"Equity Market Listing Fees","Url":"/listing/equities/equity-market-listing-fees/"}]}]},{"Id":1816,"Name":"Trading","Title":"Trading","Copy":"Our bespoke auction-based trading system, NOVA, combines choice and transparency to facilitate concentrated liquidity events.","Url":"/trading/","HasGrandchildren":false,"Children":[{"Name":"Trading Overview","Url":"/trading/trading-overview/","Children":[]},{"Name":"NOVA - TISE Trading System","Url":"/trading/nova-tise-trading-system/","Children":[]}]},{"Id":1819,"Name":"Sustainable","Title":"Sustainable","Copy":"Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.","Url":"/sustainable/","HasGrandchildren":false,"Children":[]},{"Id":1820,"Name":"Market","Title":"Market","Copy":"We have 2,600+ issuers from over 40+ countries listing 4,500+ bonds and equity securities on our market.","Url":"/market/","HasGrandchildren":false,"Children":[{"Name":"Market Overview","Url":"/market/market-overview/","Children":[]},{"Name":"Listed Securities","Url":"/market/securities/","Children":[]},{"Name":"Market News","Url":"/market/news/","Children":[]},{"Name":"Trade Price Data","Url":"/market/trade-price-data/","Children":[]}]},{"Id":1824,"Name":"Membership","Title":"Membership","Copy":"Becoming a Member is simple. We already serve international firms who benefit from being able to facilitate listing or trading on our market.","Url":"/membership/","HasGrandchildren":false,"Children":null},{"Id":1826,"Name":"Why TISE?","Title":"Why TISE","Copy":"TISE stands out from the crowd because of our culture of responsiveness and innovation.","Url":"/why-tise/","HasGrandchildren":false,"Children":[]},{"Id":-1,"Name":"About TISE","Special":true,"Copy":"","Url":"","HasGranndchildren":false,"Children":[{"Name":"Company Profile","Url":"/company-profile/"},{"Name":"Meet the Team","Url":"/company-profile/meet-the-team/"},{"Name":"News","Url":"/news/"},{"Name":"Careers","Url":"/company-profile/careers/"},{"Name":"CSR","Url":"/company-profile/corporate-social-responsibility/"},{"Name":"Business Days","Url":"/business-days/"},{"Name":"Contact","Url":"/contact/"}]}]
+    </script>
+    <script src="/main.js?v=zsdbg3c"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"965014478cea41e1bb80cae092c8f988","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

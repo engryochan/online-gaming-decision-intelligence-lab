@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="v282NZOxcKGlOlOB36zd8fL14VFBhRxBZpBHd3Et">
+
+    <title>Balkan Gas Hub</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- Styles -->
+    <link href="/css/app.css?id=eefd94427a86e275749e3b98316e9a50" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/alertify.css" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/daterangepicker.css" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/Chart.min.css" rel="stylesheet">
+    <link href="https://www.balkangashub.bg/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css"/>
+
+
+</head>
+<body>
+    <div class="js-cookie-consent cookie-consent">
+
+    <span class="cookie-consent__message">
+        Your experience on this site will be improved by allowing cookies. By continuing to use this site, you agree to our use of cookies.
+    </span>
+
+    <button class="js-cookie-consent-agree cookie-consent__agree">
+        Allow cookies
+    </button>
+
+</div>
+
+    <script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'www.balkangashub.bg';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 7);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+
+    <div id="app">
+        <nav id="navbar-top" class="navbar navbar-expand-md navbar-light bg-white">
+    <div class="container">
+        <div class="navbar-collapse navbar-expand">
+            <ul class="navbar-nav ml-auto float-right">
+                <!-- Authentication Links -->
+<li class="nav-item">
+    <a class="nav-link login-link" href="https://www.balkangashub.bg/en/login">Login</a>
+</li>
+                <li class="nav-item flag-icon flag-icon-gb">
+                    <a class="nav-link lang-link " href="https://www.balkangashub.bg/en/membership/admission"></a>
+                </li>
+                <li class="nav-item flag-icon flag-icon-bg ml-2">
+                    <a class="nav-link lang-link " href="https://www.balkangashub.bg/bg/membership/admission"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg-white">
+    <div class="container logo">
+        <a class="navbar-brand" href="https://www.balkangashub.bg">
+            <img src="https://www.balkangashub.bg/imgs/logo_1.png" />
+        </a>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbar-main">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/management-statement">Management Statement</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/company">About The Company</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/ownership">Ownership</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/structure">Structure</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/monthly-reports">Monthly Reports</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/statements-and-reports">Financial Statements</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/links">Useful links</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/privacy">Data Protection</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/about-us/disclaimer">Conditions for use of the website</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/contacts">Contact Us</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products And Services</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/balancing-actions">TSO Balancing actions</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-calendars">Trading Calendars</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/short-term-products">Short-term Exchange Segment</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/long-term-products">Long-term Exchange Segment</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/lng-auction">LNG Auction Service</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/auction-settings">Auction Setting Service</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-ugs-chiren">Trading point UGS Chiren</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-igb-locational">Тrading point IGB Locational</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-ip-stara-zagora">Тrading point IP Stara Zagora</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/trading-point-gis-galata">Тrading point GIS GALATA</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/rulebook">Rulebook</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/api-services">API Services</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/products/fees">Fees</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Membership</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/membership/admission">Registration Process</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/membership/members">Members</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle " href="https://www.balkangashub.bg/en/remit">REMIT</a>
+                                                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle " href="https://www.balkangashub.bg/en/news">News</a>
+                                                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle " href="https://www.balkangashub.bg/en/market-surveillance">Market Surveillance</a>
+                                                                                    </li>
+                                                            <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle text-color-animation" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clearing and Settlement</a>
+                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="https://www.balkangashub.bg/en/clearing-documents">Clearing Documents</a>
+                                                                                                        <a class="dropdown-item" href="https://www.balkangashub.bg/en/clearing-selection-procedure">Clearing selection procedure</a>
+                                                                                                    </div>
+                                                    </li>
+                                                            <li class="nav-item ">
+                                                                                            <a class="nav-link dropdown-toggle" href="https://iip.balkangashub.bg">iip</a>
+                                                                                    </li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+        <main class="py-0">
+                <div id="content-wrapper">
+    <div class="content-header ">
+        <div class="container">
+            <p class="breadcrumbs-wrapper"><a href="https://www.balkangashub.bg/en">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;<span>Registration Process</span></p>
+            <h1>Registration Process</h1>
+        </div>
+    </div>
+
+    <div class="container content" id="">
+        <div class="card">
+            <div class="card-body">
+                <h5>Registration</h5>
+        <hr>
+
+        <p><a target="_blank" href="https://files.balkangashub.bg/public/membership/registration/Registration_form_en.docx">Registration form</a></p>
+        <p><a target="_blank" href="https://files.balkangashub.bg/public/membership/registration/Participation_Agreement_en.docx">Membership Agreement</a></p>
+        <p><a target="_blank" href="https://files.balkangashub.bg/public/membership/registration/Membership_Declaration_v2_en.docx">Declaration for choice of fee plan</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </main>
+        <div class="footer container-fluid">
+    <div class="contain row justify-content-center">
+                                <div class="col">
+                <h1>About Us</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/management-statement">Management Statement</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/company">About The Company</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/ownership">Ownership</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/structure">Structure</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/monthly-reports">Monthly Reports</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/statements-and-reports">Financial Statements</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/links">Useful links</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/privacy">Data Protection</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/about-us/disclaimer">Conditions for use of the website</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/contacts">Contact Us</a></li>
+                                    </ul>
+            </div>
+                                            <div class="col">
+                <h1>Products And Services</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/products/balancing-actions">TSO Balancing actions</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-calendars">Trading Calendars</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/short-term-products">Short-term Exchange Segment</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/long-term-products">Long-term Exchange Segment</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/lng-auction">LNG Auction Service</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/auction-settings">Auction Setting Service</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-ugs-chiren">Trading point UGS Chiren</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-igb-locational">Тrading point IGB Locational</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-ip-stara-zagora">Тrading point IP Stara Zagora</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/trading-point-gis-galata">Тrading point GIS GALATA</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/rulebook">Rulebook</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/api-services">API Services</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/products/fees">Fees</a></li>
+                                    </ul>
+            </div>
+                                            <div class="col">
+                <h1>Membership</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/membership/admission">Registration Process</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/membership/members">Members</a></li>
+                                    </ul>
+            </div>
+                                                                                                                                                                                            <div class="col">
+                <h1>Clearing and Settlement</h1>
+                <ul>
+                                        <li><a href="https://www.balkangashub.bg/en/clearing-documents">Clearing Documents</a></li>
+                                        <li><a href="https://www.balkangashub.bg/en/clearing-selection-procedure">Clearing selection procedure</a></li>
+                                    </ul>
+            </div>
+                                                                            <div class="clearfix"></div>
+    </div>
+    <div class="footer-copyright text-center py-2" style="background: #2a475a;">© 2019 Copyright:
+        <a href="https://www.balkangashub.bg">Balkan Gas Hub</a>
+    </div>
+</div>
+    </div>
+
+    <script src="https://www.balkangashub.bg/js/alertify.min.js"></script>
+    <script src="https://www.balkangashub.bg/js/moment.min.js"></script>
+    <script src="/js/app.js?id=a49b6550310642e91057ca12c15642d0" ></script>
+    <script src="https://www.balkangashub.bg/js/bootstrap4-toggle.min.js"></script>
+
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+
+    
+    <script>
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function() {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+              $dropdown.hover(
+                function() {
+                  const $this = $(this);
+                  $this.addClass(showClass);
+                  $this.find($dropdownToggle).attr("aria-expanded", "true");
+                  $this.find($dropdownMenu).addClass(showClass);
+                },
+                function() {
+                  const $this = $(this);
+                  $this.removeClass(showClass);
+                  $this.find($dropdownToggle).attr("aria-expanded", "false");
+                  $this.find($dropdownMenu).removeClass(showClass);
+                }
+              );
+            } else {
+                $dropdown.off("mouseenter mouseleave");
+            }
+        });
+
+        setTimeout(function() {
+            $(".js-cookie-consent").slideDown(500);
+        }, 1000);
+
+        
+            </script>
+
+</body>
+</html>

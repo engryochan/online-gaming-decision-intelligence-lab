@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html PUBLIC >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	www.blberza.com
+</title><link rel="icon" href="../Content/Logo/favicon-light.svg" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" /><link href="/client/combined/css.css?v=96824701" rel="stylesheet" type="text/css"/>
+<meta name="description" content="Banjalučka berza hartija od vrijednosti, Banjaluka Stock Exchange"></meta>
+    
+
+<link rel="stylesheet" type="text/css" href="../client/highstock/css/stocktools/gui.css" /><link rel="stylesheet" type="text/css" href="../client/highstock/css/annotations/popup.css" /><link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">$.noConflict()</script>
+
+</head>
+
+<body>
+    <form name="aspnetForm" method="post" action="./MemberInfo.aspx?code=NOBR" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EBB74C91" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="DFzC82J0EOoL64G+i/I/icCFUBbGAecJUBs+hKHJAzL1/AfOru9pxgyztNxrBrubtSebEcpdZ4iN24fYvptNKvkiTEa+r//+nnRH8uDedW/N+19O0ngF22ZbSIUVO4JY9sczEaYUW4lpivwGh5oIfxF7DO4NlUT/4qcAboYjs04to/w+V3NAP/303TVGqXuIBluUnn9XvzbdEJE23WUFLB33uC6vBj6FARBXrq9Mv0PDfqci3guMV12P5vq4bN4P9qAYDr8yWGY5nWAsnvm9/A==" />
+        <div id="wrapper" style="min-height: 100vh;">
+
+            <div class="d-flex flex-column" style="min-height: 100%">
+                <div class="position-sticky" style="top: 0; z-index: 10">
+                    <div class="container-xl bg-white grid-links-reset">
+                        <nav class="navbar navbar-expand-md navbar-default justify-content-between px-0">
+                            <div>
+                                <a href="/Pages/Default.aspx">
+                                    <img src="/Content/gridAssets/logo/berza-logo-1.svg" height="55" />
+                                </a>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="navbar-nav align-items-md-center flex-row">
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                    </li>
+                                    <li class="grid-divider-small primary mx-1 d-none d-lg-block"></li>
+                                    <li class="nav-item mr-4 d-none d-lg-inline-block" id="aboutus"></li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbLat" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbLat&#39;,&#39;&#39;)">Lat</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ctl00_ctl00_lbCir" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbCir&#39;,&#39;&#39;)">Ћир</a>
+                                    </li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbEng" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbEng&#39;,&#39;&#39;)">Eng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="grid-main-bg-color grid-links-reset">
+                        <div class="container-xl px-0 px-lg-3">
+                            <div class="d-flex align-items-center justify-content-between position-relative flex-wrap">
+                                <div id="divMenu0" class="d-none d-lg-flex justify-content-between grid-menu align-items-center">
+                                </div>
+                                <div id="div-search" class="pl-lg-3 pl-2 py-1">
+                                    <div class="input-group position-relative rounded">
+                                        <input name="ctl00$ctl00$tbSearch" type="text" value="Pretraga hartija" id="ctl00_ctl00_tbSearch" class="form-control rounded" onfocus="this.value=&#39;&#39;; this.style.color=&#39;#000000&#39;" style="color: gray" />
+                                        <div class="grid-append-button-icon">
+                                            <input type="submit" name="ctl00$ctl00$btSearch" value="" id="ctl00_ctl00_btSearch" class="grid-search" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="navbar-toggler d-lg-none" style="outline: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-button-icon secondary"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                                    <div class="d-flex d-lg-none text-white" id="mobileMenu1" style="max-height: 55vh; overflow-y: scroll;">
+                                    </div>
+                                    <script>
+                                        document.getElementById('mobileMenu1').addEventListener('scroll', (e) => e.stopPropagation())
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../client/combined/mootools-1.2.6.js?v=1" type="text/javascript"></script>
+                <script src="../client/combined/highstock-9.0.1.js?v=1" type="text/javascript"></script>
+                <script>
+                    Highcharts.theme = {
+                        colors: ['#3c3476', '#945fbe', '#090D48', '#039460', '#1926d4', '#e0e01b', '#de862f', '#66d4ed', '#6d8ead', '#Ed3911', '#585a83'],
+                        chart: {
+                            backgroundColor: "#f8f9fa",
+                            style: {
+                                fontFamily: 'Roboto'
+                            },
+                            width: null,
+                        },
+                        title: {
+                            style: {
+                                color: '#000',
+                                font: 'bold 16px "Roboto MS", Verdana, sans-serif'
+                            }
+                        },
+                    };
+                    // Apply the theme
+                    Highcharts.setOptions(Highcharts.theme);
+                </script>
+                <div class="grid-breadcrumbs container-xl"></div>
+                <script src="/client/combined/js.js?v=96824701" type="text/javascript"></script>
+<script src="/client/combined/loc1.js?v=96824701" type="text/javascript"></script>
+
+                <script type="text/javascript">loadMenu(getMenuData(), "memberinfo.aspx?code=nobr", "memberinfo.aspx", {"indexcode":"BIRS","issuercode":"TLKM","securitycode":"TLKM-R-A"}); </script>
+                <script>
+                    jQuery(document).on('click', '.grid-dropdown-menu', function (e) {
+                        e.stopPropagation();
+                    });
+                </script>
+
+                <div id="pre-content" class="flex-grow-1 pt-3 pb-3 container-xl">
+                    
+                    
+                    
+        
+    <h2>
+        NOVA BANKA AD BANJA LUKA
+    </h2>
+    <div class="py-2">
+
+        <img id="ctl00_ctl00_Content_MainContent_imgLogo" src="../Content/Member/Logo/NOBR.gif" border="0" />
+
+    </div>
+    <table style="width: 100%" cellspacing="5" class="grid-table-wrapper novUL mb-3">
+        <tr>
+            <td class="item">
+                Adresa:
+            </td>
+            <td class="hal value">
+                Jovana Dučića 39, 78000 BANJA LUKA
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Telefon:
+            </td>
+            <td class="hal value">
+                +387 51 333 325
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Faks:
+            </td>
+            <td class="hal value">
+                +387 51 241 983
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                e-mail:
+            </td>
+            <td class="hal value">
+                <a id="ctl00_ctl00_Content_MainContent_hlMail" href="mailto:broker@novabanka.com">broker@novabanka.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Web adresa:
+            </td>
+            <td class="value">
+                <a id="ctl00_ctl00_Content_MainContent_hlWWW" href="http://www.novabanka.com">www.novabanka.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="item vat">
+                Ovlašteni brokeri:
+            </td>
+            <td>
+                Jasna Zrilić<br/>Nikola Milanković<br/>
+            </td>
+        </tr>
+
+    </table>
+    <h2>
+        Kontakt
+    </h2>
+    <div class="table-scrollable">
+        <div>
+	<table class="novUL pad3 grid-table-wrapper" cellspacing="0" border="0" id="ctl00_ctl00_Content_MainContent_gvContacts" width="100%">
+		<tr class="table_header hal">
+			<th scope="col">Kontakt osoba</th><th scope="col">Grad</th><th scope="col">Adresa</th><th scope="col">Telefon</th><th scope="col">Fax</th><th scope="col">Email</th>
+		</tr><tr>
+			<td>Žana Zrnić</td><td>Banja Luka</td><td>Gavre Vučkovića bb</td><td>+387 51 333 300</td><td>+387 51 227 271</td><td>
+                        <a href='mailto:zana.zrnic@novabanka.com'>zana.zrnic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Željka Kesić</td><td>Banja Luka</td><td>Kralja Alfonsa XIII/37 A</td><td>+387 51 333 300</td><td>+387 51 211 533</td><td>
+                        <a href='mailto:zeljka.kesic@novabanka.com'>zeljka.kesic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Tanja Vuković</td><td>Banja Luka</td><td>Jovana Dučića 39</td><td>+387 51 333 325</td><td>+387 51 241 983</td><td>
+                        <a href='mailto:tanja.vukovic@novabanka.com'>tanja.vukovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Nikola Milanković</td><td>Banja Luka</td><td>Kralja Alfonsa XIII 37A</td><td>&nbsp;</td><td>&nbsp;</td><td>
+                        <a href='mailto:nikola.milankovic@novabanka.com'>nikola.milankovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Tatjana Šoja</td><td>Bijeljina</td><td>Patrijarha Pavla 17</td><td>+387 55 230 300</td><td>+387 55 201 410</td><td>
+                        <a href='mailto:tatjana.soja@novabanka.com'>tatjana.soja@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Dajana Vukičević</td><td>Brčko</td><td>Bulevar mira 4</td><td>+387 49 233 681</td><td>+387 49 217 060</td><td>
+                        <a href='mailto:dajana.vukicevic@novabanka.com'>dajana.vukicevic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Nikolina Radičić</td><td>Brod</td><td>Trg patrijarha Pavla bb</td><td>+387 53 621 200</td><td>+387 53 621 202</td><td>
+                        <a href='mailto:nikolina.radicic@novabanka.com'>nikolina.radicic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Vedrana Jeličić</td><td>Brod</td><td>Trg patrijarha Pavla bb</td><td>+387 53 621 203</td><td>+387 53 621 202</td><td>
+                        <a href='mailto:vedrana.jelicic@novabanka.com'>vedrana.jelicic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Bogdanka Dujaković</td><td>Derventa</td><td>Kralja Petra I bb</td><td>+387 53 333 769</td><td>+387 53 310 042</td><td>
+                        <a href='mailto:bogdanka.dujakovic@novabanka.com'>bogdanka.dujakovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Jovan Pejin</td><td>Derventa</td><td>Kralja Petra I bb</td><td>+387 53 310 040</td><td>+387 53 310 042</td><td>
+                        <a href='mailto:jovan.pejin@novabanka.com'>jovan.pejin@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Jugoslav Anđelković</td><td>Derventa</td><td>Kralja Petra I bb</td><td>+387 53 333 769</td><td>+387 53 310 042</td><td>
+                        <a href='mailto:jugoslav.andjelkovic@novabanka.com'>jugoslav.andjelkovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Sanja Jeftić</td><td>Derventa</td><td>Kralja Petra I bb</td><td>+387 53 310 040</td><td>+387 53 310 042</td><td>
+                        <a href='mailto:sanja.jeftic@novabanka.com'>sanja.jeftic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Stojanka Blagojević</td><td>Doboj</td><td>Svetog Save 35</td><td>+387 53 205 451</td><td>+387 53 205 452</td><td>
+                        <a href='mailto:stojanka.blagojevic@novabanka.com'>stojanka.blagojevic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Snježana Starčević</td><td>Doboj</td><td>Svetog Save 35</td><td>+387 53 405 457</td><td>+387 53 205 452</td><td>
+                        <a href='mailto:snjezana.starcevic@novabanka.com'>snjezana.starcevic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Biiljana Alvirović</td><td>Doboj</td><td>Svetog Save 35</td><td>+387 53 205 456</td><td>+387 53 205 452</td><td>
+                        <a href='mailto:biiljana.alvirovic@novabanka.com'>biiljana.alvirovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Dario Milačak</td><td>Doboj</td><td>Svetog Save 36</td><td>+387 53 205 454</td><td>+387 53 205 452</td><td>
+                        <a href='mailto:dario.milacak@novabanka.com'>dario.milacak@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Julija Šljivić</td><td>Doboj</td><td>Svetog Save 35</td><td>+387 53 205 450</td><td>+387 53 205 452</td><td>
+                        <a href='mailto:julija.sljivic@novabanka.com'>julija.sljivic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Branko Grčić</td><td>Gacko</td><td>Stojana Kovačevića 8</td><td>+387 59 470 020</td><td>+387 59 470 020</td><td>
+                        <a href='mailto:branko.grcic@novabanka.com'>branko.grcic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Sandra Bursać</td><td>Gradiška</td><td>Kozarskih Brigada G-2</td><td>+387 51 816 014</td><td>+387 51 813 968</td><td>
+                        <a href='mailto:sandra.bursac@novabanka.com'>sandra.bursac@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Biljana Saravija</td><td>Istočno Sarajevo</td><td>Spasovdanska 31</td><td>+387 57 320 106</td><td>+387 57 320 911</td><td>
+                        <a href='mailto:biljana.saravija@novabanka.com'>biljana.saravija@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Ljilja Janković</td><td>Kozarska Dubica</td><td>Svetosavska bb</td><td>+387 52 424 971</td><td>+387 52 242 800</td><td>
+                        <a href='mailto:ljilja.jankovic@novabanka.com'>ljilja.jankovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Slađana Babić</td><td>Kozarska Dubica</td><td>Svetosavska bb</td><td>+387 52 424 971</td><td>+387 52 242 800</td><td>
+                        <a href='mailto:sladjana.babic@novabanka.com'>sladjana.babic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Sanja Protić</td><td>Laktaši</td><td>Karađorđeva bb</td><td>+387 51 535 820</td><td>+387 51 535 086</td><td>
+                        <a href='mailto:sanja.protic@novabanka.com'>sanja.protic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Biljana Đukić</td><td>Modriča</td><td>Trg dr Milana Jelića 1</td><td>+387 53 205 455</td><td>+387 53 621 201</td><td>
+                        <a href='mailto:djukic.biljana@novabanka.com'>djukic.biljana@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Rajka Janjić</td><td>Novi Grad</td><td>Karađorđa Petrovića 25</td><td>+387 52 720 050</td><td>+387 52 720 051</td><td>
+                        <a href='mailto:rajka.janjic@novabanka.com'>rajka.janjic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Gordana Dragić</td><td>Prijedor</td><td>Trg Majora Zorana Karlice 1</td><td>+387 52 242 802</td><td>+387 52 240 051</td><td>
+                        <a href='mailto:gordana.dragic@novabanka.com'>gordana.dragic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Biljana Bursać</td><td>Prijedor</td><td>Trg Majora Zorana Karlice 1</td><td>+387 52 242 802</td><td>+387 52 242 800</td><td>
+                        <a href='mailto:biljana.bursac@novabanka.com'>biljana.bursac@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Duška Šindrak</td><td>Prijedor</td><td>Trg Majora Zorana Karlice 2</td><td>+387 52 242 802</td><td>+387 52 242 800</td><td>
+                        <a href='mailto:duska.sindrak@novabanka.com'>duska.sindrak@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Jelena Jovanović </td><td>Prijedor</td><td>Trg Majora Zorana Karlice 1</td><td>+387 52 242 802</td><td>+387 52 242 800</td><td>
+                        <a href='mailto:jelena.jovanovic@novabanka.com'>jelena.jovanovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Živana Demonjić</td><td>Prnjavor</td><td>Svetog Save 38</td><td>+387 51 655 232</td><td>+387 51 641 080</td><td>
+                        <a href='mailto:zivana.demonjic@novabanka.com'>zivana.demonjic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Nermina Kafedžić</td><td>Sarajevo</td><td>Maršala Tita 2</td><td>+387 33 251 803</td><td>+387 33 268 201</td><td>
+                        <a href='mailto:nermina.kafedžić@novabanka.com'>nermina.kafedžić@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Mirela Grujić</td><td>Stanari</td><td>Stanari bb</td><td>+387 53 292 212</td><td>+387 53 292 211</td><td>
+                        <a href='mailto:mirela.grujic@novabanka.com'>mirela.grujic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Željka Stanišić</td><td>Stanari</td><td>Stanari bb</td><td>+387 53 292 212</td><td>+387 53 292 211</td><td>
+                        <a href='mailto:zeljka.stanisic@novabanka.com'>zeljka.stanisic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Duška Knežević</td><td>Teslić</td><td>Svetog Save 20</td><td>+387 53 410 180</td><td>+387 53 410 182</td><td>
+                        <a href='mailto:duska.knezevic@novabanka.com'>duska.knezevic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Dragana Kuprešak</td><td>Teslić</td><td>Svetog Save 20</td><td>+387 53 432 015</td><td>+387 53 410 182</td><td>
+                        <a href='mailto:dragana.kupresak@novabanka.com'>dragana.kupresak@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Ljubica Vujović</td><td>Trebinje</td><td>Herceg Stefana Kosače 1</td><td>+387 59 270 011</td><td>+387 59 260 235</td><td>
+                        <a href='mailto:ljubica.vujovic@novabanka.com'>ljubica.vujovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Miljana Vujović</td><td>Trebinje</td><td>Herceg Stefana Kosače 1</td><td>+387 59 270 011</td><td>+387 59 260 235</td><td>
+                        <a href='mailto:miljana.vujovic@novabanka.com'>miljana.vujovic@novabanka.com </a>
+                    </td>
+		</tr><tr>
+			<td>Olivera Todorović</td><td>Zvornik</td><td>Svetog Save 62</td><td>+387 56 232 611</td><td>+387 56 231 640</td><td>
+                        <a href='mailto:olivera.todorovic@novabanka.com'>olivera.todorovic@novabanka.com </a>
+                    </td>
+		</tr>
+	</table>
+</div>
+    </div>
+
+
+                </div>
+                <a id="back2Top" title="Back to top" href="#">
+                    <img src="/Content/gridAssets/icons/icon-arrow-upwrads.svg" />
+                </a>
+                <script>
+                    jQuery(window).scroll(function () {
+                        var height = jQuery(window).scrollTop();
+                        if (height > 100) {
+                            jQuery('#back2Top').fadeIn();
+                        } else {
+                            jQuery('#back2Top').fadeOut();
+                        }
+                    });
+                    jQuery(document).ready(function () {
+                        jQuery("#back2Top").click(function (event) {
+                            event.preventDefault();
+                            jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+                            return false;
+                        });
+                    });
+                </script>
+                <div class="grid-footer-wrapper grid-main-bg-color">
+                    <div class="container-xl py-4 grid-footer grid-links-reset">
+                        <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-start align-items-lg-center">
+                            <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center grid-white-text-color">
+                                <a class="mb-2 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                <a class="pl-0 mb-2 mb-lg-0 grid-white-text-color hover" href="mailto:komentar@blberza.com?subject=Komentar na sajt" style="cursor: pointer;">
+                                    Sugestije na sajt
+                                </a>
+                                <span class="grid-divider-small d-none d-lg-inline-block mx-3"></span>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover" href="SiteMap.aspx">Mapa sajta</a>
+                                <div class="d-lg-none mb-3">
+                                    <a id="ctl00_ctl00_LinkButton1" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton1&#39;,&#39;&#39;)">Lat</a>
+                                    <a id="ctl00_ctl00_LinkButton2" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton2&#39;,&#39;&#39;)">Ћир</a>
+                                    <a id="ctl00_ctl00_LinkButton3" class="grid-font-weight-50 grid-small-text grid-white-text-color hover" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton3&#39;,&#39;&#39;)">Eng</a>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="grid-white-text-color grid-small-text">
+                                    © 2021 Banjalučka berza. Sva prava zadržana.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    
+    
+
+    <!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WXRLKX8GQ"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1WXRLKX8GQ');
+    </script>
+    <script>
+        if (typeof jQuery != 'undefined') {
+            (function ($) {
+                $(document).ready(function () {
+                    $('.carousel').each(function (index, element) {
+                        $(this)[index].slide = null;
+                    });
+                });
+            })(jQuery);
+        }
+    </script>
+    <script>
+        function applyIcon(type) {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+
+            if (type === "dark") {
+                link.href = '../Content/Logo/favicon-dark.svg';
+            } else {
+                link.href = '../Content/Logo/favicon-light.svg';
+            }
+
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        var dmQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        var lmQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+        // Check on initial load if dark mode is already there. Apply the dark
+        // mode favicon if true.
+        if (dmQuery.matches) {
+            applyIcon("dark");
+        }
+
+        dmQuery.addListener(function () {
+            applyIcon("dark")
+        });
+
+        lmQuery.addListener(function () {
+            applyIcon("light");
+        });
+    </script>
+
+</body>
+</html>

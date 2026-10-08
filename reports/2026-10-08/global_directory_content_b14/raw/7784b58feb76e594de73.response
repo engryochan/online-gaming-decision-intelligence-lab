@@ -1,0 +1,959 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="bg" xml:lang="bg"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=12.0.0" /><link type="text/css" rel="stylesheet" href="RES_NOT_FOUND" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=12.0.0" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=12.0.0" /><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm"></script><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm"></script><script type="text/javascript" src="/javax.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=12.0.0" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/css/components_over.css.xhtml" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/css/main.css.xhtml" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/css/cookieconsent.min.css.xhtml" /><script type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">if(window.PrimeFaces){PrimeFaces.settings.locale='bg';PrimeFaces.settings.viewId='/members/members.xhtml';PrimeFaces.settings.contextPath='';PrimeFaces.settings.cookiesSecure=false;}</script><script type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){if(window.PrimeFaces){PrimeFaces.csp.init('ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm');};;});</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+        <title>CSD Home</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair Display SC" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" type="image/png" href="/resources/images/logo_only.png" /></head><body><script type="text/javascript" src="/javax.faces.resource/js/cookieconsent.min.js.xhtml" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm"></script> 
+
+
+        <script nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">
+            window.onload = function () {
+                var element = document.getElementById("textarea_simulator");
+                element.remove();
+            }
+
+            window.addEventListener("load", function () {
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#006a23"
+                        },
+                        "button": {
+                            "background": "#f1d600"
+                        }
+                    },
+                    "theme": "edgeless",
+                    "content": {
+                        "message": "Този сайт използва \"бисквитки\", за да работи оптимално за Вас. Чрез посещението си Вие приемате използването на \"бисквитки\". ",
+                        "dismiss": "Разбрах!",
+                        "link": "Повече информация!",
+                        "href": "/resources/docfiles/cookies_policy.pdf"
+                    }
+                })
+            });
+        </script>
+        <style>
+
+            @media screen and (min-width : 800px) {
+                .inputHeader {
+                    color: #495057;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* padding-right: 32px; */
+                    text-indent: 10px;
+                    text-decoration: none;
+                    padding: 15px 16px;
+                    height: 21px;
+                    width: 320px;
+                    border: 1px solid #B6B6B6;
+                    border-radius: 16px;
+                    -webkit-border-radius: 16px;
+                }
+                .ui-inputgroup .ui-inputgroup-addon, .ui-inputgroup .ui-inputgroup-addon-checkbox {
+                    display: inline-block;
+                    text-align: center;
+                    min-width: 3em;
+                    font-size: 1rem;
+                    /* height: 43px; */
+                    height: 53px;
+                    border-bottom-left-radius: 16px;
+                    border-top-left-radius: 16px;
+                    border-width: 1px 0px 1px 1px;
+                    border-style: solid;
+                    border-color: #B6B6B6;
+                    /* border: 1px solid #B6B6B6; */
+                    -webkit-border-top-left-radius: 16px;
+                    -webkit-border-bottom-left-radius: 16px;
+                }
+                .headerLeftMenuBtn .ui-widget .ui-icon.pi, .headerLeftMenuBtn .ui-icon.pi {
+                    background: none repeat scroll 0 0 transparent !important;
+                    text-indent: 0 !important;
+                    font-size: 3em;
+                }
+                .headerLeftMenu .ui-button-icon-only .ui-icon, .headerLeftMenu .ui-button-text-icon-left .ui-icon, .headerLeftMenu .ui-button-text-icon-right .ui-icon {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -25x;
+                }
+
+                #header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    /* padding: 12px 40px; */
+                    gap: 71px;
+                    max-width: 1440px;
+                    width: 100%;
+                    height: 88px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+                }
+
+                #headerLogo {
+                    margin: 12px 40px;
+                    width: 152.23px;
+                    height: 64px;
+                }
+
+                .headerLogo-1 {
+                    max-width:100%;
+                    height:auto;
+                }
+
+               
+            }
+            @media screen and (max-width : 800px) {
+                .inputHeader {
+                    color: #495057;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* padding-right: 32px; */
+                    text-indent: 10px;
+                    text-decoration: none;
+                    padding: 15px 16px;
+                    height: 16px;
+                    width: 160px;
+                    border: 1px solid #B6B6B6;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                }
+                .ui-inputgroup .ui-inputgroup-addon, .ui-inputgroup .ui-inputgroup-addon-checkbox {
+                    display: inline-block;
+                    text-align: center;
+                    min-width: 3em;
+                    font-size: 1rem;
+                    /* height: 43px; */
+                    height: 48px;
+                    border-bottom-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    border-width: 1px 0px 1px 1px;
+                    border-style: solid;
+                    border-color: #B6B6B6;
+                    /* border: 1px solid #B6B6B6; */
+                    -webkit-border-top-left-radius: 10px;
+                    -webkit-border-bottom-left-radius: 10px;
+                }
+                .headerLeftMenuBtn .ui-widget .ui-icon.pi, .headerLeftMenuBtn .ui-icon.pi {
+                    background: none repeat scroll 0 0 transparent !important;
+                    text-indent: 0 !important;
+                    font-size: 1.5em;
+                }
+                .headerLeftMenu .ui-button-icon-only .ui-icon, .headerLeftMenu .ui-button-text-icon-left .ui-icon, .headerLeftMenu .ui-button-text-icon-right .ui-icon {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -10px;
+                }
+
+                #header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    /* padding: 12px 40px; */
+                    gap: 10px;
+                    max-width: 800px;
+                    width: 100%;
+                    height: 88px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+                }
+                #headerLogo {
+                    margin: 12px 40px;
+                    width: 152.23px;
+                    height: 64px;
+                    min-width: 75px;
+                }
+
+                .headerLogo-1 {
+                    max-width:100%;
+                    height:auto;
+                    margin-top: 25%;
+                }
+				
+				.center-sh-right-1 {
+                    display: none;
+                }
+
+               
+            }
+
+
+        </style>
+            <div id="header">
+
+                <div id="headerLogo">
+                    <a href="/index.xhtml"><img src="/javax.faces.resource/images/Logo_GreenBG.svg.xhtml" class="headerLogo-1" /></a>
+                </div>	
+
+                <div id="headerLeft">
+<form id="searchSiteText" name="searchSiteText" method="post" action="/members/members.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="searchSiteText" value="searchSiteText" />
+
+                        <div class="ui-inputgroup">
+                            <!--  &lt;div class="ui-inputgroup-addon"&gt;&lt;i class="pi pi-search" style="padding-top: 14px;"&gt;&lt;/i&gt;&lt;/div&gt;--><button id="searchSiteText:j_idt16" name="searchSiteText:j_idt16" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-inputgroup-addon" style="padding-top: 14px;" type="submit"><span class="ui-button-icon-left ui-icon ui-c pi pi-search"></span><span class="ui-button-text ui-c">ui-button</span></button><script id="searchSiteText:j_idt16_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandButton","widget_searchSiteText_j_idt16",{id:"searchSiteText:j_idt16"});});</script><input id="searchSiteText:search" name="searchSiteText:search" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all inputHeader" placeholder="Търсене" /><script id="searchSiteText:search_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("InputText","widget_searchSiteText_search",{id:"searchSiteText:search"});});</script>
+                        </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="2497472162437610046:7008155711911945876" autocomplete="off" />
+</form>
+
+
+
+                    <div class="headerLeftMenu">
+                        <span class="headerLeftMenuText">Меню</span>
+                        <div><div id="menuPanel" class="ui-selectbooleanbutton ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only headerLeftMenuBtn"><div class="ui-helper-hidden-accessible"><input id="menuPanel_input" name="menuPanel_input" type="checkbox" /></div><span class="ui-button-icon-left ui-icon ui-c pi pi-bars"></span><span class="ui-button-text ui-c">ui-button</span></div><script id="menuPanel_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("SelectBooleanButton","wMenuPanel",{id:"menuPanel",onLabel:"ui\-button",offLabel:"ui\-button",onIcon:"pi pi\-times",offIcon:"pi pi\-bars"});});</script><div id="overMenuPanel" class="ui-overlaypanel ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-overlaypanel-content">
+    <style>
+        .hidden{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+    <script nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">
+        function mouseOverAus() {
+            const div = document.getElementById("aboutuselement");
+            div.classList.remove('hidden');
+        }
+
+        function mouseOverOth() {
+            const div = document.getElementById("aboutuselement");
+            div.classList.add('hidden');
+        }
+    </script>
+        <div class="sRightPanel">
+            <div class="sRightPanel-left">
+                <div class="sRightPanel-left-1-2">
+                    <div class="sRightPanel-left-1">
+                        <span><a class="mysliderLink" href="/au/aboutUs.xhtml" id="a-29b8cb84-386f-473c-995a-e834fc6a2e1f">ЗА НАС</a> </span>
+                        <span><a class="mysliderLink" href="/md/mainDocuments.xhtml" id="a-47ee8108-b93b-4c46-bb5e-71aa184c4c3d">ОСНОВНИ ДОКУМЕНТИ</a> </span>
+                        <span><a class="mysliderLink" href="/ec/europeanConnectivity.xhtml" id="a-3a94c885-ebfe-46fd-b410-e4435b8bdc71">ЕВРОПЕЙСКА СВЪРЗАНОСТ</a> </span>
+                        <span><a class="mysliderLink" href="/issuers/issuers.xhtml" id="a-597e89bf-0733-4e49-9b77-0bb3e99d600a">ЕМИТЕНТИ</a> </span> 
+                        <span><a class="mysliderLink" href="/members/members.xhtml" id="a-c5839141-0b88-42d8-ab75-933befaf2882">ЧЛЕНОВЕ</a> </span>	
+                        <span><a class="mysliderLink" href="/investors.xhtml" id="a-43a00a3f-cfa3-4dec-ab34-80062c541c54">ИНВЕСТИТОРИ</a>  </span>
+                        <span><a class="mysliderLink" href="/sp/specialPledges.xhtml" id="a-f32eb88d-aa28-4b7f-a0f2-d57002d88809">ОСОБЕНИ ЗАЛОЗИ</a>  </span>
+                        <span><a class="mysliderLink" href="/others/others.xhtml" id="a-65c5d372-9e19-43ce-b924-72b1a46583ff">ДРУГИ</a> </span>
+                        <span><a class="mysliderLink" href="/mainFAQ.xhtml" id="a-3067a9a2-9c0e-4abb-a652-194f857909a1">ЧЕСТО ЗАДАВАНИ ВЪПРОСИ (FAQ)</a>  </span>
+                    </div>
+                    <div id="aboutuselement" class="sRightPanel-left-2 hidden">
+                        <span><a class="mysliderLink" href="/au/activityCompany.xhtml">Дейност</a> </span>
+                        <span><a class="mysliderLink" href="/au/financialInformation.xhtml">Финансова информация</a> </span>
+                        <span><a class="mysliderLink" href="/au/boardDirectors.xhtml">Съвет на директорите</a> </span>
+                        <span><a class="mysliderLink" href="/au/shareholders.xhtml">Акционери</a> </span>
+                        <span><a class="mysliderLink" href="/au/organization.xhtml">Организация</a> </span> 
+                        <span><a class="mysliderLink" href="/au/courtArbitration.xhtml">Арбитражен съд</a> </span>	
+                        <span><a class="mysliderLink" href="/au/userCommittee.xhtml">Комитет на ползвателите</a>  </span>
+                        <span><a class="mysliderLink" href="/au/generalMeetings.xhtml">Общи събрания</a>  </span>
+                        <span><a class="mysliderLink" href="/au/news.xhtml">Новини</a>  </span>
+                        <span><a class="mysliderLink" href="/au/complaintsProcedure.xhtml">Процедура за разглеждане на жалби</a>  </span>
+                    </div>
+                </div>
+                <a class="left-panel-menu-16" href="http://enter.csd-bg.bg/" target="_blank">
+                    <span class="sRightPanel-left-3">
+                        <span class="left-panel-menu-15">E-Portal</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>               
+                    </span> 
+                </a>
+                <a class="left-panel-menu-16" href="https://lei.csd-bg.bg/" target="_blank">
+                    <span class="sRightPanel-left-3">
+                        <span class="left-panel-menu-15">LEI Portal</span>
+                        <span class="left-panel-menu-15">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>               
+                    </span> 
+                </a>
+
+                <!-- &lt;div&gt;
+                     &lt;p:graphicImage name="images/slider_portal_login.svg"/&gt;
+                 &lt;/div&gt;-->
+            </div>
+
+            <div class="sRightPanel-right">
+                <div class="sRightPanel-right-1">
+                    <span><b>Контакти</b></span>
+                    <span>а: гр. София, 1000, ул. “Три уши” № 6, ет. 4</span>
+                    <span>т: +359 2 939 19 81; +359 2 400 12 41</span>
+                    <span>e: info@csd-bg.bg</span>
+					<span><b>За информация за боновите книжки от масовата приватизация:</b></span>
+					<span>т: +359 2 4001 228</span>
+  
+
+                </div>
+                <div class="sRightPanel-right-2">
+                    <a href="https://www.facebook.com/CentralDepository" target="_blank"><img id="j_idt21" src="/javax.faces.resource/images/slider_Facebook.svg.xhtml" alt="" ismap="false" /></a>
+                    <a href="https://www.linkedin.com/company/central-depository/" target="_blank"><img id="j_idt23" src="/javax.faces.resource/images/slider_LinkedIn.svg.xhtml" alt="" ismap="false" /></a>
+                    <a href="https://www.youtube.com/channel/UCtpgISArYmjrdkx3xvIfhyQ" target="_blank"><img id="j_idt25" src="/javax.faces.resource/images/slider_Youtube.svg.xhtml" alt="" ismap="false" /></a>
+                    <!-- &lt;p:graphicImage name="images/slider_Facebook.svg"/&gt;
+                     &lt;p:graphicImage name="images/slider_LinkedIn.svg"/&gt;
+                     &lt;p:graphicImage name="images/slider_Youtube.svg"/&gt;-->
+                </div>
+            </div>
+        </div></div></div><script id="overMenuPanel_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("OverlayPanel","widget_overMenuPanel",{id:"overMenuPanel",target:"menuPanel",onHide:function(){PF('wMenuPanel').uncheck()}});});</script>
+                        </div>
+                    </div>
+
+                    <div class="headerLeftBorder"> </div>
+                    <div class="headerLeftBtn">
+<form id="j_idt28" name="j_idt28" method="post" action="/members/members.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt28" value="j_idt28" />
+<button id="j_idt28:j_idt29" name="j_idt28:j_idt29" class=" langButtonBG" title="БГ" type="submit"><span class="ui-button-text ui-c">БГ</span></button><script id="j_idt28:j_idt29_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt28_j_idt29",{id:"j_idt28:j_idt29"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="2497472162437610046:7008155711911945876" autocomplete="off" />
+</form>
+<form id="j_idt30" name="j_idt30" method="post" action="/members/members.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt30" value="j_idt30" />
+<button id="j_idt30:j_idt31" name="j_idt30:j_idt31" class=" langButtonEN" title="EN" type="submit"><span class="ui-button-text ui-c">EN</span></button><script id="j_idt30:j_idt31_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt30_j_idt31",{id:"j_idt30:j_idt31"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="2497472162437610046:7008155711911945876" autocomplete="off" />
+</form>
+                    </div>
+                </div>	 
+
+            </div>
+            <script nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">
+                //<![CDATA[
+                function dateTemplateFunc(date) {
+                    return '<span style="background-color:' + ((date.day < 21 && date.day > 10) ? '#81C784' : 'inherit') + ';border-radius:50%;width: 1rem;height: 1rem;line-height: 1rem;">' + date.day + '</span>';
+                }
+
+                //]]>
+            </script>
+            <style>
+                .ui-dialog .ui-dialog-title {
+                    /* float: left;
+                   position: relative;
+                   left: 50%;*/
+                    margin: 0.5em 16px 2.1em 16px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 150%;
+                }
+
+                .ui-dialog .ui-dialog-content {
+                    background: #fff;
+                    color: #495057;
+                    border: 0 none;
+                    padding: 0.2rem 1.5rem 2rem 1.5rem;
+                    border: 0 none;
+                }
+
+                .ui-dialog {
+                    position: fixed;
+                    overflow: hidden;
+                    padding: 0;
+                    box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+                    border: 0 none;
+                    border-radius: 4px;
+                }
+
+                .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-closethick {
+                    font-family: "primeicons" !important;
+                    font-style: normal;
+                    font-weight: normal;
+                    display: inline-block;
+                    background: none;
+                }
+                .ui-icon {
+                    font-size: 1.5rem;
+                    vertical-align: baseline;
+                    position: static;
+                    text-indent: 0;
+                    overflow: visible;
+                }
+
+                .ui-dialog .ui-dialog-titlebar {
+                    padding: 1em 1.5em 0em 0em;
+                    display: flex;
+                    justify-content: center;
+                    /* position: relative;*/
+                    border: 0;
+                    background: #fff;
+                }
+
+                .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-closethick:before {
+                    content: "";
+                }
+
+                .ui-widget-overlay {
+                    background: rgba(0,0,0,.4);
+                }
+
+                .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon {
+                    /* color: #6c757d;*/
+                    color: #048282;
+                    text-align: center;
+                    line-height: 2rem;
+                }
+
+                /* select one menu */
+
+                .ui-selectonemenu label.ui-selectonemenu-label {
+                    cursor: pointer;
+                }
+
+                .ui-fluid .ui-selectonemenu-label {
+                    width: calc(100% - 2.357rem);
+                    padding: .5rem .5rem;
+                }
+
+                .ui-selectonemenu .ui-selectonemenu-label {
+                    background: transparent;
+                    padding-right: 2.357rem;
+                }
+
+                .ui-fluid .ui-inputfield {
+                    box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                }
+
+                .ui-selectonemenu .ui-selectonemenu-label {
+                    display: block;
+                    border: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-weight: normal;
+                    width: 100%;
+                    text-align: left;
+                }
+                /*    #formSearchCA .ui-inputfield {
+                        color: #495057;
+                        background: #ffffff;
+                        padding: .5rem .5rem;
+                        border: 1px solid #ced4da;
+                        outline: 0 none;
+                        font-size: 1rem;
+                        border-radius: 4px;
+                        transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        margin: 0;
+                    }
+                */
+                .ui-fluid .ui-selectonemenu .ui-selectonemenu-trigger {
+                    width: 32px;
+                    padding: 0 6px;
+                    box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                }
+                .ui-selectonemenu .ui-selectonemenu-trigger {
+                    border: 0 none;
+                    cursor: pointer;
+                    height: 100%;
+                    position: absolute;
+                    padding: 0;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    width: 2.357rem;
+                    background: transparent;
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+                /*       #formSearchCA .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+                       -moz-border-radius-bottomright: 4px;
+                       -webkit-border-bottom-right-radius: 4px;
+                       -khtml-border-bottom-right-radius: 4px;
+                       border-bottom-right-radius: 4px;
+                   }
+                   #formSearchCA .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+                       -moz-border-radius-topright: 4px;
+                       -webkit-border-top-right-radius: 4px;
+                       -khtml-border-top-right-radius: 4px;
+                       border-top-right-radius: 4px;
+                   }*/
+                /*     .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+                         border: 1px solid #B6B6B6;
+                         background: #f9f9fc;
+                         font-weight: normal;
+                         color: #555555;
+                     }*/
+                .ui-icon-triangle-1-s {
+                    background-position: -64px -16px;
+                }
+                .ui-icon {
+                    font-size: 1rem;
+                    display: inline-block;
+                    vertical-align: baseline;
+                    margin: 0;
+                    position: static;
+                    text-indent: 0;
+                    overflow: visible;
+                    background-repeat: no-repeat;
+                }
+
+                .ui-selectonemenu {
+                    display: inline-block;
+                    vertical-align: middle;
+                    /*border: 1px solid #B6B6B6;*/
+                    position: relative;
+                    transform: none;
+                    /*padding: 0;*/
+                    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+                    border-radius: 4px;
+                    background: #ffffff;
+                    cursor: pointer;
+                    width: 400px;
+                }
+
+                .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon {
+                    position: static;
+                    margin: 0;
+                    color: #6c757d;
+                    font-family: "primeicons" !important;
+                    font-style: normal;
+                    font-weight: normal;
+                    display: inline-block;
+                    background: none;
+                }
+                .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon::before {
+                    content: "";
+                }
+
+                .ui-helper-reset {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    outline: 0;
+                    line-height: 1.3;
+                    text-decoration: none;
+                    font-size: 100%;
+                    list-style: none;
+                }
+
+                .ui-selectonemenu-panel .ui-selectonemenu-list-item {
+                    border: 0px none;
+                    margin: 1px 0;
+                    padding: 3px 5px;
+                    text-align: left;
+                    white-space: nowrap;
+                }
+                .ui-selectonemenu-panel .ui-selectonemenu-item {
+                    font-weight: normal;
+                    cursor: pointer;
+                }
+
+                .ui-selectonemenu-panel .ui-selectonemenu-items .ui-selectonemenu-item.ui-state-highlight {
+                    background: #e3f2fd;
+                    color: #495057;
+                    overflow: auto;
+                }
+                .ui-selectonemenu-panel .ui-selectonemenu-items .ui-selectonemenu-item {
+                    margin: 0;
+                    padding: .5rem 1rem;
+                    background: transparent;
+                    color: #495057;
+                    outline: 0 none;
+                    border-radius: 0;
+                    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+                }
+                .ui-selectonemenu-panel .ui-selectonemenu-list-item {
+                    border: 0px none;
+                    margin: 1px 0;
+                    padding: 3px 5px;
+                    text-align: left;
+                    white-space: nowrap;
+                }
+                .ui-selectonemenu-panel .ui-selectonemenu-item {
+                    font-weight: normal;
+                    cursor: pointer;
+                }
+
+                .ui-selectonemenu-panel .ui-selectonemenu-items-wrapper {
+                    overflow: auto;
+                }
+
+                .ui-selectonemenu-panel {
+                    background: #fff;
+                    border: 0 none;
+                    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+                    border-radius: 4px;
+                    position: absolute;
+                    height: auto;
+                }
+
+                /* button */
+                .ui-button .ui-button-text {
+                    display: block;
+                    line-height: normal;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+
+                /* table */
+                .ui-datatable thead th {
+                    background: #f8f9fa;
+                    color: #495057;
+                    padding: 1rem 1rem;
+                    border: 1px solid #e9ecef;
+                    border-top-width: 1px;
+                    border-right-width: 1px;
+                    border-bottom-width: 1px;
+                    border-left-width: 1px;
+                    border-width: 0 0 1px 0;
+                    text-align: left;
+                    box-sizing: content-box;
+                    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+                }
+
+                .ui-datatable table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    table-layout: fixed;
+                    border: 1px solid #e9ecef;
+                }
+
+                /* button deatilCA */
+                #formIPCntc .ui-button {
+                    background: #048282;
+                    color: #ffffff;
+                    border: 1px solid #05a7a7;
+                    margin: 0;
+                    outline: 0 none;
+                    border-radius: 4px;
+                    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+                }
+
+                /* date picker */
+                .p-datepicker {
+                    position: relative;
+                    display: inline-block;
+                    width: auto;
+                    background: #FFFFFF;
+                }
+
+                .ui-datepicker .ui-datepicker-prev::before {
+                    content: "";
+                }
+
+                .ui-datepicker .ui-datepicker-prev {
+                    font-family: "primeicons" !important;
+                    font-style: normal;
+                    font-weight: normal;
+                }
+
+                .ui-datepicker .ui-datepicker-next::before {
+                    content: "";
+                }
+                .ui-datepicker .ui-datepicker-next {
+                    font-family: "primeicons" !important;
+                    font-style: normal;
+                    font-weight: normal;
+                }
+                .ui-datepicker .ui-datepicker-next, body .ui-datepicker .ui-datepicker-prev {
+                    cursor: pointer;
+                    color: #6c757d;
+                    text-align: center;
+                    line-height: 2rem;
+                }
+                .ui-widget {
+                    font-size: 1rem;
+                }
+            </style>
+                <div id="center"> 
+                    <div class="center-img">
+                        <img src="/resources/images/members-img.png" class="center-img-13" />
+                        <div class="center-img-1">
+                            <span class="center-img-11">Членове</span>
+                            <div class="center-img-1-1-1">
+                                <a class="centerBannerLinkA" href="/index.xhtml">Начало</a>   ❯  
+                                <span class="center-img-12">Членове</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="center">
+
+                    <div class="center-members-panel-1">
+                        <div class="center-members-panel-13">
+                            <span class="center-members-panel-11">
+                                Тази секция е предназначена за инвестиционни посредници, управляващи дружества, банки, клирингови институции и централни депозитари на ценни книжа, които са членове на Централен депозитар или възнамеряват да кандидатстват за такива. В нея са публикувани информация и материали (или връзки към такива) касаещи:
+                            </span>
+                            <div class="center-members-panel-14">
+                                <span class="center-panel-right-12">
+                                    <ul>
+                                        <li>Условията за членство и видовете членове</li>
+                                        <li>Документите необходими при кандидатстване за членство или неговото прекратяване</li>
+                                        <li>Услугите, които Централен депозитар предоставя за своите членове като сетълмент оператор</li>
+                                        <li>Начините за комуникация между членовете на Централен депозитар и системата за клиринг и сетълмент (СКС) на депозитара</li>
+                                    </ul>
+                                </span>
+                                <span class="center-panel-right-12">
+                                    <ul>
+                                        <li>Инструкции за работа на членовете на Централен депозитар със системата за клиринг и сетълмент и с регистъра на притежателите на безналични финансови инструменти</li>
+                                        <li>Дневен график на работата на СКС</li>
+                                        <li>Статистика за извършените разпоредителни действия с ФИ през СКС на Централен депозитар</li>
+                                        <li>Месечен календар за работа на СКС</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="center-members-panel-2">
+                         <!--   &lt;p:datePicker dateTemplate="dateTemplateFunc" inline="true"/&gt;
+
+                            &lt;span class="dot" style="background-color: orange;"&gt;&lt;/span&gt; &#1053;&#1077;&#1088;&#1072;&#1073;&#1086;&#1090;&#1077;&#1085; &#1076;&#1077;&#1085; &lt;br /&gt;
+
+                            &lt;span class="dot" style="background-color: green;"&gt;&lt;/span&gt; &#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1077;&#1085; &#1087;&#1088;&#1072;&#1079;&#1085;&#1080;&#1082; -->
+                        </div>
+                    </div>
+
+                </div>
+                <div id="center-buttons">
+
+
+                    <div class="center-issuer-panel-2">
+                        <a class="center-issuer-panel-23" href="http://enter.csd-bg.bg/" target="_blank">
+                            <span class="center-issuer-panel-21">
+                                <span class="center-issuer-panel-22">E-Portal</span>
+                                <span class="center-issuer-panel-22">Вход <i class="pi pi-arrow-right" style="margin-left: 14px;"></i> </span>              
+                            </span> 
+                        </a>  
+                    </div>
+                </div>
+                <div id="center">
+                    <div class="center-aboutus-panel">
+
+
+                        <div class="center-aboutus-panel-1">
+                            <span><a class="aboutusLink" href="/members/memberServices.xhtml">Услуги</a> </span>
+                            <span><a class="aboutusLink" href="/members/membership.xhtml">Членство</a> </span>
+                            <span><a class="aboutusLink" href="/members/memberCommunication.xhtml">Комуникация</a> </span>
+                            <span><a class="aboutusLink" href="/members/dailySchedule.xhtml">Дневен график</a> </span>
+							<span><a class="aboutusLink" href="/members/memberTradingCalendar.xhtml">Сетълмент календар</a> </span>
+                            <span><a class="aboutusLink" href="/members/memberTariff.xhtml">Тарифа</a> </span>
+                            <span><a class="aboutusLink" href="/members/settGuaranteeFund.xhtml">Фонд за гарантиране на сетълмента</a> </span>
+                            <span><a class="aboutusLink" href="/members/memberForms.xhtml">Формуляри и документи</a> </span>
+                            <span><a class="aboutusLink" href="/members/memberStatistics.xhtml">Статистика</a> </span>
+							<span><a class="aboutusLink" href="/au/news.xhtml">Новини</a> </span>
+                            <span><a class="aboutusLink" href="/members/memberQuestions.xhtml">ЧЗВ (FAQ) - Членове</a> </span>
+                        </div>               
+                    </div>
+                </div>
+				<div class="center-home-panel">
+                    <span class="center-panel-right-12"> Списък на членовете на Централен депозитар преминали успешно тестовете за работа със системата на T2S, можете да намерите <a href="/resources/docfiles/Members/t2s_IP_passed.xlsx" download="t2s_IP_passed.xlsx" target="_blank">тук.</a></span>
+                </div>
+				<div class="center-home-panel">
+                    <span class="center-panel-right-12"> Списък на членовете на Централен депозитар, можете да намерите <a href="/resources/docfiles/Members/IP_bg.pdf" target="_blank">тук.</a></span>
+                </div>
+                <div id="center">
+                    <div>
+                     <!--   &lt;h:form&gt;
+                            &lt;div class="ui-inputgroup"&gt;
+                                &lt;div class="ui-inputgroup-addon"&gt;&lt;i class="pi pi-search" style="padding-top: 14px;"&gt;&lt;/i&gt;&lt;/div&gt;
+                                &lt;p:inputText placeholder="&#1058;&#1098;&#1088;&#1089;&#1077;&#1085;&#1077;" id="search" styleClass="inputHeader"/&gt;
+                            &lt;/div&gt;
+                        &lt;/h:form&gt; -->
+                    </div>
+                </div>
+
+
+            <div>
+                <section>
+<form id="formIPCntc" name="formIPCntc" method="post" action="/members/members.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formIPCntc" value="formIPCntc" />
+<svg class="invp-map" viewBox="0 0 1024 665" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <style>
+                                path:hover {
+                                    fill: white;
+                                    stroke: #95E0C8;
+                                    stroke-width: 5px;
+                                    transition: fill 0.8s;
+                                }
+                            </style>
+                            <g clip-path="url(#clip0_370_4910)">
+                                <title>Бургаска област</title><a id="formIPCntc:j_idt37" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M769.281 479.555V479.515L769.141 477.237L770.429 469.147L767.003 463.195L764.706 457.262L766.264 450.86L767.982 446.345L767.443 442.55V437.446L769.64 433.651L775.084 430.514L776.092 423.623L772.946 417.54L768.012 414.404L762.928 414.314L758.134 412.626L756.346 408.901L755.008 404.966L740.216 394.029L740.076 389.544L736.581 387.497L730.158 379.547L728.76 377.499L728.44 374.683L727.262 371.756L725.115 369.819L723.137 364.205L721.819 358.043L715.606 345.878L706.028 344.4L700.604 347.196L694.961 348.884L690.996 346.807L687.011 344.23L681.847 342.552L679.58 336.809L683.665 333.083L688.779 331.186L692.524 327.83L691.695 322.297L692.384 318.192L694.821 314.956L692.934 309.242L690.587 303.29L692.125 298.206L691.565 293.811L703.471 290.825L705.139 294.161L704.999 299.105L710.722 301.562L717.104 300.383L722.598 297.237L726.113 290.495L728.92 288.668L732.166 288.847L741.435 288.068L746.598 291.544L751.952 290.435L758.424 290.156L765.315 292.693L773.216 290.565L780.896 287.169L790.325 285.092L800.083 279.439L807.983 282.046L814.406 288.358L819.509 296.568L823.005 297.816L826.82 298.246L834.281 302.72L842.351 304.508L856.724 300.883L862.836 297.007L867.261 298.376L871.446 300.923L875.381 304.618L878.897 309.103L883.132 312.189L887.696 314.556L892.46 316.414L897.304 315.405L900.78 312.259L904.715 310.691L905.874 310.561L905.804 314.206L907.122 318.991L908.031 324.843V335.441L907.632 339.595L907.232 341.134L898.862 341.623L890.083 340.105L882.862 339.905L881.144 340.245L879.985 341.583L878.907 344.669L878.387 347.066L878.577 349.114L879.746 350.782L882.263 352.09L877.888 352.849L870.777 355.935L867.101 356.625L864.105 359.192L864.424 364.994L866.232 371.177L867.651 374.872L865.014 373.624L849.782 373.224L844.978 375.981L842.861 380.535L841.702 385.989L839.854 391.482L836.928 390.004L835.4 392.091L835.48 395.377L837.487 397.495L836.898 399.023L836.738 400.162L837.487 403.527L837.937 401.879L838.177 401.59L838.097 401.56L837.487 400.641L838.636 396.116L843.74 401.53L845.418 402.019L847.415 400.132L848.734 397.575L850.372 396.526L853.248 399.143L854.726 396.876L856.125 397.155L857.453 398.424L858.731 399.153L861.029 398.494L862.637 397.455L864.255 396.846L866.532 397.515L866.452 398.643L866.282 398.863L865.963 398.813L865.413 399.163L866.382 402.978L867.98 405.705L870.517 406.244L874.422 403.547L874.732 405.625L875.641 406.734L877.079 406.983L878.897 406.554V408.202L877.948 408.481L875.461 409.71L876.67 411.867L877.359 412.417L878.887 412.726L877.329 414.914L877.139 417.93L878.128 420.996L880.005 423.253L882.383 424.272L884.3 424.032L886.318 423.383L888.925 423.253V424.622L887.966 425.83L887.936 427.039L888.705 428.227L890.123 429.406L886.058 432.792L884.13 436.877L884.899 440.962L888.915 444.288L888.195 444.877L888.126 445.097L887.806 445.916L893.699 449.761L894.608 451.179L895.377 452.787L897.234 454.905L899.442 456.862L901.289 457.921L900.96 458.66L900.51 460.378L900.181 461.047L905.035 463.864L906.283 465.372L909.1 471.425L917.889 477.028L918.968 479.155L920.326 481.183L922.603 481.902L921.924 484.309L922.723 486.356L924.291 488.054L925.939 489.393L926.029 490.491L925.79 490.781L925.35 490.801L924.821 491.021L926.678 493.008L927.907 495.845L928.117 498.881L927.048 501.488L927.527 503.695L921.685 502.387L919.218 501.598L911.227 502.527L909 501.837L904.675 499.72L900.64 498.681L899.132 498.611L896.026 499.111L895.357 498.841L894.707 498.741L894.048 498.841L893.409 499.111L892.91 501.308V504.274L892.55 506.432L895.097 508L894.618 509.328L892.57 510.147L890.443 510.227L888.215 509.478L879.686 504.774L873.653 504.554L860.939 507.86L860.539 510.047L859.97 511.116H859.111L857.882 510.187L856.544 511.945L854.876 513.044L851.37 514.272L851.59 514.792L852.05 515.121L852.549 515.401L852.998 515.71L852.479 516.19L851.47 516.719L851.081 517.209L853.348 518.177L850.681 519.326L848.524 517.818L844.649 512.325L842.172 510.207L830.166 503.445L826.251 500.03L822.655 495.785L815.734 485.108L811.289 480.683L806.066 477.577L800.323 476.219L796.757 476.728L794.7 478.376L791.064 483.26L790.645 484.139L790.505 484.908L789.796 485.188L785.83 484.149L782.175 483.989L780.347 484.149L777.83 482.111L775.064 480.503L772.087 479.565L769.211 479.515L769.281 479.555Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt37_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt37",{id:"formIPCntc:j_idt37"});});</script>
+                            </g>
+                            <g>
+                                <title>Ямболска област</title><a id="formIPCntc:j_idt40" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M769.281 479.555H769.061L765.156 481.532L761.521 488.344L758.365 490.521L756.097 491.48L754.639 493.727L753.301 496.374L751.473 498.551L750.055 498.921L746.988 498.422L745.291 499.151L743.533 500.919L742.034 500.899L740.496 500.329L738.709 500.379L736.951 501.478L734.973 503.156L733.305 504.564L731.957 505.253L730.159 504.764L727.133 502.117L725.605 501.358L723.647 501.937L720.121 505.503L718.453 506.711L715.317 507.071L699.956 504.504L697.029 504.864L694.383 506.761L689.668 511.815L688.47 512.714L687.461 513.733L686.782 515.161L687.072 516.02L689.049 517.269L689.539 518.018L689.399 519.246L688.71 521.164L688.52 522.312L688.4 523.641L688.3 523.691L684.774 525.688L680.649 523.601L676.524 520.974L673.218 517.109L673.468 508.849L669.503 503.396L663.9 502.137L660.404 506.801L657.987 510.707L656.539 507.271L655.31 500.459L650.366 496.734L635.405 494.776L621.402 487.715L621.482 481.582L619.234 475.669L619.314 463.284L625.247 458.161L627.614 450.071L626.446 439.384L634.825 419.158L631.819 416.981L626.715 416.731L625.597 408.621L631.539 408.152L636.323 404.846L634.666 398.014L638.131 395.897L646.411 398.923L654.012 396.396L657.408 387.667L660.164 385.05L663.271 383.462L661.533 380.516L659.865 376.94L664.17 373.894L668.864 372.735L678.292 373.614L687.751 370.618L690.238 367.382L692.785 364.984L695.112 363.416L696.68 361.279L701.054 362.078L703.202 360.83L704.87 358.313L706.528 351.751L706.058 344.45L715.637 345.928L721.849 358.093L723.168 364.255L725.145 369.869L727.292 371.806L728.471 374.733L728.791 377.549L730.189 379.597L736.611 387.547L740.107 389.594L740.247 394.079L755.039 405.016L756.377 408.951L758.165 412.676L762.959 414.364L768.043 414.454L772.977 417.59L776.123 423.673L775.114 430.564L769.671 433.701L767.473 437.496V442.6L768.013 446.395L766.295 450.91L764.737 457.312L767.034 463.245L770.46 469.197L769.171 477.287L769.311 479.565V479.605L769.281 479.555Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt40_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt40",{id:"formIPCntc:j_idt40"});});</script></g>
+                            <g>
+                                <title>Хасковска област</title><a id="formIPCntc:j_idt43" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M688.39 523.641L688.25 525.219L687.561 529.194L686.212 533.189L684.015 536.195L676.214 538.593L659.405 537.863L652.653 543.776L650.336 549.03L649.727 553.764L650.855 558.149L652.513 560.466L646.231 561.055L642.805 560.056L640.698 558.279L636.353 553.315L635.005 552.476L632.658 552.296L629.082 555.742L620.133 556.021L615.758 557.22L611.364 560.795L610.145 561.315L609.027 561.375L607.928 561.714L606.809 562.973L605.9 565.679L605.8 568.836L606.26 571.922L607.039 574.469L607.768 575.557L607.688 575.517L606.609 574.938L599.648 577.305L597.86 580.941L594.874 580.871L592.207 582.349L591.008 586.834L584.476 593.206L577.315 589.84L569.884 581.87L568.786 577.605L568.176 573.15L562.463 571.013L556.7 573.83L554.723 578.114L551.427 580.501L548.54 580.002L545.784 578.464L542.238 580.052L539.062 580.661L533.589 577.765L534.537 571.762L538.233 563.103L533.938 554.373L532.2 551.697L530.343 549.919L527.306 549.899L524.52 548.091L521.493 544.395L517.908 544.565L515.051 547.741L511.555 548.041L508.03 544.975L501.358 541.968L499.8 538.892L500.02 534.627L498.232 531.291L495.106 531.431L492.319 533.079L488.604 537.654L483.64 539.372L475.01 537.774L469.067 524.34L470.995 518.827L479.355 513.253L484.878 503.875L485.347 500.399L483.49 498.432L482.711 496.484L483.64 494.017L482.371 486.147L480.753 478.656L481.023 468.528L482.561 468.478L485.028 468.938L488.474 470.436L494.287 472.963L497.832 472.733L499.69 472.933L500.978 473.782L502.786 475.47L504.664 475.889L506.472 475.829L508.14 476.109L509.708 468.298L512.075 461.217L517.448 459.07L522.952 461.037L530.852 455.454L536.425 458.211L536.665 462.026L536.365 465.831L533.918 469.237L538.003 470.426L543.087 467.969L547.651 471.794L554.403 478.796L558.268 484.259L565.939 480.573L572.731 473.931L574.539 471.315L576.806 469.817L578.194 470.715L589.85 474.041L598.409 483.45L602.634 489.602L607.379 493.448L614.24 489.882L621.401 487.725L635.404 494.786L650.366 496.744L655.31 500.469L656.539 507.281L657.987 510.717L660.404 506.811L663.9 502.147L669.503 503.405L673.468 508.859L673.218 517.119L676.524 520.984L680.649 523.611L684.774 525.698L688.3 523.701L688.4 523.651L688.39 523.641Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt43_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt43",{id:"formIPCntc:j_idt43"});});</script></g>
+                            <g>
+                                <title>Видинска област</title><a id="formIPCntc:j_idt46" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M57.39 0.569304L92.4872 24.54L98.4 27.1269L105.831 28.1357L109.137 29.6238L112.842 31.2918L114.331 38.2633L111.544 45.2148L105.831 48.371L102.265 48.8504L95.7632 50.9778L92.3873 51.4672L89.1313 53.6046L87.3035 58.6884L83.3484 75.6576L83.4283 80.7714L85.4558 85.0462L89.5907 88.6318L94.6246 89.8303L116.358 87.8927L115.639 95.9728L114.341 101.276L110.305 102.415L106.29 102.095L103.723 105.291L106.141 108.388L109.437 109.197L112.593 110.535L113.661 115.119L115.449 119.734L113.661 122.91L105.761 125.876L100.048 134.805L97.6709 146.881L99.4587 150.227L103.044 151.026L104.023 155.29L102.675 159.066L93.486 161.922L84.0475 163.011L78.0049 165.278L74.7089 167.136L74.7888 171.88L70.4641 183.656L62.7435 190.647L61.9345 190.058L59.2478 188.849L57.6597 188.66L54.5535 188.82L52.9954 188.24L52.0565 187.221L51.667 186.792L49.8393 182.957L48.6108 181.598L47.0926 181.179L43.5669 181.369L41.829 180.979L40.2709 179.801L37.9737 176.724L36.8451 175.556L31.4217 172.979L29.1745 170.871L27.6164 166.587L24.5601 155.91L22.5626 151.785L22.4227 150.676L22.5925 149.547L23.052 148.439L23.2517 147.86L23.3216 147.28L23.2517 146.731L23.052 146.192L22.5126 145.423L22.3428 144.584L22.5126 143.775L23.052 142.965L23.1019 142.876L23.1319 142.756L23.1019 142.636L23.052 142.486L21.8035 139.709L21.6537 134.546L20.575 131.579L18.887 129.941L14.0729 127.285L12.0254 125.387L10.5372 123.02L9.23882 120.263L8.1901 117.327L7.46099 114.39L7.43103 112.513L8.04028 108.747L7.87049 106.989L3.63566 101.906L1.48828 95.7931L2.34723 90.8791L4.44467 85.6754L6.00277 78.7239L6.32238 71.9522L6.81178 70.8036L8.42981 67.7972L8.8493 66.7885L9.21884 63.2628L9.29875 56.7008L9.6683 53.8942L11.6659 50.818L15.3514 49.2299L20.5051 48.4009L23.052 47.9914L26.6875 47.8815L28.5253 45.5244L29.7738 42.2584L31.6614 39.4319L35.0074 38.2333L38.3733 38.463L41.2797 37.8937L43.2074 34.388L43.1874 32.4004L42.1187 27.6063L41.9489 25.389L42.2685 22.8321L43.9564 16.1103H43.7167L43.3971 15.3812L43.2074 14.1727L43.4271 12.7844L43.8166 12.4947L46.4634 9.4185L48.9503 5.34348L50.3886 3.82533L57.39 0.539341V0.569304Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt46_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt46",{id:"formIPCntc:j_idt46"});});</script></g>
+                            <g>
+                                <title>Пернишка област</title><a id="formIPCntc:j_idt49" href="#" class="ui-commandlink ui-widget" title="1">
+                                    <path d="M65.2201 299.385L66.089 300.283L69.6747 303.48L72.4812 307.854L73.3602 310.571L74.8484 312.658L76.4164 312.489L77.585 313.597L80.3217 313.018L82.479 309.103L84.9161 310.451L83.9073 317.413L87.1034 319.65L91.1884 317.283L94.3446 321.108L97.1311 326.631L102.065 326.611L103.803 329.578L106.889 330.257L111.853 329.608L115.049 334.721L117.516 341.313L121.821 344.19L125.656 348.055L128.513 350.392L131.909 352.1L133.627 355.806L134.775 359.991L135.514 367.741L140.598 369.729L150.276 377.11L153.303 380.605L147.809 388.915L144.144 398.793L145.812 408.421L143.684 411.687L143.025 415.723L138.481 416.282L134.126 413.915L129.232 413.116L124.588 409.091L122.53 415.083L119.724 415.433L116.637 413.475L107.808 410.509L104.163 411.458L94.2846 412.267L87.7826 417.7L83.308 418.569L79.4427 416.222L76.7261 411.508L73.0905 407.922L69.4449 405.645L66.8981 401.44L63.5322 397.285L60.9353 393.45L61.4447 386.408L58.5882 382.104L53.7441 383.482L51.0374 380.266L50.3483 375.691L47.4917 372.695L44.4355 367.362L42.2781 361.099L37.2942 358.462L31.0818 359.052L23.0716 357.823L16.5096 358.353L17.0389 356.055L17.798 350.592L16.6294 347.556L20.8842 339.436L23.0616 337.358L23.2513 336.689L23.3013 336L23.2513 335.321L23.0616 334.651L20.6245 332.724L18.4272 329.388L14.542 319.949L13.9727 319.12L14.2224 318.281L14.7217 317.512L15.7605 315.914L17.1787 314.606L21.3337 312.399L23.0516 310.93L25.5985 307.005L27.0667 305.737L29.3139 305.687L32.2204 306.136L33.349 305.457L33.3989 305.387L34.2479 304.129L36.4752 302.591L40.9298 302.011L53.2447 305.337L58.2087 304.119L63.1726 302.011L65.1003 299.684L65.2301 299.355L65.2201 299.385Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt49_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt49",{id:"formIPCntc:j_idt49"});});</script></g>
+                            <g>
+                                <title>Софийска област</title><a id="formIPCntc:j_idt52" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M65.2207 299.385L66.1895 296.888L69.076 286.081L70.0848 283.274L71.2334 281.397L73.141 280.248L77.6655 279.179L79.7929 278.35H79.8229V278.3L81.9802 275.214L88.8419 268.722L89.7008 267.004L90.8794 262.919L91.6884 261.351L93.0767 260.122L95.8433 258.814L97.1817 257.825L100.508 252.761L103.514 245.42L105.232 237.96L104.962 235.123L112.483 233.425L124.269 247.518L128.563 250.784L143.765 252.112L149.388 249.475L154.502 248.107L159.735 249.965L167.036 247.098L172.949 240.566L178.253 240.786L183.267 243.383L184.535 246.389L181.069 246.439L178.772 248.337L178.872 252.771L181.339 255.179L184.096 257.066L188.42 261.181L192.236 266.135L194.703 271.109L198.069 274.864L204.451 270.949L211.422 265.086L214.009 267.523L216.496 270.6L220.801 270.819L224.886 269.191L228.431 264.697L232.946 261.78L239.078 264.407L255.229 267.364L257.876 268.722L260.662 270.71L264.497 268.093L267.504 263.548L272.198 263.468L275.154 266.714L276.403 270.01L278.7 272.328L279.729 276.922L278.48 281.596L281.906 285.681L285.981 289.706L292.314 291.165L295.929 297.177L296.349 304.368L296.049 311.59L293.832 320.529L297.088 325.573L317.782 325.832L321.738 328.02L325.523 330.686L330.727 331.865L336.01 331.326L330.047 341.853L332.155 351.98L339.216 355.676L344.27 362.837L348.475 365.784L347.716 370.678L343.391 373.764L337.888 374.013L334.422 372.795L330.946 373.464L328.449 373.334L326.522 370.538L323.396 369.649L320.509 368.29L319.6 364.345L317.762 360.929L313.268 359.391L308.604 359.072L305.767 360.27L302.911 360.83L296.928 363.267L292.363 369.709L288.598 371.576L284.493 371.636L276.862 375.951L272.787 374.872L269.222 371.826L264.867 370.218L260.343 370.638L255.498 372.375L254.54 377.349L256.078 382.034L258.345 386.079L261.012 388.206L263.059 391.282L269.262 396.856L277.522 395.497L280.138 399.882L277.472 408.052L271.139 410.749L264.567 411.508L261.641 421.535L264.258 429.725L266.845 431.863L266.964 435.528L264.348 438.874L260.932 437.756L258.804 435.528L256.897 432.722L252.981 433.89L251.693 440.322L246.37 448.183L238.649 451.359L237.55 453.377L237.8 456.313L235.353 458.001L232.487 458.74L229.87 458.59L228.042 461.067L225.106 462.505L221.909 461.107L216.316 462.036L211.972 463.764L205.859 464.603L202.683 472.623L197.24 479.265L188.42 475.979L192.595 472.803L194.333 468.049L189.988 466.001L185.104 465.602L181.928 459.979L177.703 456.712L170.472 458.67L163.141 459.719L160.794 454.765L165.958 447.963L167.955 444.028L171.251 442.899L173.009 440.173L170.592 435.538L167.046 434.2L164.38 431.254L163.181 429.086L161.293 428.048L155.79 415.613L152.344 416.482L148.549 416.691L145.882 415.253L143.016 415.713L143.675 411.677L145.802 408.411L144.134 398.783L147.8 388.905L153.293 380.595L166.657 387.767L172.55 392.321L178.393 393.769L182.408 387.437L185.514 381.015L192.156 382.373L192.226 385.04L193.294 388.885L196.59 394.908L194.733 402.239L199.107 405.205L205.999 404.047L210.673 406.054L214.728 401.879L213.07 394.498L207.917 389.604L199.337 374.443L192.425 357.663L189.938 352.799L192.965 339.256L201.844 319.85L205.22 313.567L207.217 307.744L201.404 311.769L195.292 311.39L188.86 305.597L181.379 307.205L173.239 310.691L165.289 308.453L157.168 303.03L155.111 300.523L152.514 299.524L148.599 307.345L148.479 317.472L140.439 324.094L142.466 328.139L142.107 332.524L139.66 335.51L136.753 337.049L132.868 336.479L129.422 334.122L122.601 334.851L117.517 341.273L115.05 334.681L111.854 329.568L106.89 330.217L103.804 329.538L102.066 326.571L97.1317 326.591L94.3451 321.068L91.189 317.243L87.104 319.61L83.9079 317.373L84.9167 310.411L82.4796 309.063L80.3223 312.978L77.5856 313.557L76.417 312.449L74.8489 312.618L73.3608 310.531L72.4818 307.814L69.6753 303.44L66.0896 300.243L65.2207 299.345V299.385Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt52_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt52",{id:"formIPCntc:j_idt52"});});</script></g>
+                            <g>
+                                <title>Монтанска област</title><a id="formIPCntc:j_idt55" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M104.992 235.123L104.742 232.516L102.025 231.308L93.985 229.56L91.0786 227.752L88.8014 225.465L84.4766 219.572L80.5215 215.617L79.5127 214.109L79.0033 212.341L78.4939 208.256L77.9047 206.478L75.8472 203.462L64.1614 191.696L62.7432 190.677L70.4637 183.686L74.7885 171.91L74.7086 167.166L78.0045 165.308L84.0472 163.041L93.4856 161.952L102.674 159.096L104.023 155.32L103.044 151.056L99.4584 150.257L97.6705 146.911L100.048 134.835L105.761 125.906L113.661 122.94L115.449 119.764L113.661 115.149L112.592 110.565L109.436 109.227L106.14 108.418L103.723 105.321L106.29 102.125L110.305 102.445L114.34 101.306L115.639 96.0028L116.358 87.9227L129.312 86.7641L134.226 84.6467L139.949 83.4182L146.081 80.1322L160.903 78.0347L186.972 79.3831L204.62 89.1312L209.224 89.9003L211.262 97.3612L209.484 116.937L206.897 124.997L203.651 132.468L203.232 135.135L203.481 137.882L201.574 140.868L198.687 142.916L197.808 146.251L200.575 148.998L202.313 150.267L204.31 150.926L205.579 153.113L207.317 154.871L209.324 155.99L209.524 158.736L207.277 160.774L204.57 159.026L200.655 162.072L197.009 166.347L193.733 166.577L190.477 166.347L186.562 163.9L179.89 167.785L174.886 174.986L175.206 183.606L173.937 192.335L169.972 197.928L166.646 204.151L162.611 209.175L161.223 215.367L173.438 219.722L183.506 225.245L181.408 230.359L177.154 230.768L172.579 234.544L172.949 240.556L167.036 247.088L159.735 249.955L154.501 248.097L149.387 249.465L143.764 252.102L128.563 250.774L124.268 247.508L112.482 233.415L104.962 235.113L104.992 235.123Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt55_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt55",{id:"formIPCntc:j_idt55"});});</script></g>
+                            <g>
+                                <title>Кюстендилска област</title><a id="formIPCntc:j_idt58" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M0.749023 428.896L3.87521 427.238L10.6769 427.109L13.6533 426.15L16.0204 423.034L18.6172 414.944L21.1341 411.648L23.6311 410.449L25.6786 410L27.5163 408.731L29.2542 405.205L31.4815 397.115L32.0408 392.521L31.3816 389.205V389.175L30.1332 386.059L28.0557 383.512L23.0418 379.876L14.5821 371.966L13.873 371.646L14.4423 367.242L16.4798 358.363L23.0418 357.833L31.052 359.062L37.2645 358.472L42.2484 361.109L44.4057 367.372L47.462 372.705L50.3185 375.701L51.0077 380.276L53.7144 383.492L58.5585 382.114L61.415 386.418L60.9056 393.46L63.5024 397.295L66.8683 401.45L69.4152 405.655L73.0608 407.932L76.6963 411.518L79.413 416.232L83.2783 418.579L87.7528 417.71L94.2549 412.277L104.133 411.468L107.778 410.519L116.608 413.485L119.694 415.443L122.5 415.093L124.558 409.101L129.202 413.126L134.096 413.925L138.451 416.292L142.995 415.733L145.862 415.273L148.529 416.711L152.324 416.502L155.77 415.633L161.273 428.067L163.161 429.106L164.359 431.274L167.026 434.22L170.572 435.558L172.989 440.193L171.231 442.919L167.935 444.048L165.937 447.983L160.774 454.785L163.121 459.739L170.452 458.69L177.683 456.732L181.908 459.998L185.084 465.622L189.968 466.021L194.313 468.069L192.575 472.823L188.4 475.999L180.34 482.451L171.021 484.059L150.316 477.357L147.19 477.927L144.064 477.577L140.518 477.627L132.398 481.802L127.784 485.098L122.78 486.546L117.666 487.055L113.411 484.169L108.577 482.411L103.853 482.761L101.047 478.626L96.8917 478.865L92.1475 486.656L90.899 491.071L87.3833 490.481L84.5967 493.388L82.5092 496.104L82.1996 494.556L81.3007 493.458L79.4629 492.229L78.5341 492.169L76.0371 493.038L74.8885 493.068L73.6001 492.069L73.0408 490.581L72.6513 489.143L71.9221 488.264L70.2542 488.084L62.8033 488.414L61.7246 487.974L60.9955 487.065L60.3862 486.107L59.6471 485.457L54.7631 484.429L46.8128 480.364L45.2747 479.575L31.102 469.387L27.6861 465.941L27.1568 465.032L25.1492 461.597L22.9919 455.274L16.8094 450.63L0.749023 428.896Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt58_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt58",{id:"formIPCntc:j_idt58"});});</script></g>
+                            <g>
+                                <title>Благоевградска област</title><a id="formIPCntc:j_idt61" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M94.2149 642.506L98.1201 639.459L98.7094 635.424L97.8804 630.87L97.5408 626.236L98.0602 624.897L99.9479 622.55L100.357 621.531L100.158 620.273L99.2088 618.066L98.9891 617.007L98.5596 601.805L98.4697 598.469L99.2587 594.864L99.3986 593.595L99.029 592.127L97.4709 589.7L96.9516 588.462L96.6819 585.555L96.8317 582.419L97.3411 579.413L98.1201 576.916L98.9291 576.167L101.496 575.428L102.395 574.868L102.904 573.78L103.973 570.613L105.411 568.296L107.569 564.831L109.356 559.757L109.237 554.613L106.35 550.019L104.612 549.2L100.747 549L98.9591 548.201L97.9503 546.593L94.4546 538.373L92.7167 530.892L91.688 528.305L90.9289 527.426L89.0212 526.397L88.5418 525.858L88.3321 525.628L87.9126 523.97L87.9825 520.744L87.7328 519.206L85.975 514.212L84.7564 509.178L84.4668 503.925L84.0773 501.568L82.7888 499.191L82.7389 499.161L82.5991 496.264L82.5791 496.144L84.6665 493.428L87.4531 490.521L90.9689 491.11L92.2173 486.696L96.9615 478.905L101.116 478.666L103.923 482.801L108.647 482.451L113.481 484.209L117.736 487.095L122.85 486.586L127.854 485.138L132.468 481.842L140.588 477.667L144.134 477.617L147.26 477.967L150.386 477.397L171.091 484.099L180.41 482.491L188.47 476.039L197.289 479.325L202.732 472.683L205.909 464.663L212.021 463.824L216.366 462.096L221.959 461.167L225.155 462.565L228.091 461.127L229.919 458.65L232.536 458.8L234.094 463.065L237.29 465.592L240.147 468.628L241.195 473.142L240.736 476.668L238.728 479.215L238.778 484.029L241.925 487.834L237.25 493.238L233.125 502.926L233.325 507.321L232.446 510.936L234.384 514.861L236.871 518.347L237.87 528.205L242.124 536.305L246.159 538.882L249.725 542.518L252.592 543.157L255.818 542.258L257.815 544.885L259.523 548.281L278.12 561.055L280.118 564.821L283.124 566.309L285.491 567.487L287.01 570.234L291.384 573.22L288.188 577.136L284.003 579.882L303.509 596.442L303.569 596.492L303.34 596.642L300.943 598.739L300.263 600.117L299.554 603.533L299.085 604.342L297.866 604.242L297.157 603.314L296.428 602.055L295.16 601.046L290.296 599.608L283.773 599.039L278.989 601.276L279.399 608.257L279.838 613.072L279.758 614.909L278.76 616.547L276.932 617.446L274.994 617.067L271.379 614.66L270.789 616.208L270.01 616.727L269.111 616.927L268.203 617.546L265.486 620.263L263.069 620.433L255.388 614.799L254.07 614.62L249.645 618.715L247.008 619.993L243.633 620.862L240.167 621.252L237.28 621.102L234.833 622.28L231.138 628.443L228.491 629.142L223.118 627.904L217.694 627.943L214.538 629.102L210.433 633.247L209.964 633.557L207.936 634.875L202.463 634.665L191.686 629.082L175.586 628.613L172.479 629.621L167.515 633.247L164.589 634.835L161.123 635.255L159.415 633.617L157.877 631.12L154.851 628.992L151.944 629.192L148.129 630.83L144.484 633.147L142.116 635.414L141.557 637.072L141.307 641.027L140.448 643.135L139 644.633L137.212 645.652L133.527 646.741L126.665 647.54L94.2748 642.536L94.2149 642.506Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt61_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt61",{id:"formIPCntc:j_idt61"});});</script>
+                            </g>
+                            <g>
+                                <title>Силистренска област</title><a id="formIPCntc:j_idt64" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M802.74 24.8497L805.417 26.9171L804.647 32.0509L808.083 35.9761L817.292 40.3707L819.23 42.1386L822.386 47.7018L824.174 48.9802L855.336 48.7105L864.964 45.6543L868.699 46.9926L871.945 53.8642L872.994 55.2825H872.934L868.529 55.1427L865.493 57.7395L866.282 62.7534L863.296 66.1493L860.29 66.2691L861.218 68.8859L860.729 73.2006L855.915 74.1695L852.279 70.8535L848.204 71.9721L846.267 78.8438L846.676 85.8552L840.104 90.6394L831.764 87.5831L826.651 88.6318L822.546 91.9478L824.553 103.014L817.392 103.164L809.891 97.0515L806.635 98.8094L804.607 103.304L796.687 110.525L796.268 120.613L800.203 126.735L797.346 127.884L794.17 127.145L783.323 126.905L776.841 119.444L770.309 115.279L761.59 120.243L756.796 116.338L752.891 110.495L750.244 108.877L747.307 110.825L745.669 108.188L745.639 103.114L743.202 100.947L741.544 98.4398L738.558 96.2026L735.961 92.0576L734.863 87.7329L732.416 88.0625L730.118 91.6381L727.212 92.7767L724.725 93.2362L723.457 95.9529L721.129 91.768L718.243 87.4532L712.75 86.844L698.917 81.93L695.081 74.579L693.813 70.7137L690.926 66.6586L687.231 64.8708L683.046 68.027L678.402 69.3553L674.007 64.4214L668.554 62.9631L662.811 63.8021L660.613 54.8231L659.535 47.9814L655.19 47.3522L652.723 42.1286L652.363 39.9512L665.997 37.9437L698.417 33.1695L703.91 31.2319L707.186 30.8424L708.744 30.3929L712.001 28.3454L713.878 27.886H721.229L727.072 26.1081L742.543 16.8994L761.73 14.9517L765.965 12.2451L777.85 19.636L795.059 23.0918L798.525 25.0294L802.51 24.6499L802.76 24.8397L802.74 24.8497Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt64_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt64",{id:"formIPCntc:j_idt64"});});</script>
+                            </g>
+                            <g>
+                                <title>Русенска област</title><a id="formIPCntc:j_idt67" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M554.393 115.899L555.482 115.869L562.273 112.922L566.069 106.63L566.368 105.781L571.772 100.188L576.666 97.3811L584.366 87.5631L585.685 84.347L587.243 81.7003L606.899 67.2379L608.097 63.7422L610.984 59.3775L617.016 52.6258L622.66 49.5595L635.853 46.1437L648.778 40.4506L652.343 39.9213L652.703 42.0986L655.17 47.3222L659.515 47.9515L660.593 54.7931L662.791 63.7722L650.575 77.2058L646.98 85.6654L639.529 90.3197L639.139 99.3487L647.599 103.334L652.533 103.763L656.498 105.921L653.572 109.946L653.991 119.115L650.685 120.902L648.438 125.886L646.281 129.482L637.831 128.223L631.738 132.818L629.541 130.571L627.434 128.753L625.576 132.828L625.986 137.962L625.306 139.14L624.427 140.019L624.787 141.607L625.087 143.345L624.567 151.136L628.133 157.018L624.887 158.936L620.762 158.157L617.126 158.926L613.391 158.147L609.536 161.093L604.422 163.46L603.563 170.692L601.236 175.566L597.45 179.521L593.226 182.637L589.22 183.806L590.129 188.859L593.016 193.384L597.39 193.953L601.086 195.721L601.645 200.635L601.356 205.699L595.413 205.299L589.74 203.152L588.302 197.908L587.453 193.084L582.728 192.964L578.134 195.342L573.859 195.511L569.624 194.513L563.981 193.983L558.438 192.395L555.212 189.399L552.765 186.682L550.268 186.732L548.95 184.135L545.014 184.155L542.907 188.27L533.588 184.705L524.499 175.576L525.648 169.533L527.236 163.221L524.789 161.773L522.562 164.309L520.045 163.89L519.755 161.133L511.425 154.791L510.566 149.947L514.142 147.12L517.658 139.37L514.651 129.482L513.443 126.925L514.472 126.735L521.833 127.155L525.548 126.775L528.574 125.197L531.651 124.458L535.346 122.86L538.842 120.713L541.389 118.266L544.315 116.188L554.373 115.869L554.393 115.899Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt67_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt67",{id:"formIPCntc:j_idt67"});});</script>
+                            </g>
+                            <g>
+                                <title>Добричка област</title><a id="formIPCntc:j_idt70" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M872.984 55.2725L879.386 63.9919L890.113 61.3451L901.409 54.9629L910.498 53.8942V53.9142L914.384 60.4362L921.765 86.4445L927.288 90.7992L961.027 106.15L995.884 112.183L1019.39 110.815L1019.03 113.911L1018.52 141.238L1018.92 144.124L1020.57 148.059L1022.23 150.786L1023.35 153.253L1023.48 156.529L1022.02 162.282L1019.39 169.403L1016.42 175.446L1013.94 177.983L1012.28 178.862L1004.7 186.073L1003.18 188.23L1002.3 191.037L1002.18 194.942L999.939 191.846L992.598 187.771L991.03 186.462L989.212 184.305L985.107 182.627L977.417 181.169L973.741 181.898L967.599 185.054L964.592 185.763L953.935 185.274L950.539 185.763L944.267 189.399L939.812 195.581L939.063 197.539L938.554 197.319L932.811 197.988L927.048 198.018L923.682 193.664L919.188 189.119L914.024 188.79L909.23 191.037L906.563 194.113L903.217 195.262L893.569 190.268L885.499 180.39L882.492 174.777L878.288 171.071L872.225 169.823L865.723 163.76L860.1 155.67L857.563 156.609L855.855 160.924L852.709 162.442L849.413 162.881L848.114 164.259L846.377 165.278L842.302 163.281L841.223 157.877L836.339 151.006L829.867 149.088L828.209 142.936L824.423 140.528L817.851 141.767L811.379 143.784L806.655 141.517L803.279 134.686L794.11 127.125L797.286 127.864L800.143 126.715L796.208 120.593L796.627 110.505L804.548 103.284L806.575 98.7894L809.831 97.0316L817.332 103.144L824.493 102.994L822.486 91.9278L826.591 88.6118L831.704 87.5631L840.044 90.6194L846.616 85.8352L846.207 78.8238L848.144 71.9522L852.219 70.8335L855.855 74.1495L860.669 73.1807L861.159 68.8659L860.23 66.2491L863.236 66.1293L866.222 62.7334L865.433 57.7195L868.47 55.1227L872.874 55.2526H872.934L872.984 55.2725Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt70_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt70",{id:"formIPCntc:j_idt70"});});</script>
+                            </g>
+                            <g>
+                                <title>Врачанска област</title><a id="formIPCntc:j_idt73" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M209.244 89.9102L211.741 90.3297L225.574 87.2435L229.19 87.9526L238.508 93.426L295.649 107.808L297.247 108.208L326.221 106.78L324.963 117.606L318.191 127.964L309.032 132.508L303.799 131.969L299.354 135.894L294.909 141.278L290.834 145.103L294.09 151.974L295.928 160.075L300.383 167.036L307.934 168.564L310.92 179.111L311.09 182.937L309.821 187.301L308.453 200.276L300.702 204.341L295.009 203.372L289.466 203.711L286.36 205.739L284.552 208.116L282.155 207.007L279.738 206.378L267.683 211.122L264.776 217.704L263.118 222.179L264.537 225.205L275.553 229.65L276.891 238.229L275.553 247.178L273.845 252.192L269.71 252.172L266.894 249.655L264.377 251.363L265.256 257.665L267.503 263.538L264.497 268.083L260.661 270.7L257.875 268.712L255.228 267.354L239.078 264.397L232.945 261.77L228.431 264.687L224.885 269.181L220.8 270.809L216.495 270.59L214.008 267.513L211.421 265.076L204.45 270.939L198.068 274.854L194.702 271.099L192.235 266.125L188.419 261.171L184.095 257.056L181.338 255.169L178.871 252.761L178.771 248.327L181.068 246.429L184.534 246.379L183.266 243.373L178.252 240.776L172.948 240.556L172.579 234.544L177.153 230.768L181.408 230.359L183.505 225.245L173.438 219.722L161.223 215.367L162.611 209.175L166.646 204.151L169.972 197.928L173.937 192.335L175.206 183.606L174.886 174.986L179.89 167.785L186.562 163.9L190.477 166.347L193.733 166.577L197.009 166.347L200.655 162.072L204.57 159.026L207.276 160.774L209.524 158.736L209.324 155.99L207.316 154.871L205.579 153.113L204.31 150.926L202.312 150.267L200.575 148.998L197.808 146.251L198.687 142.916L201.573 140.868L203.481 137.882L203.231 135.135L203.651 132.468L206.897 124.997L209.484 116.937L211.262 97.3612L209.224 89.9003L209.244 89.9102Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt73_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt73",{id:"formIPCntc:j_idt73"});});</script>
+                            </g>
+                            <g>
+                                <title>Плевенска област</title><a id="formIPCntc:j_idt76" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M379.347 107.589L386.508 110.265L394.189 111.384L428.677 108.947L447.943 115.859L469.137 117.447L475.839 119.075L481.243 122.281L480.773 123.629L476.379 126.356L472.373 130.001L470.106 139.09L465.222 145.063L466.491 152.024L469.177 152.464L470.446 154.611L466.75 162.502L462.026 168.494L456.822 173.688L458.71 178.472L465.702 178.093L467.14 186.173L470.606 193.314L471.485 201.744L464.693 208.246L461.736 210.273L459.05 212.8L455.963 213.759L452.837 214.418L446.895 208.595L442.76 200.166L439.484 195.641L438.605 201.504L435.698 204.341L431.354 207.527L426.469 209.614L421.895 210.943L417.66 211.152L414.115 206.947L407.962 207.726L404.177 207.417L394.209 207.986L385.51 214.328L383.212 217.834L381.375 219.113L379.617 216.546L377.759 219.162L376.411 222.319L373.354 226.164L367.581 231.088L365.064 232.037L364.495 230.389L363.396 229.15L355.406 228.801L343.601 225.375L340.494 222.329L338.277 218.024L335.341 214.868L332.145 214.818L329.018 215.807L325.772 218.793L322.986 222.109L318.391 223.287L313.597 225.255L309.632 226.444L305.477 225.794L300.443 223.038L296.758 223.827L292.893 220.611L284.293 224.526L275.564 229.69L264.547 225.245L263.129 222.219L264.787 217.744L267.693 211.162L279.749 206.418L282.166 207.047L284.563 208.156L286.371 205.779L289.477 203.751L295.02 203.412L300.713 204.381L308.464 200.315L309.832 187.341L311.1 182.977L310.931 179.151L307.944 168.604L300.393 167.076L295.939 160.115L294.101 152.014L290.845 145.143L294.92 141.317L299.365 135.934L303.809 132.009L309.043 132.548L318.202 128.004L324.973 117.646L326.232 106.82L329.748 106.65L332.564 105.781L341.663 98.9492L347.406 97.0915L352.929 97.7507L379.337 107.639L379.347 107.589Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt76_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt76",{id:"formIPCntc:j_idt76"});});</script>
+                            </g>
+                            <g>
+                                <title>Великотърновска област</title><a id="formIPCntc:j_idt79" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M481.253 122.301L481.792 122.62L487.395 126.955L493.378 130.431L500.489 131.38L504.235 130.401L510.986 127.394L513.443 126.955L514.652 129.512L517.658 139.4L514.142 147.15L510.567 149.977L511.426 154.821L519.756 161.163L520.045 163.92L522.562 164.339L524.789 161.802L527.236 163.251L525.648 169.563L524.5 175.606L533.589 184.735L542.907 188.3L545.015 184.185L548.95 184.165L550.268 186.762L552.765 186.712L555.212 189.429L558.438 192.425L563.982 194.013L569.625 194.543L573.86 195.541L578.134 195.372L582.729 192.994L587.453 193.114L588.302 197.938L589.74 203.182L595.413 205.329L601.356 205.729L607.618 208.116L612.113 213.22L608.667 216.945L608.377 221.909L613.731 228.99L615.609 237.24L613.331 237.73L610.954 237.71L609.906 240.936L609.955 244.781L607.678 249.635L607.379 254.969L609.486 259.743L611.364 264.717L612.143 268.113L614.1 270.16L616.348 270.949L616.208 273.846L612.632 276.902L613.481 281.926L620.183 283.424L626.126 288.258L622.46 296.977L615.369 301.102L611.464 302.261L608.947 306.206L609.316 312.628L607.309 317.542L603.493 317.522L599.708 318.381L596.332 322.177L592.687 324.873L581.95 323.315L574.569 324.933L567.118 325.173L563.652 324.664L560.206 325.263L557.13 324.814L554.174 323.845L548.211 326.611L545.175 329.128L542.658 330.806L539.771 328.988L535.936 328.689L532.2 319.62L535.676 312.678L537.094 307.515L537.164 301.702L535.237 298.396L532.031 297.447L525.019 290.455L528.805 278.17L526.018 269.501L516.09 267.833L511.026 266.255L499.61 266.714L489.003 265.496L484.748 263.518L482.571 257.606L480.224 252.851L458.101 252.472L453.806 249.106L451.049 243.443L447.454 240.826L446.455 236.531L453.646 228.901L452.837 214.448L455.963 213.789L459.05 212.83L461.736 210.303L464.693 208.276L471.485 201.774L470.606 193.344L467.14 186.203L465.702 178.123L458.71 178.502L456.822 173.718L462.026 168.524L466.75 162.532L470.446 154.641L469.177 152.494L466.491 152.054L465.222 145.093L470.106 139.12L472.373 130.031L476.379 126.386L480.773 123.659L481.243 122.311L481.253 122.301Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt79_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt79",{id:"formIPCntc:j_idt79"});});</script>
+                            </g>
+                            <g>
+                                <title>Кърджалийска област</title><a id="formIPCntc:j_idt82" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M607.758 575.557L608.967 577.365L611.294 578.464L613.591 578.913L615.469 579.812L616.867 581.48L617.816 583.318L619.314 588.871L619.434 590.509L619.184 593.935L619.474 595.393L620.383 596.142L622.95 596.612L623.859 597.631L624.688 600.497L624.907 602.984L624.658 605.431L624.068 608.188L622.161 610.155L621.871 611.613L623.559 615.439L624.248 616.428L626.515 618.575L627.025 619.883L626.735 621.631L625.906 622.141L624.877 622.51L624.019 623.819L622.191 629.222L619.674 634.725L617.786 637.712L616.777 638.271L615.579 637.971L601.616 641.207L599.508 642.256L595.154 645.192L591.458 646.98L589.65 647.2L587.453 646.771L585.176 646.751L581.101 648.868L578.774 649.347L575.618 648.039L570.823 642.715L567.178 641.327L565.51 641.976L559.417 646.101L553.744 646.531L551.907 647.17L549.899 648.648L548.73 649.817L547.612 650.576L545.774 650.846L544.216 650.406L540.8 648.389L539.192 647.829L524.77 646.83L522.552 647.58L521.284 649.627L520.215 652.024L518.777 653.802L517.169 654.431L515.901 654.301L514.612 653.902L512.914 653.742L508.729 654.471L481.313 663.36L477.477 663.64L473.692 663.041L470.516 661.123L463.554 651.565L460.408 648.908L459.749 648.598L459.899 646.261L458.531 636.024L459.07 633.956L459.899 632.069L458.111 629.402L456.643 626.765L458.84 621.901L459.409 616.527L458.62 614.5L459.599 611.713L457.821 601.706L449.092 604.203L446.166 608.637L442.3 606.699L439.104 600.577L436.507 593.975L433.571 589.94L433.541 585.116L437.017 583.787L440.732 584.487L445.247 583.358L449.352 580.312L449.961 578.674L448.712 576.606L448.413 571.582L449.492 567.318L447.214 565.02L445.427 557.729L442.62 553.754L440.882 549.989L442.72 545.664L445.586 542.528L449.502 542.887L450.46 539.462L451.289 534.657L454.925 531.701L456.423 526.927L459.02 523.561L461.397 522.692L462.865 520.125L466.611 517.698L470.965 518.767L469.038 524.28L474.98 537.714L483.61 539.312L488.574 537.594L492.289 533.019L495.076 531.371L498.202 531.232L499.99 534.567L499.77 538.832L501.328 541.909L508 544.915L511.526 547.981L515.022 547.681L517.878 544.505L521.464 544.336L524.49 548.031L527.277 549.839L530.313 549.859L532.171 551.637L533.908 554.313L538.203 563.043L534.508 571.702L533.559 577.705L539.032 580.601L542.208 579.992L545.754 578.404L548.511 579.942L551.397 580.442L554.693 578.054L556.671 573.77L562.434 570.953L568.147 573.09L568.756 577.545L569.855 581.81L577.286 589.78L584.447 593.146L590.979 586.774L592.177 582.289L594.844 580.811L597.83 580.881L599.618 577.245L606.58 574.878L607.658 575.458L607.738 575.498L607.758 575.557Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt82_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt82",{id:"formIPCntc:j_idt82"});});</script>
+                            </g>
+                            <g>
+                                <title>Смолянска област</title><a id="formIPCntc:j_idt85" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M303.51 596.472L303.45 596.422L283.944 579.862L288.129 577.116L291.325 573.2L286.95 570.214L285.432 567.467L283.065 566.289L287.929 561.265L287.489 554.144L285.042 550.888L282.056 548.5L281.517 543.247L287.499 542.138L295.659 543.427L302.141 549.329L301.402 553.335L300.174 557.18L303.1 557.4L306.246 554.433L315.565 554.164L322.646 547.811L322.746 537.684L329.688 528.055L334.452 525.009L340.515 521.933L343.111 514.931L344.949 508.829L363.157 522.872L370.957 519.246L378.928 514.102L387.407 511.655L395.448 510.647L403.388 512.874L409.351 520.565L416.632 525.129L420.647 528.815L423.823 534.637L429.226 534.428L433.621 532.989L439.753 541.289L442.84 541.329L445.606 542.598L442.74 545.734L440.902 550.059L442.64 553.824L445.447 557.799L447.234 565.09L449.512 567.387L448.433 571.652L448.732 576.676L449.981 578.744L449.372 580.382L445.267 583.428L440.752 584.556L437.037 583.857L433.561 585.186L433.591 590.01L436.527 594.045L439.124 600.647L442.32 606.769L446.186 608.707L449.112 604.272L457.841 601.775L459.619 611.783L458.64 614.57L459.429 616.597L458.86 621.971L456.663 626.835L458.131 629.472L459.919 632.138L459.09 634.026L458.55 636.094L459.919 646.331L459.769 648.668L453.666 645.812L453.027 645.073L451.759 642.925L451.269 642.366H450.44L447.754 642.925L421.046 631.579L416.042 628.483L413.845 628.213L412.227 628.553L408.811 629.761L402.459 630.211L401.95 633.107L402.389 636.883L400.991 640.029L397.745 639.879L394.179 636.693L388.636 629.542L385.44 626.675L382.453 625.247L379.247 624.777H375.482L376.481 622.61L370.788 622.7L368.56 622.151L366.043 619.813L365.924 619.014L366.333 616.607L366.143 615.529L365.514 614.8L363.956 613.811L363.367 613.172L362.488 611.913L361.639 611.064L360.96 610.055L360.49 608.268L359.971 602.245L357.943 596.542L354.547 593.476L349.833 595.303L346.218 596.112L342.892 600.857L340.455 601.396L337.009 600.827L334.492 601.086L328.999 602.724L327.55 602.884L323.176 602.365L321.757 602.574L320.689 603.194L319.56 603.563L318.042 603.044L317.752 601.845L318.122 599.998L317.972 598.1L314.776 596.052L312.139 593.076L309.283 593.436L306.196 594.754L303.47 596.502L303.51 596.472Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt85_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt85",{id:"formIPCntc:j_idt85"});});</script>
+                            </g>
+                            <g>
+                                <title>Варненска област</title><a id="formIPCntc:j_idt88" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M939.084 197.569L929.945 221.35L927.738 224.975L924.891 227.103L913.745 230.099L911.887 231.378L910.779 231.757H909.171V233.285L914.854 237.53L915.972 239.238L915.772 241.855L912.636 251.573L910.389 262.37L909.23 264.447L907.792 265.915L906.514 267.503L905.835 269.99L906.144 274.974L908.591 285.152L909.18 289.736L908.272 304.768L909.18 308.094L905.905 310.611L904.746 310.741L900.811 312.309L897.335 315.455L892.491 316.464L887.727 314.606L883.162 312.239L878.927 309.153L875.412 304.668L871.477 300.973L867.292 298.426L862.867 297.057L856.754 300.933L842.382 304.558L834.312 302.77L826.851 298.296L823.036 297.866L819.54 296.618L814.436 288.408L808.014 282.096L800.114 279.489L790.356 285.142L780.927 287.219L776.722 282.196L774.285 276.692L778.121 273.726L787.919 268.302L795.639 266.355L794.74 260.931L787.279 258.355L791.844 254.609L788.058 250.165L790.765 245.38L796.049 242.374L796.168 237.111L790.765 234.983L786.49 230.748L787.1 225.225L790.765 222.488L796.508 221.929L802.111 220.591L802.411 216.216L802.361 210.573L806.875 208.905L810.91 205.699L808.693 201.854L805.877 197.958L805.707 192.315L807.195 188.08L810.471 184.355L816.284 175.895L814.226 172.819L812.289 171.031L814.216 168.364L816.054 163.311L808.064 160.634L816.793 152.913L829.937 149.128L836.409 151.046L841.293 157.917L842.372 163.321L846.447 165.318L848.185 164.299L849.483 162.921L852.779 162.482L855.925 160.964L857.633 156.649L860.17 155.71L865.793 163.8L872.296 169.863L878.358 171.111L882.563 174.817L885.569 180.43L893.639 190.308L903.288 195.302L906.634 194.153L909.3 191.077L914.095 188.829L919.258 189.159L923.753 193.704L927.119 198.058L932.882 198.028L938.625 197.359L939.134 197.579L939.084 197.569Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt88_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt88",{id:"formIPCntc:j_idt88"});});</script>
+                            </g>
+                            <g>
+                                <title>Пловдивска област</title><a id="formIPCntc:j_idt91" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M436.497 332.824L435.648 340.634L438.355 356.465L436.816 360.77L433.69 361.898L437.655 370.817L437.585 373.774L438.854 378.628L441.591 382.393L447.943 387.197L455.294 387.377L460.677 385.609L463.344 390.074L460.148 397.894L463.893 402.209L466.021 403.258L466.85 406.104L465.821 409.27L462.964 408.891L456.882 406.314L452.307 409.58L453.266 417.381L453.516 422.764L455.274 427.658L458.959 434.909L454.165 437.716L448.622 439.963L446.545 447.494L448.982 456.493L452.128 458.78L453.446 457.981L455.224 460.008L457.811 461.097L459.599 462.545L459.029 465.612L461.966 466.161L464.383 460.827L467.389 460.488L473.112 458.94L478.276 460.278L484.368 464.483L488.453 470.426L485.008 468.928L482.541 468.468L481.002 468.518L480.733 478.646L482.351 486.137L483.619 494.007L482.69 496.474L483.469 498.422L485.327 500.389L484.858 503.865L479.335 513.243L470.975 518.817L466.62 517.748L462.875 520.175L461.406 522.742L459.029 523.611L456.432 526.977L454.934 531.751L451.299 534.707L450.47 539.511L449.511 542.937L445.596 542.578L442.829 541.309L439.743 541.269L433.61 532.969L429.216 534.408L423.812 534.617L420.636 528.795L416.621 525.109L409.34 520.545L403.377 512.854L395.437 510.627L387.397 511.635L378.917 514.082L370.947 519.226L363.146 522.852L344.939 508.809L346.816 498.621L344.269 488.254L343.36 482.201L345.338 477.257L344.819 468.149L348.584 465.142L353.099 464.014L355.516 460.698L352.919 457.601L350.182 455.514L350.302 451.119L351.111 444.847L349.863 438.854L347.216 435.009L346.996 431.763L349.413 426.01L345.628 419.498L342.671 418.279L342.701 414.015L341.113 409.121L340.943 404.207L341.243 402.019L339.236 396.416L335.69 395.687L336.059 384.581L337.937 374.043L343.44 373.794L347.765 370.707L348.524 365.813L344.319 362.867L339.265 355.706L332.204 352.01L330.097 341.883L336.059 331.356L342.751 332.065L352.949 323.126L359.131 323.026L366.882 323.895L374.293 326.831L379.796 334.112L386.268 339.825L394.119 341.433L396.586 340.874L397.884 339.286L406.483 339.306L414.823 341.243L422.344 340.404L429.116 336.399L429.675 333.683L431.383 331.725L436.487 330.537L436.537 332.814L436.497 332.824Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt91_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt91",{id:"formIPCntc:j_idt91"});});</script>
+                            </g>
+                            <g>
+                                <title>Старозагорска област</title><a id="formIPCntc:j_idt94" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M436.498 332.824L444.887 333.533L453.337 331.885L461.767 327.86L469.957 327.43L472.324 331.216L475.011 334.052L481.632 330.137L490.482 331.875L499.011 335.6L504.285 335.141L508.24 332.105L510.997 332.564L513.703 333.463L516.66 332.145L519.127 330.556L522.183 331.785L526.048 327.4L528.715 328.619L531.502 332.434L534.758 335.111L537.125 332.764L535.956 328.669L539.791 328.968L542.678 330.786L545.195 329.108L548.231 326.591L554.194 323.825L557.15 324.794L560.226 325.243L563.672 324.644L567.138 325.153L568.946 340.205L573.62 355.876L578.215 364.755L578.924 372.665L570.424 379.217L572.232 382.473L575.927 383.851L578.734 389.135L579.143 394.448L577.236 398.843L581.8 407.233L581.6 412.756L583.778 417.74L591.329 428.287L594.654 438.275L593.865 454.395L602.075 464.243L607.109 462.575L611.853 462.416L615.449 464.054L619.314 463.294L619.234 475.679L621.482 481.592L621.402 487.725L614.241 489.882L607.379 493.448L602.635 489.602L598.41 483.45L589.85 474.041L578.195 470.715L576.806 469.817L574.539 471.315L572.731 473.931L565.94 480.573L558.269 484.259L554.404 478.796L547.652 471.794L543.087 467.969L538.004 470.426L533.919 469.237L536.366 465.831L536.665 462.026L536.426 458.211L530.852 455.454L522.952 461.037L517.449 459.07L512.075 461.217L509.708 468.298L508.14 476.109L506.472 475.829L504.664 475.889L502.787 475.47L500.979 473.782L499.69 472.933L497.833 472.733L494.287 472.963L488.474 470.436L484.389 464.493L478.297 460.288L473.133 458.95L467.41 460.498L464.403 460.837L461.986 466.171L459.05 465.622L459.619 462.555L457.832 461.107L455.245 460.018L453.467 457.991L452.148 458.79L449.002 456.503L446.565 447.504L448.643 439.973L454.186 437.726L458.98 434.919L455.295 427.668L453.537 422.774L453.287 417.39L452.328 409.59L456.903 406.324L462.985 408.901L465.842 409.28L466.87 406.114L466.041 403.268L463.914 402.219L460.169 397.904L463.365 390.084L460.698 385.619L455.315 387.387L447.964 387.207L441.611 382.403L438.875 378.638L437.606 373.784L437.676 370.827L433.711 361.908L436.837 360.78L438.375 356.475L435.669 340.644L436.518 332.834L436.498 332.824Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt94_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt94",{id:"formIPCntc:j_idt94"});});</script>
+                            </g>
+                            <g>
+                                <title>Сливенска област</title><a id="formIPCntc:j_idt97" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M567.127 325.153L574.578 324.913L581.959 323.295L592.696 324.853L596.342 322.157L599.718 318.361L603.503 317.502L607.318 317.522L609.326 312.608L608.956 306.186L611.473 302.241L615.379 301.082L622.47 296.958L626.135 288.238L630.51 287.529L634.685 286.091L636.742 282.925L639.11 280.068L641.826 278.83L642.925 275.823L643.075 272.388L642.925 269.181L645.711 269.831L648.448 269.691L652.903 267.653L657.008 269.541L656.269 272.198L657.417 274.675L659.085 273.526L660.334 271.329L666.446 275.494L670.621 275.743L674.676 274.815L678.342 272.477L681.937 273.916L686.751 277.242L691.885 279.888L688.319 286.321L691.565 293.871L692.125 298.266L690.587 303.35L692.934 309.302L694.822 315.015L692.384 318.252L691.695 322.357L692.524 327.89L688.779 331.246L683.665 333.143L679.58 336.869L681.847 342.612L687.011 344.29L690.996 346.867L694.961 348.944L700.604 347.256L706.028 344.46L706.497 351.761L704.839 358.323L703.171 360.84L701.024 362.088L696.649 361.289L695.081 363.426L692.754 364.994L690.207 367.392L687.72 370.628L678.262 373.624L668.833 372.745L664.139 373.904L659.834 376.95L661.502 380.525L663.24 383.472L660.134 385.06L657.377 387.677L653.981 396.406L646.381 398.933L638.101 395.907L634.635 398.024L636.293 404.856L631.509 408.162L625.566 408.631L626.685 416.741L631.788 416.991L634.795 419.168L626.415 439.394L627.584 450.081L625.216 458.171L619.284 463.294L615.418 464.054L611.823 462.416L607.079 462.575L602.045 464.243L593.835 454.395L594.624 438.275L591.298 428.287L583.747 417.74L581.57 412.756L581.77 407.233L577.205 398.843L579.113 394.448L578.703 389.135L575.897 383.851L572.201 382.473L570.393 379.217L578.893 372.665L578.184 364.755L573.589 355.876L568.915 340.205L567.107 325.153H567.127Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt97_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt97",{id:"formIPCntc:j_idt97"});});</script>
+                            </g>
+                            <g>
+                                <title>Шуменска област</title><a id="formIPCntc:j_idt100" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M691.565 293.851L688.319 286.301L691.885 279.868L694.592 278.77L696.919 276.393L700.954 275.434L700.704 271.618L698.407 268.482L700.554 266.345L703.441 265.915L704.889 262.13L705.309 258.834L708.824 257.965L710.173 254.839L707.086 252.981L705.379 249.855L708.804 244.252L714.038 242.294L716.315 237.96L718.193 232.177L720.57 230.239L722.917 230.189L723.207 220.611L717.883 210.473L718.792 205.329L720.36 200.136L722.627 196.81L725.704 194.652L724.285 186.742L716.175 185.064L717.664 178.772L715.366 174.078L716.215 168.514L721.818 164.709L727.951 162.721L730.278 158.427L727.541 153.962L731.746 150.846L736.59 146.411L740.695 141.837L742.473 140.958L744.361 140.838L746.199 143.824L748.736 145.393L759.492 130.99L763.578 127.444L761.55 120.203L770.269 115.239L776.801 119.404L783.283 126.865L794.13 127.105L803.299 134.666L806.675 141.497L811.399 143.765L817.871 141.747L824.443 140.508L828.229 142.916L829.887 149.068L816.743 152.853L808.013 160.574L816.004 163.251L814.166 168.305L812.238 170.971L814.176 172.759L816.233 175.835L810.42 184.295L807.144 188.02L805.656 192.255L805.826 197.898L808.642 201.794L810.86 205.639L806.825 208.845L802.31 210.513L802.36 216.156L802.061 220.531L796.457 221.869L790.714 222.428L787.049 225.165L786.44 230.688L790.714 234.923L796.118 237.051L795.998 242.314L790.714 245.321L788.008 250.105L791.793 254.549L787.229 258.295L794.689 260.872L795.588 266.295L787.868 268.243L778.07 273.666L774.234 276.632L776.672 282.136L780.876 287.159L773.196 290.555L765.295 292.683L758.404 290.146L751.932 290.425L746.578 291.534L741.415 288.058L732.146 288.837L728.9 288.658L726.093 290.485L722.578 297.227L717.084 300.373L710.702 301.552L704.979 299.095L705.119 294.151L703.451 290.815L691.545 293.801L691.565 293.851Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt100_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt100",{id:"formIPCntc:j_idt100"});});</script>
+                            </g>
+                            <g>
+                                <title>Разградска област</title><a id="formIPCntc:j_idt103" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M761.58 120.223L763.608 127.464L759.523 131.01L748.766 145.413L746.229 143.844L744.391 140.858L742.503 140.978L740.726 141.857L736.621 146.431L731.776 150.866L727.572 153.982L730.308 158.447L727.981 162.741L721.849 164.729L716.245 168.534L715.396 174.097L717.694 178.792L716.205 185.084L712.73 184.155L709.364 184.105L708.685 192.795L705.259 193.803L701.683 194.403L695.84 200.485L691.875 200.505L688.01 198.767L677.673 198.787L676.504 192.235L677.363 183.556L669.003 180.799L659.135 179.501L656.958 178.212L655 176.614L657.487 168.774L650.795 161.693L642.416 156.619L635.184 154.382L628.143 157.018L624.577 151.136L625.097 143.345L624.797 141.607L624.438 140.019L625.316 139.14L625.996 137.962L625.586 132.828L627.444 128.753L629.551 130.571L631.749 132.818L637.841 128.223L646.291 129.482L648.448 125.886L650.695 120.902L654.001 119.115L653.582 109.946L656.508 105.921L652.543 103.763L647.609 103.334L639.15 99.3487L639.539 90.3198L646.99 85.6654L650.586 77.2058L662.801 63.7722L668.544 62.9332L673.997 64.3914L678.392 69.3254L683.036 67.997L687.221 64.8409L690.916 66.6287L693.803 70.6837L695.071 74.549L698.907 81.9L712.74 86.814L718.233 87.4233L721.119 91.738L723.447 95.9229L724.715 93.2062L727.202 92.7468L730.108 91.6082L732.406 88.0325L734.853 87.7029L735.951 92.0277L738.548 96.1726L741.535 98.4099L743.192 100.917L745.63 103.084L745.66 108.158L747.298 110.795L750.234 108.847L752.881 110.465L756.786 116.308L761.58 120.213V120.223Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt103_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt103",{id:"formIPCntc:j_idt103"});});</script>
+                            </g>
+                            <g>
+                                <title>Търговищка област</title><a id="formIPCntc:j_idt106" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M626.135 288.228L620.193 283.394L613.491 281.896L612.642 276.872L616.217 273.816L616.357 270.919L614.11 270.13L612.153 268.083L611.373 264.687L609.496 259.713L607.388 254.939L607.688 249.605L609.965 244.751L609.915 240.906L610.964 237.68L613.341 237.7L615.618 237.21L613.741 228.961L608.387 221.879L608.677 216.915L612.123 213.19L607.628 208.086L601.366 205.699L601.655 200.635L601.096 195.721L597.4 193.953L593.026 193.384L590.139 188.859L589.23 183.806L593.236 182.637L597.46 179.521L601.246 175.566L603.573 170.692L604.432 163.46L609.546 161.093L613.401 158.147L617.136 158.926L620.772 158.157L624.897 158.936L628.143 157.018L635.184 154.382L642.416 156.619L650.795 161.693L657.487 168.774L655 176.614L656.958 178.212L659.135 179.501L669.003 180.799L677.363 183.556L676.504 192.235L677.672 198.787L688.01 198.767L691.875 200.505L695.84 200.485L701.683 194.403L705.259 193.803L708.685 192.795L709.364 184.105L712.73 184.155L716.205 185.084L724.316 186.762L725.734 194.672L722.658 196.83L720.39 200.156L718.822 205.349L717.913 210.493L723.237 220.631L722.947 230.209L720.6 230.259L718.223 232.197L716.345 237.98L714.068 242.314L708.834 244.272L705.409 249.875L707.117 253.001L710.203 254.859L708.854 257.985L705.339 258.854L704.919 262.15L703.471 265.935L700.585 266.365L698.437 268.502L700.734 271.638L700.984 275.454L696.949 276.413L694.622 278.79L691.915 279.888L686.781 277.242L681.967 273.916L678.372 272.477L674.706 274.815L670.651 275.743L666.476 275.494L660.364 271.329L659.115 273.526L657.447 274.675L656.299 272.198L657.038 269.541L652.933 267.653L648.478 269.691L645.742 269.831L642.955 269.181L643.105 272.388L642.955 275.823L641.856 278.83L639.14 280.068L636.772 282.925L634.715 286.091L630.54 287.529L626.165 288.238L626.135 288.228Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt106_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt106",{id:"formIPCntc:j_idt106"});});</script>
+                            </g>
+                            <g>
+                                <title>Габровска област</title><a id="formIPCntc:j_idt109" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M436.497 332.824L436.447 330.547L435.029 319.7L430.954 309.532L424.522 305.018L417.431 301.622L415.843 299.185L414.884 296.318L415.523 292.932L414.734 289.736L412.956 279.828L421.566 269.411L420.167 262.14L422.245 253.071L428.357 248.607L429.556 240.177L432.223 233.215L439.843 234.324L446.465 236.521L447.464 240.816L451.06 243.433L453.816 249.096L458.111 252.462L480.234 252.841L482.581 257.596L484.758 263.508L489.013 265.486L499.62 266.704L511.036 266.245L516.1 267.823L526.028 269.491L528.815 278.16L525.029 290.445L532.041 297.437L535.247 298.386L537.174 301.692L537.105 307.505L535.686 312.668L532.21 319.61L535.946 328.679L537.115 332.774L534.747 335.121L531.491 332.444L528.705 328.629L526.038 327.41L522.173 331.795L519.116 330.566L516.65 332.155L513.693 333.473L510.986 332.574L508.23 332.115L504.275 335.151L499.001 335.61L490.471 331.885L481.622 330.147L475 334.062L472.314 331.226L469.946 327.44L461.757 327.87L453.327 331.895L444.877 333.543L436.487 332.834L436.497 332.824Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt109_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt109",{id:"formIPCntc:j_idt109"});});</script>
+                            </g>
+                            <g>
+                                <title>Пазарджишка област</title><a id="formIPCntc:j_idt112" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M337.897 374.043L336.019 384.581L335.65 395.687L339.195 396.416L341.203 402.019L340.903 404.207L341.073 409.121L342.661 414.015L342.631 418.279L345.588 419.498L349.373 426.01L346.956 431.763L347.176 435.009L349.823 438.854L351.071 444.847L350.262 451.119L350.142 455.514L352.879 457.601L355.476 460.698L353.059 464.014L348.544 465.142L344.779 468.149L345.298 477.257L343.32 482.201L344.229 488.254L346.776 498.621L344.899 508.809L343.061 514.911L340.464 521.913L334.401 524.989L329.637 528.035L322.696 537.664L322.596 547.791L315.514 554.144L306.196 554.413L303.05 557.38L300.123 557.16L301.352 553.315L302.091 549.309L295.609 543.407L287.449 542.118L281.466 543.227L282.005 548.48L284.992 550.868L287.439 554.124L287.878 561.245L283.014 566.269L280.008 564.781L278.01 561.015L259.413 548.241L257.705 544.845L255.707 542.218L252.481 543.117L249.615 542.478L246.049 538.842L242.014 536.265L237.759 528.165L236.761 518.307L234.274 514.822L232.336 510.896L233.215 507.281L233.015 502.886L237.14 493.198L241.814 487.795L238.668 483.989L238.618 479.175L240.626 476.628L241.085 473.102L240.037 468.588L237.18 465.552L233.984 463.025L232.426 458.76L235.292 458.021L237.739 456.333L237.49 453.397L238.588 451.379L246.309 448.203L251.632 440.342L252.921 433.91L256.836 432.742L258.744 435.548L260.871 437.776L264.287 438.894L266.904 435.548L266.784 431.883L264.197 429.745L261.58 421.555L264.507 411.528L271.079 410.769L277.411 408.072L280.078 399.902L277.461 395.517L269.201 396.876L262.999 391.302L260.951 388.226L258.284 386.099L256.017 382.054L254.479 377.369L255.438 372.395L260.282 370.658L264.806 370.238L269.161 371.846L272.727 374.892L276.802 375.971L284.432 371.656L288.537 371.596L292.303 369.729L296.867 363.287L302.85 360.85L305.706 360.29L308.543 359.092L313.207 359.411L317.702 360.949L319.539 364.365L320.448 368.31L323.335 369.669L326.461 370.558L328.389 373.354L330.886 373.484L334.361 372.815L337.827 374.033L337.897 374.043Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt112_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt112",{id:"formIPCntc:j_idt112"});});</script>
+                            </g>
+                            <g>
+                                <title>Ловешка област</title><a id="formIPCntc:j_idt115" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M336.019 331.346L330.736 331.885L325.532 330.706L321.747 328.04L317.792 325.852L297.097 325.593L293.841 320.549L296.058 311.61L296.358 304.388L295.938 297.197L292.323 291.185L285.99 289.726L281.915 285.701L278.489 281.616L279.738 276.942L278.709 272.348L276.412 270.03L275.164 266.734L272.207 263.488L267.513 263.568L265.266 257.695L264.387 251.393L266.904 249.685L269.72 252.202L273.855 252.222L275.563 247.208L276.901 238.259L275.563 229.68L284.292 224.516L292.892 220.601L296.757 223.817L300.443 223.028L305.477 225.784L309.632 226.434L313.597 225.245L318.391 223.277L322.985 222.099L325.772 218.783L329.018 215.797L332.144 214.808L335.34 214.858L338.277 218.014L340.494 222.319L343.6 225.365L355.406 228.791L363.396 229.14L364.495 230.379L365.064 232.027L367.581 231.078L373.354 226.154L376.41 222.309L377.758 219.152L379.616 216.536L381.374 219.103L383.212 217.824L385.509 214.318L394.208 207.976L404.176 207.407L407.961 207.716L414.114 206.937L417.66 211.142L421.894 210.933L426.469 209.604L431.353 207.517L435.698 204.331L438.604 201.494L439.483 195.631L442.759 200.156L446.894 208.585L452.837 214.408L453.646 228.861L446.454 236.491L439.833 234.294L432.212 233.185L429.545 240.147L428.347 248.577L422.234 253.041L420.157 262.11L421.555 269.381L412.945 279.798L414.723 289.706L415.512 292.902L414.873 296.288L415.832 299.155L417.42 301.592L424.511 304.988L430.943 309.502L435.018 319.67L436.437 330.517L431.333 331.705L429.625 333.663L429.066 336.379L422.294 340.384L414.773 341.223L406.433 339.286L397.834 339.266L396.535 340.854L394.068 341.413L386.218 339.805L379.746 334.092L374.243 326.811L366.832 323.875L359.081 323.006L352.899 323.106L342.701 332.045L336.009 331.336L336.019 331.346Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt115_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt115",{id:"formIPCntc:j_idt115"});});</script>
+                            </g>
+                            <g>
+                                <title>София-град област</title><a id="formIPCntc:j_idt118" href="#" class="ui-commandlink ui-widget">
+                                    <path d="M153.293 380.625L150.267 377.13L140.589 369.749L135.505 367.761L134.766 360.011L133.617 355.826L131.899 352.12L128.503 350.412L125.647 348.075L121.812 344.21L117.507 341.333L122.591 334.911L129.412 334.182L132.858 336.539L136.743 337.108L139.65 335.57L142.097 332.584L142.456 328.199L140.429 324.154L148.469 317.532L148.589 307.405L152.504 299.584L155.101 300.583L157.158 303.09L165.279 308.513L173.229 310.751L181.369 307.265L188.85 305.657L195.282 311.45L201.394 311.829L207.207 307.804L205.21 313.627L201.834 319.909L192.955 339.316L189.928 352.859L192.415 357.723L199.327 374.503L207.906 389.664L213.06 394.558L214.718 401.939L210.663 406.114L205.989 404.107L199.097 405.265L194.723 402.299L196.58 394.968L193.284 388.945L192.216 385.1L192.146 382.433L185.504 381.075L182.398 387.497L178.383 393.829L172.54 392.381L166.647 387.827L153.283 380.655L153.293 380.625Z" fill="white" stroke="#B6B6B6" stroke-miterlimit="10"></path></a><script id="formIPCntc:j_idt118_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("CommandLink","widget_formIPCntc_j_idt118",{id:"formIPCntc:j_idt118"});});</script>
+                            </g>
+
+                            <!--    &lt;circle cx="167" cy="351" r="12" fill="#19BDA0"/&gt;
+                                &lt;circle cx="393" cy="459" r="12" fill="#19BDA0"/&gt;
+                                &lt;circle cx="536" cy="378" r="12" fill="#19BDA0"/&gt;
+                                &lt;circle cx="885" cy="232" r="12" fill="#19BDA0"/&gt;
+                                &lt;circle cx="806" cy="394" r="12" fill="#19BDA0"/&gt;-->
+                            <!--    &lt;rect x="6" y="209" width="320" height="112" rx="8" fill="#045E5E"/&gt;
+                                &lt;path d="M28.752 243.192C27.8667 243.192 27.0453 243.048 26.288 242.76C25.5413 242.472 24.8907 242.067 24.336 241.544C23.792 241.021 23.3653 240.408 23.056 239.704C22.7573 239 22.608 238.232 22.608 237.4C22.608 236.568 22.7573 235.8 23.056 235.096C23.3653 234.392 23.7973 233.779 24.352 233.256C24.9067 232.733 25.5573 232.328 26.304 232.04C27.0507 231.752 27.8613 231.608 28.736 231.608C29.6213 231.608 30.432 231.752 31.168 232.04C31.9147 232.328 32.56 232.733 33.104 233.256C33.6587 233.779 34.0907 234.392 34.4 235.096C34.7093 235.789 34.864 236.557 34.864 237.4C34.864 238.232 34.7093 239.005 34.4 239.72C34.0907 240.424 33.6587 241.037 33.104 241.56C32.56 242.072 31.9147 242.472 31.168 242.76C30.432 243.048 29.6267 243.192 28.752 243.192ZM28.736 240.984C29.2373 240.984 29.696 240.899 30.112 240.728C30.5387 240.557 30.912 240.312 31.232 239.992C31.552 239.672 31.7973 239.293 31.968 238.856C32.1493 238.419 32.24 237.933 32.24 237.4C32.24 236.867 32.1493 236.381 31.968 235.944C31.7973 235.507 31.552 235.128 31.232 234.808C30.9227 234.488 30.5547 234.243 30.128 234.072C29.7013 233.901 29.2373 233.816 28.736 233.816C28.2347 233.816 27.7707 233.901 27.344 234.072C26.928 234.243 26.56 234.488 26.24 234.808C25.92 235.128 25.6693 235.507 25.488 235.944C25.3173 236.381 25.232 236.867 25.232 237.4C25.232 237.923 25.3173 238.408 25.488 238.856C25.6693 239.293 25.9147 239.672 26.224 239.992C26.544 240.312 26.9173 240.557 27.344 240.728C27.7707 240.899 28.2347 240.984 28.736 240.984ZM42.4608 243.192C42.4394 243.192 42.3808 243.192 42.2848 243.192C42.1888 243.192 42.0981 243.192 42.0128 243.192C41.9274 243.192 41.8688 243.192 41.8368 243.192C39.9701 243.16 38.5248 242.76 37.5008 241.992C36.4768 241.224 35.9648 240.115 35.9648 238.664C35.9648 237.235 36.4714 236.147 37.4848 235.4C38.5088 234.643 39.9754 234.259 41.8848 234.248C41.9061 234.248 41.9594 234.248 42.0448 234.248C42.1408 234.248 42.2314 234.248 42.3168 234.248C42.4021 234.248 42.4554 234.248 42.4768 234.248C44.4074 234.248 45.9008 234.621 46.9568 235.368C48.0234 236.115 48.5568 237.213 48.5568 238.664C48.5568 240.136 48.0234 241.261 46.9568 242.04C45.9008 242.808 44.4021 243.192 42.4608 243.192ZM42.3808 241.272C43.2661 241.272 43.9861 241.181 44.5408 241C45.0954 240.808 45.5008 240.52 45.7568 240.136C46.0234 239.741 46.1568 239.251 46.1568 238.664C46.1568 238.099 46.0288 237.635 45.7728 237.272C45.5168 236.899 45.1061 236.621 44.5408 236.44C43.9861 236.259 43.2661 236.168 42.3808 236.168C42.3488 236.168 42.2848 236.168 42.1888 236.168C42.0928 236.168 42.0288 236.168 41.9968 236.168C41.1434 236.168 40.4501 236.264 39.9168 236.456C39.3834 236.648 38.9941 236.925 38.7488 237.288C38.5034 237.651 38.3808 238.109 38.3808 238.664C38.3808 239.24 38.5034 239.72 38.7488 240.104C38.9941 240.488 39.3834 240.776 39.9168 240.968C40.4501 241.16 41.1434 241.261 41.9968 241.272C42.0288 241.272 42.0928 241.272 42.1888 241.272C42.2848 241.272 42.3488 241.272 42.3808 241.272ZM41.1168 246.104V231.128H43.4048V246.104H41.1168ZM50.2469 243V234.392H52.7269V239.512L56.9189 234.392H59.2069V243H56.7269V237.88L52.5509 243H50.2469ZM65.7023 243.128C64.7743 243.128 63.9476 242.941 63.2223 242.568C62.4969 242.184 61.9263 241.656 61.5103 240.984C61.1049 240.312 60.9023 239.549 60.9023 238.696C60.9023 237.832 61.1049 237.069 61.5103 236.408C61.9263 235.736 62.4969 235.213 63.2223 234.84C63.9476 234.456 64.7743 234.264 65.7023 234.264C66.6089 234.264 67.3983 234.456 68.0703 234.84C68.7423 235.213 69.2383 235.752 69.5583 236.456L67.6223 237.496C67.3983 237.091 67.1156 236.792 66.7743 236.6C66.4436 236.408 66.0809 236.312 65.6863 236.312C65.2596 236.312 64.8756 236.408 64.5343 236.6C64.1929 236.792 63.9209 237.064 63.7183 237.416C63.5263 237.768 63.4303 238.195 63.4303 238.696C63.4303 239.197 63.5263 239.624 63.7183 239.976C63.9209 240.328 64.1929 240.6 64.5343 240.792C64.8756 240.984 65.2596 241.08 65.6863 241.08C66.0809 241.08 66.4436 240.989 66.7743 240.808C67.1156 240.616 67.3983 240.312 67.6223 239.896L69.5583 240.952C69.2383 241.645 68.7423 242.184 68.0703 242.568C67.3983 242.941 66.6089 243.128 65.7023 243.128ZM81.0943 243.192C80.2303 243.192 79.4249 243.053 78.6783 242.776C77.9423 242.488 77.3023 242.083 76.7582 241.56C76.2143 241.037 75.7876 240.424 75.4783 239.72C75.1796 239.016 75.0303 238.243 75.0303 237.4C75.0303 236.557 75.1796 235.784 75.4783 235.08C75.7876 234.376 76.2143 233.763 76.7582 233.24C77.3129 232.717 77.9583 232.317 78.6943 232.04C79.4303 231.752 80.2356 231.608 81.1103 231.608C82.0809 231.608 82.9556 231.779 83.7343 232.12C84.5236 232.451 85.1849 232.941 85.7183 233.592L84.0543 235.128C83.6703 234.691 83.2436 234.365 82.7743 234.152C82.3049 233.928 81.7929 233.816 81.2383 233.816C80.7156 233.816 80.2356 233.901 79.7983 234.072C79.3609 234.243 78.9823 234.488 78.6623 234.808C78.3423 235.128 78.0916 235.507 77.9103 235.944C77.7396 236.381 77.6543 236.867 77.6543 237.4C77.6543 237.933 77.7396 238.419 77.9103 238.856C78.0916 239.293 78.3423 239.672 78.6623 239.992C78.9823 240.312 79.3609 240.557 79.7983 240.728C80.2356 240.899 80.7156 240.984 81.2383 240.984C81.7929 240.984 82.3049 240.877 82.7743 240.664C83.2436 240.44 83.6703 240.104 84.0543 239.656L85.7183 241.192C85.1849 241.843 84.5236 242.339 83.7343 242.68C82.9556 243.021 82.0756 243.192 81.0943 243.192ZM90.9508 243.128C90.0334 243.128 89.2174 242.936 88.5028 242.552C87.7988 242.168 87.2388 241.645 86.8228 240.984C86.4174 240.312 86.2148 239.549 86.2148 238.696C86.2148 237.832 86.4174 237.069 86.8228 236.408C87.2388 235.736 87.7988 235.213 88.5028 234.84C89.2174 234.456 90.0334 234.264 90.9508 234.264C91.8574 234.264 92.6681 234.456 93.3828 234.84C94.0974 235.213 94.6574 235.731 95.0628 236.392C95.4681 237.053 95.6708 237.821 95.6708 238.696C95.6708 239.549 95.4681 240.312 95.0628 240.984C94.6574 241.645 94.0974 242.168 93.3828 242.552C92.6681 242.936 91.8574 243.128 90.9508 243.128ZM90.9508 241.08C91.3668 241.08 91.7401 240.984 92.0708 240.792C92.4014 240.6 92.6628 240.328 92.8548 239.976C93.0468 239.613 93.1428 239.187 93.1428 238.696C93.1428 238.195 93.0468 237.768 92.8548 237.416C92.6628 237.064 92.4014 236.792 92.0708 236.6C91.7401 236.408 91.3668 236.312 90.9508 236.312C90.5348 236.312 90.1614 236.408 89.8307 236.6C89.5001 236.792 89.2334 237.064 89.0308 237.416C88.8388 237.768 88.7428 238.195 88.7428 238.696C88.7428 239.187 88.8388 239.613 89.0308 239.976C89.2334 240.328 89.5001 240.6 89.8307 240.792C90.1614 240.984 90.5348 241.08 90.9508 241.08ZM103.18 243.192C103.158 243.192 103.1 243.192 103.004 243.192C102.908 243.192 102.817 243.192 102.732 243.192C102.646 243.192 102.588 243.192 102.556 243.192C100.689 243.16 99.2435 242.76 98.2195 241.992C97.1955 241.224 96.6835 240.115 96.6835 238.664C96.6835 237.235 97.1902 236.147 98.2035 235.4C99.2275 234.643 100.694 234.259 102.604 234.248C102.625 234.248 102.678 234.248 102.764 234.248C102.86 234.248 102.95 234.248 103.036 234.248C103.121 234.248 103.174 234.248 103.196 234.248C105.126 234.248 106.62 234.621 107.676 235.368C108.742 236.115 109.276 237.213 109.276 238.664C109.276 240.136 108.742 241.261 107.676 242.04C106.62 242.808 105.121 243.192 103.18 243.192ZM103.1 241.272C103.985 241.272 104.705 241.181 105.26 241C105.814 240.808 106.22 240.52 106.476 240.136C106.742 239.741 106.876 239.251 106.876 238.664C106.876 238.099 106.748 237.635 106.492 237.272C106.236 236.899 105.825 236.621 105.26 236.44C104.705 236.259 103.985 236.168 103.1 236.168C103.068 236.168 103.004 236.168 102.908 236.168C102.812 236.168 102.748 236.168 102.716 236.168C101.862 236.168 101.169 236.264 100.636 236.456C100.102 236.648 99.7128 236.925 99.4675 237.288C99.2222 237.651 99.0995 238.109 99.0995 238.664C99.0995 239.24 99.2222 239.72 99.4675 240.104C99.7128 240.488 100.102 240.776 100.636 240.968C101.169 241.16 101.862 241.261 102.716 241.272C102.748 241.272 102.812 241.272 102.908 241.272C103.004 241.272 103.068 241.272 103.1 241.272ZM101.836 246.104V231.128H104.124V246.104H101.836ZM110.966 243V234.392H113.446V239.512L117.638 234.392H119.926V243H117.446V237.88L113.27 243H110.966ZM127.749 243V240.136L128.101 240.536H125.717C124.48 240.536 123.509 240.28 122.805 239.768C122.101 239.256 121.749 238.52 121.749 237.56C121.749 236.536 122.117 235.752 122.853 235.208C123.6 234.664 124.602 234.392 125.861 234.392H129.973V243H127.749ZM121.621 243L123.909 239.72H126.453L124.277 243H121.621ZM127.749 239.368V235.784L128.101 236.424H125.909C125.397 236.424 124.997 236.52 124.709 236.712C124.432 236.904 124.293 237.213 124.293 237.64C124.293 238.461 124.821 238.872 125.877 238.872H128.101L127.749 239.368Z" fill="white"/&gt;
+                                &lt;path d="M23.824 275V263.8H25.008V273.976H31.28V275H23.824ZM36.3049 275.08C35.4942 275.08 34.7635 274.899 34.1129 274.536C33.4729 274.163 32.9662 273.656 32.5929 273.016C32.2195 272.365 32.0329 271.624 32.0329 270.792C32.0329 269.949 32.2195 269.208 32.5929 268.568C32.9662 267.928 33.4729 267.427 34.1129 267.064C34.7529 266.701 35.4835 266.52 36.3049 266.52C37.1369 266.52 37.8729 266.701 38.5129 267.064C39.1635 267.427 39.6702 267.928 40.0329 268.568C40.4062 269.208 40.5929 269.949 40.5929 270.792C40.5929 271.624 40.4062 272.365 40.0329 273.016C39.6702 273.656 39.1635 274.163 38.5129 274.536C37.8622 274.899 37.1262 275.08 36.3049 275.08ZM36.3049 274.072C36.9129 274.072 37.4515 273.939 37.9209 273.672C38.3902 273.395 38.7582 273.011 39.0249 272.52C39.3022 272.019 39.4409 271.443 39.4409 270.792C39.4409 270.131 39.3022 269.555 39.0249 269.064C38.7582 268.573 38.3902 268.195 37.9209 267.928C37.4515 267.651 36.9182 267.512 36.3209 267.512C35.7235 267.512 35.1902 267.651 34.7209 267.928C34.2515 268.195 33.8782 268.573 33.6009 269.064C33.3235 269.555 33.1849 270.131 33.1849 270.792C33.1849 271.443 33.3235 272.019 33.6009 272.52C33.8782 273.011 34.2515 273.395 34.7209 273.672C35.1902 273.939 35.7182 274.072 36.3049 274.072ZM42.9121 275V266.6H44.0001V268.888L43.8881 268.488C44.1228 267.848 44.5175 267.363 45.0721 267.032C45.6268 266.691 46.3148 266.52 47.1361 266.52V267.624C47.0935 267.624 47.0508 267.624 47.0081 267.624C46.9655 267.613 46.9228 267.608 46.8801 267.608C45.9948 267.608 45.3015 267.88 44.8001 268.424C44.2988 268.957 44.0481 269.72 44.0481 270.712V275H42.9121ZM52.6989 275.08C51.8242 275.08 51.0562 274.899 50.3949 274.536C49.7335 274.163 49.2162 273.656 48.8429 273.016C48.4695 272.365 48.2829 271.624 48.2829 270.792C48.2829 269.96 48.4589 269.224 48.8109 268.584C49.1735 267.944 49.6642 267.443 50.2829 267.08C50.9122 266.707 51.6162 266.52 52.3949 266.52C53.1842 266.52 53.8829 266.701 54.4909 267.064C55.1095 267.416 55.5949 267.917 55.9469 268.568C56.2989 269.208 56.4749 269.949 56.4749 270.792C56.4749 270.845 56.4695 270.904 56.4589 270.968C56.4589 271.021 56.4589 271.08 56.4589 271.144H49.1469V270.296H55.8509L55.4029 270.632C55.4029 270.024 55.2695 269.485 55.0029 269.016C54.7469 268.536 54.3949 268.163 53.9469 267.896C53.4989 267.629 52.9815 267.496 52.3949 267.496C51.8189 267.496 51.3015 267.629 50.8429 267.896C50.3842 268.163 50.0269 268.536 49.7709 269.016C49.5149 269.496 49.3869 270.045 49.3869 270.664V270.84C49.3869 271.48 49.5255 272.045 49.8029 272.536C50.0909 273.016 50.4855 273.395 50.9869 273.672C51.4989 273.939 52.0802 274.072 52.7309 274.072C53.2429 274.072 53.7175 273.981 54.1549 273.8C54.6029 273.619 54.9869 273.341 55.3069 272.968L55.9469 273.704C55.5735 274.152 55.1042 274.493 54.5389 274.728C53.9842 274.963 53.3709 275.08 52.6989 275.08ZM69.2831 266.52C69.9658 266.52 70.5578 266.653 71.0591 266.92C71.5711 267.176 71.9658 267.571 72.2431 268.104C72.5311 268.637 72.6751 269.309 72.6751 270.12V275H71.5391V270.232C71.5391 269.347 71.3258 268.68 70.8991 268.232C70.4831 267.773 69.8911 267.544 69.1231 267.544C68.5471 267.544 68.0458 267.667 67.6191 267.912C67.2031 268.147 66.8778 268.493 66.6431 268.952C66.4191 269.4 66.3071 269.944 66.3071 270.584V275H65.1711V270.232C65.1711 269.347 64.9578 268.68 64.5311 268.232C64.1045 267.773 63.5071 267.544 62.7391 267.544C62.1738 267.544 61.6778 267.667 61.2511 267.912C60.8245 268.147 60.4938 268.493 60.2591 268.952C60.0351 269.4 59.9231 269.944 59.9231 270.584V275H58.7871V266.6H59.8751V268.872L59.6991 268.472C59.9551 267.864 60.3658 267.389 60.9311 267.048C61.5071 266.696 62.1845 266.52 62.9631 266.52C63.7845 266.52 64.4831 266.728 65.0591 267.144C65.6351 267.549 66.0085 268.163 66.1791 268.984L65.7311 268.808C65.9765 268.125 66.4085 267.576 67.0271 267.16C67.6565 266.733 68.4085 266.52 69.2831 266.52ZM79.9434 275V266.6H81.0794V275H79.9434ZM80.5194 264.744C80.2847 264.744 80.0874 264.664 79.9274 264.504C79.7674 264.344 79.6874 264.152 79.6874 263.928C79.6874 263.704 79.7674 263.517 79.9274 263.368C80.0874 263.208 80.2847 263.128 80.5194 263.128C80.754 263.128 80.9514 263.203 81.1114 263.352C81.2714 263.501 81.3514 263.688 81.3514 263.912C81.3514 264.147 81.2714 264.344 81.1114 264.504C80.962 264.664 80.7647 264.744 80.5194 264.744ZM88.5763 275.08C87.8509 275.08 87.1949 274.915 86.6083 274.584C86.0216 274.243 85.5523 273.757 85.2003 273.128C84.8589 272.488 84.6883 271.709 84.6883 270.792C84.6883 269.875 84.8589 269.101 85.2003 268.472C85.5416 267.832 86.0056 267.347 86.5923 267.016C87.1789 266.685 87.8403 266.52 88.5763 266.52C89.3763 266.52 90.0909 266.701 90.7203 267.064C91.3603 267.416 91.8616 267.917 92.2243 268.568C92.5869 269.208 92.7683 269.949 92.7683 270.792C92.7683 271.645 92.5869 272.392 92.2243 273.032C91.8616 273.672 91.3603 274.173 90.7203 274.536C90.0909 274.899 89.3763 275.08 88.5763 275.08ZM84.2403 278.104V266.6H85.3283V269.128L85.2163 270.808L85.3763 272.504V278.104H84.2403ZM88.4963 274.072C89.0936 274.072 89.6269 273.939 90.0963 273.672C90.5656 273.395 90.9389 273.011 91.2163 272.52C91.4936 272.019 91.6323 271.443 91.6323 270.792C91.6323 270.141 91.4936 269.571 91.2163 269.08C90.9389 268.589 90.5656 268.205 90.0963 267.928C89.6269 267.651 89.0936 267.512 88.4963 267.512C87.8989 267.512 87.3603 267.651 86.8802 267.928C86.4109 268.205 86.0376 268.589 85.7603 269.08C85.4936 269.571 85.3603 270.141 85.3603 270.792C85.3603 271.443 85.4936 272.019 85.7603 272.52C86.0376 273.011 86.4109 273.395 86.8802 273.672C87.3603 273.939 87.8989 274.072 88.4963 274.072ZM97.34 275.08C96.6467 275.08 95.9907 274.984 95.372 274.792C94.7533 274.589 94.268 274.339 93.916 274.04L94.428 273.144C94.7693 273.4 95.2067 273.624 95.74 273.816C96.2733 273.997 96.8333 274.088 97.42 274.088C98.22 274.088 98.796 273.965 99.148 273.72C99.5 273.464 99.676 273.128 99.676 272.712C99.676 272.403 99.5747 272.163 99.372 271.992C99.18 271.811 98.924 271.677 98.604 271.592C98.284 271.496 97.9267 271.416 97.532 271.352C97.1373 271.288 96.7427 271.213 96.348 271.128C95.964 271.043 95.612 270.92 95.292 270.76C94.972 270.589 94.7107 270.36 94.508 270.072C94.316 269.784 94.22 269.4 94.22 268.92C94.22 268.461 94.348 268.051 94.604 267.688C94.86 267.325 95.2333 267.043 95.724 266.84C96.2253 266.627 96.8333 266.52 97.548 266.52C98.092 266.52 98.636 266.595 99.18 266.744C99.724 266.883 100.172 267.069 100.524 267.304L100.028 268.216C99.6547 267.96 99.2547 267.779 98.828 267.672C98.4013 267.555 97.9747 267.496 97.548 267.496C96.7907 267.496 96.2307 267.629 95.868 267.896C95.516 268.152 95.34 268.483 95.34 268.888C95.34 269.208 95.436 269.459 95.628 269.64C95.8307 269.821 96.092 269.965 96.412 270.072C96.7427 270.168 97.1 270.248 97.484 270.312C97.8787 270.376 98.268 270.456 98.652 270.552C99.0467 270.637 99.404 270.76 99.724 270.92C100.055 271.069 100.316 271.288 100.508 271.576C100.711 271.853 100.812 272.221 100.812 272.68C100.812 273.171 100.673 273.597 100.396 273.96C100.129 274.312 99.7347 274.589 99.212 274.792C98.7 274.984 98.076 275.08 97.34 275.08ZM106.369 275.08C105.654 275.08 105.03 274.947 104.497 274.68C103.963 274.413 103.547 274.013 103.249 273.48C102.961 272.947 102.817 272.28 102.817 271.48V266.6H103.953V271.352C103.953 272.248 104.171 272.925 104.609 273.384C105.057 273.832 105.681 274.056 106.481 274.056C107.067 274.056 107.574 273.939 108.001 273.704C108.438 273.459 108.769 273.107 108.993 272.648C109.227 272.189 109.345 271.64 109.345 271V266.6H110.481V275H109.392V272.696L109.569 273.112C109.302 273.731 108.886 274.216 108.321 274.568C107.766 274.909 107.115 275.08 106.369 275.08ZM124.143 266.52C124.825 266.52 125.417 266.653 125.919 266.92C126.431 267.176 126.825 267.571 127.103 268.104C127.391 268.637 127.535 269.309 127.535 270.12V275H126.399V270.232C126.399 269.347 126.185 268.68 125.759 268.232C125.343 267.773 124.751 267.544 123.983 267.544C123.407 267.544 122.905 267.667 122.479 267.912C122.063 268.147 121.737 268.493 121.503 268.952C121.279 269.4 121.167 269.944 121.167 270.584V275H120.031V270.232C120.031 269.347 119.817 268.68 119.391 268.232C118.964 267.773 118.367 267.544 117.599 267.544C117.033 267.544 116.537 267.667 116.111 267.912C115.684 268.147 115.353 268.493 115.119 268.952C114.895 269.4 114.783 269.944 114.783 270.584V275H113.647V266.6H114.735V268.872L114.559 268.472C114.815 267.864 115.225 267.389 115.791 267.048C116.367 266.696 117.044 266.52 117.823 266.52C118.644 266.52 119.343 266.728 119.919 267.144C120.495 267.549 120.868 268.163 121.039 268.984L120.591 268.808C120.836 268.125 121.268 267.576 121.887 267.16C122.516 266.733 123.268 266.52 124.143 266.52ZM138.147 275.08C137.347 275.08 136.627 274.899 135.987 274.536C135.357 274.173 134.861 273.672 134.499 273.032C134.136 272.381 133.955 271.635 133.955 270.792C133.955 269.939 134.136 269.192 134.499 268.552C134.861 267.912 135.357 267.416 135.987 267.064C136.627 266.701 137.347 266.52 138.147 266.52C138.883 266.52 139.539 266.685 140.115 267.016C140.701 267.347 141.165 267.832 141.507 268.472C141.859 269.101 142.035 269.875 142.035 270.792C142.035 271.699 141.864 272.472 141.523 273.112C141.181 273.752 140.717 274.243 140.131 274.584C139.555 274.915 138.893 275.08 138.147 275.08ZM138.227 274.072C138.824 274.072 139.357 273.939 139.827 273.672C140.307 273.395 140.68 273.011 140.947 272.52C141.224 272.019 141.363 271.443 141.363 270.792C141.363 270.131 141.224 269.555 140.947 269.064C140.68 268.573 140.307 268.195 139.827 267.928C139.357 267.651 138.824 267.512 138.227 267.512C137.64 267.512 137.112 267.651 136.643 267.928C136.173 268.195 135.8 268.573 135.523 269.064C135.245 269.555 135.107 270.131 135.107 270.792C135.107 271.443 135.245 272.019 135.523 272.52C135.8 273.011 136.173 273.395 136.643 273.672C137.112 273.939 137.64 274.072 138.227 274.072ZM141.395 275V272.472L141.507 270.776L141.347 269.08V263.128H142.483V275H141.395ZM149.071 275.08C148.26 275.08 147.529 274.899 146.879 274.536C146.239 274.163 145.732 273.656 145.359 273.016C144.985 272.365 144.799 271.624 144.799 270.792C144.799 269.949 144.985 269.208 145.359 268.568C145.732 267.928 146.239 267.427 146.879 267.064C147.519 266.701 148.249 266.52 149.071 266.52C149.903 266.52 150.639 266.701 151.279 267.064C151.929 267.427 152.436 267.928 152.799 268.568C153.172 269.208 153.359 269.949 153.359 270.792C153.359 271.624 153.172 272.365 152.799 273.016C152.436 273.656 151.929 274.163 151.279 274.536C150.628 274.899 149.892 275.08 149.071 275.08ZM149.071 274.072C149.679 274.072 150.217 273.939 150.687 273.672C151.156 273.395 151.524 273.011 151.791 272.52C152.068 272.019 152.207 271.443 152.207 270.792C152.207 270.131 152.068 269.555 151.791 269.064C151.524 268.573 151.156 268.195 150.687 267.928C150.217 267.651 149.684 267.512 149.087 267.512C148.489 267.512 147.956 267.651 147.487 267.928C147.017 268.195 146.644 268.573 146.367 269.064C146.089 269.555 145.951 270.131 145.951 270.792C145.951 271.443 146.089 272.019 146.367 272.52C146.644 273.011 147.017 273.395 147.487 273.672C147.956 273.939 148.484 274.072 149.071 274.072ZM155.678 275V263.128H156.814V275H155.678ZM163.399 275.08C162.588 275.08 161.857 274.899 161.207 274.536C160.567 274.163 160.06 273.656 159.687 273.016C159.313 272.365 159.127 271.624 159.127 270.792C159.127 269.949 159.313 269.208 159.687 268.568C160.06 267.928 160.567 267.427 161.207 267.064C161.847 266.701 162.577 266.52 163.399 266.52C164.231 266.52 164.967 266.701 165.607 267.064C166.257 267.427 166.764 267.928 167.127 268.568C167.5 269.208 167.687 269.949 167.687 270.792C167.687 271.624 167.5 272.365 167.127 273.016C166.764 273.656 166.257 274.163 165.607 274.536C164.956 274.899 164.22 275.08 163.399 275.08ZM163.399 274.072C164.007 274.072 164.545 273.939 165.015 273.672C165.484 273.395 165.852 273.011 166.119 272.52C166.396 272.019 166.535 271.443 166.535 270.792C166.535 270.131 166.396 269.555 166.119 269.064C165.852 268.573 165.484 268.195 165.015 267.928C164.545 267.651 164.012 267.512 163.415 267.512C162.817 267.512 162.284 267.651 161.815 267.928C161.345 268.195 160.972 268.573 160.695 269.064C160.417 269.555 160.279 270.131 160.279 270.792C160.279 271.443 160.417 272.019 160.695 272.52C160.972 273.011 161.345 273.395 161.815 273.672C162.284 273.939 162.812 274.072 163.399 274.072ZM170.006 275V266.6H171.094V268.888L170.982 268.488C171.217 267.848 171.611 267.363 172.166 267.032C172.721 266.691 173.409 266.52 174.23 266.52V267.624C174.187 267.624 174.145 267.624 174.102 267.624C174.059 267.613 174.017 267.608 173.974 267.608C173.089 267.608 172.395 267.88 171.894 268.424C171.393 268.957 171.142 269.72 171.142 270.712V275H170.006ZM182.871 275.08C182.178 275.08 181.522 274.984 180.903 274.792C180.285 274.589 179.799 274.339 179.447 274.04L179.959 273.144C180.301 273.4 180.738 273.624 181.271 273.816C181.805 273.997 182.365 274.088 182.951 274.088C183.751 274.088 184.327 273.965 184.679 273.72C185.031 273.464 185.207 273.128 185.207 272.712C185.207 272.403 185.106 272.163 184.903 271.992C184.711 271.811 184.455 271.677 184.135 271.592C183.815 271.496 183.458 271.416 183.063 271.352C182.669 271.288 182.274 271.213 181.879 271.128C181.495 271.043 181.143 270.92 180.823 270.76C180.503 270.589 180.242 270.36 180.039 270.072C179.847 269.784 179.751 269.4 179.751 268.92C179.751 268.461 179.879 268.051 180.135 267.688C180.391 267.325 180.765 267.043 181.255 266.84C181.757 266.627 182.365 266.52 183.079 266.52C183.623 266.52 184.167 266.595 184.711 266.744C185.255 266.883 185.703 267.069 186.055 267.304L185.559 268.216C185.186 267.96 184.786 267.779 184.359 267.672C183.933 267.555 183.506 267.496 183.079 267.496C182.322 267.496 181.762 267.629 181.399 267.896C181.047 268.152 180.871 268.483 180.871 268.888C180.871 269.208 180.967 269.459 181.159 269.64C181.362 269.821 181.623 269.965 181.943 270.072C182.274 270.168 182.631 270.248 183.015 270.312C183.41 270.376 183.799 270.456 184.183 270.552C184.578 270.637 184.935 270.76 185.255 270.92C185.586 271.069 185.847 271.288 186.039 271.576C186.242 271.853 186.343 272.221 186.343 272.68C186.343 273.171 186.205 273.597 185.927 273.96C185.661 274.312 185.266 274.589 184.743 274.792C184.231 274.984 183.607 275.08 182.871 275.08ZM188.428 275V266.6H189.564V275H188.428ZM189.004 264.744C188.769 264.744 188.572 264.664 188.412 264.504C188.252 264.344 188.172 264.152 188.172 263.928C188.172 263.704 188.252 263.517 188.412 263.368C188.572 263.208 188.769 263.128 189.004 263.128C189.238 263.128 189.436 263.203 189.596 263.352C189.756 263.501 189.836 263.688 189.836 263.912C189.836 264.147 189.756 264.344 189.596 264.504C189.446 264.664 189.249 264.744 189.004 264.744ZM195.381 275.08C194.591 275.08 193.983 274.867 193.557 274.44C193.13 274.013 192.917 273.411 192.917 272.632V264.744H194.053V272.568C194.053 273.059 194.175 273.437 194.421 273.704C194.677 273.971 195.039 274.104 195.509 274.104C196.01 274.104 196.426 273.96 196.757 273.672L197.157 274.488C196.933 274.691 196.661 274.84 196.341 274.936C196.031 275.032 195.711 275.08 195.381 275.08ZM191.413 267.544V266.6H196.613V267.544H191.413ZM208.676 275V273.144L208.628 272.84V269.736C208.628 269.021 208.425 268.472 208.02 268.088C207.625 267.704 207.033 267.512 206.244 267.512C205.7 267.512 205.183 267.603 204.692 267.784C204.201 267.965 203.785 268.205 203.444 268.504L202.932 267.656C203.359 267.293 203.871 267.016 204.468 266.824C205.065 266.621 205.695 266.52 206.356 266.52C207.444 266.52 208.281 266.792 208.868 267.336C209.465 267.869 209.764 268.685 209.764 269.784V275H208.676ZM205.78 275.08C205.151 275.08 204.601 274.979 204.132 274.776C203.673 274.563 203.321 274.275 203.076 273.912C202.831 273.539 202.708 273.112 202.708 272.632C202.708 272.195 202.809 271.8 203.012 271.448C203.225 271.085 203.567 270.797 204.036 270.584C204.516 270.36 205.156 270.248 205.956 270.248H208.852V271.096H205.988C205.177 271.096 204.612 271.24 204.292 271.528C203.983 271.816 203.828 272.173 203.828 272.6C203.828 273.08 204.015 273.464 204.388 273.752C204.761 274.04 205.284 274.184 205.956 274.184C206.596 274.184 207.145 274.04 207.604 273.752C208.073 273.453 208.415 273.027 208.628 272.472L208.884 273.256C208.671 273.811 208.297 274.253 207.764 274.584C207.241 274.915 206.58 275.08 205.78 275.08ZM223.346 266.52C224.028 266.52 224.62 266.653 225.122 266.92C225.634 267.176 226.028 267.571 226.306 268.104C226.594 268.637 226.738 269.309 226.738 270.12V275H225.602V270.232C225.602 269.347 225.388 268.68 224.962 268.232C224.546 267.773 223.954 267.544 223.186 267.544C222.61 267.544 222.108 267.667 221.682 267.912C221.266 268.147 220.94 268.493 220.706 268.952C220.482 269.4 220.37 269.944 220.37 270.584V275H219.234V270.232C219.234 269.347 219.02 268.68 218.594 268.232C218.167 267.773 217.57 267.544 216.802 267.544C216.236 267.544 215.74 267.667 215.314 267.912C214.887 268.147 214.556 268.493 214.322 268.952C214.098 269.4 213.986 269.944 213.986 270.584V275H212.85V266.6H213.938V268.872L213.762 268.472C214.018 267.864 214.428 267.389 214.994 267.048C215.57 266.696 216.247 266.52 217.026 266.52C217.847 266.52 218.546 266.728 219.122 267.144C219.698 267.549 220.071 268.163 220.242 268.984L219.794 268.808C220.039 268.125 220.471 267.576 221.09 267.16C221.719 266.733 222.471 266.52 223.346 266.52ZM233.386 275.08C232.512 275.08 231.744 274.899 231.082 274.536C230.421 274.163 229.904 273.656 229.53 273.016C229.157 272.365 228.97 271.624 228.97 270.792C228.97 269.96 229.146 269.224 229.498 268.584C229.861 267.944 230.352 267.443 230.97 267.08C231.6 266.707 232.304 266.52 233.082 266.52C233.872 266.52 234.57 266.701 235.178 267.064C235.797 267.416 236.282 267.917 236.634 268.568C236.986 269.208 237.162 269.949 237.162 270.792C237.162 270.845 237.157 270.904 237.146 270.968C237.146 271.021 237.146 271.08 237.146 271.144H229.834V270.296H236.538L236.09 270.632C236.09 270.024 235.957 269.485 235.69 269.016C235.434 268.536 235.082 268.163 234.634 267.896C234.186 267.629 233.669 267.496 233.082 267.496C232.506 267.496 231.989 267.629 231.53 267.896C231.072 268.163 230.714 268.536 230.458 269.016C230.202 269.496 230.074 270.045 230.074 270.664V270.84C230.074 271.48 230.213 272.045 230.49 272.536C230.778 273.016 231.173 273.395 231.674 273.672C232.186 273.939 232.768 274.072 233.418 274.072C233.93 274.072 234.405 273.981 234.842 273.8C235.29 273.619 235.674 273.341 235.994 272.968L236.634 273.704C236.261 274.152 235.792 274.493 235.226 274.728C234.672 274.963 234.058 275.08 233.386 275.08ZM242.131 275.08C241.341 275.08 240.733 274.867 240.307 274.44C239.88 274.013 239.667 273.411 239.667 272.632V264.744H240.803V272.568C240.803 273.059 240.925 273.437 241.171 273.704C241.427 273.971 241.789 274.104 242.259 274.104C242.76 274.104 243.176 273.96 243.507 273.672L243.907 274.488C243.683 274.691 243.411 274.84 243.091 274.936C242.781 275.032 242.461 275.08 242.131 275.08ZM238.163 267.544V266.6H243.363V267.544H238.163ZM245.443 277.336L246.147 274.376L246.275 275.064C246.03 275.064 245.822 274.984 245.651 274.824C245.491 274.664 245.411 274.456 245.411 274.2C245.411 273.944 245.491 273.736 245.651 273.576C245.822 273.416 246.024 273.336 246.259 273.336C246.504 273.336 246.702 273.421 246.851 273.592C247.011 273.763 247.091 273.965 247.091 274.2C247.091 274.285 247.086 274.371 247.075 274.456C247.064 274.541 247.043 274.637 247.011 274.744C246.979 274.851 246.936 274.979 246.883 275.128L246.211 277.336H245.443ZM27.072 299.08C26.24 299.08 25.4933 298.899 24.832 298.536C24.1813 298.163 23.6693 297.656 23.296 297.016C22.9227 296.365 22.736 295.624 22.736 294.792C22.736 293.949 22.9227 293.208 23.296 292.568C23.6693 291.928 24.1813 291.427 24.832 291.064C25.4933 290.701 26.24 290.52 27.072 290.52C27.7867 290.52 28.432 290.659 29.008 290.936C29.584 291.213 30.0373 291.629 30.368 292.184L29.52 292.76C29.232 292.333 28.8747 292.019 28.448 291.816C28.0213 291.613 27.5573 291.512 27.056 291.512C26.4587 291.512 25.92 291.651 25.44 291.928C24.96 292.195 24.5813 292.573 24.304 293.064C24.0267 293.555 23.888 294.131 23.888 294.792C23.888 295.453 24.0267 296.029 24.304 296.52C24.5813 297.011 24.96 297.395 25.44 297.672C25.92 297.939 26.4587 298.072 27.056 298.072C27.5573 298.072 28.0213 297.971 28.448 297.768C28.8747 297.565 29.232 297.256 29.52 296.84L30.368 297.416C30.0373 297.96 29.584 298.376 29.008 298.664C28.432 298.941 27.7867 299.08 27.072 299.08ZM35.883 299.08C35.0723 299.08 34.3417 298.899 33.691 298.536C33.051 298.163 32.5443 297.656 32.171 297.016C31.7977 296.365 31.611 295.624 31.611 294.792C31.611 293.949 31.7977 293.208 32.171 292.568C32.5443 291.928 33.051 291.427 33.691 291.064C34.331 290.701 35.0617 290.52 35.883 290.52C36.715 290.52 37.451 290.701 38.091 291.064C38.7417 291.427 39.2483 291.928 39.611 292.568C39.9843 293.208 40.171 293.949 40.171 294.792C40.171 295.624 39.9843 296.365 39.611 297.016C39.2483 297.656 38.7417 298.163 38.091 298.536C37.4403 298.899 36.7043 299.08 35.883 299.08ZM35.883 298.072C36.491 298.072 37.0297 297.939 37.499 297.672C37.9683 297.395 38.3363 297.011 38.603 296.52C38.8803 296.019 39.019 295.443 39.019 294.792C39.019 294.131 38.8803 293.555 38.603 293.064C38.3363 292.573 37.9683 292.195 37.499 291.928C37.0297 291.651 36.4963 291.512 35.899 291.512C35.3017 291.512 34.7683 291.651 34.299 291.928C33.8297 292.195 33.4563 292.573 33.179 293.064C32.9017 293.555 32.763 294.131 32.763 294.792C32.763 295.443 32.9017 296.019 33.179 296.52C33.4563 297.011 33.8297 297.395 34.299 297.672C34.7683 297.939 35.2963 298.072 35.883 298.072ZM46.7783 290.52C47.4609 290.52 48.0583 290.653 48.5703 290.92C49.0929 291.176 49.4983 291.571 49.7863 292.104C50.0849 292.637 50.2343 293.309 50.2343 294.12V299H49.0983V294.232C49.0983 293.347 48.8743 292.68 48.4263 292.232C47.9889 291.773 47.3703 291.544 46.5703 291.544C45.9729 291.544 45.4503 291.667 45.0023 291.912C44.5649 292.147 44.2236 292.493 43.9783 292.952C43.7436 293.4 43.6263 293.944 43.6263 294.584V299H42.4903V290.6H43.5783V292.904L43.4023 292.472C43.6689 291.864 44.0956 291.389 44.6823 291.048C45.2689 290.696 45.9676 290.52 46.7783 290.52ZM55.5588 299.08C54.8654 299.08 54.2094 298.984 53.5908 298.792C52.9721 298.589 52.4868 298.339 52.1348 298.04L52.6468 297.144C52.9881 297.4 53.4254 297.624 53.9588 297.816C54.4921 297.997 55.0521 298.088 55.6388 298.088C56.4388 298.088 57.0148 297.965 57.3668 297.72C57.7188 297.464 57.8948 297.128 57.8948 296.712C57.8948 296.403 57.7934 296.163 57.5908 295.992C57.3988 295.811 57.1428 295.677 56.8228 295.592C56.5028 295.496 56.1454 295.416 55.7508 295.352C55.3561 295.288 54.9614 295.213 54.5668 295.128C54.1828 295.043 53.8308 294.92 53.5108 294.76C53.1908 294.589 52.9294 294.36 52.7268 294.072C52.5348 293.784 52.4388 293.4 52.4388 292.92C52.4388 292.461 52.5668 292.051 52.8228 291.688C53.0788 291.325 53.4521 291.043 53.9428 290.84C54.4441 290.627 55.0521 290.52 55.7668 290.52C56.3108 290.52 56.8548 290.595 57.3988 290.744C57.9428 290.883 58.3908 291.069 58.7428 291.304L58.2468 292.216C57.8734 291.96 57.4734 291.779 57.0468 291.672C56.6201 291.555 56.1934 291.496 55.7668 291.496C55.0094 291.496 54.4494 291.629 54.0868 291.896C53.7348 292.152 53.5588 292.483 53.5588 292.888C53.5588 293.208 53.6548 293.459 53.8468 293.64C54.0494 293.821 54.3108 293.965 54.6308 294.072C54.9614 294.168 55.3188 294.248 55.7028 294.312C56.0974 294.376 56.4868 294.456 56.8708 294.552C57.2654 294.637 57.6228 294.76 57.9428 294.92C58.2734 295.069 58.5348 295.288 58.7268 295.576C58.9294 295.853 59.0308 296.221 59.0308 296.68C59.0308 297.171 58.8921 297.597 58.6148 297.96C58.3481 298.312 57.9534 298.589 57.4308 298.792C56.9188 298.984 56.2948 299.08 55.5588 299.08ZM64.6833 299.08C63.8086 299.08 63.0406 298.899 62.3793 298.536C61.7179 298.163 61.2006 297.656 60.8273 297.016C60.4539 296.365 60.2673 295.624 60.2673 294.792C60.2673 293.96 60.4433 293.224 60.7953 292.584C61.1579 291.944 61.6486 291.443 62.2673 291.08C62.8966 290.707 63.6006 290.52 64.3793 290.52C65.1686 290.52 65.8673 290.701 66.4753 291.064C67.0939 291.416 67.5793 291.917 67.9313 292.568C68.2833 293.208 68.4593 293.949 68.4593 294.792C68.4593 294.845 68.4539 294.904 68.4433 294.968C68.4433 295.021 68.4433 295.08 68.4433 295.144H61.1313V294.296H67.8353L67.3873 294.632C67.3873 294.024 67.2539 293.485 66.9873 293.016C66.7313 292.536 66.3793 292.163 65.9313 291.896C65.4833 291.629 64.9659 291.496 64.3793 291.496C63.8033 291.496 63.2859 291.629 62.8273 291.896C62.3686 292.163 62.0113 292.536 61.7553 293.016C61.4993 293.496 61.3713 294.045 61.3713 294.664V294.84C61.3713 295.48 61.5099 296.045 61.7873 296.536C62.0753 297.016 62.4699 297.395 62.9713 297.672C63.4833 297.939 64.0646 298.072 64.7153 298.072C65.2273 298.072 65.7019 297.981 66.1393 297.8C66.5873 297.619 66.9713 297.341 67.2913 296.968L67.9313 297.704C67.5579 298.152 67.0886 298.493 66.5233 298.728C65.9686 298.963 65.3553 299.08 64.6833 299.08ZM74.2595 299.08C73.4275 299.08 72.6808 298.899 72.0195 298.536C71.3688 298.163 70.8568 297.656 70.4835 297.016C70.1102 296.365 69.9235 295.624 69.9235 294.792C69.9235 293.949 70.1102 293.208 70.4835 292.568C70.8568 291.928 71.3688 291.427 72.0195 291.064C72.6808 290.701 73.4275 290.52 74.2595 290.52C74.9742 290.52 75.6195 290.659 76.1955 290.936C76.7715 291.213 77.2248 291.629 77.5555 292.184L76.7075 292.76C76.4195 292.333 76.0622 292.019 75.6355 291.816C75.2088 291.613 74.7448 291.512 74.2435 291.512C73.6462 291.512 73.1075 291.651 72.6275 291.928C72.1475 292.195 71.7688 292.573 71.4915 293.064C71.2142 293.555 71.0755 294.131 71.0755 294.792C71.0755 295.453 71.2142 296.029 71.4915 296.52C71.7688 297.011 72.1475 297.395 72.6275 297.672C73.1075 297.939 73.6462 298.072 74.2435 298.072C74.7448 298.072 75.2088 297.971 75.6355 297.768C76.0622 297.565 76.4195 297.256 76.7075 296.84L77.5555 297.416C77.2248 297.96 76.7715 298.376 76.1955 298.664C75.6195 298.941 74.9742 299.08 74.2595 299.08ZM82.5369 299.08C81.7475 299.08 81.1395 298.867 80.7129 298.44C80.2862 298.013 80.0729 297.411 80.0729 296.632V288.744H81.2089V296.568C81.2089 297.059 81.3315 297.437 81.5769 297.704C81.8329 297.971 82.1955 298.104 82.6649 298.104C83.1662 298.104 83.5822 297.96 83.9129 297.672L84.3129 298.488C84.0889 298.691 83.8169 298.84 83.4969 298.936C83.1875 299.032 82.8675 299.08 82.5369 299.08ZM78.5689 291.544V290.6H83.7689V291.544H78.5689ZM89.652 299.08C88.7773 299.08 88.0093 298.899 87.348 298.536C86.6867 298.163 86.1693 297.656 85.796 297.016C85.4227 296.365 85.236 295.624 85.236 294.792C85.236 293.96 85.412 293.224 85.764 292.584C86.1267 291.944 86.6173 291.443 87.236 291.08C87.8653 290.707 88.5693 290.52 89.348 290.52C90.1373 290.52 90.836 290.701 91.444 291.064C92.0627 291.416 92.548 291.917 92.9 292.568C93.252 293.208 93.428 293.949 93.428 294.792C93.428 294.845 93.4227 294.904 93.412 294.968C93.412 295.021 93.412 295.08 93.412 295.144H86.1V294.296H92.804L92.356 294.632C92.356 294.024 92.2227 293.485 91.956 293.016C91.7 292.536 91.348 292.163 90.9 291.896C90.452 291.629 89.9347 291.496 89.348 291.496C88.772 291.496 88.2547 291.629 87.796 291.896C87.3373 292.163 86.98 292.536 86.724 293.016C86.468 293.496 86.34 294.045 86.34 294.664V294.84C86.34 295.48 86.4787 296.045 86.756 296.536C87.044 297.016 87.4387 297.395 87.94 297.672C88.452 297.939 89.0333 298.072 89.684 298.072C90.196 298.072 90.6707 297.981 91.108 297.8C91.556 297.619 91.94 297.341 92.26 296.968L92.9 297.704C92.5267 298.152 92.0573 298.493 91.492 298.728C90.9373 298.963 90.324 299.08 89.652 299.08ZM98.3963 299.08C97.6069 299.08 96.9989 298.867 96.5723 298.44C96.1456 298.013 95.9323 297.411 95.9323 296.632V288.744H97.0683V296.568C97.0683 297.059 97.1909 297.437 97.4363 297.704C97.6923 297.971 98.0549 298.104 98.5243 298.104C99.0256 298.104 99.4416 297.96 99.7723 297.672L100.172 298.488C99.9483 298.691 99.6763 298.84 99.3563 298.936C99.0469 299.032 98.7269 299.08 98.3963 299.08ZM94.4283 291.544V290.6H99.6283V291.544H94.4283ZM105.712 299.08C104.998 299.08 104.374 298.947 103.84 298.68C103.307 298.413 102.891 298.013 102.592 297.48C102.304 296.947 102.16 296.28 102.16 295.48V290.6H103.296V295.352C103.296 296.248 103.515 296.925 103.952 297.384C104.4 297.832 105.024 298.056 105.824 298.056C106.411 298.056 106.918 297.939 107.344 297.704C107.782 297.459 108.112 297.107 108.336 296.648C108.571 296.189 108.688 295.64 108.688 295V290.6H109.824V299H108.736V296.696L108.912 297.112C108.646 297.731 108.23 298.216 107.664 298.568C107.11 298.909 106.459 299.08 105.712 299.08ZM112.99 299V290.6H114.078V292.888L113.966 292.488C114.201 291.848 114.596 291.363 115.15 291.032C115.705 290.691 116.393 290.52 117.214 290.52V291.624C117.172 291.624 117.129 291.624 117.086 291.624C117.044 291.613 117.001 291.608 116.958 291.608C116.073 291.608 115.38 291.88 114.878 292.424C114.377 292.957 114.126 293.72 114.126 294.712V299H112.99ZM128.864 299V297.144L128.816 296.84V293.736C128.816 293.021 128.613 292.472 128.208 292.088C127.813 291.704 127.221 291.512 126.432 291.512C125.888 291.512 125.37 291.603 124.88 291.784C124.389 291.965 123.973 292.205 123.632 292.504L123.12 291.656C123.546 291.293 124.058 291.016 124.656 290.824C125.253 290.621 125.882 290.52 126.544 290.52C127.632 290.52 128.469 290.792 129.056 291.336C129.653 291.869 129.952 292.685 129.952 293.784V299H128.864ZM125.968 299.08C125.338 299.08 124.789 298.979 124.32 298.776C123.861 298.563 123.509 298.275 123.264 297.912C123.018 297.539 122.896 297.112 122.896 296.632C122.896 296.195 122.997 295.8 123.2 295.448C123.413 295.085 123.754 294.797 124.224 294.584C124.704 294.36 125.344 294.248 126.144 294.248H129.04V295.096H126.176C125.365 295.096 124.8 295.24 124.48 295.528C124.17 295.816 124.016 296.173 124.016 296.6C124.016 297.08 124.202 297.464 124.576 297.752C124.949 298.04 125.472 298.184 126.144 298.184C126.784 298.184 127.333 298.04 127.792 297.752C128.261 297.453 128.602 297.027 128.816 296.472L129.072 297.256C128.858 297.811 128.485 298.253 127.952 298.584C127.429 298.915 126.768 299.08 125.968 299.08ZM136.381 299.08C135.581 299.08 134.861 298.899 134.221 298.536C133.592 298.173 133.096 297.672 132.733 297.032C132.37 296.381 132.189 295.635 132.189 294.792C132.189 293.939 132.37 293.192 132.733 292.552C133.096 291.912 133.592 291.416 134.221 291.064C134.861 290.701 135.581 290.52 136.381 290.52C137.117 290.52 137.773 290.685 138.349 291.016C138.936 291.347 139.4 291.832 139.741 292.472C140.093 293.101 140.269 293.875 140.269 294.792C140.269 295.699 140.098 296.472 139.757 297.112C139.416 297.752 138.952 298.243 138.365 298.584C137.789 298.915 137.128 299.08 136.381 299.08ZM136.461 298.072C137.058 298.072 137.592 297.939 138.061 297.672C138.541 297.395 138.914 297.011 139.181 296.52C139.458 296.019 139.597 295.443 139.597 294.792C139.597 294.131 139.458 293.555 139.181 293.064C138.914 292.573 138.541 292.195 138.061 291.928C137.592 291.651 137.058 291.512 136.461 291.512C135.874 291.512 135.346 291.651 134.877 291.928C134.408 292.195 134.034 292.573 133.757 293.064C133.48 293.555 133.341 294.131 133.341 294.792C133.341 295.443 133.48 296.019 133.757 296.52C134.034 297.011 134.408 297.395 134.877 297.672C135.346 297.939 135.874 298.072 136.461 298.072ZM139.629 299V296.472L139.741 294.776L139.581 293.08V287.128H140.717V299H139.629ZM143.881 299V290.6H145.017V299H143.881ZM144.457 288.744C144.222 288.744 144.025 288.664 143.865 288.504C143.705 288.344 143.625 288.152 143.625 287.928C143.625 287.704 143.705 287.517 143.865 287.368C144.025 287.208 144.222 287.128 144.457 287.128C144.692 287.128 144.889 287.203 145.049 287.352C145.209 287.501 145.289 287.688 145.289 287.912C145.289 288.147 145.209 288.344 145.049 288.504C144.9 288.664 144.702 288.744 144.457 288.744ZM152.514 299.08C151.788 299.08 151.132 298.915 150.546 298.584C149.959 298.243 149.49 297.757 149.138 297.128C148.796 296.488 148.626 295.709 148.626 294.792C148.626 293.875 148.796 293.101 149.138 292.472C149.479 291.832 149.943 291.347 150.53 291.016C151.116 290.685 151.778 290.52 152.514 290.52C153.314 290.52 154.028 290.701 154.658 291.064C155.298 291.416 155.799 291.917 156.162 292.568C156.524 293.208 156.706 293.949 156.706 294.792C156.706 295.645 156.524 296.392 156.162 297.032C155.799 297.672 155.298 298.173 154.658 298.536C154.028 298.899 153.314 299.08 152.514 299.08ZM148.178 302.104V290.6H149.266V293.128L149.154 294.808L149.314 296.504V302.104H148.178ZM152.434 298.072C153.031 298.072 153.564 297.939 154.034 297.672C154.503 297.395 154.876 297.011 155.154 296.52C155.431 296.019 155.57 295.443 155.57 294.792C155.57 294.141 155.431 293.571 155.154 293.08C154.876 292.589 154.503 292.205 154.034 291.928C153.564 291.651 153.031 291.512 152.434 291.512C151.836 291.512 151.298 291.651 150.818 291.928C150.348 292.205 149.975 292.589 149.698 293.08C149.431 293.571 149.298 294.141 149.298 294.792C149.298 295.443 149.431 296.019 149.698 296.52C149.975 297.011 150.348 297.395 150.818 297.672C151.298 297.939 151.836 298.072 152.434 298.072ZM159.022 299V290.6H160.158V299H159.022ZM159.598 288.744C159.363 288.744 159.166 288.664 159.006 288.504C158.846 288.344 158.766 288.152 158.766 287.928C158.766 287.704 158.846 287.517 159.006 287.368C159.166 287.208 159.363 287.128 159.598 287.128C159.832 287.128 160.03 287.203 160.19 287.352C160.35 287.501 160.43 287.688 160.43 287.912C160.43 288.147 160.35 288.344 160.19 288.504C160.04 288.664 159.843 288.744 159.598 288.744ZM165.574 299.08C164.881 299.08 164.225 298.984 163.606 298.792C162.988 298.589 162.502 298.339 162.15 298.04L162.662 297.144C163.004 297.4 163.441 297.624 163.974 297.816C164.508 297.997 165.068 298.088 165.654 298.088C166.454 298.088 167.03 297.965 167.382 297.72C167.734 297.464 167.91 297.128 167.91 296.712C167.91 296.403 167.809 296.163 167.606 295.992C167.414 295.811 167.158 295.677 166.838 295.592C166.518 295.496 166.161 295.416 165.766 295.352C165.372 295.288 164.977 295.213 164.582 295.128C164.198 295.043 163.846 294.92 163.526 294.76C163.206 294.589 162.945 294.36 162.742 294.072C162.55 293.784 162.454 293.4 162.454 292.92C162.454 292.461 162.582 292.051 162.838 291.688C163.094 291.325 163.468 291.043 163.958 290.84C164.46 290.627 165.068 290.52 165.782 290.52C166.326 290.52 166.87 290.595 167.414 290.744C167.958 290.883 168.406 291.069 168.758 291.304L168.262 292.216C167.889 291.96 167.489 291.779 167.062 291.672C166.636 291.555 166.209 291.496 165.782 291.496C165.025 291.496 164.465 291.629 164.102 291.896C163.75 292.152 163.574 292.483 163.574 292.888C163.574 293.208 163.67 293.459 163.862 293.64C164.065 293.821 164.326 293.965 164.646 294.072C164.977 294.168 165.334 294.248 165.718 294.312C166.113 294.376 166.502 294.456 166.886 294.552C167.281 294.637 167.638 294.76 167.958 294.92C168.289 295.069 168.55 295.288 168.742 295.576C168.945 295.853 169.046 296.221 169.046 296.68C169.046 297.171 168.908 297.597 168.63 297.96C168.364 298.312 167.969 298.589 167.446 298.792C166.934 298.984 166.31 299.08 165.574 299.08ZM174.619 299.08C173.787 299.08 173.04 298.899 172.379 298.536C171.728 298.163 171.216 297.656 170.843 297.016C170.47 296.365 170.283 295.624 170.283 294.792C170.283 293.949 170.47 293.208 170.843 292.568C171.216 291.928 171.728 291.427 172.379 291.064C173.04 290.701 173.787 290.52 174.619 290.52C175.334 290.52 175.979 290.659 176.555 290.936C177.131 291.213 177.584 291.629 177.915 292.184L177.067 292.76C176.779 292.333 176.422 292.019 175.995 291.816C175.568 291.613 175.104 291.512 174.603 291.512C174.006 291.512 173.467 291.651 172.987 291.928C172.507 292.195 172.128 292.573 171.851 293.064C171.574 293.555 171.435 294.131 171.435 294.792C171.435 295.453 171.574 296.029 171.851 296.52C172.128 297.011 172.507 297.395 172.987 297.672C173.467 297.939 174.006 298.072 174.603 298.072C175.104 298.072 175.568 297.971 175.995 297.768C176.422 297.565 176.779 297.256 177.067 296.84L177.915 297.416C177.584 297.96 177.131 298.376 176.555 298.664C175.979 298.941 175.334 299.08 174.619 299.08ZM180.022 299V290.6H181.158V299H180.022ZM180.598 288.744C180.363 288.744 180.166 288.664 180.006 288.504C179.846 288.344 179.766 288.152 179.766 287.928C179.766 287.704 179.846 287.517 180.006 287.368C180.166 287.208 180.363 287.128 180.598 287.128C180.832 287.128 181.03 287.203 181.19 287.352C181.35 287.501 181.43 287.688 181.43 287.912C181.43 288.147 181.35 288.344 181.19 288.504C181.04 288.664 180.843 288.744 180.598 288.744ZM188.606 290.52C189.289 290.52 189.886 290.653 190.398 290.92C190.921 291.176 191.326 291.571 191.614 292.104C191.913 292.637 192.062 293.309 192.062 294.12V299H190.926V294.232C190.926 293.347 190.702 292.68 190.254 292.232C189.817 291.773 189.198 291.544 188.398 291.544C187.801 291.544 187.278 291.667 186.83 291.912C186.393 292.147 186.052 292.493 185.806 292.952C185.572 293.4 185.454 293.944 185.454 294.584V299H184.318V290.6H185.406V292.904L185.23 292.472C185.497 291.864 185.924 291.389 186.51 291.048C187.097 290.696 187.796 290.52 188.606 290.52ZM198.715 302.184C197.947 302.184 197.211 302.072 196.507 301.848C195.803 301.624 195.232 301.304 194.795 300.888L195.371 300.024C195.766 300.376 196.251 300.653 196.827 300.856C197.414 301.069 198.032 301.176 198.683 301.176C199.75 301.176 200.534 300.925 201.035 300.424C201.536 299.933 201.787 299.165 201.787 298.12V296.024L201.947 294.584L201.835 293.144V290.6H202.923V297.976C202.923 299.427 202.566 300.488 201.851 301.16C201.147 301.843 200.102 302.184 198.715 302.184ZM198.507 298.68C197.707 298.68 196.987 298.509 196.347 298.168C195.707 297.816 195.2 297.331 194.827 296.712C194.464 296.093 194.283 295.384 194.283 294.584C194.283 293.784 194.464 293.08 194.827 292.472C195.2 291.853 195.707 291.373 196.347 291.032C196.987 290.691 197.707 290.52 198.507 290.52C199.254 290.52 199.926 290.675 200.523 290.984C201.12 291.293 201.595 291.752 201.947 292.36C202.299 292.968 202.475 293.709 202.475 294.584C202.475 295.459 202.299 296.2 201.947 296.808C201.595 297.416 201.12 297.88 200.523 298.2C199.926 298.52 199.254 298.68 198.507 298.68ZM198.619 297.672C199.238 297.672 199.787 297.544 200.267 297.288C200.747 297.021 201.126 296.659 201.403 296.2C201.68 295.731 201.819 295.192 201.819 294.584C201.819 293.976 201.68 293.443 201.403 292.984C201.126 292.525 200.747 292.168 200.267 291.912C199.787 291.645 199.238 291.512 198.619 291.512C198.011 291.512 197.462 291.645 196.971 291.912C196.491 292.168 196.112 292.525 195.835 292.984C195.568 293.443 195.435 293.976 195.435 294.584C195.435 295.192 195.568 295.731 195.835 296.2C196.112 296.659 196.491 297.021 196.971 297.288C197.462 297.544 198.011 297.672 198.619 297.672ZM213.84 299.08C212.965 299.08 212.197 298.899 211.536 298.536C210.874 298.163 210.357 297.656 209.984 297.016C209.61 296.365 209.424 295.624 209.424 294.792C209.424 293.96 209.6 293.224 209.952 292.584C210.314 291.944 210.805 291.443 211.424 291.08C212.053 290.707 212.757 290.52 213.536 290.52C214.325 290.52 215.024 290.701 215.632 291.064C216.25 291.416 216.736 291.917 217.088 292.568C217.44 293.208 217.616 293.949 217.616 294.792C217.616 294.845 217.61 294.904 217.6 294.968C217.6 295.021 217.6 295.08 217.6 295.144H210.288V294.296H216.992L216.544 294.632C216.544 294.024 216.41 293.485 216.144 293.016C215.888 292.536 215.536 292.163 215.088 291.896C214.64 291.629 214.122 291.496 213.536 291.496C212.96 291.496 212.442 291.629 211.984 291.896C211.525 292.163 211.168 292.536 210.912 293.016C210.656 293.496 210.528 294.045 210.528 294.664V294.84C210.528 295.48 210.666 296.045 210.944 296.536C211.232 297.016 211.626 297.395 212.128 297.672C212.64 297.939 213.221 298.072 213.872 298.072C214.384 298.072 214.858 297.981 215.296 297.8C215.744 297.619 216.128 297.341 216.448 296.968L217.088 297.704C216.714 298.152 216.245 298.493 215.68 298.728C215.125 298.963 214.512 299.08 213.84 299.08ZM219.928 299V287.128H221.064V299H219.928ZM224.225 299V290.6H225.361V299H224.225ZM224.801 288.744C224.566 288.744 224.369 288.664 224.209 288.504C224.049 288.344 223.969 288.152 223.969 287.928C223.969 287.704 224.049 287.517 224.209 287.368C224.369 287.208 224.566 287.128 224.801 287.128C225.035 287.128 225.233 287.203 225.393 287.352C225.553 287.501 225.633 287.688 225.633 287.912C225.633 288.147 225.553 288.344 225.393 288.504C225.243 288.664 225.046 288.744 224.801 288.744ZM231.178 299.08C230.388 299.08 229.78 298.867 229.354 298.44C228.927 298.013 228.714 297.411 228.714 296.632V288.744H229.85V296.568C229.85 297.059 229.972 297.437 230.218 297.704C230.474 297.971 230.836 298.104 231.306 298.104C231.807 298.104 232.223 297.96 232.554 297.672L232.954 298.488C232.73 298.691 232.458 298.84 232.138 298.936C231.828 299.032 231.508 299.08 231.178 299.08ZM227.21 291.544V290.6H232.41V291.544H227.21ZM235.29 299.08C235.055 299.08 234.852 298.995 234.682 298.824C234.522 298.653 234.442 298.445 234.442 298.2C234.442 297.944 234.522 297.736 234.682 297.576C234.852 297.416 235.055 297.336 235.29 297.336C235.524 297.336 235.722 297.416 235.882 297.576C236.052 297.736 236.138 297.944 236.138 298.2C236.138 298.445 236.052 298.653 235.882 298.824C235.722 298.995 235.524 299.08 235.29 299.08Z" fill="white"/&gt;
+                                &lt;path d="M150 321H182L166 337L150 321Z" fill="#045E5E"/&gt;-->
+                            <!-- &lt;/g&gt; -->
+                            <!--   &lt;defs&gt;
+                                  &lt;clipPath id="clip0_370_4910"&gt;
+                                      &lt;rect width="1024" height="664.169" fill="white"/&gt;
+                                  &lt;/clipPath&gt;
+                              &lt;/defs&gt;-->
+                        </svg><div id="formIPCntc:j_idt121" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formIPCntc:j_idt121_title" class="ui-dialog-title">Клонове на ИП в региона</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="formIPCntc:j_idt121_content"><div id="formIPCntc:j_idt122" class="ui-datatable ui-widget"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="formIPCntc:j_idt122_head"><tr><th id="formIPCntc:j_idt122:j_idt123" class="ui-state-default" aria-label="Име на ИП" scope="col"><span class="ui-column-title">Име на ИП</span></th><th id="formIPCntc:j_idt122:j_idt125" class="ui-state-default" aria-label="Град" scope="col"><span class="ui-column-title">Град</span></th><th id="formIPCntc:j_idt122:j_idt127" class="ui-state-default" aria-label="Адрес" scope="col"><span class="ui-column-title">Адрес</span></th><th id="formIPCntc:j_idt122:j_idt129" class="ui-state-default" scope="col" style="width:100px;text-align: center"><span class="ui-column-title"></span></th></tr></thead><tbody id="formIPCntc:j_idt122_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="4">Not found in this region</td></tr></tbody></table></div></div><script id="formIPCntc:j_idt122_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("DataTable","regCntcDetail",{id:"formIPCntc:j_idt122",groupColumnIndexes:[],disableContextMenuIfEmpty:false});});</script><div id="formIPCntc:j_idt131" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formIPCntc:j_idt131_title" class="ui-dialog-title">Информация за ИП</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="formIPCntc:j_idt131_content"><div id="formIPCntc:cntcDetail" class="ui-outputpanel ui-widget"></div></div></div><script id="formIPCntc:j_idt131_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("Dialog","cntcDetailDialog",{id:"formIPCntc:j_idt131",showEffect:"fade",hideEffect:"fade"});});</script></div></div><script id="formIPCntc:j_idt121_s" type="text/javascript" nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">$(function(){PrimeFaces.cw("Dialog","regionContactDialog",{id:"formIPCntc:j_idt121",modal:true,showEffect:"fade",fitViewport:true});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="2497472162437610046:7008155711911945876" autocomplete="off" />
+</form>
+            </section>
+            <div class="center-panel-right-1">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+        </div>
+
+
+
+            <div id="footer">
+                <div class="footer-border">
+                    <div class="footer-in">
+                        <div class="footerLeft">
+                            <a href="index.xhtml"><img src="/javax.faces.resource/images/Logo_FooterBG.svg.xhtml" /></a>
+
+                            <div class="footerLeft-in">
+                                <div>
+                                    <span><a class="footerLink" href="/au/aboutUs.xhtml">ЗА НАС</a> </span>
+                                    <span><a class="footerLink" href="/md/mainDocuments.xhtml">ОСНОВНИ ДОКУМЕНТИ</a> </span>
+                                    <span><a class="footerLink" href="/ec/europeanConnectivity.xhtml">ЕВРОПЕЙСКА СВЪРЗАНОСТ</a> </span>
+                                    <span><a class="footerLink" href="/issuers/issuers.xhtml">ЕМИТЕНТИ</a> </span>
+                                    <span><a class="footerLink" href="/others/others.xhtml">ДРУГИ</a> </span>
+
+                                </div>
+                                <div>
+                                    <span><a class="footerLink" href="/members/members.xhtml">ЧЛЕНОВЕ</a> </span>	
+                                    <span><a class="footerLink" href="/investors.xhtml">ИНВЕСТИТОРИ</a>  </span>
+                                    <span><a class="footerLink" href="/sp/specialPledges.xhtml">ОСОБЕНИ ЗАЛОЗИ</a>  </span>
+                                    <span><a class="footerLink" href="/mainFAQ.xhtml">ЧЕСТО ЗАДАВАНИ ВЪПРОСИ (FAQ)</a>  </span>          
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footerRight">
+                            <div class="footerRight-up">
+                                <span class="footerLink1-1">Контакти</span>
+                                <span class="footerLink1">а: гр. София, 1000, ул. “Три уши” № 6, ет. 4</span>
+                                <span class="footerLink1">т: +359 2 939 19 81; +359 2 400 12 41</span>
+                                <span class="footerLink1">e: info@csd-bg.bg</span>
+								<span class="footerLink1"><b>За информация за боновите книжки от масовата приватизация:</b></span>
+                                <span class="footerLink1">т: +359 2 4001 228</span>
+                            </div>
+                            <div class="footerRight-down">
+                                <a href="https://www.facebook.com/CentralDepository" target="_blank"><img src="/javax.faces.resource/images/Logo_Facebook.svg.xhtml" /></a>
+                                <a href="https://www.linkedin.com/company/central-depository/" target="_blank"><img src="/javax.faces.resource/images/Logo_LinkedIn.svg.xhtml" /></a>
+                                <a href="https://www.youtube.com/channel/UCtpgISArYmjrdkx3xvIfhyQ" target="_blank"><img src="/javax.faces.resource/images/Logo_Youtube.svg.xhtml" /></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div><script nonce="ZTAzYjllOWQtMjBhMS00ZDY1LWFjZGYtNWNjOTBiNDYwOWNm">PrimeFaces.csp.register('a\-43a00a3f\-cfa3\-4dec\-ab34\-80062c541c54','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('a\-597e89bf\-0733\-4e49\-9b77\-0bb3e99d600a','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('j_idt30:j_idt31','onclick',function(event){});PrimeFaces.csp.register('a\-29b8cb84\-386f\-473c\-995a\-e834fc6a2e1f','onmouseover',function(event){mouseOverAus()});PrimeFaces.csp.register('formIPCntc:j_idt43','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt43",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt88','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt88",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt85','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt85",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('a\-3067a9a2\-9c0e\-4abb\-a652\-194f857909a1','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('formIPCntc:j_idt64','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt64",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt61','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt61",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt40','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt40",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('searchSiteText:j_idt16','onclick',function(event){PrimeFaces.ab({s:"searchSiteText:j_idt16",f:"searchSiteText",p:"searchSiteText",u:"@widgetVar(searchFormText)"});return false;});PrimeFaces.csp.register('formIPCntc:j_idt82','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt82",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt49','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt49",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt118','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt118",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt67','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt67",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt46','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt46",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt115','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt115",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('a\-65c5d372\-9e19\-43ce\-b924\-72b1a46583ff','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('formIPCntc:j_idt112','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt112",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt91','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt91",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt76','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt76",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt55','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt55",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt52','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt52",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt97','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt97",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('a\-47ee8108\-b93b\-4c46\-bb5e\-71aa184c4c3d','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('formIPCntc:j_idt94','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt94",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt73','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt73",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('a\-c5839141\-0b88\-42d8\-ab75\-933befaf2882','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('formIPCntc:j_idt70','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt70",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('a\-3a94c885\-ebfe\-46fd\-b410\-e4435b8bdc71','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('formIPCntc:j_idt58','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt58",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt37','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt37",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt106','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt106",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt109','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt109",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt79','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt79",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('formIPCntc:j_idt103','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt103",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});PrimeFaces.csp.register('a\-f32eb88d\-aa28\-4b7f\-a0f2\-d57002d88809','onmouseover',function(event){mouseOverOth()});PrimeFaces.csp.register('j_idt28:j_idt29','onclick',function(event){});PrimeFaces.csp.register('formIPCntc:j_idt100','onclick',function(event){PrimeFaces.ab({s:"formIPCntc:j_idt100",f:"formIPCntc",u:"@widgetVar(regCntcDetail)",onco:function(xhr,status,args,data){PF('regionContactDialog').show();}});return false;});</script></body>
+
+
+</html>

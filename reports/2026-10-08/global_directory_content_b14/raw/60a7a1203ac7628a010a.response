@@ -1,0 +1,3066 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#27255f" />
+
+	<!-- CSRF Token -->
+	<meta name="csrf-token" content="hUsImwJp5tjofKz8StVQwEWTGK0xx7xwi8HvTDzt">
+
+	<title>InformInvestor - Issuer</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://informinvestor.cmda.gov.mv/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://informinvestor.cmda.gov.mv/favicon.ico">
+	
+	<!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="/css/app-vendors.css?id=1807ecaa899b68756b16">
+    <link href="https://informinvestor.cmda.gov.mv/css/apexcharts.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://informinvestor.cmda.gov.mv/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://informinvestor.cmda.gov.mv/vendors/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css?id=409c62cd5750c37b2907">
+    <!-- Scripts -->
+    <script>
+        window.Laravel = {"csrfToken":"hUsImwJp5tjofKz8StVQwEWTGK0xx7xwi8HvTDzt","document_upload_url":"https:\/\/informinvestor.cmda.gov.mv\/api\/v1\/documents","max_upload_size":100000}    </script>
+
+	
+			<meta property="fb:admins" content="Capital.Market.Development.Authority"/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Capital.Market.Development.Authority"/>
+<meta property="og:url" content="https://informinvestor.cmda.gov.mv/issuers/centurion">
+<meta property="og:title" content="InformInvestor">
+<meta property="og:image" content="https://informinvestor.cmda.gov.mv/img/og-image_1.png">
+<meta property="og:description" content="CMDA Disclosure Portal for use by publicly-listed companies and the Capital Market Development Authority"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@cmda_mv">
+<meta name="twitter:site" content="@cmda_mv">
+<meta name="twitter:domain" content="https://informinvestor.cmda.gov.mv">
+<meta name="twitter:title" content="InformInvestor">
+<meta name="twitter:description" content="CMDA Disclosure Portal for use by publicly-listed companies and the Capital Market Development Authority">
+<meta name="twitter:image" content="https://informinvestor.cmda.gov.mv/img/og-image_1.png">
+<meta name="Keywords" content="public, markets, capital, stock, maldives">
+<meta name="Description" content="CMDA Disclosure Portal for use by publicly-listed companies and the Capital Market Development Authority">	</head>
+<body >
+<nav class="navbar navbar-expand-lg navbar-light bg-white p-0 fixed-top" id="main-nav">
+    <div class="container-fluid p-lg-0">
+        
+        <a href="/" class="bg-primary d-lg-flex d-none align-items-center text-decoration-none" id="logo">
+            <img src=https://informinvestor.cmda.gov.mv/img/logo.svg alt="">
+            <h3 class="text-white fw-bolder m-0 ps-4"><span class="fw-normal">inform</span>Investor</h3>
+        </a>
+        
+
+        
+                    <div class="dropdown d-lg-none">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                        <img src="https://informinvestor.cmda.gov.mv/img/logo.png" alt="" width="50" class="py-3" style="border-radius: 50%">
+                    </div>
+                </a>
+                
+            </div>
+                <h4 class="text-primary fw-bolder m-0 d-block d-lg-none p-0"><span class="fw-normal">inform</span>Investor</h4>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+        
+
+        
+        <div class="collapse navbar-collapse px-lg-4" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-lg-left text-center py-3 py-lg-0">
+                    <li class="nav-item btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv">
+                                        Home
+                                    </a>
+                    </li>
+                    <li class="nav-item active btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv/issuers">
+                                        Issuers
+                                            <span class="sr-only">(current)</span>
+                                    </a>
+                    </li>
+                    <li class="nav-item btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv/disclosures">
+                                        Disclosures
+                                    </a>
+                    </li>
+                    <li class="nav-item btn-group">
+                            <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    Statistics
+                </div>
+                <ul class="dropdown-menu">
+                                            <li><a href="https://informinvestor.cmda.gov.mv/stats/annual-stats" class="dropdown-item">Yearly Statistics</a></li>
+                                            <li><a href="https://informinvestor.cmda.gov.mv/stats/monthly-stats" class="dropdown-item">Monthly Statistics</a></li>
+                                    </ul>
+                    </li>
+                    <li class="nav-item btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv/login">
+                                        Login
+                                    </a>
+                    </li>
+    </ul>
+
+
+            
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center d-none d-lg-flex">
+                                    
+
+
+
+
+
+                    
+                            </ul>
+        </div>
+        
+
+
+    </div>
+</nav>
+<div id="wrapper" class="general-wrapper ">
+
+                <div class="full-height py-5">
+        <div class="container">
+            
+            <h3 class="me-auto underline-heading mb-4 text-black">Issuers</h3>
+            
+            <div class="d-flex flex-column flex-row mb-4">
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-preview.jpg" alt="" width="89px" class="mb-3 w-25">
+                <h3 class="fw-bolder">Centurion</h3>
+            </div>
+            <p class="text-gray-700 mb-5">
+            <div class="page-blocks">
+                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Centurion PLC Group was established in 2009 as a logistics company providing transportation and logistics services across the Maldives. Over time, the Group has expanded and diversified its operations to include freight forwarding, warehousing, supply chain management, ticketing, hospitality, retail, and air cargo services.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Headquartered in Malé, Maldives, Centurion PLC Group operates nationwide, delivering reliable, efficient, and cost-effective solutions to its customers.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    The Group was founded on the vision of its Founder, Capt. Ahmed Maumoon, to build a multi-disciplinary service company recognized for agility, innovation, and excellence.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Centurion PLC Group remains committed to sustainable business practices by balancing economic performance with environmental and social responsibility. This commitment is guided by its core pillars: Customer Service, Quality of Service, Expertise, Innovation, and Integrity.
+    </div>
+</div>
+                            </div>
+
+            </p>
+
+
+            
+            <div id="custom-tabs" class="mb-5">
+                <h3 class="text-black mb-4">Board Members</h3>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="tab-pane fade show active" id="cm_profile" role="tabpanel"
+                     aria-labelledby="nav-home-tab">
+                    <div class="row g-4 mb-5" id="current_members">
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_86">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/M9qadlYy/c/2k6dtsfn-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Capt. Ahmed Maumoon</h4>
+            
+            <h6 class="text-secondary fw-normal">Chairman / Non-Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_86" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/M9qadlYy/c/2k6dtsfn-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Capt. Ahmed Maumoon</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Chairman / Non-Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Captain Maumoon is an esteemed leader with extensive
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    experience in the logistics industry, contributing a
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    wealth of knowledge and expertise to the group. As a
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    visionary leader, he plays a pivotal role in setting the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    the strategic direction of the company and facilitating
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    the implementation of effective strategies. Captain
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maumoon’s strong background in the maritime
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    the sector began in 1990 and transitioned to shore-based
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    operations in 1999, where he embarked on a career path
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    guided by a clear vision.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    His education includes pursuing studies in the United
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Kingdom, where he obtained a Master’s Degree in
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    International Shipping and a second Master’s Degree
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    in Shipping Economics, and Finance. Prior to founding
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Centurion Transport Solutions in 2008, Captain
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maumoon held the position of Managing Director at
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maldives National Shipping Limited.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Captain Maumoon’s profound insights into the logistics
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    industry have played a pivotal role in pioneering the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    development of ‘local logistics’ in the Maldives. Today,
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Centurion Transport Solutions stands as a leading
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    logistics firm in the Maldives, a testament to Captain
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maumoon’s foresight, leadership, and dedication to
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    advancing the industry
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_87">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/yXqPDBqB/c/1ttecc0n-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Mr. Aimon Jameel</h4>
+            
+            <h6 class="text-secondary fw-normal">Managing Director/ Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_87" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/yXqPDBqB/c/1ttecc0n-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Mr. Aimon Jameel</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Managing Director/ Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Aimon Jameel is a highly respected and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    influential individual, known for his exceptional
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    contributions to the shipping industry in Maldives.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    He completed his education in the England, where he
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    acquired a solid foundation in the shipping industry.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Aimon’s professional journey began in the national
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    shipping line, working in various locations, including
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    London, Sri Lanka and Singapore. His ability to navigate
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    challenges and identify opportunities for growth led him
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    to increasingly influential roles, ending as Managing
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Director and later as Chairman of Maldives National
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Shipping Limited. He served in the board of Maldives
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Ports Limited as a Director.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Moreover, Aimon’s commitment to empowering the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    youth has led him to mentor aspiring entrepreneurs
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and emerging talents to pursue their dreams
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and make a positive impact in the industry
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Aimon’s journey in Centurion began 12 years ago when
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    he partnered with Capt. Ahmed Maumoon in his vision to
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    make Centurion the number one shipping and logistics
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    company in Maldives.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Today he serves as the Managing Director of Centurion
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Public Limited Company. Aimon’s visionary leadership
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and tireless efforts continue to shape the future of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Centurion.
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_88">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/NAq7blYe/c/93eztbu0-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Mr. Hussain Nizar</h4>
+            
+            <h6 class="text-secondary fw-normal">Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_88" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/NAq7blYe/c/93eztbu0-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Mr. Hussain Nizar</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. Hussain Nizar Group - COO Mr. Hussain Nizar
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    performs as COO of Centurion group. Mr. Nizar took
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    over the position during the 1st quarter of financial
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    year 2019 to overlook the company’s entire operations
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and expanding the customer base while tightening the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    business relationship with them.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. Nizar has been one of the leading businessmen
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    in the Maldives before he took the chair at Centurion.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    He served as the Managing Director, Director and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    shareholder of Marine Coral Maldives, Radiant heat
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Group and Aspac Maldives.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    After the successful businessman career, Mr. Nizar
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    represented as Director of Maldives Ports Limited and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Thilafushi Corporations Board. Also Mr. Nizar was the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Chairman of Maldives Ports Limited during the period
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    2009 – 2012. Over the years of Mr. Nizar’s career, he
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    gained vast experience in port operations, import,
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    export, and air freight and sea freight sector.
+
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_89">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/8roOX1wP/c/oskd8vvu-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Mr. Abdulla Javid , FCCA(UK)</h4>
+            
+            <h6 class="text-secondary fw-normal">Non - Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_89" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/8roOX1wP/c/oskd8vvu-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Mr. Abdulla Javid , FCCA(UK)</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Non - Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. Javid Abdulla is a fellow member of the association
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    of Chartered Certified Accounts (ACCA, UK) with a
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    specialization in Financial Management, Audit and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    assurance, and a graduate with applied accounting from
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Oxford Brooks University, UK. He has over 18 years of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    experience in accounts and financial management
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    within start- ups and well-established organizations. He
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    is a highly accomplished and result – driven financial
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    executive with skills in developing and implementing
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    financial controls, financial analysis, cash flow
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    management, compliances and monitoring, governance
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and risk, financial reporting and internal controls. He
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    has demonstrated an ability to streamline operations
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and efficiency and possesses solid leadership,
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    communication, and interpersonal skills to establish
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    rapport with all levels of staff and management.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. javid has held senior positions in various
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    organizations and currently the Managing Director of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Life Support Private Limited. He has also been a Board
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Director for STO Maldives (Singapore) PTE LTD and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maldives National Oil Company Limited. He has received
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    training in IFRS and IAS, SAP Financial Accounting, and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Corporate Forecasting among others
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_90">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/4Eon3VwM/c/j0lxlnlv-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Mr. Abdulla Nafiz</h4>
+            
+            <h6 class="text-secondary fw-normal">Non-Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_90" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/4Eon3VwM/c/j0lxlnlv-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Mr. Abdulla Nafiz</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Non-Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. Nafiz is the Dean of the Faculty of Business
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Management at Villa College Maldives. He is a certified
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    assessor and trainer with more than 15 years of business
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    experience including Senior Management experience in
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    both public and private sectors. He is an Associate of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    the Australian Institute of Management.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Educated in Australia, he holds a Master’s Degree in
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Business Administration degree from the University of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Adelaide, Australia and a Bachelor’s Degree in Business
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    from the University of South Australia.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    He also served as the Dean of the Faculty of Management
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    and Computing (current Business School) of the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maldives National University for more than 5 years.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    He was also a member of the Executive Board of the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Association of Management Development Institutions
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    in South Asia (AMDISA); an umbrella organization of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    business schools in South Asia based in Hyderabad.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr Nafiz also served as one of the four directors of the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Maldives National Shipping Limited (MNSL) including
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    the position of the Chairman of the Maldives National
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Shipping Agencies, Singapore, a fully owned subsidiary
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    of the MNSL. In addition, he also served as a national
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    consultant for Small-Medium Enterprise (SME) to the
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    United Nations Development Programme (UNDP)
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_91">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/6eY3x1q3/c/rpqtma9y-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Dr. Ahmed Ranesh</h4>
+            
+            <h6 class="text-secondary fw-normal">Non- Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_91" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/6eY3x1q3/c/rpqtma9y-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Dr. Ahmed Ranesh</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Non- Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Dr. Ahmed Ranesh is an engineering and project
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    management professional with over 20 years of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    experience. He is currently the Managing Director
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    of Marine Innovations Pvt Ltd and is a consultant at
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Heavy Force Pvt Ltd, undertaking major infrastructure
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    development projects across the country. Previously
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Dr. Ranesh served as Deputy Director and Head of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Engineering Department at Maldives Transport and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Contracting Company (MTCC).
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Dr. Ahmed Ranesh was elected to the Company board
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    as a Nonexecutive Independent Director at the Annual
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    General Meeting held on 25th July 2017.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Dr. Ranesh holds a Doctorate in Project Management
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    from University of South Australia; Masters in Engineering
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Project Management from University of Melbourne,
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Australia and Bachelor of Science in Mechanical
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Engineering. 
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_92">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/aVw5K6q1/c/9h0en5el-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Ms. Hawwa Shafeea Riza</h4>
+            
+            <h6 class="text-secondary fw-normal">Non-Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_92" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/aVw5K6q1/c/9h0en5el-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Ms. Hawwa Shafeea Riza</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Non-Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Ms. Shafeea Riza, is the Managing Partner and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    cofounder of Riza &amp; Co. LLP. She specializes in
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    corporate and financial services law and through past
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    work experience, is well-versed in legislative drafting.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Since becoming a registered lawyer in 2011, she has
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    worked in corporate legal practice and government
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    institutions. She has worked in matters related to
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    arbitration, human rights and international affairs, and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    in the implementation of the newly enacted criminal
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    procedures. From 2015 to 2017, she also served as a
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    member of the board of directors of the state-owned
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    entity, Waste Management Corporation Ltd (WAMCO).
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Ms. Shafeea studied law at King’s College, London,
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    UK, and completed a Master of Laws in Corporate and
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Financial Services from the National University of
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Singapore. She also studied decision-making and public
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    policy from the Fletcher School of Law and Diplomacy
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    at Tufts University, *.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Work Experience:
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    • Associate, Raajje Chambers
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    • Legal Consultant, Ministry of Finance and Treasury
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    • Part-time Lecturer, Maldives National University
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    • Senior State Attorney and later Deputy Counsel
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    General, Attorney General’s Office
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Other Engagements
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    • Co-Founder and Co-Chairperson, Family Legal Clinic
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                            </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+
+
+            
+            <div id="custom-tabs" class="mb-5">
+                <h3 class="text-black mb-4">Board Committees</h3>
+                                    <div class="card mb-4">
+    <div class="card-body">
+
+        
+        <div class="d-flex mb-2 flex-wrap">
+            
+            <h5 class="text-primary">Nomination and Remuneration Committee Members</h5>
+
+            
+            <h6 class="text-gray-500 ms-auto"><i class="far fa-users me-2"></i>3 Members</h6>
+        </div>
+
+        
+        <p class="text-gray-700 mb-4"></p>
+
+        
+        <h5>Members of the committee</h5>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/NAq7blYe/c/93eztbu0-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Mr. Hussain Nizar</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/aVw5K6q1/c/9h0en5el-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Ms. Hawwa Shafeea Riza</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/M9qadlYy/c/2k6dtsfn-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Capt. Ahmed Maumoon</h6>
+                    </div>
+                </div>
+                    </div>
+
+
+    </div>
+</div>
+                                    <div class="card mb-4">
+    <div class="card-body">
+
+        
+        <div class="d-flex mb-2 flex-wrap">
+            
+            <h5 class="text-primary">Audit Committee Members</h5>
+
+            
+            <h6 class="text-gray-500 ms-auto"><i class="far fa-users me-2"></i>3 Members</h6>
+        </div>
+
+        
+        <p class="text-gray-700 mb-4"></p>
+
+        
+        <h5>Members of the committee</h5>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/8roOX1wP/c/oskd8vvu-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Mr. Abdulla Javid , FCCA(UK)</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/6eY3x1q3/c/rpqtma9y-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Dr. Ahmed Ranesh</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/4Eon3VwM/c/j0lxlnlv-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Mr. Abdulla Nafiz</h6>
+                    </div>
+                </div>
+                    </div>
+
+
+    </div>
+</div>
+                            </div>
+
+            
+            <div id="custom-tabs" class="mb-5">
+                <h3 class="text-black mb-4">Shareholding Structure</h3>
+                <div class="tab-pane fade show active" id="cm_share" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Share %</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Stellar Holding Pvt Ltd</td>
+                                        <td data-label="Share %">47.35 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Aimon Jameel</td>
+                                        <td data-label="Share %">47.35 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Abdulla Maumoon</td>
+                                        <td data-label="Share %">0.99 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Jana Ibrahim</td>
+                                        <td data-label="Share %">0.99 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Liya Maumoon</td>
+                                        <td data-label="Share %">0.99 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Mohamed Yaniu Maumoon</td>
+                                        <td data-label="Share %">0.99 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Muruthala Musthafa</td>
+                                        <td data-label="Share %">0.01 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Ismail Amith</td>
+                                        <td data-label="Share %">0.01 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Ahmed Mansoor</td>
+                                        <td data-label="Share %">0.01 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Ali Ikram</td>
+                                        <td data-label="Share %">0.01 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">General Public Holdings</td>
+                                        <td data-label="Share %">0.01 %</td>
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mb-5">
+                
+                <div class="d-flex align-items-end mb-4">
+                    <h3 class="text-black mb-0">Disclosures</h3>
+                    
+                    <a href="https://informinvestor.cmda.gov.mv/disclosures"
+                       class="text-decoration-none ms-auto btn btn-secondary btn-more text-white d-none d-lg-block">More
+                        Disclosures</a>
+                </div>
+                
+                <div class="row mb-4 g-4">
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/421" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 July 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/422" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">23 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 3 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/423" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">26 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 4 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/424" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">26 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/425" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">28 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/487" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 1 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/565" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">02 June 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/571" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">01 June 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/724" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">26 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/725" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">23 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 1 Report 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/726" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 October 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/727" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 October 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 3 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/728" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 January 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 4 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/729" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 1 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/767" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual General Meeting 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/768" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual General Meeting 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/823" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">05 January 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Subsidiary Ownership Transfer</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/918" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">06 July 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/920" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 July 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/921" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 October 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 3 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/922" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 January 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 4 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/923" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">05 July 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Centurion PLC – Annual Report 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/940" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">22 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/941" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">07 May 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">ANNOUNCEMENT ON DELAY IN PUBLICATION OF ANNUAL REPORT 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/952" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">14 May 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Record Date / Book Close date for the AGM to be held in 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/971" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">02 June 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Notice of Extension</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/972" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">02 June 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Public Announcement - Notice of Delay in Holding AGM 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/984" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">02 July 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Delay in Publishing Annual Report 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/990" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">07 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Public Announcement - Delay in Publication of the 2024 Annual Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/991" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">11 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Public Announcement - Delay in Publication of the 2024 Annual Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/992" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">17 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Revised Books Close Date.</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/993" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">24 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">9th AGM NOTICE</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/994" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">24 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM NOTICE</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/995" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">28 August 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1077" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 July 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1125" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">14 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">RECORD DATE / BOOKS CLOSE DATE 2026</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1129" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">23 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Directors Nominations Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1133" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Delay in Publication of Annual Report 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1136" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">1st Quarter Report -2026</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1156" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">21 June 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Public Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1157" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">21 June 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Public Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1166" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 June 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Delay in Publication of Annual Report 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1170" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/Bxop25Yv/c/nzwm2lda-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">02 July 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual General Meeting 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">Centurion</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                    </div>
+                
+                <a href="https://informinvestor.cmda.gov.mv/disclosures"
+                   class="btn btn-more btn-secondary d-lg-none text-decoration-none text-white">More Disclosures</a>
+            </div>
+
+            
+            <div class="mb-5">
+                
+                <h3 class="text-black mb-4">Statistics</h3>
+                
+                <div class="mb-5">
+                    
+                    <div class="card border-0 mb-3">
+    <div class="card-body">
+        <form method="POST" action="https://informinvestor.cmda.gov.mv/admin/stats/export" accept-charset="UTF-8" id="stats-form"><input name="_token" type="hidden" value="hUsImwJp5tjofKz8StVQwEWTGK0xx7xwi8HvTDzt">
+        <div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <div class="col-lg-4 mb-1">
+                <label for="metric" class="form-label">Metric *</label>
+            </div>
+            
+            <div class="col-md-12  mb-3">
+                <select class="form-control select2-basic" data-allow-clear="true" data-placeholder="Nothing Selected" id="metric" name="metric"><option value="asset_cover_available">Asset Cover Available</option><option value="debt_equity_ratio">Debt Equity Ratio</option><option value="debt_service_coverage_ratio">Debt Service Coverage Ratio</option><option value="interest_service_coverage_ratio">Interest Service Coverage Ratio</option><option value="current_ratio">Current Ratio</option><option value="total_revenue">Total Revenue</option><option value="total_expenses">Total Expenses</option><option value="net_profit">Net Profit</option><option value="earnings_per_share">Earnings Per Share</option><option value="net_assets_per_share">Net Assets Per Share</option><option value="cash_flow_per_share">Cash Flow Per Share</option><option value="dividend_per_share">Dividend Per Share</option><option value="current_assets">Current Assets</option><option value="current_liabilities">Current Liabilities</option><option value="fixed_assets">Fixed Assets</option><option value="fixed_liabilities">Fixed Liabilities</option><option value="total_assets">Total Assets</option><option value="total_liabilities">Total Liabilities</option><option value="total_equity">Total Equity</option><option value="reserves">Reserves</option><option value="net_worth">Net Worth</option><option value="highest_traded_price">High Traded Price</option><option value="lowest_traded_price">Low Traded Price</option><option value="last_traded_price">Last Traded Price</option><option value="weighted_average_traded_price">Weighted Average Traded Price</option><option value="number_of_trades">Number of Trades</option><option value="number_of_shares_traded">Number of Shares Traded</option><option value="value_of_shares_traded">Value Of Shares Traded</option><option value="market_capitalisation">Market Capitalisation</option><option value="dividend_yield">Dividend Yield</option><option value="price_earnings_ratio">Price Earning Ratio</option></select>
+                
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <div class="col-lg-4 mb-1">
+                <label for="mode" class="form-label">Mode *</label>
+            </div>
+                        <div class="col-lg-12  mb-3">
+                <select class="form-control select2-basic" data-allow-clear="true" data-placeholder="Nothing Selected" id="mode" name="mode"><option value="year" selected="selected">Year</option></select>
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group"
+             data-enable-section-checkbox="#custom-date-range"
+             data-disable="true"
+        >
+            <div class="col-lg-8 mb-1">
+                <label for="date_range" class="form-label">Date Range *</label>
+            </div>
+                        <div class="col-lg-8  mb-3">
+                <select class="form-control select2-basic" data-placeholder="Custom" id="date_range" name="date_range"><option value="this_year">This Year</option><option value="last_year">Last Year</option><option value="lifetime">Lifetime</option></select>
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group mt-4 pt-3">
+            <div class="checkbox">
+                <input id="custom-date-range" class="form-check-input" name="custom_date_range" type="checkbox" value="1">
+                <label for="custom-date-range" class="checkbox__label">Custom Date Range</label>
+            </div>
+                    </div>
+    </div>
+</div>
+
+<div class="row  mt-3"
+     data-enable-section-checkbox="#custom-date-range"
+     data-hide-fields="true"
+>
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-lg-4 mb-1">
+                <label for="date_from" class="form-label">Date From *</label>
+            </div>
+            <div class="col-lg-12  mb-3">
+                <div class="input-group mb-0">
+    <input type="text" class="form-control datetime-picker border-end-0" placeholder="" autocomplete="off"   name="date_from" id="date_from">
+    <span class="input-group-text bg-white border-start-0 rounded-end border-top"><i class="far fa-calendar-alt text-gray-700"></i></span>
+    <a href="#" data-date-clear="#date_from" class="disable-w-input btn btn-light" title="Clear">
+        <i class="far fa-times"></i>
+    </a>
+    </div>
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-lg-12 mb-1">
+                <label for="date_to" class="form-label">Date To *</label>
+            </div>
+            <div class="col-lg-12  mb-3">
+                <div class="input-group mb-0">
+    <input type="text" class="form-control datetime-picker border-end-0" placeholder="" autocomplete="off"   name="date_to" id="date_to">
+    <span class="input-group-text bg-white border-start-0 rounded-end border-top"><i class="far fa-calendar-alt text-gray-700"></i></span>
+    <a href="#" data-date-clear="#date_to" class="disable-w-input btn btn-light" title="Clear">
+        <i class="far fa-times"></i>
+    </a>
+    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+
+    <div class="col-md-3">
+        <div class="form-group"
+             data-enable-elem="#compare"
+             data-enable-section-value="[&quot; &quot;,1]"
+             data-disable="true"
+             data-hide-fields="true"
+        >
+            <label for="compare_date_from">Compare Date From *</label>
+            <div class="input-group mb-0">
+    <div class="input-group-prepend">
+        <span class="input-group-text"><i class="zmdi zmdi-calendar"></i></span>
+    </div>
+    <input type="text" class="form-control date-picker" placeholder="" autocomplete="off"   name="compare_date_from" id="compare_date_from">
+    <div class="input-group-append">
+        <div class="input-group-text input-group-text-link">
+            <a href="#" data-date-clear="#compare_date_from" class="disable-w-input text-body" title="Clear">
+                <i class="zmdi zmdi-close"></i>
+            </a>
+        </div>
+    </div>
+    <i class="form-group__bar"></i>
+</div>
+                    </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group"
+             data-enable-elem="#compare"
+             data-enable-section-value="[&quot; &quot;,1]"
+             data-disable="true"
+             data-hide-fields="true"
+        >
+            <label for="compare_date_to">Compare Date To *</label>
+            <div class="input-group mb-0">
+    <div class="input-group-prepend">
+        <span class="input-group-text"><i class="zmdi zmdi-calendar"></i></span>
+    </div>
+    <input type="text" class="form-control date-picker" placeholder="" autocomplete="off"   name="compare_date_to" id="compare_date_to">
+    <div class="input-group-append">
+        <div class="input-group-text input-group-text-link">
+            <a href="#" data-date-clear="#compare_date_to" class="disable-w-input text-body" title="Clear">
+                <i class="zmdi zmdi-close"></i>
+            </a>
+        </div>
+    </div>
+    <i class="form-group__bar"></i>
+</div>
+                    </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="compare" class="form-label">Compare To</label>
+                        <select class="form-control select2-basic" id="compare" name="compare"><option value=" ">No Comparision</option><option value="1">Previous Period</option><option value="0">Custom Period</option></select>
+                    </div>
+    </div>
+    <div class="col-md-8">
+        <div style="margin-top:2.1em" class="float-end">
+            <a href="#" class="btn btn-gray me-1 btn--icon-text btn--raised" title="Generate Graph" id="generate-graph">
+                <i class="fa fa-chart-bar"></i> Generate
+            </a>
+            <button class="btn btn-primary btn--icon-text btn--raised" title="Download CSV">
+                <i class="fa fa-download"></i> Download
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 mb-3">
+    <div class="card-body position-relative" style="height: 500px;">
+        <canvas id="chart"></canvas>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="bg-gray-200" id="footer">
+    <div class="container py-5 py-lg-4">
+        <div class="row" id="footer-container">
+
+
+            
+            <div class="col-lg-6 d-flex flex-lg-row flex-column align-items-center order-1 order-lg-0 pt-3 pt-lg-0">
+                <img src="https://informinvestor.cmda.gov.mv/img/logo-gray.svg" alt="" class="py-3 py-lg-0">
+                <div class="ms-lg-5">
+                    <p class="mb-0 text-gray-600 text-center text-lg-start py-1 py-lg-0">Copyright © 2021</p>
+                    <p class="mb-0 text-gray-600 text-center text-lg-start py-1 py-lg-0">Capital Market Development Authority</p>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6 order-0 order-lg-1 pb-3 pb-lg-0">
+                <ul class="nav justify-content-end align-items-center h-100 flex-lg-row flex-column">
+    </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://informinvestor.cmda.gov.mv/js/jquery-bootstrap-5.js"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/jquery-ui.js"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/simpleUpload.min.js"></script>
+
+<!-- Material Admin JS -->
+<!-- Custom JS-->
+<script src="/js/vendors.js?id=ba9c19bb01e6ad34e694"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/apexcharts.min.js"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/select2-custom.js"></script>
+<script src="/js/utilities.js?id=0a93c04a755c55282bad"></script>
+<script src="/js/app.js?id=f2a9b527b273e7b2c5bb"></script>
+
+
+    <script src="https://informinvestor.cmda.gov.mv/vendors/chart.js/chart.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Chart.defaults.font.family = 'Roboto, sans-serif';
+            var ctx = document.getElementById('chart').getContext('2d');
+
+            var primary_gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            primary_gradient.addColorStop(0, 'rgba(0, 0, 102,1)');
+            primary_gradient.addColorStop(0.8, 'rgba(0, 0, 102,0)');
+
+            var comparison_gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            comparison_gradient.addColorStop(0, 'rgb(136, 170, 217,1)');
+            comparison_gradient.addColorStop(0.8, 'rgb(136, 170, 217,0)');
+
+            var myChart = new Chart(ctx, {});
+
+            $('#generate-graph').on('click', function (e) {
+                e.preventDefault();
+                var form = $('#stats-form');
+                var data = getJsonFormData(form);
+                var _this = this;
+
+                data.format = 'chartjs';
+
+                $.ajax({
+                    url: 'https://informinvestor.cmda.gov.mv/api/v1/stats',
+                    type: 'GET',
+                    data: data,
+                    beforeSend: function () {
+                        toggleLoading( $(_this), true );
+                    },
+                    complete: function () {
+                        toggleLoading( $(_this), false );
+                    },
+                    success: function (response) {
+                        var datasets = [];
+                        var scales = {};
+
+                        scales.x1 = {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Primary Period - ' +
+                                    moment(response.date_from).format('MMM D, YYYY') +
+                                    ' - ' + moment(response.date_to).format('MMM D, YYYY'),
+                                font: {
+                                    weight: '400'
+                                },
+                                color: '#545454',
+                                padding: 15,
+                            },
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#9f9f9f',
+                                callback: function(value, index, values) {
+                                    var label = response.result.labels[index];
+                                    return label.split('#')[0];
+                                }
+                            }
+                        };
+
+                        if (response.compare_date_range) {
+                            datasets.push({
+                                label: titleCase(response.aggregate_field) + ' (Compared)',
+                                data: response.result.compare,
+                                lineTension: 0,
+                                borderColor: 'rgb(255, 159, 64)',
+                                backgroundColor: comparison_gradient,
+                                fill: true,
+                                xAxisID: 'x2',
+                            });
+
+                            scales.x2 = {
+                                display: true,
+                                //tipe: "time",
+                                title: {
+                                    display: true,
+                                    text: 'Comparison Period - ' +
+                                        moment(response.compare_date_from).format('MMM D, YYYY') +
+                                        ' - ' + moment(response.compare_date_to).format('MMM D, YYYY'),
+                                    font: {
+                                        weight: '400'
+                                    },
+                                    color: '#545454',
+                                    padding: 15,
+                                },
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    color: '#9f9f9f',
+                                    callback: function(value, index, values) {
+                                        var label = response.result.labels[index];
+                                        return label.split('#')[1];
+                                    }
+                                }
+                            };
+                        }
+
+                        datasets.push({
+                            label: titleCase(response.aggregate_field),
+                            data: response.result.stats,
+                            lineTension: 0,
+                            borderColor: 'rgb(0, 0, 102)',
+                            backgroundColor: primary_gradient,//'rgba(54, 162, 235, 0.1)'
+                            fill: true,
+                            xAxisID: 'x1',
+                        });
+
+                        myChart.destroy();
+                        scales.y = {
+                            beginAtZero: true,
+                            grid: {
+                                display: true,
+                                borderColor: '#edf9fc',
+                                borderWidth: 1,
+                                tickColor: '#edf9fc',
+                                color: '#edf9fc',
+                            },
+                            ticks: {
+                                color: '#9f9f9f',
+                                precision: 0,
+                                callback: function(value, index, values) {
+                                    return value.toLocaleString('en-US');
+                                }
+                            }
+                        };
+
+                        myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: response.result.labels,
+                                datasets: datasets
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                //aspectRatio: 3,
+                                elements: {
+                                    point: {
+                                        hoverRadius: 8
+                                    }
+                                },
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: response.metric_name,
+                                        color: '#333',
+                                        font: {
+                                            weight: '400',
+                                            size: 18
+                                        }
+                                    },
+
+                                    legend: {
+                                        reverse: true,
+                                        labels: {
+                                            color: '#545454',
+                                            font: {
+                                                weight: 'normal',
+                                                size: 11
+                                            },
+                                            padding: 15,
+                                            usePointStyle: true,
+                                        },
+
+                                    },
+
+                                    tooltip: {
+                                        mode: 'x',
+                                        enabled: true,
+                                        backgroundColor: 'rgb(255,255,255)',
+                                        titleColor: '#747a80',
+                                        bodyColor: '#747a80',
+                                        borderColor: '#f1f1f1',
+                                        borderWidth: 1,
+                                        padding: 12,
+                                        cornerRadius: 2,
+                                        usePointStyle: true,
+                                        caretSize: 0,
+                                        callbacks: {
+                                            label: function (context) {
+                                                var label = context.dataset.label || '';
+
+                                                if (label) {
+                                                    label += ': ';
+                                                }
+                                                if (context.parsed.y !== null) {
+                                                    label += context.parsed.y.toLocaleString('en-US');
+                                                }
+
+                                                return ' ' + label;
+                                            },
+                                            title: function (context, object) {
+                                                var index = context[0].dataIndex;
+
+                                                var title = response.result.labels[index];
+                                                return title.replace('#', ' / ');
+                                            }
+                                        }
+                                    },
+                                },
+                                scales: scales
+                            }
+                        });
+                    },
+                    error: function (xhr) {
+                        if (xhr.status == 422) {
+                            showValidationErrorMsg(xhr);
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'An error occurred while loading the data.',
+                                icon: 'error'
+                            });
+                        }
+                    }
+                });
+            }).trigger('click');
+        })
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4733679ec298ccb',t:'MTc5MTQ0MjI0MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"053155b4c625420f9763e605d21ee253","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

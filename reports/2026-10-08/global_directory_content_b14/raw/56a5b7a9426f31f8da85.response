@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="./front/images/favicon.ico">
+        <link href="https://www.sebon.gov.np/front/css/font_family_roboto.css" rel="stylesheet"> 
+
+        <title>SEBON</title>
+        <!--    <font awesome>-->
+        <link rel="stylesheet" href="https://www.sebon.gov.np/front/css/fa_css_all.css">
+
+        <link href="https://www.sebon.gov.np/front/slick/slick.css" rel="stylesheet" type="text/css">
+        <link href="https://www.sebon.gov.np/front/slick/slick-theme.css" rel="stylesheet" type="text/css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://www.sebon.gov.np/front/css/bootstrap.css" rel="stylesheet">
+        <link media="screen" href="https://www.sebon.gov.np/front/css/superfish.css" rel="stylesheet">
+        <link href="https://www.sebon.gov.np/front/css/superfish-vertical.css" rel="stylesheet" type="text/css"/>
+        <link href="https://www.sebon.gov.np/front/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://www.sebon.gov.np/css/nepali-date-picker.css" rel="stylesheet" type="text/css"/>
+        <!-- Custom styles for this template -->
+        <link href="https://www.sebon.gov.np/front/css/style.css" rel="stylesheet">
+        <script src="https://www.sebon.gov.np/js/nepali-date-picker.js" type="text/javascript"></script>
+        <style>
+            .blink{
+              font-size:12px;
+            	animation:blinkingText 1.3s infinite;
+            }
+            @keyframes blinkingText{
+            	0%{		color: red;	}
+            	49%{	color: transparent;	}
+            	50%{	color: transparent;	}
+            	99%{	color:transparent;	}
+            	100%{	color: red;	}
+            }
+            .quick-links-top a{
+                font-size: 15px;
+            }
+        </style>
+        <script type="text/javascript">
+            var langCode = 'en';
+            var baseUrl = "https://www.sebon.gov.np";
+            function switchLang(code) {
+                if (langCode !== code) {
+                    var url = baseUrl + '/lang/' + code;
+                    var xhr = $.ajax({
+                        method: 'GET',
+                        url: url
+                    });
+                    xhr.done(function (e) {
+                        location.reload();
+                    });
+                }
+
+
+            }
+        </script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5896cfa145173071"></script>
+    <script id="browser-logger-active">
+(function() {
+    const ENDPOINT = 'https://www.sebon.gov.np/_boost/browser-logs';
+    const logQueue = [];
+    let flushTimeout = null;
+    const captureTypes = ["error","warning","info","log","debug","table"];
+
+    console.log('🔍 Browser logger active (MCP server detected). Posting to: ' + ENDPOINT);
+
+    // Store original console methods
+    const originalConsole = {
+        log: console.log,
+        debug: console.debug,
+        info: console.info,
+        error: console.error,
+        warn: console.warn,
+        table: console.table
+    };
+
+    // Helper to safely stringify values
+    function safeStringify(obj) {
+        const seen = new WeakSet();
+        return JSON.stringify(obj, (key, value) => {
+            if (typeof value === 'object' && value !== null) {
+                if (seen.has(value)) return '[Circular]';
+                seen.add(value);
+            }
+            if (value instanceof Error) {
+                return {
+                    name: value.name,
+                    message: value.message,
+                    stack: value.stack
+                };
+            }
+            return value;
+        });
+    }
+
+    // Normalize log type for consistency (e.g., 'warn' to 'warning')
+    function normalizeType(type) {
+        return type === 'warn' ? 'warning' : type;
+    }
+
+    // Determine if a log type should be captured based on configured levels
+    function shouldCapture(type) {
+        return captureTypes.includes(normalizeType(type));
+    }
+
+    // Batch and send logs
+    function flushLogs() {
+        if (logQueue.length === 0) return;
+
+        const batch = logQueue.splice(0, logQueue.length);
+
+        fetch(ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({ logs: batch })
+        }).catch(err => {
+            // Silently fail to avoid infinite loops
+            originalConsole.error('Failed to send logs:', err);
+        });
+    }
+
+    // Debounced flush (100ms)
+    function scheduleFlush() {
+        if (flushTimeout) clearTimeout(flushTimeout);
+        flushTimeout = setTimeout(flushLogs, 100);
+    }
+
+    // Intercept console methods
+    ['log', 'debug', 'info', 'error', 'warn', 'table'].forEach(method => {
+        console[method] = function(...args) {
+            // Call original method
+            originalConsole[method].apply(console, args);
+
+            // Capture log data
+            try {
+                if (!shouldCapture(method)) {
+                    return;
+                }
+
+                logQueue.push({
+                    type: method,
+                    timestamp: new Date().toISOString(),
+                    data: args.map(arg => {
+                        try {
+                            return typeof arg === 'object' ? JSON.parse(safeStringify(arg)) : arg;
+                        } catch (e) {
+                            return String(arg);
+                        }
+                    }),
+                    url: window.location.href,
+                    userAgent: navigator.userAgent
+                });
+
+                scheduleFlush();
+            } catch (e) {
+                // Fail silently
+            }
+        };
+    });
+
+    // Global error handlers for uncaught errors
+    const originalOnError = window.onerror;
+    window.onerror = function boostErrorHandler(errorMsg, url, lineNumber, colNumber, error) {
+        try {
+            if (shouldCapture('error')) {
+                logQueue.push({
+                    type: 'uncaught_error',
+                    timestamp: new Date().toISOString(),
+                    data: [{
+                        message: errorMsg,
+                        filename: url,
+                        lineno: lineNumber,
+                        colno: colNumber,
+                        error: error ? {
+                            name: error.name,
+                            message: error.message,
+                            stack: error.stack
+                        } : null
+                    }],
+                    url: window.location.href,
+                    userAgent: navigator.userAgent
+                });
+
+                scheduleFlush();
+            }
+
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Call original handler if it exists
+        if (originalOnError && typeof originalOnError === 'function') {
+            return originalOnError(errorMsg, url, lineNumber, colNumber, error);
+        }
+
+        // Let the error continue to propagate
+        return false;
+    }
+    window.addEventListener('error', (event) => {
+        try {
+            if (!shouldCapture('error')) {
+                return false;
+            }
+
+            logQueue.push({
+                type: 'window_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: event.message,
+                    filename: event.filename,
+                    lineno: event.lineno,
+                    colno: event.colno,
+                    error: event.error ? {
+                        name: event.error.name,
+                        message: event.error.message,
+                        stack: event.error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the error continue to propagate
+        return false;
+    });
+    window.addEventListener('unhandledrejection', (event) => {
+        try {
+            if (!shouldCapture('error')) {
+                return false;
+            }
+
+            logQueue.push({
+                type: 'error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: 'Unhandled Promise Rejection',
+                    reason: event.reason instanceof Error ? {
+                        name: event.reason.name,
+                        message: event.reason.message,
+                        stack: event.reason.stack
+                    } : event.reason
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the rejection continue to propagate
+        return false;
+    });
+
+    // Flush on page unload
+    window.addEventListener('beforeunload', () => {
+        if (logQueue.length > 0) {
+            navigator.sendBeacon(ENDPOINT, JSON.stringify({ logs: logQueue }));
+        }
+    });
+})();
+</script>
+</head>
+    <body>
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="header-content">
+                            <div id="global-header">
+                                <div id="block-secgov-branding" class="block">
+                                    <div class="banner-seal">
+                                        <a href="https://www.sebon.gov.np" title="SEBON" rel="home">
+                                            <img src="https://www.sebon.gov.np/images/sebonlogo.png" alt="SEBON">
+                                        </a>
+                                    </div>
+                                    <div class="banner-org-name">
+                                        <a href="https://www.sebon.gov.np" title="Securities Board of Nepal" rel="home" >
+                                            <div class="np">नेपाल धितोपत्र बोर्ड</div>
+                                            <div class="en">Securities Board of Nepal</div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="header-tools text-right">
+                            <div class="quick-links-top">
+                                <a href="https://sebon.officehrm.com/"> E-attendance</a><a href="https://www.sebon.gov.np/career">Career</a><a href="https://www.sebon.gov.np/maujuda-suchi-darta">सूची दर्ता</a><a href="https://sebon.gov.np/uploads/2026/05/07/1S9QnrP8vgqXUHjVfPBhgVhdcYEuknEQPhcNF0Nt.pdf">नागरिक वडापत्र</a>                            </div>
+                            <div class="header-tool">
+                                <a href="https://www.iosco.org" target="_blank" class="float-left iosco">
+                                    <span>Associate Member of</span> <img src="https://www.sebon.gov.np/front/images/IOSCO-logo.jpg" width="85">
+
+                                </a>
+                                <a href="javascript:void(0)" title="Font Increase" onclick="zoomIn()">A(+)</a>
+                                <a href="javascript:void(0)" title="Reset" onclick="resetZoom()">A</a>
+                                <a href="javascript:void(0)"  title="Font Decrease" onclick="zoomOut()">A(-)</a>
+                                                                <span class="language" style="cursor: pointer;" title="Switch language" onclick="switchLang('np')">np</span>
+
+                            </div>
+
+                        </div>
+                        <div class="search-wrapper">
+                            <form method="get" action="https://www.sebon.gov.np/search">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="gkey" placeholder="Keyword" value="">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary bg-theme-primary" type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-1 col-sm-12 col-xs-12 text-center">
+                    <a href="/wiw-2020">
+                                        <img style="width:150px;margin-top:23px;margin-bottom:2px" src="/front/images/wiw-nepal-2020-w.png" alt="WIW-2020">
+                                    </a>
+                </div>-->
+                </div>
+                
+            </div>
+
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <nav role="navigation" class="desktop-menu">
+                            <ul class="sf-menu" id="main-menu"><li><a href="https://www.sebon.gov.np/home">Home</a><ul><li><a href="https://www.sebon.gov.np/about-sebon">About SEBON</a></li><li><a href="https://www.sebon.gov.np/board-members">Board of Directors</a></li><li><a href="https://www.sebon.gov.np/management-team">Management Team</a></li><li><a href="https://www.sebon.gov.np/human-resources">Human Resources</a></li><li><a href="https://www.sebon.gov.np/organization-structure">Organization Structure</a></li><li><a href="https://www.sebon.gov.np/former-chairmans">Former Chairman</a></li><li><a href="https://www.sebon.gov.np/public-holidays">Public Holidays</a></li><li><a href="https://sebon.gov.np/uploads/2026/05/07/1S9QnrP8vgqXUHjVfPBhgVhdcYEuknEQPhcNF0Nt.pdf">नागरिक वडापत्र</a></li></ul></li><li><a href="https://www.sebon.gov.np/enforcement-actions">Enforcement Actions</a><ul><li><a href="https://www.sebon.gov.np/enforcements/stock-exchange-supervision">Stock Exchange Supervision</a></li><li><a href="https://www.sebon.gov.np/enforcements/credit-rating-agency-supervision">Credit Rating Agency Supervision</a></li><li><a href="https://www.sebon.gov.np/enforcements/stock-broker-supervision">Stock Broker Supervision</a></li><li><a href="https://www.sebon.gov.np/enforcements/listed-companies-supervision">Listed Companies Supervision</a></li><li><a href="https://www.sebon.gov.np/enforcements/merchant-banker-supervision">Merchant Banker Supervision</a></li><li><a href="https://www.sebon.gov.np/enforcements/aml-supervision">AML Supervision</a></li><li><a href="https://www.sebon.gov.np/enforcements/securities-trading-supervision">Securities Trading Supervision</a></li></ul></li><li><a href="https://www.sebon.gov.np/legal">Legal</a><ul><li><a href="https://www.sebon.gov.np/acts">Acts</a></li><li><a href="https://www.sebon.gov.np/regulations">Regulations</a></li><li><a href="https://www.sebon.gov.np/bylaws">Bylaws</a></li><li><a href="https://www.sebon.gov.np/guidelines">Guidelines</a></li><li><a href="https://www.sebon.gov.np/circulars">Circulars</a></li><li><a href="https://www.sebon.gov.np/compiled-laws">Compiled Laws</a></li></ul></li><li><a href="https://www.sebon.gov.np/securities-issues">SECURITIES ISSUES</a><ul><li><a href="https://www.sebon.gov.np/public-issues-ipo">Public Issues IPO</a><ul><li><a href="https://www.sebon.gov.np/ipo-approved">IPO Approved</a></li><li><a href="https://www.sebon.gov.np/ipo-pipeline">IPO Application List</a></li></ul></li><li><a href="https://www.sebon.gov.np/public-issues-fpo">Public Issues FPO</a><ul><li><a href="https://www.sebon.gov.np/fpo-approved">FPO Approved</a></li><li><a href="https://www.sebon.gov.np/fpo-pipeline">FPO Application List</a></li></ul></li><li><a href="https://www.sebon.gov.np/right-issues">Right Issues</a><ul><li><a href="https://www.sebon.gov.np/right-share-approved">Right Share Approved</a></li><li><a href="https://www.sebon.gov.np/right-share-pipeline">Right Share Application List</a></li></ul></li><li><a href="https://www.sebon.gov.np/debenture-issues">Debenture Issues</a><ul><li><a href="https://www.sebon.gov.np/debenture-approved">Debenture Approved</a></li><li><a href="https://www.sebon.gov.np/debenture-pipeline">Debenture Application List</a></li></ul></li><li><a href="https://www.sebon.gov.np/bonus-share-segistered">Bonus Share Registered</a></li><li><a href="https://www.sebon.gov.np/mutual-fund-schemes">Mutual Fund Schemes</a><ul><li><a href="https://www.sebon.gov.np/mfs-approved">MFS Approved</a></li><li><a href="https://www.sebon.gov.np/mfs-pipeline">MFS Application List</a></li></ul></li><li><a href="https://www.sebon.gov.np/securities-registered">Securities Registered</a></li><li><a href="https://www.sebon.gov.np/promoted-share-converted">Promoter Share Converted</a></li><li><a href="https://www.sebon.gov.np/public-issues-data">Public Issues Data</a></li></ul></li><li><a href="https://www.sebon.gov.np/publications">Publications</a><ul><li><a href="https://www.sebon.gov.np/annual-report">Annual Report</a></li><li><a href="https://www.sebon.gov.np/booklets">Booklet</a></li><li><a href="https://www.sebon.gov.np/report-consultation-paper">Report/Consultation Paper</a></li><li><a href="https://www.sebon.gov.np/news-letters">News Letter</a></li><li><a href="https://www.sebon.gov.np/journals">Journal</a></li><li><a href="https://www.sebon.gov.np/quarterly-statistics">Quarterly Statistics</a></li><li><a href="https://www.sebon.gov.np/silver-jubilee">Silver Jubilee</a></li></ul></li><li><a href="https://www.sebon.gov.np/education">Education</a></li><li><a href="https://www.sebon.gov.np/media">MEDIA</a><ul><li><a href="https://www.sebon.gov.np/press-releases">Press Release</a></li><li><a href="https://www.sebon.gov.np/notices">Notices</a></li><li><a href="https://www.sebon.gov.np/news">News</a></li><li><a href="https://www.sebon.gov.np/prospectus">Prospectus</a></li><li><a href="https://www.sebon.gov.np/audios-and-videos">Audios & Videos</a></li></ul></li><li><a href="https://www.sebon.gov.np/rti">RTI</a></li><li><a href="https://www.sebon.gov.np/contact-us">Contact Us</a></li></ul>                        </nav>
+
+                        <nav role="navigation" class="mobile-menu dis-none">
+                            <div class="col-md-12">
+                                <button class="btn-menu">
+                                    <span class="bar"></span>
+                                    <span class="text">Menu</span>
+                                </button>
+                            </div>
+                            <div class="mobile-ul-li dis-none">
+                                <ul class="mobile-tree-container" id="main-menu-mobile"><li class="tree-li diactive"><span class="text"><a href="#">Home</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/about-sebon">About SEBON</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/board-members">Board of Directors</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/management-team">Management Team</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/human-resources">Human Resources</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/organization-structure">Organization Structure</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/former-chairmans">Former Chairman</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/public-holidays">Public Holidays</a></span></li><li class="tree-li"><span class="text"><a href="https://sebon.gov.np/uploads/2026/05/07/1S9QnrP8vgqXUHjVfPBhgVhdcYEuknEQPhcNF0Nt.pdf">नागरिक वडापत्र</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">Enforcement Actions</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/stock-exchange-supervision">Stock Exchange Supervision</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/credit-rating-agency-supervision">Credit Rating Agency Supervision</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/stock-broker-supervision">Stock Broker Supervision</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/listed-companies-supervision">Listed Companies Supervision</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/merchant-banker-supervision">Merchant Banker Supervision</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/aml-supervision">AML Supervision</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/enforcements/securities-trading-supervision">Securities Trading Supervision</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">Legal</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/acts">Acts</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/regulations">Regulations</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/bylaws">Bylaws</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/guidelines">Guidelines</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/circulars">Circulars</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/compiled-laws">Compiled Laws</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">SECURITIES ISSUES</a></span><ul class="tree-ul diactive"><li class="tree-li diactive"><span class="text"><a href="#">Public Issues IPO</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/ipo-approved">IPO Approved</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/ipo-pipeline">IPO Application List</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">Public Issues FPO</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/fpo-approved">FPO Approved</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/fpo-pipeline">FPO Application List</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">Right Issues</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/right-share-approved">Right Share Approved</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/right-share-pipeline">Right Share Application List</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">Debenture Issues</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/debenture-approved">Debenture Approved</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/debenture-pipeline">Debenture Application List</a></span></li></ul></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/bonus-share-segistered">Bonus Share Registered</a></span></li><li class="tree-li diactive"><span class="text"><a href="#">Mutual Fund Schemes</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/mfs-approved">MFS Approved</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/mfs-pipeline">MFS Application List</a></span></li></ul></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/securities-registered">Securities Registered</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/promoted-share-converted">Promoter Share Converted</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/public-issues-data">Public Issues Data</a></span></li></ul></li><li class="tree-li diactive"><span class="text"><a href="#">Publications</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/annual-report">Annual Report</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/booklets">Booklet</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/report-consultation-paper">Report/Consultation Paper</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/news-letters">News Letter</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/journals">Journal</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/quarterly-statistics">Quarterly Statistics</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/silver-jubilee">Silver Jubilee</a></span></li></ul></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/education">Education</a></span></li><li class="tree-li diactive"><span class="text"><a href="#">MEDIA</a></span><ul class="tree-ul diactive"><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/press-releases">Press Release</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/notices">Notices</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/news">News</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/prospectus">Prospectus</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/audios-and-videos">Audios & Videos</a></span></li></ul></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/rti">RTI</a></span></li><li class="tree-li"><span class="text"><a href="https://www.sebon.gov.np/contact-us">Contact Us</a></span></li></ul>                            </div>
+
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+<section class="archive-page" style="padding:4rem 0rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 o-desktop">
+                        <ul class="vert-menu-title">
+                            <li>Stock Broker Supervision</li>
+                        </ul>
+						<ul class="sf-vert-menu sf-menu sf-vertical sf-js-enabled sf-arrows" id="vert-menu">
+													<li class=""><a href="https://www.sebon.gov.np/enforcements/stock-exchange-supervision">Stock Exchange Supervision</a></li>
+														<li class=""><a href="https://www.sebon.gov.np/enforcements/credit-rating-agency-supervision">Credit Rating Aagency Supervision</a></li>
+														<li class=""><a href="https://www.sebon.gov.np/enforcements/stock-broker-supervision">Stock Broker Supervision</a></li>
+														<li class=""><a href="https://www.sebon.gov.np/enforcements/listed-companies-supervision">Listed Companies Supervision</a></li>
+														<li class=""><a href="https://www.sebon.gov.np/enforcements/merchant-banker-supervision">Merchant Banker Supervision</a></li>
+														<li class=""><a href="https://www.sebon.gov.np/enforcements/aml-supervision">AML Supervision</a></li>
+														<li class=""><a href="https://www.sebon.gov.np/enforcements/securities-trading-supervision">Securities Trading Supervision</a></li>
+													</ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9">
+                        <div class="row ">
+                            <div class="col-xs-12 col-sm-12 col-md-8">
+                                <h1>Stock Broker Supervision</h1>
+                                                            </div>
+                            <div class="col-md-4 o-desktop">
+                                <div class="social-icons float-right">
+                                    <div class="addthis_inline_share_toolbox_jixu"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div  class="col-md-12 border-bottom">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                    <div class="col-md-12">
+										
+					                                    
+                                    <ul class="vacancy">
+                                        										<ul class="mb-5">
+											<b style="color:red">Fiscal Year: 2082/2083</b>																						<li>
+												<a href="https://www.sebon.gov.np/uploads/2025/08/29/TwUgGjLTnPxy7rTR82p7U6RvUjKm1Boti0IBOrBO.pdf" target="_blank"> 2082/2083</a><br/>
+											</li>
+																					</ul>
+                                        										<ul class="mb-5">
+											<b style="color:red">Fiscal Year: 2081/2082</b>																						<li>
+												<a href="https://www.sebon.gov.np/uploads/2025/06/29/FJb4HzKTOk3fKg60Sw72ydSKo4sqXfIzOF7lb1Vp.pdf" target="_blank"> 2081/2082</a><br/>
+											</li>
+																					</ul>
+                                        										<ul class="mb-5">
+											<b style="color:red">Fiscal Year: 2080/2081</b>																						<li>
+												<a href="https://www.sebon.gov.np/uploads/2023/09/25/RVsaaahASQLBpRNpTlIuiRQV5H7OaYSbOWsByF2T.pdf" target="_blank"> 2080/2081</a><br/>
+											</li>
+																					</ul>
+                                                                            </ul>
+						                    </div>
+                </div>
+                    </div>
+                </div>
+            </div> 
+        </section>          
+<!-- Footer -->
+<section id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links" id=""><li><a href="https://sebon.gov.np/uploads/2026/05/07/1S9QnrP8vgqXUHjVfPBhgVhdcYEuknEQPhcNF0Nt.pdf">नागरिक वडापत्र</a></li><li><a href="https://sebon.gov.np/maujuda-suchi-darta">सूची दर्ता   </a></li><li><a href="https://www.sebon.gov.np/career">Career</a></li><li><a href="https://www.moha.gov.np/page/targeted-sanction-list">नेपाल सरकारको सम्पत्ति शुद्धिकरण तथा आतंकवादी क्रियाकलापमा बित्तिय लगानी निवारण सम्बन्धी राष्ट्रिय रणनीति तथा कार्ययोजना (२०७६-२०८१) मा गृह मन्त्रालयको Websiteमा रहेको प्रतिबन्धित व्यक्ति वा समूहको सूची</a></li><li><a href="https://www.opmcm.gov.np/en/download/national-risk-assessment-report-on-money-laundering-and-terrorist-financing-2020-assessment-period-2015-18/">National Risk Assessment Report on Money Laundering and Terrorist Financing, 2020 (Assessment Period: 2015-18)</a></li><li><a href="https://www.un.org/securitycouncil/content/un-sc-consolidated-list">United Nations Security Council Consolidated List</a></li><li><a href="https://www.moha.gov.np/page/sanction-list">नेपाल सरकारको सम्पत्ति शुद्धिकरण तथा आतंकवादी क्रियाकलापमा बित्तिय लगानी निवारण सम्बन्धी गृह मन्त्रालयको website मा रहेको प्रतिबन्धित व्यक्ति वा समूहको सूची</a></li><li><a href="https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/Call-for-action-october-2024.html">High-Risk Jurisdictions subject to a Call for Action (Black List by FATF)</a></li><li><a href="https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-october-2024.html">Jurisdictions under Increased Monitoring (Grey List by FATF)</a></li><li><a href="https://sebon.gov.np/uploads/2026/07/03/XNngQn6lDCZUU0eVkXX2m0yCYqHAcHdC9B5RYaza.pdf">नेपाल धितोपत्र बोर्ड लगानी सम्बन्धी निति, २०६७ अनुरूप मुद्दती खातामा लगानी गर्दा वित्तीय संस्थाहरूले पूरा गर्न पर्ने शर्तहरु  तथा मुद्दती खाता फाराम  । </a></li></ul>            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Report Submission Status</h5>
+                <ul class="list-unstyled quick-links" id=""><li><a href="https://sebon.gov.np/uploads/2026/08/26/WKdrL4arJyBvTwfZOIi1jzRnfhdzaKNA9YDlgwP8.pdf">Merchant Banking Half yearly Report Submission Status 82/83</a></li><li><a href="https://sebon.gov.np/uploads/2026/08/26/0jjFmbjb80EKv8DmfDVXzhjIOkBadw5PVqBPWqwx.pdf">Merchant Bank Annual Reporting Status 81/82</a></li><li><a href="https://sebon.gov.np/uploads/2026/08/26/nAaXO2pZdTJ4sAA45GYcwCsnMmECqVebEdgP09gE.pdf">Annual Report Submission Status of Listed Companies 2081/82</a></li><li><a href="https://sebon.gov.np/uploads/2026/08/26/O7LK6lmHtrdGMhmrqgAnq4XIWlOEhEsffTYdl4kZ.pdf">Stock Broker and Dealer Quarterly Reporting status 2082/83 </a></li><li><a href="https://sebon.gov.np/uploads/2026/08/26/WfZTOo6vFZYqXFnRYuWmTC8sITVlDb7lXhRFnCQg.pdf">Annual Report submission status of Stock Broker and Dealer 81/82</a></li></ul>            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 footer-grid">
+                <h5>Contacts</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><i class="fas fa-map-marker-alt"></i><a href="#">SECURITIES BOARD OF NEPAL Khumaltar, Lalitpur</a></li>
+                    <li><i class="fas fa-phone"></i><a href="#">+977 1 5254057, 5253162, 5444077, Fax: +977 1 5541058</a></li>
+                    <li><i class="fas fa-phone"></i><a href="#"> Toll Free Number: 1660 01 44433,<br/>Grievances Hotline: +977-01-5254076</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:gunaso@sebon.gov.np">Grievances Email: gunaso@sebon.gov.np</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:support@sebon.gov.np">support@sebon.gov.np</a></li>
+					<li><i class="fas fa-envelope"></i><a href="mailto:oia@sebon.gov.np">For International Communication: oia@sebon.gov.np</a></li>
+                    <!--<li><i class="far fa-clock "></i><a href="http://192.168.1.254:55" target="_blank">e-Attendance</a></li>-->
+                    <li><i class="far fa-file "></i><a href="https://sebon.officehrm.com" target="_blank">E-attendance</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/SebonOfficial"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/SEBON_Nepal"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li class="list-inline-item"><a href="mailto:support@sebon.gov.np" target="_blank"><i class="fas fa-envelope "></i></a></li>
+                </ul>
+            </div>
+            </hr>
+        </div>	
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <p class="h6">&copy All Rights Reserved. <a class="text-green ml-2" href="">Securities Board of Nepal</a></p>
+            </div>
+            </hr>
+        </div>	
+    </div>
+</section>
+<style>
+    .modal-lg{ max-width:600px;}
+</style>
+<div class="modal" id="homeJacket0">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#154063">
+        <h4 class="modal-title" style="color:white;font-size:1.2rem;"></h4>
+        <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+      </div>
+      <div class="modal-body">
+	  		<a href="https://www.sebon.gov.np/uploads/2026/09/29/RbTw81g4jgouAGsYLHNfr0X4Hhiw4LJh7VRjkfhT.pdf" >
+	  		<img src="https://www.sebon.gov.np/uploads/2026/09/29/kcJh34fXwMKw4IpqomsCNBH3NfXxt304y33r1DCp.jpg" style="width:100%">
+				</a>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="homeJacket1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#154063">
+        <h4 class="modal-title" style="color:white;font-size:1.2rem;"></h4>
+        <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+      </div>
+      <div class="modal-body">
+	  		<a href="https://www.sebon.gov.np/uploads/2026/09/30/3FHbihbR60oVTAzgMYGF53RdIM9u63ghSCJbBHXK.pdf" >
+	  		<img src="https://www.sebon.gov.np/uploads/2026/10/01/6oZCUQZ1R4ParBNq12iCh1xtOr1PKClNGmx2VzOz.png" style="width:100%">
+				</a>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="homeJacket2">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#154063">
+        <h4 class="modal-title" style="color:white;font-size:1.2rem;"></h4>
+        <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+      </div>
+      <div class="modal-body">
+	  		<a href="https://www.sebon.gov.np/uploads/2026/10/01/WYMklfmWAEMge4JyO43amadFR4ljVTXo6mNGk7sE.pdf" >
+	  		<img src="https://www.sebon.gov.np/uploads/2026/10/01/eiu54sDPvkpILraZ9973L2vcts9FbhHYHdSUTuGW.jpg" style="width:100%">
+				</a>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="homeJacket3">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#154063">
+        <h4 class="modal-title" style="color:white;font-size:1.2rem;"></h4>
+        <button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+      </div>
+      <div class="modal-body">
+	  		<a href="https://www.sebon.gov.np/uploads/2026/10/02/7zeGSBOzDjS1V7FQwJlxWTSTm1muFvVaP4DJyd7m.pdf" >
+	  		<img src="https://www.sebon.gov.np/uploads/2026/10/02/uuGp1dNTt1xE6fikebXnWPKOlxVhvdCXcBC7Eq1H.jpg" style="width:100%">
+				</a>
+	        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Chatbot Container -->
+<style>
+  #main-chat {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    }
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+      border-color: #e5e7eb;
+    }
+
+    #main-chat button,
+    input {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
+    #main-chat button {
+      text-transform: none;
+    }
+
+    #main-chat [type="submit"] {
+      background-color: transparent;
+      background-image: none;
+    }
+
+    #main-chat input::-moz-placeholder,
+    #main-chat textarea::-moz-placeholder {
+      opacity: 1;
+      color: #9ca3af;
+    }
+
+    #main-chat input::placeholder,
+    #main-chat textarea::placeholder {
+      opacity: 1;
+      color: #9ca3af;
+    }
+
+    #main-chat img,
+    #main-chat svg {
+      display: block;
+    }
+
+    #main-chat img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #main-chat [hidden] {
+      display: none;
+    }
+
+    *,
+    ::before,
+    ::after {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+    }
+
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .-bottom-3 {
+      bottom: -0.75rem;
+    }
+
+    .-right-9 {
+      right: -2.25rem;
+    }
+
+    .-top-12 {
+      top: -3rem;
+    }
+
+    .bottom-8 {
+      bottom: 2rem;
+    }
+
+    .bottom-\[108px\] {
+      bottom: 108px;
+    }
+
+    .left-1\/2 {
+      left: 50%;
+    }
+
+    .right-0 {
+      right: 0px;
+    }
+
+    .right-8 {
+      right: 2rem;
+    }
+
+    .right-\[130px\] {
+      right: 130px;
+    }
+
+    .top-1\/2 {
+      top: 50%;
+    }
+
+    .-z-10 {
+      z-index: -10;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .h-12 {
+      height: 3rem;
+    }
+
+    .h-20 {
+      height: 5rem;
+    }
+
+    .h-8 {
+      height: 2rem;
+    }
+
+    .h-\[450px\] {
+      height: 450px;
+    }
+
+    .h-\[80\%\] {
+      height: 80%;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .w-12 {
+      width: 3rem;
+    }
+
+    .w-16 {
+      width: 4rem;
+    }
+
+    .w-24 {
+      width: 6rem;
+    }
+
+    .w-4 {
+      width: 1rem;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .w-8 {
+      width: 2rem;
+    }
+
+    .w-80 {
+      width: 20rem;
+    }
+
+    .w-\[30px\] {
+      width: 30px;
+    }
+
+    .w-\[80\%\] {
+      width: 80%;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .max-w-\[80\%\] {
+      max-width: 80%;
+    }
+
+    .flex-1 {
+      flex: 1 1 0%;
+    }
+
+    .flex-shrink-0 {
+      flex-shrink: 0;
+    }
+
+    .-translate-x-1\/2 {
+      --tw-translate-x: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .-translate-y-1\/2 {
+      --tw-translate-y: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .place-items-center {
+      place-items: center;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .gap-3 {
+      gap: 0.75rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .overflow-auto {
+      overflow: auto;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .scroll-smooth {
+      scroll-behavior: smooth;
+    }
+
+    .hyphens-auto {
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem;
+    }
+
+    .rounded-3xl {
+      border-radius: 1.5rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+
+    .rounded-bl-none {
+      border-bottom-left-radius: 0px;
+    }
+
+    .rounded-br-none {
+      border-bottom-right-radius: 0px;
+    }
+
+    .border {
+      border-width: 1px;
+    }
+
+    .border-gray-100 {
+      --tw-border-opacity: 1;
+      border-color: rgb(243 244 246 / var(--tw-border-opacity));
+    }
+
+    .bg-gray-1 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(221 221 221 / var(--tw-bg-opacity));
+    }
+
+    .bg-primary {
+      --tw-bg-opacity: 1;
+      background-color: rgb(17 65 105 / var(--tw-bg-opacity));
+    }
+
+    .bg-gray-200 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+    }
+
+    .bg-light-gray {
+      --tw-bg-opacity: 1;
+      background-color: rgb(240 238 249 / var(--tw-bg-opacity));
+    }
+
+    .bg-red-200 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+    }
+
+    .bg-red-400 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .px-5 {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .pt-6 {
+      padding-top: 1.5rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .text-gray-800 {
+      --tw-text-opacity: 1;
+      color: rgb(31 41 55 / var(--tw-text-opacity));
+    }
+
+    .text-white {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+
+    .opacity-\[0\.04\] {
+      opacity: 0.04;
+    }
+
+    .shadow-xl {
+      --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+        0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .drop-shadow-xl {
+      --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+        drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+        var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+        var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    .focus\:outline-none:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    @media (min-width: 1536px) {
+      .\32xl\:bottom-\[115px\] {
+        bottom: 115px;
+      }
+
+      .\32xl\:right-\[140px\] {
+        right: 140px;
+      }
+
+      .\32xl\:h-14 {
+        height: 3.5rem;
+      }
+
+      .\32xl\:w-14 {
+        width: 3.5rem;
+      }
+
+      .\32xl\:w-20 {
+        width: 5rem;
+      }
+    }
+
+    /* for chat scrollbar */
+    #message-container::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    #message-container::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    #message-container::-webkit-scrollbar-thumb {
+      background: #afafaf;
+    }
+
+    #message-container::-webkit-scrollbar-thumb:hover {
+      background: #999999;
+    }
+
+    /* simple animation for text */
+    .animate-left {
+      position: relative;
+      animation: animate1 0.5s;
+    }
+    .animate-right {
+      position: relative;
+      animation: animate2 0.3s;
+    }
+
+    @keyframes animate1 {
+      from {
+        left: 5px;
+      }
+      to {
+        left: 0;
+      }
+    }
+
+    @keyframes animate2 {
+      from {
+        right: 5px;
+      }
+      to {
+        right: 0;
+      }
+    }
+
+</style>
+    <div>
+      <div
+        id="main-chat"
+        class="fixed bottom-[108px] 2xl:bottom-[115px] right-[130px] 2xl:right-[140px] h-[450px] w-80 bg-white border border-gray-100 rounded-3xl rounded-br-none shadow-xl hidden"
+      >
+        <div class="h-full flex flex-col rounded-3xl overflow-hidden">
+          <div class="flex-1 overflow-hidden h-full">
+            <!-- Initial Display -->
+            <div
+              class="gap-8 flex flex-col justify-center items-center h-full font-medium text-lg"
+              id="initial-greeting"
+            >
+              <div>Hello i’m SEBON Chatbot</div>
+
+              <img src="https://www.sebon.gov.np/chatbot/icons/chat-head-1.svg" alt="" class="w-24" />
+
+              <div>How can i help you?</div>
+            </div>
+
+            <!-- After some text messages has been sent -->
+            <div class="flex flex-col h-full">
+              <div
+                class="h-20 flex-shrink-0 bg-primary flex items-center px-8 gap-4"
+              >
+                <div
+                  class="bg-white w-12 h-12 2xl:w-14 2xl:h-14 rounded-full grid place-items-center"
+                >
+                  <img
+                    src="https://www.sebon.gov.np/chatbot/icons/logo.svg"
+                    alt=""
+                    class="w-[30px] h-8"
+                  />
+                </div>
+                <p class="font-semibold text-lg text-white">SEBON Chat(Beta Version)</p>
+              </div>
+
+              <div class="relative flex-1 h-full overflow-hidden">
+                <div
+                  class="px-4 pt-6 flex flex-col h-full overflow-auto scroll-smooth text-sm"
+                  id="message-container"
+                >
+                  <div id="messages" class="gap-3 flex flex-col"></div>
+                  <div id="last-message"></div>
+                </div>
+
+                <div
+                  class="absolute -z-10 opacity-[0.04] w-[80%] h-[80%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                >
+                  <img src="https://www.sebon.gov.np/chatbot/icons/chat-bg.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form
+            id="message-form"
+            class="flex items-center gap-3 py-4 px-5 h-20 flex-shrink-0"
+          >
+            <div class="flex-1">
+              <input
+                type="text"
+                class="w-full py-2 px-4 bg-light-gray rounded-xl focus:outline-none"
+                placeholder="Write a message"
+                id="message-input"
+              />
+            </div>
+
+            <button type="submit">
+              <img
+                src="https://www.sebon.gov.np/chatbot/icons/send.svg"
+                alt=""
+                class="w-6 cursor-pointer"
+              />
+            </button>
+          </form>
+        </div>
+
+        <div
+          class="w-8 h-8 rounded-full bg-primary absolute -top-12 right-0 grid place-items-center cursor-pointer"
+          onclick="toggleChat()"
+        >
+          <img src="https://www.sebon.gov.np/chatbot/icons/down-arrow.svg" alt="" class="w-4" />
+        </div>
+
+        <svg
+          height="25"
+          width="60"
+          class="absolute -bottom-3 -right-9 drop-shadow-xl -z-10"
+        >
+          <polygon points="24,0 0,13 61,25" fill="#ffffff" strokeWidth="1" />
+        </svg>
+      </div>
+
+      <div
+        class="fixed bottom-8 right-8 cursor-pointer bg-red-200 rounded-full"
+        onclick="toggleChat()"
+      >
+        <img src="https://www.sebon.gov.np/chatbot/icons/chat-head.svg" alt="" class="w-16 2xl:w-20" />
+      </div>
+    </div>
+	<!-- Chatbot Container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://www.sebon.gov.np/front/js/jquery-3.3.1.min.js" ></script>
+<script src="https://www.sebon.gov.np/front/js/popper.js"></script>
+<script src="https://www.sebon.gov.np/front/js/bootstrap.js"></script>
+<script src="https://www.sebon.gov.np/front/js/superfish.min.js"></script>
+<script src="https://www.sebon.gov.np/front/slick/slick.min.js" type="text/javascript"></script>
+<script defer src="https://www.sebon.gov.np/front/js/fa_5.3.1_js_all.js"></script>
+<script defer src="https://www.sebon.gov.np/front/fancybox/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    var cfs = 1.0;
+    jQuery(document).ready(function ($) {
+        /*var a = $('a[href*="/career"]');
+        var text = $(a).html('Career'+'<span style="font-size:8px;position:absolute;top: 5px;" class="blink">NEW</span>');*/
+        var nav = jQuery('#main-menu').superfish({
+            delay: 200, // the delay in milliseconds that the mouse can remain outside a submenu without it closing
+            animation: {opacity: 'show'}, // an object equivalent to first parameter of jQuerys .animate() method. Used to animate the submenu open
+            animationOut: {opacity: 'hide'}, // an object equivalent to first parameter of jQuery’s .animate() method Used to animate the submenu closed
+            speed: 'fast', // speed of the opening animation. Equivalent to second parameter of jQuery’s .animate() method
+            speedOut: 'fast',
+        });
+        if ($('.carousel').length) {
+            $('.carousel').slick({
+                dots: false,
+
+                arrows: true,
+                infinite: true,
+                speed: 300,
+                //fade: true,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+            
+        }
+        if ($('.carousel-quote').length) {
+            var slickQuote = $('.carousel-quote').slick({
+                dots: false,
+                arrows:false,
+                infinite: true,
+                speed: 300,
+                //fade: true,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+            $('#c-next').on('click',function(){slickQuote.slick('slickNext');});
+            $('#c-prev').on('click',function(){slickQuote.slick('slickPrev');});
+        }
+        
+        if ($('.carousel-pub').length) {
+            $('.carousel-pub').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+//             vertical:true,
+                speed: 300,
+                //fade: true,
+                slidesToShow: 3,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    , {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }},
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }}]
+            });
+        }
+
+        if ($('ul#vert-menu').length) {
+            $('ul#vert-menu').superfish({
+                delay: 200
+            });
+        }
+        
+        $("input:checkbox").on('click', function() {
+  // in the handler, 'this' refers to the box clicked on
+  var $box = $(this);
+  $('#event1,#event2').prop("checked", false);
+  $box.prop("checked", true);
+});
+
+
+if(window.location.href == "https://www.sebon.gov.np/"){
+			$('#homeJacket0').modal('show');
+		$('#homeJacket0').on('hide.bs.modal',()=>{$('#homeJacket1').modal('show');});
+			$('#homeJacket1').modal('show');
+		$('#homeJacket1').on('hide.bs.modal',()=>{$('#homeJacket2').modal('show');});
+			$('#homeJacket2').modal('show');
+		$('#homeJacket2').on('hide.bs.modal',()=>{$('#homeJacket3').modal('show');});
+	}
+
+$('#visa_inv').on('change',function(){
+	if($(this).val()=='YES'){
+		$('.hid').show();
+	}else{
+		$('.hid').hide();
+	}
+});
+
+    });
+    function zoomIn() {
+        if (cfs <= 1.08) {
+            cfs = cfs + 0.04;
+            $('body').css({"font-size": cfs + 'rem'});
+        }
+    }
+    function zoomOut() {
+        if (cfs >= 0.88) {
+            cfs = cfs - 0.04;
+            $('body').css({"font-size": cfs + 'rem'});
+        }
+    }
+    function resetZoom() {
+        $('body').css({"font-size": '1rem'});
+        cfs = 1.0;
+    }
+    $('.at-svc-email').on('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'mailto:support@sebon.gov.np';
+    });
+</script>
+<script>
+    var menu01 = new MobileMenu;
+
+    menu01.init();
+
+    function MobileMenu() {
+
+        // set variables
+        var $body = $('body');
+        var $btnMenu = $('.btn-menu');
+        // get the nav li elements from the 
+        // desktop menu
+        var navLiHTML = $('header nav ul').html();
+        // create the mobile menu from the desktop li elements...
+        var mobileNavHTML = $('<nav class="mobile-nav"><ul>' + navLiHTML + '</ul></nav>');
+
+        // Add the mobile menu to the main element...
+        $('main').prepend(mobileNavHTML);
+
+        // select the newly created mobile menu
+        var $mobileNav = $('.mobile-nav');
+
+        // select all the "a" links that have a 
+        // sub menu
+        var $dd = $('.mobile-nav .dd');
+
+        // initialization method for the
+        // MobileMenu class	
+        this.init = function () {
+
+            // measure height of menu in open state
+            // then close the menu
+            $body.addClass('show');
+            var mobileNavOriginalHeight = $mobileNav.height();
+            var mobileNavHeight = $mobileNav.height();
+            $body.removeClass('show');
+
+            // Open all the menus and the sub menus 
+            // and measure the height of each
+            // sub menu then close all the 
+            // sub menus
+            $body.addClass('show');
+            $('.mobile-nav .dd').addClass('dd-show');
+            // Loop through the sub menus add get the height
+            // of the sub menus and set a data attribute to 
+            // that height
+            $('.mobile-nav .dd').each(function () {
+                var theHeight = $(this).next().height();
+                $(this).next().attr('data-height', theHeight);
+            }); // end each...
+            // Close the menu and the sub menus
+            $body.removeClass('show');
+            $('.mobile-nav .dd').removeClass('dd-show');
+
+            // Click event handler for the mobile menu
+            $btnMenu.click(function () {
+                // check if body element has the
+                // class show
+                if ($body.hasClass('show')) {
+                    // menu is open...
+                    // remove any heights set on the mobile nav
+                    $mobileNav.removeAttr('style');
+                    // remove the "show" class from the body
+                    // element
+                    $body.removeClass('show');
+                    // remove any heights set on the sub
+                    // menus
+                    $dd.next().removeAttr('style');
+                    // remove the "dd-show" class from the
+                    // links that have sub menu items 				
+                    $dd.removeClass('dd-show');
+                } else {
+                    // menu is closed...
+                    // set height of mobile menu to the open height
+                    $mobileNav.css('height', mobileNavOriginalHeight);
+                    // add the class "show" to the body element
+                    $body.addClass('show');
+                } // end if menu is open...
+
+            }); // end mobile menu click event handler
+
+            $dd.click(function () {
+                // check if this sub menu link
+                // is open
+                if ($(this).hasClass('dd-show')) {
+                    // this sub menu is open...
+                    // get current height of mobile menu
+                    mobileNavHeight = $mobileNav.outerHeight();
+                    // set new height of mobile menu by taking the
+                    // existing height of the mobile menu and
+                    // subtracting the height of the sub menu that
+                    // was clicked on...
+                    $mobileNav.css('height', (mobileNavHeight - $(this).next().data('height')));
+                    // remove the height style that was applied to this
+                    // sub menu
+                    $(this).next().removeAttr('style');
+                    // remove the "dd-show" class from the sub menu link
+                    // that was clicked on
+                    $(this).removeClass('dd-show');
+                } else {
+                    // this sub menu is closed
+                    // remove any height styles applied
+                    // to any sub menus
+                    $dd.next().removeAttr('style');
+                    // remove the "dd-show" class from
+                    // any sub menu link elements
+                    $dd.removeClass('dd-show');
+                    // set the new height of the 
+                    // mobile menu by adding the
+                    // height of mobile navs orginal 
+                    // open state height to the height
+                    // of the sub menu item that was
+                    // clicked on
+                    $mobileNav.css('height', (mobileNavOriginalHeight + $(this).next().data('height')));
+                    // set the height of the sub menu that
+                    // was clicked on
+                    $(this).next().css('height', $(this).next().data('height'))
+                    // add the "dd-show" class to
+                    // sub menu link that was clicked on...
+                    $(this).addClass('dd-show');
+                } // end if sub menu is open	
+            }) // end sub menu click event handler
+
+        } // end init()
+
+    } // end MobileMenu Constructor
+    $(document).ready(function () {
+        function mobileCollaps() {
+            $(".mobile-tree-container li.tree-li").removeClass("is-child")
+            $(".mobile-tree-container li.tree-li").each(function () {
+                if ($(this).find("ul.tree-ul li").length > 0) {
+                    $(this).addClass("is-child")
+                }
+            });
+
+            $(".mobile-tree-container li.tree-li span.text").unbind("click");
+            $(".mobile-tree-container li.tree-li.is-child span.text").click(function () {
+                $(this).parent(".tree-li").toggleClass("diactive");
+                $(this).parent(".tree-li").find(".tree-ul:first").toggleClass("diactive");
+            });
+        }
+
+        mobileCollaps()
+
+    });
+</script>
+<script src="https://www.sebon.gov.np/chatbot/chat.js"></script>
+</body>
+</html>
