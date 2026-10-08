@@ -1,0 +1,22 @@
+---
+title: "全球登記 B27：60條身份候選、ISIN、日期與LEI來源聯結"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪逐項结果
+
+已檢查 60 條原候選。12個ISIN中 12 個格式與Luhn校驗通過；4 條有可解碼下市日期；交易所發行人頁保存 6 條斷言、精確symbol聯結 8 條證券；GLEIF API解析 6 條身份觀測。未知法人身份仍 UNKNOWN。
+
+## 證據與限制
+
+[Progress證券頁](https://progress.market/en/securities-27/26)含歷史下市日期及多種證券；[發行人頁](https://progress.market/en/list-of-issuers-179/178)另列LEI與對應交易代碼。日期按來源格式解碼，空值或橫線不當作已確認現行上市。交易所symbol聯結為来源斷言，不是独立工商驗證。GLEIF逐項API URL與HTTP收據另表記錄；法人狀態與LEI登記狀態分開。
+
+NASD的48條保存記錄沒有ISIN／LEI；本輪網頁工具未取得，沿用B25原件核查日期，不杜撰法人鍵。股票、債券、發行人與券商皆不可混成公司總數。校驗碼只是格式檢查，不表示配號或法律身份已核實。七向文件已更新；舊版本、主報告與交接文件未覆寫。
+
+## 可對賬交付
+
+[60條逐項檢查](tables/52_global_registry_identity_b27_20261008/registry_security_identity_checks.csv)、[發行人斷言](tables/52_global_registry_identity_b27_20261008/registry_exchange_issuer_assertions.csv)、[GLEIF身份觀測](tables/52_global_registry_identity_b27_20261008/registry_gleif_identity_observations.csv)、[收據](tables/52_global_registry_identity_b27_20261008/source_fetch_manifest.csv)、[SQLite](tables/52_global_registry_identity_b27_20261008/global_registry_identity_b27.sqlite)。資料庫行數、完整性與原始回應雜湊通過。原清單2,608項未嘗試及所有歷史／分頁缺口仍保留，全球完整性UNKNOWN。未匯入Windows Downloads原件或明細。
