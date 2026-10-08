@@ -1,0 +1,26 @@
+---
+title: "全球登記 B26：575條名錄投影用途更正與時態拆分"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪結果
+
+575條原投影全數保留定位，新增更正視圖，不覆寫B25。76條CMDA人員記錄排除公司／券商視圖；PNGX的24條簡介屬性整理為2份公司簡介候選，不當作24家公司。NSX拆為7條停牌及408條下市來源記錄；其餘48條admitted候選及12條證券上市記錄須核實身份與有效狀態。停牌證券可能仍在正式名單，不能因停牌就認定下市或法人不存在。
+
+## 官方來源覆核及限制
+
+[CMDA員工目錄](https://cmda.gov.mv/en/staff-directory?category=41)標示人員姓名、職務與電子郵件；公司／持牌機構入口另列於Licensing。本輪不重複發布員工姓名或郵箱。
+
+[NSX停牌／下市頁](https://www.nsx.com.au/marketdata/delisted-suspended/)分列兩種狀態及日期。本輪數量以B25保存版本為準；官方頁確認來源用途，不等於逐家獨立身份驗證。
+
+[PNGX Steamships簡介](https://www.pngx.com.pg/steamships-trading-companies-limited/)為單一公司簡介；屬性表不應逐行計為企業。NASD頁本輪網頁工具未取得，僅沿用B25已保存表頭，仍列內容／現行性待覆核。
+
+## 可對賬交付
+
+[575條更正視圖](tables/51_global_registry_semantic_b26_20261008/registry_projection_scope_corrections.csv)、[415條NSX狀態事件](tables/51_global_registry_semantic_b26_20261008/registry_nsx_status_events.csv)、[兩份PNGX簡介](tables/51_global_registry_semantic_b26_20261008/registry_pngx_profile_candidates.csv)、[角色對賬](tables/51_global_registry_semantic_b26_20261008/registry_role_reconciliation.csv)、[SQLite](tables/51_global_registry_semantic_b26_20261008/global_registry_semantic_b26.sqlite)。原始行、來源與B25版本仍保留，575條去向可對賬；未知身份不填假LEI或登記號。源日期保留原文，未宣稱已轉換全部日期。
+
+redteam、critic、killcritic、blindspot、blueprint、cheatsheet、actionplan各新增B26文件。CSV／SQLite行數及完整性核對通過；主報告與交接文件未覆寫。原清單2,608項未嘗試、既有分頁與歷史封存待辦未結案。全球唯一公司數與完整收錄仍UNKNOWN。
