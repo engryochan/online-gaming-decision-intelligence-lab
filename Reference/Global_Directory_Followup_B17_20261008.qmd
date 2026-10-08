@@ -1,0 +1,32 @@
+---
+title: "全球清單續作 B17：分頁核查、直接檔案及業務用途"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪完成範圍
+
+接續 B16 的 179 條頁面連結及 B15 的 3,024 條新連結，共覆核 3203 條觀測。分類 `{"NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 1937, "PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 128, "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1138}`；去重後嘗試全部 69 个合資格候選網址，HTTP 狀態分布 `{"200": 68, "": 1}`，保存 431 條物理表格行、55 個表格及 80 條初步來源角色投影。數字、next 與 page 參數僅是分頁排程訊號，並非內容完整性的證明。
+
+新增 3066 條連結留待下一輪核查；本轮候選未選數為零不等於全站或所有遞迴分頁完成。所有 4,849 項原始工作列及 249 條現行母表保留，累計工作狀態 `{"HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1284, "FETCH_ERROR_OR_NON200_REVIEW": 67, "NOT_YET_ATTEMPTED": 3496, "HTTP200_BODY_TRUNCATED_REVIEW": 2}`。網站來源關係不代表企業註冊地，歷史政治實體仍沿用既有登記。
+
+## 下載與業務定義
+
+全部 12 條直接檔案觀測去重為 9 個網址，全部嘗試；9 個保存或沿用已核對的原始檔，其中 2 個沿用、7 個新增，0 個失敗保留逐檔錯誤及 HTTP 狀態。保存 108 個壓縮成員雜湊、600 條 XLSX 行及 0 條直接 CSV 邏輯行（含表頭與空行）。
+
+來源觀測包括巴西 CVM OTS 月報與元數據、圭亞那單項證券歷史成交資料、監管網站歷史指定人士／實體清單及會員申請／聯絡表。它們服務於歷史申報、工具交易、合規證據及流程分析；逐檔內容、時點及監管範圍仍須核定。會員申請範本。分別服務於交易所參與者、產品交易、歷史申報與公司財務分析；名稱與網址僅作用途初步分類，逐檔內容、時點與監管範圍仍待核定。會員申請範本、技術頻寬報告、歷史制裁名單及產品分類不能合算為持牌券商或上市公司；逐檔業務用途寫入覆核表。
+
+本輪額外展開 CVM 原始壓縮檔內全部 32 個 CSV 成員，保存 53,758 條邏輯來源行（包含表頭與空行），並保存 8 個文字／字典成員。逐成員雜湊、編碼策略、分隔符與行数已核對；可回溯 cells_json，不將申報行當作獨立公司數。UTF8 解碼失敗時採用可逆 Latin1 投影並標記來源編碼尚未核定。PDF、完整工作簿物件及字典語義仍待後續檢查。全球名錄完整性仍為 UNKNOWN。
+
+## 可回溯交付
+
+[分頁候選覆核](tables/42_global_directory_followup_b17_20261008/registry_pagination_candidate_review.csv)、[分頁收據](tables/42_global_directory_followup_b17_20261008/pagination_fetch_manifest.csv)、[逐檔用途](tables/42_global_directory_followup_b17_20261008/registry_file_business_scope_review.csv)、[下載缺口](tables/42_global_directory_followup_b17_20261008/registry_file_acquisition_gaps.csv)、[完整工作進度](tables/42_global_directory_followup_b17_20261008/registry_all_4849_work_progress.csv)、[SQLite](tables/42_global_directory_followup_b17_20261008/global_directory_followup_b17.sqlite)。
+
+77 個原始回應／下載收據位元組雜湊核對通過，SQLite 完整性檢查通過，來源 URL、原始行及內容雜湊可回溯。既有批次、兩份主報告及使用者文件修改未覆寫。
+
+## 發佈與解析核查
+
+頁面解析及來源語義完整性仍待逐項核定；原始回應位元組保留。憑證模式掃描發現 8 個原始頁面候選檔，僅留本機並排除推送；未輸出候選值。
