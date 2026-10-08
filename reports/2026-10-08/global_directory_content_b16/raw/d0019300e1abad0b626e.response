@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/favicon.png" sizes="any" />
+
+    <link rel="stylesheet" media="all" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <script type="text/plain" data-cookiecategory="analytics">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-11082354-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<noscript><img alt="" src="https://secure.smart-enterprise-52.com/267056.png" style="display:none;" /></noscript>
+<script type="text/javascript" src="https://secure.smart-enterprise-52.com/js/267056.js" ></script>
+    
+<title>Company profile | TISE</title>
+<meta property="og:title" content="Company profile | TISE">
+<meta name="twitter:title" content="Company profile | TISE">
+
+<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://tisegroup.com/company-profile/">
+
+    <meta property="og:image" content="https://tisegroup.com//media/w25hshsu/home.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c5ba169e30">
+    <meta name="twitter:image" content="https://tisegroup.com//media/w25hshsu/home.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c5ba169e30">
+
+<meta property="og:description" content="Built on a culture of responsiveness and innovation, TISE connects companies seeking to raise capital with investors based around the globe">
+<meta name="twitter:description" content="Built on a culture of responsiveness and innovation, TISE connects companies seeking to raise capital with investors based around the globe">
+<meta name="description" content="Built on a culture of responsiveness and innovation, TISE connects companies seeking to raise capital with investors based around the globe">
+</head>
+<body>
+
+    <div class="page blue">
+        
+<div id="navigation" v-cloak v-clickout="closeSearch">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-inner-brand">
+                <a href="/"><img src="/media/ezbnvbj3/tise-master-a-miax-company-logo-rgb-white.png?width=200&height=103&quality=80&v=1dbd56b4cd472d0" alt="TISE Logo" /></a>
+            </div>
+            <div class="header-inner-nav" v-tracked>
+                <ul :class="{'on': open}">
+                    <li v-for="i in structure" :class="[{'on': openNavs.includes(i.Id)}, {'hide-from-ml' : i.Special}]">
+                        <div class="header-item">
+                            <a v-if="i.Children && i.Children.length > 0" class="header-item-link" @click="toggleNav(i)">{{i.Name}} <i class="fas fa-chevron-down"></i></a>
+                            <a v-if="!i.Children || (i.Children && i.Children.length == 0)" class="header-item-link" :href="i.Url">{{i.Name}} </a>
+                        </div>
+                        <div class="header-drop" :class="{'on': openNavs.includes(i.Id)}">
+                            <template v-for="c in i.Children">
+                                <a :href="c.Url" :class="{ hasgc: i.HasGrandchildren }">{{c.Name}}</a>
+                                <div class="header-drop-sub" v-if="i.HasGrandchildren">
+                                    <a v-for="p in c.Children" :href="p.Url"><span>&mdash;</span> {{p.Name}}</a>
+                                </div>
+                            </template>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-inner-burger-wrap">
+                    <a class="btn small white" v-tracked href="https://apps.tisegroup.com/Identity/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dtise-portal%26redirect_uri%3Dhttps%253A%252F%252Fapps.tisegroup.com%252Fmy-tise%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520TISEAPI%26nonce%3D28c5ae753640fc10c766c1317bffd4a829RufsNki%26state%3Dfd59249a2eeff0b1326c77958c4e7e9c34pA5Avrk%26code_challenge%3Di9aYC48siflcen0jUgPiXFrl7-F91eJligrY8qDLRsA%26code_challenge_method%3DS256"><span>MyTISE</span></a>
+                    <a class="search" @click="toggleSearch"><i class="fas fa-search"></i></a>
+                <div class="header-inner-burger-wrap-burger" :class="{'on': open}" @click="toggleNav(null)">
+                    <svg viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" rx="2" ry="2" />
+                        <rect y="9" width="32" height="2" rx="2" ry="2" />
+                        <rect y="18" width="32" height="2" rx="2" ry="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="burger-nav" :class="{'on': open}">
+        <div class="burger-nav-left">
+            <div class="burger-nav-left-inner">
+                <ul>
+                    <li v-for="i in structure" :class="[{'on' : curPage != null && curPage.Id == i.Id}, {'hide-from-xl' : i.Special}]">
+                        <a v-if="i.Children && i.Children.length > 0" @click="curPage = i">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                        <a v-if="!i.Children || (i.Children && i.Children.length == 0)" :href="i.Url">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+
+
+</li>
+                </ul>
+            </div>
+        </div>
+        <div class="burger-nav-mid">
+            <div class="burger-nav-mid-inner" v-if="curPage != null">
+                <h3>{{curPage.Title}}</h3>
+                <p>{{curPage.Copy}}</p>
+                <p>&nbsp;</p>
+                <div class="burger-nav-mid-inner-cols" v-if="curPage.HasGrandchildren">
+                    <div v-for="c in curPage.Children" class="burger-nav-mid-inner-cols-col" :class="'c' + curPage.Children.length">
+                        <ul>
+                            <li class="overview"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                            <li v-for="gc in c.Children"><a :href="gc.Url">{{gc.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-nav-mid-inner-cols" v-if="!curPage.HasGrandchildren">
+                    <div class="burger-nav-mid-inner-cols-col c1">
+                        <ul>
+                            <li v-for="c in curPage.Children"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-nav-right">
+                <p>About TISE</p>
+                <a href="/company-profile/">Company Profile</a>
+                <a href="/company-profile/meet-the-team/">Meet the Team</a>
+                <a href="/news/">News</a>
+                <a href="/company-profile/careers/">Careers</a>
+                <a href="/company-profile/corporate-social-responsibility/">CSR</a>
+                <a href="/business-days/">Business Days</a>
+                <a href="/contact/">Contact</a>
+        </div>
+    </div>
+
+        <div class="burger-search" :class="{'on' : searchOpen}">
+            <form action="/search/" method="get">
+                <input type="text" name="query" placeholder="Enter Keywords or Mnemonic" />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+</div>
+        
+
+<div class="pagenav">
+    <div class="pagenav-inner">
+        <a class="title">On this page</a>
+        <ul class="pagenav-inner-items">
+                            <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_88eb827474cf40f69ff989fa10ae805d"><a href="#_88eb827474cf40f69ff989fa10ae805d">Overview</a></li>
+                            <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_9ed4e819431c41c292846dae08e1e3fb"><a href="#_9ed4e819431c41c292846dae08e1e3fb">About TISE</a></li>
+                            <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_847fea7420a041afaf3e3e6f1bf629fe"><a href="#_847fea7420a041afaf3e3e6f1bf629fe">Looking Forward</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_f36d75c8a7bd4e13bb789a9858448611"><a href="#_f36d75c8a7bd4e13bb789a9858448611">Milestones</a></li>
+        </ul>
+        <p class="pad"></p>
+    </div>
+</div>
+<div class="hero   lazy blue opacity-after-6" data-bg="/media/ir4o4c1e/harbourindustry.jpg?width=1920&height=840&quality=80&v=1db18c563ea8760" id="_b98c9d93c8414e978c8ac5b82e8ef320">
+    <div class="hero-content">
+        <div class="hero-content-text">
+            <h1>Company Profile</h1>
+            <p class="intro  " >Built on a culture of responsiveness and innovation, TISE connects companies seeking to raise capital with investors based around the globe</p>
+        </div>
+    </div>
+</div>
+<div class="textscrolltext mt-6 mb-6" id="_e020b990d7114a8081ec08dccf5ad997">
+    <div class="textscrolltext-pin">
+        <div class="textscrolltext-pin-inner">
+            <div class="content-wrap">
+                <div class="rte">
+                    <h2>Our Credentials</h2>
+<p>The fact that issuers from around the world and a variety of industries choose to list and trade securities on TISE is in itself a demonstration of the strength of our product and service offering.</p>
+<p><span style="font-size: 26px; font-family: Geomanist, sans-serif; font-weight: 600; color: #54d5c4;">A leading <br></span>European professional bond market</p>
+<p><span style="font-size: 26px; font-family: Geomanist, sans-serif; font-weight: 600; color: #54d5c4;">2,600+ <br></span>issuers with securities listed on TISE</p>
+<p><span style="font-size: 26px; font-family: Geomanist, sans-serif; font-weight: 600; color: #54d5c4;">4,500+ <br></span>listed securities on our market</p>
+<p><span style="font-size: 26px; font-family: Geomanist, sans-serif; font-weight: 600; color: #54d5c4;">£800 billion+ <br></span>market value of all listed securities</p>
+<p><span style="font-size: 26px; font-family: Geomanist, sans-serif; font-weight: 600; color: #54d5c4;">40+ <br></span>countries among the issuer base</p>
+<p><span style="font-size: 26px; font-family: Geomanist, sans-serif; font-weight: 600; color: #54d5c4;">#1<br></span>market for listed UK REITs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="textscrolltext-blocks">
+        
+<div class="content-wrap mt-0 mb-0 box-bg" id="_88eb827474cf40f69ff989fa10ae805d" style="">
+    <div class="rte wide">
+        <h2>Our Proposition</h2>
+<p>Built on a culture of responsiveness and innovation, The International Stock Exchange (TISE) provides financial markets and securities services to companies globally.</p>
+<p>TISE is best known as one of Europe’s major professional bond markets. Its <strong><a href="/listing/bonds/" title="Bonds">Qualified Investor Bond Market (QIBM)</a></strong> is the leading market in Europe for listing high yield bonds and private equity debt and has a growing reputation for listing securitisation transactions. TISE is also the largest market for listed UK Real Estate Investment Trusts (REITs), has a pool of investment funds and hosts a comprehensive sustainable finance segment, <strong><a href="/sustainable/" title="Sustainable">TISE Sustainable</a></strong>.</p>
+<p>A wholly owned subsidiary of&nbsp;<strong><a href="https://www.miaxglobal.com/">Miami International Holdings, Inc.</a></strong>, TISE is headquartered in Guernsey and operates across Dublin, Guernsey, the Isle of Man, Jersey and London. TISE has over 4,500 securities on its Official List with a total market value of more than £800 billion.</p>
+<p style="margin-bottom: 0cm; line-height: normal;" class="MsoNormal"><!-- [if !supportAnnotations]--><!--[endif]--></p>
+    </div>
+</div>
+    </div>
+</div><div class="imagescrolltext  rev" id="_b500456b2b824e47a3e260e7d227e471">
+    <div class="imagescrolltext-blocks">
+        
+<div class="content-wrap  box-bg" id="_9ed4e819431c41c292846dae08e1e3fb" style="">
+    <div class="rte narrow">
+        <h2>About TISE</h2><p>TISE is a wholly owned subsidiary of <a data-router-slot="disabled" href="https://www.miaxglobal.com/" type="external"><strong>Miami International Holdings, Inc. (MIAX)</strong></a>.</p><p>MIAX maintains a broad portfolio of US exchange and clearing licences and operates markets across a diverse number of asset classes including options, cash equities and futures, as well as geographies including the US, Bermuda and Guernsey. Through its subsidiaries, MIAX is regulated by the US Securities and Exchange Commission (SEC), the Commodity Futures Trading Commission (CFTC), the Bermuda Monetary Authority (BMA) and the Guernsey Financial Services Commission (GFSC).</p><p>For more information, visit <a data-router-slot="disabled" href="/legal-and-regulatory/" title="Legal and Regulatory"><strong>Legal and Regulatory information</strong></a>.</p>
+    </div>
+</div>
+    </div>
+    <div class="imagescrolltext-img lazy" data-bg="/media/wveg4tp0/harbour-tise.jpg?width=1200&height=1300&quality=80&v=1db18c5480458f0"></div>
+</div><div class="imagescrolltext  " id="_a68ac4d3d4454f1fbeeafbc1e0c6dcc3">
+    <div class="imagescrolltext-blocks">
+        
+<div class="content-wrap  box-bg" id="_847fea7420a041afaf3e3e6f1bf629fe" style="">
+    <div class="rte narrow">
+        <h2>Looking Forward</h2>
+<p>In an increasingly complex world that is driven by changes in regulation and the acceleration of industry automation, we aren't standing still but continuously improving our offering aligned with market and client demands.</p>
+<p>We remain focussed on what we are good at: the efficient and secure <a href="/listing/bonds/" title="Bonds"><strong>listing of bonds</strong></a>. Whilst we are committed to maintaining our market leader position in specific segments of the international bond markets, such as private equity debt and high yield bonds, we are expanding our geographical reach to scale up our listing business in the UK, Europe and internationally. The expansion of our product and service offering will help to enlarge and diversify our revenue streams and mitigate business concentration risk in the future.</p>
+<p>As part of&nbsp;<strong><a href="https://www.miaxglobal.com/">Miami International Holdings, Inc. (MIAX),</a></strong> TISE benefits from opportunities to collaborate across the company’s subsidiaries, utilise the MIAX technology infrastructure and leverage MIAX’s global footprint to expand TISE’s offering across Europe and internationally.</p>
+    </div>
+</div>
+    </div>
+    <div class="imagescrolltext-img lazy" data-bg="/media/dfimx32y/nova.jpg?width=1200&height=1300&quality=80&v=1db18c586748a10"></div>
+</div><div class="imagescrolltext mb-6 rev" id="_f36d75c8a7bd4e13bb789a9858448611">
+    <div class="imagescrolltext-blocks">
+        
+<div class="content-wrap mt-2 box-bg" id="_7b27b0804c514d9893f54f563c6a405e" style="">
+    <div class="rte wide">
+        <h2>TISE Milestones</h2>
+<p> </p>
+    </div>
+</div><div class="content-wrap  box-bg" id="_adfd853a44c0473486e395bf94fb73b5" style="">
+    <div class="rte wide">
+        <div class="cols">
+                <div class="col-item">
+                    <h4 class="p1">2025</h4>
+<ul>
+<li class="p1">TISE is acquired by Miami International Holdings, Inc.</li>
+<li class="p1">Launch of Ekho - TISE technology platform&nbsp;</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4 class="p1">2024</h4>
+<ul>
+<li class="p1">Market value of listed securities surpasses £750 billion for the first time</li>
+<li class="p1">Introduction of Equity Listing Rules for&nbsp;Specialist Companies&nbsp;</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2023</h4>
+<ul>
+<li>The Exchange celebrates its 25th anniversary</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2022</h4>
+<ul>
+<li>Launch of NOVA - TISE Trading System</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2021<strong><br></strong></h4>
+<ul>
+<li>Record number of new listings on TISE</li>
+<li>Launch of QIBM and TISE Sustainable </li>
+<li>Expansion into Dublin &amp; London</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2019<strong><br></strong></h4>
+<ul>
+<li>MyTISE online member services portal launches</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2018</h4>
+<ul>
+<li>Environmental market segment launches </li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2017<strong><br></strong></h4>
+<ul>
+<li>The International Stock Exchange (TISE) rebrands</li>
+<li>Expansion into the Isle of Man</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2016</h4>
+<ul>
+<li>TISE lists its ordinary shares on the Exchange [delisted: June 2025]</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4 class="p1">2015</h4>
+<ul>
+<li class="p1">Expansion into Jersey</li>
+</ul>
+<div class="col-item"></div>
+                </div>
+                <div class="col-item">
+                    <h4 class="p1">2013</h4>
+<ul>
+<li class="p1">Corporate restructuring: regulatory activities ringfenced within the Authority</li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4>2008</h4>
+<ul>
+<li>The Exchange celebrates its 10th year </li>
+</ul>
+                </div>
+                <div class="col-item">
+                    <h4 class="p1">1998</h4>
+<ul>
+<li class="p1">Established in Guernsey as The Channel Islands Stock Exchange, LBG</li>
+</ul>
+                </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="imagescrolltext-img lazy" data-bg="/media/ciodpfec/careers-portrait.jpg?width=1200&height=1300&quality=80&v=1db18c58a6bb4e0"></div>
+</div><div class="dualcta lazy blue opacity-before-9" data-bg="/media/r4yd1c4h/bg-image-text.png?width=1920&height=840&quality=80&v=1db18c523360b90" id="_87703bee53c74696816b052723f888e9">
+    <div class="dualcta-content">
+            <div class="dualcta-content-item">
+                <h2>Why TISE?</h2>
+                <p><p class="p1">We stand out from the crowd because of our culture of responsiveness and innovation.</p></p>
+                    <a class="btn mt-3 tracked white" href="/why-tise/">
+                        <span>
+                            Why TISE?
+                        </span>
+                    </a>
+            </div>
+            <div class="dualcta-content-item">
+                <h2>Meet the Team</h2>
+                <p><p>Meet our senior team across Dublin, Guernsey, the Isle of Man, Jersey and London</p></p>
+                    <a class="btn mt-3 tracked white" href="/company-profile/meet-the-team/">
+                        <span>
+                            Meet the Team
+                        </span>
+                    </a>
+            </div>
+    </div>
+</div>
+		<div class="page-contact" data-scroll-progress="100" data-scroll-class="inline" data-scroll-target="#_b98c9d93c8414e978c8ac5b82e8ef320">
+			<div class="page-contact-inner">
+				<div class="page-contact-inner-img lazy" data-bg="/media/kctlzxem/cees-vermaas-web-4jpg.png?rxy=0.48522901226945764,0.38502027115367665&width=200&height=180&quality=80&v=1dcac814bdd5f70">
+				</div>
+				<div class="page-contact-inner-detail">
+					<a href="/company-profile/meet-the-team/cees-vermaas/">
+						<p>Contact</p>
+						<h4>Cees Vermaas</h4>
+						<h5>CEO</h5>
+					</a>
+					<a class="ctc blue" href="tel:&#x2B;44 (0) 1481 753010">&#x2B;44 (0) 1481 753010</a>
+					<a class="ctc blue" href="mailto:cees.vermaas@tisegroup.com">cees.vermaas@tisegroup.com</a>
+				</div>
+			</div>
+		</div>
+
+        <footer class="footer articles">
+    <div class="footer-top">
+        <div class="content-wrap">
+                <h3>Latest Articles</h3>
+                <div class="footer-articles">
+                        <div class="footer-articles-item">
+                            <div class="footer-articles-item-inner">
+                                <p class="tag mid">Wednesday, 9 Sep 2026</p>
+                                <h4>Beyond bricks and mortar: Financing the intangible economy</h4>
+                                <p class="read"><a class="blue" href="/news/2026/beyond-bricks-and-mortar-financing-the-intangible-economy/">Read Article</a></p>
+                            </div>
+                        </div>
+                        <div class="footer-articles-item">
+                            <div class="footer-articles-item-inner">
+                                <p class="tag mid">Thursday, 13 Aug 2026</p>
+                                <h4>TISE Reports H1 2026 Listing Results; Sets Records for Total Number and Value of Listings</h4>
+                                <p class="read"><a class="blue" href="/news/2026/tise-reports-h1-2026-listing-results-sets-records-for-total-number-and-value-of-listings/">Read Article</a></p>
+                            </div>
+                        </div>
+                        <div class="footer-articles-item">
+                            <div class="footer-articles-item-inner">
+                                <p class="tag mid">Wednesday, 17 Jun 2026</p>
+                                <h4>Financing the next wave of global industry: Why bond markets matter</h4>
+                                <p class="read"><a class="blue" href="/news/2026/financing-the-next-wave-of-global-industry-why-bond-markets-matter/">Read Article</a></p>
+                            </div>
+                        </div>
+                </div>
+            <div class="footer-inner">
+                <div class="footer-inner-social">
+                        <a href="https://www.facebook.com/The-International-Stock-Exchange-106784734024704" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/the-international-stock-exchange/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/tisegroup" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/theinternationalstockexchange" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-inner-news">
+                    <a class="btn blue tracked" href="/subscribe/"><span>Subscribe to our email newsletters</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="locations">
+            <span>Dublin.</span>
+            <span>Guernsey.</span>
+            <span>Isle of Man.</span>
+            <span>Jersey.</span>
+            <span>London.</span>
+        </p>
+        <p class="address">
+            The International Stock Exchange Group Limited, PO&nbsp;Box&nbsp;623, Helvetia&nbsp;Court, 
+            Block&nbsp;B, 3rd&nbsp;Floor,
+            Les&nbsp;Echelons, St&nbsp;Peter&nbsp;Port, Guernsey&nbsp;GY1&nbsp;4PJ
+        </p>
+        <ul class="links">
+                <li><a href="/privacy-statement/">Privacy Statement</a></li>
+                <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+                <li><a href="/legal-and-regulatory/">Legal and Regulatory</a></li>
+                <li><a href="/complaints/">Complaints</a></li>
+                <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <p class="copyright">© The International Stock Exchange Group Limited 2026. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    </div>
+    
+    <script>
+        var navData = [{"Id":1814,"Name":"Listing","Title":"Listing","Copy":"We’re a leading stock exchange for listing a wide range of bonds and equities, with issuers attracted by our competitive fees and high quality, efficient service.  ","Url":"/listing/","HasGrandchildren":true,"Children":[{"Name":"Bonds","Url":"/listing/bonds/","Children":[{"Name":"High Yield Bonds","Url":"/listing/bonds/high-yield-bonds/"},{"Name":"Private Equity Debt","Url":"/listing/bonds/private-equity-debt/"},{"Name":"Securitisations","Url":"/listing/bonds/securitisations/"},{"Name":"Collateralised Loan Obligations (CLOs)","Url":"/listing/bonds/collateralised-loan-obligations-clos/"},{"Name":"Bond Programmes","Url":"/listing/bonds/bond-programmes/"},{"Name":"Aviation Finance","Url":"/listing/bonds/aviation-finance/"},{"Name":"Sukuks","Url":"/listing/bonds/sukuks/"},{"Name":"Defence","Url":"/listing/bonds/defence/"},{"Name":"Insurance Linked Securities (ILS)","Url":"/listing/bonds/insurance-linked-securities-ils/"},{"Name":"Bond Market Listing Rules","Url":"/listing/bonds/bond-market-listing-rules/"},{"Name":"Bond Market Listing Fees","Url":"/listing/bonds/bond-market-listing-fees/"}]},{"Name":"Equities","Url":"/listing/equities/","Children":[{"Name":"Funds","Url":"/listing/equities/funds/"},{"Name":"REITs","Url":"/listing/equities/reits/"},{"Name":"Specialist Companies","Url":"/listing/equities/specialist-companies/"},{"Name":"Trading Companies","Url":"/listing/equities/trading-companies/"},{"Name":"Equity Market Listing Rules","Url":"/listing/equities/equity-market-listing-rules/"},{"Name":"Specialist Companies Listing Rules","Url":"/listing/equities/specialist-companies-listing-rules/"},{"Name":"Equity Market Listing Fees","Url":"/listing/equities/equity-market-listing-fees/"}]}]},{"Id":1816,"Name":"Trading","Title":"Trading","Copy":"Our bespoke auction-based trading system, NOVA, combines choice and transparency to facilitate concentrated liquidity events.","Url":"/trading/","HasGrandchildren":false,"Children":[{"Name":"Trading Overview","Url":"/trading/trading-overview/","Children":[]},{"Name":"NOVA - TISE Trading System","Url":"/trading/nova-tise-trading-system/","Children":[]}]},{"Id":1819,"Name":"Sustainable","Title":"Sustainable","Copy":"Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.","Url":"/sustainable/","HasGrandchildren":false,"Children":[]},{"Id":1820,"Name":"Market","Title":"Market","Copy":"We have 2,600+ issuers from over 40+ countries listing 4,500+ bonds and equity securities on our market.","Url":"/market/","HasGrandchildren":false,"Children":[{"Name":"Market Overview","Url":"/market/market-overview/","Children":[]},{"Name":"Listed Securities","Url":"/market/securities/","Children":[]},{"Name":"Market News","Url":"/market/news/","Children":[]},{"Name":"Trade Price Data","Url":"/market/trade-price-data/","Children":[]}]},{"Id":1824,"Name":"Membership","Title":"Membership","Copy":"Becoming a Member is simple. We already serve international firms who benefit from being able to facilitate listing or trading on our market.","Url":"/membership/","HasGrandchildren":false,"Children":null},{"Id":1826,"Name":"Why TISE?","Title":"Why TISE","Copy":"TISE stands out from the crowd because of our culture of responsiveness and innovation.","Url":"/why-tise/","HasGrandchildren":false,"Children":[]},{"Id":-1,"Name":"About TISE","Special":true,"Copy":"","Url":"","HasGranndchildren":false,"Children":[{"Name":"Company Profile","Url":"/company-profile/"},{"Name":"Meet the Team","Url":"/company-profile/meet-the-team/"},{"Name":"News","Url":"/news/"},{"Name":"Careers","Url":"/company-profile/careers/"},{"Name":"CSR","Url":"/company-profile/corporate-social-responsibility/"},{"Name":"Business Days","Url":"/business-days/"},{"Name":"Contact","Url":"/contact/"}]}]
+    </script>
+    <script src="/main.js?v=zsdbg3c"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"965014478cea41e1bb80cae092c8f988","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

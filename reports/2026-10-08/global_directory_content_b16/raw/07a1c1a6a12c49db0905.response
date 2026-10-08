@@ -1,0 +1,693 @@
+
+<!doctype html>
+<html lang="uk-ua" dir="ltr">
+	<head>
+		
+			<!-- add google analytics -->
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src='https://www.googletagmanager.com/gtag/js?id=UA-158692586-1'></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'UA-158692586-1');
+			</script>
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="PFTS">
+	<meta name="description" content="Найбільший організатор торгів цінними паперами і основне джерело інформації по фондовому ринку України для міжнародних інвесторів.">
+	<meta name="generator" content="Helix Ultimate - The Most Popular Joomla! Template Framework.">
+	<title>Як стати учасником — ПФТС  </title>
+	<link href="/images/headers/favicon.jpg" rel="icon" type="image/jpeg">
+<link href="/media/mod_languages/css/template.min.css?9a79b1" rel="stylesheet">
+	<link href="/media/vendor/joomla-custom-elements/css/joomla-alert.min.css?0.4.1" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext&amp;display=swap" rel="stylesheet" media="none" onload="media=&quot;all&quot;">
+	<link href="//fonts.googleapis.com/css?family=Bree Serif:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin&amp;display=swap" rel="stylesheet" media="none" onload="media=&quot;all&quot;">
+	<link href="/templates/shaper_helixultimate/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/plugins/system/helixultimate/assets/css/chosen.css" rel="stylesheet">
+	<link href="/plugins/system/helixultimate/assets/css/system-j4.min.css" rel="stylesheet">
+	<link href="/media/system/css/joomla-fontawesome.min.css?9a79b1" rel="stylesheet">
+	<link href="/templates/shaper_helixultimate/css/template.css" rel="stylesheet">
+	<link href="/templates/shaper_helixultimate/css/presets/default.css" rel="stylesheet">
+	<link href="/templates/shaper_helixultimate/css/custom.css" rel="stylesheet">
+	<link href="https://pfts.ua/modules/mod_datetime/tmpl/default.css" rel="stylesheet">
+	<link href="/modules/mod_accordeonmenuck/themes/default/css.php?cssid=accordeonck849" rel="stylesheet">
+	<link href="/modules/mod_accordeonmenuck/themes/default/css.php?cssid=accordeonck850" rel="stylesheet">
+	<link href="/modules/mod_accordeonmenuck/themes/default/css.php?cssid=accordeonck851" rel="stylesheet">
+	<style>.pretext, .posttext {
+  margin: 3px 0px 3px 0px;
+}
+
+#sp-menu.menu-center .sp-megamenu-wrapper {
+  justify-content: left;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  float: left;
+  padding: 0;
+} // отступ лого слева
+
+#sp-header.lg-header {
+  padding: 20px 1px;
+}
+
+label {
+  font-weight: normal;
+  padding-left: 2rem;
+  padding-top: 0.6rem;
+  display: flex;
+}  // отступ ПОШУК ТІКЕР ISIN
+
+#sp-logo {
+    padding: 0;
+}
+
+body.ltr #offcanvas-toggler.offcanvas-toggler-right {
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.burger-icon > span {
+  display: block;
+  height: 2px;
+  background-color: #d05858;
+  margin: 5px 0;
+  transition: background-color 0.3s ease-in, opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.sp-module-content {
+  padding-bottom: 1.8rem;
+}  //отступ модулей снизу
+
+#sp-footer {
+  font-size: 11px;
+  padding: 0;
+}
+
+#sp-main-body {
+  padding: 1px 1px;
+}
+
+.sj-flat-menu > li .fm-item a {
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 20px;
+    outline: none;
+    text-shadow: 0px 1px 2px RGBA(0,0,0,1);
+}
+
+.sj-flat-menu li .fm-item .fm-link {
+  padding-left: 5px;
+  position: relative;
+  display: block;
+  margin-right: 1px;
+}
+
+.sj-flat-menu li ul li .fm-item a {
+  padding-left: 10px;
+  display: inline;
+  background-size: 6px;
+}
+
+.sj-flat-menu li .fm-item .fm-button {
+  width: 0.5rem;
+  height: 0.9rem;
+  margin: 0px;
+  margin-top: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0.1rem;
+  top: 50%;
+  margin-top: -0.5rem;
+}
+
+.sj-flat-menu li {
+ background-color: #236ac8;
+ // background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#0b5da5),color-stop(1,#2c90ea));
+  cursor: pointer;
+  padding: 1px;
+}
+
+#sp-left .sp-module, #sp-right .sp-module {
+  margin: 0.1rem;
+  padding: 3px;
+  border: none;
+}
+
+.sj-flat-menu {
+  background-color: #FFF;
+  text-align: left;
+  border: 3px solid #1988b5;
+  border-radius: 4px;
+  font-size: 14px;
+}   // боковое левое меню
+
+.nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-disabled-color: #6c757d;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  margin-bottom: 0;
+  list-style: none;
+} 
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 9px 25px;
+  font-size: 17px;
+  color: #37a8c2;
+}  // меню Контакты
+
+#sp-adv {
+  padding: 1px;
+}
+
+.box1 {
+     padding-top: 5px;
+     margin-top: 5px;
+     font-size: 12px;
+     color: #070606;
+}
+
+.box7 {
+  margin: 0.1rem auto;
+  background-color: #f5f5f5cc;
+  border-bottom: 1px solid #D4D4D4;
+  font-size: 19px;
+  padding-left: 20px;
+}
+
+.box8 {
+  margin: 0.1rem auto;
+  background-color: #f5f5f5cc;
+  border-bottom: 1px solid #D4D4D4;
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+.nspArts {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 3px;
+  background-color: #fafafa;
+}
+
+.nspArt h4.nspHeader {
+  font-size: 14px;
+  margin: 0;
+  padding: 15px 0 1px 0;
+}
+
+.nspArt {
+  box-sizing: border-box;
+  float: left;
+  margin-left: 10px;
+}
+
+.article-details .article-header h1, .article-details .article-header h2 {
+  font-size: 1.3rem;
+  color: #5baac7;
+}  // размер шрифта заголовков (цвет в админке)
+
+blockquote {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}  // Цитата в тексте 
+
+.article-info > span {
+  font-size: 0.8rem;
+  color: #aaa;
+}  // дата под заглавием материала  
+
+.sp-module ul > li > a {
+  color: #1e66c4;
+  border-bottom: 1px solid #cecdcd;
+}    //нижнее меню
+
+#sp-bottom .sp-module ul>li>a {
+   display:block
+   color: #37c2c2;
+}
+
+.sp-megamenu-parent > li:hover > a {
+  color: #56c2ec;
+}
+
+.box9 {
+  margin: 0.3rem auto;
+  background-color: #aeaeaecc;
+  border-bottom: 1px solid #D4D4D4;
+  font-size: 17px;
+}
+
+.nav-pills > li > a {
+  font-family: 'Bree Serif', sans-serif;
+  font-size: 14px;
+  color: #263d97;
+  text-decoration: none;
+}</style>
+	<style>h1{font-family: 'Lato', sans-serif;font-size: 24px;font-weight: 300;color: #5baac7;text-decoration: none;}
+</style>
+	<style>.sp-megamenu-parent > li > a, .sp-megamenu-parent > li > span, .sp-megamenu-parent .sp-dropdown li.sp-menu-item > a{font-family: 'Bree Serif', sans-serif;font-size: 14px;font-weight: 400;color: #ffffff;text-decoration: none;}
+</style>
+	<style>.menu.nav-pills > li > a, .menu.nav-pills > li > span, .menu.nav-pills .sp-dropdown li.sp-menu-item > a{font-family: 'Bree Serif', sans-serif;font-size: 14px;font-weight: 400;color: #ffffff;text-decoration: none;}
+</style>
+	<style>.logo-image {height:95px;}.logo-image-phone {height:95px;}</style>
+	<style>@media(max-width: 992px) {.logo-image {height: 36px;}.logo-image-phone {height: 36px;}}</style>
+	<style>@media(max-width: 576px) {.logo-image {height: 36px;}.logo-image-phone {height: 36px;}}</style>
+	<style>#sp-header{ background-image:url("/images/headers/header_menu.jpg");background-repeat:repeat-x;background-size:inherit;background-position:50% 50%; }</style>
+	<style>
+#accordeonck849 { padding:0;margin:0; } 
+[data-id="accordeonck849"].accordeonck-wrap { background: #236ac8;background-color: #236ac8;background: -moz-linear-gradient(top,  #236ac8 0%, #236ac8 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#236ac8), color-stop(100%,#236ac8)); background: -webkit-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: -o-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: -ms-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: linear-gradient(top,  #236ac8 0%,#236ac8 100%); -moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px; } 
+#accordeonck849 li.accordeonck { list-style: none;/*overflow: hidden;*/ }
+#accordeonck849 ul[class^="content"] { margin:0;padding:0; }
+#accordeonck849 li.accordeonck > span { position: relative; display: block; }
+#accordeonck849 li.parent > span span.toggler_icon { top: 0;position: absolute; cursor: pointer; display: block; height: 100%; z-index: 10;right:0; background: url(/images/headers/icon_active.png) center center no-repeat !important;width: 30px;}
+#accordeonck849 li.parent.open > span span.toggler_icon { right:0; background: url(/images/headers/icon_normal.png) center center no-repeat !important;}
+#accordeonck849 li.accordeonck.level2 > span { }
+#accordeonck849 li.level2 li.accordeonck > span { }
+#accordeonck849 a.accordeonck { display: block;text-decoration: none; color: #F7F8FF;font-size: 12px;font-weight: normal;}
+#accordeonck849 a.accordeonck:hover { text-decoration: none; color: #FFFFFF;}
+#accordeonck849 li.parent > span a { display: block;/*outline: none;*/ }
+#accordeonck849 li.parent.open > span a {  }
+#accordeonck849 a.accordeonck > .badge { margin: 0 0 0 5px; }
+#accordeonck849 li.level2.parent.open > span span.toggler_icon { background: url(/) center center no-repeat !important;}
+#accordeonck849 li.level3.parent.open > span span.toggler_icon { background: url(/) center center no-repeat !important;}
+#accordeonck849 li.level1 > span {  } 
+#accordeonck849 li.level1 > span a { padding-top: 8px;padding-right: 6px;padding-bottom: 8px;padding-left: 6px;color: #F7F8FF;font-size: 12px;font-weight: normal; } 
+#accordeonck849 li.level1 > span span.accordeonckdesc { font-size: 10px; } 
+#accordeonck849 li.level1:hover > span {  } 
+#accordeonck849 li.level1:hover > span a { color: #FFFFFF; } 
+#accordeonck849 li.level1.active > span {  } 
+#accordeonck849 li.level1.active > span a { color: #FFFFFF; } 
+#accordeonck849 li.level2 > span {  } 
+#accordeonck849 li.level2 > span a { padding-top: 5px;padding-bottom: 5px;padding-left: 15px; } 
+#accordeonck849 li.level2 li.accordeonck > span {  } 
+#accordeonck849 li.level2 li.accordeonck > span a { padding-top: 5px;padding-bottom: 5px;padding-left: 25px; } #accordeonck849 ul[class^="content"] {
+	display: none;
+}
+
+#accordeonck849 .toggler_icon {
+	top: 0;
+}</style>
+	<style>
+#accordeonck850 { padding:0;margin:0; } 
+[data-id="accordeonck850"].accordeonck-wrap { background: #236ac8;background-color: #236ac8;background: -moz-linear-gradient(top,  #236ac8 0%, #236ac8 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#236ac8), color-stop(100%,#236ac8)); background: -webkit-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: -o-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: -ms-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: linear-gradient(top,  #236ac8 0%,#236ac8 100%); -moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px; } 
+#accordeonck850 li.accordeonck { list-style: none;/*overflow: hidden;*/ }
+#accordeonck850 ul[class^="content"] { margin:0;padding:0; }
+#accordeonck850 li.accordeonck > span { position: relative; display: block; }
+#accordeonck850 li.parent > span span.toggler_icon { top: 0;position: absolute; cursor: pointer; display: block; height: 100%; z-index: 10;right:0; background: url(/images/headers/icon_active.png) center center no-repeat !important;width: 30px;}
+#accordeonck850 li.parent.open > span span.toggler_icon { right:0; background: url(/images/headers/icon_normal.png) center center no-repeat !important;}
+#accordeonck850 li.accordeonck.level2 > span { }
+#accordeonck850 li.level2 li.accordeonck > span { }
+#accordeonck850 a.accordeonck { display: block;text-decoration: none; color: #F7F8FF;font-size: 12px;font-weight: normal;}
+#accordeonck850 a.accordeonck:hover { text-decoration: none; color: #FFFFFF;}
+#accordeonck850 li.parent > span a { display: block;/*outline: none;*/ }
+#accordeonck850 li.parent.open > span a {  }
+#accordeonck850 a.accordeonck > .badge { margin: 0 0 0 5px; }
+#accordeonck850 li.level2.parent.open > span span.toggler_icon { background: url(/) center center no-repeat !important;}
+#accordeonck850 li.level3.parent.open > span span.toggler_icon { background: url(/) center center no-repeat !important;}
+#accordeonck850 li.level1 > span {  } 
+#accordeonck850 li.level1 > span a { padding-top: 8px;padding-right: 6px;padding-bottom: 8px;padding-left: 6px;color: #F7F8FF;font-size: 12px;font-weight: normal; } 
+#accordeonck850 li.level1 > span span.accordeonckdesc { font-size: 10px; } 
+#accordeonck850 li.level1:hover > span {  } 
+#accordeonck850 li.level1:hover > span a { color: #FFFFFF; } 
+#accordeonck850 li.level1.active > span {  } 
+#accordeonck850 li.level1.active > span a { color: #FFFFFF; } 
+#accordeonck850 li.level2 > span {  } 
+#accordeonck850 li.level2 > span a { padding-top: 5px;padding-bottom: 5px;padding-left: 15px; } 
+#accordeonck850 li.level2 li.accordeonck > span {  } 
+#accordeonck850 li.level2 li.accordeonck > span a { padding-top: 5px;padding-bottom: 5px;padding-left: 25px; } #accordeonck850 ul[class^="content"] {
+	display: none;
+}
+
+#accordeonck850 .toggler_icon {
+	top: 0;
+}</style>
+	<style>
+#accordeonck851 { padding:0;margin:0; } 
+[data-id="accordeonck851"].accordeonck-wrap { background: #236ac8;background-color: #236ac8;background: -moz-linear-gradient(top,  #236ac8 0%, #236ac8 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#236ac8), color-stop(100%,#236ac8)); background: -webkit-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: -o-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: -ms-linear-gradient(top,  #236ac8 0%,#236ac8 100%);background: linear-gradient(top,  #236ac8 0%,#236ac8 100%); -moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px; } 
+#accordeonck851 li.accordeonck { list-style: none;/*overflow: hidden;*/ }
+#accordeonck851 ul[class^="content"] { margin:0;padding:0; }
+#accordeonck851 li.accordeonck > span { position: relative; display: block; }
+#accordeonck851 li.parent > span span.toggler_icon { top: 0;position: absolute; cursor: pointer; display: block; height: 100%; z-index: 10;right:0; background: url(/images/headers/icon_active.png) center center no-repeat !important;width: 30px;}
+#accordeonck851 li.parent.open > span span.toggler_icon { right:0; background: url(/images/headers/icon_normal.png) center center no-repeat !important;}
+#accordeonck851 li.accordeonck.level2 > span { }
+#accordeonck851 li.level2 li.accordeonck > span { }
+#accordeonck851 a.accordeonck { display: block;text-decoration: none; color: #F7F8FF;font-size: 12px;font-weight: normal;}
+#accordeonck851 a.accordeonck:hover { text-decoration: none; color: #FFFFFF;}
+#accordeonck851 li.parent > span a { display: block;/*outline: none;*/ }
+#accordeonck851 li.parent.open > span a {  }
+#accordeonck851 a.accordeonck > .badge { margin: 0 0 0 5px; }
+#accordeonck851 li.level2.parent.open > span span.toggler_icon { background: url(/) center center no-repeat !important;}
+#accordeonck851 li.level3.parent.open > span span.toggler_icon { background: url(/) center center no-repeat !important;}
+#accordeonck851 li.level1 > span {  } 
+#accordeonck851 li.level1 > span a { padding-top: 8px;padding-right: 6px;padding-bottom: 8px;padding-left: 6px;color: #F7F8FF;font-size: 12px;font-weight: normal; } 
+#accordeonck851 li.level1 > span span.accordeonckdesc { font-size: 10px; } 
+#accordeonck851 li.level1:hover > span {  } 
+#accordeonck851 li.level1:hover > span a { color: #FFFFFF; } 
+#accordeonck851 li.level1.active > span {  } 
+#accordeonck851 li.level1.active > span a { color: #FFFFFF; } 
+#accordeonck851 li.level2 > span {  } 
+#accordeonck851 li.level2 > span a { padding-top: 5px;padding-bottom: 5px;padding-left: 15px; } 
+#accordeonck851 li.level2 li.accordeonck > span {  } 
+#accordeonck851 li.level2 li.accordeonck > span a { padding-top: 5px;padding-bottom: 5px;padding-left: 25px; } #accordeonck851 ul[class^="content"] {
+	display: none;
+}
+
+#accordeonck851 .toggler_icon {
+	top: 0;
+}</style>
+<script src="/media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
+	<script src="/media/vendor/jquery/js/jquery-noconflict.min.js?3.7.1"></script>
+	<script src="/media/mod_menu/js/menu.min.js?9a79b1" type="module"></script>
+	<script type="application/json" class="joomla-script-options new">{"data":{"breakpoints":{"tablet":991,"mobile":480},"header":{"stickyOffset":"100"}},"joomla.jtext":{"ERROR":"Помилка","MESSAGE":"Повідомлення","NOTICE":"Зауваження","WARNING":"Попередження","JCLOSE":"Закрити","JOK":"Гаразд","JOPEN":"Відчинено"},"system.paths":{"root":"","rootFull":"https:\/\/pfts.ua\/","base":"","baseFull":"https:\/\/pfts.ua\/"},"csrf.token":"53869bcff4a7a596387958de20e20be5"}</script>
+	<script src="/media/system/js/core.min.js?a3d8f8"></script>
+	<script src="/media/vendor/bootstrap/js/alert.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/button.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/carousel.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/collapse.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/dropdown.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/modal.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/offcanvas.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/popover.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/scrollspy.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/tab.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/toast.min.js?5.3.8" type="module"></script>
+	<script src="/media/system/js/showon.min.js?e51227" type="module"></script>
+	<script src="/media/system/js/messages.min.js?9a4811" type="module"></script>
+	<script src="/templates/shaper_helixultimate/js/inert.min.js"></script>
+	<script src="/plugins/system/helixultimate/assets/js/chosen.jquery.js"></script>
+	<script src="/templates/shaper_helixultimate/js/main.js"></script>
+	<script src="https://pfts.ua/modules/mod_datetime/assets/js/dayjs.min.js"></script>
+	<script src="https://pfts.ua/modules/mod_datetime/assets/js/dayjs_plugin_utc.js"></script>
+	<script src="https://pfts.ua/modules/mod_datetime/assets/js/dayjs_plugin_timezone.js"></script>
+	<script src="https://pfts.ua/modules/mod_datetime/assets/js/locales/uk.js"></script>
+	<script src="/media/com_accordeonmenuck/assets/accordeonmenuck.js?ver=3.6.1"></script>
+	<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pfts.ua/#/schema/Organization/base","name":"ПФТС  ","url":"https://pfts.ua/"},{"@type":"WebSite","@id":"https://pfts.ua/#/schema/WebSite/base","url":"https://pfts.ua/","name":"ПФТС  ","publisher":{"@id":"https://pfts.ua/#/schema/Organization/base"}},{"@type":"WebPage","@id":"https://pfts.ua/#/schema/WebPage/base","url":"https://pfts.ua/how-become-member","name":"Як стати учасником — ПФТС  ","description":"Найбільший організатор торгів цінними паперами і основне джерело інформації по фондовому ринку України для міжнародних інвесторів.","isPartOf":{"@id":"https://pfts.ua/#/schema/WebSite/base"},"about":{"@id":"https://pfts.ua/#/schema/Organization/base"},"inLanguage":"uk-UA"},{"@type":"Article","@id":"https://pfts.ua/#/schema/com_content/article/33","name":"Як стати учасником","headline":"Як стати учасником","inLanguage":"uk-UA","isPartOf":{"@id":"https://pfts.ua/#/schema/WebPage/base"}}]}</script>
+	<script>template="shaper_helixultimate";</script>
+	<script>    document.addEventListener('DOMContentLoaded', function () {
+        // Assuming you've included dayjs and the Greek locale already
+        dayjs.locale(`uk`);
+        dayjs.extend(dayjs_plugin_utc);
+        dayjs.extend(dayjs_plugin_timezone);
+
+        // DATE
+        const mod_dateElement = document.getElementById(`mod_date_js_813`);
+
+        function modUpdateDate() {
+            const currentDate = dayjs()
+                .format(`DD/MM/YYYY`); // YYYY-MM-DD HH:mm:ss
+            mod_dateElement.textContent = currentDate;
+        }
+
+        // Update the time immediately upon script load
+        modUpdateDate();
+
+        // Then update it every second (1000 milliseconds)
+        setInterval(modUpdateDate, 1000);
+    });</script>
+	<script>        document.addEventListener('DOMContentLoaded', function () {
+            // Assuming you've included dayjs and the Greek locale already
+            dayjs.locale(`uk`);
+            dayjs.extend(dayjs_plugin_utc);
+            dayjs.extend(dayjs_plugin_timezone);
+
+            // TIME
+            const mod_timeElement =document.getElementById('mod_time_js_813');
+
+            function modUpdateTime() {
+                const currentTime = dayjs()
+                    .format(`HH:mm:ss`); // YYYY-MM-DD HH:mm:ss
+                mod_timeElement.textContent = currentTime;
+            }
+
+            // Update the time immediately upon script load
+            modUpdateTime();
+
+            // Then update it every second (1000 milliseconds)
+            setInterval(modUpdateTime, 1000);
+        });</script>
+	<script>jQuery(document).ready(function(jQuery){new Accordeonmenuck('#accordeonck849', {fadetransition : false,eventtype : 'click',transition : 'linear',menuID : 'accordeonck849',defaultopenedid : '',activeeffect : '',showcounter : '',showactive : '1',closeothers : '1',eventtarget : 'image',duree : 500});}); </script>
+	<script>jQuery(document).ready(function(jQuery){new Accordeonmenuck('#accordeonck850', {fadetransition : false,eventtype : 'click',transition : 'linear',menuID : 'accordeonck850',defaultopenedid : '',activeeffect : '',showcounter : '',showactive : '1',closeothers : '1',eventtarget : 'image',duree : 500});}); </script>
+	<script>jQuery(document).ready(function(jQuery){new Accordeonmenuck('#accordeonck851', {fadetransition : false,eventtype : 'click',transition : 'linear',menuID : 'accordeonck851',defaultopenedid : '',activeeffect : '',showcounter : '',showactive : '1',closeothers : '1',eventtarget : 'image',duree : 500});}); </script>
+			</head>
+	<body class="site helix-ultimate hu com_content com-content view-article layout-default task-none itemid-223 uk-ua ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right">
+
+		
+		
+		<div class="body-wrapper">
+			<div class="body-innerwrapper">
+					<div class="sticky-header-placeholder"></div>
+<header id="sp-header" class="full-header full-header-center">
+	<div class="container-fluid">
+		<div class="container-inner">
+			<div class="row align-items-center">
+
+				<!-- Left toggler (if left) -->
+				
+				<!-- Logo -->
+				<div id="sp-logo" class="col-auto">
+					<div class="sp-column">
+													
+							<div class="logo"><a href="/">
+				<img class='logo-image '
+					srcset='https://pfts.ua/images/logo_uk_new.jpg 1x'
+					src='https://pfts.ua/images/logo_uk_new.jpg'
+					height='95'
+					alt='ПФТС  '
+				/>
+				</a></div>											</div>
+				</div>
+
+				<!-- Menu -->
+				<div id="sp-menu" class="menu-with-social menu-center col-auto flex-auto">
+					<div class="sp-column d-flex justify-content-between align-items-center">
+						<div class="menu-with-offcanvas d-flex justify-content-between align-items-center flex-auto">
+							<nav class="sp-megamenu-wrapper d-flex" role="navigation" aria-label="Main Navigation"><ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block"><li class="sp-menu-item"><a   href="/"  ><img src="/images/images/home_pfts_15.png" alt="Головна" /></a></li><li class="sp-menu-item"><a   href="/trade-info/trade-results"  >Підсумки</a></li><li class="sp-menu-item"><a   href="/trade-info/90-xid-torgiv"  >Хід торгів</a></li><li class="sp-menu-item"><a   href="/stock-exchange-pfts/list-pfts"  >СПИСОК АКТИВІВ</a></li><li class="sp-menu-item"><a   href="/stock-exchange-pfts/pfts-participants"  >Учасники торгів</a></li><li class="sp-menu-item"><a   href="/ratings"  >Рейтинги</a></li><li class="sp-menu-item"><a   href="/stock-exchange-pfts/stock-exchange-tariffs"  >Тарифи</a></li><li class="sp-menu-item"><a  rel="noopener noreferrer" href="https://pfts.ua/poff/#!/" target="_blank"  >Кабінет учасника</a></li><li class="sp-menu-item"><a   href="/kontakty"  >Контакти</a></li></ul></nav>							
+						</div>
+
+						<!-- Related Modules -->
+						<div class="d-none d-lg-flex header-modules align-items-center">
+								
+													</div>
+
+						<!-- Social icons -->
+						<div class="social-wrap no-border d-flex align-items-center">
+													</div>
+
+						<!-- Right toggler (if right or mega mobile) -->
+													
+  	<a id="offcanvas-toggler"
+  	   class="offcanvas-toggler-secondary offcanvas-toggler-right d-flex d-lg-none align-items-center"
+  	   href="#"
+  	   aria-label="Menu"
+  	   title="Menu">
+  	   <div class="burger-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+  	</a>											</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>				<main id="sp-main">
+					
+<section id="sp-adv" >
+
+				
+	
+<div class="row">
+	<div id="sp-adv1" class="col-lg-3 "><div class="sp-column "><nav class="moduletable  col-md-12" aria-label="Головна Біржа ПФТС">
+        <ul class="mod-menu mod-list menu nav nav-pills">
+<li class="item-375"><a href="/" >Головна</a></li></ul>
+</nav>
+</div></div><div id="sp-adv2" class="col-lg-4 "><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><form action="../tabdata/bs/moreinformation.html" method="get" target="_blank"> <p> <label> <input name="ticker" type="text" placeholder="Пошук Тікер або ISIN" /> <input src="/tabdata/bs/resources/images/send_uk.gif" type="image" /> </label> </p> </form></div></div></div></div><div id="sp-adv3" class="col-lg-3 "><div class="sp-column "><div class="moduletable  box1">
+        
+<div class="mod_datetime mod_datetime_813">
+                                <span class="mod_date" id="mod_date_js_813"></span>
+                                    <span class="mod_time" id="mod_time_js_813"></span>
+                    </div></div>
+</div></div><div id="sp-adv5" class="col-lg-2 "><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><div class="mod-languages">
+    <p class="visually-hidden" id="language_picker_des_686">Оберіть свою мову</p>
+
+
+    <ul aria-labelledby="language_picker_des_686" class="mod-languages__list lang-inline">
+
+                                            <li class="lang-active">
+                <a aria-current="true"  href="https://pfts.ua/how-become-member">
+                                                                        <img title="Українська (UA)" src="/media/mod_languages/images/uk_ua.gif" alt="Українська (UA)">                                                            </a>
+            </li>
+                                        <li>
+                <a  href="/en/">
+                                                                        <img title="English (UK)" src="/media/mod_languages/images/en.gif" alt="English (UK)">                                                            </a>
+            </li>
+                </ul>
+
+</div>
+
+</div></div></div></div></div>
+				
+	</section>
+
+<section id="sp-section-3" >
+
+				
+	
+<div class="row">
+	<div id="sp-title" class="col-lg-12 "><div class="sp-column "></div></div></div>
+				
+	</section>
+
+<section id="sp-main-body" >
+
+									
+	
+<div class="row">
+	<aside id="sp-left" class="col-lg-2 "><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><div class="accordeonck-wrap " data-id="accordeonck849">
+<ul class="menu" id="accordeonck849">
+<li id="item-223" class="accordeonck item223 current active first level1 " data-level="1" ><span class="accordeonck_outer "><a class="accordeonck isactive " href="/how-become-member" >Як стати учасником<span class="accordeonckdesc"></span></a></span></li><li id="item-224" class="accordeonck item224 parent parent level1 " data-level="1" ><span class="accordeonck_outer toggler toggler_1"><a class="accordeonck " href="/for-investors" >Інвесторам<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_1 accordeonck" style="display:none;"><li id="item-225" class="accordeonck item225 first level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/for-investors/tools" >Інструменти<span class="accordeonckdesc"></span></a></span></li><li id="item-226" class="accordeonck item226 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/for-investors/members-of-stock" >Учасники торгів<span class="accordeonckdesc"></span></a></span></li><li id="item-398" class="accordeonck item398 last level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/analitika" >Аналітика<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-227" class="accordeonck item227 last level1 " data-level="1" ><span class="accordeonck_outer "><a class="accordeonck " href="/for-issuers" >Емітентам<span class="accordeonckdesc"></span></a></span></li></ul></div>
+</div></div><div class="sp-module "><div class="sp-module-content"><div class="accordeonck-wrap " data-id="accordeonck850">
+<ul class="menu" id="accordeonck850">
+<li id="item-229" class="accordeonck item229 active first parent parent level1 " data-level="1" ><span class="accordeonck_outer toggler toggler_1"><a class="accordeonck " href="/stock-exchange-pfts" >Про Біржу<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_1 accordeonck" style=""><li id="item-299" class="accordeonck item299 first level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/historypfts" >Історія<span class="accordeonckdesc"></span></a></span></li><li id="item-309" class="accordeonck item309 parent parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/stock-exchange-pfts/structure" >Органи управління<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-290" class="accordeonck item290 first level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/structure/board" >Наглядова рада<span class="accordeonckdesc"></span></a></span></li><li id="item-291" class="accordeonck item291 last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/structure/management" >Правління<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-280" class="accordeonck item280 parent parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/stock-exchange-pfts/council-comitets" >Комітети, Ради, Комісії<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-281" class="accordeonck item281 first level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/council-comitets/indexes-committee" >Індексна комісія<span class="accordeonckdesc"></span></a></span></li><li id="item-284" class="accordeonck item284 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/council-comitets/strategycom" >Комітет зі стратегії<span class="accordeonckdesc"></span></a></span></li><li id="item-283" class="accordeonck item283 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/council-comitets/developmentcom" >Рада з розвитку<span class="accordeonckdesc"></span></a></span></li><li id="item-258" class="accordeonck item258 last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/council-comitets/disc" >Постійна дисциплінарна комісія<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-311" class="accordeonck item311 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/trading-calendar" >Торговий календар<span class="accordeonckdesc"></span></a></span></li><li id="item-250" class="accordeonck item250 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/trade-schedule" >Розклад торгів<span class="accordeonckdesc"></span></a></span></li><li id="item-249" class="accordeonck item249 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/pfts-participants" >Учасники торгів<span class="accordeonckdesc"></span></a></span></li><li id="item-247" class="accordeonck item247 parent parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/stock-exchange-pfts/list-pfts" >Список активів<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-318" class="accordeonck item318 first level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/list-pfts/inclusion" >Процедура включення<span class="accordeonckdesc"></span></a></span></li><li id="item-248" class="accordeonck item248 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/list-pfts/selist-acts" >Рішення<span class="accordeonckdesc"></span></a></span></li><li id="item-374" class="accordeonck item374 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/list-pfts/prospekti-emisiji" >Проспекти емісії<span class="accordeonckdesc"></span></a></span></li><li id="item-469" class="accordeonck item469 last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/novyny-emitentiv" >Новини емітентів<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-292" class="accordeonck item292 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/stock-exchange-tariffs" >Тарифи<span class="accordeonckdesc"></span></a></span></li><li id="item-259" class="accordeonck item259 parent parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/stock-exchange-pfts/pfts-publication" >Оприлюднення інформації<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-295" class="accordeonck item295 first level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/pfts-publication/pfts-issuer" >Дані про емітента ПАТ  &quot;Фондова біржа ПФТС&quot;<span class="accordeonckdesc"></span></a></span></li><li id="item-312" class="accordeonck item312 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/pfts-publication/meeting" >Повідомлення про загальні збори<span class="accordeonckdesc"></span></a></span></li><li id="item-293" class="accordeonck item293 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/pfts-publication/pfts-principle" >Документи емітента<span class="accordeonckdesc"></span></a></span></li><li id="item-294" class="accordeonck item294 last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/stock-exchange-pfts/pfts-publication/pfts-report" >Звітність емітента<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-396" class="accordeonck item396 last level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/press-about-pfts" >Преса про ПФТС<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-313" class="accordeonck item313 parent parent level1 " data-level="1" ><span class="accordeonck_outer toggler toggler_1"><a class="accordeonck " href="/trade-info" >Інформація про торги<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_1 accordeonck" style="display:none;"><li id="item-232" class="accordeonck item232 first level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/trade-results" >Підсумки торгів<span class="accordeonckdesc"></span></a></span></li><li id="item-404" class="accordeonck item404 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/90-xid-torgiv" >Хід торгів<span class="accordeonckdesc"></span></a></span></li><li id="item-245" class="accordeonck item245 parent parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/trade-info/indexes" >Індекси<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-246" class="accordeonck item246 first last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/indexes/shares-indexes" >Індекси акцій<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-218" class="accordeonck item218 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/ssmsc-report" >Біржовий курс<span class="accordeonckdesc"></span></a></span></li><li id="item-233" class="accordeonck item233 parent parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/trade-info/trade-information" >Торговельна інформація<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-234" class="accordeonck item234 first level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/trade-information/inf-politics" >Інформаційна політика<span class="accordeonckdesc"></span></a></span></li><li id="item-236" class="accordeonck item236 last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/trade-information/zvit-1" >«Звіт-1»<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-395" class="accordeonck item395 level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/torgi-ovdp" >Торги ОВДП<span class="accordeonckdesc"></span></a></span></li><li id="item-314" class="accordeonck item314 parent last parent level2 " data-level="2" ><span class="accordeonck_outer toggler toggler_2"><a class="accordeonck " href="/trade-info/markets" >Ринки / Аукціони / Технології<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_2 accordeonck" style="display:none;"><li id="item-260" class="accordeonck item260 first level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/eccp" >Центральний контрагент<span class="accordeonckdesc"></span></a></span></li><li id="item-321" class="accordeonck item321 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/bid" >Ринок заявок<span class="accordeonckdesc"></span></a></span></li><li id="item-322" class="accordeonck item322 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/quotations" >Ринок котировок<span class="accordeonckdesc"></span></a></span></li><li id="item-323" class="accordeonck item323 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/repo" >Ринок РЕПО<span class="accordeonckdesc"></span></a></span></li><li id="item-324" class="accordeonck item324 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/placing" >Первинне розміщення<span class="accordeonckdesc"></span></a></span></li><li id="item-325" class="accordeonck item325 level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/auctions" >Аукціони<span class="accordeonckdesc"></span></a></span></li><li id="item-532" class="accordeonck item532 last level3 " data-level="3" ><span class="accordeonck_outer "><a class="accordeonck " href="/trade-info/markets/btm-deryvatyvnykh-kontraktiv" >БТМ деривативних контрактів<span class="accordeonckdesc"></span></a></span></li></ul></li></ul></li><li id="item-263" class="accordeonck item263 parent parent level1 " data-level="1" ><span class="accordeonck_outer toggler toggler_1"><a class="accordeonck " href="/pfts-next" >Підключення до торгів<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_1 accordeonck" style="display:none;"><li id="item-306" class="accordeonck item306 first level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/pfts-next/study" >Сертифікація уповноваженої особи<span class="accordeonckdesc"></span></a></span></li><li id="item-307" class="accordeonck item307 last level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/pfts-next/faq1" >FAQ<span class="accordeonckdesc"></span></a></span></li></ul></li><li id="item-296" class="accordeonck item296 parent parent level1 " data-level="1" ><span class="accordeonck_outer toggler toggler_1"><a class="accordeonck " href="/documents" >Документи<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_1 accordeonck" style="display:none;"><li id="item-317" class="accordeonck item317 first level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/documents/general-documents" >Загальні документи<span class="accordeonckdesc"></span></a></span></li><li id="item-316" class="accordeonck item316 last level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/documents/trade-documents" >Документи стосовно торгів<span class="accordeonckdesc"></span></a></span></li></ul></li></ul></div>
+</div></div><div class="sp-module "><div class="sp-module-content"><div class="accordeonck-wrap " data-id="accordeonck851">
+<ul class="menu" id="accordeonck851">
+<li id="item-285" class="accordeonck item285 first parent parent level1 " data-level="1" ><span class="accordeonck_outer toggler toggler_1"><a class="accordeonck " href="/resources" >Ресурси<span class="accordeonckdesc"></span></a><span class="toggler_icon" tabIndex="0" role="button" aria-label="ACCORDEONMENUCK_TOGGLER_LABEL"></span></span><ul class="content_1 accordeonck" style="display:none;"><li id="item-286" class="accordeonck item286 first level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/resources/resources-found-market" >Ресурси по фондовому ринку<span class="accordeonckdesc"></span></a></span></li><li id="item-287" class="accordeonck item287 last level2 " data-level="2" ><span class="accordeonck_outer "><a class="accordeonck " href="/resources/distributors" >Дистриб'ютори інформації ПФТС<span class="accordeonckdesc"></span></a></span></li></ul></li></ul></div>
+</div></div></div></aside>
+<div id="sp-component" class="col-lg-10 ">
+	<div class="sp-column ">
+		<div id="system-message-container" aria-live="polite"></div>
+
+
+					<div class="sp-module-content-top clearfix">
+				<div class="sp-module "><div class="sp-module-content">
+<div id="mod-custom765" class="mod-custom custom">
+    <p><a href="/trade-info/torgi-ovdp" dir="ltr" title="Детальніше про Державні облігації"><img src="/images/banners/dergavni_obligacii.jpg" alt="Державні облігації" dir="ltr" style="display: block; margin-left: auto; margin-right: auto;" title="Державні облігації" /></a></p></div>
+</div></div>
+			</div>
+		
+		<div class="article-details " itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="inLanguage" content="uk-UA">
+
+    
+    
+    
+    
+            <div class="article-header">
+                            <h1 itemprop="headline">
+                    Як стати учасником                </h1>
+            
+            
+            
+                    </div>
+    
+    <div class="article-can-edit d-flex flex-wrap justify-content-between">
+                
+            </div>
+
+    
+        
+                
+    
+        
+        
+        
+        <div itemprop="articleBody">
+             
+<p><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">Учасниками торгів на</span> <span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">АТ «Фондова біржа ПФТС» можуть бути </span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">інвестиційні фірми - </span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">професійні учасники ринк</span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">ів капіталу</span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">, які здійснюють торгівлю </span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">фінансовими інструментами, які пройшли процедуру доступу до торгів згідно з правилами організованих ринків АТ </span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">«Фондова біржа ПФТС».</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">Детальні умови </span><span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">доступу до участі у торгах</span> <span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">на АТ «Фондова біржа ПФТС» викладено&nbsp;</span>у розділі <a href="/pfts-next" dir="ltr">«Підключення до торгів»</a>.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Юридичні та фізичні особи, що мають бажання інвестувати свої кошти <span style="font-size: 10pt; line-height: 107%; font-family: Arial, &quot;sans-serif&quot;; color: rgb(37, 37, 37);">у фінансові інструменти</span>, які допущені до торгів на АТ «Фондова біржа ПФТС», повинні звертатися до <a href="/stock-exchange-pfts/pfts-participants" dir="ltr">учасників торгів</a>.</span></p>        </div>
+
+        
+        
+        
+    
+
+        
+    
+
+   
+                </div>
+
+
+
+			</div>
+</div>
+</div>
+									
+	</section>
+
+<footer id="sp-footer" >
+
+						<div class="container">
+				<div class="container-inner">
+			
+	
+<div class="row">
+	<div id="sp-footer1" class="col-lg-12 "><div class="sp-column "><span class="sp-copyright">Copyright ©  АТ «ФОНДОВА БІРЖА ПФТС», 1996 - 2026. Усі права захищено.</span></div></div></div>
+							</div>
+			</div>
+			
+	</footer>
+				</main>
+			</div>
+		</div>
+
+		<!-- Off Canvas Menu -->
+		<div class="offcanvas-overlay"></div>
+		<!-- Rendering the offcanvas style -->
+		<!-- If canvas style selected then render the style -->
+		<!-- otherwise (for old templates) attach the offcanvas module position -->
+					<div class="offcanvas-menu left-1 offcanvas-arrow-right" tabindex="-1" inert>
+	<div class="d-flex align-items-center justify-content-between p-3 pt-4">
+				<a href="#" class="close-offcanvas" role="button" aria-label="Close Off-canvas">
+			<div class="burger-icon" aria-hidden="true">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</a>
+	</div>
+	
+	<div class="offcanvas-inner">
+		<div class="d-flex header-modules mb-3">
+			
+					</div>
+		
+					<div class="sp-module "><div class="sp-module-content"><ul class="mod-menu mod-list menu nav-pills">
+<li class="item-215 default"><a href="/" ><img src="/images/images/home_pfts_15.png" alt="Головна"></a></li><li class="item-217"><a href="/trade-info/trade-results" >Підсумки</a></li><li class="item-405"><a href="/trade-info/90-xid-torgiv" >Хід торгів</a></li><li class="item-219"><a href="/stock-exchange-pfts/list-pfts" >СПИСОК АКТИВІВ</a></li><li class="item-220"><a href="/stock-exchange-pfts/pfts-participants" >Учасники торгів</a></li><li class="item-251"><a href="/ratings" >Рейтинги</a></li><li class="item-326"><a href="/stock-exchange-pfts/stock-exchange-tariffs" >Тарифи</a></li><li class="item-533"><a href="https://pfts.ua/poff/#!/" target="_blank" rel="noopener noreferrer">Кабінет учасника</a></li><li class="item-231"><a href="/kontakty" >Контакти</a></li></ul>
+</div></div>		
+		
+		
+		
+					
+				
+		<!-- custom module position -->
+		
+	</div>
+</div>				
+
+		
+		
+
+		<!-- Go to top -->
+					<a href="#" class="sp-scroll-up" aria-label="Scroll to top"><span class="fas fa-angle-up" aria-hidden="true"></span></a>
+					</body>
+</html>

@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html PUBLIC >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	www.blberza.com
+</title><link rel="icon" href="../Content/Logo/favicon-light.svg" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" /><link href="/client/combined/css.css?v=96824701" rel="stylesheet" type="text/css"/>
+<meta name="description" content="Banjalučka berza hartija od vrijednosti, Banjaluka Stock Exchange"></meta>
+    
+
+<link rel="stylesheet" type="text/css" href="../client/highstock/css/stocktools/gui.css" /><link rel="stylesheet" type="text/css" href="../client/highstock/css/annotations/popup.css" /><link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">$.noConflict()</script>
+
+</head>
+
+<body>
+    <form name="aspnetForm" method="post" action="./MemberInfo.aspx?code=RAIF" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EBB74C91" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="CuXDjOS8ZGP/Vta4Vz3lrasHKlewTUMFeptwb4vK8wLMury4q8HaFLIz5NnsSdo9/OalPdlKu2mlTrCFKeNVQcTZPmNg40L9O2zG1a4l7qqXh7dJ0GsBL6sxh6Ll3RaWHETB/XCcytkeWhDMz4mHS2CH+1ccGlcvb85XwfjHdieOHCSGndUObhQYx2HEvf4mxoeDTvhk6dt3bA9FFVVVpbsa/JsqVC00QAuvsTKT+zC0yWkbHVcKBO6ey8G0ufA5NFtyorR5btoClwP7Eczdbw==" />
+        <div id="wrapper" style="min-height: 100vh;">
+
+            <div class="d-flex flex-column" style="min-height: 100%">
+                <div class="position-sticky" style="top: 0; z-index: 10">
+                    <div class="container-xl bg-white grid-links-reset">
+                        <nav class="navbar navbar-expand-md navbar-default justify-content-between px-0">
+                            <div>
+                                <a href="/Pages/Default.aspx">
+                                    <img src="/Content/gridAssets/logo/berza-logo-1.svg" height="55" />
+                                </a>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="navbar-nav align-items-md-center flex-row">
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                    </li>
+                                    <li class="grid-divider-small primary mx-1 d-none d-lg-block"></li>
+                                    <li class="nav-item mr-4 d-none d-lg-inline-block" id="aboutus"></li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbLat" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbLat&#39;,&#39;&#39;)">Lat</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ctl00_ctl00_lbCir" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbCir&#39;,&#39;&#39;)">Ћир</a>
+                                    </li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbEng" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbEng&#39;,&#39;&#39;)">Eng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="grid-main-bg-color grid-links-reset">
+                        <div class="container-xl px-0 px-lg-3">
+                            <div class="d-flex align-items-center justify-content-between position-relative flex-wrap">
+                                <div id="divMenu0" class="d-none d-lg-flex justify-content-between grid-menu align-items-center">
+                                </div>
+                                <div id="div-search" class="pl-lg-3 pl-2 py-1">
+                                    <div class="input-group position-relative rounded">
+                                        <input name="ctl00$ctl00$tbSearch" type="text" value="Pretraga hartija" id="ctl00_ctl00_tbSearch" class="form-control rounded" onfocus="this.value=&#39;&#39;; this.style.color=&#39;#000000&#39;" style="color: gray" />
+                                        <div class="grid-append-button-icon">
+                                            <input type="submit" name="ctl00$ctl00$btSearch" value="" id="ctl00_ctl00_btSearch" class="grid-search" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="navbar-toggler d-lg-none" style="outline: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-button-icon secondary"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                                    <div class="d-flex d-lg-none text-white" id="mobileMenu1" style="max-height: 55vh; overflow-y: scroll;">
+                                    </div>
+                                    <script>
+                                        document.getElementById('mobileMenu1').addEventListener('scroll', (e) => e.stopPropagation())
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../client/combined/mootools-1.2.6.js?v=1" type="text/javascript"></script>
+                <script src="../client/combined/highstock-9.0.1.js?v=1" type="text/javascript"></script>
+                <script>
+                    Highcharts.theme = {
+                        colors: ['#3c3476', '#945fbe', '#090D48', '#039460', '#1926d4', '#e0e01b', '#de862f', '#66d4ed', '#6d8ead', '#Ed3911', '#585a83'],
+                        chart: {
+                            backgroundColor: "#f8f9fa",
+                            style: {
+                                fontFamily: 'Roboto'
+                            },
+                            width: null,
+                        },
+                        title: {
+                            style: {
+                                color: '#000',
+                                font: 'bold 16px "Roboto MS", Verdana, sans-serif'
+                            }
+                        },
+                    };
+                    // Apply the theme
+                    Highcharts.setOptions(Highcharts.theme);
+                </script>
+                <div class="grid-breadcrumbs container-xl"></div>
+                <script src="/client/combined/js.js?v=96824701" type="text/javascript"></script>
+<script src="/client/combined/loc1.js?v=96824701" type="text/javascript"></script>
+
+                <script type="text/javascript">loadMenu(getMenuData(), "memberinfo.aspx?code=raif", "memberinfo.aspx", {"indexcode":"BIRS","issuercode":"TLKM","securitycode":"TLKM-R-A"}); </script>
+                <script>
+                    jQuery(document).on('click', '.grid-dropdown-menu', function (e) {
+                        e.stopPropagation();
+                    });
+                </script>
+
+                <div id="pre-content" class="flex-grow-1 pt-3 pb-3 container-xl">
+                    
+                    
+                    
+        
+    <h2>
+        RAIFFEISEN CAPITAL AD BANJA LUKA
+    </h2>
+    <div class="py-2">
+
+        <img id="ctl00_ctl00_Content_MainContent_imgLogo" src="../Content/Member/Logo/RAIF.gif" border="0" />
+
+    </div>
+    <table style="width: 100%" cellspacing="5" class="grid-table-wrapper novUL mb-3">
+        <tr>
+            <td class="item">
+                Adresa:
+            </td>
+            <td class="hal value">
+                Vase Pelagića 2, 78000 Banja Luka
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Telefon:
+            </td>
+            <td class="hal value">
+                +387 51 231 490
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Faks:
+            </td>
+            <td class="hal value">
+                +387 51 231 491
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                e-mail:
+            </td>
+            <td class="hal value">
+                <a id="ctl00_ctl00_Content_MainContent_hlMail" href="mailto: info.raiffeisencapital@raiffeisengroup.ba"> info.raiffeisencapital@raiffeisengroup.ba</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Web adresa:
+            </td>
+            <td class="value">
+                <a id="ctl00_ctl00_Content_MainContent_hlWWW" href="http://www.raiffeisenbank.ba">www.raiffeisenbank.ba</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="item vat">
+                Ovlašteni brokeri:
+            </td>
+            <td>
+                Marija Mijanović<br/>Tanja Đukić<br/>
+            </td>
+        </tr>
+
+    </table>
+    <h2>
+        Kontakt
+    </h2>
+    <div class="table-scrollable">
+        <div>
+	<table class="novUL pad3 grid-table-wrapper" cellspacing="0" border="0" id="ctl00_ctl00_Content_MainContent_gvContacts" width="100%">
+		<tr class="table_header hal">
+			<th scope="col">Kontakt osoba</th><th scope="col">Grad</th><th scope="col">Adresa</th><th scope="col">Telefon</th><th scope="col">Fax</th><th scope="col">Email</th>
+		</tr><tr>
+			<td>Milena Jakšić Ostić</td><td>Banja Luka</td><td>Vase Pelagića 2</td><td>051 212 542</td><td>051 231 491</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Saša Kujundžić</td><td>Banja Luka</td><td>Trg Jasenovačkih žrtava 4-APIF</td><td>051 217 482</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Marija Mijanović</td><td>Banja Luka</td><td>Vase Pelagića 2</td><td>051 231 490</td><td>051 231 491</td><td>
+                        <a href='mailto:marija.mijanovic@raiffeisengroup.ba'>marija.mijanovic@raiffeisengroup.ba </a>
+                    </td>
+		</tr><tr>
+			<td>Tanja Đukić</td><td>Banja Luka</td><td>Vase Pelagića 2</td><td>&nbsp;</td><td>&nbsp;</td><td>
+                        <a href='mailto:tanja.djukic@raiffeisengroup.ba'>tanja.djukic@raiffeisengroup.ba </a>
+                    </td>
+		</tr><tr>
+			<td>Razija Solaković</td><td>Bihać</td><td>Ivana Pavla II br. 4</td><td>037 229 516</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Nevena Đurić</td><td>Bijeljina</td><td>Jovana Dučića 2 APIF</td><td>055 210 918</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milanka Tomic</td><td>Bijeljina</td><td>Majevicka bb</td><td>055 221 061</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Stanislava Mirović</td><td>Bijeljina</td><td>Karađorđeva bb</td><td>055 227 190</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sanja Babić</td><td>Bijeljina</td><td>Majevicka bb</td><td>055 221 050</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Šeherzada Sivić</td><td>Bosanska Krupa</td><td>Trg Alije Izetbegovića bb</td><td>037 476 803</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Nermin Đapo</td><td>Brcko</td><td>Bulevar mira 5</td><td>049 490 216</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Gordana Božić</td><td>Brčko</td><td>Reisa Džemaludina Čausevića 10</td><td>049 232 605</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Muhiba Osmić </td><td>Brčko</td><td>Reisa Džemaludina Čausevića 10</td><td>049 232 601</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Senada Babajić</td><td>Brčko</td><td>Reisa Džemaludina Čausevića 10</td><td>049 232 601</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dario Pajić</td><td>Brod</td><td>Svetog Save 27</td><td>053 611 555</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Gordana Kaurin</td><td>Čelinac</td><td>Cara Lazara bb-APIF</td><td>051 551 078</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dejan Rašić</td><td>Derventa</td><td>M.Bjeloševića 5-APIF</td><td>053 490 271</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Nataša Tadić</td><td>Derventa</td><td>Nikole Tesle 7</td><td>053 312 265</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Cuca Đermanović</td><td>Doboj</td><td>Svetog Save 20-APIF</td><td>053 241 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Emina Tanjić </td><td>Doboj</td><td>Svetog Save 2</td><td>053 201 202</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Slobodan Aleksić</td><td>Doboj</td><td>Svetog Save 2</td><td>053 201 214</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Radmila Krsmanović</td><td>Foča</td><td>M.Kovačevića 7-APIF</td><td>058 210 848</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Amera Hubanić</td><td>Goražde </td><td>Titova bb</td><td>038 241 510</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dženita Spahić</td><td>Gračanica</td><td>Branilaca Grada bb</td><td>035 702 700</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sanja Slijepčević</td><td>Gradiška</td><td>Vidovdanska 16-APIF</td><td>051 813 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milana Petrović Golub</td><td>Gradiška</td><td>Vidovdanska bb</td><td>051 809 872</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Slobodanka Zrnić</td><td>Gradiška</td><td>Vidovdanska bb</td><td>051 809 877</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milka Novaković</td><td>Istočno Sarajevo</td><td>Karađorđeva bb-APIF</td><td>057 340 882</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dejan Toholj</td><td>Istočno Sarajevo</td><td>Spasovdanska bb</td><td>057 343 353</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Amela Halilovic</td><td>Jelah</td><td>Titova bb-Shoping Centar</td><td>032 663 162</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Mirela Mulabdić</td><td>Jelah</td><td>Titova bb-Shoping Centar</td><td>032 664361</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Alma Temimović</td><td>Ključ</td><td>Branilaca BIH bb</td><td>037 661 923</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Željka Tepić</td><td>Kotor Varoš</td><td>Cara Dušana 26-APIF</td><td>051 783 587</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Irena Smiljic</td><td>Kotor Varoš</td><td>Cara Dušana bb</td><td>051 784 681</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Danijela Stojaković</td><td>Kozarska Dubica </td><td>Svetosavska 7</td><td>052/425093</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Željko Kopanja</td><td>Laktaši</td><td>Karađorđeva bb</td><td>051 535 822</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Ružica Murga</td><td>Livno</td><td>Trg kralja Tomislava bb</td><td>034 208 292</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Murisa Ibrišević</td><td>Lukavac</td><td>Armije RBiH 5</td><td>035 366 142</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sandra Lazić</td><td>Modriča</td><td>Kneza Miloša bb-APIF</td><td>053 812 805</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Slavica Jovanović</td><td>Modriča</td><td>Kneza Miloša bb-APIF</td><td>053 812 805</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Anđelka Cetić</td><td>Modriča</td><td>Dositeja Obradovića bb</td><td>053 821 451</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Antonija Perić</td><td>Mostar</td><td>Kneza Domagoja</td><td>036 398 332</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Ilma Nezirović</td><td>Mostar</td><td>Braće Fejića bb</td><td>036 500 921</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milena Zeljković</td><td>Mrkonjić Grad</td><td>Kralja Petra bb-APIF</td><td>050 212 001</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sanja Tomić</td><td>Mrkonjić Grad</td><td>Sime Šolaje 18</td><td>050 221 045</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Stanislava Mitrić</td><td>Mrkonjić Grad</td><td>Sime Šolaje 18</td><td>050 221 045</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Vladislava Ivanović</td><td>Novi Grad</td><td>Petra I Karađorđevića 36-APIF</td><td>052 752 329</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Zorana Kosorić</td><td>Pale</td><td>Milan Simović bb</td><td>057 201 661</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dušan Pecalj</td><td>Prijedor</td><td>V.Karađorđa 12-APIF</td><td>052 232 266</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Suzana Gavranović</td><td>Prijedor</td><td>V.Karađorđa 12-APIF</td><td>052 232 266</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Radmila Slavnić</td><td>Prijedor</td><td>Majora Milana Tepića bb</td><td>052 240 655</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Bojana Majkić</td><td>Prijedor</td><td>Majora Milana Tepića bb</td><td>052/240660</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dragana Pezer</td><td>Prnjavor</td><td>Trg Srpskih boraca 1-APIF</td><td>051 663 741</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Tarik Muhić</td><td>Sanski Most</td><td>Muse Ćazima Ćatića 24</td><td>037 688 571</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Aida Murselović</td><td>Sarajevo</td><td>Zmaja od Bosne bb</td><td>033 287 768</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sadina Đozo</td><td>Sarajevo</td><td>Štrosmajerova 10</td><td>033 277 480</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dzeneta Pitic </td><td>Sarajevo</td><td>Zmaja od Bosne bb</td><td>033 287 275</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Emir Imširović</td><td>Sarajevo</td><td>Ćemaluša 2-UNIBROKER</td><td>033 561 660</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Danka Novaković</td><td>Sarajevo-Ilidza</td><td>Rustempašina bb</td><td>033 773 374</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Selma Salispahić</td><td>Sarajevo-Novi grad</td><td>Trg međunarodnog prijateljstva 5</td><td>033 768 263</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Amila Botić</td><td>Sarajevo-Novo Sarajevo</td><td>Kolodvorska 12</td><td>033 721 831</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sandra Mitrović</td><td>Sokolac</td><td>Cara Lazara bb-APIF</td><td>057 448 217</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Aleksandra Kitić</td><td>Teslić</td><td>Karađorđeva bb</td><td>053 433 501</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Anisa Vehabović </td><td>Teslić</td><td>Karađorđeva bb</td><td>053 433 502</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Nadija Galijašević</td><td>Tešanj</td><td>Titova 2</td><td>032 665 154</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Lejla Bukvić</td><td>Tešanj</td><td>Kraševo bb</td><td>032 692 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Anka Grujičić </td><td>Trebinje</td><td>Kralja Petra I 39-APIF</td><td>059 220 235</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Jelena Šojić</td><td>Trebinje</td><td>Cara Dušana 1</td><td>059 270 482</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Jadranka Mešković</td><td>Tuzla</td><td>I inzinjerske brigade bb</td><td>035 305 557</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Amra Suljić</td><td>Tuzla</td><td>15 Maja bb</td><td>035 300 587</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Nusreta Ahmetović</td><td>Tuzla</td><td>Univerzitetska 16</td><td>035 321 154</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Mira Stančić</td><td>Ugljevik</td><td>Jednostanka 20</td><td>055 771 260</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Bobana Pribilović</td><td>Višegrad</td><td>Kralja Petra I 6-APIF</td><td>058 620 330</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Erna Dizdar</td><td>Zenica</td><td>Kamberovića polje bb</td><td>032 249 221</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Nermina Šabić</td><td>Zenica</td><td>Kamberovića polje bb</td><td>032 244 066</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Ilhana Hasagić</td><td>Zenica</td><td>Maršala Tita bb</td><td>032 209 145</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Mitrović Ljubica</td><td>Zvornik</td><td>Svetog Save 62-APIF</td><td>056 210 256</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dejan Markanović</td><td>Zvornik</td><td>Svetog Save bb</td><td>056 231 975</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Olgica Radović</td><td>Zvornik</td><td>Svetog Save bb</td><td>056 231 977</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Zehra Hasanović</td><td>Živinice</td><td>25. Novembra bb</td><td>035 366 148</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr>
+	</table>
+</div>
+    </div>
+
+
+                </div>
+                <a id="back2Top" title="Back to top" href="#">
+                    <img src="/Content/gridAssets/icons/icon-arrow-upwrads.svg" />
+                </a>
+                <script>
+                    jQuery(window).scroll(function () {
+                        var height = jQuery(window).scrollTop();
+                        if (height > 100) {
+                            jQuery('#back2Top').fadeIn();
+                        } else {
+                            jQuery('#back2Top').fadeOut();
+                        }
+                    });
+                    jQuery(document).ready(function () {
+                        jQuery("#back2Top").click(function (event) {
+                            event.preventDefault();
+                            jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+                            return false;
+                        });
+                    });
+                </script>
+                <div class="grid-footer-wrapper grid-main-bg-color">
+                    <div class="container-xl py-4 grid-footer grid-links-reset">
+                        <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-start align-items-lg-center">
+                            <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center grid-white-text-color">
+                                <a class="mb-2 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                <a class="pl-0 mb-2 mb-lg-0 grid-white-text-color hover" href="mailto:komentar@blberza.com?subject=Komentar na sajt" style="cursor: pointer;">
+                                    Sugestije na sajt
+                                </a>
+                                <span class="grid-divider-small d-none d-lg-inline-block mx-3"></span>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover" href="SiteMap.aspx">Mapa sajta</a>
+                                <div class="d-lg-none mb-3">
+                                    <a id="ctl00_ctl00_LinkButton1" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton1&#39;,&#39;&#39;)">Lat</a>
+                                    <a id="ctl00_ctl00_LinkButton2" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton2&#39;,&#39;&#39;)">Ћир</a>
+                                    <a id="ctl00_ctl00_LinkButton3" class="grid-font-weight-50 grid-small-text grid-white-text-color hover" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton3&#39;,&#39;&#39;)">Eng</a>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="grid-white-text-color grid-small-text">
+                                    © 2021 Banjalučka berza. Sva prava zadržana.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    
+    
+
+    <!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WXRLKX8GQ"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1WXRLKX8GQ');
+    </script>
+    <script>
+        if (typeof jQuery != 'undefined') {
+            (function ($) {
+                $(document).ready(function () {
+                    $('.carousel').each(function (index, element) {
+                        $(this)[index].slide = null;
+                    });
+                });
+            })(jQuery);
+        }
+    </script>
+    <script>
+        function applyIcon(type) {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+
+            if (type === "dark") {
+                link.href = '../Content/Logo/favicon-dark.svg';
+            } else {
+                link.href = '../Content/Logo/favicon-light.svg';
+            }
+
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        var dmQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        var lmQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+        // Check on initial load if dark mode is already there. Apply the dark
+        // mode favicon if true.
+        if (dmQuery.matches) {
+            applyIcon("dark");
+        }
+
+        dmQuery.addListener(function () {
+            applyIcon("dark")
+        });
+
+        lmQuery.addListener(function () {
+            applyIcon("light");
+        });
+    </script>
+
+</body>
+</html>

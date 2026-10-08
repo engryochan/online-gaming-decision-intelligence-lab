@@ -1,0 +1,77 @@
+{
+  "fetch": {
+    "original_queue": 4849,
+    "pending_signal_candidates": 2412,
+    "selected": 220,
+    "hosts": 188,
+    "http200": 215,
+    "table_rows": 3709,
+    "download_observations": 12,
+    "pagination_observations": 179,
+    "global_complete": false
+  },
+  "structure": {
+    "all_table_rows": 3709,
+    "tables": 178,
+    "structured_source_records": 116,
+    "source_urls_with_structured_records": 5,
+    "role_counts": {
+      "MEMBER_OR_PARTICIPANT_SOURCE_RECORD": 100,
+      "DIRECTORY_RECORD_REVIEW": 16
+    },
+    "distinct_company_count": "UNKNOWN",
+    "source_rows_not_dropped": true
+  },
+  "ledger": {
+    "original_queue": 4849,
+    "state_counts": {
+      "HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1284,
+      "FETCH_ERROR_OR_NON200_REVIEW": 67,
+      "NOT_YET_ATTEMPTED": 3496,
+      "HTTP200_BODY_TRUNCATED_REVIEW": 2
+    },
+    "total_attempt_receipts": 1719,
+    "unique_attempted_urls": 1708,
+    "country_mother_rows": 249,
+    "countries_with_source_association": 151,
+    "global_complete": false
+  },
+  "sqlite_counts": {
+    "directory_fetch_manifest": 220,
+    "registry_all_4849_work_progress": 4849,
+    "registry_all_country_cumulative_source_progress": 249,
+    "registry_all_page_content_review": 220,
+    "registry_all_table_rows": 3709,
+    "registry_download_links": 12,
+    "registry_download_observations_pending_review": 12,
+    "registry_identical_body_source_observations": 2,
+    "registry_page_link_observations_pending_review": 179,
+    "registry_pagination_links": 179,
+    "registry_pending_signal_candidates": 2412,
+    "registry_selected_sources": 220,
+    "registry_source_country_association_evidence": 2837,
+    "registry_source_table_semantic_review": 178,
+    "registry_structured_directory_records": 116
+  },
+  "raw_verified": 216,
+  "protected": [
+    {
+      "path": "Reference/Aerospace_Ecosystem_Report.qmd",
+      "baseline_sha256": "4cf895c4ddcb883594507d7ed5faccb87c910df729e699afb4056c8d4fd019a7",
+      "current_sha256": "4cf895c4ddcb883594507d7ed5faccb87c910df729e699afb4056c8d4fd019a7",
+      "action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd",
+      "baseline_sha256": "3f53b2ad9e56bead08b8ec3a5e6ec729df693a92d576c04ce0a81ff9f2193f88",
+      "current_sha256": "3f53b2ad9e56bead08b8ec3a5e6ec729df693a92d576c04ce0a81ff9f2193f88",
+      "action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Inteligent_egaming_platform_ref_v000.000.001.qmd",
+      "baseline_sha256": "062ac07a98b6f10989799561e70106277f6a0a79a47164845080ef508b77fb16",
+      "current_sha256": "062ac07a98b6f10989799561e70106277f6a0a79a47164845080ef508b77fb16",
+      "action": "NO_WRITE"
+    }
+  ]
+}

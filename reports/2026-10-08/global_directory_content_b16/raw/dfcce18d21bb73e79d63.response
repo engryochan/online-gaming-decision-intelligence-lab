@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Республиканская фондовая биржа «Тошкент»</title>
+		
+	  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/application.css" media="all" data-turbolinks-track="true" />
+    <link rel="stylesheet" href="/assets/summernote/summernote.css" media="all" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="8mcmPOMQBwF4hdBWU_ZNpegITCCceC82mvAXNTPkzfTReA0VBZsEUNCa9ki75fWwEnNVbp0BGXsvWKAvIkFUTg" />
+  </head>
+
+  <body class="issuers-auth-page">
+    <nav id="language-navbar" class="navbar navbar-default" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999999; margin: 0; border: 0; border-radius: 0; min-height: 32px; background: #0e1b57;">
+  <div class="container-fluid" style="display: flex; justify-content: space-between; align-items: center; padding: 4px 16px;">
+    <div style="display: flex; gap: 12px;">
+    </div>
+    <div style="display: flex; gap: 12px;">
+      <a style="color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; " href="/locales/set?lang=uz&amp;return_to=%2Fissuers%2Fsign_in">UZ</a>
+      <a style="color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; color: #fff; font-weight: 600;" href="/locales/set?lang=ru&amp;return_to=%2Fissuers%2Fsign_in">RU</a>
+      <a style="color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; " href="/locales/set?lang=en&amp;return_to=%2Fissuers%2Fsign_in">EN</a>
+    </div>
+  </div>
+</nav>
+
+<nav id="main-navbar" class="navbar navbar-default" style="position: fixed; top: 32px; left: 0; right: 0; z-index: 9999998;">
+  <div class="container">
+    <div class="row">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-top-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img class="logo-img img-responsive" src="/assets/tashkent_exchange_logo_1.svg" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse main-top-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="/issuers/isu_infos">Информация об эмитенте</a>
+          </li>
+          <li class="">
+            <a href="/boards/3934">Отчет</a>
+          </li>
+          <li class="">
+            <a href="/boards/3934">Существенные факты</a>
+          </li>
+          <li class="">
+            <a href="/listofsamples">Шаблоны для раскрываемой информации</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <div id="ajax-loader" style="display: none;">
+      <img alt="ajax-loader" src="/assets/ajax-loader.gif" />
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div id="auth-box">
+        <h1>Эмитент</h1>
+
+
+
+        <form class="simple_form new_issuer" id="new_issuer" novalidate="novalidate" action="/issuers/auths" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="nJyn8clVU7fvgsobuoTvAMJ06eTHk3Z64up6ieq9vvxdMf8Qi0K4iOi9MhLD4MIWhZlqnF6wdda98rSQOy14EQ" autocomplete="off" />
+          <div class="form-group">
+            <div class="input string optional issuer_isu_cd"><input class="string optional form-control typeahead" placeholder="Код ЦБ" autocomplete="off" type="text" name="issuer[isu_cd]" id="issuer_isu_cd" /></div>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-warning">
+              ESI Login
+            </button>
+          </div>
+</form>
+        <hr>
+
+        <form class="new_issuer" id="new_issuer" action="/issuers/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="vBDlPKZbYKowVtcp5pHnaRWbvFwg-_wukikY8Gy3QlW0-jN423VFVeCo2AX2uohVSaA3MpGavTrCeXBao5Ve1g" autocomplete="off" />
+          <div class="form-group user-icon">
+            <label class="hide" for="issuer_email">Email</label>
+            <input autofocus="autofocus" class="form-control" placeholder="Login ID" type="email" value="" name="issuer[email]" id="issuer_email" />
+          </div>
+
+          <div class="form-group">
+            <label class="hide" for="issuer_password">Password</label>
+            <input autocomplete="off" class="form-control lock-icon" placeholder="Password" type="password" name="issuer[password]" id="issuer_password" />
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+              Login
+            </button>
+          </div>
+</form>      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer class="site-footer">
+  <div class="ft-wrap ft-main">
+    <div class="ft-brand">
+      <div class="ft-brand-text">РФБ «Тошкент»</div>
+      <p class="ft-note">При использовании материалов опубликованных на данном сайте, ссылка на www.uzse.uz обязательна.</p>
+      <a href="/feedback/new" class="ft-cta">
+        Связаться с биржей
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div>
+      <div class="ft-h">Наши контакты</div>
+      <ul class="ft-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3.2l1.6 4-2 1.4a12 12 0 006.8 6.8l1.4-2 4 1.6V19a1.6 1.6 0 01-1.8 1.6C10.6 20 4 13.4 3.4 5.8A1.6 1.6 0 015 4z"/></svg>
+          <div>
+            <a class="tel" href="tel:+998555100300"><b>+998 555 100 300 (внт:200)</b></a>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3.2l1.6 4-2 1.4a12 12 0 006.8 6.8l1.4-2 4 1.6V19a1.6 1.6 0 01-1.8 1.6C10.6 20 4 13.4 3.4 5.8A1.6 1.6 0 015 4z"/></svg>
+          <div><a class="tel" href="tel:+998555009995"><b>+998 555 009 995</b></a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          <div><a href="mailto:info@uzse.uz"><b>info@uzse.uz</b></a></div>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="ft-h">Месторасположение</div>
+      <ul class="ft-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><b>100170, Узбекистан, г. Ташкент, проспект Мустакиллик, 107</b></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></svg>
+          <div><b>Понедельник-Пятница, 9:00-18:00</b></div>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="ft-h">Мы в социальных сетях</div>
+      <div class="ft-social">
+        <a class="ft-soc" href="https://www.facebook.com/uzseofficial/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V7c0-.8.2-1.2 1.3-1.2H17V3h-2.6C11.6 3 10.6 4.4 10.6 6.8v1.7H9V11h1.6v10H14V11h2.3l.4-2.5H14z"/></svg>
+        </a>
+        <a class="ft-soc" href="https://t.me/uzseofficial" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.2 4.3 2.9 11.4c-1 .4-1 1 .1 1.3l4.4 1.4 1.7 5.2c.2.6.5.8 1 .3l2.4-2.2 4.6 3.4c.9.5 1.5.2 1.7-.8l3-14c.3-1.2-.5-1.8-1.6-1.7ZM8.8 13.9l9.4-5.9c.4-.3.8-.1.5.2l-7.6 6.9-.3 3.3-1.1-4.2Z"/></svg>
+        </a>
+        <a class="ft-soc" href="https://twitter.com/OfficialUzse" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.8 21h-6l-4.7-6.1L5.6 21h-3l7-8-6.9-10h6.1l4.3 5.7L17.5 3Zm-1 16h1.7L7.6 4.8H5.8L16.5 19Z"/></svg>
+        </a>
+        <a class="ft-soc" href="https://www.linkedin.com/company/uzse/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.7H3.6V21h3.3V8.7ZM5.3 3a1.9 1.9 0 1 0 0 3.9 1.9 1.9 0 0 0 0-3.9ZM21 14.1c0-3.4-1.8-5-4.3-5-2 0-2.9 1.1-3.4 1.9V8.7H9.9V21h3.4v-6.6c0-1.6.9-2.4 2-2.4s1.9.7 1.9 2.4V21H21v-6.9Z"/></svg>
+        </a>
+        <a class="ft-soc" href="https://www.instagram.com/uzse_official" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="ft-soc" href="https://t.me/rfb_toshkent_bot" target="_blank" rel="noopener" aria-label="Telegram-бот">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7.5" width="16" height="12" rx="3"/><path d="M12 7.5V4"/><circle cx="12" cy="3" r="1.2" fill="currentColor" stroke="none"/><path d="M9 12.5v1.5M15 12.5v1.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft-bottom">
+    <div class="ft-wrap">
+      <div class="ft-copy">© 2007–2026 «Республиканская фондовая биржа «Тошкент»»</div>
+      <nav class="ft-links">
+        <a href="https://www.uzse.uz">www.uzse.uz</a>
+      </nav>
+      <div class="ft-counter">
+        <SCRIPT language="javascript" type="text/javascript">
+          <!--
+          top_js = '1.0';
+          top_r = 'id=2912&r=' + escape(document.referrer) + '&pg=' + escape(window.location.href);
+          document.cookie = 'smart_top=1; path=/';
+          top_r += '&c=' + (document.cookie ? 'Y' : 'N');
+          //-->
+        </SCRIPT>
+        <SCRIPT language="javascript1.1" type="text/javascript">
+          <!--
+          top_js = '1.1';
+          top_r += '&j=' + (navigator.javaEnabled() ? 'Y' : 'N');
+          //-->
+        </SCRIPT>
+        <SCRIPT language="javascript1.2" type="text/javascript">
+          <!--
+          top_js = '1.2';
+          top_r += '&wh=' + screen.width + 'x' + screen.height + '&px=' +
+            (((navigator.appName.substring(0, 3) == 'Mic')) ? screen.colorDepth : screen.pixelDepth);
+          //-->
+        </SCRIPT>
+        <SCRIPT language="javascript1.3" type="text/javascript">
+          <!--
+          top_js = '1.3';
+          //-->
+        </SCRIPT>
+        <SCRIPT language="JavaScript" type="text/javascript">
+          <!--
+          top_rat = '&col=2D71B1&t=ffffff&p=DD7900';
+          top_r += '&js=' + top_js + '';
+          document.write('<a href="http://www.uz/ru/res/visitor/index?id=2912" target=_top><img src="https://cnt0.www.uz/counter/collect?' + top_r + top_rat + '" width=88 height=31 border=0 alt="Топ рейтинг www.uz"></a>');
+          //-->
+        </SCRIPT>
+        <NOSCRIPT>
+          <A href="http://www.uz/ru/res/visitor/index?id=2912" target=_top><IMG height=31 src="https://cnt0.www.uz/counter/collect?id=2912&pg=http%3A//uzinfocom.uz&&col=0063AF&amp;t=ffffff&amp;p=DD7900" width=88 border=0 alt="Топ рейтинг www.uz"></A>
+        </NOSCRIPT>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/assets/application.js" data-turbolinks-track="true"></script>
+    <script>
+      (function() {
+        function initSummernote() {
+          document.querySelectorAll('textarea.summernote').forEach(function(el) {
+            if (el.dataset.summernoteInstance) return;
+            if (typeof $ === 'undefined' || typeof $(el).summernote !== 'function') {
+              setTimeout(initSummernote, 300);
+              return;
+            }
+            $(el).summernote({
+              height: 300,
+              styleWithSpan: true,
+              dialogsInBody: true,
+              toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'italic', 'underline', 'clear']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+              ],
+              callbacks: {
+                onChange: function(contents) {
+                  el.value = contents;
+                }
+              }
+            });
+            el.dataset.summernoteInstance = 'true';
+          });
+        }
+
+        $(window).on('load', function() {
+          setTimeout(initSummernote, 0);
+        });
+      })();
+    </script>
+      <script type="text/javascript">
+    $(function(){
+      $.getJSON("/isu_infos/names", { mkt_id: "STK" }, function(data){
+        $('.typeahead').typeahead({
+          source: data,
+          items: 'all',
+          minLength: 2,
+          displayText: function (item) {
+            return item[0] + " / " + item[1] + " / " + item[2];
+          },
+          afterSelect: function (item) {
+            $(".typeahead").val(item[0])
+          }
+        });
+      });
+    });
+  </script>
+
+  </body>
+</html>
