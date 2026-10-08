@@ -1,0 +1,249 @@
+    
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+        <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SIX Login</title>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <!--link href="//fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet" type="text/css" media="all"-->
+      <link href="/static/nevislogrend/applications/oidc-op-sixwes-realm/webdata/resources/styles/main.css?0ff5b7a" rel="stylesheet" type="text/css" media="all">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="icon" href="/resources/favicon.png" type="image/png">
+
+            <style id="antiClickjack">body{display:none !important;}</style>
+      <script type="text/javascript">if(self === top) document.getElementById("antiClickjack").parentNode.removeChild(antiClickjack); else top.location = self.location</script>
+
+	</head>
+	<body>
+    <div id="root">
+      <div class="six-theme">
+        <div class="detail-page">
+          <div class="section">
+            <div class="card featured">
+              <div class="card__inner-wrapper">
+                <header class="card__header margin-bottom--lg" data-url="/static/nevislogrend/applications/oidc-op-sixwes-realm/webdata">
+                  <a class="main-logo">
+                    <img class="svg-icon" alt="Logo" src="/resources/six-logo.svg">
+                  </a>
+<nav id="language-switch" class="container-fluid">
+	<div class="dropdown pull-right">
+		<a id="language-switch-btn" class="dropdown-toggle text-uppercase small" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<strong>en</strong>
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" aria-labelledby="language-switch-btn">
+																<li>
+						<a class="lang" href="?language=de">
+							<strong class="prefix text-primary text-uppercase">de</strong>
+							<span>Deutsch</span>
+						</a>
+					</li>
+																					<li>
+						<a class="lang" href="?language=it">
+							<strong class="prefix text-primary text-uppercase">it</strong>
+							<span>Italiano</span>
+						</a>
+					</li>
+													<li>
+						<a class="lang" href="?language=fr">
+							<strong class="prefix text-primary text-uppercase">fr</strong>
+							<span>Fran&ccedil;ais</span>
+						</a>
+					</li>
+													<li>
+						<a class="lang" href="?language=es">
+							<strong class="prefix text-primary text-uppercase">es</strong>
+							<span>Espa&ntilde;ol</span>
+						</a>
+					</li>
+ 		</ul>
+	</div>
+</nav>                </header>
+                            <form id="AuthUidPwDialog" name="AuthUidPwDialog" method="POST" target="_self" action="" autocomplete="off" accept-charset="UTF-8" class="card__inner">
+                                <h1 class="main-header"><strong>Login</strong></h1>
+    
+
+    <input type="hidden" name="icon" value="icon.bssweb">
+
+
+    <input type="hidden" name="title" value="title.bssweb">
+
+
+    <input type="hidden" name="logo" value="logo.bssweb">
+
+
+    <input type="hidden" name="text" value="text.bssweb">
+
+
+    <input type="hidden" name="contact" value="contact.bssweb">
+
+
+    <input type="hidden" name="label.isiwebuserid" value="label.isiwebuserid.bssweb">
+
+
+    <input type="hidden" name="hint.isiwebuserid" value="hint.isiwebuserid.bssweb">
+
+
+ 
+
+
+
+
+
+<div class="form-group required gui-name--AuthUidPwDialog guiElem-type--text guiElem-name--isiwebuserid">
+	
+
+    <label class="field" for="isiwebuserid">
+      <span class="title">Username / E-Mail</span>
+      <span class="input">
+          <input class="form-control" type="text" name="isiwebuserid" id="isiwebuserid"
+                 maxlength=""
+                 value="" tabindex="8">
+
+
+      </span>
+		</label>
+ </div>
+
+
+ 
+
+
+
+
+
+<div class="form-group required gui-name--AuthUidPwDialog guiElem-type--pw-text guiElem-name--isiwebpasswd">
+	
+
+    <label class="field" for="isiwebpasswd">
+      <span class="title">Password</span>
+      <span class="input password">
+          <i class="password__icon--right material-icons" aria-hidden="true" data-js-password-visibility-toggle="">visibility</i>
+          <input type="password" class="form-control" name="isiwebpasswd" id="isiwebpasswd"
+                 maxlength=""
+                 value="" tabindex="9" autocomplete="off" />
+
+
+
+      </span>
+		</label>
+ </div>
+
+
+		
+    
+    <div class="form-group gui-name--AuthUidPwDialog guiElem-type--info guiElem-name--forgot">
+      
+      <p id="forgot">
+        <a href="/pwreset/?y=h2YBvS6VnU-auZIwxAPjXf6COLAS7Let">Forgot password?</a>
+      </p>
+
+      
+      
+      		</div>
+
+
+
+		
+    
+    <div class="form-group gui-name--AuthUidPwDialog guiElem-type--info guiElem-name--change">
+      
+      <p id="change">
+        <a href="/pwchange/?y=h2YBvS6VnU-auZIwxAPjXf6COLAS7Let">Change password</a>
+      </p>
+
+      
+      
+      		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+    <div class="form-group form-group--buttons fieldset featured flex-end">
+
+
+        <button name="verifypasswordsubmit" value="submit" class="btn btn-tertiary btn-info btn--full-width btn--type-button" onclick="if(event.detail > 1) event.preventDefault()">
+          Next
+        </button>
+                <p class="buttons-separator">
+      <span class="line"></span>
+      Other Login Options
+      <span class="line"></span>
+    </p>
+
+
+        <button name="saml" value="selected" class="btn btn-tertiary btn-info btn--full-width btn--type-button" onclick="if(event.detail > 1) event.preventDefault()">
+          My Company Login
+        </button>
+                <p id="register">
+      Not a user? <a href="https://sws.six-group.com/registration/Registration?LANG=EN">Register here.</a>
+    </p>
+
+
+        <button name="base" value="selected" class="btn btn-tertiary btn-info btn--full-width btn--type-button" onclick="if(event.detail > 1) event.preventDefault()">
+          SIX Employee
+        </button>
+                 </div>
+                            </form>
+
+
+              </div>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.six-group.com/en/contacts/securities-services.html" target="_blank" class="btn btn-link btn-compact btn-link-secondary">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal" id="session-expired-modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-container">
+    <div class="modal-body">
+      <h3>Session expired</h3>
+      <section>Your session has expired. Please reload the page and log in again.</section>
+      <footer>
+        <button class="btn btn-tertiary" onclick="window.location.reload()">Reload</button>
+      </footer>
+    </div>
+  </div>
+</div>
+    <script src="/static/nevislogrend/applications/oidc-op-sixwes-realm/webdata/resources/scripts/main.js?1b9d2d3"></script>
+    <script src="/static/nevislogrend/applications/oidc-op-sixwes-realm/webdata/resources/jquery.min.js?fc9a93d"></script>
+
+	</body>
+</html>
+
+
+
+ 

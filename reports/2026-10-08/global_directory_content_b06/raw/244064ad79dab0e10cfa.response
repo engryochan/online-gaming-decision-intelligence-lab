@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <base href='/'/>
+        <title>M/S Online</title>
+        <meta name="version" content="MSTR_WW156_20200603_20261002_18.60">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/MSTR/favicon.ico">
+        
+        
+        
+        <link rel="stylesheet" media="screen" href="/assets/javascripts/registration/styles.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <style>
+            @media all and (max-width: 768px) {         
+                body.NOBLE {
+                    background-color: #886e4c;
+                }
+                body.MSTR {
+                    background-color: #0E2862;
+                }
+                body.MSTR #loading-wrapper.app-initialization {
+                    background-color: transparent;
+                }
+                body.MSTR #loading-wrapper.app-initialization #loading-text {
+                    content: '';
+                    background: url('/assets/MSTR/logo.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    image-rendering: -webkit-optimize-contrast;
+                    width: 180px;
+                    height: 27px;
+                    display: block;
+                    font-size: 0;
+                    margin-left: -90px;
+                }
+                body.MSTR #loading-wrapper.app-initialization #loading-content {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body class="MSTR">
+        
+        
+        <app-root>
+            <div id="loading-wrapper" class="app-initialization">
+                <div id="loading-text">Ładowanie</div>
+                <div id="loading-content"></div>
+            </div>
+        </app-root>
+        
+        
+        <script src="/assets/javascripts/registration/runtime.js" type="text/javascript" defer></script>
+        <script src="/assets/javascripts/registration/polyfills-es5.js" type="text/javascript" nomodule defer></script>
+        <script src="/assets/javascripts/registration/polyfills.js" type="text/javascript" defer></script>
+        <script src="/assets/javascripts/registration/scripts.js" type="text/javascript" defer></script>
+        
+        <script src="/assets/javascripts/registration/main.js" type="text/javascript" defer></script>
+    </body>
+</html>

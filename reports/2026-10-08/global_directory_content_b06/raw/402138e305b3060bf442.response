@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    <title>
+        Visitor pre-registration    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/favicon.ico?v=fms" type="image/x-icon" rel="icon"/><link href="/favicon.ico?v=fms" type="image/x-icon" rel="shortcut icon"/><link rel="stylesheet" type="text/css" href="/css/bootstrap441/bootstrap.css"/><link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker/bootstrap-datepicker.min.css"/><link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css"/><link rel="stylesheet" type="text/css" href="/css/cake.generic.css"/><link rel="stylesheet" type="text/css" href="/css/jquery-confirm/jquery-confirm.min.css"/><script type="text/javascript" src="/js/jquery/jquery-3.6.0.min.js"></script><script type="text/javascript" src="/js/jquery/moment.min.js"></script><script type="text/javascript" src="/js/bootstrap441/bootstrap.min.js"></script><script type="text/javascript" src="/js/jquery/bootstrap-datepicker.min.js"></script><script type="text/javascript" src="/js/jquery/bootstrap-datetimepicker.min.js"></script><script type="text/javascript" src="/js/jquery/bootcomplete_fs.js"></script><script type="text/javascript" src="/js/jquery/jquery-confirm.min.js"></script>    <style>
+        body{
+            background-color: transparent;
+        }
+        .center{
+            text-align: center;
+        }
+        .contentHolder{
+            background: #000000;
+            margin-bottom: 3%;
+            border-radius: 12px;
+            text-align:center;
+            padding:1em;
+        }
+        .content-wrapper {
+            background-color: transparent;
+        }
+        .contentHolder{
+            color: #888888;
+        }
+        .page-heading-wrapper hr{
+            margin: 25px 0;
+        }
+        .page-heading {
+            font-size: 18px;
+            color: #000;
+        }
+        .page-welcome-text{
+            color: #000000;
+        }
+        .wizzpass_logo{
+            margin-top: 25px;
+        }
+    </style>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<div class='container content-wrapper'>
+    <div class='row d-flex justify-content-center' style="background: transparent;margin-right:0px;margin-left:0px;">
+        <div class='col-12 col-xs-12 col-sm-12 col-md-6'>
+            <div class='col-xs-12 center' style="padding:2em;" >
+<!--                <img class="wizzpass_logo" style="width:250px;" src="/img/Logo_WizzPass_White.png">-->
+                <img class="wizzpass_logo" style="width:250px;" src="https://public1.fmsvisitor.com/live/CompanyGroup/logo/5ENCOJXJJEmClAB2DhPDcGYlC.jpg">
+                <div class="center">
+                    <div class="page-heading-wrapper col-12 col-md-12" style="margin: 0 auto;">
+                        <hr>
+                        <p class="page-heading">Visitor Pre-registration</p>
+                        <hr>
+                        <p class="page-welcome-text">Please enter your email and the booking reference received in your invitation email to continue with pre-registration. </p>
+                    </div>
+                </div>
+            </div>
+            <div class='row center contentHolder'>
+                <style>
+    .content-col-wrapper{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    label {
+        color: #FFFFFF;
+    }
+    .btn-custom{
+        background-color: #E1E2E4;
+        border: none;
+        border-radius: 8px;
+        color: #000000;
+        font-size: 120%;
+        margin: 0 auto;
+        padding: 0.5em 2em;
+        width: auto;
+    }
+    .alert-close{
+        float: unset;
+        margin-top: 5px !important;
+        width: 24px;
+        border-radius: 50%;
+        font-weight: 400;
+        border: 1px solid #0b2e13 !important;
+        background-color: #E1E2E4 !important;
+        color: #000000;
+        opacity: 1;
+    }
+</style>
+<div class="col-12 content-col-wrapper">
+        <form action="/customers/company_group_online_registration/firstrand" method="post">
+        <div class="form-group">
+            <label for="email_address">Email Address</label>
+            <input name="email_address" type="email" class="form-control" id="email_address" aria-describedby="emailHelp" placeholder="Please enter your email address" required>
+        </div>
+        <div class="form-group">
+            <label for="booking_reference">Booking reference</label>
+            <input name="booking_reference" type="text" class="form-control" id="booking_reference" aria-describedby="emailHelp" placeholder="Enter a booking reference" required>
+        </div>
+                        <button type="submit" class="btn-custom">Submit</button>
+    </form>
+</div>            </div>
+
+                            <div class='row center contentHolder'>
+                                            <img class="img-fluid" src="https://public1.fmsvisitor.com/live/CompanyGroup/footer_image/7M48td1iqGwnoZXUIj4Er56lt.png" style="max-height: 50px">
+                                                        </div>
+                    </div>
+    </div>
+</div>
+
+<script language="javascript">
+
+    var debounce_triggered = false;
+
+    function debounce(target){
+        target.css('opacity','0.5')
+        if (debounce_triggered){
+            return false;
+        }
+        debounce_triggered = true;
+        setTimeout(function(){
+                debounce_triggered = false; //if nothing happens in x seconds, you are allowed to try again.
+                target.css('opacity','1')
+            }
+            ,5000);
+        return true;
+    }
+
+    function hostClearDebounce(){//clears debounce in 500ms
+        setTimeout(function(){
+                debounce_triggered = false; //if nothing happens in x seconds, you are allowed to try again.
+            }
+            ,500);
+    }
+
+    function JQalert(message,duration,Title){
+        if(typeof Title == 'undefined'){
+            var Title = 'Alert';
+        }
+        if(typeof duration  == 'undefined' || duration == 0){
+            $.alert({
+                title: Title,
+                content: message,
+                modal: true,
+                boxWidth: '80%',
+                useBootstrap: false,
+                theme:'material',
+                backgroundDismiss: true, // this will just close the modal
+//                    autoClose: 'ok|',
+                buttons: {
+                    ok: {
+                        action: function(){
+                        }
+                    }
+                }
+            })
+        }else{
+            $.alert({
+                title: Title,
+                content: message,
+                modal: true,
+                boxWidth: '80%',
+                useBootstrap: false,
+                theme:'material',
+                backgroundDismiss: true, // this will just close the modal
+                autoClose: 'ok|' + duration,
+                buttons: {
+                    ok: {
+                        action: function(){
+                        }
+                    }
+                }
+            })
+        }
+    }
+
+    function JQTwoButton(heading,content,left_button,left_callback,right_button,right_callback){
+        $.confirm({
+            title: heading,
+            content: content,
+            modal: true,
+            boxWidth: '80%',
+            useBootstrap: false,
+            theme:'material',
+            backgroundDismiss: true, // this will just close the modal
+            buttons: [
+                {
+                    text:left_button,
+                    action:function () {
+                        left_callback();
+                    }
+                },
+                {
+                    text:right_button,
+                    action:function () {
+                        right_callback();
+                    }
+                },
+            ]
+        })
+    }
+
+    function JQconfirm(heading,content,button_text ,confirmCallback){
+        $.confirm({
+            title: heading,
+            content: content,
+            modal: true,
+            boxWidth: '80%',
+            useBootstrap: false,
+            theme:'material',
+            backgroundDismiss: true, // this will just close the modal
+            buttons: [
+                {
+                    text:button_text,
+                    action:function () {
+                        confirmCallback();
+                    }
+                },
+            ]
+        })
+    }
+    $( document ).ready(function() {
+        if (location.protocol != 'https:')
+        {
+            location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+    });
+</script>
+</body>
+</html>

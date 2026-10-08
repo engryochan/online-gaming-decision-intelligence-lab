@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if lte IE 8]>  <![endif]-->
+<html id="seedrs" lang="en-US" class="no-js seedrs ie8andlower ie8 fluid-grid">
+<!--[if IE 9 ]>  <![endif]-->
+<html id="seedrs" lang="en-US" class="no-js seedrs ie9 fluid-grid">
+<!--[if !IE]><!--><html id="seedrs" lang="en-US" class="seedrs no-js fluid-grid"><!--<![endif]-->
+<head>
+
+<meta charset='utf-8'>
+<meta content='width=device-width,initial-scale=1' name='viewport'>
+<title>Cyber Security &amp; Digital Resilience</title>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta name="csp-nonce" content="8cmdEdy2qhCTt70KJ20Rfg==" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="hZO4aAFu3edWK4fcNQaD9mSTb1wl0pyygCmHWccn7U2-sanhaEshf4NyvWVmnGZVGgzsbxtcih4825jtXwsSxA" />
+<meta content='Seedrs takes cyber security and digital resilience seriously. We understand our users always expect our services to be available and their data to be kept secure.' name='description'>
+<meta content='Cyber Security &amp; Digital Resilience' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='https://assets.seedrs.com/documents/seedrs_social_share.jpg' property='og:image'>
+<meta content='1200' property='og:image:width'>
+<meta content='630' property='og:image:height'>
+<meta content='https://europe.republic.com/pages/security' property='og:url'>
+<meta content='Seedrs takes cyber security and digital resilience seriously. We understand our users always expect our services to be available and their data to be kept secure.' property='og:description'>
+<meta content='summary' property='twitter:card'>
+<meta content='@Seedrs' property='twitter:site'>
+<meta content='https://cdn-assets.seedrs.com/www/assets/twitter_card-71515672b850148f4a85dc68fa93a0716511222e4942823c908f7c0cb0e6752c.jpg' property='twitter:image'>
+
+
+
+<script src="https://cmp.osano.com/AzqSHBT6fzKGV18Hs/9c566783-82d1-4193-9177-04fd371c70ae/osano.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=Element.prototype.remove%2CCustomEvent%2CPromise%2CObject.assign%2CArray.prototype.includes%2CArray.prototype.find%2CString.prototype.includes%2CObject.values" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script src="https://www.datadoghq-browser-agent.com/us1/v6/datadog-rum.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+  (function() {
+    function isInternalUser(email) {
+      if (!email) return false;
+      return email.includes('@seedrs.com') || email.includes('@republic.com');
+    }
+  
+    function getFullName(firstName, lastName) {
+      return [firstName, lastName]
+        .filter(function(name) { return !!name; })
+        .join(' ')
+        .trim();
+    }
+  
+    function hasAnalyticsConsent() {
+      if (!window.Osano || !window.Osano.cm || !window.Osano.cm.getConsent) {
+        return false;
+      }
+      var consent = window.Osano.cm.getConsent();
+      return consent && consent.ANALYTICS === "ACCEPT";
+    }
+  
+    const currentUser = null;
+    const ddAppId = 'f92fd80a-a4a4-4532-949c-a16f96fd41a2';
+    const ddClientToken = 'pub6374ec517bbc598273738ead7da53b61';
+  
+    if (!ddAppId || !ddClientToken) {
+      console.log("Datadog RUM: app id or client token missing, skipping initialization");
+      return;
+    }
+  
+    const CONFIG = {
+      clientToken: ddClientToken,
+      applicationId: ddAppId,
+      site: 'datadoghq.com',
+      service: 'platform-web',
+      env: 'production',
+      sessionSampleRate: 100,
+      sessionReplaySampleRate: 100,
+      trackBfcacheViews: true,
+      defaultPrivacyLevel: 'mask-user-input'
+    };
+  
+    if (currentUser && isInternalUser(currentUser.email)) {
+      return;
+    }
+  
+    let retryCount = 0;
+    const maxRetries = 10;
+    const retryInterval = 200;
+    let initialized = false;
+    let sdkLoaded = false;
+    let osanoLoaded = false;
+  
+    let identificationInProgress = false;
+    let debounceTimer = null;
+    let pendingUser = null;
+  
+    // SDK LOADING
+  
+    function checkSdkLoaded() {
+      if (sdkLoaded) return true;
+  
+      if (window.DD_RUM) {
+        sdkLoaded = true;
+        return true;
+      }
+  
+      if (retryCount < maxRetries) {
+        retryCount++;
+        setTimeout(attemptInitialization, retryInterval);
+        return false;
+      }
+  
+      return false;
+    }
+  
+  
+    function identifyUser(user) {
+      if (!user || !user.id) return;
+  
+      const id = user.id;
+      const firstName = user.first_name;
+      const lastName = user.last_name;
+      const email = user.email;
+  
+      // Store the latest user data
+      pendingUser = user;
+  
+      // Clear any existing debounce timer
+      if (debounceTimer) {
+        clearTimeout(debounceTimer);
+      }
+  
+      const debounceDelay = 300;
+  
+      // Debounce rapid calls
+      debounceTimer = setTimeout(function() {
+        if (identificationInProgress) {
+          const retryAttemptDelay = 500;
+          debounceTimer = setTimeout(function() {
+            identifyUser(pendingUser);
+          }, retryAttemptDelay);
+          return;
+        }
+  
+        identificationInProgress = true;
+        const name = getFullName(firstName, lastName);
+  
+        let success = false;
+        let retries = 5;
+        const retryDelay = 1000;
+  
+        function tryIdentify() {
+          if (typeof window === 'undefined' || !window.DD_RUM) {
+            identificationInProgress = false;
+            return;
+          }
+  
+          try {
+            window.DD_RUM.setUser({
+              id: id ? id.toString() : undefined,
+              name: name || undefined,
+              email: email || undefined
+            });
+            success = true;
+          } catch (error) {
+            console.warn('Datadog RUM: Failed to identify user', error);
+          } finally {
+            retries--;
+            if (!success && retries > 0) {
+              setTimeout(tryIdentify, retryDelay);
+            } else {
+              identificationInProgress = false;
+            }
+          }
+        }
+  
+        tryIdentify();
+      }, debounceDelay);
+    }
+  
+    function initializeDatadog(trackingConsent) {
+      if (initialized) return;
+      if (!sdkLoaded) return;
+  
+      try {
+        window.DD_RUM.init(Object.assign({}, CONFIG, {
+          trackingConsent: trackingConsent
+        }));
+        window.DD_RUM.startSessionReplayRecording();
+  
+        initialized = true;
+  
+        // Only identify user if consent is granted
+        if (currentUser && trackingConsent === 'granted') {
+          identifyUser(currentUser);
+        }
+  
+      } catch (error) {
+        console.error('Datadog RUM: Initialization failed', error);
+      }
+    }
+  
+    function attemptInitialization() {
+      if (!checkSdkLoaded()) return;
+  
+      // Wait for Osano consent before initializing
+      if (!osanoLoaded) {
+        console.log('Datadog RUM: waiting for user consent');
+        return;
+      }
+  
+      const trackingConsent = hasAnalyticsConsent() ? 'granted' : 'not-granted';
+      initializeDatadog(trackingConsent);
+    }
+  
+    // Osano loading with polling
+    function checkOsanoLoaded() {
+      if (osanoLoaded) return true;
+  
+      if (window.Osano && window.Osano.cm && window.Osano.cm.getConsent) {
+        osanoLoaded = true;
+  
+        // Set up consent change listener
+        if (window.Osano.cm.addEventListener) {
+          window.Osano.cm.addEventListener('osano-cm-consent-saved', function(consent) {
+            if (!consent) return;
+  
+            var trackingConsent = consent.ANALYTICS === 'ACCEPT' ? 'granted' : 'not-granted';
+  
+            if (initialized && window.DD_RUM) {
+              // Update consent on already-initialized SDK
+              try {
+                window.DD_RUM.setTrackingConsent(trackingConsent);
+  
+                // Identify user if consent changed to granted
+                if (currentUser && trackingConsent === 'granted') {
+                  identifyUser(currentUser);
+                }
+              } catch (error) {
+                console.warn('Datadog RUM: Failed to update tracking consent', error);
+              }
+            } else if (!initialized) {
+              // First-time initialization after consent is available
+              // Reset retry count to allow SDK loading attempts even after timeout
+              retryCount = 0;
+              attemptInitialization();
+            }
+          });
+        }
+  
+        // Try initialization now that Osano is loaded
+        attemptInitialization();
+        return true;
+      }
+  
+      return false;
+    }
+  
+    // Poll for Osano with timeout
+    const OSANO_CHECK_INTERVAL = 100;
+    const MAX_OSANO_WAIT = 10000;
+    const osanoStartTime = Date.now();
+  
+    const osanoIntervalId = setInterval(function() {
+      if (Date.now() - osanoStartTime > MAX_OSANO_WAIT) {
+        clearInterval(osanoIntervalId);
+        return;
+      }
+  
+      if (checkOsanoLoaded()) {
+        clearInterval(osanoIntervalId);
+      }
+    }, OSANO_CHECK_INTERVAL);
+  })();
+</script>
+
+<script src="https://cdn-assets.seedrs.com/www/assets/jquery-30336dbc77b356902c6dd79a60594d5787ce6047255175e7c245cc5321e3bcde.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script src="https://cdn-assets.seedrs.com/www/assets/jquery_migrate-984106ba537566f23d5c6916d13012c0675c8594decf36dd611237da414ecbb4.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script src="https://cdn-assets.seedrs.com/www/assets/vendor-de00ba4b097718e3c7dab0c67ca4dc1e2c93132e275fb2eff27188f0954ddc58.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+if (window != top) { top.location.href = location.href; }
+
+//]]>
+</script>          <!-- Analytical Init: Sift Science -->
+          <script type="text/javascript" nonce=8cmdEdy2qhCTt70KJ20Rfg==>
+            var _sift = _sift || [];
+            _sift.push(['_setAccount', '5ccaac1218']);
+
+            (function() {
+              function ls() {
+                var e = document.createElement('script');
+                e.type = 'text/javascript';
+                e.async = true;
+                e.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'cdn.siftscience.com/s.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(e, s);
+              }
+              if (window.attachEvent) {
+                window.attachEvent('onload', ls);
+              } else {
+                window.addEventListener('load', ls, false);
+              }
+            })();
+          </script>
+
+<script type="text/javascript" nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+var Analytical = {
+  identify: function(id, options) {
+    
+  },
+  track: function(page, options) {
+    var gtmVariables = {};
+    
+    gtmVariables.event = "Integration GA-GTM Track";
+    gtmVariables['customTrackPageUrl'] = page;
+    
+    gtmDataLayer.push(gtmVariables);
+  },
+  event: function(name, options, callback) {
+    var gtmVariables = {};
+    
+    gtmVariables.event = "Integration GA-GTM Event";
+    gtmVariables['eventCategory'] = options['eventCategory'];
+    gtmVariables['eventAction'] = options['eventAction'];
+    gtmVariables['eventValue'] = options['eventValue'];
+    gtmVariables['eventLabel'] = options['eventLabel'];
+    try {
+      var eventLabels = JSON.parse(options['eventLabel']);
+      for (var key in eventLabels){
+        gtmVariables[key] = eventLabels[key];
+      }
+    } catch(e) {
+      // report exception - we don't have Airbrake JS in the platform yet
+    }
+    
+    gtmDataLayer.push(gtmVariables);
+  },
+  set: function(properties) {
+    if (properties) {
+      _sift.push(['_setUserId', properties.user_id]);
+      _sift.push(['_setSessionId', properties.session_id]);
+      _sift.push(['_trackPageview']);
+    }
+  },
+  reset: function(properties) {
+    
+  },
+  alias_identity: function(old_identity, new_identity) {
+    
+  }
+};
+</script>
+
+<script src="https://cdn-assets.seedrs.com/www/assets/modernizr-25620c2873e0e954a3a7ce852e99f140151bf4b60ad633e476fb0bf08a0fd4ce.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+window.M = Modernizr;
+
+//]]>
+</script><script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+window.addEventListener("WEGLOT_INITIALIZED", function () {
+if (window.Weglot !== undefined) {
+window.Weglot.switchTo("en");
+}
+});
+
+//]]>
+</script><script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+(function(d, u) {
+var h = d.querySelector('html'), signed_in_status = d.cookie.match(/signed_in_status\s*\=\s*([^;]*)/);
+if (d.querySelector && signed_in_status !== null) {
+h.className += signed_in_status.length && signed_in_status[1] == 'incomplete' ? ' incomplete-signed-in' :' complete-signed-in';
+}
+h.className += u.match(/iphone os/gi) ? ' ios' : ' no-ios';
+h.className += u.match(/trident/gi) ? ' trident' : ' no-trident';
+h.className += u.match(/webkit/gi) ? ' webkit' : ' no-webkit';
+document.write('<'+'style id="max-80vh">');
+if (h.className.match(/\strident\s/) && document.documentMode <= 10 && document.documentElement.clientWidth > 600) {
+document.write('.max-80vh, .Modal { max-height: ' + document.documentElement.clientHeight * 0.8 +'px !important; }');
+}
+document.write('<'+'/style>');
+})(document, navigator.userAgent);
+
+//]]>
+</script>
+<link rel="stylesheet" href="https://cdn-assets.seedrs.com/www/assets/base-ea32240bfc18de97a2d423836017186bba9bd7c58d62c428489b27d8a9bd6965.css" media="all" />
+<link rel="stylesheet" href="https://cdn-assets.seedrs.com/www/assets/small-ddcd1f0b700c3aedc6df94928f2453e8f5d475aaf19fb77a91afea14364997f2.css" media="only screen and (max-width: 37.46em)" />
+<link rel="stylesheet" href="https://cdn-assets.seedrs.com/www/assets/medium_and_large-b8aff6e7b4579b2fb8924706708a6f243e5c7298d670aa0560212392da5c5773.css" media="only screen and (min-width: 37.5em)" />
+<link rel="stylesheet" href="https://cdn-assets.seedrs.com/www/assets/medium-e16f334c299c2d2c51c8a225f3950dc739162cef58ff2f73925d5f40c6ccc2d1.css" media="only screen and (min-width: 37.5em) and (max-width: 59.3125em)" />
+<link rel="stylesheet" href="https://cdn-assets.seedrs.com/www/assets/large-5030a9d343364046ec63ca4ea41e94994de938fb13cd641996781ab312b95db8.css" media="only screen and (min-width: 59.375em)" />
+<link rel="stylesheet" href="https://cdn-assets.seedrs.com/www/assets/main_nav-6b5036fd2cf4c7aa308f1e533a312ca02af2d7e6c81b6a6f3e19bf1ada32111f.css" />
+
+
+
+<link href='https://europe.republic.com/pages/security' rel='canonical'>
+<link href='/FavIcon32x32.png' rel='icon' sizes='32x32'>
+<link href='/FavIcon32x32.png' rel='shortcut icon' type='image/x-icon'>
+<link href='/apple-touch-icon-144x144-precomposed.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
+<link href='/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+<link href='/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+<link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&amp;display=swap" />
+<script src="https://use.typekit.net/gmd7txr.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+try{Typekit.load();}catch(e){}
+//]]>
+</script>
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+/*eslint-disable */
+var _prum = [['id', '5204f407abe53d3c18000000'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0],
+        p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+/*eslint-enable */
+
+
+//]]>
+</script><script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "FinancialService",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cubo Soho, Ilona Rose House, Manette Street",
+    "addressRegion": "London",
+    "postalCode": "W1D 4AL"
+  },
+  "hasMap": "https://www.google.com/maps/place/Cubo+Soho/@51.5147552,-0.1303149,17z/data=!3m1!4b1!4m6!3m5!1s0x4876051f04f90dd1:0x3514807dd930d8ec!8m2!3d51.5147552!4d-0.1303149!16s%2Fg%2F11wxzc4sdm?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D",
+  "description": "Republic Europe makes it simple for you to buy into businesses you believe in and share in their success",
+  "name": "Republic Europe",
+  "logo": "https://www.seedrs.com/build/images/logos/seedrs-default-logo.svg",
+  "image": "https://www.seedrs.com/build/images/logos/seedrs-default-logo.svg",
+  "url" : "https://www.seedrs.com/",
+  "sameAs" : [
+    "https://facebook.com/joinreurope",
+    "https://x.com/join_r_europe",
+    "https://plus.google.com/+SeedrsCrowdfunding",
+    "https://www.linkedin.com/company/republiceurope"
+  ]
+}
+</script>
+
+</head>
+<body class='public-layout static_pages fluid-grid static_pages_show is-secondaryMarketOpen is-web-app' id='static_pages_show'>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W2MBHF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script nonce=8cmdEdy2qhCTt70KJ20Rfg==>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
+n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+})(window,document,'script','gtmDataLayer','GTM-W2MBHF');</script>
+<!-- End Google Tag Manager -->
+
+<div class='MainNav-offCanvasWrap'>
+
+<div class='FlashMessage' id='flash_message'><div class='grid-container-wrapper' id='flash_message_container'><div class='grid-container'><div class='FlashMessage-content' id='flash_content'></div><a class='FlashMessage-closeButton close_button' href='#close_message'>
+<i class='i-close InlineSVG'></i>
+<span class='assist'>Close</span>
+</a></div></div></div>
+<div class='site'>
+<div class='skip-links'>
+<p>Jump to:</p>
+<ul>
+<li>
+<a href='#navigation'>Navigation</a>
+</li>
+<li>
+<a href='#content'>Content</a>
+</li>
+<li>
+<a href='#footer'>Footer</a>
+</li>
+</ul>
+</div>
+
+<div data-is-mobile-app='false' id='root-cookie'></div>
+<div data-eu-user='false' data-show-limited-partnership-fund-risk-notice='false' data-show-risk-notice='false' id='root-banner'></div>
+<script src="https://cdn-assets.seedrs.com/www/assets/bundles/cookie-b647d7544822c0d263075f2e660215894c67149602e62dac203c8c8d21ebb462.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script src="https://cdn-assets.seedrs.com/www/assets/bundles/banner-8b6b3ce84c4060bd8ebfbaf27dd1c74520c126a5c79846c60ed73eaae1c32c29.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<div data-async-user-details-path='/users/async_details?intercom_active=1' data-header-context='investor' data-logged-in-override='false' data-login-only='false' data-login-param-string='r=%2Fpages%2Fsecurity&amp;return_to=https%3A%2F%2Feurope.republic.com%2Fpages%2Fsecurity' data-remove-distractions='false' data-signup-only='false' data-theme='investor' id='root-header'></div>
+<script src="https://cdn-assets.seedrs.com/www/assets/bundles/header-5ce82ba196595aff5f24ef985df3e902ff00efade530c73b57301e5ecfd73060.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+
+<main class='Page-content content' id='content'>
+<div class='grid-container-wrapper'>
+<div class='grid-container'>
+<div class='page-notices padded-container'>
+<div class='InPageFlashMessage' hidden></div>
+
+</div>
+</div>
+</div>
+<div class='grid-container-wrapper'>
+<div class='grid-container'>
+<div class='public-page-content'>
+<div class='staticPageContent security' data-jurisdiction='GB'>
+<div class='grid-container'>
+<style>
+  div.owasp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  div.owasp img {
+    max-height: 140px;
+  }
+  
+  div.owasp img {
+    margin-right: 1rem;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+  	margin: 1rem 0;
+  	border-color: #ddd;
+  }
+</style>
+
+<h2 id="security-at-republic"><strong>Security at Republic</strong></h2>
+
+<p>At Republic, security isn’t just a feature — it’s a core principle. As a trusted platform for investment and crowdfunding, we are committed to protecting the integrity, confidentiality, and availability of user data and financial transactions.</p>
+
+<hr />
+
+<h3 id="security-leadership--governance"><strong>Security Leadership &amp; Governance</strong></h3>
+
+<p>At Republic, security is a company-wide priority, led by a dedicated security team that oversees strategy, security implementation, and operational readiness. The team works cross-functionally with engineering, infrastructure, legal, and compliance groups to ensure a holistic approach to managing risk and maintaining platform integrity.</p>
+
+<p>We maintain a formal governance structure that includes:</p>
+
+<ul>
+  <li>
+    <p><strong>Information Security policies</strong> based on international standards and reviewed regularly</p>
+  </li>
+  <li>
+    <p><strong>Cross-functional collaboration</strong> on risk assessments, incident management, and business continuity planning</p>
+  </li>
+  <li>
+    <p><strong>Oversight from senior leadership</strong> to ensure alignment with our legal, regulatory, and fiduciary obligations</p>
+  </li>
+</ul>
+
+<p>Our security team is responsible for driving continuous improvements through proactive monitoring, third-party assessments, and security initiatives that scale with our platform growth.</p>
+
+<p>We operate a defense-in-depth model supported by:</p>
+
+<ul>
+  <li>
+    <p>Security controls aligned to <strong>ISO/IEC 27001</strong>, <strong>NIST</strong> and <strong>SOC 2 Type II</strong></p>
+  </li>
+  <li>
+    <p>Regular audits and third-party assessments</p>
+  </li>
+  <li>
+    <p>Executive oversight of key risks, incidents, and compliance posture</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="certifications--compliance"><strong>Certifications &amp; Compliance</strong></h3>
+
+<p>Republic has earned industry-leading certifications that reflect our commitment to robust security:</p>
+
+<ul>
+  <li>
+    <p><strong>ISO/IEC 27001</strong> certified for:</p>
+
+    <ul>
+      <li>
+        <p>Republic Core LLC</p>
+      </li>
+      <li>
+        <p>Republic Operations LLC</p>
+      </li>
+      <li>
+        <p>Seedrs Limited</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>SOC 2 Type II</strong> attested for:</p>
+
+    <ul>
+      <li>
+        <p>Republic’s US platform</p>
+      </li>
+      <li>
+        <p>Republic’s Europe platform</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>We follow best practices from the:</p>
+
+<ul>
+  <li>
+    <p><strong>NIST Cybersecurity Framework</strong></p>
+  </li>
+  <li>
+    <p><strong>CIS Critical Security Controls</strong></p>
+  </li>
+  <li>
+    <p><strong>OWASP Top 10</strong> (for application security)</p>
+  </li>
+</ul>
+<div class="owasp">
+  <img src="https://ui-assets.seedrs.com/images/static-pages/ISO_27001_2022_LOGO_CERTIFICATION_SEAL_MAIN.png" alt="Republic ISO 27001" />
+  <img src="https://ui-assets.seedrs.com/images/static-pages/21972-312_SOC_NonCPA.png" alt="Republic SOC 2 Type II" />
+  <img src="https://ui-assets.seedrs.com/images/static-pages/ISO_27001_2022_LOGO_CERTIFICATION_SEAL.png" alt="Republic ISO 27001 Certified by Kompleye" />
+</div>
+
+<hr />
+
+<h3 id="platform--data-security"><strong>Platform &amp; Data Security</strong></h3>
+
+<p><strong>Cloud Infrastructure</strong></p>
+
+<p>Our production environments are hosted securely on Amazon Web Services (AWS). This ensures:</p>
+
+<ul>
+  <li>
+    <p>Virtual private cloud (VPC) segmentation</p>
+  </li>
+  <li>
+    <p>Redundant infrastructure and disaster recovery</p>
+  </li>
+  <li>
+    <p>Fine-grained access controls and monitoring</p>
+  </li>
+  <li>
+    <p>Automated backup and encryption of data</p>
+  </li>
+</ul>
+
+<p><strong>Encryption &amp; Access</strong></p>
+
+<ul>
+  <li>
+    <p><strong>In Transit</strong>: All data is encrypted via TLS 1.2+</p>
+  </li>
+  <li>
+    <p><strong>At Rest</strong>: Data is encrypted using AES-256</p>
+  </li>
+  <li>
+    <p><strong>Access Controls</strong>: Role-based access management and regular privilege audits</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="secure-development-practices"><strong>Secure Development Practices</strong></h3>
+
+<p>Security is embedded into our engineering processes:</p>
+
+<ul>
+  <li>
+    <p>Secure-by-design principles in product planning</p>
+  </li>
+  <li>
+    <p>Automated application security testing</p>
+  </li>
+  <li>
+    <p>Peer-reviewed code changes and gated release pipelines</p>
+  </li>
+  <li>
+    <p>Developer training on secure coding standards</p>
+  </li>
+  <li>
+    <p>Ongoing <strong>independent penetration testing</strong> of key systems by CREST accredited penetration testers.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="shared-responsibility"><strong>Shared Responsibility</strong></h3>
+
+<p>We take platform security seriously — and we encourage all users to take proactive steps in securing their accounts.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Republic Secures</strong></th>
+      <th style="text-align: center"><strong>Users Can Help By…</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Infrastructure, data encryption &amp; auditing</td>
+      <td style="text-align: center">Using strong, unique passwords</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Threat detection and platform hardening</td>
+      <td style="text-align: center">Enabling <strong>Two-Factor Authentication (2FA)</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Secure authentication &amp; session controls</td>
+      <td style="text-align: center">Avoiding phishing links and securing devices, e.g. Anti-virus etc.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Monitoring and incident response</td>
+      <td style="text-align: center">Reviewing account activity regularly</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>2FA is strongly encouraged</strong>. You can enable it within your account settings for extra protection.</p>
+
+<hr />
+
+<h3 id="service-status--transparency"><strong>Service Status &amp; Transparency</strong></h3>
+
+<p>We believe in operational transparency. You can monitor real-time and historical system performance at our public Status Page:</p>
+
+<p><a href="https://status.republic.com/">status.republic.com</a></p>
+
+<p>This page includes:</p>
+
+<ul>
+  <li>
+    <p>Live service status</p>
+  </li>
+  <li>
+    <p>Ongoing incidents or degraded performance</p>
+  </li>
+  <li>
+    <p>Scheduled maintenance windows</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="security-documents--due-diligence"><strong>Security Documents &amp; Due Diligence</strong></h3>
+
+<p>We offer access to official audit summaries and documentation to our partners &amp; clients upon request. This helps facilitate procurement, vendor due diligence, and third-party reviews.</p>
+
+<p><strong>Contact</strong>: investors@republic.co</p>
+
+<p>Available documents include:</p>
+
+<ul>
+  <li>
+    <p>ISO 27001 Certificates for Republic Core LLC, Republic Operations LLC, and Seedrs Limited</p>
+  </li>
+  <li>
+    <p>SOC 2 Type II Attestation Reports (NDA required)</p>
+  </li>
+  <li>
+    <p>Security &amp; Privacy policies (NDA required)</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="questions"><strong>Questions?</strong></h3>
+
+<p>We’re here to support your security, compliance, and IT due diligence needs. Contact our security team: <strong>investors@republic.co</strong></p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</main>
+<div class='spacer'></div>
+<div class='site-footer' id='footer'>
+<div data-is-logged-in='false' data-jurisdiction='GB' id='root-footer'></div>
+<script src="https://cdn-assets.seedrs.com/www/assets/bundles/footer-e18a8563cd2f23445bff51120ad169814d179862ccd4746e22f1022867c35cb5.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+  document.addEventListener("DOMContentLoaded", function() {
+    const rootFooter = document.getElementById("root-footer");
+  
+    if (rootFooter && rootFooter.dataset.jurisdiction === "EU") {
+      const evt = new CustomEvent("is_eu_jurisdiction", { detail: "eu" });
+      window.dispatchEvent(evt);
+    }
+  });
+</script>
+
+</div>
+</div>
+<div id='dialogs'>
+
+
+</div>
+<div id='javascript_includes'>
+
+<script src="https://cdn-assets.seedrs.com/www/assets/application-d7d3b807df02c2ea8493aac29fc6eca52274cfa4611ed294233cd1d2b6d0693b.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+$(function() {
+  const staticPageContentElem = document.querySelector('.staticPageContent');
+  const jurisdictionValue = staticPageContentElem.getAttribute('data-jurisdiction');
+  const footerElem = document.getElementById('root-footer');
+
+  function handleFooterMounted() {
+    if (jurisdictionValue === 'EU') {
+      const evt = new CustomEvent('is_eu_jurisdiction', { detail: true });
+      window.dispatchEvent(evt);
+    }
+  }
+
+  if (footerElem && footerElem.getAttribute('data-mounted') === 'true') {
+    handleFooterMounted();
+  } else {
+    window.addEventListener('footer_mounted', handleFooterMounted);
+  }
+});
+
+//]]>
+</script><script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+//<![CDATA[
+$(function() {
+  if (document.referrer !== '' && !document.referrer.match('^https?://[^/]*seedrs.com')) {
+    if (document.referrer !== Cookies.get('ignored_referrer')) {
+      Cookies.set('_seedrs_referrer', document.referrer);
+    }
+  }
+});
+
+$(function() {
+  var paramValue = new RegExp('[?&]promo_code=' + '([^&;]+?)(&|#|;|$)').exec(window.location.search),
+      promoCode = (decodeURIComponent((paramValue || [null, ''])[1].replace(/\+/g, '%20')) || null) || '';
+
+  if (promoCode !== '') {
+    Cookies.set('_seedrs_campaign_code', promoCode, { expires: 30, path: '/' });
+    var originalQueryString = document.URL.split('?')[1].split('#')[0],
+        queryStringParams = originalQueryString.split('&'),
+        replaceableString;
+
+    if (queryStringParams.length === 1) {
+      replaceableString = '?promo_code=' + promoCode;
+    } else {
+      if (queryStringParams[0].indexOf('promo_code=') === 0) {
+        replaceableString = 'promo_code=' + promoCode + '&';
+      } else {
+        replaceableString = '&promo_code=' + promoCode;
+      }
+    }
+    window.location = window.location.href.replace(replaceableString, '');
+  }
+});
+
+//]]>
+</script>
+</div>
+<script type="text/javascript" nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+var commands;
+
+try {
+  commands = JSON.parse(decodeURIComponent((Cookies.get('analytical') || '').replace(/\+/g, '%20')) || '[]');
+} catch(e) {
+  commands = [];
+}
+
+Cookies.remove('analytical', { path: '/' });
+
+for (var i = 0; i < commands.length; i++) {
+  var command = commands[i],
+      method = command.shift(),
+      arguments = command;
+
+  if ('function' === typeof Analytical[method]) {
+    Analytical[method].apply(this, arguments);
+  }
+}
+</script>
+
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+  /* <![CDATA[ */
+  var google_conversion_id = 1006010876;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script src="https://www.googleadservices.com/pagead/conversion.js" nonce="8cmdEdy2qhCTt70KJ20Rfg=="></script>
+<noscript>
+<div style='display:inline;'></div>
+<img alt='' height='1' src='//googleads.g.doubleclick.net/pagead/viewthroughconversion/1006010876/?value=0&amp;guid=ON&amp;script=0' style='border-style:none;' width='1'>
+</noscript>
+
+<script nonce="8cmdEdy2qhCTt70KJ20Rfg==">
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;
+  s.src='https://widget.intercom.io/widget/qhec2syh';
+  var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+</script>
+
+</div>
+</body>
+</html>
+

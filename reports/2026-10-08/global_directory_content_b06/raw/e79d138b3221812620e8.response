@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>SIX Swiss Exchange -
+            Anmeldung bei CONNEXOR&reg;</title><link type="text/css" href="/javascript/dojo-1.17.3/release/dijit/themes/dijit.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/ibe-theme@mui2g1h4.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/ibt-theme@mui2g1h4.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/six-bootstrap@mui2g1h4.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/dojocalendar@mui2g1h4.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/termsheetapp-default@mui2g1h4.css" rel="stylesheet"/><script type="text/javascript" language="javascript">
+          function navAction(state, id) {
+            require(["dojo/dom-style"],
+              function (domStyle) {
+                if (state === "expanded") {
+                  
+                  domStyle.set('t_' + id + '_collapsed', 'display', 'block');
+                  domStyle.set('t_' + id + '_expanded', 'display', 'none');
+                } else if (state === "collapsed") {
+                  
+                  domStyle.set('t_' + id + '_collapsed', 'display', 'none');
+                  domStyle.set('t_' + id + '_expanded', 'display', 'block');
+                }
+              }
+            );
+          }
+        </script><script type="text/javascript" language="javascript">
+          function doHover(obj) {
+            obj.className += "-hover";
+          }
+          function undoHover(obj) {
+            obj.className = obj.className.replace(/\b-hover\b/,'');
+          }
+        </script><script type="text/javascript" language="javascript">
+        dojoConfig = {
+          async: false,
+          usePlainJson: true,
+          isDebug: false,
+          parseOnLoad: true,
+          locale:
+            'de-ch',
+          packages: [
+            {
+              name: 'common',
+              location: '/javascript/common'
+            },
+            {
+              name: 'ibt2Scripts',
+              location: '/resources/scripts/ibt2'
+            }
+          ]
+        };
+      </script><script type="text/javascript" src="/javascript/dojo-1.17.3/release/dojo/dojo.js">;</script><script type="text/javascript" src="/resources/scripts/metaNavigation@mui2g1h4.js">;</script><script type="text/javascript" src="/javascript/common/md5@mui2fwug.js">;</script><script type="text/javascript" src="/resources/scripts/topNavigation@mui2g1h4.js">;</script><script type="text/javascript" src="/resources/scripts/htmlCoordinates@mui2g1h4.js">;</script><script type="text/javascript" src="/javascript/common/sidebar-clock@mui2fwug.js">;</script><script type="text/javascript" language="javascript">
+            require(["dojo/ready"], function (ready) {
+              ready(function () {
+                setInterval("setJSDateTime()", 1000);
+              });
+            });
+          </script><link rel="icon" type="image/png" href="/resources/wat/images/icons/favicon-32@mui2g1h4.png"/><link rel="shortcut icon" type="image/png" href="/resources/wat/images/icons/favicon-32@mui2g1h4.png"/><link rel="apple-touch-icon" href="/resources/wat/images/icons/touch-icon-six-red@mui2g1h4.png"/></head><body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" onload=""><table border="0" cellspacing="0" cellpadding="0" width="100%" style="height: 100%;"><tr valign="top" style="height: 100%;"><td align="center" ignore-languages="fr" dojo-version="latest" header="connexor-logo" base-dir="http://mpzhlitfc01.sn.six-group.net:1928/termsheetapp"><table border="0" cellpadding="0" cellspacing="0" style="height: 100%;"><tr><td width="12px">&nbsp;</td><td style="vertical-align:top;"><table id="sublayout-default-content-table" border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 992px;"><tr><td id="area-head" height="130" style="vertical-align:top;"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="height: 100%; position: relative"><tr><td><div class="six_brand"><a href="http://www.six-group.com/de.html" title="SIX Home"><img alt="SIX Swiss Exchange" src="/resources/wat/images/six_logo_ssx@mui2g1h4.gif"/></a></div><div class="six_corp_nav"><ul><li class="first"><a href="http://www.six-swiss-exchange.com/index_de.html">Swiss Exchange</a></li><li><a href="http://www.six-securities-services.com/de/home.html">Securities Services</a></li><li><a href="http://www.six-financial-information.com/">Financial Information</a></li><li><a href="http://www.six-payment-services.com/de">Payment Services</a></li><li><a href="http://www.six-group.com/de/careers.html">Careers</a></li><li><a href="http://www.six-group.com/about/de">About SIX</a></li></ul></div></td></tr><tr><td style="vertical-align: bottom;"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="height: 65px;"><tr style="vertical-align: bottom;"><td width="100%">&nbsp;</td><td class="meta-nav-border"><img src="/resources/images/trans@mui2g1h4.gif" width="1"/></td><td onclick="
+                                  window.location.href='http://www.six-swiss-exchange.com/issuers/contact_support/connexor_de.html';
+                                " class="
+                                    meta-nav meta-nav-inactiv
+                                  ">Kontakt<a href="http://www.six-swiss-exchange.com/issuers/contact_support/connexor_de.html" style="display:none">Kontakt</a></td><td class="meta-nav-border"><img src="/resources/images/trans@mui2g1h4.gif" width="1"/></td><td id="meta-nav-lang-button" class="meta-nav meta-nav-button">
+                                Deutsch
+                              <span class="meta-nav-arrow">
+                              &nbsp;
+                            </span></td><td class="meta-nav-border" width="18"><img src="/resources/images/trans@mui2g1h4.gif" width="18" height="37"/></td></tr></table></td></tr></table></td></tr><tr><td><table id="sublayout-default-content-table2" border="0" cellpadding="0" cellspacing="0" width="100%" style="height: 100%;"><tr style="background-color:#FFFFFF;"><td id="area-mainnav" colspan="3"><div id="topnav"><div id="topnav-1st-lev"><ul class="clearfix"><li id="topnav-1st-lev-item-1" class="first"><a href="/"><span>Internet Based Termsheets</span></a></li><li id="topnav-1st-lev-item-2" class="active"><a href="/"><span>Emittenten</span></a></li></ul></div><div id="topnav-flyout-border-suppression-2" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@mui2g1h4.gif" height="1" width="1"/></div><div id="topnav-flyout-2" class="topnav-flyout"><ul class="clearfix" style="height:16px !important; height /**/:40px;"><li id="topnav-flyout-2-item-1" class="topnav-flyout-list"><a href="/issuers/services/connexor/ibt2/login_de.html">Services</a></li></ul></div><div id="topnav-2nd"><ul class="clearfix"><li id="topnav-2nd-lev-item-1" class="active"><a href="/issuers/services/connexor/ibt2/login_de.html">Services</a></li></ul></div></div></td></tr><tr style="background-color:#FFFFFF;"><td id="area-mainsep1">&nbsp;</td><td id="area-mainsep2"><img src="/resources/images/trans@mui2g1h4.gif" height="36" width="1" border="0"/></td><td id="area-mainsep3"><noscript>
+                          Javascript required to display
+                          <br/>
+                          page correctly !
+                        </noscript><div class="sidebar-js-date"><img src="/resources/images/trans@mui2g1h4.gif" width="10px"/><span id="js-date-part1">&nbsp;</span><span id="js-date-seconds">&nbsp;</span><span id="js-date-cet">&nbsp;</span></div><script type="text/javascript" language="javascript">
+          js_date_lang = 1;
+        </script></td></tr><tr style="background-color:#FFFFFF;"><td id="area-sidenav" valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="164" style="height: 100%;"><tr><td class="navigation-left"><div id="t_1_0_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','1_0_0_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibt2/login_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></td><td width="150"><a href="/issuers/services/connexor/ibt2/login_de.html" style="font-weight:bold;">CONNEXOR</a></td></tr></table><div id="t_1_1_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','1_1_0_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibt2/login_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></td><td width="143"><a href="/issuers/services/connexor/ibt2/login_de.html" style="font-weight:bold;">Internet Based Terms</a></td></tr></table><div id="t_1_1_1__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28" onclick="
+              navAction('expanded','1_1_1_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibt2/login_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:18px"/></a></td><td width="136"><a href="/issuers/services/connexor/ibt2/login_de.html" style="font-weight:bold;">IBT 2 Engine</a></td></tr></table><div id="t_1_1_1_1_expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level8-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="35">&nbsp;</td><td width="129"><a href="/issuers/services/connexor/ibt2/login_de.html">Login</a></td></tr></table></div><div id="t_1_1_1_1_collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level8-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="35">&nbsp;</td><td width="129"><a href="/issuers/services/connexor/ibt2/login_de.html">Login</a></td></tr></table></div><div id="t_1_1_1_2_expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level8" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="35">&nbsp;</td><td width="129"><a href="/issuers/services/connexor/ibt2/new-user_de.html">Neuer Benutzer</a></td></tr></table></div><div id="t_1_1_1_2_collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level8" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="35">&nbsp;</td><td width="129"><a href="/issuers/services/connexor/ibt2/new-user_de.html">Neuer Benutzer</a></td></tr></table></div></div><div id="t_1_1_1__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28" onclick="
+              navAction('collapsed','1_1_1_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibt2/login_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:18px"/></a></td><td width="136"><a href="/issuers/services/connexor/ibt2/login_de.html" style="font-weight:bold;">IBT 2 Engine</a></td></tr></table></div></div><div id="t_1_1_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','1_1_0_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibt2/login_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></td><td width="143"><a href="/issuers/services/connexor/ibt2/login_de.html" style="font-weight:bold;">Internet Based Terms</a></td></tr></table></div><div id="t_1_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','1_2_0_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibe_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></td><td width="143"><a href="/issuers/services/connexor/ibe_de.html">Internet Based Events</a></td></tr></table><div id="t_1_2_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/issuers/services/connexor/ibe/ibe-upload-form_de.html">IBE Engine</a></td></tr></table></div><div id="t_1_2_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/issuers/services/connexor/ibe/ibe-upload-form_de.html">IBE Engine</a></td></tr></table></div></div><div id="t_1_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','1_2_0_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibe_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></td><td width="143"><a href="/issuers/services/connexor/ibe_de.html">Internet Based Events</a></td></tr></table></div></div><div id="t_1_0_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','1_0_0_')
+            " style="cursor:pointer; vertical-align:top; padding-top:2px;"><a href="/issuers/services/connexor/ibt2/login_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@mui2g0pc.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></td><td width="150"><a href="/issuers/services/connexor/ibt2/login_de.html" style="font-weight:bold;">CONNEXOR</a></td></tr></table></div><div id="t_2_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/issuers/services/official_notices/login_de.html">Offizielle Mitteilungen</a></td></tr></table></div><div id="t_2_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/issuers/services/official_notices/login_de.html">Offizielle Mitteilungen</a></td></tr></table></div></td></tr><tr><td>&nbsp;</td></tr><tr style="height: 100%;"><td>&nbsp;</td></tr></table></td><td id="area-main" width="100%" valign="top" height="100%" class="
+                        main
+                        "><table border="0" cellpadding="0" cellspacing="0" width="100%" style="height: 100%;"><tr><td valign="top" height="400" style="background-color:#FFFFFF;"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="right" style=""><img src="/resources/images/logos/connexor_header@mui2g1h4.png" width="176" height="55"/><br/><img border="0" src="/resources/images/trans@mui2g1h4.gif" height="10"/><br/><div class="hrule">&nbsp;</div></td></tr><tr><td><h1>Anmeldung bei CONNEXOR&reg;</h1></td></tr></table><script type="text/javascript">
+      function resetForm() {
+        require(["dojo/dom", "dojo/domReady!"],
+          function(dom) {
+            dom.byId('username').value = '';
+            dom.byId('password').value = '';
+          }
+        );
+      }
+    ;
+    </script><p class="para">
+        F&uuml;r alle Fragen betreffend Connexor inklusive &laquo;Upload&raquo; wenden sie sich bitte an
+        <script>
+        function xlateN65701(how, encoded) {
+          const set12 = 'tomali.@pcsurn/?'.split('');
+          const set21 = 'pcsurn/?tomali.@';
+          let decoded = '';
+          for (let i = 0; i !== encoded.length; i++) {
+            const enc = encoded.substring(i, i+1);
+            const pos = set21.indexOf(enc);
+            const dec = pos === -1 ? enc : set12[pos];
+            decoded += how === 0 ? dec : dec.strike();
+          }
+          return decoded;
+        }
+        document.write(xlateN65701(1,"ociiexcl?mnx-glcat/ocs")
+          .link(xlateN65701(0,"hppt:..www/mnx-mwnmm-exohuige/ocs.nmmaelm.ocipuop_mattclp.ociiexcl.fcls_de/hpsr@Ccipuop=CONNEXOR&amp;Munrbcx=ociiexcl?mnx-glcat/ocs")));
+      </script><noscript><span>c</span><span>o</span><span>n</span><span>n</span><span>e</span><span>x</span><span>o</span><span>r</span><span>@</span><span>s</span><span>i</span><span>x</span><span>-</span><span>g</span><span>r</span><span>o</span><span>u</span><span>p</span><span>.</span><span>c</span><span>o</span><span>m</span></noscript><br/>
+        oder rufen Sie unter +41 58 399 3366 an.
+      </p><p class="para">
+        Bitte geben Sie ihren
+        <nobr xmlns:nml="http://eservices.swx.com/markup/1.0">
+      CONNEXOR</nobr>-Benutzernamen und Ihr Passwort ein:
+      </p><div data-dojo-type="dijit/TitlePane" class="mpulse_theme " style="width:500;" title="Login"><div data-dojo-type="dijit/form/Form" id="loginForm" style="visibility:hidden;" dojo-version="latest" method="POST" action="login-user" name="N100FA"><input type="hidden" name="viewFrom" value="viewLOGIN"/><input type="hidden" name="cugname" value="ibl"/><input type="hidden" name="forward" value="profile_de.html"/><input type="hidden" name="referer" value="/termsheetapp/issuers/services/connexor/ibt2/login_de.html"/><table class="form-grid" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td width="15%"><img src="/resources/images/trans@mui2g1h4.png" height="1" width="1" border="0" hspace="0" vspace="0"/></td><td width="60%"><img src="/resources/images/trans@mui2g1h4.png" height="1" width="1" border="0" hspace="0" vspace="0"/></td><td width="25%"><img src="/resources/images/trans@mui2g1h4.png" height="1" width="1" border="0" hspace="0" vspace="0"/></td></tr><tr class="form-grid"><td class="first" colspan="2" align="left" valign="top"><span style="color:red">&nbsp;
+        </span></td></tr><tr class="ip-middle"><td><span class="label">Benutzer</span></td><td><input name="username" value="" data-dojo-type="dijit/form/ValidationTextBox" id="username" class="mpulse_theme" regexp=".{0,80}" type="text" style="width: 262px;" maxlength="80" autocomplete="on"/></td><td>&nbsp;</td></tr><tr class="ip-middle"><td><span class="label">Passwort</span></td><td><input name="password" value="" data-dojo-type="dijit/form/ValidationTextBox" id="password" class="mpulse_theme" regexp=".{0,80}" type="password" style="width: 262px;" maxlength="80" autocomplete="off"/></td><td>&nbsp;</td></tr><tr class="ip-middle"><td class="first" colspan="2" align="left" valign="top">&nbsp;</td><td class="" align="left" valign="top"><a href="/issuers/services/connexor/ibt2/reset_password.html">Passwort vergessen?</a></td></tr><tr class="form-grid"><td class="first" align="left" valign="top"><img border="0" hspace="0" vspace="0" src="/resources/images/trans@mui2g1h4.png" height="10" width="0"/></td></tr><tr class="ip-middle"><td class="first" align="left" valign="top"><a href="#" onclick="resetForm();return false;">Eingaben l&ouml;schen</a></td><td align="right"><input type="submit" name="actionSUBMIT" id="actionSUBMIT" style="position:absolute;bottom:0px;left:0px;visibility:hidden;"/><div data-dojo-type="dijit/form/Button" id="actionSUBMITProxyN65796" class="mpulse_theme">Login<script type="dojo/connect" event="onClick">
+    function setLabelDecoration(widgetId, valid) {
+      require(["dojo/dom", "dojo/domReady!"],
+        function(dom) {
+          const label = dom.byId("label_" + widgetId);
+          if (label == null) {
+            return;
+          } else if (valid) {
+            if (label.className === "form-label-invalid" || label.className === "form-label-bad") {
+              label.className = "form-label";
+            }
+          } else if (label.className === "form-label") {
+            label.className = "form-label-invalid";
+          }
+        }
+      );
+    }
+  
+        require(["dojo/dom", "dijit/registry", "dojo/domReady!"],
+          function(dom, registry) {
+            const button = dom.byId("actionSUBMITProxyN65796");
+            const formNode = dom.byId("loginForm");
+            button.disable = true;
+            let formValid = true;
+            Array.from(formNode.elements).forEach(function(element, i) {
+              const widget = registry.byId(element.id);
+              if (element.type === "textarea") {
+                if (element.attributes.getNamedItem("required").nodeValue) {
+                  const regExp = element.attributes.getNamedItem("regexp").nodeValue;
+                  const widgetValid = new RegExp(regExp).test(element.value);
+                  if (!widgetValid) formValid = false;
+                  setLabelDecoration(element.name, widgetValid);
+                }
+              } else if (widget == null) {
+                // nothing to do
+              } else if (widget.type === "button") {
+                // nothing to do
+              } else if (widget.type === "radio" || widget.type === "checkbox") {
+                const required = new RegExp(".*required{1}").test(widget.id);
+                if (required) {
+                  let checked = false;
+                  const siblings = document.getElementsByName(widget.name);
+                  Array.from(siblings).forEach(function(sibling) {
+                    checked = checked || sibling.checked;
+                  });
+                  if (!checked) formValid = false;
+                }
+                setLabelDecoration(widget.name, !required || checked);
+              } else {
+                const widgetValid = widget.isValid();
+                if (!widgetValid) formValid = false;
+                setLabelDecoration(widget.name, widgetValid);
+              }
+            });
+            if (formValid) {
+              dom.byId("actionSUBMIT").click();
+            } else {
+              button.disable = false;
+            }
+          }
+        );
+      </script></div></td><td class="" align="left" valign="top">&nbsp;</td></tr></table><script>
+        require(["dojo/dom-style", "dojo/domReady!"],
+          function(domStyle) {
+            domStyle.set("loginForm", "visibility", "visible");
+          }
+        );
+      </script></div></div><br/></td></tr></table></td><td id="area-sidebar" valign="top" style="background-color:#FFFFFF;"><table border="0" cellpadding="0" cellspacing="0" width="220"><tr><td><div class="service_bar"><noscript>
+        Javascript required to display
+        <br/>
+        page correctly !
+      </noscript><div id="permanentLinks" class="sidebar-permalinks"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><a class="sidebar-permalink-external" target="_blank" href="https://www.six-group.com/de/products-services/the-swiss-stock-exchange.html"><img src="/resources/images/trans@mui2g1h4.gif" width="14" height="1" border="0"/>SIX Swiss Exchange</a></td></tr><tr><td><a class="sidebar-permalink-external" target="_blank" href="https://www.six-group.com/de/products-services/financial-information/regulatory-services.html"><img src="/resources/images/trans@mui2g1h4.gif" width="14" height="1" border="0"/>SIX Exchange Regulation</a></td></tr><tr><td><a class="sidebar-permalink-external" target="_blank" href="https://six-structured-products.com"><img src="/resources/images/trans@mui2g1h4.gif" width="14" height="1" border="0"/>SIX Structured Products</a></td></tr><tr><td class="last"><a class="sidebar-permalink-external" target="_blank" href="https://www.swissfunddata.ch"><img src="/resources/images/trans@mui2g1h4.gif" width="14" height="1" border="0"/>Swiss Fund Data</a></td></tr></table></div><div id="sbHpLoginPane" class="section"><h2 class="title">
+        Login
+      </h2><table cellpadding="0" cellspacing="0"><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://secure.six-swiss-exchange.com/member_section/login.html">Member Section<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://disclosure.six-exchange-regulation.com/obligations/management_transaction/ddeal/login_de.html">Emittenten Reporting<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/issuers/services/connexor/ibt2/login_de.html ">IBT</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://editor.derizone.com/editor/connexor.html">IBT Editor<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://connexor.six-group.com">IBE<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://asap.six-group.com">ASAP<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://listing.six-exchange-regulation.com/admission/listing/ibl/login_de.html">IBL<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.exfeed.com/" target="_blank">Data Services Client Area<img src="/resources/images/trans@mui2g1h4.gif" width="3" height="1" border="0"/><img src="/resources/images/icons/new_window@mui2g1h4.png" border="0" width="11" height="9"/></a></td></tr></table></div><div id="sbLinksPane" class="section"><h2 class="title">Links</h2><table cellspacing="0" cellpadding="0"><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.six-swiss-exchange.com/issuers/services/connexor_de.html">CONNEXOR Services</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.six-swiss-exchange.com/issuers/services/connexor/distribution_de.html">Nutzungsvertrag</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.six-swiss-exchange.com/issuers/services/cosi_de.html">COSI</a></td></tr></table></div><div id="sbDownloadPane" class="section"><h2 class="title">Download</h2><table cellspacing="0" cellpadding="0"><tr><td class="sidebar-item"><a class="sidebar-item" href="/download/issuers/services/connexor/ibt2/doc/ibt_specifications.pdf" target="_blank">Interface Specification</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/download/issuers/services/connexor/ibt2/doc/TUFS_xml_schemas.zip" target="_blank">XML Schemas</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/issuers/services/connexor/ibt2/ibt_type_codes/IBTTypeCodes.xls" target="_blank">IBT Type Code Selection Guide</a></td></tr></table></div></div></td></tr></table></td></tr><tr><td id="area-page-tools" colspan="3"><div class="page_tools"><div class="functions"><ul><li><a href="#" class="icon print" onclick="window.print();return false;" title="Seite drucken">Drucken</a></li><li><a class="icon email" href="mailto:?subject=Site-Empfehlung%3A%20www.six-swiss-exchange.com/issuers/services/connexor/ibt2/login_de.html&amp;body=Ich%20habe%20eine%20interessante%20Seite%20auf%20www.six-swiss-exchange.com%20entdeckt%2C%20und%20mir%20gedacht%2C%20du%20solltest%20sie%20lesen.%0A%0ABitte%20klicke%20auf%20folgenden%20Link%2C%20um%20sie%20zu%20%C3%B6ffnen%3A%20%0Ahttp%3a%2f%2fwww.six-swiss-exchange.com/issuers/services/connexor/ibt2/login_de.html%0d%0a%0ASIX%20Swiss%20Exchange%20ist%20der%20Referenzmarkt%20f%c3%bcr%20%c3%bcber%2040%20000%20Schweizer%20Wertschriften%20und%20verbindet%20Investoren%2c%20Emittenten%20und%20Teilnehmer%20aus%20aller%20Welt.%20Mit%20modernster%20Technologie%20schafft%20SIX%20optimale%20Handelsbedingungen%20in%20den%20Segmenten%20Aktien%2c%20Anleihen%2c%20Exchange%20Traded%20Funds%20(ETF)%20und%20Exchange%20Traded%20Products%20(ETP).%0A%0AAufgrund%20ihrer%20Schweizer%20Wurzeln%20und%20soliden%20Eigent%C3%BCmerstruktur%20steht%20SIX%20Swiss%20Exchange%20f%C3%BCr%20Zuverl%C3%A4ssigkeit%2C%20Qualit%C3%A4t%20und%20Innovation.">Senden</a></li></ul></div><div class="social_connect"><ul><li class="first">
+          Folgen Sie uns:
+        </li><li><a class="icon2 linkedin" target="_blank" href="https://www.linkedin.com/cws/share?url=http://www.six-swiss-exchange.com/issuers/services/connexor/ibt2/login_de.html">&nbsp;</a></li><li><a class="icon2 twitter" target="_blank" href="http://twitter.com/home?status=http://www.six-swiss-exchange.com/issuers/services/connexor/ibt2/login_de.html">&nbsp;</a></li><li><a class="icon2 xing" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://www.six-swiss-exchange.com/issuers/services/connexor/ibt2/login_de.html">&nbsp;</a></li><li><a class="icon2 youtube" target="_blank" href="http://www.youtube.com/c/sixgroup">&nbsp;</a></li><li><a class="icon2 facebook" target="_blank" href="http://www.facebook.com/share.php?u=http://www.six-swiss-exchange.com/issuers/services/connexor/ibt2/login_de.html">&nbsp;</a></li></ul></div></div></td></tr><tr><td id="area-foot" colspan="3"><div class="footer"><div class="legal_nav"><ul class="clearfix"/></div><div class="notice"><p>&copy; SIX Swiss Exchange
+          
+              AG
+            </p></div></div></td></tr></table></td></tr></table></td><td width="12px">&nbsp;</td></tr></table><div id="meta-nav-lang-dropdown" style="display:none;"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="
+              meta-nav-dropdown meta-nav-dropdown-active
+            ">Deutsch</td></tr><tr><td class="
+              meta-nav-dropdown meta-nav-dropdown-inactive
+            " onclick="
+              window.location.href='/issuers/services/connexor/ibt2/login_en.html';
+            ">English</td></tr><tr><td class="
+              meta-nav-dropdown meta-nav-dropdown-inactive
+            " onclick="
+              window.location.href='/issuers/services/connexor/ibt2/login_fr.html';
+            ">Fran&ccedil;ais</td></tr></table><script type="text/javascript" language="javascript">
+          
+          let metaNavLangButton, metaNavLangDropdown, metaNavLanguage;
+          require(["dojo/ready", "dojo/dom", "dojo/on", "dojo/mouse", "dojo/dom-style", "dojo/domReady!"],
+          function (ready, dom, on, mouse, domStyle){
+            ready(function() {
+              
+              metaNavLangButton = dom.byId('meta-nav-lang-button');
+              metaNavLangDropdown = dom.byId('meta-nav-lang-dropdown');
+              metaNavLanguage = new metaNavSelector(metaNavLangButton, metaNavLangDropdown);
+              
+              on(metaNavLangButton, mouse.enter, function(){
+                metaNavLanguage.init();
+                metaNavLangButton.className='meta-nav meta-nav-button-over';
+                metaNavLangButton.getElementsByTagName('span')[0].className = 'meta-nav-arrow meta-nav-arrow-over';
+                domStyle.set(metaNavLangDropdown, 'display', 'block');
+              });
+              
+              on(metaNavLangButton, mouse.leave, function(event) {
+                if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                  metaNavLanguage.hideDropdown();
+                }
+              });
+              
+              on(metaNavLangDropdown, mouse.leave, function(event) {
+                if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                  metaNavLanguage.hideDropdown();
+                }
+              });
+            })
+          });
+        </script></div></td></tr></table></body></html>

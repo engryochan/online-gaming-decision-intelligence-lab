@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" data-next-head=""/><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0  interactive-widget=resizes-content" data-next-head=""/><title data-next-head="">Company Dashboard | FCX</title><meta name="csp-nonce"/><link rel="preload" href="/fonts/MaterialSymbolsOutlined-VariableFont_FILL,GRAD,opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><meta name="theme-color" content="#2C483B"/><meta name="description" content="Platform-X"/><link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"/><link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"/><link rel="icon" href="/favicon.ico"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"/><link rel="manifest" href="/site.webmanifest"/><meta name="msapplication-TileColor" content="#ffffff"/><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2C483B"/><script>
+              var hostname = window.location.hostname;
+              window.GTM_TAG_MANAGER = hostname.includes("dev") ? "GTM-KK3ZFLH" : hostname.includes("test") ? "GTM-N9HCXSC" : hostname === "app.fcx.com.au" ? "GTM-W2293V3" : null;
+              if (GTM_TAG_MANAGER) {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtmcb='+Date.now();f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer',GTM_TAG_MANAGER);
+              }
+              </script><style>
+            @media screen and (max-width: 768px) {
+              input, select, textarea, button {
+                font-size: 14px !important;
+              }
+            }</style><script>
+                window.addEventListener("error", async (event) => {
+                  event.stopImmediatePropagation();
+                  event.stopPropagation();
+                  event.preventDefault();
+
+                  if (window.dataLayer) {
+                    window.dataLayer.push({
+                      event: "unhandledJsError",
+                      unhandledJsErrorMessage: event.message,
+                      unhandledJsErrorFilename: event.filename,
+                      unhandledJsErrorLineno: event.lineno,
+                      unhandledJsErrorColno: event.colno
+                    });
+                  }
+
+                  await fetch("/api/browserError", {
+                    method: "POST",
+                    body: JSON.stringify({
+                      message: event.message,
+                      filename: event.filename,
+                      lineno: event.lineno,
+                      colno: event.colno,
+                      error: event.error,
+                      type: "Unhandled JS Exception",
+                    }),
+                  });
+                  console.error(event)
+                });
+              </script><noscript data-n-css=""></noscript><script defer="" noModule="" src="/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/_next/static/chunks/webpack-ea1b456955ff4f43.js" defer=""></script><script src="/_next/static/chunks/framework-ae87bb23f3e76b65.js" defer=""></script><script src="/_next/static/chunks/main-48dbc05535d7e1ad.js" defer=""></script><script src="/_next/static/chunks/pages/_app-865d54caa1d8ab41.js" defer=""></script><script src="/_next/static/chunks/b049fce4-797a72762ae4b190.js" defer=""></script><script src="/_next/static/chunks/bb47950e-573e8a2194a0fa59.js" defer=""></script><script src="/_next/static/chunks/030bd6b5-c5d6cd5363272ab4.js" defer=""></script><script src="/_next/static/chunks/502adae0-b1bad1a9a9b17fc2.js" defer=""></script><script src="/_next/static/chunks/80-d4a6ee8c179a64be.js" defer=""></script><script src="/_next/static/chunks/9451-17b19dfa9e4bb291.js" defer=""></script><script src="/_next/static/chunks/7534-01d698227bd49cf9.js" defer=""></script><script src="/_next/static/chunks/7919-251fe2ae57539821.js" defer=""></script><script src="/_next/static/chunks/pages/company/%5Bslug%5D/dashboard-4446fffa1072686f.js" defer=""></script><script src="/_next/static/fVwL4xNmWLzxOY_f7c7G9/_buildManifest.js" defer=""></script><script src="/_next/static/fVwL4xNmWLzxOY_f7c7G9/_ssgManifest.js" defer=""></script><style data-emotion="css-global 1d90jgl">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:#111111;font-family:ManropeRegular,DMSans,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}@font-face{font-family:"ManropeRegular";src:url("/fonts/Manrope-Regular.ttf");font-style:normal;font-weight:400;font-display:swap;}@font-face{font-family:"ManropeMedium";src:url("/fonts/Manrope-Medium.ttf");font-style:normal;font-weight:500;font-display:swap;}@font-face{font-family:"ManropeBold";src:url("/fonts/Manrope-Bold.ttf");font-style:normal;font-weight:700;font-display:swap;}@font-face{font-family:"DegularDisplayRegular";src:url("/fonts/DegularDisplay-Regular.otf");font-style:normal;font-weight:normal;font-display:swap;}@font-face{font-family:"DegularDisplayMedium";src:url("/fonts/DegularDisplay-Medium.otf");font-style:normal;font-weight:500;font-display:swap;}@font-face{font-family:"DegularDisplayBold";src:url("/fonts/DegularDisplay-Bold.otf");font-style:normal;font-weight:700;font-display:swap;}@font-face{font-family:"Material Symbols Outlined";src:url("/fonts/MaterialSymbolsOutlined-VariableFont_FILL,GRAD,opsz,wght.woff2");font-display:block;}a{color:inherit;-webkit-text-decoration:none;text-decoration:none;}p.MuiTypography-body1{margin-bottom:1.5rem;}[color=white]{color:#FDF9EF;}ul{margin:1rem 0;text-align:left;}div.slideInPanel{margin-top:56px;margin-left:0px;width:100%;}div.slideInPanel div.content{margin:1em 0;padding:0em 2em;}</style><style data-emotion="css "></style></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2293V3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="__next"><div id="back-to-top-anchor"></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{},"page":"/company/[slug]/dashboard","query":{"slug":"registry"},"buildId":"fVwL4xNmWLzxOY_f7c7G9","isFallback":false,"isExperimentalCompile":false,"appGip":true,"scriptLoader":[]}</script></body></html>

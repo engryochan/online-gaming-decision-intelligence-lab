@@ -1,0 +1,1811 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>International Financial Services Centres Authority</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- favicon icon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/fav/apple-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/fav/apple-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/fav/apple-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/fav/apple-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/fav/apple-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/fav/apple-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/fav/apple-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/fav/apple-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/fav/apple-icon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="192x192" href="/images/fav/android-icon-192x192.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/fav/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/fav/favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/fav/favicon-16x16.png" />
+	<meta name="msapplication-TileColor" content="#fa7070" />
+	<meta name="msapplication-TileImage" content="~/images/fav/ms-icon-144x144.png" />
+	<!-- favicon -->
+	<link rel="stylesheet" href="/Design/ifsca/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" type="text/css" href="/CmsNIC/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/css/table.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/css/exo.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/mega-min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/mega.css" />
+	<link rel="alternate stylesheet" media="screen" title="high-contrast" href="/css/custom.css">
+	<link href="/Design/css/LegalDatabase_Style.css" rel="stylesheet" />
+	<link href="/css/jgallery.css" rel="stylesheet" />
+	<link rel="alternate stylesheet" media="screen" title="high-contrast" href="/css/custom.css">
+	<link href="/CmsNIC/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+	<link href="/lib/select2/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/lib/bootstrap_DatePicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+	<link href="/lib/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" />
+	<link href="/Content/themes/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" />
+	<link href="/lib/toastr.js/toastr.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="/css/accesibility-style-v2.12.css">
+
+	<script src="/CmsNIC/js/jquery-3.7.1.min.js?v=eqaw4I9IoPldjffqieTL_h7z0ejA9zc_fyXt-05KMl4"></script>
+	<script src="/lib/select2/js/select2.min.js"></script>
+	<script src="/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.min.js"></script>
+	<script src="/lib/toastr.js/toastr.min.js"></script>
+	<link href="/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+	<script src="/lib/sweetalert2/sweetalert2.min.js"></script>
+	<style>
+		.disabled-menu {
+			display: none !important;
+		}
+		.footer-right-border {
+			border-right: 2px solid #3C4B58 !important;
+			padding-right: 41px !important;
+		}
+	</style>
+	
+	<script>
+		function ShowToaster ( operation, message, title = "" )
+		{
+		if ( operation == 1 )
+		toastr[ "success" ]( message, title );
+		else if ( operation == 2 )
+		toastr[ "error" ]( message, title );
+		else if ( operation == 3 )
+		toastr[ "info" ]( message, title );
+		else if ( operation == 4 )
+		toastr[ "warning" ]( message, title );
+		else { }
+		}
+
+
+		toastr.options = {
+		"closeButton": false,
+		"debug": false,
+		"newestOnTop": false,
+		"progressBar": true,
+		"positionClass": "toast-top-right",
+		"preventDuplicates": false,
+		"onclick": null,
+		"showDuration": "3000",
+		"hideDuration": "1000",
+		"timeOut": "5000",
+		"extendedTimeOut": "1000",
+		"showEasing": "swing",
+		"hideEasing": "linear",
+		"showMethod": "fadeIn",
+		"hideMethod": "fadeOut"
+		}
+
+		// $( document ).ready( function ()
+		// {
+		//     $( '.select2' ).select2();
+		// } );
+	</script>
+</head>
+
+<body>
+	<input name="__RequestVerificationToken" type="hidden" value="CfDJ8DiJ2VN5DfVOnykp2WyNN5cE308S_ao2mKtKloPTjg4isO_XpbYQ3wZs3qYrHhTCj56dJYXW-V4RYMER2v6dm-NP5K2qafPmXhMo4_-yHvRA5Cz6P0EXOlb3bvby3H1yLXbUBVAMhg4pOyRSDWuRigw" />
+	<!-- accessibility panel -->
+	<div b-wmuzvxmffj class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget" id="uw-main">
+		<div b-wmuzvxmffj class="relative second-panel">
+			<h3 b-wmuzvxmffj>Accessibility Options</h3>
+			<div b-wmuzvxmffj class="uwaw-close" onclick="closeMain()"></div>
+		</div>
+		<div b-wmuzvxmffj class="uwaw-body">
+			<div b-wmuzvxmffj class="h-scroll">
+				<div b-wmuzvxmffj class="uwaw-features">
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem_sp">
+						<button b-wmuzvxmffj id="speak"
+								class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-speaker"> </span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Screen Reader</span> <span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon_sp"
+																									   style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem">
+						<button b-wmuzvxmffj id="btn-s9" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-bigger-text">
+								</span>
+							</span><span b-wmuzvxmffj class="uwaw-features__item__name">Bigger Text</span>
+							<div b-wmuzvxmffj class="uwaw-features__item__steps reset-steps" id="featureSteps">
+								<!-- Steps span tags will be dynamically added here -->
+							</div>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon"
+								  style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-st">
+						<button b-wmuzvxmffj id="btn-small-text" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-small-text">
+								</span>
+							</span><span b-wmuzvxmffj class="uwaw-features__item__name">Small Text</span>
+							<div b-wmuzvxmffj class="uwaw-features__item__steps reset-steps" id="featureSteps-st">
+								<!-- Steps span tags will be dynamically added here -->
+							</div>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-st"
+								  style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-lh">
+						<button b-wmuzvxmffj id="btn-s12" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-line-hight">
+								</span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Line Height</span>
+							<div b-wmuzvxmffj class="uwaw-features__item__steps reset-steps" id="featureSteps-lh">
+								<!-- Steps span tags will be dynamically added here -->
+							</div>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-lh"
+								  style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-ht">
+						<button b-wmuzvxmffj id="btn-s10"
+								onclick="highlightLinks()" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-highlight-links">
+								</span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Highlight Links</span>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ht"
+								  style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-ts">
+						<button b-wmuzvxmffj id="btn-s13" onclick="increaseAndReset()" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-text-spacing">
+								</span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Text Spacing</span>
+							<div b-wmuzvxmffj class="uwaw-features__item__steps reset-steps" id="featureSteps-ts">
+								<!-- Steps span tags will be dynamically added here -->
+							</div>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ts"
+								  style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-df">
+						<button b-wmuzvxmffj id="btn-df"
+								onclick="toggleFontFeature()" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-dyslexia-font">
+								</span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Dyslexia Friendly</span>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-df"
+								  style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-hi">
+						<button b-wmuzvxmffj id="btn-s11"
+								onclick="toggleImages()" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-hide-images">
+								</span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Hide Images</span> <span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-hi"
+																									 style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-Cursor">
+						<button b-wmuzvxmffj id="btn-cursor" onclick="toggleCursorFeature()" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-cursor"> </span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Cursor</span> <span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-cursor"
+																		   style="display: none"> </span>
+						</button>
+					</div>
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-ht-dark">
+						<button b-wmuzvxmffj id="dark-btn" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__name">
+								<span b-wmuzvxmffj class="light_dark_icon">
+									<input b-wmuzvxmffj type="checkbox" class="light_mode uwaw-featugres__item__i"
+										   id="checkbox" />
+									<label b-wmuzvxmffj for="checkbox" class="checkbox-label">
+										<!-- <i class="fas fa-moon-stars"></i> --> <i b-wmuzvxmffj class="fas fa-moon-stars">
+											<span b-wmuzvxmffj class="ux4g-icon icon-moon"></span>
+										</i> <i b-wmuzvxmffj class="fas fa-sun"> <span b-wmuzvxmffj class="ux4g-icon icon-sun"></span> </i>
+										<span b-wmuzvxmffj class="ball"></span>
+									</label>
+								</span>
+								<span b-wmuzvxmffj class="uwaw-features__item__name">Light-Dark</span>
+							</span>
+							<span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick"
+								  id="tickIcon-ht-dark" style="display: none; pointer-events: none"> </span>
+						</button>
+					</div>
+					<!-- Invert Colors Widget -->
+					<div b-wmuzvxmffj class="uwaw-features__item reset-feature" id="featureItem-ic">
+						<button b-wmuzvxmffj id="btn-invert" class="uwaw-features__item__i"
+								data-uw-reader-content="Enable the UserWay screen reader"
+								aria-label="Enable the UserWay screen reader" aria-pressed="false">
+							<span b-wmuzvxmffj class="uwaw-features__item__icon">
+								<span b-wmuzvxmffj class="ux4g-icon icon-invert"> </span>
+							</span> <span b-wmuzvxmffj class="uwaw-features__item__name">Invert Colors</span> <span b-wmuzvxmffj class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ic"
+																									   style="display: none"> </span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- Reset Button -->
+		</div>
+		<div b-wmuzvxmffj class="reset-panel">
+			<!-- copyright accessibility bar -->
+			<div b-wmuzvxmffj class="copyrights-accessibility">
+				<button b-wmuzvxmffj class="btn-reset-all" id="reset-all"
+						onclick="resetAll()">
+					<span b-wmuzvxmffj class="reset-icon"> </span> <span b-wmuzvxmffj class="reset-btn-text">
+						Reset
+						All Settings
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<button b-wmuzvxmffj id="uw-widget-custom-trigger" class="uw-widget-custom-trigger" aria-label="Accessibility Widget"
+			data-uw-trigger="true" aria-haspopup="dialog">
+		<img b-wmuzvxmffj alt="" src="data:image/svg+xml,%0A%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_1506)'%3E%3Cpath d='M16 7C15.3078 7 14.6311 6.79473 14.0555 6.41015C13.4799 6.02556 13.0313 5.47894 12.7664 4.83939C12.5015 4.19985 12.4322 3.49612 12.5673 2.81719C12.7023 2.13825 13.0356 1.51461 13.5251 1.02513C14.0146 0.535644 14.6383 0.202301 15.3172 0.0672531C15.9961 -0.0677952 16.6999 0.00151652 17.3394 0.266423C17.9789 0.53133 18.5256 0.979934 18.9101 1.55551C19.2947 2.13108 19.5 2.80777 19.5 3.5C19.499 4.42796 19.1299 5.31762 18.4738 5.97378C17.8176 6.62994 16.928 6.99901 16 7Z' fill='white'/%3E%3Cpath d='M27 7.05L26.9719 7.0575L26.9456 7.06563C26.8831 7.08313 26.8206 7.10188 26.7581 7.12125C25.595 7.4625 19.95 9.05375 15.9731 9.05375C12.2775 9.05375 7.14313 7.67875 5.50063 7.21188C5.33716 7.14867 5.17022 7.09483 5.00063 7.05063C3.81313 6.73813 3.00063 7.94438 3.00063 9.04688C3.00063 10.1388 3.98188 10.6588 4.9725 11.0319V11.0494L10.9238 12.9081C11.5319 13.1413 11.6944 13.3794 11.7738 13.5856C12.0319 14.2475 11.8256 15.5581 11.7525 16.0156L11.39 18.8281L9.37813 29.84C9.37188 29.87 9.36625 29.9006 9.36125 29.9319L9.34688 30.0112C9.20188 31.0206 9.94313 32 11.3469 32C12.5719 32 13.1125 31.1544 13.3469 30.0037C13.5813 28.8531 15.0969 20.1556 15.9719 20.1556C16.8469 20.1556 18.6494 30.0037 18.6494 30.0037C18.8838 31.1544 19.4244 32 20.6494 32C22.0569 32 22.7981 31.0162 22.6494 30.0037C22.6363 29.9175 22.6206 29.8325 22.6019 29.75L20.5625 18.8294L20.2006 16.0169C19.9387 14.3788 20.1494 13.8375 20.2206 13.7106C20.2225 13.7076 20.2242 13.7045 20.2256 13.7013C20.2931 13.5763 20.6006 13.2963 21.3181 13.0269L26.8981 11.0763C26.9324 11.0671 26.9662 11.0563 26.9994 11.0438C27.9994 10.6688 28.9994 10.15 28.9994 9.04813C28.9994 7.94625 28.1875 6.73813 27 7.05Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_1506'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A">
+		<span b-wmuzvxmffj>Accessibility Options</span>
+	</button>
+	<!-- accessibility panel end-->
+	<!-------header section----------->
+	<header b-wmuzvxmffj class="site-header">
+		<div b-wmuzvxmffj class="top-bar">
+			<div b-wmuzvxmffj class="container-fluid">
+				<div b-wmuzvxmffj class="row align-items-center">
+					<div b-wmuzvxmffj class="col-lg-6 col-md-4 col-xl-7">
+						<!-------left content----------->
+						<div b-wmuzvxmffj class="left-content float-left">
+							<ul b-wmuzvxmffj>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/">Home</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/SiteMap">Sitemap</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/Career">Career</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/DirectoryList">Directory</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/ContactUs">Contact Us</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/Tender">Tender</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="/Gallery/Videos">Video Gallery</a></li>
+								<li b-wmuzvxmffj><a b-wmuzvxmffj href="https://swit.ifsca.gov.in/" target="_blank" >SWIT Portal</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-------right content----------->
+					<div b-wmuzvxmffj class="col-lg-6 col-md-8 col-xl-5">
+						<!-------left content----------->
+						<div b-wmuzvxmffj class="left-content float-right">
+							<div b-wmuzvxmffj class="top-line-reader">
+								<ul b-wmuzvxmffj>
+									<li b-wmuzvxmffj><a b-wmuzvxmffj id="jfontsizem2" style="cursor: pointer;">A-</a></li>
+									<li b-wmuzvxmffj><a b-wmuzvxmffj id="jfontsized2" style="cursor: pointer;">A</a></li>
+									<li b-wmuzvxmffj><a b-wmuzvxmffj id="jfontsizep2" style="cursor: pointer;">A+</a></li>
+									<li b-wmuzvxmffj class="light-theme">
+										<a b-wmuzvxmffj href="javascript:;" onclick="chooseStyle('defult-theme',60)">A</a>
+									</li>
+									<li b-wmuzvxmffj class="dark-theme"><a b-wmuzvxmffj href="javascript:;" class="bg-black bg-theme" onclick="chooseStyle('high-contrast',60)">A</a></li>
+									<li b-wmuzvxmffj><a b-wmuzvxmffj href="#main-content"><img src="/images/skip.png" alt="skip"></a></li>
+									<li b-wmuzvxmffj><a href="/Home/ScreenReaderAccess"><img src="/images/screen.png" alt="skip"></a></li>
+									<li b-wmuzvxmffj>
+										<div b-wmuzvxmffj class="lag-btn">
+												<select b-wmuzvxmffj id="ddLanguage" name="" class="custom-select text-white">
+													<option value="1" selected>English</option>
+													<option value="2">हिंदी</option>
+												</select>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-------navigation----------->
+		<div b-wmuzvxmffj class="">
+			<div b-wmuzvxmffj class="row align-items-center">
+				<div b-wmuzvxmffj class="col-12">
+					<nav b-wmuzvxmffj class="navbar navbar-expand-lg navbar-expand-xl navbar-light justify-content-between">
+						<a b-wmuzvxmffj href="/" class="logo">
+							<!-- <img src="images/g20-logo.png" alt=""> -->
+							<img src="/images/satmev-jayte.png" alt="">
+						</a>
+
+						<div b-wmuzvxmffj class="flex-div">
+
+
+							<div b-wmuzvxmffj class="centernav">
+										<ul b-wmuzvxmffj id="mega-menu" class="x-mega-menu">
+												<li b-wmuzvxmffj class="x-has-sub-menu" style="font-size: 16px;">
+													<a b-wmuzvxmffj style="font-size: 16px;">
+														About Us
+													</a>
+
+													<ul b-wmuzvxmffj>
+														<li b-wmuzvxmffj style="font-size: 16px;">
+															<div b-wmuzvxmffj class="same-align">
+
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>What we do</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Market_Integrity">
+																								Market Integrity
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Regulatory_Cooperation">
+																								Regulatory Cooperation
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Vision_and_Mission">
+																								Vision and Mission
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>How we Function</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Development">
+																								Development
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/ogGPf3wx5GE=">
+																								Regulation
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Supervision">
+																								Supervision
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Enterprise_Risk_Management">
+																								Enterprise Risk Management
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Chief_Vigilance_Officer_(CVO)">
+																								Chief Vigilance Officer (CVO)
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Independent_External_Monitors_(IEMs)">
+																								Independent External Monitors (IEMs)
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Legal Framework</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/sKCVtbX6J9o=">
+																								Act
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/E4H-JzPpHlE=">
+																								Rules 
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/ogGPf3wx5GE=">
+																								Regulations
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/zcGvy-Iqfcg=">
+																								Notification
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/wF6kttc1JR8=">
+																								Circular
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/mizvnmwVAgs=">
+																								Guidelines
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/sJuO5ldyNL0=">
+																								FAQs
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Legal/Index/TCce8MyOmco=">
+																								AML, CFT and KYC Compliance
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/InformalGuidance/Index">
+																								Informal Guidance
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/LegalDatabase/GetLegalDatabaseSubdetaile">
+																								Legal Database
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>How are we governed</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Overview">
+																								IFSC Authority
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/IFSCACommittees">
+																								IFSC Authority Committees
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Chairperson">
+																								Chairperson
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Chairperson_Speeches">
+																								Chairperson's Speeches
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Performance_Review_Committee (PRC)">
+																								Performance Review Committee (PRC)
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Management-Team">
+																								Management Team
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/AuthorityMeeting/Index">
+																								Authority Meetings
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Join Us</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Career">
+																								Careers overview
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Others</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Right_to_Information_(RTI)">
+																								Right to Information (RTI)
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Feedback-RTI-Compliance">
+																								Feedback RTI Compliance
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/UNSC-Sanctions-Committee-List">
+																								UAPA Orders and Notifications
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/WMD-Act-Designated-Lists">
+																								WMD Act Designated Lists
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Contacts_Details">
+																								Contact Us Details
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+
+									</div>
+									</li>
+									</ul>
+									</li>
+												<li b-wmuzvxmffj class="x-has-sub-menu" style="font-size: 16px;">
+													<a b-wmuzvxmffj style="font-size: 16px;">
+														Markets
+													</a>
+
+													<ul b-wmuzvxmffj>
+														<li b-wmuzvxmffj style="font-size: 16px;">
+															<div b-wmuzvxmffj class="same-align">
+
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Listing</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Listing">
+																								Listing
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Filings/Index">
+																								Filings
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Banking</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/IFSC_Banking_Units">
+																								Banking
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Payment and Settlement Systems</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Payment_Service_Providers">
+																								Payment and Settlement Systems
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Metals and Commodities </h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Metals and Commodities">
+																								Metals and Commodities
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Capital Markets</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Capital_Market_Intermediaries">
+																								Capital Market Intermediaries
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Fund Management </h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Fund_Management">
+																								Fund Management
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Market Infrastructure Institutions</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Market_Infrastructure_Institutions">
+																								Market Infrastructure Institutions
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Finance Companies</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Finance_Company_(Core)">
+																								Finance Company (Core)
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/GRCTC">
+																								GRCTC
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/ITFS">
+																								ITFS
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Aircraft_Leasing">
+																								Aircraft Leasing
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Ship_Leasing">
+																								Ship Leasing
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Insurance</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/IFSC_Insurance_Office_IIO">
+																								IFSC Insurance Office (IIO)
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/IFSC_Insurance_Intermediary_Office_IIIO">
+																								IFSC Insurance Intermediary Office (IIIO) 
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Foreign University</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/IFSCA_International_Branch_Campus_or_Offshore_Education_Centre_in_IFSC_framework">
+																								International Branch Campus & Offshore Education Centre
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>BATF Service Providers</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/BATF_Service">
+																								BATF Service
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Global Capability Centres (GCCs)</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/TechFin">
+																								TechFin
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/AncillaryService">
+																								Ancillary Service
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Global_In_house_Centres">
+																								Global In-house Centres
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>FinTech Sandbox Entities</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/FinTech">
+																								FinTech
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Sustainable Finance</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Sustainable_Finance">
+																								Sustainable Finance
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Techfin and Ancillary Service providers</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Techfin_and_Ancillary_Service_providers">
+																								Techfin and Ancillary Service providers
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+
+									</div>
+									</li>
+									</ul>
+									</li>
+												<li b-wmuzvxmffj class="x-has-sub-menu" style="font-size: 16px;">
+													<a b-wmuzvxmffj style="font-size: 16px;">
+														Set up an Entity
+													</a>
+
+													<ul b-wmuzvxmffj>
+														<li b-wmuzvxmffj style="font-size: 16px;">
+															<div b-wmuzvxmffj class="same-align">
+
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Process to Setup in IFSC</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Common/PreviewPdfFront?id=29709e474fe6b066fc0cb19f7d375e22&amp;fileName=Workflow_for_Setting_up_in_IFSC_on_the_SWIT_portal_V1_0_20260707_0523.pdf">
+																								Step by Step Workflow To establish in IFSCA
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>SEZ Administrator </h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/SezMeeting/UACMeetings">
+																								UAC Meetings & Approvals
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/SezMeeting/PublicNotice">
+																								Public Notice 
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/SezMeeting/SezComplianceFAQ">
+																								SEZ Compliance FAQ
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/SezMeeting/InstructionsAndClarifications">
+																								Instructions and Clarifications
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/SezMeeting/Miscellaneous">
+																								Miscellaneous
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>IFSCA Registration</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/HowToApply">
+																								How to Apply
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://swit.ifsca.gov.in/">
+																								Apply online through the Single Window IT System&#40;SWITS&#41; 
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/IFSCA_Informal_Guidance">
+																								IFSCA Informal Guidance
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Regulated Entities &#40;REs&#41;</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/DirectoryList">
+																								Directory of Regulated Entities
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/IFSC_Codes_issued_to_IBUs">
+																								IFSC Codes issued to IBUs
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+
+									</div>
+									</li>
+									</ul>
+									</li>
+												<li b-wmuzvxmffj class="x-has-sub-menu" style="font-size: 16px;">
+													<a b-wmuzvxmffj style="font-size: 16px;">
+														Consumers
+													</a>
+
+													<ul b-wmuzvxmffj>
+														<li b-wmuzvxmffj style="font-size: 16px;">
+															<div b-wmuzvxmffj class="same-align">
+
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Grievance Redressal</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Complaints">
+																								Complaints
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Grievance">
+																								Report your grievance
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Consumer Information</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/DirectoryList">
+																								Check if an entity is authorised
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/NRIs section">
+																								NRIs section
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/ConsumerAwareness">
+																								Consumer Awareness
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Alerts_Against_Possible_Scams">
+																								Alerts Against Possible Scams
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Consumer_Charter">
+																								Consumer Charter
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Enforcement</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Enforcement-Actions">
+																								Enforcement Actions
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Unserved-Notices">
+																								Unserved Notices
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/Unserved-notices-which-resulted-in-Order">
+																								Unserved Notices which resulted in order
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/About_Enforcement">
+																								About Enforcement 
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+
+									</div>
+									</li>
+									</ul>
+									</li>
+												<li b-wmuzvxmffj class="x-has-sub-menu" style="font-size: 16px;">
+													<a b-wmuzvxmffj style="font-size: 16px;">
+														News
+													</a>
+
+													<ul b-wmuzvxmffj>
+														<li b-wmuzvxmffj style="font-size: 16px;">
+															<div b-wmuzvxmffj class="same-align">
+
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>News</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/News/Index">
+																								News stories
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/PressRelease/Index/MEdJSLhva0M=">
+																								Press Releases
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/speeches">
+																								Speeches 
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Media Centre</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Gallery">
+																								Gallery
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Gallery/Videos">
+																								Video Gallery
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Events</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/PM-EVENT">
+																								Visit of Hon’ble PM
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/infinityforum/">
+																								InFinity Forum
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/isprint/">
+																								I-Sprint
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/PSE-Summit-2024">
+																								PSE Summit 2024
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://gsmc-ifsc.in/">
+																								GSMC 2.0
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://www.ifscatreasuryconference.in">
+																								IFSCA Corporate Treasury Conference
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://www.ficci.in/event-details/23032613686587#registration">
+																								Aircraft Leasing And Financing Summit
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://www.india-grs.in/">
+																								GRS 3.0
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+
+									</div>
+									</li>
+									</ul>
+									</li>
+												<li b-wmuzvxmffj class="x-has-sub-menu" style="font-size: 16px;">
+													<a b-wmuzvxmffj style="font-size: 16px;">
+														Publications
+													</a>
+
+													<ul b-wmuzvxmffj>
+														<li b-wmuzvxmffj style="font-size: 16px;">
+															<div b-wmuzvxmffj class="same-align">
+
+																		<div b-wmuzvxmffj class="col-lg-3">
+																			<h4 b-wmuzvxmffj>Publication</h4>
+																			<div b-wmuzvxmffj class="w-100"></div>
+																				<ul b-wmuzvxmffj class="inner-list">
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/aadg9ruDI%20M=">
+																								Committee Reports
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/sKCVtbX6J9o=">
+																								Public Consultation 
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/E4H-JzPpHlE=">
+																								Public Comments
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/zcGvy-Iqfcg=">
+																								Annual Reports
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/wF6kttc1JR8=">
+																								Bulletin
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Pages/Contents/HowToApply ">
+																								Application Forms
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Download">
+																								Downloads
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/mizvnmwVAgs=">
+																								Research
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/Tender">
+																								Tenders
+																							</a>
+
+																		</li>
+																						<li b-wmuzvxmffj>
+																							<a b-wmuzvxmffj href="https://ifsca.gov.in/ReportPublication/index/MEdJSLhva0M=">
+																								Post Events Reports
+																							</a>
+
+																		</li>
+																</ul>
+												</div>
+
+									</div>
+									</li>
+									</ul>
+									</li>
+								</ul>
+						<div b-wmuzvxmffj class="x-sub-menu" style="left: 0px; right: 0px; z-index: 99;"></div>
+
+				</div>
+				<button b-wmuzvxmffj type="button" class="btn btn-primary login-btn" onclick="window.location.href='https://swit.ifsca.gov.in/'">Apply</button>
+				<a b-wmuzvxmffj href="/" class="main-logo">
+					<img src="/images/logo.png" alt="IFSCA Logo" class="">
+				</a>
+			</div>
+			</nav>
+		</div>
+		<marquee b-wmuzvxmffj scrollamount="4" behavior="scroll" direction="left"
+				 style="color: white; font-weight: bold; font-size: 16px;">
+			<span b-wmuzvxmffj style="margin: 0 60px;"></span>Alert: Beware of financial scams! Always deal with IFSCA regulated entities. Check IFSCA Directory available on the website. Stay informed, stay protected!
+		</marquee>
+		</div>
+		</div>
+	</header>
+
+			<section b-wmuzvxmffj class="banner-part inner-page">
+				<div b-wmuzvxmffj class="carousel-inner">
+					<div b-wmuzvxmffj class="carousel-item active bg-dark-overlay">
+						<img src="/images/about-banner.jpg" class="d-block w-100 " alt="...">
+						<div b-wmuzvxmffj class="carousel-caption center">
+							<div b-wmuzvxmffj class="container-fluid">
+								<div b-wmuzvxmffj class="row justify-content-between align-items-center">
+									<div b-wmuzvxmffj class="col-md-6 col-sm-6 text-left  wow fadeInUp">
+											<h1 b-wmuzvxmffj class="display-4">Directory</h1>
+										<nav b-wmuzvxmffj aria-label="breadcrumb">
+											<ol b-wmuzvxmffj class="breadcrumb">
+												<li b-wmuzvxmffj class="breadcrumb-item"><a b-wmuzvxmffj href="/">Home</a></li>
+												<li b-wmuzvxmffj class="breadcrumb-item active" aria-current="page">Directory</li>
+											</ol>
+										</nav>
+									</div><!-- /.col-md-6 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-------about section----------->
+		<section b-wmuzvxmffj class="about-us">
+			<div b-wmuzvxmffj class="container">
+				<div b-wmuzvxmffj class="row justify-content-center">
+					<div b-wmuzvxmffj class="col-lg-12 col-md-12 mb-7 wow" >
+						<div b-wmuzvxmffj class="ifsca-section inner-padding">
+							<div b-wmuzvxmffj class="container">
+								<div b-wmuzvxmffj class="card">
+									<div b-wmuzvxmffj class="card-body">
+										<div class="modal fade" id="directoryPopup" tabindex="-1" role="dialog" aria-labelledby="directoryPopupLabel" aria-hidden="true" style="padding-top:150px;">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row d-flex mb-3">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+								<tbody>
+									<tr><td>Registered Address</td><td id="RegisteredAddress"></td></tr>
+									<tr><td>Date of Registration / Authorization / License</td><td id="DateOfRegistration"></td></tr>
+									<tr><td>Registration / Authorization No.</td><td id="RegistrationNumber"></td></tr>
+									<tr id="rowValidityFromDate" style="display:none;"><td>Validity From</td><td id="ValidityFromDate"></td></tr>
+									<tr id="rowValidityToDate" style="display:none;"><td>Validity To</td><td id="ValidityToDate"></td></tr>
+									<tr><td>Name of Contact Person</td><td id="NameofContactPerson"></td></tr>
+									<tr><td>Contact Number</td><td id="ContactNumber"></td></tr>
+									<tr><td>Email ID</td><td id="EmailId"></td></tr>
+									<tr><td>Website</td><td id="Website"></td></tr>
+									<tr><td>Remarks</td><td id="Remarks"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="responsive_table">
+<form action="/DirectoryList" method="post">		<div class="card-body">
+			<div class="row">
+				<div class="form-group col-md-6 mt-6">
+						<label for="paginationRequest_SearchText" class="control-label d-block mb-1">Global Search</label>
+					<div class="input-group">
+						<input class="form-control caf-search" data-val="true" data-val-required="The SearchText field is required." id="paginationRequest_SearchText" maxlength="100" name="paginationRequest.SearchText" placeholder="Search Text by Entity Name, Category, Sub category" type="text" value="" />
+						<div class="input-group-append">
+							<button class="file-upload-browse btn btn-primary" type="button" id="searchButton"> <i class="mdi mdi-magnify"></i>Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-4">
+					Category
+					<select class="form-control" data-val="true" data-val-required="The ParentTypeId field is required." ID="ParenDFTypeId" name="ParentTypeId" onchange="getChildCategoryData(this.value);"><option value="">-- Select All--</option>
+<option value="9">Ancillary Service Provider</option>
+<option value="1">Banking</option>
+<option value="27">BATF Service Providers</option>
+<option value="3">Capital Market Intermediaries</option>
+<option value="2">Finance Company</option>
+<option value="24">Fintech Sandbox Entities</option>
+<option value="29">Foreign Universities</option>
+<option value="7">Fund Management</option>
+<option value="10">Global In-House Centres</option>
+<option value="5">IFSC Insurance Intermediary Office (IIIO)</option>
+<option value="4">IFSC Insurance Office (IIO)</option>
+<option value="19">KYC Registration Agency</option>
+<option value="23">Market Infrastructure Institutions</option>
+<option value="11">Metals &amp; Commodities entities</option>
+<option value="26">Payment Service Provider</option>
+<option value="22">Payment System Provider</option>
+<option value="21">Qualified Jewellers</option>
+<option value="30">Surrendered/Cancelled CoRs</option>
+<option value="28">TAS Service Provider</option>
+</select>
+				</div>
+				<div class="form-group col-md-4">
+					Sub Category
+					<select class="select2 form-control" data-val="true" data-val-required="The Id field is required." ID="DFTypeId" name="Id" onchange="getDirectoryChildDataByID(this.value);"><option value="">-- Select All--</option>
+</select>
+				</div>
+				<div class="form-group col-md-4 mt-4">
+					<div class="input-group">
+						<input class="form-control caf-search" data-val="true" data-val-required="The SearchName field is required." id="paginationRequest_SearchName" maxlength="100" name="paginationRequest.SearchName" placeholder="Search Text by Entity Name" type="text" value="" />
+						<div class="input-group-append">
+							<button class="file-upload-browse btn btn-primary" type="button" id="searchButtonName"> <i class="mdi mdi-magnify"></i>Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="responsive_table">
+				<table class="table table-bordered" width="100%" id="tblDirectoryList">
+					<thead>
+						<tr>
+							<th style="text-align:center;width:5%;">Sr.No.</th>
+							<th style="text-align:left; width:40%;">Name of Entity</th>
+							<th style="text-align:center; width:25%;">Category</th>
+							<th style="text-align:center; width:30%;">Sub Category</th>
+						</tr>
+						<tr>
+							<th></th>
+							<th><input type="text" id="entityFilter" placeholder="Search Name" class="form-control form-control-sm" /></th>
+							<th>
+								<select id="categoryFilter" class="form-control form-control-sm">
+									<option value="">-- All --</option>
+								</select>
+							</th>
+							<th>
+								<select id="subCategoryFilter" class="form-control form-control-sm">
+									<option value="">-- All --</option>
+								</select>
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8DiJ2VN5DfVOnykp2WyNN5cE308S_ao2mKtKloPTjg4isO_XpbYQ3wZs3qYrHhTCj56dJYXW-V4RYMER2v6dm-NP5K2qafPmXhMo4_-yHvRA5Cz6P0EXOlb3bvby3H1yLXbUBVAMhg4pOyRSDWuRigw" /></form></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	<!-------business opportunity section----------->
+	<!-------suggestion section----------->
+	<section b-wmuzvxmffj class="subscribe wow fadeInUp">
+		<div b-wmuzvxmffj class="container">
+			<div b-wmuzvxmffj class="row">
+				<div b-wmuzvxmffj class="col-md-5 ml-auto border-right">
+					<h2 b-wmuzvxmffj class="sec-title mb-2">Subscribe to <strong b-wmuzvxmffj> IFSCA</strong></h2>
+				</div>
+				<div b-wmuzvxmffj class="col-md-7 mr-auto subscribe-text">
+					<p b-wmuzvxmffj class="lead-1 text-dark">
+						The International Financial Services Centres Authority (IFSCA) has been established to regulate and develop financial services in the International Financial Services Centres (IFSCs) located in India.
+					</p>
+					<button b-wmuzvxmffj type="button" class="btn btn-primary" id="openModalBtn">
+						Subscribe
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div b-wmuzvxmffj class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+		<div b-wmuzvxmffj class="modal-dialog">
+			<div b-wmuzvxmffj class="modal-content">
+				<div b-wmuzvxmffj class="modal-header">
+					<h5 b-wmuzvxmffj class="modal-title" id="subscribeModalLabel">Subscribe</h5>
+					<button b-wmuzvxmffj type="button" class="close" data-dismiss="modal" aria-label="Close"><span b-wmuzvxmffj aria-hidden="true">&times;</span></button>
+				</div>
+				<div b-wmuzvxmffj class="modal-body" id="modalContent">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-------footer section----------->
+	<footer b-wmuzvxmffj class="footer wow fadeInUp">
+
+		<div b-wmuzvxmffj class="main-footer">
+			<!-- <div class="footer-img"> -->
+			<div b-wmuzvxmffj class="container">
+				<div b-wmuzvxmffj class="row">
+					<div b-wmuzvxmffj class="col-lg-4 col-md-6">
+						<div b-wmuzvxmffj class="footer-widget about-widget">
+							<img src="/images/footer-logo.png" alt="footer">
+							<div b-wmuzvxmffj class="address d-flex pt-3">
+								<img src="/images/address.png" alt="address">
+								<p b-wmuzvxmffj>
+									IFSCA HQ, Block 12-B, Zone 1, Road 1A,
+									GIFT SEZ, GIFT City,
+									Gandhinagar, Gujarat-382050
+								</p>
+							</div>
+						</div>
+					</div>
+					<div b-wmuzvxmffj class="col-lg-8 col-md-12 ">
+						<div b-wmuzvxmffj class="row">
+							<div b-wmuzvxmffj class="col-lg-7 col-md-6">
+								<div b-wmuzvxmffj class="footer-widget links-widget footer-right-border">
+									<div b-wmuzvxmffj class="widget-title">
+										<h3 b-wmuzvxmffj class="mlm10">Important Links</h3>
+									</div>
+									<div b-wmuzvxmffj class="link-wrapper clearfix">
+										<ul b-wmuzvxmffj class="link-lists">
+											<li b-wmuzvxmffj><a href="/Pages/Contents/About_Us">About us</a></li>
+											<li b-wmuzvxmffj><a href="/Pages/Contents/Development">Development</a></li>
+											<li b-wmuzvxmffj><a b-wmuzvxmffj href="/Tender">Tenders</a></li>
+											<li b-wmuzvxmffj><a b-wmuzvxmffj href="/Career">Career</a></li>
+											<li b-wmuzvxmffj><a b-wmuzvxmffj href="../../Document/IFSCA_Holiday_List.pdf" target="_blank">IFSCA Holiday List</a></li>
+											<li b-wmuzvxmffj><a b-wmuzvxmffj href="/DirectoryList">Directory</a></li>
+											<li b-wmuzvxmffj><a b-wmuzvxmffj href="/Download">Download</a></li>
+											<li b-wmuzvxmffj><a href="/Pages/Contents/IFSC_Codes_issued_to_IBUs">IFSC Codes issued to IBUs</a></li>
+											<li b-wmuzvxmffj><a href="/Pages/Contents/Right_to_Information_(RTI)">Right to Information (RTI)</a></li>
+
+										</ul>
+										<!-- /.link-wrapper -->
+									</div>
+								</div>
+							</div>
+							<div b-wmuzvxmffj class="col-lg-5 col-md-6">
+								<div b-wmuzvxmffj class="footer-widget links-widget">
+									<div b-wmuzvxmffj class="widget-title">
+										<h3 b-wmuzvxmffj class="mlm10">Quick Links</h3>
+									</div>
+									<div b-wmuzvxmffj id="Footerlegal-submenu-container"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div b-wmuzvxmffj class="row">
+					<div b-wmuzvxmffj class="col-12 d-flex justify-content-between social-main">
+						<div b-wmuzvxmffj class="d-flex scoial-call">
+							<img src="/images/call.png" alt="">
+							<p b-wmuzvxmffj><a b-wmuzvxmffj href="tel:91-79- 6180-9800">91-79- 6180-9800</a></p>
+						</div>
+						<div b-wmuzvxmffj class="social">
+							<a b-wmuzvxmffj href="https://twitter.com/ifsca_official?lang=en" aria-label="Follow IFSCA on Twitter"><i b-wmuzvxmffj class="fa fa-twitter"></i></a>
+							<a b-wmuzvxmffj href="https://www.linkedin.com/showcase/ifscaofficial" aria-label="Follow IFSCA on LinkedIn"><i b-wmuzvxmffj class="fa fa-linkedin"></i></a>
+							<a b-wmuzvxmffj href="https://www.youtube.com/channel/UCJDOlW0d0VhtRUNt3rMg7Aw/featured" aria-label="Follow IFSCA on YouTube"><i b-wmuzvxmffj class="fa fa-youtube"></i></a>
+						</div>
+						<div b-wmuzvxmffj class="scoial-call d-flex">
+							<img src="/images/mail.png" alt="">
+							<p b-wmuzvxmffj><a b-wmuzvxmffj href="#">helpdesk[at]ifsca[dot]gov[dot]in</a></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- </div> -->
+		</div>
+
+	</footer>
+	<div b-wmuzvxmffj id="Visitorcount"></div>
+	<div b-wmuzvxmffj class="fixed-icons">
+		<ul b-wmuzvxmffj>
+			<li b-wmuzvxmffj><a b-wmuzvxmffj href="https://www.linkedin.com/showcase/ifscaofficial"><img src="/images/linkedin.png" alt="linkedin"></a></li>
+			<li b-wmuzvxmffj><a b-wmuzvxmffj href="https://twitter.com/ifsca_official?lang=en"><img src="/images/twitter.png" alt="twitter"></a></li>
+			<li b-wmuzvxmffj><a b-wmuzvxmffj href="https://www.youtube.com/channel/UCJDOlW0d0VhtRUNt3rMg7Aw/featured"><img src="/images/youtube.png" alt="youtube"></a></li>
+		</ul>
+	</div>
+	<script src="/CmsNIC/js/jquery-3.7.1.min.js?v=eqaw4I9IoPldjffqieTL_h7z0ejA9zc_fyXt-05KMl4"></script>
+	<script src="/CmsNIC/js/bootstrap.bundle.min.js?v=FUpJiTKQUUZ7PvrxCQ3v1nJJFCVfbeCmH9rG40EisbU"></script>
+	<!-- <script src="js/jquery.magnific-popup.min.js"></script> -->
+	<script src="/CmsNIC/js/jquery.waypoints.min.js?v=-5OPiqYqWAM8-IEOnZ4eJZRNgOs7d_oC-xr_hOr39w8"></script>
+	<script src="/js/jquery.counterup.min.js"></script>
+	<!-- accessibility -->
+	<script src="/js/wow.js"></script>
+	<script src="/js/exo.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="/js/styleswitch.js"></script>
+	<script src="/js/storage.js"></script>
+	<script src="/js/jquery.jfontsize-2.0.js"></script>
+	<script src="/js/mega-outer.js"></script>
+	<script src="/js/mega.js"></script>
+	<script src="/CustomJS/FronViewLayout/Common.js"></script>
+	<script src="/lib/bootstrap_DatePicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="/CmsNIC/js/jquery.dataTables.min.js?v=Q-PdA4zvX1OVUB2LZWKdbytUMPEjyv0svZM9uWFxb0o"></script>
+	<script src="/CmsNIC/js/dataTables.bootstrap4.min.js?v=hrIQZXD2JT-MvZyggEgrcAaaWP0XPuUaFKg8oR8pZ-o"></script>
+
+	<script src="/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+	<script src="/Content/themes/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+	<script src="/js/weights-v12.js"></script>
+
+
+	<script>
+		// Keypress event handler
+		$( 'body' ).on( 'keypress', '.onlynumber', function ( event )
+		{
+			var maxLength = $( this ).attr( 'maxlength' );
+
+			// Check if max length is defined and if the current input length is less than max length
+			if ( maxLength && $( this ).val().length >= maxLength )
+			{
+				ShowToaster( 2, `Maximum length of ${ maxLength } characters reached.`, "Maximum length Error" );
+				event.preventDefault();
+				return false;
+			}
+
+			// Allow only numeric characters (0-9)
+			return event.charCode >= 48 && event.charCode <= 57;
+		} );
+
+		// Paste event handler
+		$( 'body' ).on( 'paste', '.onlynumber', function ( event )
+		{
+			var currentValue = $( this ).val();
+			var maxLength = $( this ).attr( 'maxlength' );
+			var value = event.originalEvent.clipboardData.getData( 'text' ).trim();
+
+			// Check if max length is defined and if pasting the value would exceed max length
+			if ( maxLength && currentValue.length + value.length > maxLength )
+			{
+				ShowToaster( 2, `Pasting this value exceeds the maximum length of ${ maxLength } characters.`, "Maximum length Error" );
+				return false;
+			}
+
+			// Validate each character in the pasted value
+			for ( var i = 0; i < value.length; i++ )
+			{
+				var charcode = value.charCodeAt( i );
+
+				// Allow only digits (0-9)
+				if ( charcode < 48 || charcode > 57 )
+				{
+					return false;
+				}
+			}
+
+			// Append valid pasted value to the current value
+			$( this ).val( currentValue + value );
+			return false; // Prevent default paste behavior
+		} );
+		function openpopup(id) {
+			$('#' + id).modal('show');
+		}
+		function closepopup(id) {
+			$('#' + id).modal('hide');
+		}
+
+	</script>
+	<script>
+		$(document).ready(function () {
+
+			$('#subscribeModal').on('shown.bs.modal', function () {
+				sortDropdown('#categories');
+			});
+
+
+			function sortDropdown(selector) {
+				const dropdown = $(selector);
+				const options = dropdown.find('option');
+
+
+				const selectedOptions = options.filter(':selected');
+				const unselectedOptions = options.not(':selected');
+
+
+				dropdown.empty().append(selectedOptions).append(unselectedOptions);
+			}
+
+
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+
+			$('#openModalBtn').click(function () {
+
+				$.ajax({
+					headers: { "X-CSRF-TOKEN": document.getElementsByName( "__RequestVerificationToken" )[ 0 ].value },
+					url: '/SubsrcibeMaster/Index',
+					method: 'GET', // Request type (GET)
+					success: function (response) {
+
+						$('#modalContent').html(response);
+
+						$('#subscribeModal').modal('show');
+					},
+					error: function () {
+						alert('There was an error loading the subscription form.');
+					}
+				});
+			});
+		});
+	</script>
+	
+	<script src="/CustomJS/DirectoryList.js"></script>
+
+
+	<!-- Cookie Consent Banner -->
+	<div id="cookieConsentBanner">
+    <div class="cookie-banner-wrapper">
+
+        <div class="cookie-banner-left">
+            <strong>🍪 Cookie Settings</strong>
+            <p>
+                This website uses cookies to provide a better user experience.
+                We use essential cookies for site functionality and optional cookies
+                to enhance browsing experience.
+                <a href="/Home/CookieSettings">Learn more</a>
+            </p>
+        </div>
+
+        <div class="cookie-banner-right">
+            <button id="acceptAllCookies" class="cookie-btn primary">
+                Accept All Cookies
+            </button>
+
+            <button id="acceptEssentialCookies" class="cookie-btn primary">
+                Essential Only
+            </button>
+
+            <button id="customizeCookies" class="cookie-btn primary">
+                Customize Settings
+            </button>
+        </div>
+
+    </div>
+</div>
+
+	<link rel="stylesheet" href="/css/CookieConsent.css" />
+	<script src="/CustomJS/CookieConsent.js"></script>
+
+	<script>
+			  var message = "";
+
+			if (message) {
+				// Show the toaster message if the message exists
+				ShowToaster(1, message);  // 1 indicates success, change it to 2 for error messages
+			}
+
+			function ShowToaster(type, message) {
+			// Create the toaster element dynamically
+			var toaster = document.createElement('div');
+			toaster.innerText = message;
+
+			// Set the class depending on the type (for success or error)
+			if (type === 1) {
+				toaster.classList.add('alert', 'alert-success');  // Green for success
+			} else if (type === 2) {
+				toaster.classList.add('alert', 'alert-danger');   // Red for error
+			}
+
+			// Position the toaster in the page (this uses existing alert styles)
+			toaster.style.position = 'fixed';
+			toaster.style.top = '20px';
+			toaster.style.right = '20px';
+			toaster.style.backgroundColor = 'rgba(144, 238, 144, 0.8)';
+			toaster.style.zIndex = '9999';
+			toaster.style.display = 'block';
+
+			// Append to the body
+			document.body.appendChild(toaster);
+
+			// After 4 seconds, hide the toaster
+			setTimeout(function () {
+				toaster.style.display = 'none';
+			}, 4000);
+		}
+	</script>
+	<script>
+			$(document).ready(function() {
+		 // executes when HTML-Document is loaded and DOM is ready
+
+		// breakpoint and up
+		$(window).resize(function(){
+			if ($(window).width() >= 980){
+
+			  // when you hover a toggle show its dropdown menu
+			  $(".navbar .dropdown-toggle").hover(function () {
+				 $(this).parent().toggleClass("show");
+				 $(this).parent().find(".dropdown-menu").toggleClass("show");
+			   });
+
+				// hide the menu when the mouse leaves the dropdown
+			  $( ".navbar .dropdown-menu" ).mouseleave(function() {
+				$(this).removeClass("show");
+			  });
+
+				// do something here
+			}
+		});
+		$(document).on('click', '.nav-pills .nav-link', function (e) {
+		  e.stopPropagation(); // Stop the click from bubbling up to Bootstrap's navbar toggler
+		});
+
+
+
+		// document ready
+		});
+	</script>
+	<script>
+
+		$('.mob-tabpane-toggler').on('click', function(e) {
+				if($(window).width() < 768) {
+					e.preventDefault();
+			  e.stopPropagation();
+					var $this = $(this), $thisHrefValue = $(this).attr('href');
+					$this.parent().parent().siblings().removeClass('active show');
+					$this.parent().parent().addClass('active show');
+					$this.parent().parent().parent().siblings('nav').find('a').removeClass('active');
+					$thisHrefValue = $thisHrefValue + '-tab';
+					$($thisHrefValue).addClass('active');
+					console.log($thisHrefValue);
+				} else {
+					console.log('height greater');
+				}
+			});
+			$('#tblNewSec').DataTable({
+			"paging": true,
+			"lengthChange": false,
+			"searching": true,
+			"ordering": true,
+			"info": true,
+			"autoWidth": false,
+			"order": [[0, "desc"]],
+			"columnDefs": [
+				{ orderable: false, "targets": [1, 2] }
+			],
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll(".custom-link").forEach(function (link) {
+				link.addEventListener("click", function (e) {
+					const shouldOpenNewTab = this.dataset.openNewTab === "true";
+					const url = this.dataset.url;
+
+					if (shouldOpenNewTab) {
+						// Allow Bootstrap tab to activate, then open the link in a new tab
+						setTimeout(() => {
+							window.open(url, '_blank');
+						}, 150); // Slightly increased delay for smoother interaction
+					}
+				});
+			});
+		});
+	</script>	
+
+</body>
+</html>

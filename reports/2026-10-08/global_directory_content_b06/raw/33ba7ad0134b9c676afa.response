@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <link rel="shortcut icon" href="/content/img/favicon.ico" type="image/x-icon">
+    <title>Business Registration Service</title>
+    <link href="/content/style/css?v=QYsfO8M6vAFK3maEG0n9eEt6PX7dP3EZL-ChL1n7iY41" rel="stylesheet"/>
+
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="/bundles/jquery?v=2GqrFoPKiD4DZqhdkYm0PqTWkYTs23Uyt7ImUNUpWBA1"></script>
+
+    <script src="/bundles/bootstrap?v=JXYoQZ6NYUzW_HEi32DRZBPmWusQLnifjzY1dL86fzs1"></script>
+
+    <script src="/bundles/jqueryval?v=tfHRR8NClvrrWd0Wwf4dB2cPNK1fvqjWSscmYVENPrE1"></script>
+
+    <script src="/bundles/jqueryfileupload?v=BLliUCkyV6Bmx_3yqqqYFqIiWFcwDw4tRpOlXpfv3go1"></script>
+
+    <script src="/bundles/jquerymegamenu?v=jUaqtRzo7ZMUMn_7pUZuecQHZ_SxaaU5vVnXjlxJoF81"></script>
+
+    <script src="/bundles/sobrs?v=vt7_HxGtmcKc3jmIp7riRYg3dlSfFzJqOosJAh0dWUA1"></script>
+
+
+    
+            <!-- Google Tag Manager -->
+            <script>
+                   (function (w, d, s, l, i) {
+                       w[l] = w[l] || []; w[l].push({
+                           'gtm.start':
+                           new Date().getTime(), event: 'gtm.js'
+                       }); var f = d.getElementsByTagName(s)[0],
+                           j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                   })(window, document, 'script', 'dataLayer', 'GTM-5F8T7WH');
+            </script>
+            <!-- End Google Tag Manager -->
+
+
+    <!-- dont load the chat buttons if the webchat settings are not available/complete -->
+    <!--show the Button based on whether the agent is on - line.Determined by LiveAgent script(deployment.js) -->
+
+
+        <script type="text/javascript" charset="utf-8">
+            startGenesysChat('https://apps.mypurecloud.com.au/genesys-bootstrap/genesys.min.js', 'prod-apse2', 'ec84ed8d-67bf-4bcd-aee3-71179d3622a3', '2000','BRS', 'genesysLiveagent_button_online', 'True');
+        </script>
+</head>
+
+<body class="feature-home">
+    <!-- Page Content  -->
+
+    <div class="headergovau">
+        <div class="container-fluid">
+            <div class="row headergovau__bar">
+                <div class="col-md-12">
+                    <a class="headergovau__button js-header-accordion au-accordion--closed" id="headergovau__button" role="tab" aria-expanded="false" aria-selected="false" aria-controls="headergovau-accordion" href="#headergovau-accordion">
+                        <span class="headergovau__text">
+                            <span class="headergovau__title">Australian Government&nbsp;</span>
+                            <span class="headergovau__official">official website</span>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="headergovau__content row au-accordion__body au-accordion--closed" id="headergovau-accordion" aria-hidden="true" style="display:none;">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="headergovau__icon-content icon--govau">
+                            <p class="headergovau__content__title">The .gov.au means it's official.</p>
+                            <p>Australian government websites always use a .gov.au domain. Before sharing sensitive information online, make sure you're on a .gov.au site by inspecting your browser's address (or 'location') bar.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="headergovau__icon-content icon--secure">
+                            <p class="headergovau__content__title">This site is secure.</p>
+                            <p>The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="globalHeaderSub">
+        <!-- BGA Global Ribbon -->
+        
+
+        <!-- Service Ribbon -->
+        <div class="serviceHeader">
+            <div class="text-sm-center container-fluid">
+                
+                <a id="ausGovtCrestBannerLink" href="/"><img class="mobcrest" alt="Business Registration Service" src="/Content/img/brs-logo-mobile.svg"></a>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation - fixed to bottom -->
+        <div id="mobileNav" class="fixed-bottom">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bga-nav p-4">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Frequently asked questions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="alert" class="nav-link" href="#">Is JQuery working?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Do I need an ABN?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="navbar bga-navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenuOne" aria-controls="navbarToggleMenuOne"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon"><i class="fas fa-comments"></i></span>
+                    <span class="label">Chat</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenuTwo" aria-controls="navbarToggleMenuTwo"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon"><i class="fas fa-question-circle"></i></span>
+                    <span class="label">Help</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenuThree" aria-controls="navbarToggleMenuThree"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon"><i class="fas fa-toolbox"></i></span>
+                    <span class="label">Services</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenuFour" aria-controls="navbarToggleMenuFour"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <span class="label">Sign in</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon"><i class="fas fa-align-left"></i></span>
+                    <span class="label">More</span>
+                </button>
+            </nav>
+        </div>
+        <!-- End Mobile Navigation -->
+        
+        <!-- End off-canvas nav -->
+
+        <div id="headercolorstrip" class="headercolorstrip"></div>
+            <nav id="settings" class="navsettingsbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                    </li>
+                </ul>
+            </nav>
+
+    </header>
+
+    
+
+
+
+<div class="system-message clearfix"><div class="system-message-content"><style>
+.tmp-white {
+color: #fff;
+}
+ 
+ 
+</style>
+
+ 
+<strong><p>Service disruption notice: business name and company registrations</p></strong>
+<p>We are currently experiencing an intermittent issue that may affect business name and company registrations.</p>
+<p>You may experience issues completing your registration or making a payment.
+If you are unable to complete your registration, please try again later.</p>
+<p>We apologise for any inconvenience and are working to resolve the issue as quickly as possible.</p></div><button type="button" class="closeSystemMessage" onclick='document.cookie = "testMessageVisible=false";'>Dismiss</button></div>
+
+
+
+
+
+<div id="homepage" class="content container">
+    <div id="headingHome" class="pagehero">
+        <h1 class="mt-5 mb-4">
+            <span id="headerpretextline" class="preHeading mb-3">
+                Welcome to the Australian Government
+            </span>
+            <span class="mainHeading">Business Registration Service</span>
+        </h1>
+        <p id="headerbyline" class="byline"><p>Here you can apply for your key business and tax registrations in one place.</p><p>Not sure which registrations you need? Use our tool to help you <a href="https://business.gov.au/registrations/work-out-your-business-registrations" target="_blank"> work out your business registrations</a>. <a class="cd-btn help" href="#help-businessregistrationsdescription"><span>Help - Business Registration Service</span></a></p>
+</p>
+    </div>
+
+    <div id="actionTiles" class="actionTiles">
+        <div class="row mb-2">
+
+            
+            <div class="col-lg-8 order-1">
+                <div class="card primarycard flex-md-row mb-4 box-shadow h-md-250">
+                    <a id="NewABNRegistrationTileHeader" href="/registration/type">
+                        <div class="card-body">
+                            <h3 class="mb-5">
+                                Register your business
+                            </h3>
+                            <div class="lowdown">
+                                <div class="card-text"><p>If you&#39;re a new business, register here for an Australian Business Number (ABN). Registering for an ABN is free and you can register for a business name or taxes at the same time.</p>
+</br>
+<p>Only need a business name? Apply here.</p></div>
+                                <span class="card-cta" href="/registration/type">
+                                    Get started
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                        <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="helpIconWrapper">
+                        <a class="cd-btn help" href="#help-newabnregistrationtileheader"><span>Help - Register your business</span></a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 order-4 order-lg-2">
+                <div class="card secondarycard flex-md-row mb-4 box-shadow h-md-250">
+                    <div class="card-body">
+                        <h3 class="mb-5">Resume or track your application</h3>
+                        <div class="lowdown">
+                            <div class="card-text">
+                                <p>
+                                    <a id="ExistingApplicationTileActionB2CText" class="button card-cta mb-2" href="/registration/dashboard">
+                                        Return to your application for new business registrations such as a new ABN or business name <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                            <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                        </svg>
+                                    </a>
+                                </p>
+
+                                <p>
+                                    
+                                    <a id="ExistingApplicationTileActionVanguardText" class="button card-cta" href="/additional/dashboard">
+                                        Return to your application for additional tax registrations <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                            <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="helpIconWrapper">
+                        <a class="cd-btn help" href="#help-existingapplicationtileheader"><span>Help - Resume or track your application</span></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 order-2 order-lg-3">
+                <div class="card primarycard flex-md-row mb-4 box-shadow h-md-250">
+                    <a id="AdditionalRegistrationTileHeader" href="/additional">
+                        <div class="card-body">
+                            <h3 class="mb-5">
+                                Register for GST &amp; other taxes
+                            </h3>
+                            <div class="lowdown">
+                                <div class="card-text"><p>If you already have an ABN, register here for other taxes like PAYG, GST and FBT. </p></div>
+                                <span class="card-cta">
+                                    Register for taxes
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                        <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                    </svg>
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <div class="helpIconWrapper">
+                        <a class="cd-btn help" href="#help-additionalregistrationtileheader"><span>Help - Register for taxes</span></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 order-3 order-lg-4">
+                <div class="card primarycard flex-md-row mb-4 box-shadow h-md-250">
+                    <a id="NewBNRegistrationTileHeader" href="/registration/type?type=Company">
+                        <div class="card-body">
+                            <h3 class="mb-5">
+                                Register a company
+                            </h3>
+                            <div class="lowdown">
+                                <div class="card-text"><p>Register your company, apply for a company name and get an ACN here.</p></div>
+                                <span class="card-cta">
+                                    Register your company
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                        <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="helpIconWrapper">
+                        <a class="cd-btn help" href="#help-newbnregistrationtileheader"><span>Help - Register a company</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end actionTiles -->
+
+    <div id="BusinessRegistrationsSecondaryHeader" class="page-hero-secondary">
+        <h2>Help for your business</h2>
+    </div>
+
+    <div id="infoTiles" class="infoTiles">
+        <div class="row mb-2">
+
+            <div class="col-lg-4">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <a id="StartingABusinessTileActionUrl" href="https://www.business.gov.au/Guide/Starting">
+                        <div class="card-body">
+                            <h4 class="mb-4">Starting a business?</h4>
+                            <div class="card-text mb-5"><p>Our Starting a business guide will take you through each step of starting a business and help you understand what&#39;s ahead.</p></div>
+                            <span class="card-cta lowdown">
+                                Follow our step by step guide
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                    <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <a id="LicensesTileActionUrl" href="https://ablis.business.gov.au/">
+                        <div class="card-body">
+                            <h4 class="mb-4">Licences &amp; permits</h4>
+                            <div class="card-text mb-5"><p>Find the licences and permits that apply to your business type, industry and location.</p></div>
+                            <span class="card-cta lowdown">
+                                Find licences and permits
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                    <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <a id="GovernmentGrantsTileActionUrl" href="https://www.business.gov.au/Grants-and-Programs">
+                        <div class="card-body">
+                            <h4 class="mb-4">Grants &amp; assistance for your business</h4>
+                            <div class="card-text mb-5"><p>Use our search tool to find grants, funding or assistance programs to help your business grow and succeed.</p></div>
+                            <span class="card-cta lowdown">
+                                Search for grants and assistance
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 21.68 11.76" class="cta-arrow">
+                                    <polygon class="a" points="21.68 5.87 15.81 0 14.5 1.31 18.14 4.96 0 4.96 0 6.79 18.16 6.79 14.5 10.45 15.81 11.76 21.68 5.89 21.67 5.88 21.68 5.87" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+                                <input type="hidden" class="help-anchor" id="help-businessregistrationsdescription"/>
+<h3>Business Registration Service</h3> 
+<div><p>The Australian Government Business Registration Service combines a number of key government business and tax registration forms in one place.</p>
+<p>We have forms for new businesses, existing businesses returning to apply for tax registrations or businesses who simply need <a href="https://digitalIDsystem.gov.au/" target="_blank">Digital ID</a>. See below for more details:</p>
+<h4>New business</h4> 
+<p>Use the <strong>New business</strong> form if you need a new Australian Business Number (ABN). You can apply here for your ABN together with any of the following registrations: </p>
+<ul> <li>Business name*</li> <li>Goods and Services Tax (GST)</li> <li>Australian company</li> <li>Pay as You Go (PAYG) withholding</li> <li>Fringe Benefits Tax (FBT)</li> <li>Luxury Car Tax (LCT)</li> <li>Fuel Tax Credits (FTC)</li> <li>Wine Equalisation Tax (WET)</li></ul>
+<p>*You can also <strong>apply for business name on its own</strong> if you: </p>
+<ul><li>already have an ABN</li> <li>already have an ABN reference number</li> <li>apply as a joint venture.</li></ul>
+<h4>Apply for tax registrations</h4>
+<p>Use the <strong>Apply for tax registrations</strong> form if you already have an ABN, but need to apply for one or more tax registration.</p>
+<p>You can use your <a href="https://digitalIDsystem.gov.au/" target="_blank">Digital ID</a> to apply for GST, PAYG withholding, FBT, LCT, FTC and WET.</p>
+<h4>Can I register Norfolk Island businesses here?</h4>
+<p>Yes. Norfolk Island businesses can use the <strong>New business</strong> form to apply for the following business registrations:</p> 
+<ul><li>ABN</li> <li>Business name</li> <li>Australian company</li> <li>PAYG withholding</li> <li>FBT</li> </ul>
+<p>Norfolk Island businesses do not need to register for GST, LCT, FTC or WET.</p>
+<h4>Can I update my details or apply for renewals here?</h4>
+<p>Not at the moment. To update or renew your registrations you&#39;ll need to refer to the correspondence you receive confirming your registration. </p>
+<p>If you can&#39;t find your correspondence, visit the following agency websites to:</p> 
+<ul><li><a href="http://asic.gov.au/changes" target="_blank">update your company details or annual statements</a> on the ASIC website</li>
+<li><a href="http://asic.gov.au/your-bn" target="_blank">update or renew your business name</a> on the ASIC website</li>
+<li><a href="https://www.ato.gov.au/Business/Registration/Update-your-details/" target="_blank">update your tax details</a> for your ABN, GST, PAYG, TFN, FBT, LCT, FTC, WET registrations on the ATO website.</li></ul>
+<h4>Can I apply here for state licences or permits?</h4>
+<p>No. You&#39;ll still need to find and apply for your business licences and permits on the <a href="https://ablis.business.gov.au/" target="_blank">Australian Business Licence &amp; Information Service (ABLIS)</a> website.</p>  <h4>Where do I go for help?</h4>
+<p>If you have a question about the form or how your registrations are progressing, <a href="../../footer/footer/contactus" target="_blank">contact us</a>.</p>
+</div>                                <input type="hidden" class="help-anchor" id="help-newabnregistrationtileheader"/>
+<h3>Register your business</h3><div>
+<p>Use this form if you need a new Australian Business Number (ABN). You can apply here for your ABN together with any of the following registrations:</p>
+<ul>
+<li>Business name*</li>
+<li>Goods and Services Tax (GST)</li>
+<li>Australian company</li>
+<li>Pay as You Go (PAYG) withholding</li>
+<li>Fringe Benefits Tax (FBT)</li>
+<li>Luxury Car Tax (LCT)</li>
+<li>Fuel Tax Credits (FTC)</li>
+<li>Wine Equalisation Tax (WET)</li>
+</ul>
+
+<p>*You can also apply for business name on its own if you:</p>
+<ul>
+<li>already have an ABN</li>
+<li>already have an ABN reference number</li>
+<li>apply as a joint venture.</li>
+</ul>
+
+<p>You can register these types of companies here:</p>
+<ul>
+<li>Proprietary limited companies (also known as private companies) - the most common company structure used by small businesses</li>
+<li>Public companies limited by shares or guarantee</li>
+<li>Public companies with no liability</li>
+<li>Special purpose companies (not for profit, home unit/body corporate, superannuation trustee)</li>
+</ul>
+<p>To register a private or public company that&#39;s unlimited (where the liability of shareholders is unlimited), you need to apply:</p>
+<ul>
+<li>by contacting the <a href="https://asic.gov.au/about-asic/contact-us/"target="blank">Australian Securities &amp; Investments Commission (ASIC)</a>, or</li>
+<li>through a business service provider.</li>
+</ul>
+</div>                                <input type="hidden" class="help-anchor" id="help-existingapplicationtileheader"/>
+<h3>Resume or track your application</h3>
+<div> <p>You can resume unfinished applications, track the status of applications and search for specific applications through your application summary.</p> 
+<p>To access your application summary, you need to select the type of application form you have started or submitted:</p> 
+<p><strong>New business application</strong></p> 
+<p>If you&#39;ve started or submitted an application for a new business registration such as a new ABN or business name, resume your application or track its progress by clicking on the first option.</p> <strong>Additional taxes</strong> 
+<p>If you already have an ABN and have started or submitted an application for additional taxes, continue your application or view its status by clicking on the second option.</p> </div>                                <input type="hidden" class="help-anchor" id="help-additionalregistrationtileheader"/>
+<h3>Register for taxes</h3>
+<div>
+<p>Use this form if you already have an ABN, but need to apply for one or more tax registrations.</p>
+<p>You can use your <a href="https://digitalIDsystem.gov.au/" target="_blank">Digital ID</a> (attached to your ABN) to apply for:</p>
+<ul>
+<li>Goods and Services Tax (GST)</li>
+<li>Pay as You Go (PAYG) withholding</li>
+<li>Fringe Benefits Tax (FBT)</li>
+<li>Luxury Car Tax (LCT)</li>
+<li>Fuel Tax Credits (FTC)</li>
+<li>Wine Equalisation Tax (WET).</li>
+</ul></div>
+                                <input type="hidden" class="help-anchor" id="help-newbnregistrationtileheader"/>
+<h3>Register a company</h3>
+<div>
+<p>Use this form if you need to register one of these company types:</p>
+<ul>
+<li>Proprietary limited company (also known as a private company) - the most common company structure used by small businesses</li>
+<li>Public company limited by shares or guarantee</li>
+<li>Public company with no liability</li>
+<li>Special purpose company (not for profit, home unit/body corporate, superannuation trustee).</li>
+</ul>
+<p>To register a private or public company that&#39;s unlimited (where the liability of shareholders is unlimited), you need to apply:</p>
+<ul>
+<li>by contacting the <a href="https://asic.gov.au/about-asic/contact-us/" target="blank">Australian Securities &amp; Investments Commission (ASIC)</a>, or</li>
+<li>through a business service provider.</li>
+</ul>
+</div>                    </div>
+                    <div class="more-help">
+                        <p><strong>Need more help? <a href="/footer/footer/contactus" target="_blank"> Contact us</a></strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+    <div class="container-fluid footer-nav">
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <nav class="container" id="footerNav" aria-label="footer navigation">
+
+                    <ul class="footer-link-list">
+                        <li>
+                            <a href="/footer/footer/contactus" target="_blank">
+                                Contact us
+                                <span class="visuallyhidden">(opens in new window)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/footer/footer/aboutus" target="_blank">
+                                About us
+                                <span class="visuallyhidden">(opens in new window)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/notices/legal" target="_blank">
+                                Legal notices
+                                <span class="visuallyhidden">(opens in new window)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/footer/footer/accessibility" target="_blank">
+                                Accessibility
+                                <span class="visuallyhidden">(opens in new window)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/footer/footer/otherlanguages" target="_blank">
+                                Help in other languages
+                                <span class="visuallyhidden">(opens in new window)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/footer/footer/acknowledgementofcountry" target="_blank">
+                                Acknowledgement of Country
+                                <span class="visuallyhidden">(opens in new window)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 footer-logo">
+                <div>
+                    <a href="https://register.business.gov.au">
+                        <img id="footerLogo" class="footer-svg" alt="Business Registration Service" src="/Content/img/brs-logo-mobile.svg" />
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+</footer>
+
+
+<script type="text/javascript" src="/scripts/pages/shared/functions.js?v=638817096600000000"></script>
+<script type="text/javascript">
+    $(document)
+        .ready(function () {
+            initHelp();
+        });
+</script>
+
+
+
+
+    <div style="display: none;">
+    <input id="cache-flag" type="text" value="" />
+</div>
+<script>
+        // refresh page on back/forward button to ensure cached data is removed:
+        $(window).on("pageshow", function (event) {
+            if ($("#cache-flag").val() == "true") {
+                $.blockUI({
+                    message: '<p id="loading-status" class="loading-status" role="progressbar" aria-valuetext="loading">loading <img class="loading-ellipsis" src="/content/img/ellipsis.gif" /></p>',
+                    // prevent busy cursor issue on reload
+                    css: { cursor: 'auto' },
+                    overlayCSS: { cursor: 'auto' }
+                });
+                location.reload(true);
+            }
+            $("#cache-flag").val("true");
+        });
+</script>
+
+    <!-- trigger the correct chat feature, depending on-line or not. -->
+    <!-- fa_user  and fa_user-times are the icons -->
+    <!-- dont load the buttons if the webchat settings in the db are not available/complete -->
+        <a href="#" id="genesysLiveagent_button_online" class="chat-now">
+            <i class="fas fa-user"></i> Chat Now
+        </a>
+
+
+</body>
+</html>

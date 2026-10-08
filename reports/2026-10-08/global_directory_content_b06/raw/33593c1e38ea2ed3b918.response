@@ -1,0 +1,384 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+    <title>e-Broker: Login - 06:52:14</title>
+
+    
+        <link rel="shortcut icon" href="pict/favicon.ico">
+    
+
+    <script type="text/javascript" src="pict/ebj-basic.js"></script>
+</head>
+<body onload="">
+
+	
+
+
+<style type="text/css">
+	@import url("pict/e-Broker_general.css");
+</style>
+
+	
+		
+
+
+<style type="text/css">
+	@import url("pict/e-Broker_blue.css");
+</style>
+	
+
+	<script type="text/javascript" src="pict/e-BrokerNew.js"></script>
+	<script type="text/javascript" src="pict/ebj-jquery.js"></script>
+	
+	
+	
+
+
+	<style>
+.js_warning_h {
+	color: red;
+	text-decoration: underline
+}
+
+#js_warning {
+	visibility: visible;
+	margin: 10px 0 10px 150px;
+	text-align: left;
+	width: 350px
+}
+
+#cookies_warning {
+	color: red;
+	font-weight: bold;
+	font-size: 14px
+}
+</style>
+
+	<script type="text/javascript">
+		function Send(evn) {
+			if (evn.which) {
+				if (evn.which === 13) {
+					document.LF.submit();
+					return false;
+				}
+				return true;
+			}
+			return true;
+		}
+
+		//window.onload = setFocus;
+
+		/* ----------KBD---------- */
+		//0-cz, 1-sk, 2-hu, 3-pl, 4-en, viz avail_langs vkboardp.js
+		var fio_def_lng;
+		
+		
+		
+			fio_def_lng = 0;
+		
+		
+	</script>
+	<script type="text/javascript" src="pict/vkboardp.js"></script>
+	<script type="text/javascript" src="pict/vkboard_init.js"></script>
+
+	<div id="all">
+
+		<div id="overhead">
+			<div id="head"></div>
+			<div id="head2"
+				style="background-image:url(pict/e-broker-head-blue_CZ.gif)">
+
+				<a href="https://www.fio.cz" title="Homepage"><img
+					src="pict/nic.gif"
+					style="width: 25%; height: 100%; border: none; float: left"
+					alt="Homepage"></a>
+				<div id="lang">
+					<a href="?skin=blue&amp;lng=1">cz</a>
+					<a href="?skin=blue&amp;lng=2">en</a>
+					<a href="?skin=blue&amp;lng=6">sk</a>
+				</div>
+			</div>
+		</div>
+		<hr class="textove">
+
+		<form name="LF" method="post">
+			<input type="hidden" name="login_screen" value="1">
+
+			<div class="login_body"
+				style="width: 600px; height: 410px; float: left; margin: 0; margin-bottom: -500px; padding: 0; border-right: 1px solid #FFFFFF">
+
+				<div style="height: 305px">
+
+					<div class="login_label">
+						Přihlášení k aplikaci <I>e</I>-Broker
+					</div>
+					<div class="login_warning" style="padding: 0 0 10px 0"></div>
+
+					<div id="cookies_warning"></div>
+
+					<div id="js_warning">
+						<span class="js_warning_h">Upozornění:</span>
+						ve Vašem prohlížeči je vypnutý JavaScript.
+					</div>
+
+					<script type="text/javascript">
+
+						function writeCookie2(name, value, seconds, path) {
+							let c = name + "=" + encodeURIComponent(value);
+							if (seconds) {
+								const date = new Date();
+								date.setTime(date.getTime() + (seconds * 1000));
+								c = c + "; expires=" + date.toUTCString();
+							}
+							if (path) {
+								c = c + "; path=" + path;
+							}
+
+							document.cookie = c;
+						}
+
+						function eraseSession() {
+							//vycistenie autorizacnych cookies
+							writeCookie2("tokenid", "", -1, "/");
+							writeCookie2("sessionid", "", -1, "/");
+							writeCookie2("tokenid", "", -1, "/e-broker");
+							writeCookie2("sessionid", "", -1, "/e-broker");
+						}
+
+						eraseSession();
+
+						var errmsg = "Nemáte ve Vašem prohlížeči povoleny Cookies.<br />Přihlášení k této aplikaci proto není možné.";
+
+						//overovani, zda ma uzivatel povoleny JS a cookies
+						//pri nepovolenem JS se ovsem nezjisti cookies
+
+						//nastavi testovni cookies, defaultne s zivotnosti 5s
+						function setTestCookie(c_name, value, expiresec) {
+							if (expiresec == null)
+								expiresec = 5; //default
+							const expireDate = new Date();
+							expireDate.setTime(expireDate.getTime() + expiresec * 1000);
+							document.cookie = c_name + "=" + encodeURIComponent(value) + ";expires=" + expireDate.toUTCString();
+						}
+
+						//je testovni cookies nastaveno?
+						function getTestCookie(c_name) {
+							if (document.cookie.length > 0) {
+								c_start = document.cookie.indexOf(c_name + "=");
+								if (c_start !== -1) {
+									return 1;
+								}
+							}
+							return 0;
+						}
+
+						//upravi v kodu stranky hlasky - podle toho zda je povoleno JS a nasledne i Cookies
+						function checkJsAndCookies(jswarning, cookiesError) {
+							var el = document.getElementById(jswarning);
+							//  el.innerHTML = "";
+							el.style.visibility = 'hidden';
+							setTestCookie('testCookie', 'testValue');
+
+							var cookiesOK = getTestCookie('testCookie');
+							if (!cookiesOK) {
+								el = document.getElementById(cookiesError);
+								el.innerHTML = errmsg;
+							}
+						}
+						checkJsAndCookies('js_warning', 'cookies_warning');
+
+					</script>
+
+					<input type="hidden" name="formExpires" value="08.10.2026 07:07:14">
+					<div style="width: 100%">
+						<table id="login_table">
+
+							
+
+							<tr>
+								<td style="text-align: right; width: 40%">Uživatelské jméno:</td>
+								<td style="text-align: left"><input type="text"
+									name="LOGIN_USERNAME" value="" maxlength="50"
+									class="login_input" autocomplete="off" style="height: auto"></td>
+							</tr>
+							<tr>
+								<td style="text-align: right; width: 40%">Heslo:</td>
+								<td style="text-align: left"><input type="password" maxlength="512"
+									name="LOGIN_PASSWORD" class="login_input" autocomplete="off"
+									style="height: auto"></td>
+							</tr>
+							<tr>
+								<td style="text-align: right">&nbsp;</td>
+								<td style="text-align: left"><input type="submit"
+									name="SUBMIT" class="login_button"
+									value="Odeslat"></td>
+							</tr>
+						</table>
+					</div>
+					<script type="text/javascript">
+						if (document.getElementsByName('LOGIN_USERNAME')[0].value != "")
+							document.getElementsByName('LOGIN_PASSWORD')[0].focus();
+						else
+							document.getElementsByName('LOGIN_USERNAME')[0].focus();
+					</script>
+
+				</div>
+
+				
+				
+				
+				
+					
+						<div>
+							<a href="https://www.fio.cz/smartbroker?utm_source=ebr&utm_medium=ban_in&utm_campaign=seb"
+							   target="_blank"><img src="pict/Fio_Smartbroker_600x105_eBr_login_CZ.jpg"
+													alt="Smartbroker je tady! Zjistěte více."></a>
+						</div>
+					
+					
+				
+				
+				
+					
+
+				
+
+				
+
+			</div>
+			<!-- login_body -->
+
+			<div class="login_body"
+				style="margin: 0 0 0 600px; padding: 0; height: 410px; border-left: 1px solid white">
+
+				
+					<div class="login_label_right">
+						<img src="pict/blesk.gif" height='26' width='24' border='0' alt="">&nbsp;
+						e-Broker má <a href="https://www1.fio.cz/e-broker/e-broker.cgi" target="_blank">záložní adresu www1.fio.cz</a>
+					</div>
+				
+
+				<div class="login_label_right">
+					<img src="pict/novinky.gif" height='26' width='24' border='0'
+						alt="">&nbsp;<a href="https://www.fio.cz/akcie-investice/e-broker/pruvodce-e-broker" target="_blank">Průvodce aplikací e-Broker</a>
+				</div>
+				<div class="login_label_right">
+					<img src="pict/manual.gif" height='23' width='24' border='0'
+						 alt="">&nbsp;
+					<a href="https://www.fio.cz/docs/cz/manual_ebroker.pdf" target="_blank">Stáhněte si Manuál jako pdf</a>
+				</div>
+				<div class="login_label_right">
+					<img src="pict/vzdelavani_investice_66x60_pruhledne.png" height='24' width='24' border='0' alt="">&nbsp;
+					Nabízíme vlastní <a href="https://www.fiofondy.cz" target="_blank">PODÍLOVÉ FONDY</a>, najdete je v záložce Portfolio. Investice od 300 Kč měsíčně.
+				</div>
+				<div class="login_label_right">
+					<img src="pict/rizika.gif" height='26' width='24' border='0' alt="">&nbsp;
+					Seznamte se s
+					&nbsp;<a
+						href="e-manual.cgi?manual=upozorneni.html.cs&amp;skin=blue"
+						target="_blank">Pravidly bezpečné práce s obchodní aplikací</a>
+				</div>
+				<div class="login_label_right">
+					<img src="pict/mys.gif" height='26' width='24' border='0' alt="">&nbsp;
+					Otevřete si <a href="https://www.fio.cz/akcie-investice/e-broker/demo-e-broker" target="_blank">demoúčet e-Broker</a>
+				</div>
+			</div>
+			<!-- login_body -->
+
+			
+				<hr class="textove">
+				<div class="login_body"
+					style="width: 100%; height: auto; float: left">
+					<div class="login_warning">
+						Vážení klienti, z důvodu probíhající pravidelné údržby systému nemusí být dostupné všechny funkce e-Brokera. Děkujeme za pochopení.
+					</div>
+				</div>
+				<!-- login_body -->
+			
+
+			<hr class="textove">
+			<div class="login_foot">
+				Všechna práva vyhrazena
+				<br>
+				Vážení klienti, v případě obchodních dotazů kontaktujte svoji pobočku, telefonní kontakty na pobočky naleznete zde <a href="https://www.fio.cz/kontakty.itml">https://www.fio.cz/kontakty.itml</a>
+				<br>
+				nebo e-mailem na adresu <a href="mailto:ebroker@fio.cz">ebroker@fio.cz</a>. Pouze v případě technických problémů kontaktujte prosím technický hot-line na čísle 224 346 392
+				<br>
+				Tento formulář je platný do:
+				08.10.2026 07:07:14
+			</div>
+			<!-- login_foot -->
+
+
+		</form>
+
+		<div style="clear: both">&nbsp;</div>
+		<div id="kbdObal">
+			<div id="klavesnice"></div>
+			<div id="kbdpopis" class="kbdtext">
+				<div style="margin-bottom: 10px">
+					<span class="kbdnadpis">Grafická klávesnice</span> [ <a href="#" id="kbd_show">Zobrazit klávesnici</a> ]
+				</div>
+				Virtuální grafická klávesnice je moderním prvkem pro zvýšení bezpečnosti při zadávání hesel na internetových stránkách.
+				Virtuální klávesnici doporučujeme použít vždy, pokud si nejste jisti, zda je počítač dostatečně zabezpečen proti nepřátelským programům,
+				které se pomocí sledování stisku kláves na klávesnici snaží zjistit hesla či jiné osobní údaje uživatele
+				(tzv. spyware, více informací můžete nalézt např. na
+				<a href="https://cs.wikipedia.org/wiki/Spyware">https://cs.wikipedia.org/wiki/Spyware</a>)
+				- v internetových kavárnách, knihovnách ap.
+			</div>
+
+			<div id="kbdovladani" class="kbdtext">
+				<div style="margin-bottom: 10px">
+					<span class="kbdnadpis">Ovládání</span>
+					[ <a href="#" id="kbd_hide">Skrýt klávesnici</a>
+					] &nbsp;&nbsp; [ <a href="#" id="kbd_changepos">Změnit pozici klávesnice</a> ] &nbsp;&nbsp; [ <a href="#"
+						id="kbd_defpos">Výchozí pozice klávesnice</a> ]
+				</div>
+				<ul>
+					<li>Jednotlivé znaky hesla se zadávají kliknutím na příslušnou klávesu na obrázku klávesnice. Po kliknutí na znak zobrazené klávesnice se na přihlašovacím formuláři zobrazí v poli "Heslo" hvězdička obdobně jako při stisku klávesy na reálné klávesnici</li>
+					<li>Smazat znak můžete pomocí klávesy [BackSpace] v pravém horním rohu klávesnice.</li>
+					<li>Velká písmena můžete psát stisknutím klávesy [Shift] - pro jedno následující písmeno, nebo [Caps] - přepne klávesnici na velká písmena (nebo zpět na malá)</li>
+					<li>Jazykové verze klávesnice (CZ/SK/HU/PL/US) můžete přepnout po stisku klávesy s kódem jazyka v levém dolním rohu klávesnice.</li>
+				</ul>
+			</div>
+		</div>
+		<!--kbdObal-->
+
+	</div>
+	<!-- all -->
+
+
+
+</body>
+</html>
+
+
+

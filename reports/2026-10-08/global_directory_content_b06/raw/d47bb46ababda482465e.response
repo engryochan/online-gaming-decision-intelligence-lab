@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Section - Deutsche Börse Group</title>
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/setup.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="lib/msal-browser.min.js"></script>
+
+  <!-- JS Scripts -->
+  <script src="js/faq.js"></script>
+  <script src="js/back-to-top.js"></script>
+  <script src="js/scroll-to-reveal.js"></script>
+
+  <!-- Azure Auth scripts -->
+  <script type="text/javascript" src="js/policies.js"></script>
+  <script type="text/javascript" src="js/authConfig.js"></script>
+  <script type="text/javascript" src="js/auth.js"></script>
+  <script type="text/javascript" src="js/graph.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+  	<nav class="header__container">
+	   <picture>
+	     <source media="(max-width: 800px)" srcset="img/logo-small.svg">
+	     <img src="img/logo.svg" alt="logo">
+	  </picture>
+      <button class="button button--primary header__button" onclick="signIn('redirect')"><span lang="en">Login</span><span lang="de">Login</span></button>
+      <button lang="en" class="button button--secondary header__button" onclick="window.location.href = 'signup-options.html?lang=en'"><span>Register</span></button>
+      <button lang="de" class="button button--secondary header__button" onclick="window.location.href = 'signup-options.html?lang=de'"><span>Registrierung</span></button>
+      <button class="button button--transparent" onClick="goToBottom()"><span lang="en">Contact</span><span lang="de">Kontakt</span></button>
+      <a class="button button--transparent" href="#" id="languageswitch"><span lang="en">DE</span><span lang="de">EN</span></a>
+  	</nav>
+  </header>
+  <!-- Section - Hero -->
+  <section class="hero">
+  	<div class=hero__content>
+	    <div class="hero__text">
+	      <h1>
+	        <span lang="en">Member Section</span>
+	        <span lang="de">Member Section</span>
+	      </h1>
+	      <p>
+	        <span lang="en">Welcome to the Deutsche Börse Group client portal!</span>
+	        <span lang="de">Willkommen in der Member Section der Gruppe Deutsche Börse!</span>
+	      </p>
+	      <div class="hero__learn-more">
+	      	<span>
+		        <span lang="en">Learn more</span>
+		        <span lang="de">Mehr erfahren</span>
+	      	</span>
+		    <button class="arrow-button" onclick="scrollToServices()"><i class="fa-solid fa-chevron-down"></i></button>
+	      </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section - Services -->
+  <section id="services" class="section">
+    <h2>
+      <span lang="en">Services</span>
+      <span lang="de">Services</span>
+    </h2>
+    <p>
+      <span lang="en">Members can make use of the following services in the Member Section.</span>
+      <span lang="de">Mitglieder können in der Member Section die folgenden Services nutzen.</span>
+    </p>
+    <div class="services__card-container">
+      <div class="services__card">
+        <img src="img/icons/DBG_Icons_RGB_blue-298.svg" alt="Company Administration">
+        <h3><span lang="en">Company Administration</span><span lang="de">Company Administration</span></h3>
+        <p>
+          <span lang="en">Access onboarding services for disclosed clients, use the manual upload service for algoID data and client reference data and much more.</span>
+          <span lang="de">Erfassen und Ändern von Legal Entity Identifier und Verwalten von Disclosed Clients.</span>
+        </p>
+      </div>
+      <div class="services__card">
+        <img src="img/icons/DBG_Icons_RGB_blue-299.svg" alt="Technical Connection">
+        <h3><span lang="en">Technical Connection</span><span lang="de">Technische Anbindung</span></h3>
+        <p>
+          <span lang="en">View and change your technical connections to the Deutsche Börse. Request changes to the infrastructure of your organization or create and maintain technical incident tickets.</span>
+          <span lang="de">Überprüfen und Ändern der technischen Anbindungen zur Gruppe Deutsche Börse. Beantragen von Änderungen der technischen Anbindung für Ihr Unternehmen.</span>
+        </p>
+      </div>
+      <div class="services__card">
+        <img src="img/icons/DBG_Icons_RGB_blue-300.svg" alt="Trading & Clearing Admin">
+        <h3><span lang="en">Trading & Clearing Admin</span><span lang="de">Handel & Clearing-Administration</span></h3>
+        <p>
+          <span lang="en">Manage applications for trader admissions, qualified back-office staff (QBO) and qualified clearing staff (QCS) or view and create GUI user IDs.</span>
+          <span lang="de">Verwalten von Anträgen zur Zulassung von Börsenhändlern, Qualifizierten Backoffice Mitarbeitern (QBO) und Qualifizierten Clearing Mitarbeitern (QCS).</span>
+        </p>
+      </div>
+      <div class="services__card">
+        <img src="img/icons/DBG_Icons_RGB_blue-297.svg" alt="Invoices">
+        <h3><span lang="en">Invoices</span><span lang="de">Rechnungen</span></h3>
+        <p>
+          <span lang="en">View and download your invoices and manage access to accounts for your employees.</span>
+          <span lang="de">Einsehen und Herunterladen von Rechnungen. Verwalten der Zugangsberechtigungen für Ihre Mitarbeiter.</span>
+        </p>
+      </div>
+      <div class="services__card">
+        <img src="img/icons/DBG_Icons_RGB_blue-301.svg" alt="Elisting">
+        <h3><span lang="en">eListing</span><span lang="de">eListing</span></h3>
+        <p>
+          <span lang="en">Filing of listing applications and registration as Designated Sponsor, Market Maker or Xetra EnLight respondent.</span>
+          <span lang="de">Erfassen von Listing Anträgen und Registrieren von Designated Sponsor, Market Maker oder Xetra EnLight Respondenten.</span>
+        </p>
+      </div>
+      <div class="services__card">
+        <img src="img/icons/DBG_Icons_RGB_blue-304.svg" alt="Resources">
+        <h3><span lang="en">Resources</span><span lang="de">Ressourcen</span></h3>
+        <p>
+          <span lang="en">View and download documentation of relevant markets and services.</span>
+          <span lang="de">Anzeigen und Herunterladen von Dokumentationen von relevanten Märkten und Services.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Section - Entities -->
+  <section class="section reveal">
+    <h2>
+      <span lang="en">Entities</span>
+      <span lang="de">Entitäten</span>
+    </h2>
+    <p>
+      <span lang="en">These Deutsche Börse entities are currently part of the Member Section.</span>
+      <span lang="de">Diese Unternehmen sind aktuell Teil der Member Section der Gruppe Deutsche Börse.</span>
+    </p>
+    <h3 style="margin: auto;">
+      <span lang="en">Trading Markets</span>
+      <span lang="de">Märkte</span>
+    </h3>
+    <div class="markets__container">
+      <div class="market">
+        <img src="img/icons/deutsche-boerse.png" alt="Deutsche Börse Group">
+        <p><span lang="en">Deutsche Börse Frankfurt</span><span lang="de">Deutsche Börse Frankfurt</span></p>
+      </div>
+      <div class="market">
+        <img src="img/icons/ex-eurex.svg" alt="EX Eurex">
+        <p><span lang="en">Eurex Frankfurt</span><span lang="de">Eurex Frankfurt</span></p>
+      </div>
+      <div class="market">
+        <img src="img/icons/ex-eurex.svg" alt="EX Eurex">
+        <p><span lang="en">Eurex Repo</span><span lang="de">Eurex Repo</span></p>
+      </div>
+      <div class="market">
+        <img src="img/icons/eex.png" alt="EEX">
+        <p><span lang="en">European Energy Exchange</span><span lang="de">European Energy Exchange</span></p>
+      </div>
+      <div class="market">
+        <img src="img/icons/360X.png" alt="360X">
+        <p><span lang="en">360X</span><span lang="de">360X</span></p>
+      </div>
+      <div class="market">
+        <img src="img/icons/crypto-finance.png" alt="Crypto Finance">
+        <p><span lang="en">Crypto Finance</span><span lang="de">Crypto Finance</span></p>
+      </div>
+    </div>
+    <div class="markets__container">
+    	<div class="market">
+    	<h3><span lang="en">Settlement & Custody</span><span lang="de">Abwicklung & Verwahrung</span></h3>
+      <div class="markets__container">
+        <div class="market" style="padding-top: 0rem">
+          <img src="img/icons/clearstream.png" alt="Clearstream">
+          <p><span lang="en">Clearstream</span><span lang="de">Clearstream</span></p>
+        </div>
+        <div class="market" style="padding-top: 0rem">
+          <img src="img/icons/lux-csd.png" alt="LuxCSD">
+          <p><span lang="en">LuxCSD</span><span lang="de">LuxCSD</span></p>
+        </div>
+      </div>
+      </div>
+      <div class="market">
+        <h3><span lang="en">Clearing House</span><span lang="de">Clearinghaus</span></h3>
+        <img src="img/icons/ec-eurex.svg" alt="EC Eurex">
+        <p><span lang="en">Eurex Clearing</span><span lang="de">Eurex Clearing</span></p>
+      </div>
+    </div>
+  </section>
+  <!-- Section - FAQ -->
+  <!--<section class="section section-faq reveal">
+    <div class="container__faq">
+      <h2>
+        <span lang="en">FAQ</span>
+        <span lang="de">FAQ</span>
+      </h2>
+      <p>
+        <span lang="en">View the frequently asked question for information on how to use DBG Member Section.</span>
+        <span lang="de">View the frequently asked question for information on how to use DBG Member Section.</span>
+      </p>
+      <button type="button" class="faq__header">
+        <span lang="en">What login options are possible?</span>
+        <span lang="de">What login options are possible?</span>
+      </button>
+      <div class="faq__content">
+        <p>Lorem ipsum...</p>
+      </div>
+      <button type="button" class="faq__header">
+        <span lang="en">How to paire a device?</span>
+        <span lang="de">How to paire a device?</span>
+      </button>
+      <div class="faq__content">
+        <p>Lorem ipsum...</p>
+      </div>
+      <button type="button" class="faq__header">
+        <span lang="en">How to reset my password?</span>
+        <span lang="de">How to reset my password?</span>
+      </button>
+      <div class="faq__content">
+        <p>Lorem ipsum...</p>
+      </div>
+      <button type="button" class="faq__header">
+        <span lang="en">Are there any known limitations?</span>
+        <span lang="de">Are there any known limitations?</span>
+      </button>
+      <div class="faq__content">
+        <p>Lorem ipsum...</p>
+      </div>
+    </div>
+  </section>-->
+  <!-- Section - Support -->
+  <section id="support" class="section reveal">
+    <h2>
+      <span lang="en">Need support?</span>
+      <span lang="de">Benötigen Sie Unterstützung?</span>
+    </h2>
+    <p>
+      <span lang="en">We are here to help. Feel free to get in touch via email or phone.</span>
+      <span lang="de">Wir stehen Ihnen zur Verfügung. Kontaktieren Sie uns gerne per E-Mail oder telefonisch.</span>
+    </p>
+    <div class="support__card-container">
+      <div class="support__card">
+        <img src="img/icons/DBG_Icons_RGB_white-296.svg" alt="Email">
+        <h4>
+          <span lang="en">Write us</span>
+          <span lang="de">Schreiben Sie uns</span>
+        </h4>
+        <p>
+          <span lang="en">Contact our support team via email for any questions or comments. Our support team is here to help you.</span>
+          <span lang="de">Wenden Sie sich bei Fragen oder Anmerkungen per E-Mail an unser Support-Team. Unser Support-Team hilft Ihnen gerne.</span>
+        </p>
+        <a href="mailto:member.section@deutsche-boerse.com"><span lang="en">Send an email</span><span lang="de">E-Mail senden</span></a>
+      </div>
+      <div class="support__card">
+        <img src="img/icons/DBG_Icons_RGB_white-302.svg" alt="Phone">
+        <h4>
+          <span lang="en">Give us a call</span>
+          <span lang="de">Rufen Sie an</span>
+        </h4>
+        <p>
+          <span lang="en">Call +49 (0) 069-211-178 88<br>Our Support team is happy to assist you.<br>Service hours: Mon - Fri, 9am - 6pm CET.</span>
+          <span lang="de">Rufen Sie an unter +49 (0) 069-211-178 88<br>Unser Support-Team hilft Ihnen gerne weiter.<br>SServicezeiten: Mo - Fr, 9 - 18 Uhr (MEZ).</span>
+        </p>
+        <a href="tel:+49 (0)69 - 21117888"><span lang="en">Call now</span><span lang="de">Jetzt anrufen</span></a>
+      </div>
+      <div class="support__card">
+        <img src="img/icons/DBG_Icons_RGB_white-303.svg" alt="Web">
+        <h4>
+          <span lang="en">Supporting information</span>
+          <span lang="de">Unterstützende Information</span>
+        </h4>
+        <p>
+          <span lang="en">Looking for FAQs or user guides? Explore our support webpage to extend your knowledge about the Member Section.</span>
+          <span lang="de">Suchen Sie nach FAQs oder Handbüchern? Erkunden Sie unsere Support-Webseite, um Ihr Wissen über die Member Section zu erweitern.</span>
+        </p>
+        <a href="https://deutsche-boerse.com/dbg-en/meta/member-section-support#top" target="_blank"><span lang="en">Learn more</span><span lang="de">Mehr erfahren</span></a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer">
+  	<nav class="footer__container">
+      <p>&#169; 2022 Deutsche Börse Group</p>
+      <a lang="en" href="https://deutsche-boerse.com/dbg-en/meta/imprint" target="_blank">Imprint</a>
+      <a lang="de" href="https://deutsche-boerse.com/dbg-de/meta/impressum" target="_blank">Impressum</a>
+      <a lang="en" href="./external/data_privacy.html" target="_blank">Data Privacy</a>
+      <a lang="de" href="./external/data_privacy_de.html" target="_blank">Datenschutz</a>
+      <a href="./external/tech_requirements.html" target="_blank"><span lang="en">Technical Requirements</span><span lang="de">Technische Anforderungen</span></a>
+      <a lang="en" href="./external/terms_of_use.html" target="_blank">Terms of Use</a>
+      <a lang="de" href="./external/terms_of_use_de.html" target="_blank">Nutzungsbedingungen</a>
+	  <div class="centered">
+	    <button class="arrow-button" onclick="backToTop()">
+		  <i class="fa-solid fa-chevron-up"></i>
+		</button>
+		<p><span lang="en">Back to top</span><span lang="de">Zurück zum Anfang</span></p>
+	  </div>
+  	</nav>
+  </footer>
+  
+  <script src="js/language-switch.js"></script>
+</body>
+</html>

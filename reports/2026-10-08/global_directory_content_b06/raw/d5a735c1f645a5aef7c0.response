@@ -1,0 +1,476 @@
+        <!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="https://cdn.userway.org/widget.js" defer async data-account="qbScmEdodD"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/avicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/favicon/site.webmanifest">
+    <script type="module">!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver((e=>{for(const o of e)if("childList"===o.type)for(const e of o.addedNodes)if("LINK"===e.tagName&&"modulepreload"===e.rel)r(e);else if(e.querySelectorAll)for(const o of e.querySelectorAll("link[rel=modulepreload]"))r(o)})).observe(document,{childList:!0,subtree:!0})}function r(e){if(e.ep)return;e.ep=!0;const r=function(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),"use-credentials"===e.crossorigin?r.credentials="include":"anonymous"===e.crossorigin?r.credentials="omit":r.credentials="same-origin",r}(e);fetch(e.href,r)}}();</script>
+<script>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",(function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()}),!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();</script>
+<script src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/dist/assets/polyfills-legacy-_3PPr7Fl.js" nomodule onload="e=new CustomEvent(&#039;vite-script-loaded&#039;, {detail:{path: &#039;vite/legacy-polyfills-legacy&#039;}});document.dispatchEvent(e);" integrity="sha384-sd9fM5xGG54G/Huh/zRNcOKz4Oh3gB9LrPT8o88P21G9/pSf8szRpNSxi+Ti0cVh"></script>
+<script type="module" src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/dist/assets/main-CQ_X7uFL.js" crossorigin onload="e=new CustomEvent(&#039;vite-script-loaded&#039;, {detail:{path: &#039;src/main.js&#039;}});document.dispatchEvent(e);" integrity="sha384-zSFwlXzeKvuasCqSd0hAQF28zZ8Flh/Ibfq6mzdaGjODThrHcdh2qpUkhSiLLRnd"></script>
+<link href="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/dist/assets/main-B4IZcz5Y.css" rel="stylesheet">
+<link href="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/dist/assets/css-Db19gpWJ.css" rel="stylesheet">
+<script src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/builds/a2e9a970-573b-4eb9-891a-9de69c8db8c3/artifacts/dist/assets/main-legacy-D4wPHnmI.js" nomodule onload="e=new CustomEvent(&#039;vite-script-loaded&#039;, {detail:{path: &#039;src/main-legacy.js&#039;}});document.dispatchEvent(e);" integrity="sha384-As0AyAsxLLLFUi1fuR863unhf0LXKC6YKE8Yodb7ZNz/CJiUMQTFFLWLGOYk8U9H"></script>
+    <style>
+        #loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #0A2A4B;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            border: 16px solid #E7E51D;
+            border-top: 16px solid #000625;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+<title>MEMX | Member Voices</title>
+<script>dataLayer = [];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCPDWVZS');
+</script><meta name="generator" content="SEOmatic">
+<meta name="description" content="Watch our MEMX members discuss everything from the future of exchange trading to the concept of healthy competition.">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="robots" content="all">
+<meta content="en_US" property="og:locale">
+<meta content="MEMX" property="og:site_name">
+<meta content="website" property="og:type">
+<meta content="https://memx.com/member-voices" property="og:url">
+<meta content="Member Voices" property="og:title">
+<meta content="Watch our MEMX members discuss everything from the future of exchange trading to the concept of healthy competition." property="og:description">
+<meta content="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/images/MEMX-Logo.png?fit=cover&amp;height=630&amp;width=1200&amp;s=_KLNGXoBw-wQhJJ6uz_Y8LnS6B3cITDZySNHmYto5Is" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="Memx" property="og:image:alt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="Member Voices">
+<meta name="twitter:description" content="Watch our MEMX members discuss everything from the future of exchange trading to the concept of healthy competition.">
+<meta name="twitter:image" content="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/images/MEMX-Logo.png?fit=cover&amp;height=630&amp;width=1200&amp;s=_KLNGXoBw-wQhJJ6uz_Y8LnS6B3cITDZySNHmYto5Is">
+<meta name="twitter:image:width" content="1200">
+<meta name="twitter:image:height" content="630">
+<meta name="twitter:image:alt" content="Memx">
+<link href="https://memx.com/member-voices" rel="canonical">
+<link href="https://memx.com/" rel="home">
+<link type="text/plain" href="https://memx.com/humans.txt" rel="author"></head>
+<body class="ltr"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCPDWVZS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    
+    
+
+    <div id="memxMain" class="gradiant-bg relative">
+       <main class="relative w-full member-voices">
+           
+
+                                                                                                                                                                                                                                                                                        
+    
+            
+                                                                                                                                                                                                                                                                                                                            
+    
+                                                                                                                                                                                                    
+    
+                                                                                                                                                                                                    
+    
+
+
+<nav class="js-scroll-to relative z-20 text-white">
+    <div class="main-nav">
+        <div class="w-24 lg:w-[190px]">
+            <a href="/" title="Memx Homepage">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 104.2">
+  <defs>
+    <style>.cls-1{fill:#e6e41c;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M295.7,0,247.8,51.4l47.8,52.8H306L258.3,51.4,306,0Zm-39,0L233.8,24.8,211.4,0H201.2l32.6,36.2L267,0ZM199.1,104.2h10.5l23.6-25.7,23,25.7h10.3L233.3,67.1Z"/>
+      <polygon class="cls-2" points="186.2 14.7 165.7 40.3 145.2 14.7 132.2 14.7 132.2 65 144.2 65 144.2 32 164.9 57.2 166 57.2 186.6 32 186.6 65 199.1 65 199.1 14.7 186.2 14.7"/>
+      <polygon class="cls-2" points="73.6 14.6 73.6 65 125.5 65 125.5 54.4 86 54.4 86 44.8 118.4 44.8 118.4 34.2 86 34.2 86 25.3 125.5 25.3 125.5 14.6 73.6 14.6"/>
+      <polygon class="cls-2" points="54 14.7 33.6 40.3 13.1 14.7 0 14.7 0 65 12.1 65 12.1 32 32.7 57.2 33.8 57.2 54.5 32 54.5 65 66.9 65 66.9 14.7 54 14.7"/>
+    </g>
+  </g>
+</svg>
+            </a>
+        </div>
+
+                <div class="vue-mega-menu" data-menu-data="[{&quot;type&quot;:&quot;StandardMegaMenu&quot;,&quot;title&quot;:&quot;Company&quot;,&quot;items&quot;:[{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/overview&quot;,&quot;title&quot;:&quot;About&quot;,&quot;description&quot;:&quot;Learn about MEMX, an exchange operator created to help a broad range of market participants meet their evolving needs.&quot;,&quot;image&quot;:{&quot;url&quot;:&quot;https:\/\/cdn.craft.cloud\/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0\/assets\/images\/menu-about-smiling-man.jpg&quot;,&quot;alt&quot;:&quot;Overview mega menu&quot;}},{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/leadership&quot;,&quot;title&quot;:&quot;Leadership&quot;,&quot;description&quot;:&quot;Meet our mix of veteran exchange experts and next-generation technology leaders.&quot;,&quot;image&quot;:{&quot;url&quot;:&quot;https:\/\/cdn.craft.cloud\/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0\/assets\/images\/leadership-mega-menu-image_2024-11-21-021416_ctms.jpeg&quot;,&quot;alt&quot;:&quot;Leadership mega menu image&quot;}},{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/careers&quot;,&quot;title&quot;:&quot;Careers&quot;,&quot;description&quot;:&quot;Discover opportunities to help build the exchange technology of the future, today.&quot;,&quot;image&quot;:{&quot;url&quot;:&quot;https:\/\/cdn.craft.cloud\/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0\/assets\/images\/careers-mega-menu-image_2024-11-21-021431_javc.jpeg&quot;,&quot;alt&quot;:&quot;Careers mega menu image&quot;}}]},{&quot;type&quot;:&quot;ExchangeMegaMenu&quot;,&quot;title&quot;:&quot;Exchanges&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;MEMX Equities&quot;,&quot;subtitle&quot;:&quot;MEMX Equities is a U.S. equities exchange with more than 65 members that trades over 7,500 symbols each day with broad retail participation across Tape A, B and C.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/info.memxtrading.com\/equities-trading-resources\/&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Trading Resources&quot;},{&quot;href&quot;:&quot;https:\/\/www.memxtrading.com\/onboarding&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Become a Member&quot;}]},{&quot;title&quot;:&quot;MEMX Options&quot;,&quot;subtitle&quot;:&quot;MEMX Options is a U.S. options exchange with more than 33 members and consistently ranks among the top options exchanges for quoting and trading.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/info.memxtrading.com\/us-options-trading-resources\/&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Trading Resources&quot;},{&quot;href&quot;:&quot;https:\/\/www.memxtrading.com\/onboarding&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Become a Member&quot;}]},{&quot;title&quot;:&quot;MX2 Options&quot;,&quot;subtitle&quot;:&quot;MX2 Options is a U.S. options customer priority, pro-rata allocation model exchange built on the same high-performance infrastructure that powers MEMX Options.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/info.memxtrading.com\/us-options-trading-resources\/&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Trading Resources&quot;},{&quot;href&quot;:&quot;https:\/\/www.memxtrading.com\/onboarding&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Become a Member&quot;}]}]},{&quot;type&quot;:&quot;TwoColumnMegaMenu&quot;,&quot;title&quot;:&quot;Solutions&quot;,&quot;items&quot;:[{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/market-technology&quot;,&quot;title&quot;:&quot;MEMX Market Technology&quot;,&quot;description&quot;:&quot;Build your exchange or ATS faster and at lower cost with today\u2019s most advanced multi-asset market technology platform.&quot;,&quot;links&quot;:[]},{&quot;entryLink&quot;:null,&quot;title&quot;:&quot;Case Studies&quot;,&quot;description&quot;:&quot;See how MEMX is powering some of today\u2019s leading alternative markets and exchanges.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/memx.com\/case-studies\/long-term-stock-exchange&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Long-Term Stock Exchange&quot;},{&quot;href&quot;:&quot;https:\/\/memx.com\/case-studies\/blue-ocean-technologies&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Blue Ocean Technologies&quot;}]}]},{&quot;type&quot;:&quot;TwoColumnMegaMenu&quot;,&quot;title&quot;:&quot;News&quot;,&quot;items&quot;:[{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/news-and-insights&quot;,&quot;title&quot;:&quot;News &amp; Insights&quot;,&quot;description&quot;:&quot;Read our latest insights, commentary, exchange highlights, press releases, and more.&quot;,&quot;links&quot;:[]},{&quot;entryLink&quot;:null,&quot;title&quot;:&quot;Member Voices&quot;,&quot;description&quot;:&quot;Hear perspectives on today\u2019s market and trading issues from our members.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/memx.com\/polls-and-surveys\/weigh-in-evolving-investor-protections-for-24-hour-trading&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Member Poll&quot;},{&quot;href&quot;:&quot;https:\/\/memx.com\/member-voices&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;X Sessions video series&quot;}]}]}]"></div>
+                <ol class="hidden lg:flex justify-end items-center gap-8 min-h-[66px]">
+                                                <li class="py-2 text-lg font-light"><a href="https://memx.com/contact"  class="animated-links ">Contact</a></li>
+                                                                <li class="py-2 text-lg font-light"><a href="https://memxtrader.okta.com/" target="_blank" class="btn btn-outline">Log in</a></li>
+                                    </ol>
+        <div class="lg:hidden">
+            <button class="js-navbar-burger flex items-center text-white p-3">
+                <svg class="block h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="js-navbar-menu relative z-50 hidden">
+            <div class="js-navbar-backdrop fixed inset-0 bg-gray-800 opacity-75"></div>
+            <nav class="fixed top-0 left-0 bottom-0 right-0 flex flex-col bg-memxYellow overflow-y-auto">
+                <div class="flex items-center p-3 mb-8">
+                    <a class="mr-auto w-24 font-bold leading-none" href="/">
+                        <svg width="100" height="35" viewBox="0 0 100 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 252">
+<path id="Vector" d="M65.2266 34.5L68.6567 34.4949L76.372 26.0931L83.9035 34.4949H87.2546L76.3924 22.3592L65.2291 34.4974L65.2266 34.5ZM83.8755 0.43837L76.4077 8.53649L69.0906 0.43837H65.7447L76.3899 12.255L87.2648 0.43837H83.878H83.8755ZM96.6467 0.43837L81.0017 17.2267L96.6109 34.4949H100L84.4038 17.2497L99.9977 0.43837H96.6467Z" fill="white"/>
+<path id="Vector_2" d="M60.842 5.2567L54.1527 13.6151L47.466 5.2567H43.1885V21.6852H47.1316V10.8817L53.8771 19.1202H54.2471L60.9926 10.8817V21.6852H65.048V5.2567H60.842Z" fill="#0A2A4B"/>
+<path id="Vector_3" d="M24.0498 5.22076V21.6875H40.9989V18.2166H28.095V15.0722H38.6815V11.6038H28.095V8.6892H40.9989V5.22076H24.0498Z" fill="#0A2A4B"/>
+<path id="Vector_4" d="M17.6535 5.2567L10.9642 13.6151L4.27748 5.2567H0V21.6852H3.94314V10.8817L10.6886 19.1202H11.0587L17.8016 10.8817V21.6852H21.8596V5.2567H17.6535Z" fill="#0A2A4B"/>
+</g>
+</svg>
+
+                    </a>
+                    <button class="js-navbar-close text-memxDarkNavy">
+                        <svg width="30" height="35" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="close">
+                                <path id="Vector 3" d="M7 24.4004L15 16.9004L7 9.40039" stroke="#000625"/>
+                                <path id="Vector 2" d="M23 24.4004L15 16.9004L23 9.40039" stroke="#000625"/>
+                            </g>
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="vue-mobile-menu" data-menu-data="[{&quot;type&quot;:&quot;StandardMegaMenu&quot;,&quot;title&quot;:&quot;Company&quot;,&quot;items&quot;:[{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/overview&quot;,&quot;title&quot;:&quot;About&quot;,&quot;description&quot;:&quot;Learn about MEMX, an exchange operator created to help a broad range of market participants meet their evolving needs.&quot;,&quot;image&quot;:{&quot;url&quot;:&quot;https:\/\/cdn.craft.cloud\/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0\/assets\/images\/menu-about-smiling-man.jpg&quot;,&quot;alt&quot;:&quot;Overview mega menu&quot;}},{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/leadership&quot;,&quot;title&quot;:&quot;Leadership&quot;,&quot;description&quot;:&quot;Meet our mix of veteran exchange experts and next-generation technology leaders.&quot;,&quot;image&quot;:{&quot;url&quot;:&quot;https:\/\/cdn.craft.cloud\/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0\/assets\/images\/leadership-mega-menu-image_2024-11-21-021416_ctms.jpeg&quot;,&quot;alt&quot;:&quot;Leadership mega menu image&quot;}},{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/careers&quot;,&quot;title&quot;:&quot;Careers&quot;,&quot;description&quot;:&quot;Discover opportunities to help build the exchange technology of the future, today.&quot;,&quot;image&quot;:{&quot;url&quot;:&quot;https:\/\/cdn.craft.cloud\/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0\/assets\/images\/careers-mega-menu-image_2024-11-21-021431_javc.jpeg&quot;,&quot;alt&quot;:&quot;Careers mega menu image&quot;}}]},{&quot;type&quot;:&quot;ExchangeMegaMenu&quot;,&quot;title&quot;:&quot;Exchanges&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;MEMX Equities&quot;,&quot;subtitle&quot;:&quot;MEMX Equities is a U.S. equities exchange with more than 65 members that trades over 7,500 symbols each day with broad retail participation across Tape A, B and C.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/info.memxtrading.com\/equities-trading-resources\/&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Trading Resources&quot;},{&quot;href&quot;:&quot;https:\/\/www.memxtrading.com\/onboarding&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Become a Member&quot;}]},{&quot;title&quot;:&quot;MEMX Options&quot;,&quot;subtitle&quot;:&quot;MEMX Options is a U.S. options exchange with more than 33 members and consistently ranks among the top options exchanges for quoting and trading.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/info.memxtrading.com\/us-options-trading-resources\/&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Trading Resources&quot;},{&quot;href&quot;:&quot;https:\/\/www.memxtrading.com\/onboarding&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Become a Member&quot;}]},{&quot;title&quot;:&quot;MX2 Options&quot;,&quot;subtitle&quot;:&quot;MX2 Options is a U.S. options customer priority, pro-rata allocation model exchange built on the same high-performance infrastructure that powers MEMX Options.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/info.memxtrading.com\/us-options-trading-resources\/&quot;,&quot;newTab&quot;:true,&quot;title&quot;:&quot;Trading Resources&quot;},{&quot;href&quot;:&quot;https:\/\/www.memxtrading.com\/onboarding&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Become a Member&quot;}]}]},{&quot;type&quot;:&quot;TwoColumnMegaMenu&quot;,&quot;title&quot;:&quot;Solutions&quot;,&quot;items&quot;:[{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/market-technology&quot;,&quot;title&quot;:&quot;MEMX Market Technology&quot;,&quot;description&quot;:&quot;Build your exchange or ATS faster and at lower cost with today\u2019s most advanced multi-asset market technology platform.&quot;,&quot;links&quot;:[]},{&quot;entryLink&quot;:null,&quot;title&quot;:&quot;Case Studies&quot;,&quot;description&quot;:&quot;See how MEMX is powering some of today\u2019s leading alternative markets and exchanges.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/memx.com\/case-studies\/long-term-stock-exchange&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Long-Term Stock Exchange&quot;},{&quot;href&quot;:&quot;https:\/\/memx.com\/case-studies\/blue-ocean-technologies&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Blue Ocean Technologies&quot;}]}]},{&quot;type&quot;:&quot;TwoColumnMegaMenu&quot;,&quot;title&quot;:&quot;News&quot;,&quot;items&quot;:[{&quot;entryLink&quot;:&quot;https:\/\/memx.com\/news-and-insights&quot;,&quot;title&quot;:&quot;News &amp; Insights&quot;,&quot;description&quot;:&quot;Read our latest insights, commentary, exchange highlights, press releases, and more.&quot;,&quot;links&quot;:[]},{&quot;entryLink&quot;:null,&quot;title&quot;:&quot;Member Voices&quot;,&quot;description&quot;:&quot;Hear perspectives on today\u2019s market and trading issues from our members.&quot;,&quot;links&quot;:[{&quot;href&quot;:&quot;https:\/\/memx.com\/polls-and-surveys\/weigh-in-evolving-investor-protections-for-24-hour-trading&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;Member Poll&quot;},{&quot;href&quot;:&quot;https:\/\/memx.com\/member-voices&quot;,&quot;newTab&quot;:false,&quot;title&quot;:&quot;X Sessions video series&quot;}]}]}]"></div>
+                <div class="px-3 py-5">
+                    <ul>
+                                                                                                                        <li class="pb-5">
+                                        <a class="block text-lg text-memxDarkNavy hover:bg-memxYellow hover:text-black rounded"  href="https://memx.com/contact">Contact</a>
+                                    </li>
+                                                                                                                                                                                    <li class="pb-5">
+                                        <a class="btn btn-outline-dark text-memxDarkNavy" target="_blank" href="https://memxtrader.okta.com/">Log in</a>
+                                    </li>
+                                                                                                        </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</nav>               <section class="text-white pb-6">
+        <div class="container">
+            <div class="pb-10">
+                <div class="x-session-logo">
+                    <a class="animated-links inline-block" href="https://memx.com/member-voices"><svg xmlns="http://www.w3.org/2000/svg" width="451" height="73" viewBox="0 0 451 73" fill="none">
+    <path d="M425.837 73C436.855 73 445.852 67.9932 445.852 57.0681C445.852 50.7366 442.725 47.0666 433.223 44.9156L424.935 42.9712C418.26 41.44 414.832 37.8672 414.832 33.0669C414.832 25.8119 421.604 21.838 430.997 21.838C442.316 21.838 448.378 27.6591 447.969 36.6398H451C451.096 25.4109 443.723 18.8728 431.298 18.8728C418.873 18.8728 411.801 24.5845 411.801 33.2735C411.801 38.9973 415.542 43.8948 424.129 45.827L431.707 47.5648C439.994 49.3999 442.821 51.7453 442.821 57.1653C442.821 65.5384 435.748 70.0348 426.042 70.0348C416.335 70.0348 410.177 64.7242 411.596 55.9501H408.565C407.254 65.9516 414.531 73 425.849 73M368.236 20.4162H365.205L356.316 71.4688H359.347L363.797 45.6326C366.119 32.3621 374.31 21.838 385.628 21.838C396.032 21.838 397.452 30.5149 396.345 36.9436L390.283 71.4566H393.314L399.376 36.8463C401.192 26.7355 396.14 18.8728 385.941 18.8728C380.48 18.8728 373.203 21.121 368.56 27.9629L367.755 29.1903H366.744L368.26 20.4162H368.236ZM328.219 21.8502C338.43 21.8502 346.405 28.5827 346.405 40.9417C346.405 55.9501 335.387 70.0348 320.942 70.0348C310.742 70.0348 302.647 63.3995 302.647 50.53C302.647 35.8255 313.665 21.838 328.219 21.838M320.34 73C336.506 73 349.448 58.5993 349.448 40.9417C349.448 28.8986 342.075 18.885 328.435 18.885C311.656 18.885 299.628 34.0999 299.628 50.53C299.628 63.8006 307.507 72.9878 320.34 72.9878M280.732 71.4688H283.763L292.652 20.4162H289.621L280.732 71.4688ZM289.922 13.2705H294.973L297.295 0H292.243L289.922 13.2705ZM249.604 73C260.622 73 269.606 67.9932 269.606 57.0681C269.606 50.7366 266.479 47.0666 256.977 44.9156L248.69 42.9712C242.026 41.44 238.586 37.8672 238.586 33.0669C238.586 25.8119 245.358 21.838 254.752 21.838C266.07 21.838 272.132 27.6591 271.723 36.6398H274.754C274.851 25.4109 267.478 18.8728 255.053 18.8728C242.628 18.8728 235.543 24.5845 235.543 33.2735C235.543 38.9973 239.284 43.8948 247.872 45.827L255.45 47.5648C263.737 49.3999 266.563 51.7453 266.563 57.1653C266.563 65.5384 259.491 70.0348 249.784 70.0348C240.078 70.0348 233.92 64.7242 235.339 55.9501H232.308C230.997 65.9516 238.274 73 249.592 73M199.484 73C210.501 73 219.498 67.9932 219.498 57.0681C219.498 50.7366 216.359 47.0666 206.869 44.9156L198.581 42.9712C191.918 41.44 188.478 37.8672 188.478 33.0669C188.478 25.8119 195.25 21.838 204.644 21.838C215.962 21.838 222.024 27.6591 221.615 36.6398H224.646C224.742 25.4109 217.369 18.8728 204.944 18.8728C192.519 18.8728 185.435 24.5845 185.435 33.2735C185.435 38.9973 189.176 43.8948 197.764 45.827L205.341 47.5648C213.628 49.3999 216.455 51.7453 216.455 57.1653C216.455 65.5384 209.383 70.0348 199.676 70.0348C189.969 70.0348 183.811 64.7242 185.23 55.9501H182.199C180.888 65.9516 188.165 73 199.484 73ZM128.94 43.9069C131.465 30.9402 140.763 21.8502 153.188 21.8502C163.592 21.8502 170.665 27.574 170.665 38.9973C170.665 40.322 170.568 41.9625 170.256 43.8948H128.928L128.94 43.9069ZM153.501 18.885C136.421 18.885 125.199 32.7753 125.199 50.3356C125.199 63.8127 131.766 73 145.514 73C156.327 73 166.731 67.5921 172.288 55.2331H169.354C164.398 64.7242 155.606 70.0348 145.707 70.0348C134.99 70.0348 128.218 63.6061 128.218 51.4536C128.218 50.0196 128.314 48.695 128.519 46.86H172.878L173.178 45.025C173.479 42.9833 173.684 40.9417 173.684 38.9001C173.684 27.1608 166.611 18.885 153.477 18.885M91.256 73C102.274 73 111.271 67.9932 111.271 57.0681C111.271 50.7366 108.143 47.0666 98.6412 44.9156L90.354 42.9712C83.6905 41.44 80.2505 37.8672 80.2505 33.0669C80.2505 25.8119 87.0222 21.838 96.416 21.838C107.734 21.838 113.796 27.6591 113.387 36.6398H116.419C116.515 25.4109 109.142 18.8728 96.7167 18.8728C84.2919 18.8728 77.2194 24.5845 77.2194 33.2735C77.2194 38.9973 80.9601 43.8948 89.5481 45.827L97.1257 47.5648C105.413 49.3999 108.24 51.7453 108.24 57.1653C108.24 65.5384 101.167 70.0348 91.4605 70.0348C81.754 70.0348 75.5956 64.7242 77.0149 55.9501H73.9839C72.6729 65.9516 79.9498 73 91.2681 73M52.8508 71.4688H37.6956L30.118 54.115L16.1776 71.4688H0L24.1521 43.1899L12.3286 18.6905H27.6883L33.4497 33.9054L45.2732 18.6905H61.3425L39.6201 44.0163L52.8628 71.4809L52.8508 71.4688Z" fill="white"/>
+</svg></a>
+                </div>
+                <h1 class="hidden">Member Voices</h1>
+            </div>
+            <div>
+                <div class="lg:w-1/2 rich-text">
+                    <p>Watch our members discuss everything from the future of exchange trading to the concept of healthy competition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-24">
+        <div class="container">
+            <div class="news-and-insights">
+                                                                                    <a href="https://memx.com/member-voices/sec-market-structure-proposal-q1-2023-institutional-panel" class="group block flex flex-col lg:flex-row hover:bg-memxNavy border-memxSky border">
+                            <div class="w-full lg:w-1/2 embed-wrapper card-media bg-black flex flex-col justify-center">
+                                                                    <img src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/thumbnails/MEMX_X-Sessions_Cover-Image.png" alt="MEMX X Sessions Cover Image">
+                                                                                                                                    <span class="card-media__play" aria-hidden="true"><svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play button">
+<rect width="96" height="96" rx="48" fill="#E7E51D" fill-opacity="0.8"/>
+<path id="Polygon 1" d="M66.8572 48L38.5714 64.3308V31.6692L66.8572 48Z" fill="#0A2A4B"/>
+</g>
+</svg>
+</span>
+                                                            </div>
+                            <div class="flex flex-col text-white xl:w-1/2 gap-y-[20px] p-[30px] justify-between">
+                                <div>
+                                    <p class="text-xs text-memxYellow uppercase pb-5">Member Voices</p>
+                                                                                                                                                                                                                                                                                                                                                                    <h1 class="text-lg md:text-[32px] pb-5"><span class="group-hover:underline">SEC Market Structure Proposal Q1 2023: </span><span class="group-hover:underline text-memxYellow ">Institutional Panel</span></h1>
+                                                                    </div>
+                                                                                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td class="align-top pr-5 pb-[20px] uppercase font-light text-[13px]">Host</td>
+                                            <td class="align-top pb-[20px]">
+                                                                                                    <dl class="pb-[15px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Adrian Griffiths</dt>
+                                                        <dd class="text-lg font-light">Head of Market Structure, MEMX</dd>
+                                                    </dl>
+                                                                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-top pr-5 uppercase font-light text-[13px]">Guests</td>
+                                            <td class="align-top">
+                                                                                                    <dl class="pb-[20px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Philip Pearson</dt>
+                                                        <dd class="text-lg font-light"><em>Head of Electronic Product for the Americas, Barclays</em></dd>
+                                                    </dl>
+                                                                                                    <dl class="pb-[20px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Bojan Petrovich</dt>
+                                                        <dd class="text-lg font-light"><em>Global Head of Equity Trading, J.P. Morgan Asset Management</em></dd>
+                                                    </dl>
+                                                                                                    <dl class="pb-[20px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Rich Steiner</dt>
+                                                        <dd class="text-lg font-light"><em>Head of Global Market Structure, RBC Capital Markets</em></dd>
+                                                    </dl>
+                                                                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                                            </div>
+                        </a>
+                                                                    <a href="https://memx.com/member-voices/sec-market-structure-proposal-q1-2023-retail-panel" class="group block flex flex-col lg:flex-row hover:bg-memxNavy border-memxSky border">
+                            <div class="w-full lg:w-1/2 embed-wrapper card-media bg-black flex flex-col justify-center">
+                                                                    <img src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/thumbnails/MEMX_X-Sessions_Mkt-Struct_Retail-Panel_MEMX-homepage_01a.jpg" alt="MEMX X Sessions Mkt Struct Retail Panel MEMX homepage 01a">
+                                                                                                                                    <span class="card-media__play" aria-hidden="true"><svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play button">
+<rect width="96" height="96" rx="48" fill="#E7E51D" fill-opacity="0.8"/>
+<path id="Polygon 1" d="M66.8572 48L38.5714 64.3308V31.6692L66.8572 48Z" fill="#0A2A4B"/>
+</g>
+</svg>
+</span>
+                                                            </div>
+                            <div class="flex flex-col text-white xl:w-1/2 gap-y-[20px] p-[30px] justify-between">
+                                <div>
+                                    <p class="text-xs text-memxYellow uppercase pb-5">Member Voices</p>
+                                                                                                                                                                                                                                                                                                                                                                    <h1 class="text-lg md:text-[32px] pb-5"><span class="group-hover:underline">SEC Market 
+Structure Proposal
+ Q1 2023: </span><span class="group-hover:underline text-memxYellow "> Retail Panel</span></h1>
+                                                                    </div>
+                                                                                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td class="align-top pr-5 pb-[20px] uppercase font-light text-[13px]">Host</td>
+                                            <td class="align-top pb-[20px]">
+                                                                                                    <dl class="pb-[15px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Adrian Griffiths</dt>
+                                                        <dd class="text-lg font-light">Head of Market Structure, MEMX</dd>
+                                                    </dl>
+                                                                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-top pr-5 uppercase font-light text-[13px]">Guests</td>
+                                            <td class="align-top">
+                                                                                                    <dl class="pb-[20px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Mike Masone</dt>
+                                                        <dd class="text-lg font-light"><em>Director and Head of Market Structure, Citi</em></dd>
+                                                    </dl>
+                                                                                                    <dl class="pb-[20px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Andrew Upward</dt>
+                                                        <dd class="text-lg font-light"><em>ETF Strategist, Jane Street</em></dd>
+                                                    </dl>
+                                                                                                    <dl class="pb-[20px]">
+                                                        <dt class="text-lg font-bold pb-2 leading-none">Jeff Starr</dt>
+                                                        <dd class="text-lg font-light"><em>Managing Director Operational Services, Schwab</em></dd>
+                                                    </dl>
+                                                                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                                            </div>
+                        </a>
+                                                                                                                                                            <a href="https://memx.com/member-voices/hudson-river-trading" class="group video card no-arrow ">
+                                <div class="card-media">
+                                                                            <img src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/thumbnails/Hudson-River-Trading.jpg" alt="Hudson River Trading">
+                                                                                                                                                    <span class="card-media__play" aria-hidden="true"><svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play button">
+<rect width="96" height="96" rx="48" fill="#E7E51D" fill-opacity="0.8"/>
+<path id="Polygon 1" d="M66.8572 48L38.5714 64.3308V31.6692L66.8572 48Z" fill="#0A2A4B"/>
+</g>
+</svg>
+</span>
+                                                                    </div>
+                                <div>
+                                    <p class="article-category">Member Voices</p>
+                                    <h5 class="card-title group-hover:underline pb-2 leading-none">Hudson River Trading</h5>
+                                </div>
+                                                                    <div class="flex flex-col gap-y-[20px]">
+                                                                                    <dl>
+                                                <dt class="text-lg leading-none font-bold pb-2">Erica Attonito</dt>
+                                                <dd class="text-lg font-light"><em>Global Head of Sales</em></dd>
+                                            </dl>
+                                                                                    <dl>
+                                                <dt class="text-lg leading-none font-bold pb-2">Adam Nunes</dt>
+                                                <dd class="text-lg font-light"><em>Head of Business Development</em></dd>
+                                            </dl>
+                                                                            </div>
+                                                            </a>
+                                                                                                        <a href="https://memx.com/member-voices/blackrock" class="group video card no-arrow ">
+                                <div class="card-media">
+                                                                            <img src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/thumbnails/Blackrock.jpg" alt="Blackrock">
+                                                                                                                                                    <span class="card-media__play" aria-hidden="true"><svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play button">
+<rect width="96" height="96" rx="48" fill="#E7E51D" fill-opacity="0.8"/>
+<path id="Polygon 1" d="M66.8572 48L38.5714 64.3308V31.6692L66.8572 48Z" fill="#0A2A4B"/>
+</g>
+</svg>
+</span>
+                                                                    </div>
+                                <div>
+                                    <p class="article-category">Member Voices</p>
+                                    <h5 class="card-title group-hover:underline pb-2 leading-none">BlackRock</h5>
+                                </div>
+                                                                    <div class="flex flex-col gap-y-[20px]">
+                                                                                    <dl>
+                                                <dt class="text-lg leading-none font-bold pb-2">Samara Cohen</dt>
+                                                <dd class="text-lg font-light"><em>Co-Head of iShares Markets and Investments</em></dd>
+                                            </dl>
+                                                                                    <dl>
+                                                <dt class="text-lg leading-none font-bold pb-2">Hubert De Jesus</dt>
+                                                <dd class="text-lg font-light"><em>Global Head of Market Structure and Electronic Trading</em></dd>
+                                            </dl>
+                                                                            </div>
+                                                            </a>
+                                                                                                        <a href="https://memx.com/member-voices/fidelity" class="group video card no-arrow custom-right-border">
+                                <div class="card-media">
+                                                                            <img src="https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/thumbnails/Fidelity.jpg" alt="Fidelity">
+                                                                                                                                                    <span class="card-media__play" aria-hidden="true"><svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play button">
+<rect width="96" height="96" rx="48" fill="#E7E51D" fill-opacity="0.8"/>
+<path id="Polygon 1" d="M66.8572 48L38.5714 64.3308V31.6692L66.8572 48Z" fill="#0A2A4B"/>
+</g>
+</svg>
+</span>
+                                                                    </div>
+                                <div>
+                                    <p class="article-category">Member Voices</p>
+                                    <h5 class="card-title group-hover:underline pb-2 leading-none">Fidelity</h5>
+                                </div>
+                                                                    <div class="flex flex-col gap-y-[20px]">
+                                                                                    <dl>
+                                                <dt class="text-lg leading-none font-bold pb-2">Chris Gwozdz</dt>
+                                                <dd class="text-lg font-light"><em>Head of Order Flow Management</em></dd>
+                                            </dl>
+                                                                                    <dl>
+                                                <dt class="text-lg leading-none font-bold pb-2">Derrick Chan</dt>
+                                                <dd class="text-lg font-light"><em>Head of Equities</em></dd>
+                                            </dl>
+                                                                            </div>
+                                                            </a>
+                                                </div>
+
+            }
+        </div>
+    </section>
+       </main>
+        
+<footer>
+    <div class="container">
+        <div class="flex lg:flex-row flex-col pb-16 justify-between items-center">
+            <div class="w-[200px] pb-10 lg:pb-0">
+                <a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 104.2">
+  <defs>
+    <style>.cls-1{fill:#e6e41c;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M295.7,0,247.8,51.4l47.8,52.8H306L258.3,51.4,306,0Zm-39,0L233.8,24.8,211.4,0H201.2l32.6,36.2L267,0ZM199.1,104.2h10.5l23.6-25.7,23,25.7h10.3L233.3,67.1Z"/>
+      <polygon class="cls-2" points="186.2 14.7 165.7 40.3 145.2 14.7 132.2 14.7 132.2 65 144.2 65 144.2 32 164.9 57.2 166 57.2 186.6 32 186.6 65 199.1 65 199.1 14.7 186.2 14.7"/>
+      <polygon class="cls-2" points="73.6 14.6 73.6 65 125.5 65 125.5 54.4 86 54.4 86 44.8 118.4 44.8 118.4 34.2 86 34.2 86 25.3 125.5 25.3 125.5 14.6 73.6 14.6"/>
+      <polygon class="cls-2" points="54 14.7 33.6 40.3 13.1 14.7 0 14.7 0 65 12.1 65 12.1 32 32.7 57.2 33.8 57.2 54.5 32 54.5 65 66.9 65 66.9 14.7 54 14.7"/>
+    </g>
+  </g>
+</svg></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://memxtrader.okta.com/" target="_blank" class="btn btn-outline">Log in</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="menu-wrapper">
+                <div class="menu-column">
+                    <ul class="mb-4 text-center lg:text-left">
+                                                    <li><a href="tel:+1 (833) 415-6369" class="animated-links">+1 (833) 415-6369</a></li>
+                                                                            <li><a href="mailto:memberx@memx.com" class="animated-links">memberx@memx.com</a></li>
+                                                                            <li><a href="https://memx.com/contact"  class="animated-links">See all contacts</a></li>
+                                            </ul>
+                </div>
+                <div class="menu-column">
+                                            <h5 class="column-title">Company</h5>
+                        <ul class="mb-4">
+                                                        <li><a href="https://memx.com/overview"  class="animated-links">Overview</a></li>
+                                                        <li><a href="https://memx.com/leadership"  class="animated-links">Leadership</a></li>
+                                                        <li><a href="https://memx.com/careers"  class="animated-links">Careers</a></li>
+                                                    </ul>
+                                                                <h5 class="column-title">News</h5>
+                        <ul class="mb-4">
+                                                            <li><a href="https://memx.com/news-and-insights"  class="animated-links">News &amp; Insights</a></li>
+                                                            <li><a href="https://memx.com/member-voices"  class="animated-links">Member Voices</a></li>
+                                                    </ul>
+                                    </div>
+                <div class="menu-column">
+                                        <h5 class="column-title">Exchanges</h5>
+                    <ul class="mb-4">
+                                                    <li><a href="https://www.memxtrading.com/onboarding" target="_blank" class="animated-links">Become a Member</a></li>
+                                            </ul>
+                    <div class="exchange-links">
+                                                                        <div class="lg:w-1/2">
+                            <h6>MEMX Equities</h6>
+                            <ul class="mb-4">
+                                                                <li><a href="https://info.memxtrading.com/equities-trading-resources/" target="_blank" class="animated-links">Trading Resources</a></li>
+                                                            </ul>
+                        </div>
+                                                <div class="lg:w-1/2">
+                            <h6>MEMX Options</h6>
+                            <ul class="mb-4">
+                                                                <li><a href="https://info.memxtrading.com/us-options-trading-resources/" target="_blank" class="animated-links">Trading Resources</a></li>
+                                                            </ul>
+                        </div>
+                                                <div class="lg:w-1/2">
+                            <h6>MX2 Options</h6>
+                            <ul class="mb-4">
+                                                                <li><a href="https://info.memxtrading.com/us-options-trading-resources/" target="_blank" class="animated-links">Trading Resources</a></li>
+                                                            </ul>
+                        </div>
+                                            </div>
+                                    </div>
+                <div class="menu-column">
+                                        <h5 class="column-title">Solutions</h5>
+                                                                            <ul class="mb-4">
+                                    <li><a href="https://memx.com/market-technology"  class="animated-links">MEMX Market Technology</a></li>
+                                </ul>
+                                                                                                                                        <div>
+                                    <h6 class="opacity-50 uppercase text-xs">Case Studies</h6>
+                                    <ul class="mb-4 case-studies">
+                                                                                    <li><a href="https://memx.com/case-studies/long-term-stock-exchange"  class="animated-links">Long-Term Stock Exchange</a></li>
+                                                                            </ul>
+                                </div>
+                                                                                                               </div>
+            </div>
+        <div class="md:flex pt-4 justify-between border-t border-memxSky">
+            <div class="opacity-50 mb-4 md:mb-0">&copy; 2026 MEMX, LLC. All rights reserved.</div>
+                            <div class="mb-4 md:mb-0"><a class="animated-links" href="https://memx.com/privacy-policy" >Privacy Policy</a></div>
+                    </div>
+    </div>
+</footer>
+    </div>
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","author":{"@id":"https://memx.com#identity"},"copyrightHolder":{"@id":"https://memx.com#identity"},"copyrightYear":"2024","creator":{"@id":"#creator"},"dateCreated":"2024-11-15T10:20:17-08:00","dateModified":"2025-01-31T09:20:25-08:00","datePublished":"2024-11-15T10:21:00-08:00","description":"Watch our MEMX members discuss everything from the future of exchange trading to the concept of healthy competition.","headline":"Member Voices","image":{"@type":"ImageObject","url":"https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/images/MEMX-Logo.png?fit=cover&height=630&width=1200&s=_KLNGXoBw-wQhJJ6uz_Y8LnS6B3cITDZySNHmYto5Is"},"inLanguage":"en-us","mainEntityOfPage":"https://memx.com/member-voices","name":"Member Voices","publisher":{"@id":"#creator"},"url":"https://memx.com/member-voices"},{"@id":"https://memx.com#identity","@type":"LocalBusiness","address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Miami","addressRegion":"Flordia","postalCode":"33179-3899","streetAddress":"382 NC 191st St PMB 92178"},"description":"MEMX was created by and for its members. Using an all-new approach to exchange technology, MEMX provides a platform that revolutionizes performance in exchange operations","email":"info@memx.com","image":{"@type":"ImageObject","height":"208","url":"https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/images/MEMX-Logo.png","width":"490"},"logo":{"@type":"ImageObject","height":"255","url":"https://cdn.craft.cloud/9fb2ef98-fcc6-431d-b09d-d12ff28cf0f0/assets/images/MEMX-Logo.png?fit=contain&format=png&height=600&width=600&s=XiHv1w8GwfLgnqwiq0TPzqP5iLh409e8qdLPE3WDSUM","width":"600"},"name":"MEMX","priceRange":"$","telephone":"+1 (833) 415-6300","url":"https://memx.com"},{"@id":"#creator","@type":"Organization"},{"@type":"BreadcrumbList","description":"Breadcrumbs list","itemListElement":[{"@type":"ListItem","item":"https://memx.com/","name":"Homepage","position":1},{"@type":"ListItem","item":"https://memx.com/member-voices","name":"Member Voices","position":2}],"name":"Breadcrumbs"}]}</script></body>
+</html>
