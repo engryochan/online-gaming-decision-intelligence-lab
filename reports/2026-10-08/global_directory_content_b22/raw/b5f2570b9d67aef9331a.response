@@ -1,0 +1,2700 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#27255f" />
+
+	<!-- CSRF Token -->
+	<meta name="csrf-token" content="rKq6h7nMIiMtWFFU8fZHvIiygaeJ4Pg3cGVcMcJH">
+
+	<title>InformInvestor - Issuer</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://informinvestor.cmda.gov.mv/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://informinvestor.cmda.gov.mv/favicon.ico">
+	
+	<!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="/css/app-vendors.css?id=1807ecaa899b68756b16">
+    <link href="https://informinvestor.cmda.gov.mv/css/apexcharts.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://informinvestor.cmda.gov.mv/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://informinvestor.cmda.gov.mv/vendors/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css?id=409c62cd5750c37b2907">
+    <!-- Scripts -->
+    <script>
+        window.Laravel = {"csrfToken":"rKq6h7nMIiMtWFFU8fZHvIiygaeJ4Pg3cGVcMcJH","document_upload_url":"https:\/\/informinvestor.cmda.gov.mv\/api\/v1\/documents","max_upload_size":100000}    </script>
+
+	
+			<meta property="fb:admins" content="Capital.Market.Development.Authority"/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Capital.Market.Development.Authority"/>
+<meta property="og:url" content="https://informinvestor.cmda.gov.mv/issuers/state-trading-organization">
+<meta property="og:title" content="InformInvestor">
+<meta property="og:image" content="https://informinvestor.cmda.gov.mv/img/og-image_1.png">
+<meta property="og:description" content="CMDA Disclosure Portal for use by publicly-listed companies and the Capital Market Development Authority"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@cmda_mv">
+<meta name="twitter:site" content="@cmda_mv">
+<meta name="twitter:domain" content="https://informinvestor.cmda.gov.mv">
+<meta name="twitter:title" content="InformInvestor">
+<meta name="twitter:description" content="CMDA Disclosure Portal for use by publicly-listed companies and the Capital Market Development Authority">
+<meta name="twitter:image" content="https://informinvestor.cmda.gov.mv/img/og-image_1.png">
+<meta name="Keywords" content="public, markets, capital, stock, maldives">
+<meta name="Description" content="CMDA Disclosure Portal for use by publicly-listed companies and the Capital Market Development Authority">	</head>
+<body >
+<nav class="navbar navbar-expand-lg navbar-light bg-white p-0 fixed-top" id="main-nav">
+    <div class="container-fluid p-lg-0">
+        
+        <a href="/" class="bg-primary d-lg-flex d-none align-items-center text-decoration-none" id="logo">
+            <img src=https://informinvestor.cmda.gov.mv/img/logo.svg alt="">
+            <h3 class="text-white fw-bolder m-0 ps-4"><span class="fw-normal">inform</span>Investor</h3>
+        </a>
+        
+
+        
+                    <div class="dropdown d-lg-none">
+                <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                        <img src="https://informinvestor.cmda.gov.mv/img/logo.png" alt="" width="50" class="py-3" style="border-radius: 50%">
+                    </div>
+                </a>
+                
+            </div>
+                <h4 class="text-primary fw-bolder m-0 d-block d-lg-none p-0"><span class="fw-normal">inform</span>Investor</h4>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+        
+
+        
+        <div class="collapse navbar-collapse px-lg-4" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-lg-left text-center py-3 py-lg-0">
+                    <li class="nav-item btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv">
+                                        Home
+                                    </a>
+                    </li>
+                    <li class="nav-item active btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv/issuers">
+                                        Issuers
+                                            <span class="sr-only">(current)</span>
+                                    </a>
+                    </li>
+                    <li class="nav-item btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv/disclosures">
+                                        Disclosures
+                                    </a>
+                    </li>
+                    <li class="nav-item btn-group">
+                            <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    Statistics
+                </div>
+                <ul class="dropdown-menu">
+                                            <li><a href="https://informinvestor.cmda.gov.mv/stats/annual-stats" class="dropdown-item">Yearly Statistics</a></li>
+                                            <li><a href="https://informinvestor.cmda.gov.mv/stats/monthly-stats" class="dropdown-item">Monthly Statistics</a></li>
+                                    </ul>
+                    </li>
+                    <li class="nav-item btn-group">
+                            <a class="nav-link" href="https://informinvestor.cmda.gov.mv/login">
+                                        Login
+                                    </a>
+                    </li>
+    </ul>
+
+
+            
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center d-none d-lg-flex">
+                                    
+
+
+
+
+
+                    
+                            </ul>
+        </div>
+        
+
+
+    </div>
+</nav>
+<div id="wrapper" class="general-wrapper ">
+
+                <div class="full-height py-5">
+        <div class="container">
+            
+            <h3 class="me-auto underline-heading mb-4 text-black">Issuers</h3>
+            
+            <div class="d-flex flex-column flex-row mb-4">
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-preview.jpg" alt="" width="89px" class="mb-3 w-25">
+                <h3 class="fw-bolder">State Trading Organization</h3>
+            </div>
+            <p class="text-gray-700 mb-5">
+            <div class="page-blocks">
+                                                                        <div class="page-block header-block mb-4">
+    <h2 class="section-title mb-0">The Beginning</h2>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    It was the early 1960's and the nation's socioeconomic outlook was not a very promising one. The population was a mere 100,000. The only communication with the outside world was the Morse code and the ham radio. The only airstrip was the one laid by the British RAF and the mode of transport between islands was limited to traditional sailing Dhoni. The only resource available was tuna. Consumers were at the mercy of importers. Even the most basic food items were expensive. The country had no banking service. Development was slow with no available funds for major investments and no commercial industry.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    The need became more apparent for a central organization to import goods necessary to raise the living standards and encourage development. In 1964, a fully state-funded business was set up by the Maldivian government with one key mission to begin with: strengthening national food security. The main task of the company, then named Athireemaafannu Trading Account (ATA), was to purchase and import essential food items in bulk to be distributed nationally via local traders and ATA's own retail outlets. ATA sold its imports to the public at low mark-up and also purchased supplies for the government.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    ATA was the beginning of STO, and the catalyst for change in the Maldives. With proven success in contributing to national development, ATA matured to become the State Trading Organization (STO) on 9th June 1979. STO undertook all trading and commercial activity on behalf of the Maldivian government. The nation was growing and so were its demands. While remaining true to its original mission, STO expanded its imports, first to an increasing number of commodity items, and then on to modern construction materials, home appliances and consumer goods.
+    </div>
+</div>
+                                                        <div class="page-block header-block mb-4">
+    <h2 class="section-title mb-0">The Organization Today</h2>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Around the time of STO's establishment, Maldivian economy started to pick up speed, fueled by increasing commercial activity mainly in fisheries, agriculture, tourism and construction industries. STO responded by looking beyond its traditional role of state trader. It began to take up alternative enterprises to earn foreign exchange and broaden the nation's revenue sources.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Building up on the background of solid commercial success, STO has streamlined its operations to where profit and viability matter as much as the need to ensure broad access to basic essentials at affordable prices. STO has become the dynamic organization demanded by a prosperous, rapidly developing country. With a diversity of businesses, STO stands testament to the country's economic potential.
+    </div>
+</div>
+                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    STO group, with its subsidiaries, joint ventures and associates, is a national leader in business. It has significant and focused interests in petroleum, cooking gas, construction materials (including cement and roofing material), medical supplies and pharmaceuticals, home appliances, electronics, supermarket products and insurance. The company is geographically diverse with operations and developments throughout Maldives and operations in Singapore. This has been achieved by direct procurement and distribution as well as forming joint ventures to effectively trade in areas where it presents greater opportunity.
+    </div>
+</div>
+                            </div>
+
+            </p>
+
+
+            
+            <div id="custom-tabs" class="mb-5">
+                <h3 class="text-black mb-4">Board Members</h3>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="tab-pane fade show active" id="cm_profile" role="tabpanel"
+                     aria-labelledby="nav-home-tab">
+                    <div class="row g-4 mb-5" id="current_members">
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_34">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/50wNnEwA/c/yfy9lxbu-profile-preview.png" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Amir Mansoor</h4>
+            
+            <h6 class="text-secondary fw-normal">Chairman</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_34" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/50wNnEwA/c/yfy9lxbu-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Amir Mansoor</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Chairman</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Appointed as the Chairman of STO in December 2023, Amir Mansoor represents the major shareholder of the Company; the Government.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Amir Mansoor holds a Master’s Degree in Business Administration and an Executive Diploma in Directorship from Singapore Management University. He has also completed the Qualified Risk Director Program at the Institute of Enterprise Risk Practitioners, Malaysia.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Amir Mansoor is a dynamic businessman with over 37 years of experience in creating, developing, managing, and implementing variety of businesses. He currently serves as the Managing Director of Lily International Pvt Ltd, Carpe Diem Maldives Pvt Ltd, Grape Expectation Pvt Ltd, Salt and Rock Real Estate Pvt Ltd, Huruvalhi Beach Resort Investments Pvt Ltd, Mariculture Maldives Pvt Ltd, H.I.M Management Company Services Pvt Ltd, and is the owner of The Standard Huruvalhi Maldives Resort.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Additionally, he acts as an Executive Board Member of the Maldives Liveaboard Association and is a Board Director at State Trading Organization Plc. In November 2023, he was elected as the President of the National Boating Association of Maldives. He also served as a Board Director of STO from 2012 to 2019.
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_35">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/bVw9JzYv/c/5wux1c9s-profile-preview.png" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Shimad Ibrahim</h4>
+            
+            <h6 class="text-secondary fw-normal">Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_35" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/bVw9JzYv/c/5wux1c9s-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Shimad Ibrahim</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Shimad Ibrahim was initially appointed to the Board of Directors in May 2019 on behalf of the majority shareholder and was later appointed as the Managing Director on November 28, 2023.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Shimad is a Chartered Accountant with over 20 years of professional experience. He also holds a Bachelor of Accounting (Honors) Degree from the International Islamic University of Malaysia, where he was awarded the Best Student in Management Accounting. 
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    At present, he is a Director at SFG Corporate Services, SFG Logistics, S&amp;A Tax and Financial Services, and Lisa Maldives. He also serves as the Managing Director of Maldives Industrial Development Free Zone PLC. Previously, he worked as the Chief Financial Officer at Villa Group, the Head of Finance at Maldives Islamic Bank, and the Chief Finance Executive at the Ministry of Finance. Shimad also served as a Director in the Maldives Islamic Bank PLC, Maldives Tourism Development Corporation PLC, Thilafushi Corporation Limited and Upper South Utilities Limited. Further to this, he also served the nation as a member of the National Debt Management Committee.
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_36">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/kKYy7yoR/c/bdgqvmdr-profile-preview.png" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Mohamed Nizam</h4>
+            
+            <h6 class="text-secondary fw-normal">Executive Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_36" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/kKYy7yoR/c/bdgqvmdr-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Mohamed Nizam</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Executive Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mohamed Nizam joined STO in the year 2010 and is currently Chief
+Financial Officer. Prior to this, he has worked in key positions of the Company
+that include the Procurement HOD, the Finance Manager, the Chief Risk Officer
+and as a Senior Information System Manager of the ICT department.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    He is presently the Chairman of the Board of Directors of Allied
+Insurance Company of the Maldives Pvt Ltd and a Board Director at Maldives
+Industrial Fisheries Company Ltd and Maldives State Shipping Company Pvt Ltd.
+Nizam was also a former Director of Fuel Supplies Maldives Ltd and represented STO
+in the Board of the Maldives Stock Exchange and the Maldives Securities
+Depository.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Nizam holds a master’s degree in Business Administration,
+specialized in financial management from University of Ballarat, Australia and
+a Bachelor of Arts (Honours) degree in Finance and Accounting from University
+of East London, UK. He is a professional member of the Institute of Enterprise
+Risk Practitioners (IERP) and a certified Enterprise Risk Advisor (ERA). Nizam
+is also a certified associate consultant in SAP Finance and Controlling.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Nizam is a serene and helpful character. He is known for his
+crucial ability of critical thinking and problem solving. He is extremely
+qualified in analyzing and visualizing data in MS Excel. Nizam has an interest
+in astrophysics and technology.
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_39">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/e8qePBYP/c/a4ssmeua-profile-preview.png" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Reesha Abdul Munnim</h4>
+            
+            <h6 class="text-secondary fw-normal">Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_39" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/e8qePBYP/c/a4ssmeua-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Reesha Abdul Munnim</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Reesha Abdul Munnim was appointed to the Board of Directors of STO as an independent, non-executive member in January 2024 to represent the majority shareholders.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Reesha holds a Master’s in Business Administration from the University of Mysore, India, and a Bachelor’s in Business Management from JSS College for Women, India. Her educational background also includes a Diploma in Airline Marketing for Leadership from IATA, Singapore, an Associate Diploma in Organizational Learning and Development from CIPD, UK, and a Diploma in Foreign Trade.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Currently, Reesha serves as the Senior Manager of the Learning and Development function. She has also contributed to various roles in the commercial and human resource areas at Island Aviation Services. Additionally, Ms. Reesha serves as a
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    part-time lecturer at several colleges, including MAPS College, Villa College, Clique College, Avid College, and Male' Business School.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Reesha is also an active member of the Singapore chapter of Women in Aviation International, USA, and the Maldives Association of Human Resource Professionals (MAHRP).
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_40">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/dKqry6Yg/c/rzvk513q-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Mohamed Ahsan Saleem</h4>
+            
+            <h6 class="text-secondary fw-normal">Director (Representing public Shareholders)</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_40" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/dKqry6Yg/c/rzvk513q-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Mohamed Ahsan Saleem</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Director (Representing public Shareholders)</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. Mohamed Ahsan Saleem is currently the Director of Operations at Treetop Hospital. He previously served as Head of Information Technology at Treetop Hospital. He has also held various positions in the field of tourism and hospitality. He has worked at Conrad Rangili, Hilton Seychelles, Les Roches Switzerland, and College du Liman Switzerland, as well as in the guest house and diving sectors in Sri Lanka. He has also worked for the Maldives Association of Tourism Industry and the Maldives Tourism Promotion Board.
+    </div>
+</div>
+                                                                                                        <div class="page-block paragraph-block mb-4">
+    <div class="text-justify">
+    Mr. Mohamed Ahsan Saleem holds a Master of International Tourism and Hotel Management from Southern Cross University, Singapore. In addition, Mr. Mohamed Ahsan Saleem holds a Bachelor of Business in International Hotel and Resort Management from Blue Mountains International Hotel Management School, Australia. He also holds a Diploma in Hotel Management from Les Roches Hotel Management School in Switzerland. In addition, he holds a private pilot license from the Seletar Flying Club in Singapore. At the same time, he is an open water scuba diver instructor and emergency first response instructor at Kuredu Island Resort.
+    </div>
+</div>
+                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                                    <div class="col-lg-3 col-md-6 profile-card" data-bs-toggle="modal" data-bs-target="#member_150">
+    <div class="card shadow-sm mb-2">
+        <div class="card-body p-4">
+            
+            <img src="https://informinvestor.cmda.gov.mv/storage/uploads/2ywD9NYN/c/xxv8zvhb-profile-preview.jpg" alt="" class="mb-4">
+            
+            <h4 class="text-primary mb-2">Aishath Fazeena</h4>
+            
+            <h6 class="text-secondary fw-normal">Director</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade profile-modal" id="member_150" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    
+                    <div class="col-xl-4 col-lg-6">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/2ywD9NYN/c/xxv8zvhb-preview.jpg" alt="" class="mb-lg-0 mb-4">
+                    </div>
+
+                    
+                    <div class="col-xl-8 col-lg-6 align-self-center" id="profile-info">
+                        
+                        <h4 class="text-primary mb-2 text-center text-lg-start">Aishath Fazeena</h4>
+                        
+                        <h6 class="text-secondary fw-normal text-center text-lg-start" id="designation">Director</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                            <p class="text-gray-500">
+                                                                                            </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                            </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+
+
+            
+            <div id="custom-tabs" class="mb-5">
+                <h3 class="text-black mb-4">Board Committees</h3>
+                                    <div class="card mb-4">
+    <div class="card-body">
+
+        
+        <div class="d-flex mb-2 flex-wrap">
+            
+            <h5 class="text-primary">Audit and Risk Committee</h5>
+
+            
+            <h6 class="text-gray-500 ms-auto"><i class="far fa-users me-2"></i>3 Members</h6>
+        </div>
+
+        
+        <p class="text-gray-700 mb-4"></p>
+
+        
+        <h5>Members of the committee</h5>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/e8qePBYP/c/a4ssmeua-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Reesha Abdul Munnim</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/dKqry6Yg/c/rzvk513q-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Mohamed Ahsan Saleem</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/2ywD9NYN/c/xxv8zvhb-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Aishath Fazeena</h6>
+                    </div>
+                </div>
+                    </div>
+
+
+    </div>
+</div>
+                                    <div class="card mb-4">
+    <div class="card-body">
+
+        
+        <div class="d-flex mb-2 flex-wrap">
+            
+            <h5 class="text-primary">Nomination &amp; Remuneration Committee</h5>
+
+            
+            <h6 class="text-gray-500 ms-auto"><i class="far fa-users me-2"></i>2 Members</h6>
+        </div>
+
+        
+        <p class="text-gray-700 mb-4"></p>
+
+        
+        <h5>Members of the committee</h5>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/e8qePBYP/c/a4ssmeua-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Reesha Abdul Munnim</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/2ywD9NYN/c/xxv8zvhb-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Aishath Fazeena</h6>
+                    </div>
+                </div>
+                    </div>
+
+
+    </div>
+</div>
+                                    <div class="card mb-4">
+    <div class="card-body">
+
+        
+        <div class="d-flex mb-2 flex-wrap">
+            
+            <h5 class="text-primary">Governance &amp; Sustainability Committee</h5>
+
+            
+            <h6 class="text-gray-500 ms-auto"><i class="far fa-users me-2"></i>2 Members</h6>
+        </div>
+
+        
+        <p class="text-gray-700 mb-4"></p>
+
+        
+        <h5>Members of the committee</h5>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/dKqry6Yg/c/rzvk513q-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Mohamed Ahsan Saleem</h6>
+                    </div>
+                </div>
+                            <div class="card shadow-none mx-3">
+                    
+                    <div class="card-head text-center pb-1">
+                        <img src="https://informinvestor.cmda.gov.mv/storage/uploads/e8qePBYP/c/a4ssmeua-list-preview.jpg" alt="" width="120px" class="rounded-circle">
+                    </div>
+                    <div class="card-body px-0 py-3 text-center">
+                        
+                        <h6 class="fw-normal mb-0">Reesha Abdul Munnim</h6>
+                    </div>
+                </div>
+                    </div>
+
+
+    </div>
+</div>
+                            </div>
+
+            
+            <div id="custom-tabs" class="mb-5">
+                <h3 class="text-black mb-4">Shareholding Structure</h3>
+                <div class="tab-pane fade show active" id="cm_share" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Share %</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Government of the Republic of Maldives</td>
+                                        <td data-label="Share %">81.62 %</td>
+                                    </tr>
+                                                                    <tr class="align-middle">
+                                        <td data-label="Name">Public Shareholders</td>
+                                        <td data-label="Share %">18.38 %</td>
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mb-5">
+                
+                <div class="d-flex align-items-end mb-4">
+                    <h3 class="text-black mb-0">Disclosures</h3>
+                    
+                    <a href="https://informinvestor.cmda.gov.mv/disclosures"
+                       class="text-decoration-none ms-auto btn btn-secondary btn-more text-white d-none d-lg-block">More
+                        Disclosures</a>
+                </div>
+                
+                <div class="row mb-4 g-4">
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/378" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 1 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/379" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 July 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/380" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">29 October 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 3 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/381" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 January 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 4 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/382" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/383" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">15 May 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/513" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">04 May 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Information on individuals representing public shareholders for election at AGM 2022</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/608" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">16 June 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/610" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">26 June 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/615" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">01 June 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM 2022 Decisions</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/622" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">28 November 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement regarding change to CEO and MD of STO</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/623" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">06 December 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Change to the Board of Directors of State Trading Organization Plc</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/625" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">16 December 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Change to the Board of Directors of State Trading Organization Plc</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/626" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">18 December 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Change to the Board of Directors of State Trading Organization Plc</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/627" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">19 December 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Transfer of shares in Maldives Industrial Fisheries Company Ltd.</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/628" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">21 December 2023</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Name Change of External Auditors of the Company and Affiliation with Deloitte Group;</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/635" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">22 January 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Change to the Board of Directors of State Trading Organization Plc</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/638" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">29 January 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Change to the Board of Directors of State Trading Organization Plc</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/658" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">17 March 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement on Directorship Application for 2024-2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/661" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">27 March 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement regarding directorship application deadline extension.</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/670" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">28 April 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement regarding publishing Annual Report 2023</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/681" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 1 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/682" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">01 May 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/684" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 July 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/685" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 October 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 3 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/686" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 January 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 4 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/687" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/756" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">13 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement regarding publishing Annual Report 2023</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/759" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">22 May 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement regarding Annual General Meeting 2023</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/769" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">09 June 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Book Close date for AGM 2023</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/770" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">11 June 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Information on directorship candidates  for year 2024 -2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/774" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">15 June 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement on declaration of dividend for year 2023</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/780" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">15 July 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Decisions of AGM 2023</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/794" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">28 August 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement regarding the acquisition of Fenaka corporation by STO</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/811" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">28 November 2024</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Discontinue the Acquisition of Shares in Fenaka Corporation Limited</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/825" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">07 January 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">The resignation of Board Director Mr. Mohamed Murad</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/847" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">27 February 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement on Directorship Application for 2025-2026</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/849" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">11 March 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Change to the Board of Directors of State Trading Organization Plc</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/859" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">13 April 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Book Close date for AGM 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/871" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quaterly Report of Q1 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/874" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">01 May 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Audited Financial Statement 2024</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/876" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM Notice</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/878" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 July 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/879" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 October 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 3 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/880" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 January 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 4 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/881" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Annual Reports with Audited Financial Statements</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/959" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">18 May 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM 2024 Decisions</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/969" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">31 May 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM 2024 Minutes</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/996" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">04 September 2025</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement Regarding Hulhumale Hotel Project</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1030" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">29 January 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Directorship Notice 2026-2027</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1034" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">22 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 1 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1035" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">29 July 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Quarter 2 Report</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1120" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">01 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Public Directorship Announcement 2026-2027</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1126" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">15 April 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement for Book Closing Date - AGM 2025</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1142" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">17 May 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM 2025 Decisions</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1148" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">30 May 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">AGM 2025 Minutes</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1152" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">10 June 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Amendments to Articles of Association &amp; Memorandum of Association</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                            <div class="disclosure-card col-lg-6">
+    
+    <a href="https://informinvestor.cmda.gov.mv/disclosures/1200" class="text-decoration-none">
+        <div class="card border-0">
+            <div class="card-body d-flex align-items-center p-0">
+                
+                <img src="https://informinvestor.cmda.gov.mv/storage/uploads/74w8K7oK/c/lgbjbatt-list-preview.jpg" alt="">
+                <div class="desc">
+                    
+                    <h6 class="text-gray-500">01 September 2026</h6>
+
+                    
+                    <h6 class="text-gray-700 fw-bold text-truncate-2">Announcement of Resignation of Director</h6>
+
+                    
+                    <strong class="text-truncate-2 fontsize-10 text-gray-700">State Trading Organization</strong>
+                </div>
+
+                
+                <i class="far fa-print-search"></i>
+            </div>
+        </div>
+    </a>
+</div>
+                                    </div>
+                
+                <a href="https://informinvestor.cmda.gov.mv/disclosures"
+                   class="btn btn-more btn-secondary d-lg-none text-decoration-none text-white">More Disclosures</a>
+            </div>
+
+            
+            <div class="mb-5">
+                
+                <h3 class="text-black mb-4">Statistics</h3>
+                
+                <div class="mb-5">
+                    
+                    <div class="card border-0 mb-3">
+    <div class="card-body">
+        <form method="POST" action="https://informinvestor.cmda.gov.mv/admin/stats/export" accept-charset="UTF-8" id="stats-form"><input name="_token" type="hidden" value="rKq6h7nMIiMtWFFU8fZHvIiygaeJ4Pg3cGVcMcJH">
+        <div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <div class="col-lg-4 mb-1">
+                <label for="metric" class="form-label">Metric *</label>
+            </div>
+            
+            <div class="col-md-12  mb-3">
+                <select class="form-control select2-basic" data-allow-clear="true" data-placeholder="Nothing Selected" id="metric" name="metric"><option value="asset_cover_available">Asset Cover Available</option><option value="debt_equity_ratio">Debt Equity Ratio</option><option value="debt_service_coverage_ratio">Debt Service Coverage Ratio</option><option value="interest_service_coverage_ratio">Interest Service Coverage Ratio</option><option value="current_ratio">Current Ratio</option><option value="total_revenue">Total Revenue</option><option value="total_expenses">Total Expenses</option><option value="net_profit">Net Profit</option><option value="earnings_per_share">Earnings Per Share</option><option value="net_assets_per_share">Net Assets Per Share</option><option value="cash_flow_per_share">Cash Flow Per Share</option><option value="dividend_per_share">Dividend Per Share</option><option value="current_assets">Current Assets</option><option value="current_liabilities">Current Liabilities</option><option value="fixed_assets">Fixed Assets</option><option value="fixed_liabilities">Fixed Liabilities</option><option value="total_assets">Total Assets</option><option value="total_liabilities">Total Liabilities</option><option value="total_equity">Total Equity</option><option value="reserves">Reserves</option><option value="net_worth">Net Worth</option><option value="highest_traded_price">High Traded Price</option><option value="lowest_traded_price">Low Traded Price</option><option value="last_traded_price">Last Traded Price</option><option value="weighted_average_traded_price">Weighted Average Traded Price</option><option value="number_of_trades">Number of Trades</option><option value="number_of_shares_traded">Number of Shares Traded</option><option value="value_of_shares_traded">Value Of Shares Traded</option><option value="market_capitalisation">Market Capitalisation</option><option value="dividend_yield">Dividend Yield</option><option value="price_earnings_ratio">Price Earning Ratio</option></select>
+                
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <div class="col-lg-4 mb-1">
+                <label for="mode" class="form-label">Mode *</label>
+            </div>
+                        <div class="col-lg-12  mb-3">
+                <select class="form-control select2-basic" data-allow-clear="true" data-placeholder="Nothing Selected" id="mode" name="mode"><option value="year" selected="selected">Year</option></select>
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group"
+             data-enable-section-checkbox="#custom-date-range"
+             data-disable="true"
+        >
+            <div class="col-lg-8 mb-1">
+                <label for="date_range" class="form-label">Date Range *</label>
+            </div>
+                        <div class="col-lg-8  mb-3">
+                <select class="form-control select2-basic" data-placeholder="Custom" id="date_range" name="date_range"><option value="this_year">This Year</option><option value="last_year">Last Year</option><option value="lifetime">Lifetime</option></select>
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group mt-4 pt-3">
+            <div class="checkbox">
+                <input id="custom-date-range" class="form-check-input" name="custom_date_range" type="checkbox" value="1">
+                <label for="custom-date-range" class="checkbox__label">Custom Date Range</label>
+            </div>
+                    </div>
+    </div>
+</div>
+
+<div class="row  mt-3"
+     data-enable-section-checkbox="#custom-date-range"
+     data-hide-fields="true"
+>
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-lg-4 mb-1">
+                <label for="date_from" class="form-label">Date From *</label>
+            </div>
+            <div class="col-lg-12  mb-3">
+                <div class="input-group mb-0">
+    <input type="text" class="form-control datetime-picker border-end-0" placeholder="" autocomplete="off"   name="date_from" id="date_from">
+    <span class="input-group-text bg-white border-start-0 rounded-end border-top"><i class="far fa-calendar-alt text-gray-700"></i></span>
+    <a href="#" data-date-clear="#date_from" class="disable-w-input btn btn-light" title="Clear">
+        <i class="far fa-times"></i>
+    </a>
+    </div>
+                            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-lg-12 mb-1">
+                <label for="date_to" class="form-label">Date To *</label>
+            </div>
+            <div class="col-lg-12  mb-3">
+                <div class="input-group mb-0">
+    <input type="text" class="form-control datetime-picker border-end-0" placeholder="" autocomplete="off"   name="date_to" id="date_to">
+    <span class="input-group-text bg-white border-start-0 rounded-end border-top"><i class="far fa-calendar-alt text-gray-700"></i></span>
+    <a href="#" data-date-clear="#date_to" class="disable-w-input btn btn-light" title="Clear">
+        <i class="far fa-times"></i>
+    </a>
+    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+
+    <div class="col-md-3">
+        <div class="form-group"
+             data-enable-elem="#compare"
+             data-enable-section-value="[&quot; &quot;,1]"
+             data-disable="true"
+             data-hide-fields="true"
+        >
+            <label for="compare_date_from">Compare Date From *</label>
+            <div class="input-group mb-0">
+    <div class="input-group-prepend">
+        <span class="input-group-text"><i class="zmdi zmdi-calendar"></i></span>
+    </div>
+    <input type="text" class="form-control date-picker" placeholder="" autocomplete="off"   name="compare_date_from" id="compare_date_from">
+    <div class="input-group-append">
+        <div class="input-group-text input-group-text-link">
+            <a href="#" data-date-clear="#compare_date_from" class="disable-w-input text-body" title="Clear">
+                <i class="zmdi zmdi-close"></i>
+            </a>
+        </div>
+    </div>
+    <i class="form-group__bar"></i>
+</div>
+                    </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group"
+             data-enable-elem="#compare"
+             data-enable-section-value="[&quot; &quot;,1]"
+             data-disable="true"
+             data-hide-fields="true"
+        >
+            <label for="compare_date_to">Compare Date To *</label>
+            <div class="input-group mb-0">
+    <div class="input-group-prepend">
+        <span class="input-group-text"><i class="zmdi zmdi-calendar"></i></span>
+    </div>
+    <input type="text" class="form-control date-picker" placeholder="" autocomplete="off"   name="compare_date_to" id="compare_date_to">
+    <div class="input-group-append">
+        <div class="input-group-text input-group-text-link">
+            <a href="#" data-date-clear="#compare_date_to" class="disable-w-input text-body" title="Clear">
+                <i class="zmdi zmdi-close"></i>
+            </a>
+        </div>
+    </div>
+    <i class="form-group__bar"></i>
+</div>
+                    </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="compare" class="form-label">Compare To</label>
+                        <select class="form-control select2-basic" id="compare" name="compare"><option value=" ">No Comparision</option><option value="1">Previous Period</option><option value="0">Custom Period</option></select>
+                    </div>
+    </div>
+    <div class="col-md-8">
+        <div style="margin-top:2.1em" class="float-end">
+            <a href="#" class="btn btn-gray me-1 btn--icon-text btn--raised" title="Generate Graph" id="generate-graph">
+                <i class="fa fa-chart-bar"></i> Generate
+            </a>
+            <button class="btn btn-primary btn--icon-text btn--raised" title="Download CSV">
+                <i class="fa fa-download"></i> Download
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 mb-3">
+    <div class="card-body position-relative" style="height: 500px;">
+        <canvas id="chart"></canvas>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="bg-gray-200" id="footer">
+    <div class="container py-5 py-lg-4">
+        <div class="row" id="footer-container">
+
+
+            
+            <div class="col-lg-6 d-flex flex-lg-row flex-column align-items-center order-1 order-lg-0 pt-3 pt-lg-0">
+                <img src="https://informinvestor.cmda.gov.mv/img/logo-gray.svg" alt="" class="py-3 py-lg-0">
+                <div class="ms-lg-5">
+                    <p class="mb-0 text-gray-600 text-center text-lg-start py-1 py-lg-0">Copyright © 2021</p>
+                    <p class="mb-0 text-gray-600 text-center text-lg-start py-1 py-lg-0">Capital Market Development Authority</p>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6 order-0 order-lg-1 pb-3 pb-lg-0">
+                <ul class="nav justify-content-end align-items-center h-100 flex-lg-row flex-column">
+    </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://informinvestor.cmda.gov.mv/js/jquery-bootstrap-5.js"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/jquery-ui.js"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/simpleUpload.min.js"></script>
+
+<!-- Material Admin JS -->
+<!-- Custom JS-->
+<script src="/js/vendors.js?id=ba9c19bb01e6ad34e694"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/apexcharts.min.js"></script>
+<script src="https://informinvestor.cmda.gov.mv/js/select2-custom.js"></script>
+<script src="/js/utilities.js?id=0a93c04a755c55282bad"></script>
+<script src="/js/app.js?id=f2a9b527b273e7b2c5bb"></script>
+
+
+    <script src="https://informinvestor.cmda.gov.mv/vendors/chart.js/chart.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Chart.defaults.font.family = 'Roboto, sans-serif';
+            var ctx = document.getElementById('chart').getContext('2d');
+
+            var primary_gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            primary_gradient.addColorStop(0, 'rgba(0, 0, 102,1)');
+            primary_gradient.addColorStop(0.8, 'rgba(0, 0, 102,0)');
+
+            var comparison_gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            comparison_gradient.addColorStop(0, 'rgb(136, 170, 217,1)');
+            comparison_gradient.addColorStop(0.8, 'rgb(136, 170, 217,0)');
+
+            var myChart = new Chart(ctx, {});
+
+            $('#generate-graph').on('click', function (e) {
+                e.preventDefault();
+                var form = $('#stats-form');
+                var data = getJsonFormData(form);
+                var _this = this;
+
+                data.format = 'chartjs';
+
+                $.ajax({
+                    url: 'https://informinvestor.cmda.gov.mv/api/v1/stats',
+                    type: 'GET',
+                    data: data,
+                    beforeSend: function () {
+                        toggleLoading( $(_this), true );
+                    },
+                    complete: function () {
+                        toggleLoading( $(_this), false );
+                    },
+                    success: function (response) {
+                        var datasets = [];
+                        var scales = {};
+
+                        scales.x1 = {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Primary Period - ' +
+                                    moment(response.date_from).format('MMM D, YYYY') +
+                                    ' - ' + moment(response.date_to).format('MMM D, YYYY'),
+                                font: {
+                                    weight: '400'
+                                },
+                                color: '#545454',
+                                padding: 15,
+                            },
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#9f9f9f',
+                                callback: function(value, index, values) {
+                                    var label = response.result.labels[index];
+                                    return label.split('#')[0];
+                                }
+                            }
+                        };
+
+                        if (response.compare_date_range) {
+                            datasets.push({
+                                label: titleCase(response.aggregate_field) + ' (Compared)',
+                                data: response.result.compare,
+                                lineTension: 0,
+                                borderColor: 'rgb(255, 159, 64)',
+                                backgroundColor: comparison_gradient,
+                                fill: true,
+                                xAxisID: 'x2',
+                            });
+
+                            scales.x2 = {
+                                display: true,
+                                //tipe: "time",
+                                title: {
+                                    display: true,
+                                    text: 'Comparison Period - ' +
+                                        moment(response.compare_date_from).format('MMM D, YYYY') +
+                                        ' - ' + moment(response.compare_date_to).format('MMM D, YYYY'),
+                                    font: {
+                                        weight: '400'
+                                    },
+                                    color: '#545454',
+                                    padding: 15,
+                                },
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    color: '#9f9f9f',
+                                    callback: function(value, index, values) {
+                                        var label = response.result.labels[index];
+                                        return label.split('#')[1];
+                                    }
+                                }
+                            };
+                        }
+
+                        datasets.push({
+                            label: titleCase(response.aggregate_field),
+                            data: response.result.stats,
+                            lineTension: 0,
+                            borderColor: 'rgb(0, 0, 102)',
+                            backgroundColor: primary_gradient,//'rgba(54, 162, 235, 0.1)'
+                            fill: true,
+                            xAxisID: 'x1',
+                        });
+
+                        myChart.destroy();
+                        scales.y = {
+                            beginAtZero: true,
+                            grid: {
+                                display: true,
+                                borderColor: '#edf9fc',
+                                borderWidth: 1,
+                                tickColor: '#edf9fc',
+                                color: '#edf9fc',
+                            },
+                            ticks: {
+                                color: '#9f9f9f',
+                                precision: 0,
+                                callback: function(value, index, values) {
+                                    return value.toLocaleString('en-US');
+                                }
+                            }
+                        };
+
+                        myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: response.result.labels,
+                                datasets: datasets
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                //aspectRatio: 3,
+                                elements: {
+                                    point: {
+                                        hoverRadius: 8
+                                    }
+                                },
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: response.metric_name,
+                                        color: '#333',
+                                        font: {
+                                            weight: '400',
+                                            size: 18
+                                        }
+                                    },
+
+                                    legend: {
+                                        reverse: true,
+                                        labels: {
+                                            color: '#545454',
+                                            font: {
+                                                weight: 'normal',
+                                                size: 11
+                                            },
+                                            padding: 15,
+                                            usePointStyle: true,
+                                        },
+
+                                    },
+
+                                    tooltip: {
+                                        mode: 'x',
+                                        enabled: true,
+                                        backgroundColor: 'rgb(255,255,255)',
+                                        titleColor: '#747a80',
+                                        bodyColor: '#747a80',
+                                        borderColor: '#f1f1f1',
+                                        borderWidth: 1,
+                                        padding: 12,
+                                        cornerRadius: 2,
+                                        usePointStyle: true,
+                                        caretSize: 0,
+                                        callbacks: {
+                                            label: function (context) {
+                                                var label = context.dataset.label || '';
+
+                                                if (label) {
+                                                    label += ': ';
+                                                }
+                                                if (context.parsed.y !== null) {
+                                                    label += context.parsed.y.toLocaleString('en-US');
+                                                }
+
+                                                return ' ' + label;
+                                            },
+                                            title: function (context, object) {
+                                                var index = context[0].dataIndex;
+
+                                                var title = response.result.labels[index];
+                                                return title.replace('#', ' / ');
+                                            }
+                                        }
+                                    },
+                                },
+                                scales: scales
+                            }
+                        });
+                    },
+                    error: function (xhr) {
+                        if (xhr.status == 422) {
+                            showValidationErrorMsg(xhr);
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'An error occurred while loading the data.',
+                                icon: 'error'
+                            });
+                        }
+                    }
+                });
+            }).trigger('click');
+        })
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4751367db938ccb',t:'MTc5MTQ2MTc3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"053155b4c625420f9763e605d21ee253","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

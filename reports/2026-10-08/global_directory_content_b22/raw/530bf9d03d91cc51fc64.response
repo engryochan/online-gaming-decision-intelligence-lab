@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lao Securities Commission</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/image/webico.ico" rel="icon">
+  <link href="../assets/image/webico.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS Files -->
+  <link href="../assets/css/variables.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/all.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- Insert lordicon library -->
+<script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+  <!-- =======================================================
+  * Template Name: ZenBlog - v1.0.0
+  * Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
+  * Author: BootstrapMade.com
+  * License: https:///bootstrapmade.com/license/
+  ======================================================== -->
+	
+<style>
+.wrimagecard{	
+	margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.wrimagecard .fa{
+	position: relative;
+    font-size: 70px;
+}
+.wrimagecard-topimage_header{
+padding: 20px;
+}
+a.wrimagecard:hover, .wrimagecard-topimage:hover {
+    box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+}
+.wrimagecard-topimage a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.wrimagecard-topimage_title {
+    padding: 20px 24px;
+    height: 80px;
+    padding-bottom: 0.75rem;
+    position: relative;
+}
+.wrimagecard-topimage a {
+    border-bottom: none;
+    text-decoration: none;
+    color: #525c65;
+    transition: color 0.3s ease;
+}
+	  
+</style>
+
+<!--LOGO-->
+<style>
+	#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  transition: padding 0.3s; /* Smooth transition */
+  padding: 20px; /* Initial padding */
+}
+
+#logo {
+  width: 130px; /* Initial size */
+  transition: width 0.3s; /* Smooth transition */
+}
+
+#navbar.scrolled {
+  padding: 50px; /* Reduced padding when scrolled */
+}
+
+#logo.scrolled {
+  width: 80px; /* Smaller logo size when scrolled */
+}
+
+/* ===== Logo positioning — ຕຳເໝ່ງດຽວກັນທຸກຂະໝາດໝ້າຈໍ (ຄືກັນກັບໝ້າຫຼັກ) ===== */
+@media (max-width: 991px) {
+  header#header .container-fluid,
+  header#header > .container-xl,
+  header#header > .col-md-7 {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    justify-content: flex-start !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    min-height: 70px !important;
+  }
+  header#header > .container-fluid > a.logo:empty,
+  header#header > .container-xl > a.logo:empty {
+    display: none !important;
+  }
+  div#navbar {
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    text-align: left !important;
+  }
+  div#navbar > div:first-child {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    display: inline-block !important;
+  }
+  #navbar #logo,
+  img#logo,
+  #navbar img.logo {
+    position: fixed !important;
+    top: 8px !important;
+    left: 15px !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 110px !important;
+    max-width: 28vw !important;
+    height: auto !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: drop-shadow(0 0 0.15rem rgba(0,0,0,0.35)) !important;
+  }
+  #navbar .search-form-wrap {
+    display: none !important;
+  }
+  .mobile-nav-toggle,
+  i.bi-list.mobile-nav-toggle {
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important;
+    z-index: 10001 !important;
+    margin: 0 !important;
+    font-size: 30px !important;
+    color: #ffffff !important;
+  }
+}
+@media (max-width: 480px) {
+  #navbar #logo,
+  img#logo,
+  #navbar img.logo {
+    width: 80px !important;
+    max-width: 25vw !important;
+    top: 10px !important;
+    left: 10px !important;
+  }
+}
+	</style>
+
+<!-- Modified -->
+<script language="javascript" type="text/javascript">
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+	
+window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
+  const logo = document.getElementById('logo');
+
+  if (window.scrollY > 50) { // Adjust this value based on when you want the logo to resize
+    navbar.classList.add('scrolled');
+    logo.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+    logo.classList.remove('scrolled');
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.php" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+       <!--  <h1>ຄະນະກຳມະການຄຸ້ມຄອງຫຼັກຊັບ</h1>-->
+      </a>
+		
+		<script type="application/javascript">
+			// Select the logo element
+			const logo = document.getElementById("logo");
+
+			// Listen to the window's scroll event
+			window.addEventListener("scroll", () => {
+			  // Calculate scroll position
+			  const scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+			  // Set a maximum scale reduction
+			  const scaleValue = Math.max(0.5, 1 - scrollPos / 1000); // Adjust 1000 to control the speed of zoom-out
+
+			  // Apply the scale to the logo
+			  logo.style.transform = `scale(${scaleValue})`;
+			});
+		</script>
+		
+	<div class="position-relative" id="navbar" style="margin-left: 13%;">
+        <div><a href="#" class="mx-2"><img  id="logo" class="logo" src="../assets/logo/logo website.png" alt="Lao Securities Commission" style="margin-left: -201px; margin-top: 2.5%; text-shadow: 20px 20px;filter: drop-shadow(0 0 0.75rem black);"></a></div> <!--width: 800%; height: 70%; margin: 280% 0% 0% -1400%;-->
+        <!--<div><a href="#" class="mx-2"><img  id="logo" class="logo" src="assets/logo/logo website.png" alt="Lao Securities Commission" style="width: 70%; height: 70%; margin: 30% 0% 0% -10%;text-shadow: 20px 20px;filter: drop-shadow(0 0 0.75rem black);"></a></div>-->
+
+
+<!--        <i class="bi bi-list mobile-nav-toggle"></i>-->
+
+        <!-- ======= Search Form ======= -->
+        <div class="search-form-wrap js-search-form-wrap">
+          <form action="search-result.html" class="search-form">
+            <span class="icon bi-search"></span>
+            <input type="text" placeholder="Search" class="form-control">
+            <button class="btn js-search-close"><span class="bi-x"></span></button>
+          </form>
+        </div><!-- End Search Form -->
+
+     </div>
+		
+
+	  <style>
+/* ===== Desktop only (>= 1281px) ===== */
+@media (min-width: 1281px) {
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    margin: 0 5px; /* ລະຍະຫ່າງດ້ານຂ້າງ */
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 5px;
+    letter-spacing: -0.4px;
+  }
+}
+
+/* =========================================================================
+   Mobile (<= 1280px) — ການອອກແບບເມນູ hamburger ໃຫ້ມີສັດສ່ວນ ແລະ ງາມ
+   ໂຄງສີຫຼັກ: #084298 (ນ້ຳເງິນເຂັ້ມ), ນ້ຳເງິນອ່ອນເປັນພື້ນຫຼັງຊັ້ນຍ່ອຍ
+   ກວມເອົາການ zoom 200% ໃນໜ້າຈໍ 2K/4K ນຳ
+   ========================================================================= */
+@media (max-width: 1280px) {
+
+  /* --- ບັງຄັບໃຫ້ hamburger ສະແດງ (ຖ້າ main.css/style.css ມີ rule ບັງເຊື່ອງ) --- */
+  .mobile-nav-toggle,
+  i.bi-list.mobile-nav-toggle {
+    display: inline-block !important;
+  }
+  /* --- ເຊື່ອງ ul ດ້ານໃນ desktop mode ເພື່ອໃຫ້ເມນູ hamburger ເຮັດວຽກ --- */
+  body:not(.mobile-nav-active) .navbar > ul {
+    display: none !important;
+  }
+
+  /* --- ກອບເມນູໃຫຍ່ (ul ຊັ້ນນອກ) --- */
+  .navbar > ul {
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(8, 66, 152, 0.18) !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  /* --- ລາຍການຊັ້ນ 0 (ເມນູໃຫຍ່) --- */
+  .navbar > ul > li {
+    border-bottom: 1px solid #eef2f8;
+    margin: 0 !important;
+  }
+  .navbar > ul > li:last-child {
+    border-bottom: none;
+  }
+  .navbar > ul > li > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    width: 100%;
+    padding: 14px 20px !important;
+    font-family: "Phetsarath OT", sans-serif;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #084298 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  /* --- ບັງຄັບໃຫ້ span ພາຍໃນ link ສະແດງຊັດເຈນ (ແກ້ບັນຫາ 4 ເມນູໃຫຍ່ຫາຍ) --- */
+  .navbar > ul > li > a > span,
+  .navbar > ul > li > ul > li > a > span,
+  .navbar > ul > li > ul > li > ul > li > a > span {
+    color: inherit !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font: inherit !important;
+    font-family: "Phetsarath OT", sans-serif !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-indent: 0 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+  .navbar > ul > li > a:hover,
+  .navbar > ul > li > a.active {
+    background: linear-gradient(to right, #2f9ef3, #084298) !important;
+    color: #ffffff !important;
+  }
+  .navbar > ul > li > a:hover span,
+  .navbar > ul > li > a:hover i,
+  .navbar > ul > li > a.active span,
+  .navbar > ul > li > a.active i {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* --- ເຊື່ອງ dropdown ຍ່ອຍເປັນຄ່າເລີ່ມຕົ້ນ --- */
+  .navbar .dropdown ul,
+  .navbar .dropdown .dropdown ul,
+  .navbar .dropdown .dropdown .dropdown ul {
+    display: none !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* --- ເປີດ dropdown ເມື່ອມີ class .dropdown-active --- */
+  .navbar .dropdown ul.dropdown-active,
+  .navbar .dropdown .dropdown ul.dropdown-active,
+  .navbar .dropdown .dropdown .dropdown ul.dropdown-active {
+    display: block !important;
+  }
+
+  /* --- ຊັ້ນ 1 (dropdown ແຖວທຳອິດ) --- */
+  .navbar > ul > li > ul {
+    background-color: #f3f7fc !important;
+    border-top: 1px solid #dfe9f4;
+  }
+  .navbar > ul > li > ul > li {
+    margin: 0 !important;
+    border-bottom: 1px solid #e5ecf5;
+  }
+  .navbar > ul > li > ul > li:last-child {
+    border-bottom: none;
+  }
+  .navbar > ul > li > ul > li > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    width: 100%;
+    padding: 11px 20px 11px 36px !important;
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+    color: #0a3b7c !important;
+    white-space: normal !important;
+    position: relative;
+  }
+  .navbar > ul > li > ul > li > a::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #2f9ef3;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+  }
+  .navbar > ul > li > ul > li > a:hover {
+    background-color: #e1ecf8 !important;
+    color: #084298 !important;
+  }
+
+  /* --- ຊັ້ນ 2 (dropdown ຍ່ອຍຕໍ່ໄປ) --- */
+  .navbar > ul > li > ul > li > ul {
+    background-color: #e9f0f9 !important;
+    border-top: 1px dashed #c6d4e8;
+  }
+  .navbar > ul > li > ul > li > ul > li {
+    margin: 0 !important;
+    border-bottom: 1px dashed #d4ddeb;
+  }
+  .navbar > ul > li > ul > li > ul > li:last-child {
+    border-bottom: none;
+  }
+  .navbar > ul > li > ul > li > ul > li > a {
+    display: flex !important;
+    align-items: center !important;
+    width: 100%;
+    padding: 9px 20px 9px 56px !important;
+    font-size: 13.5px !important;
+    font-weight: 400 !important;
+    color: #1a4586 !important;
+    position: relative;
+  }
+  .navbar > ul > li > ul > li > ul > li > a::before {
+    content: "\2013"; /* ขีด en-dash */
+    position: absolute;
+    left: 42px;
+    color: #6690c4;
+  }
+  .navbar > ul > li > ul > li > ul > li > a:hover {
+    background-color: #d6e4f4 !important;
+    color: #084298 !important;
+  }
+
+  /* --- ໄອຄອນລູກສອນ dropdown (push to right) --- */
+  .navbar .dropdown > a .dropdown-indicator {
+    font-size: 12px !important;
+    margin-left: auto !important;
+    padding-left: 10px !important;
+    color: inherit !important;
+    transition: transform 0.25s ease;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* --- ປຸ່ມ EN (ພິເສດ: ເຮັດໃຫ້ເຫັນຊັດເຈນໃນ hamburger mobile) --- */
+  .navbar > ul > li:has(> ul > li > a[href="EN"]),
+  .navbar > ul > li:has(> ul > li > a[href="../EN"]) {
+    background-color: #084298 !important;
+    border-bottom: none !important;
+    padding: 6px 16px !important;
+  }
+  .navbar > ul > li > ul:has(> li > a[href="EN"]),
+  .navbar > ul > li > ul:has(> li > a[href="../EN"]) {
+    background: transparent !important;
+    border-top: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 6px 0 !important;
+  }
+  .navbar > ul > li > ul > li:has(> a[href="EN"]),
+  .navbar > ul > li > ul > li:has(> a[href="../EN"]) {
+    border-bottom: none !important;
+    list-style: none !important;
+  }
+  .navbar ul li a[href="EN"],
+  .navbar ul li a[href="../EN"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 6px !important;
+    height: auto !important;
+    padding: 8px 28px !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+  }
+  .navbar ul li a[href="EN"]::before,
+  .navbar ul li a[href="../EN"]::before {
+    display: none !important;
+  }
+  .navbar ul li a[href="EN"] span,
+  .navbar ul li a[href="../EN"] span {
+    color: #ffffff !important;
+    margin-left: 0 !important;
+    font-weight: 700 !important;
+  }
+  .navbar ul li a[href="EN"]:hover,
+  .navbar ul li a[href="../EN"]:hover {
+    background-color: #ffffff !important;
+    color: #084298 !important;
+  }
+  .navbar ul li a[href="EN"]:hover span,
+  .navbar ul li a[href="../EN"]:hover span {
+    color: #084298 !important;
+  }
+
+  /* --- ຊ່ອງຄົ້ນຫາໃນ hamburger --- */
+  .navbar .search-container {
+    padding: 12px 16px !important;
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  /* ໄອຄອນຄົ້ນຫາ: ສະແດງເປັນປຸ່ມກວ້າງເຕັມແຖວ */
+  .navbar .search-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px;
+    width: 100% !important;
+    background: #f3f7fc !important;
+    border: 1px solid #dfe9f4 !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    color: #084298 !important;
+    font-size: 18px !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .navbar .search-icon:hover {
+    background: #e1ecf8 !important;
+  }
+  .navbar .search-icon i {
+    color: #084298 !important;
+    font-size: 18px !important;
+  }
+
+  /* ເມື່ອ search-box ມີ class .show → ເຊື່ອງໄອຄອນ, ສະແດງ box ແທນ */
+  .navbar .search-container:has(.search-box.show) .search-icon {
+    display: none !important;
+  }
+
+  /* form container */
+  .navbar .search-container form {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* ຊ່ອງຄົ້ນຫາໃນ mobile: ສະແດງເຕັມແຖວ ບໍ່ໃຊ້ absolute */
+  .navbar .search-box {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    right: auto !important;
+    top: auto !important;
+    opacity: 0 !important;
+    display: none !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    padding: 6px 8px !important;
+    border: 2px solid #084298 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(8,66,152,0.12) !important;
+    overflow: visible !important;
+  }
+  .navbar .search-box.show {
+    display: flex !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    right: auto !important;
+  }
+  .navbar .search-box i {
+    position: static !important;
+    left: auto !important;
+    color: #084298 !important;
+    margin-right: 8px !important;
+    font-size: 16px !important;
+    flex-shrink: 0;
+  }
+  .navbar .search-box input {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    padding: 6px 0 !important;
+    font-size: 14px !important;
+    font-family: "Phetsarath OT", sans-serif !important;
+    color: #084298 !important;
+    background: transparent !important;
+  }
+  .navbar .search-box button {
+    background: #084298 !important;
+    color: #ffffff !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-family: "Phetsarath OT", sans-serif !important;
+    flex-shrink: 0 !important;
+    margin-left: 6px !important;
+  }
+  .navbar .search-box button:hover {
+    background: #0a3b7c !important;
+  }
+
+  /* --- ກວ້າງເຕັມຂອງກອບເມນູມືຖື --- */
+  .mobile-nav-active .navbar > ul {
+    inset: 70px 15px 15px 15px !important;
+    max-height: calc(100vh - 85px) !important;
+    overflow-y: auto !important;
+    width: auto !important;
+    left: 15px !important;
+    right: 15px !important;
+  }
+
+  /* --- ລ້າງ inline margin-left/margin-right ຂອງ nav
+         (ບາງໜ້າໃຊ້ sub_menu() ທີ່ໃສ່ margin-left: 9%)
+         ເພື່ອບໍ່ໃຫ້ເມນູຖືກດັນອອກທາງຂວາຂອງຈໍ --- */
+  nav#navbar.navbar,
+  .mobile-nav-active nav#navbar.navbar {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* --- ຫຼຸດຂະໜາດ font ພາຍໃນ dropdown ຍ່ອຍ ເພື່ອບໍ່ໃຫ້ບໍລິຈອດຂໍ້ຄວາມລ້ນ --- */
+  .navbar > ul > li > ul > li > ul > li > a {
+    font-size: 13px !important;
+    padding-left: 48px !important;
+    padding-right: 16px !important;
+  }
+}
+
+</style>
+
+     <style>
+        /* Container ຂອງຊ່ອງຄົ້ນຫາ */
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* ປຸ່ມໄອຕອນຄົ້ນຫາເລີ່ມຕົ້ນ */
+        .search-icon {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        /* ຊ່ອງຄົ້ນຫາທີ່ຂະຫຍາຍອອກໄປທາງຊ້າຍ */
+        .search-box {
+            width: 0;
+            opacity: 0;
+            transition: width 0.3s ease, opacity 0.3s ease;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* ຊ່ອງ input */
+        .search-box input {
+            width: 180px;
+            border: none;
+            outline: none;
+            padding-left: 30px;
+        }
+
+        /* ໄອຄອນທີ່ຢູ່ພາຍໃນຊ່ອງຄົ້ນຫາ */
+        .search-box i {
+            position: absolute;
+            left: 10px;
+            color: gray;
+        }
+
+        /* ປຸ່ມຄົ້ນຫາ */
+        .search-box button {
+            border: none;
+            background: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        /* ເມື່ອເປີດຊ່ອງຄົ້ນຫາ */
+        .search-box.show {
+            width: 250px;
+            opacity: 1;
+            right: -220px;
+        }
+    </style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchIcon = document.getElementById("search-icon");
+        const searchBox = document.getElementById("search-box");
+        const searchInput = document.getElementById("search-input");
+        const searchBtn = document.getElementById("search-btn");
+
+        // ເມື່ອກົດໄອຄອນໃຫ້ຂະຫຍາຍອອກໄປທາງຊ້າຍຂອງຈໍ
+        searchIcon.addEventListener("click", function (event) {
+            event.stopPropagation(); // ປ້ອງກັນການເຊື່ອງເມື່ອກົດໄອຄອນ
+            searchBox.classList.toggle("show");
+            if (searchBox.classList.contains("show")) {
+                searchInput.focus(); // ໃຫ້ເນັ້ນໜັກໄປທີ່ໍຊ່ອງຄົ້ນຫາ
+            }
+        });
+
+        // ຖ້າກົດບ່ອນອື່ນ ໃຫ້ເຊື່ອງປ່ອງຄົ້ນຫາ
+        document.addEventListener("click", function (event) {
+            if (!searchBox.contains(event.target) && event.target !== searchIcon) {
+                searchBox.classList.remove("show");
+            }
+        });
+
+        // ເມື່ອກົດຄົ້ນຫາ
+//        searchBtn.addEventListener("click", function () {
+//            alert("คุณค้นหา: " + searchInput.value);
+//        });
+    });
+</script>
+
+<!-- ===== Mobile dropdown toggle (ເປີດ/ປິດ sub-menu ຕອນຢູ່ໃນມືຖື ຫຼື ຂະຫຍາຍຫຼາຍ) ===== -->
+<script>
+(function () {
+  // ໃຊ້ event delegation ໃນ capture phase ເພື່ອບໍ່ໃຫ້ຂັດແຍ່ງກັບ handler ອື່ນ
+  document.addEventListener('click', function (e) {
+    // ເຮັດວຽກສະເພາະເມື່ອເມນູມືຖືເປີດ (body ມີ class .mobile-nav-active)
+    if (!document.body.classList.contains('mobile-nav-active')) return;
+
+    // ຊອກຫາ link ທີ່ເປັນ dropdown parent
+    var link = e.target.closest('.navbar li.dropdown > a');
+    if (!link) return;
+
+    // ຊອກຫາ sibling ul
+    var sub = link.nextElementSibling;
+    if (!sub || sub.tagName !== 'UL') return;
+
+    // ຢຸດການໄປຕາມ link + ຢຸດ event ບໍ່ໃຫ້ໄປຕໍ່ (ປ້ອງກັນ main_slide_show.js ຕີກັນ)
+    e.preventDefault();
+    e.stopPropagation();
+
+    // ເປີດ/ປິດ
+    sub.classList.toggle('dropdown-active');
+    link.classList.toggle('active');
+
+    // ສະຫຼັບໄອຄອນລູກສອນ
+    var ind = link.querySelector('.dropdown-indicator');
+    if (ind) {
+      if (ind.classList.contains('bi-chevron-down')) {
+        ind.classList.remove('bi-chevron-down');
+        ind.classList.add('bi-chevron-up');
+      } else if (ind.classList.contains('bi-chevron-up')) {
+        ind.classList.remove('bi-chevron-up');
+        ind.classList.add('bi-chevron-down');
+      } else if (ind.classList.contains('bi-chevron-right')) {
+        ind.classList.remove('bi-chevron-right');
+        ind.classList.add('bi-chevron-down');
+      }
+    }
+  }, true); // capture = true
+})();
+</script>
+
+         <nav id="navbar" class="navbar" style="margin-left: 9%;">
+        <ul>
+          <li style="margin-right: 20px;"><a href="../index.php" style="padding: 10px 2px 10px 2px;">ໜ້າຫຼັກ</a></li>
+		  <li class="dropdown"><a href="../about_LSC/index.php" style="padding: 10px 2px 10px 2px;"><span>ກ່ຽວກັບ ຄຄຊ</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                  <li><a href="../about_LSC/index.php">ປະຫວັດຄວາມເປັນມາ</a></li>
+                  <li class="dropdown"><a href="../about_LSC/lsc.php">ຄຄຊ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+				  	<ul>
+				  		<li><a href="../about_LSC/lsc.php">ຄຄຊ</a></li>
+				  		<li><a href="../about_LSC/lsco.php">ສຳນັກງານ ຄຄຊ</a></li>
+				  	</ul>
+                  <li><a href="../about_LSC/contact.php">ຕິດຕໍ່ພວກເຮົາ</a></li>
+				  </li>
+              </ul>
+          </li>
+		  <li class="dropdown"><a href="../legislation/laws.php" style="padding: 10px 2px 10px 2px;"><span>ນິຕິກໍາ</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                  <li class="dropdown"><a href="../legislation/laws.php">ນິຕິກໍາທີ່ຖືກຮັບຮອງ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+				    <ul>
+						<li><a href="../legislation/laws.php?page=1">ກົດໝາຍ</a></li>
+						<li><a href="../legislation/resolutions.php?page=1">ມະຕິຄະນະປະຈຳສະພາແຫ່ງຊາດ <!--<span>(1)</span>--></a></li>
+						<li><a href="../legislation/ordinance.php?page=1">ລັດຖະບັນຍັດ</a></li>
+						<li><a href="../legislation/decree.php?page=1">ດໍາລັດ</a></li>
+						<li><a href="../legislation/order.php?page=1">ຄຳສັ່ງ</a></li>
+						<li><a href="../legislation/agreement.php?page=1">ຂໍ້ຕົກລົງ</a></li>
+						<li><a href="../legislation/guideline.php?page=1">ຄໍາແນະນໍາ</a></li>
+						<li><a href="../legislation/notification.php?page=1">ແຈ້ງການ</a></li>
+						<li><a href="../legislation/regulation.php?page=1">ລະບຽບ</a></li>
+				    </ul>
+				  </li>
+<!--                  <li><a href="../legislation/proposed_to_lsc.php?page=1">ຮ່າງລະບຽບການທີ່ຈະນໍາສະເໜີຕໍ່ ຄຄຊ</a></li>-->
+<!--
+                  <li><a href="../legislation/regulation_plan.php?page=1"> ແຜນລະບຽບການທີ່ຈະສ້າງ</a></li>
+				  <li><a href="../legislation/regulation_drafting.php?page=1"> ນິຕິກຳກຳລັງຮ່າງ</a></li>
+-->
+              </ul>
+          </li>
+          <li class="dropdown"><a href="../issuance/index.php" style="padding: 10px 2px 10px 2px;"><span>ການສະເໜີຂາຍຫຼັກຊັບ</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+		    <ul>
+             <li><a href="../issuance/index.php">ພາບລວມການອອກຈໍາໜ່າຍຫຼັກຊັບ</a></li>
+              <li class="dropdown"><a href="../issuance/ipo.php">ເງື່ອນໄຂການອອກຈໍາໜ່າຍຫຼັກຊັບ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+					<ul>
+				    	<li><a href="../issuance/ipo.php">ການອອກຈໍາໜ່າຍຮຸ້ນຕໍ່ມວນຊົນ</a></li>
+				    	<li><a href="../issuance/pp.php">ການອອກຈໍາໜ່າຍຮຸ້ນໃນວົງຈໍາກັດ</a></li>
+				    	<li><a href="../issuance/ro.php">ການອອກຈໍາໜ່າຍຮຸ້ນໃຫ້ແກ່ຜູ່ຖືຮຸ້ນເດີມ</a></li>
+				    </ul>
+			  </li>
+				
+              <li class="dropdown"><a href="../issuance/report_and_disclosure.php">ໜ້າທີ່ພາຍຫຼັງການອອກຈໍາໜ່າຍຫຼັໍກຊັບ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+					<ul>
+				    	<li><a href="../issuance/report_and_disclosure.php">ການລາຍງານ ແລະ ການເປີດເຜີຍຂໍ້ມູນ</a></li>
+<!--				    	<li><a href="../issuance/holder_meeting.php">ການຈັດກອງປະຊຸມຜູ່ຖືຮຸ້ນ</a></li>-->
+				    </ul>
+			  </li>
+              <li><a href="../issuance/issuer_info.php">ຂໍ້ມູນຂອງບໍລິສັດອອກຈໍາໜ່າຍຫຼັກຊັບ</a></li>
+              <li><a href="../issuance/all_forms.php">ຮ່າງແບບຟອມທີ່ກ່ຽວຂ້ອງ</a></li>
+			<li><a href="../issuance/Corporate_Governance.php">ການຄຸ້ມຄອງບໍລິຫານ (Corporate Governance)</a></li>
+			<li><a href="../issuance/sme_board.php">ຂໍ້ມູນກ່ຽວກັບກະດານຮອງ</a></li>
+              
+            </ul>
+		  </li>
+          <li class="dropdown"><a href="../securities/index.php" style="padding: 10px 2px 10px 2px;"><span>ສະຖາບັນສື່ກາງດ້ານຫຼັກຊັບ</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li class="dropdown"><a href="../securities/index.php">ບໍລິສັດຫຼັກຊັບ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+				<ul>
+				  <li><a href="../securities/index.php">ບໍລິສັດຫຼັກຊັບ</a></li>  
+					<li><a href="../securities/securities_companies_condition.php">ເງື່ອນໄຂການສ້າງຕັ້ງບໍລິສັດຫຼັກຊັບ</a></li>  
+					<li><a href="../securities/estabishment_docs.php">ເອກະສານປະກອບການຂໍສ້າງຕັ້ງບໍລິສັດຫຼັກຊັບ</a></li>  
+				  <li><a href="../securities/securities_duties.php">ພັນທະທີ່ຈະຕ້ອງປະຕິບັດພາຍຫຼັງການສ້າງຕັ້ງບໍລິສັດຫຼັກຊັບ</a></li>  
+				  <li><a href="../securities/securities_firm_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດຫຼັກຊັບ</a></li>  
+				</ul>
+			  </li>
+              <li class="dropdown"><a href="../securities/securities_professor.php">ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+			    <ul>
+				  <!--<li><a href="securities/securities_professor.php">ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</a></li>-->
+				  <li><a href="../securities/listofsecuritiesprofessional.php">ລາຍຊື່ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</a></li>
+				</ul>
+			  </li>
+              <li class="dropdown"><a href="../securities/accounting.php">ບໍລິສັດກວດສອບ ແລະ ນັກກວດສອບ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+				<ul>
+				<!--  <li><a href="../securities/accounting.php">ວິສາຫະກິດບັນຊີ ແລະ ນັກຊ່ຽວຊານບັນຊີ</a></li>-->
+					 <li><a href="../securities/approved_company.php">ບໍລິສັດກວດສອບທີ່ຖືກຮັບຮອງ</a></li>
+					 <li><a href="../securities/auditfirm_condition.php">ເງື່ອນໄຂການຮັບຮອງບໍລິສັດກວດສອບ</a></li>
+				  <li><a href="../securities/audit.php">ວິສາຫະກິດກວດສອບ ແລະ ນັກກວດສອບ</a></li>
+				 <li><a href="../securities/auditfirm_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+				 <li><a href="../securities/auditfirm_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດກວດສອບ</a></li>
+				</ul>
+			  </li>
+              <li class="dropdown"><a href="securities/custodian_bank.php">ທະນາຄານດູແລຊັບສິນ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+				<ul>
+				  <li><a href="../securities/custodian_bank.php">ທະນາຄານດູແລຊັບສິນ</a></li>
+				  <li><a href="../securities/custodian_bank_condition.php">ເງື່ອນໄຂການຂໍອະນຸຍາດເປັນທະນາຄານດູແລຊັບສິນ</a></li>
+				  <li><a href="../securities/custodian_bank_documents.php">ເອກະສານປະກອບການຂໍອະນຸຍາດເປັນທະນາຄານດູແລຊັບສິນ</a></li>
+                  <li><a href="../securities/custodian_bank_duties.php">ພັນທະທີ່ຈະຕ້ອງປະຕິບັດພາຍຫຼັງໄດ້ຮັບອະນຸຍາດເປັນທະນາຄານດູແລຊັບສິນ</a></li>
+                  <li><a href="../securities/custodian_bank_prohibit.php">ຂໍ້ຫ້າມຂອງທະນາຄານດູແລຊັບສິນ</a></li>
+				</ul>
+			  </li>
+              <li class="dropdown"><a href="../securities/evaluation_company.php">ບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+              	<ul>
+					<li><a href="../securities/evaluation_company.php">ບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</a></li>
+              		<li><a href="../securities/evaluation_company_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="../securities/evaluation_company_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+              		<li><a href="../securities/evaluation_company_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</a></li>
+				</ul>
+              </li>
+			   <li class="dropdown"><a href="../securities/credit_rating_agency.php">ບໍລິສັດຈັດລຳດັບຄວາມໜ້າເຊື່ອຖື <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+              	<ul>
+					<li><a href="../securities/credit_rating_agency.php">ບໍລິສັດຈັດລໍາດັບຄວາມໜ້າເຊື່ອຖື</a></li>
+              		<li><a href="../securities/credit_rating_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="../securities/credit_rating_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+              		<li><a href="../securities/credit_rating_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</a></li>
+				</ul>
+              </li>
+			  <li class="dropdown"><a href="../securities/correspondent_banks.php">ທະນາຄານຕົວແທນເພື່ອການຊໍາລະ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+              	<ul>
+					<li><a href="../securities/correspondent_banks.php">ທະນາຄານຕົວແທນເພື່ອການຊໍາລະ</a></li>
+              		<li><a href="../securities/correspondent_banks_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="../securities/correspondent_banks_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+              		<li><a href="../securities/correspondent_banks_prihibit.php">ຂໍ້ຫ້າມຂອງທະນາຄານຕົວແທນເພື່ອການຊໍາລະ</a></li>
+				</ul>
+              </li>
+	 		<li class="dropdown"><a href="../securities/FMC.php">ບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+              	<ul>
+					<li><a href="../securities/FMC.php">ບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ</a></li>
+              		<li><a href="../securities/FMC_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="../securities/FMC_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງສ້າງຕັ້ງ</a></li>
+              		<li><a href="../securities/FMC_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ</a></li>
+				</ul>
+              </li>
+			<li class="dropdown"><a href="../securities/PE-VC_types.php">ກອງທຶນເພື່ອການລົງທຶນ <i class="bi bi-chevron-right dropdown-indicator"></i></a>
+              	<ul>
+					<li><a href="../securities/PE-VC_types.php">ປະເພດກອງທຶນເພື່ອການລົງທຶນ</a></li>
+              		<li><a href="../securities/PE-VC_condition.php">ເງື່ອນໄຂການສ້າງຕັ້ງ ແລະ ຂຶ້ນທະບຽນ</a></li>
+              		<li><a href="../securities/PE-VC_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງສ້າງຕັ້ງ</a></li>
+              		<li><a href="../securities/PE-VC_prohibit.php">ຂໍ້ຫ້າມ</a></li>
+              		<li><a href="../securities/PE-VC_statistic.php">ສະຖິຕິກອງທຶນເພື່ອການລົງທຶນ</a></li>
+				</ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="../inter_affair/index.php" style="padding: 10px 2px 10px 2px;">ການຮ່ວມມືສາກົນ <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+			<ul>
+			  <li><a href="../inter_affair/index.php">ການຮ່ວມມືສອງຝ່າຍ</a></li>  
+			  <li><a href="../inter_affair/region_cooperation.php">ການຮ່ວມມືພາກພື້ນ ແລະ ຫຼາຍຝ່າຍ</a></li>  
+			</ul>
+		  </li>
+          <li class="dropdown"><a href="../knowledge/index.php?page=1" style="padding: 10px;">ຄວາມຮູ້ຕະຫຼາດທຶນ <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+		  	<ul>
+				<li><a href="../knowledge/index.php?page=1">ສາລະຕະຫຼາດທຶນ</a></li>  
+				<li><a href="../knowledge/article.php?page=1">ບົດຄວາມ</a></li>  
+				<li><a href="../knowledge/book.php?page=1">ປຶ້ມທີ່ໜ້າສົນໃຈ</a></li>
+				<li><a href="../knowledge/shortvdo.php">ວີດີໂອສັ້ນ</a></li>  
+				<li><a href="../knowledge/infographic.php">infographic</a></li> 
+				<li><a href="../knowledge/trainings.php">ຕາຕະລາງຝຶກອົບຮົມປະຈຳປີ</a></li> 
+			</ul>
+		  </li>
+		  <li>
+			<ul>
+			<li><a href="../EN" style="color: #FFFFFF; border-left: solid; height: 25px;"><span style="margin-left: 5px;"> EN</span></a></li>
+			</ul>
+			
+		  </li>
+		<li>
+					<div class="search-container ms-auto">
+						<!-- ປຸ່ມໄອຄອນຄົ້ນຫາ -->
+						<button class="search-icon" id="search-icon">
+							<i class="bi bi-search"></i>
+						</button>
+
+						<!-- ຊ່ອງຄົ້ນຫາທີ່ຂະຫຍາຍອອກດ້ານຊ້າຍ ມີໄອຄອນ ແລະ ປຸ່ມຄົ້ນຫາ -->
+					<form action="../lsc_search.php" method="post">
+						<div class="search-box" id="search-box">
+							<i class="bi bi-search"></i>
+							<input type="text" name="keyword" class="form-control" id="search-input" placeholder="ພິມເພື່ອຄົ້ນຫາ...">
+							<button id="search-btn">ຄົ້ນຫາ</button>
+						</div>
+					</form>	
+				</div>
+			</li>
+        </ul>
+		<i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      	
+      <div class="position-relative" style="border-left: #fff; color: #FFFFFF;">
+        <!--<a href="#" class="mx-2" style="color: #FFFFFF; border-left: solid;"><span style="padding-left: 10px;"> English</span></a>-->
+       
+        <a href="#" class="mx-2"><!--<span class="bi-twitter"></span>--></a>
+        <a href="#" class="mx-2"><!--<span class="bi-instagram"></span>--></a>
+
+        <a href="#" class="mx-2 js-search-open"><!--<span class="bi-search"></span>--></a>
+<!--        <i class=\"bi bi-list mobile-nav-toggle\"></i>-->
+        <!-- ======= Search Form ======= 
+        <div class="search-form-wrap js-search-form-wrap">
+          <form action="search-result.html" class="search-form">
+            <span class="icon bi-search"></span>
+            <input type="text" placeholder="Search" class="form-control">
+            <button class="btn js-search-close"><span class="bi-x"></span></button>
+          </form>
+        </div><!-- End Search Form -->
+
+     </div><!-- End position-relative -->
+
+    </div>
+	
+	
+
+  </header><!-- End Header -->
+  <!--<div class="header d-flex align-items-center fixed-top" style="blue; height: 10%;margin-top: 4%;position: revert;background: #1a3664;"></div>-->	 
+	
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="#" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title" style="line-height: 1.7 ;margin-bottom: 2rem!important; border-bottom: 1px dotted #dedede;">
+				  ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ              </h2>
+
+
+              <div class="entry-content" style="font-size: 18px;">
+                <p>
+							<span style="display: block; word-break: break-word; overflow-wrap: break-word; max-width: 100%;"><ol style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; color: rgb(51, 51, 51);"><li style="margin: 0px; padding: 0px; list-style: none;"><strong style="margin: 0px; padding: 0px; list-style: none;">ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</strong></li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;ເອກະສານປະກອບການສະເໜີຂໍອະນຸຍາດເປັນນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</li><ol style="margin-right: 0px; margin-left: 0px; padding: 0px; list-style: none;"><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.1. ສໍານວນຄໍາຮ້ອງຕາມແບບພິມຂອງ ສໍານັກງານ ຄຄຊ;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.2. ໃບຢັ້ງຢືນທີ່ຢູ່;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.3. ສໍາເນົາບັດປະຈໍາຕົວ ຫຼື ສໍາເນົາໜັງສືຜ່ານແດນ;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.4. ໃບແຈ້ງໂທດບໍ່ໃຫ້ກາຍ ສາມ ເດືອນ;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.5. ຮູບຖ່າຍບໍ່ໃຫ້ກາຍສາມເດືອນ ຂະໜາດ 3 x 4 ຈໍານວນ ສາມໃບ;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.6. ສໍາເນົາໃບຢັ້ງຢືນການສອບເສັງຜ່ານຫຼັກສູດວິຊາຊີບທຸລະກິດຫຼັກຊັບ ແລະ ໃບຄະແນນ;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.7. ສັນຍາແຮງງານລະຫວ່າງບໍລິສັດຫຼັກຊັບ ແລະ ພະນັກງານທີ່ຕ້ອງການອອກໃບຢັ້ງຢືນວິຊາຊີບທຸລະກິດຫຼັກຊັບ;</li><li style="margin: 0px; padding: 0px; list-style: none;">&nbsp;&nbsp;3.8. ໃບຢັ້ງຢືນການສອບເສັງຜ່ານລະບຽບກົດໝາຍທີ່ກ່ຽວຂ້ອງ ຂອງ ສປປ ລາວ ສໍາລັບຄົນຕ່າງປະເທດ ທີ່ມີໃບຢັ້ງຢືນທຸລະກິດຫຼັກຊັບຈາກຕ່າງປະເທດ.</li><li></li></ol></ol></span>							<br><br><br>
+						</p>
+                <!--<div class="read-more">
+                  <a href="blog-single.html">Read More</a>
+                </div>--><br><br><br>
+
+              </div>
+			  <p>&nbsp;</p>
+            </article><!-- End blog entry -->
+
+            <!--<div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>-->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <style>
+	.sidebar-item.categories ul li a.active {
+    background-color: #007bff; /* เปลี่ยนสีเมนูย่อย */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sidebar-title.active {
+    background-color: #084298;
+    color: white !important;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+	.sidebar {
+/*    background: linear-gradient(to bottom, #e3f2fd, #ffffff);  ไล่สีฟ้าอ่อนลงมาขาว */
+    border-radius: 12px; /* มุมโค้งมน */
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้นุ่มขึ้น */
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    color: #003366; /* สีเข้มให้เด่นขึ้น */
+    border-bottom: 2px solid #007bff; /* เส้นคั่นเพิ่มความชัด */
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li i {
+    margin-right: 10px; /* ไอคอนเว้นระยะห่างจากข้อความ */
+/*    color: #007bff;  สีฟ้าสดใส */
+}
+
+.sidebar li:hover {
+/*    background: #d6e4f0;  เปลี่ยนสีเมื่อ hover */
+	background: #f1f1f1;
+    cursor: pointer;
+}
+	
+	
+	
+.sidebar-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-item ul li {
+  position: relative;
+}
+
+.sidebar-item ul li ul {
+  display: none; /* ซ่อนเมนูย่อยทั้งหมด */
+  padding-left: 20px;
+}
+
+.sidebar-title {
+  cursor: pointer;
+/*  background-color: #f1f1f1;*/
+  background-color: #FAFAFB;
+  padding: 10px;
+  border-radius: 5px;
+	
+}
+
+.sidebar-title.active {
+/*  background-color: #ddd;*/
+  background-color: #084298;
+  color: white !important;
+}
+</style>
+
+<div class="sidebar" style="border-top: thick;">
+
+              <h3 class="sidebar-title"><i class="bi bi-building"></i> &nbsp;ບໍລິສັດຫຼັກຊັບ</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="index.php">ບໍລິສັດຫຼັກຊັບ</a></li>
+                  <li><a href="securities_companies_condition.php">ເງື່ອນໄຂການສ້າງຕັ້ງບໍລິສັດຫຼັກຊັບ</a></li>
+                  <li><a href="estabishment_docs.php">ເອກະສານປະກອບການຂໍສ້າງຕັ້ງບໍລິສັດຫຼັກຊັບ</a></li>
+                  <li><a href="securities_duties.php">ພັນທະທີ່ຈະຕ້ອງປະຕິບັດພາຍຫຼັງການສ້າງຕັ້ງບໍລິສັດຫຼັກຊັບ</a></li>
+				  <li><a href="securities_firm_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດຫຼັກຊັບ</a></li>
+                </ul>
+              </div><!-- End sidebar categories-->
+              
+              <h3 class="sidebar-title"><i class="bi bi-people-fill"></i> &nbsp;ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  	<!--<li><a href="securities_professor.php">ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</a></li>-->
+					<li><a href="listofsecuritiesprofessional.php">ລາຍຊື່ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</a></li>
+                </ul>
+              </div><!-- End sidebar categories-->
+
+	
+              <h3 class="sidebar-title"><i class="bi bi-bank"></i> &nbsp;ບໍລິສັດກວດສອບ ແລະ ນັກກວດສອບ</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                	<li><a href="approved_company.php">ບໍລິສັດກວດສອບທີ່ຖືກຮັບຮອງ</a></li>
+					<li><a href="auditfirm_condition.php">ເງື່ອນໄຂການຮັບຮອງບໍລິສັດກວດສອບ</a></li>
+				  	<li><a href="audit.php">ວິສາຫະກິດກວດສອບ ແລະ ນັກກວດສອບ</a></li>
+				 	<li><a href="auditfirm_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+				 	<li><a href="auditfirm_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດກວດສອບ</a></li>
+                </ul>                 
+              </div><!-- End sidebar recent posts-->
+
+           	  <h3 class="sidebar-title"><i class="bi bi-bank2"></i> &nbsp;ທະນາຄານດູແລຊັບສິນ</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                	<li><a href="custodian_bank.php">ທະນາຄານດູແລຊັບສິນທີ່ຖືກຮັບຮອງ</a></li>
+                	<li><a href="custodian_bank_condition.php">ເງື່ອນໄຂການຂໍອະນຸຍາດເປັນທະນາຄານດູແລຊັບສິນ</a></li>
+                	<li><a href="custodian_bank_documents.php">ເອກະສານປະກອບການຂໍອະນຸຍາດເປັນທະນາຄານດູແລຊັບສິນ</a></li>
+                	<li><a href="custodian_bank_duties.php">ພັນທະທີ່ຈະຕ້ອງປະຕິບັດພາຍຫຼັງໄດ້ຮັບອະນຸຍາດເປັນທະນາຄານດູແລຊັບສິນ</a></li>
+					<li><a href="custodian_bank_prohibit.php">ຂໍ້ຫ້າມຂອງທະນາຄານດູແລຊັບສິນ</a></li>
+                </ul>                 
+              </div><!-- End sidebar recent posts-->
+              
+           	  <h3 class="sidebar-title"><i class="bi bi-bank"></i> &nbsp;ບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                	<li><a href="evaluation_company.php">ບໍລິສັດປະເມີນມູນຄ່າຊັບສິນທີ່ຖືກຮັບຮອງ</a></li>
+                	<li><a href="evaluation_company_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="evaluation_company_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+					<li><a href="evaluation_company_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</a></li>
+                </ul>                 
+              </div><!-- End sidebar recent posts-->    
+              
+           	  <h3 class="sidebar-title"><i class="bi bi-bank2"></i> &nbsp;ບໍລິສັດຈັດລໍາດັບຄວາມໜ້າເຊື່ອຖື</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                	<li><a href="credit_rating_agency.php">ບໍລິສັດຈັດລໍາດັບຄວາມໜ້າເຊື່ອຖື</a></li>
+              		<li><a href="credit_rating_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="credit_rating_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+					<li><a href="credit_rating_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</a></li>
+                </ul>        
+			  </div> 
+
+			  <h3 class="sidebar-title"><i class="bi bi-building"></i> &nbsp;ທະນາຄານຕົວແທນເພື່ອການຊໍາລະ</h3>
+              	<div class="sidebar-item categories">
+				  <ul>
+					<li><a href="correspondent_banks.php">ທະນາຄານຕົວແທນເພື່ອການຊໍາລະ</a></li>
+              		<li><a href="correspondent_banks_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="correspondent_banks_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງການຮັບຮອງ</a></li>
+					<li><a href="correspondent_banks_prihibit.php">ຂໍ້ຫ້າມຂອງທະນາຄານຕົວແທນເພື່ອການຊໍາລະ</a></li>
+				</ul>
+				</div>
+              
+			<h3 class="sidebar-title"><i class="bi bi-bank"></i> &nbsp;ບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ</h3>
+	 		<div class="sidebar-item categories">
+              	<ul>
+					<li><a href="FMC.php">ບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ</a></li>
+              		<li><a href="FMC_condition.php">ເງື່ອນໄຂການຮັບຮອງ</a></li>
+              		<li><a href="FMC_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງສ້າງຕັ້ງ</a></li>
+					<li><a href="FMC_prohibit.php">ຂໍ້ຫ້າມຂອງບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ</a></li>
+				</ul>
+			</div>
+          
+			<h3 class="sidebar-title"><i class="bi bi-cash-stack"></i> &nbsp;ກອງທຶນເພື່ອການລົງທຶນ </h3>
+	 		<div class="sidebar-item categories">
+              	<ul>
+					<li><a href="PE-VC_types.php">ປະເພດກອງທຶນເພື່ອການລົງທຶນ</a></li>
+              		<li><a href="PE-VC_condition.php">ເງື່ອນໄຂການສ້າງຕັ້ງ ແລະ ຂຶ້ນທະບຽນ</a></li>
+              		<li><a href="PE-VC_duties.php">ພັນທະທີ່ຕ້ອງປະຕິບັດພາຍຫຼັງສ້າງຕັ້ງ</a></li>
+              		<li><a href="PE-VC_prohibit.php">ຂໍ້ຫ້າມ</a></li>
+              		<li><a href="PE-VC_statistic.php">ສະຖິຕິກອງທຶນເພື່ອການລົງທຶນ</a></li>
+				</ul>
+			</div>	  
+
+				  
+				  
+				  
+				  
+				  
+              </div><!-- End sidebar recent posts-->            
+            </div><!-- End sidebar -->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let menuTitles = document.querySelectorAll(".sidebar-title");
+  let menuItems = document.querySelectorAll(".sidebar-item ul");
+
+  // ซ่อนเมนูทั้งหมดก่อน
+  menuItems.forEach(menu => {
+    menu.style.display = "none";
+  });
+
+  // ตรวจสอบให้เมนูที่ใช้งานอยู่เปิดอัตโนมัติ
+  let activeMenu = window.location.pathname.split('/').pop(); // ใช้ URL เพื่อหาชื่อไฟล์
+  menuTitles.forEach(title => {
+    let menuLink = title.nextElementSibling.querySelector("ul");
+    if (menuLink) {
+      let links = menuLink.querySelectorAll('a');
+      links.forEach(link => {
+        if (link.getAttribute('href') === activeMenu) {
+          title.classList.add("active");
+          menuLink.style.display = "block";
+        }
+      });
+    }
+  });
+
+  // คลิกเพื่อเปิด/ปิดเมนู
+  menuTitles.forEach(title => {
+    title.addEventListener("click", function() {
+      // ปิดเมนูอื่น
+      menuTitles.forEach(t => {
+        if (t !== this) {
+          t.classList.remove("active");
+          let otherMenu = t.nextElementSibling.querySelector("ul");
+          if (otherMenu) {
+            otherMenu.style.display = "none";
+          }
+        }
+      });
+      // เปิดเมนูที่ถูกคลิก
+      this.classList.toggle("active");
+      let menu = this.nextElementSibling.querySelector("ul");
+      if (menu) {
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    });
+  });
+});
+
+
+</script>
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  	<footer id="footer" class="footer">
+
+    <div class="footer-content">
+      <div class="container">
+
+        <div class="row g-5">
+          <div class="col-lg-3">
+            <h3 class="footer-heading">ກ່ຽວກັບ ຄຄຊ</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a class="footer-color" href="../about_LSC/index.php"><i class="bi bi-chevron-right"></i> ປະຫວັດຄວາມເປັນມາ</a></li>
+              <li><a class="footer-color" href="../about_LSC/lsc.php"><i class="bi bi-chevron-right"></i> ຄຄຊ</a></li>
+              <li><a class="footer-color" href="../about_LSC/contact.php"><i class="bi bi-chevron-right"></i> ຕິດຕໍ່ພວກເຮົາ</a></li>
+            </ul><br>
+			<h3 class="footer-heading">ນິຕິກໍາ</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a class="footer-color" href="legislation/laws.php"><i class="bi bi-chevron-right"></i> ນິຕິກໍາທີ່ຖືກຮັບຮອງ</a></li>
+<!--
+              <li><a class="footer-color" href="index.html"><i class="bi bi-chevron-right"></i> ຮ່າງລະບຽບການທີ່ຈະນໍາສະເໜີຕໍ່ ຄຄຊ</a></li>
+              <li><a class="footer-color" href="category.html"><i class="bi bi-chevron-right"></i>  ແຜນລະບຽບການທີ່ຈະສ້າງ</a></li>
+-->
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h3 class="footer-heading">ການສະເໜີຂາຍຫຼັກຊັບ</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a class="footer-color" href="../issuance/index.php"><i class="bi bi-chevron-right"></i> ພາບລວມການອອກຈໍາໜ່າຍຫຼັກຊັບ</a></li>
+              <li><a class="footer-color" href="../issuance/ipo.php"><i class="bi bi-chevron-right"></i> ເງື່ອນໄຂການອອກຈໍາໜ່າຍຫຼັກຊັບ</a></li>
+              <li><a class="footer-color" href="../issuance/report_and_disclosure.php"><i class="bi bi-chevron-right"></i> ໜ້າທີ່ພາຍຫຼັງການອອກຈໍາໜ່າຍຫຼັໍກຊັບ</a></li>
+              <li><a class="footer-color" href="../issuance/issuer_info.php"><i class="bi bi-chevron-right"></i> ຂໍ້ມູນຂອງບໍລິສັດອອກຈໍາໜ່າຍຫຼັກຊັບ</a></li>
+              <li><a class="footer-color" href="../issuance/all_forms.php"><i class="bi bi-chevron-right"></i> ຮ່າງແບບຟອມທີ່ກ່ຽວຂ້ອງ</a></li>
+              <li><a class="footer-color" href="../issuance/Corporate_Governance.php"><i class="bi bi-chevron-right"></i> ການຄຸ້ມຄອງບໍລິຫານ</a></li>
+              <li><a class="footer-color" href="../issuance/sme_board.php"><i class="bi bi-chevron-right"></i> ຂໍ້ມູນກ່ຽວກັບກະດານຮອງ</a></li>
+            </ul>
+          </div>
+		  <div class="col-6 col-lg-3">
+            <h3 class="footer-heading">ສະຖາບັນສື່ກາງດ້ານຫຼັກຊັບ</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a class="footer-color" href="../securities/index.php"><i class="bi bi-chevron-right"></i> ບໍລິສັດຫຼັກຊັບ</a></li>
+              <li><a class="footer-color" href="../securities/listofsecuritiesprofessional.php"><i class="bi bi-chevron-right"></i> ນັກວິຊາຊີບທຸລະກິດຫຼັກຊັບ</a></li>
+              <li><a class="footer-color" href="../securities/approved_company.php"><i class="bi bi-chevron-right"></i> ວິສາຫະກິດບັນຊີ ແລະ ນັກຊ່ຽວຊານບັນຊີ</a></li>
+              <li><a class="footer-color" href="../securities/custodian_bank.php"><i class="bi bi-chevron-right"></i> ທະນາຄານດູແລຊັບສິນ</a></li>
+              <li><a class="footer-color" href="../securities/evaluation_company.php"><i class="bi bi-chevron-right"></i> ບໍລິສັດປະເມີນມູນຄ່າຊັບສິນ</a></li>
+              <li><a class="footer-color" href="../securities/index.php"><i class="bi bi-chevron-right"></i> ບໍລິສັດຈັດລໍາດັບຄວາມໜ້າເຊື່ອຖື</a></li>
+              <li><a class="footer-color" href="../securities/correspondent_banks.php"><i class="bi bi-chevron-right"></i> ທະນາຄານຕົວແທນເພື່ອການຊໍາລະ</a></li>
+              <li><a class="footer-color" href="../securities/FMC.php"><i class="bi bi-chevron-right"></i> ບໍລິສັດບໍລິຫານກອງທຶນເພື່ອການລົງທຶນ</a></li>
+              <li><a class="footer-color" href="../securities/PE-VC_types.php"><i class="bi bi-chevron-right"></i> ກອງທຶນເພື່ອການລົງທຶນ</a></li>
+            </ul>
+          </div>
+		  <div class="col-6 col-lg-3">
+            <h3 class="footer-heading">ການຮ່ວມມືສາກົນ</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a class="footer-color" href="../inter_affair/index.php"><i class="bi bi-chevron-right"></i> ການຮ່ວມມືສອງຝ່າຍ </a></li>
+              <li><a class="footer-color" href="../inter_affair/region_cooperation.php"><i class="bi bi-chevron-right"></i> ການຮ່ວມມືພາກພື້ນ ແລະ ຫຼາຍຝ່າຍ</a></li>
+            </ul><br>
+			<h3 class="footer-heading">ຄວາມຮູ້ຕະຫຼາດທຶນ</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a class="footer-color" href="../knowledge/index.php?page=1"><i class="bi bi-chevron-right"></i> ສາລະຕະຫຼາດທຶນ</a></li>
+              <li><a class="footer-color" href="../knowledge/article.php?page=1"><i class="bi bi-chevron-right"></i> ບົດຄວາມ</a></li>
+              <li><a class="footer-color" href="../knowledge/books.php?page=1"><i class="bi bi-chevron-right"></i> ປຶ້ມທີ່ໜ້າສົນໃຈ</a></li>
+              <li><a class="footer-color" href="../knowledge/shortvdo.php?page=1"><i class="bi bi-chevron-right"></i> ວີດີໂອສັ້ນ-infographic</a></li>
+              <li><a class="footer-color" href="../knowledge/trainings.php"><i class="bi bi-chevron-right"></i> ຕາຕະລາງຝຶກອົບຮົມໂຄສະນາປະຈຳປີ</a></li>
+			  </ul>
+			  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal" style="background-color: #103773;">
+      <div class="container">
+
+        <div class="row justify-content-between">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <div class="copyright">
+              <h5><strong><span>ຄະນະກຳມະການຄຸ້ມຄອງຫຼັກຊັບ</span></strong></h5>
+            </div>
+			<div class="contact">
+              <h6><span>ບ້ານໂພນສະອາດ, ເມືອງໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ</span></h6>
+              <h6><span>ໂທລະສັບ: (856-21) 217770, ໂທລະພິມ: (856-21) 217806, ສາຍດ່ວນ: 1602</span></h6>
+              <h6><span>ເວັບໄຊ: www.lsc.gov.la, ອີເມວ໌: lsco@lsc2.gov.la</span></h6>
+				
+            </div>
+            <!--<div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+             <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>-->	
+
+          </div>
+
+          <div class="col-md-6">
+            <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-youtube"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main_slide_show.js"></script>
+
+</body>
+
+</html>

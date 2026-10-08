@@ -1,0 +1,1157 @@
+  
+  
+  
+  
+    
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="Shift_JIS">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>パスキー認証（FIDO2） | ＳＭＢＣ日興証券</title>
+<meta name="description" content="「日興イージートレード」や「ＳＭＢＣ日興証券アプリ」へのログイン時にパスキーをご利用いただくことで、より安全・便利にお使いいただけます。">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="article">
+<meta property="og:title" content="パスキー認証（FIDO2） | ＳＭＢＣ日興証券">
+<meta property="og:description" content="「日興イージートレード」や「ＳＭＢＣ日興証券アプリ」へのログイン時にパスキーをご利用いただくことで、より安全・便利にお使いいただけます。">
+<meta property="og:url" content="https://www.smbcnikko.co.jp/security/passkey.html">
+<meta property="og:image" content="https://www.smbcnikko.co.jp/app-files/img/symbol/ogp.png">
+<meta property="og:site_name" content="ＳＭＢＣ日興証券">
+<meta property="og:locale" content="ja_JP">
+<link rel="canonical" href="https://www.smbcnikko.co.jp/security/passkey.html">
+<link rel="shortcut icon" href="/app-files/img/symbol/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/app-files/img/symbol/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://www.smbcnikko.co.jp/",
+  "logo": "https://www.smbcnikko.co.jp/app-files/img/symbol/logo.png"
+}
+</script>
+<link rel="stylesheet" href="/app-files/css/app.css">
+<!--AA DTM Header Code-->
+<script src="//assets.adobedtm.com/f97357c389263f626fa51dfac4ac61c3154742e8/satelliteLib-a42864713ee6ed54ef54af381db76e4131a6e9a7.js"></script>
+<!--AA DTM Header Code-->
+<script language="JavaScript" src="/common/js/Rtoaster_ot.js" charset="SHIFT_JIS"></script></head>
+<body>
+<header id="header" class="Header">
+  <div class="Header__inner">
+    <div class="Header__guide">
+      <div class="header-guide-logo"><img src="/app-files/img/cmn_logo02.svg" alt="ＳＭＢＣ" width="73" height="21"></div>
+      <div class="header-guide-logo--group"><img src="/app-files/img/cmn_logo03.svg" alt="ＳＭＢＣグループ" width="80" height="11"></div>
+    </div>
+    <div class="Header__head">
+      <h1 class="header-logo"><a href="/"><img src="/app-files/img/cmn_logo04_01.svg" alt="ＳＭＢＣ日興証券" width="152" height="52" class="header-logo__image--nofixed"><img src="/app-files/img/cmn_logo04_02.svg" alt="ＳＭＢＣ日興証券" width="146" height="30" class="header-logo__image--fixed"></a></h1>
+    </div>
+    <div class="Header__body">
+      <div class="Header__body__inner">
+        <div class="header-category--pc js-header-category">
+          <ul class="header-category__list">
+            <li class="js-header-category__list" data-header-category="individual"><a href="/" class="header-category__list__type"><span class="header-category__list__label">個人のお客さま</span></a></li>
+            <li class="js-header-category__list" data-header-category="corporate"><a href="/corporate/" class="header-category__list__type"><span class="header-category__list__label">法人のお客さま</span></a></li>
+            <li class="js-header-category__list" data-header-category="company"><a href="/company/" class="header-category__list__type"><span class="header-category__list__label">会社案内</span></a></li>
+            <li class="js-header-category__list" data-header-category="csr"><a href="/csr/" class="header-category__list__type"><span class="header-category__list__label">サステナビリティ</span></a></li>
+          </ul>
+        </div>
+        <div class="header-utility">
+          <ul class="header-link-list">
+            <li class="header-link-list__item--pc"><a href="/news/customer/" class="header-link-list__type">お知らせ</a></li>
+            <li class="header-link-list__item--pc"><a href="/recruit/" class="header-link-list__type">採用情報</a></li>
+            <li class="header-link-list__item"><a href="/risk/" class="header-link-list__type--risk">リスク・<br class="util-pc-hidden">手数料等</a></li>
+            <li class="header-link-list__item--pc"><a href="/en/" class="header-link-list__type">English</a></li>
+          </ul>
+          <div class="header-faq"><a href="https://qa.smbcnikko.co.jp/" target="_blank" rel="noopener" class="header-faq__type"><span class="header-faq__label">よくあるご質問</span></a></div>
+          <div class="header-search">
+            <a href="#nav-search" class="header-search__button js-header-menu__trigger" aria-expanded="false" aria-controls="nav-search" data-for="header-search-input"><span class="header-search__button__label">検索</span></a>
+            <div id="nav-search" class="header-search__panel js-header-menu__megamenu js-header-search" aria-hidden="true">
+              <div class="header-search__panel__inner">
+                <div class="header-search__panel__head">
+                  <ul class="header-search__list">
+                    <li><input type="radio" name="header-search-radio" id="header-search-radio01" class="header-search__list__radio js-header-search__radio" data-search="search-website" checked="checked"><label for="header-search-radio01" class="header-search__list__label">サイト内</label></li>
+                    <li><input type="radio" name="header-search-radio" id="header-search-radio02" class="header-search__list__radio js-header-search__radio" data-search="search-stockJ"><label for="header-search-radio02" class="header-search__list__label">国内株式</label></li>
+                    <li><input type="radio" name="header-search-radio" id="header-search-radio03" class="header-search__list__radio js-header-search__radio" data-search="search-stockU"><label for="header-search-radio03" class="header-search__list__label">米国株式</label></li>
+                    <li><input type="radio" name="header-search-radio" id="header-search-radio04" class="header-search__list__radio js-header-search__radio" data-search="search-investment"><label for="header-search-radio04" class="header-search__list__label">投資信託</label></li>
+                  </ul>
+                </div>
+                <div class="header-search__panel__body">
+                  <form action="https://sitesearch.smbcnikko.co.jp/askme.asp" method="GET" class="header-search__form js-header-search__form search-website">
+                    <label for="header-search-input01" class="header-search__panel__body__label">サイト内検索</label>
+                    <input type="hidden" name="origin" value="1">
+                    <input type="hidden" name="aj_charset" value="shift_jis">
+                    <input type="text" name="ask" placeholder="検索したいキーワードを入力してください。" id="header-search-input01" class="header-search__input js-header-search__input js-header-search__zenkaku">
+                    <button type="submit" class="header-search__submit">検索</button>
+                  </form>
+                  <form action="https://fund2.smbcnikko.co.jp/smbc_nikko_hp/market/main/index.aspx" method="GET" target="_blank" class="header-search__form js-header-search__form search-stockJ">
+                    <label for="header-search-input02" class="header-search__panel__body__label">サイト内検索</label>
+                    <input type="hidden" name="F" value="stk_search">
+                    <input type="hidden" name="MODE" value="result">
+                    <input type="text" name="KEY1" placeholder="株価コード、または会社名を入力してください。" id="header-search-input02" class="header-search__input js-header-search__input js-header-search__zenkaku">
+                    <button type="submit" class="header-search__submit">検索</button>
+                  </form>
+                  <form action="https://fstock.smbcnikko.co.jp/smbcnikkoopen/search" method="GET" target="_blank" accept-charset="UTF-8" class="header-search__form js-header-search__form search-stockU">
+                    <label for="header-search-input03" class="header-search__panel__body__label">サイト内検索</label>
+                    <input type="text" name="keyword" placeholder="銘柄名または現地コードを入力してください。" id="header-search-input03" class="header-search__input js-header-search__input js-header-search__zenkaku">
+                    <button type="submit" class="header-search__submit">検索</button>
+                  </form>
+                  <form action="https://fund2.smbcnikko.co.jp/smbc_nikko_hp/fund/main/index.aspx" method="GET" target="_blank" class="header-search__form js-header-search__form search-investment">
+                    <label for="header-search-input04" class="header-search__panel__body__label">サイト内検索</label>
+                    <input type="hidden" name="F" value="fnd_search_result">
+                    <input type="text" name="KEY1" placeholder="ファンド名・愛称・当社銘柄コード（4桁）を入力してください。" id="header-search-input04" class="header-search__input js-header-search__input js-header-search__zenkaku">
+                    <button type="submit" class="header-search__submit">検索</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-login"><a href="https://trade.smbcnikko.co.jp/Etc/sp/guest/mobile/sp_login.html" target="_blank" rel="noopener" class="header-login__type"><span class="header-login__label">ログイン</span></a></div>
+          <div class="header-menu"><a href="#nav-spmenu" class="header-menu__type js-header-menu__trigger" aria-expanded="false" aria-controls="nav-spmenu"><span class="header-menu__label">メニュー</span></a></div>
+        </div>
+      </div>
+    </div>
+<div id="nav-spmenu" class="header-menu-panel js-header-menu__megamenu" aria-hidden="true">
+      <div class="header-menu-button-wrap">
+        <div class="header-menu-button"><a href="/apply/" class="header-menu-button__type--apply"><span class="header-menu-button__label">口座開設</span></a></div>
+        <div class="header-menu-button"><a href="/service/office/" class="header-menu-button__type--office"><span class="header-menu-button__label">支店案内</span></a></div>
+        <div class="header-menu-button"><a href="https://qa.smbcnikko.co.jp/" target="_blank" rel="noopener" class="header-menu-button__type--faq"><span class="header-menu-button__label">よくある<br>ご質問</span></a></div>
+      </div>
+      <nav class="header-gnav js-header-gnav">
+        <ul class="header-gnav__list">
+          <li class="js-header-gnav__list" data-gnav-current="first">
+            <a href="#nav-first" class="header-gnav__type--toggle js-header-gnav__trigger" aria-expanded="false" aria-controls="nav-first"><span class="header-gnav__type__label">日興で<br class="util-sp-hidden">はじめる</span></a>
+            <div id="nav-first" class="header-megamenu js-header-gnav__megamenu" aria-hidden="true">
+              <div class="header-megamenu__inner">
+                <div class="header-megamenu__head">
+                  <div class="header-megamenu__title"><a href="/first/" class="header-megamenu__title__type">日興ではじめる<span class="util-pc-hidden">TOP</span></a></div>
+                </div>
+                <div class="header-megamenu__body">
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><a href="/first/start/" class="header-megamenu__block__title__type">ＳＭＢＣ日興証券で「想い」を叶える</a></div>
+                    </div>
+                  </div>
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><a href="/first/learn/" class="header-megamenu__block__title__type">はじめての資産運用</a></div>
+                    </div>
+                    <div class="header-megamenu__block__body">
+                      <ul class="header-megamenu__link-list" data-col-pc="4">
+                        <li><a href="/first/learn/grow/" class="header-megamenu__link-list__type">資産はどう育ててどう使う？</a></li>
+                        <li><a href="/first/learn/lps/" class="header-megamenu__link-list__type">ライフプランシミュレーション</a></li>
+                        <li><a href="/first/learn/stock/" class="header-megamenu__link-list__type">はじめての株式投資（初心者向け）</a></li>
+                        <li><a href="/first/learn/bond/" class="header-megamenu__link-list__type">はじめての債券投資</a></li>
+                        <li><a href="/first/learn/inv/" class="header-megamenu__link-list__type">はじめての投資信託（初心者向け）</a></li>
+                        <li><a href="/first/learn/insurance/" class="header-megamenu__link-list__type">はじめての保険</a></li>
+                        <li><a href="/first/learn/fx/" class="header-megamenu__link-list__type">はじめてのFX（初心者向け・FXの始め方）</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><a href="/first/froggy/" class="header-megamenu__block__title__type">記事で学んで株が買える投資サービス<br class="util-pc-hidden">「日興フロッギー」</a></div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="header-megamenu__close js-header-gnav__close"><span class="header-megamenu__close__label">閉じる</span></button>
+              </div>
+            </div>
+          </li>
+          <li class="js-header-gnav__list" data-gnav-current="products,service">
+            <a href="#nav-service" class="header-gnav__type--toggle js-header-gnav__trigger" aria-expanded="false" aria-controls="nav-service"><span class="header-gnav__type__label">商品・<br class="util-sp-hidden">サービス</span></a>
+            <div id="nav-service" class="header-megamenu js-header-gnav__megamenu" aria-hidden="true">
+              <div class="header-megamenu__inner">
+                <div class="header-megamenu__head">
+                  <div class="header-megamenu__title"><a href="/service/" class="header-megamenu__title__type">商品・サービス<span class="util-pc-hidden">TOP</span></a></div>
+                </div>
+                <div class="header-megamenu__body">
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><span class="header-megamenu__block__title__type--nolink">商品・資産運用サービス</span></div>
+                    </div>
+                    <div class="header-megamenu__block__body">
+                      <ul class="header-megamenu__link-list" data-col-pc="4">
+                        <li><a href="/products/cio/" class="header-megamenu__link-list__type">資産運用の情報提供サービス（CIO）</a></li>
+                        <li><a href="/products/stock/" class="header-megamenu__link-list__type">株式</a></li>
+                        <li><a href="/products/bond/" class="header-megamenu__link-list__type">債券</a></li>
+                        <li><a href="/products/inv/" class="header-megamenu__link-list__type">投資信託</a></li>
+                        <li><a href="/products/inv/tsumitate/" class="header-megamenu__link-list__type">投信つみたてプラン</a></li>
+                        <li><a href="/products/fundwrap/" class="header-megamenu__link-list__type">日興ファンドラップ</a></li>
+                        <li><a href="/products/insurance/" class="header-megamenu__link-list__type">保険</a></li>
+                        <li><a href="/products/zandaka_fee/" class="header-megamenu__link-list__type">ＳＭＢＣ日興 残高フィーサービス</a></li>
+                        <li><a href="/products/nisa/" class="header-megamenu__link-list__type">NISA</a></li>
+                        <li><a href="/products/ideco/" class="header-megamenu__link-list__type">個人型確定拠出年金（iDeCo）</a></li>
+                        <li><a href="/products/robo_adviser/" class="header-megamenu__link-list__type">THEO（ロボアドバイザー）</a></li>
+                        <li><a href="/products/fx/" class="header-megamenu__link-list__type">FX</a></li>
+                        <li><a href="/products/comstock/" class="header-megamenu__link-list__type">イージー・コムストックローン</a></li>
+                        <li><a href="/products/sto/" class="header-megamenu__link-list__type">セキュリティ・トークン（ST）</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><span class="header-megamenu__block__title__type--nolink">サービス</span></div>
+                    </div>
+                    <div class="header-megamenu__block__body">
+                      <ul class="header-megamenu__link-list" data-col-pc="4">
+                        <li><a href="/service/course/" class="header-megamenu__link-list__type">2つのお取引コース</a></li>
+                        <li><a href="/service/fee/" class="header-megamenu__link-list__type">手数料・諸費用</a></li>
+                        <li><a href="/service/account/" class="header-megamenu__link-list__type">各種口座のご案内</a></li>
+                        <li><a href="/service/payment/" class="header-megamenu__link-list__type">入出金・お預け替え（移管）</a></li>
+                        <li><a href="/service/online/" class="header-megamenu__link-list__type">オンラインサービス</a></li>
+                        <li><a href="/service/point/info.html" class="header-megamenu__link-list__type">ポイントサービス</a></li>
+                        <li><a href="/service/inheritance/" class="header-megamenu__link-list__type">相続・贈与</a></li>
+                        <li><a href="/service/tax_sys/" class="header-megamenu__link-list__type">税制関連</a></li>
+                        <li><a href="/service/group/" class="header-megamenu__link-list__type">ＳＭＢＣグループ連携サービス</a></li>
+                        <li><a href="/service/procedure/" class="header-megamenu__link-list__type">お手続き・送付書類</a></li>
+                        <li><a href="/service/other/" class="header-megamenu__link-list__type">その他のサービス</a></li>
+                        <li><a href="/service/campaign/" class="header-megamenu__link-list__type">キャンペーン</a></li>
+                        <li><a href="/service/rooms/" target="_blank" rel="noopener" class="header-megamenu__link-list__type--blank">オンライン面談のご案内を受けたお客さま</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="header-megamenu__close js-header-gnav__close"><span class="header-megamenu__close__label">閉じる</span></button>
+              </div>
+            </div>
+          </li>
+          <li class="js-header-gnav__list" data-gnav-current="market">
+            <a href="#nav-market" class="header-gnav__type--toggle js-header-gnav__trigger" aria-expanded="false" aria-controls="nav-market"><span class="header-gnav__type__label">マーケット<br class="util-sp-hidden">情報</span></a>
+            <div id="nav-market" class="header-megamenu js-header-gnav__megamenu" aria-hidden="true">
+              <div class="header-megamenu__inner">
+                <div class="header-megamenu__head">
+                  <div class="header-megamenu__title"><a href="/market/" class="header-megamenu__title__type">マーケット情報<span class="util-pc-hidden">TOP</span></a></div>
+                </div>
+                <div class="header-megamenu__body">
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__body">
+                      <ul class="header-megamenu__link-list" data-col-pc="4">
+                        <li><a href="/market/stockindex/" class="header-megamenu__link-list__type">指標</a></li>
+                        <li><a href="/market/interest/" class="header-megamenu__link-list__type">金利情報 </a></li>
+                        <li><a href="/market/rate/" class="header-megamenu__link-list__type">為替レート（市場実勢相場）</a></li>
+                        <li><a href="/products/bond/market2/index" class="header-megamenu__link-list__type">為替レート（日興外為基準レート）</a></li>
+                        <li><a href="/market/news/" class="header-megamenu__link-list__type">マーケットニュース</a></li>
+                        <li><a href="https://fund2.smbcnikko.co.jp/smbc_nikko_hp/market/main/index.aspx?F=yt_search" target="_blank" rel="noopener" class="header-megamenu__link-list__type--blank">株主優待の検索</a></li>
+                        <li><a href="https://fund2.smbcnikko.co.jp/smbc_nikko_hp/market/main/index.aspx?F=stk_search" target="_blank" rel="noopener" class="header-megamenu__link-list__type--blank">国内株式検索</a></li>
+                        <li><a href="https://fstock.smbcnikko.co.jp/smbcnikkoopen/search" target="_blank" rel="noopener" class="header-megamenu__link-list__type--blank">米国株式検索</a></li>
+                        <li><a href="/market/#anc-05" class="header-megamenu__link-list__type js-header-anchor-link">日興MRF/日興外貨MMF</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="header-megamenu__close js-header-gnav__close"><span class="header-megamenu__close__label">閉じる</span></button>
+              </div>
+            </div>
+          </li>
+          <li class="js-header-gnav__list" data-gnav-current="seminar">
+            <a href="#nav-seminar" class="header-gnav__type--toggle js-header-gnav__trigger" aria-expanded="false" aria-controls="nav-seminar"><span class="header-gnav__type__label">学ぶ・<br class="util-sp-hidden">セミナー</span></a>
+            <div id="nav-seminar" class="header-megamenu js-header-gnav__megamenu" aria-hidden="true">
+              <div class="header-megamenu__inner">
+                <div class="header-megamenu__head">
+                  <div class="header-megamenu__title"><a href="/seminar/" class="header-megamenu__title__type">学ぶ・セミナー<span class="util-pc-hidden">TOP</span></a></div>
+                </div>
+                <div class="header-megamenu__body">
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><span class="header-megamenu__block__title__type--nolink">セミナー</span></div>
+                    </div>
+                    <div class="header-megamenu__block__body">
+                      <ul class="header-megamenu__link-list" data-col-pc="4">
+                        <li><a href="/service/office/seminar_search.html" class="header-megamenu__link-list__type">支店開催セミナー検索</a></li>
+                        <li><a href="/seminar/" class="header-megamenu__link-list__type">スペシャルセミナーのご案内</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header-megamenu__block">
+                    <div class="header-megamenu__block__head">
+                      <div class="header-megamenu__block__title"><a href="/seminar/#anc-01" class="header-megamenu__block__title__type js-header-anchor-link">動画で学ぶ資産運用</a></div>
+                    </div>
+                    <div class="header-megamenu__block__body">
+                      <ul class="header-megamenu__link-list" data-col-pc="4">
+                        <li><a href="/seminar/nikko_online/market/" class="header-megamenu__link-list__type">マーケット編</a></li>
+                        <li><a href="/seminar/nikko_online/keycall/" class="header-megamenu__link-list__type">アナリストからのKey Call</a></li>
+                        <li><a href="/seminar/nikko_online/equity/" class="header-megamenu__link-list__type">株式編</a></li>
+                        <li><a href="/seminar/nikko_online/bond/" class="header-megamenu__link-list__type">債券編</a></li>
+                        <li><a href="/seminar/nikko_online/inv/" class="header-megamenu__link-list__type">投資信託編</a></li>
+                        <li><a href="/seminar/nikko_online/fundwrap/" class="header-megamenu__link-list__type">日興ファンドラップ編</a></li>
+                        <li><a href="/seminar/nikko_online/insurance/" class="header-megamenu__link-list__type">保険編</a></li>
+                        <li><a href="/seminar/nikko_online/IRinfo/" class="header-megamenu__link-list__type">企業IR動画</a></li>
+                        <li><a href="/seminar/nikko_online/debt_IR/" class="header-megamenu__link-list__type">債券発行体IRセミナー</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="header-megamenu__close js-header-gnav__close"><span class="header-megamenu__close__label">閉じる</span></button>
+              </div>
+            </div>
+          </li>
+          <li class="js-header-gnav__list" data-gnav-current="service_office">
+            <a href="/service/office/" class="header-gnav__type"><span class="header-gnav__type__label">支店案内</span></a>
+          </li>
+          <li class="js-header-gnav__list" data-gnav-current="support">
+            <a href="/support/" class="header-gnav__type"><span class="header-gnav__type__label">お問い合わせ・<br class="util-sp-hidden">お手続き</span></a>
+          </li>
+        </ul>
+        <div class="header-gnav__button-wrap">
+          <div class="header-gnav__button-v2"><a href="https://trade.smbcnikko.co.jp/Login/0/login/ipan_web/hyoji/" target="_blank" rel="noopener" class="header-gnav__button-v2__type"><span class="header-gnav__button-v2__label">ログイン</span></a></div>
+          <div class="header-gnav__button"><a href="/apply/" class="header-gnav__button__type"><span class="header-gnav__button__label">口座開設</span></a></div>
+        </div>
+      </nav>
+      <ul class="header-menu-link-list">
+        <li><a href="/library/" class="header-menu-link-list__type">資料一覧</a></li>
+        <li><a href="/terms/" class="header-menu-link-list__type">用語集</a></li>
+      </ul>
+      <div class="header-menu-banner"><a href="https://vivr.smbcnikko.co.jp/" target="_blank" rel="noopener" class="header-menu-banner__type"><img src="/app-files/img/cmn_bn02.jpg" alt="お取引も検索もお問い合わせも！いつでもどこでも簡単便利 日興スマートメニュー スマートフォン用お問い合わせメニュー"></a></div>
+      <div class="header-category--sp">
+        <ul class="header-category__list">
+          <li><a href="/corporate/" class="header-category__list__type"><span class="header-category__list__label">法人のお客さま</span></a></li>
+          <li><a href="/company/" class="header-category__list__type"><span class="header-category__list__label">会社案内</span></a></li>
+          <li><a href="/csr/" class="header-category__list__type"><span class="header-category__list__label">サステナビリティ</span></a></li>
+        </ul>
+      </div>
+      <ul class="header-link-list--sp">
+        <li><a href="/news/customer/" class="header-link-list__type">お知らせ</a></li>
+        <li><a href="/recruit/" class="header-link-list__type">採用情報</a></li>
+        <li><a href="/en/" class="header-link-list__type">English</a></li>
+      </ul>
+    </div>  </div>
+</header>
+<main id="main" class="Main">
+  <div class="Main__inner">
+  <div class="Main__guide">
+  <ol class="main-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a class="main-breadcrumb__type" itemprop="item" href="/"><span itemprop="name">ホーム</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a class="main-breadcrumb__type" itemprop="item" href="/security/"><span itemprop="name">セキュリティ対策について</span></a>
+      <meta itemprop="position" content="2">
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span class="main-breadcrumb__type--nolink"><span itemprop="name">パスキー認証（FIDO2）</span></span>
+      <meta itemprop="position" content="3">
+    </li>
+  </ol>
+  <!--/Main__guide-->
+</div>
+  <div class="Main__head">
+  <div class="heading1">
+    <div class="heading1__inner">
+      <h1 class="heading1__title">パスキー認証（FIDO2）</h1>
+    </div>
+  </div>
+  <!--/Main__head--> 
+</div>
+<div class="Main__body">
+  <div class="Main__content">
+    <section>
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">パスキー設定時のオンライン本人確認について</h2>
+        </div>
+      </div>
+      <p class="text">2026年8月21日（金）より、セキュリティ強化を目的として、パスキーをはじめて設定する際に、マイナンバーカード、または運転免許証を用いたオンライン本人確認が必要となります。<br>オンライン本人確認については<a href="/security/ekyc.html" target="_blank" rel="noopener" class="util-link--blank">こちら</a>をご確認ください。</p>
+      <div class="cmn-alert-box">
+        <div class="cmn-alert-box__body">
+          <p class="text util-highlight--red">すでにパスキー設定済の場合は、本対応は不要です。従来通り、パスキー認証でログインいただけます。<br>はじめてパスキーを設定する場合にオンライン本人確認が必要となります。</p>
+        </div>
+      </div>
+      <div class="cmn-alert-box">
+        <div class="cmn-alert-box__body">
+          <p class="text util-highlight--red">パスキー設定時のオンライン本人確認に関し、当社からログインやオンライン本人確認の実施を促すURLを掲載したメールは送りませんので、フィッシング詐欺メールには十分にご注意ください。</p>
+        </div>
+      </div>
+    </section>
+    <div class="anchor-navi">
+      <ul class="anchor-navi__list" data-col-pc="2" data-col-sp="1">
+        <li><a href="#anc-01" class="anchor-navi__link"><span class="anchor-navi__label">パスキー認証とは</span></a></li>
+        <li><a href="#anc-02" class="anchor-navi__link"><span class="anchor-navi__label">パスキー認証のメリット</span></a></li>
+        <li><a href="#anc-03" class="anchor-navi__link"><span class="anchor-navi__label">パスキー認証を利用できる環境</span></a></li>
+        <li><a href="#anc-04" class="anchor-navi__link"><span class="anchor-navi__label">パスキー認証の設定方法</span></a></li>
+        <li><a href="#anc-09" class="anchor-navi__link"><span class="anchor-navi__label">ログイン時のパスキー認証</span></a></li>
+        <li><a href="#anc-06" class="anchor-navi__link"><span class="anchor-navi__label">よくあるご質問</span></a></li>
+        <li><a href="#anc-07" class="anchor-navi__link"><span class="anchor-navi__label">パスキー認証に関するお問い合わせ先</span></a></li>
+      </ul>
+    </div>
+    <section id="anc-01">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">パスキー認証とは</h2>
+        </div>
+      </div>
+      <p class="text">パスキー認証とは、お客さまの端末のロック解除方法（生体認証、PINコード、パターン認証等）を利用して本人確認をする認証方法です。<br>パスキー認証は、従来の二要素認証と比べ、不正アクセスやフィッシング詐欺への耐性が高く、お客さまの資産をより安全に保護することができます。</p>
+      <div class="figure-wrap--center">
+        <figure class="figure js-fit-width">
+          <div class="figure__frame"><img src="/security/img/passkey_im01.png" alt="パスキー認証とは" class="util-sp-hidden"><img src="/security/img/passkey_im01_sp.png" alt="パスキー認証とは" class="util-pc-hidden"></div>
+        </figure>
+      </div>
+    </section>
+    <section id="anc-02">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">パスキー認証のメリット</h2>
+        </div>
+      </div>
+      <p class="text">パスキー認証には3つのメリットがあり、従来の二要素認証と比べ、より安全に、よりスムーズに認証をすることができます</p>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">&#9312; セキュリティを強化できる</h3>
+          </div>
+        </div>
+        <p class="text">パスキー認証は、本人確認情報（口座番号やワンタイムパスワード等）の入力が不要なため、本人確認情報の漏えいやフィッシング詐欺被害のリスクを軽減できます。</p>
+        <div class="figure-wrap">
+          <figure class="figure js-fit-width">
+            <div class="figure__frame"><img src="/security/img/passkey_im02.png" alt="セキュリティを強化できる"></div>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">&#9313; 従来の二要素認証よりスムーズに認証できる</h3>
+          </div>
+        </div>
+        <p class="text">パスキー認証は、パソコンやスマートフォンのロック解除と同じ方法（生体認証・PINコード認証・パターン認証等）で認証することができます。</p>
+        <div class="figure-wrap">
+          <figure class="figure js-fit-width">
+            <div class="figure__frame"><img src="/security/img/passkey_im03.png" alt="スムーズにログインができる"></div>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">&#9314; メールによるワンタイムパスワードや複雑なパスワードが不要になる</h3>
+          </div>
+        </div>
+        <p class="text">従来のメールによるワンタイムパスワードや複雑なパスワードを利用した認証が不要となり、生体認証・PINコード認証・パターン認証等で、スムーズに認証することができます。</p>
+        <div class="column" data-col-pc="2" data-col-sp="1">
+          <div class="column__item">
+            <div class="figure-wrap--center">
+              <figure class="figure js-fit-width">
+                <div class="figure__frame"><img src="/security/img/passkey_im04.png" alt="メールによるワンタイムパスワードが不要になる"></div>
+              </figure>
+            </div>
+          </div>
+          <div class="column__item">
+            <div class="figure-wrap--center">
+              <figure class="figure js-fit-width">
+                <div class="figure__frame"><img src="/security/img/passkey_im06.png" alt="複雑なパスワードが不要になる"></div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="anc-03">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">パスキー認証を利用できる環境</h2>
+        </div>
+      </div>
+      <p class="text">パスキー認証をご利用いただくには、以下の『OSバージョン』・『ブラウザ』・『パスキー保存先』を満たす端末が必要となります。<br>Windows Helloの設定やパソコン・スマートフォンの画面ロック解除設定方法 につきましては、パソコンメーカーや携帯電話会社へのご確認をお願いいたします。<br>Windows 10 でもご利用いただける場合がございますが、マイクロソフト社のサポート期間を終了しているため、当社の動作確認環境対象外となります。</p>
+      <p class="text">以下の条件を満たしていてもお客さまの環境によってはパスキー認証をご利用いただけない場合がございます。</p>
+      <div class="table" data-table-sp="scroll">
+        <div class="table__body">
+          <table class="table__matrix">
+            <colgroup>
+            <col span="4" class="table__w--15per">
+            <col span="1" class="table__w--40per">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="table__cell--lv1--center-middle">端末</th>
+                <th class="table__cell--lv1--center-middle">OS種別</th>
+                <th class="table__cell--lv1--center-middle">OSバージョン</th>
+                <th class="table__cell--lv1--center-middle">ブラウザ</th>
+                <th class="table__cell--lv1--center-middle">パスキー保存先</th>
+              </tr>
+              <tr>
+                <th class="table__cell--lv2--center-middle" rowspan="2">パソコン</th>
+                <td class="table__cell--center-middle">Windows</td>
+                <td class="table__cell--center-middle">Windows 11</td>
+                <td class="table__cell--center-middle">Microsoft Edge<br>
+                  Google Chrome</td>
+                <td class="table__cell--center-middle">Windows Hello</td>
+              </tr>
+              <tr>
+                <td class="table__cell--center-middle">Mac</td>
+                <td class="table__cell--center-middle">macOS 13 以上</td>
+                <td class="table__cell--center-middle">Safari</td>
+                <td class="table__cell--center-middle">iCloudキーチェーン（パスワード）</td>
+              </tr>
+              <tr>
+                <th class="table__cell--lv2--center-middle" rowspan="2">タブレット</th>
+                <td class="table__cell--center-middle">iPadOS</td>
+                <td class="table__cell--center-middle">iPadOS 16 以上</td>
+                <td class="table__cell--center-middle">Safari</td>
+                <td class="table__cell--center-middle">iCloudキーチェーン（パスワード）</td>
+              </tr>
+              <tr>
+                <td class="table__cell--center-middle">Android</td>
+                <td class="table__cell--center-middle">Android  9 以上<sup class="util-sup">※</sup></td>
+                <td class="table__cell--center-middle">Google Chrome</td>
+                <td class="table__cell--center-middle">Google パスワードマネージャー</td>
+              </tr>
+              <tr>
+                <th class="table__cell--lv2--center-middle" rowspan="2">スマートフォン</th>
+                <td class="table__cell--center-middle">iOS</td>
+                <td class="table__cell--center-middle">iOS 16 以上</td>
+                <td class="table__cell--center-middle">Safari</td>
+                <td class="table__cell--center-middle">iCloudキーチェーン（パスワード）</td>
+              </tr>
+              <tr>
+                <td class="table__cell--center-middle">Android</td>
+                <td class="table__cell--center-middle">Android 9 以上<sup class="util-sup">※</sup></td>
+                <td class="table__cell--center-middle">Google Chrome</td>
+                <td class="table__cell--center-middle">Google パスワードマネージャー</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+				<div class="table__foot">
+					<div class="table__note">
+						<div class="note-order-list__nest">
+							<ul class="note-list-v2" data-col-pc="1" data-col-sp="1">
+								<li><span class="note-list-v2__mark">※</span>スマートフォン用アプリ『ＳＭＢＣ日興証券アプリ』、『Nikko Wealth Consultant』は、Android  11 以上。『日興FXアプリ』はAndroid 12 以上。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="list-wrap">
+        <ul class="link-list" data-col-pc="1" data-col-sp="1">
+          <li><a href="https://qa.smbcnikko.co.jp/faq/show/2551?site_domain=default" target="_blank" rel="noopener" class="link-list__type--blank">OSバージョンの確認方法はこちら</a></li>
+          <li><a href="https://qa.smbcnikko.co.jp/faq/show/2552?site_domain=default" target="_blank" rel="noopener" class="link-list__type--blank">パスキーの保存先についてはこちら</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="anc-04">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">パスキー認証の設定方法</h2>
+        </div>
+      </div>
+      <p class="text">パスキー認証のご利用には、ご利用のパソコンやスマートフォンにパスキーを設定する必要があります。</p>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">パスキー設定時の本人確認について</h3>
+          </div>
+        </div>
+        <div class="table" data-table-sp="scroll">
+          <div class="table__head">
+            <div class="table__caption">パスキーを設定する際は以下の本人確認が必要です。</div>
+          </div>
+          <div class="table__body">
+            <table class="table__matrix">
+              <colgroup>
+                <col span="1" class="table__w--20per">
+                <col span="1" class="table__w--40per">
+                <col span="1" class="table__w--40per">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="table__cell--lv1--center-middle">本人確認方法</th>
+                  <th class="table__cell--lv1--center-middle">マイナンバーカードまたは運転免許証を用いたオンライン本人確認</th>
+                  <th class="table__cell--lv1--center-middle">設定済のパスキーを用いた本人確認</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="table__cell--lv2--center-middle">概要</th>
+                  <td class="table__cell">マイナンバーカードや運転免許証をスマートフォンで読み取る方法です。</td>
+                  <td class="table__cell">パスキー設定済端末と新たにパスキーを設定する端末とを、二次元コードの読み取りとBluetooth接続により接続する方法です。</td>
+                </tr>
+                <tr>
+                  <th class="table__cell--lv2--center-middle">本人確認操作に必要な端末や機能</th>
+                  <td class="table__cell">
+                    <div class="list-wrap">
+                      <ul class="unorder-list" data-col-pc="1" data-col-sp="1">
+                        <li>NFC（※1）対応スマートフォン</li>
+                        <li>マイナンバーカードまたは運転免許証</li>
+                        <li>当社アプリ（SMBC日興証券アプリまたはNikko Wealth Consultant）（※2）</li>
+                      </ul>
+                    </div>
+                    <p class="text">詳細は<a href="/security/ekyc.html" target="_blank" rel="noopener" class="util-link--blank">こちら</a></p>
+                  </td>
+                  <td class="table__cell">
+                    <div class="list-wrap">
+                      <ul class="unorder-list" data-col-pc="1" data-col-sp="1">
+                        <li>Bluetooth接続（接続する両方の端末に機能が必要）</li>
+                        <li>パスキー設定済端末、新たにパスキーを設定する端末のいずれかがスマートフォンまたはタブレット</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table__foot">
+            <div class="table__note">
+              <div class="list-wrap">
+                <ol class="note-order-list" data-col-pc="1" data-col-sp="1">
+                  <li><span class="note-order-list__mark">※1</span>NFCは「Near Field Communication」の略で、近距離無線通信を意味します。10cm程度の距離でICチップの情報を読み取る仕組みで、スマホ決済や交通系ICに利用されています。</li>
+                  <li><span class="note-order-list__mark">※2</span>従来はお取引や資産管理等のためにご利用いただくアプリですが、マイナンバーカードや運転免許証の読み取りのために使用します。</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">パスキーを設定する端末による設定可否</h3>
+          </div>
+        </div>
+        <div class="table" data-table-sp="scroll">
+          <div class="table__body">
+            <table class="table__matrix">
+              <colgroup>
+                <col span="1" class="table__w--25per">
+                <col span="1" class="table__w--25per">
+                <col span="1" class="table__w--25per">
+                <col span="1" class="table__w--25per">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="table__cell--lv1--center-middle">パスキー設定状況</th>
+                  <th class="table__cell--lv1--center-middle">新たにパスキーを設定する端末</th>
+                  <th class="table__cell--lv1--center-middle">マイナンバーカードまたは運転免許証を用いたオンライン本人確認</th>
+                  <th class="table__cell--lv1--center-middle">設定済のパスキーを用いた本人確認</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="table__cell--lv2--center-middle" rowspan="3">はじめてパスキーを設定する（1台目の設定）</th>
+                  <td class="table__cell--lv3--center-middle">スマートフォン</td>
+                  <td class="table__cell--center-middle">○（設定方法は<a href="/security/passkey_setting.html" target="_blank" rel="noopener" class="util-link--blank">こちら</a>）</td>
+                  <td class="table__cell--center-middle">―</td>
+                </tr>
+                <tr>
+                  <td class="table__cell--lv3--center-middle">タブレット</td>
+                  <td class="table__cell--center-middle">×</td>
+                  <td class="table__cell--center-middle">―</td>
+                </tr>
+                <tr>
+                  <td class="table__cell--lv3--center-middle">パソコン</td>
+                  <td class="table__cell--center-middle">×</td>
+                  <td class="table__cell--center-middle">―</td>
+                </tr>
+                <tr>
+                  <th class="table__cell--lv2--center-middle" rowspan="3">すでにパスキーを設定済で新たな端末にパスキーを設定する</th>
+                  <td class="table__cell--lv3--center-middle">スマートフォン</td>
+                  <td class="table__cell--center-middle">○（設定方法は<a href="/security/passkey_setting.html" target="_blank" rel="noopener" class="util-link--blank">こちら</a>）</td>
+                  <td class="table__cell--center-middle" rowspan="3">○（設定方法は<a href="/security/additional_passey_setting.html" target="_blank" rel="noopener" class="util-link--blank">こちら</a>）<br><br>
+                    パスキー設定済端末、新たにパスキーを設定する端末のいずれかがスマートフォンまたはタブレットの必要があります。
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table__cell--lv3--center-middle">タブレット</td>
+                  <td class="table__cell--center-middle">×</td>
+                </tr>
+                <tr>
+                  <td class="table__cell--lv3--center-middle">パソコン</td>
+                  <td class="table__cell--center-middle">×</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="cmn-alert-box">
+          <div class="cmn-alert-box__body">
+            <p class="text util-highlight--red">スマートフォンをお持ちでない等、各本人確認操作に必要な端末や機能をご用意できない場合、上記の本人確認を用いた方法でパスキーが設定できないため、異なる方法で本人確認を実施いたします。詳しくは以下ダイヤルまでお問い合わせください。</p>
+            <p class="text util-highlight--red">日興コンタクトセンター 0120-166-250<br>平日9：00～17：30 ※祝日・年末年始を除く</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">パスキーの設定方法（動画）</h3>
+          </div>
+        </div>
+        <div class="list-wrap">
+          <ul class="note-list" data-col-pc="1" data-col-sp="1">
+            <li><span class="note-list__mark">※</span>準備中</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section id="anc-09">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">ログイン時のパスキー認証</h2>
+        </div>
+      </div>
+      <p class="text">以下のオンラインサービスで、お取引や入出金等をされる場合、パスキーでログインする必要があります。</p>
+      <div class="list-wrap">
+        <ul class="unorder-list" data-col-pc="1" data-col-sp="1">
+          <li>日興イージートレード（パソコンサイト・スマートフォンサイト）</li>
+          <li>ＳＭＢＣ日興証券アプリ</li>
+          <li>Nikko Wealth Consultant</li>
+          <li>日興ＦＸアプリ</li>
+          <li>日興フロッギー</li>
+        </ul>
+      </div>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">パスキー認証によるログインイメージ</h3>
+          </div>
+        </div>
+        <div class="figure-wrap">
+          <figure class="figure js-fit-width">
+            <div class="figure__frame"><img src="/security/img/passkey_im05_pc.png" alt="パスキー認証によるログインイメージ" class="util-sp-hidden"><img src="/security/img/passkey_im05_sp.png" alt="パスキー認証によるログインイメージ" class="util-pc-hidden"></div>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">パスキー認証以外でログインした場合の機能制限</h3>
+          </div>
+        </div>
+        <p class="text">パスキー認証以外の方法（ワンタイムパスワード／生体認証 等）でログインした場合は、ご利用いただける機能が制限されます。<br>またＳＭＢＣ日興証券アプリ／Nikko Wealth Consultant／日興FXアプリ／日興フロッギー はパスキー認証でログインした場合のみご利用いただけます。</p>
+        <div class="table" data-table-sp="scroll">
+          <div class="table__body">
+            <table class="table__matrix">
+              <caption>
+                <div class="table__caption--right">〇：利用可能　　△：一部機能のみ利用可能（※1）　×：利用不可能</div>
+              </caption>
+              <colgroup>
+                <col span="1" class="table__w--25per">
+                <col span="1" class="table__w--30per">
+                <col span="5" class="table__w--15per">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="table__cell--lv1--center-middle" rowspan="2">対象チャネル</th>
+                  <th class="table__cell--lv1--center-middle" rowspan="2">ログイン時の認証方法</th>
+                  <th class="table__cell--lv1--center-middle" colspan="5">対象サービスで利用できる機能</th>
+                </tr>
+                <tr>
+                  <th class="table__cell--lv2--center-middle">お取引</th>
+                  <th class="table__cell--lv2--center-middle">残高の確認<br>
+                      商品ガイド／投資情報等の確認</th>
+                  <th class="table__cell--lv2--center-middle">入出金</th>
+                  <th class="table__cell--lv2--center-middle">各種お手続き</th>
+                  <th class="table__cell--lv2--center-middle">その他のサービスごとの機能</th>
+                </tr>
+                <tr>
+                  <th class="table__cell--lv2--center-middle" rowspan="2">日興イージートレード</th>
+                  <td class="table__cell--center-middle">パスキー認証</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                </tr>
+                <tr>
+                  <td class="table__cell--center-middle">ワンタイムパスワード認証</td>
+                  <td class="table__cell--center-middle">×</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">×</td>
+                  <td class="table__cell--center-middle">△</td>
+                  <td class="table__cell--center-middle">△</td>
+                </tr>
+                <tr>
+                  <th class="table__cell--lv2--center-middle" rowspan="2">ＳＭＢＣ日興証券アプリ<br>Nikko Wealth Consultant<br>日興FXアプリ</th>
+                  <td class="table__cell--center-middle">パスキー認証</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                </tr>
+                <tr>
+                  <td class="table__cell--center-middle">ワンタイムパスワード認証<br>生体認証</td>
+                  <td class="table__cell--center-middle" colspan="5">ログイン不可</td>
+                </tr>
+                <tr>
+                  <th class="table__cell--lv2--center-middle" rowspan="2">日興フロッギー</th>
+                  <td class="table__cell--center-middle">パスキー認証</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                  <td class="table__cell--center-middle">〇</td>
+                </tr>
+                <tr>
+                  <td class="table__cell--center-middle">ワンタイムパスワード認証</td>
+                  <td class="table__cell--center-middle" colspan="5">ログイン不可</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table__foot">
+            <div class="table__note">
+			  <div class="note-order-list__nest">
+                <ol class="cmn-order-list" data-col-pc="1" data-col-sp="1">
+                  <li><span class="cmn-order-list__mark">（※1）</span>電子交付サービスや取引パスワードの再設定、パスキー設定等が利用できます。</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="heading3">
+          <div class="heading3__inner">
+            <h3 class="heading3__title">パスキーのログイン方法（動画）</h3>
+          </div>
+        </div>
+        <div class="list-wrap">
+          <ul class="note-list" data-col-pc="1" data-col-sp="1">
+            <li><span class="note-list__mark">※</span>準備中</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section id="anc-06">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">よくあるご質問</h2>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証の導入によって、従来のログイン方法は利用できなくなるのですか</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">2026年4月下旬以降、日興イージートレードでのお取引等において、パスキー認証によるログインを段階的に必須化します。<br>必須化後も従来の二要素認証によるログインは可能ですが、お取引や出金等の一部機能はご利用いただけなくなります（株価やレポート等の投資情報や残高情報の閲覧は引き続き可能です）。<br>なお、アプリ（ＳＭＢＣ日興証券アプリ、Nikko Wealth Consultant、日興FXアプリ）や日興フロッギーにつきましては、必須化後はパスキー認証以外の方法ではログインできなくなります。</p>
+          <p class="text">パスキー認証は従来の二要素認証に比べて不正アクセスやフィッシング詐欺に対する耐性が高い次世代の認証方式です。お客さまの大切な資産をお守りするため、必須化を待たずに早期の設定にご協力をお願いします。</p>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証の利用にあたり、事前に端末（PC・タブレット・スマートフォン）で必要な設定方法や設定状況の確認方法を教えてください。</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">パスキー認証の利用にあたり、事前に端末（PC・タブレット・スマートフォン）で必要な設定方法や設定状況の確認方法は以下のサイトでご確認ください。</p>
+          <p class="text"><span class="util-bold">【パソコン】</span><br>■Windows をご利用の場合<br><span class="util-underline"><a href="/security/passkey/howto.html" target="_blank" rel="noopener" class="util-link--blank">Windows パソコンでパスキー登録を行うための環境準備 ーWindows Hello</a></span></p>
+          <p class="text">■Mac をご利用の場合<br><span class="util-underline"><a href="/security/passkey/mac.html" target="_blank" rel="noopener" class="util-link--blank">Macでパスキー登録の環境を設定ーiCloudキーチェーンの設定</a></span></p>
+          <p class="text"><span class="util-bold">【スマートフォン・タブレット】</span><br>■Android をご利用の場合<br><span class="util-underline"><a href="/security/passkey/android.html" target="_blank" rel="noopener" class="util-link--blank">Androidでパスキー登録の環境を設定－Googleパスワードマネージャーの設定</a></span></p>
+          <p class="text">■iPhone・iPad をご利用の場合<br><span class="util-underline"><a href="/security/passkey/ios.html" target="_blank" rel="noopener" class="util-link--blank">iPhone・iPadでパスキー登録の環境を設定ーiCloudキーチェーンの設定</a></span></p>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証の設定方法を教えてください。</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">パスキーを初めて設定する場合は、オンライン本人確認が必要です。</p>
+          <p class="text">すでに複数の端末でパスキーを設定済みで、新しい端末に追加する場合は、オンライン本人確認は不要です。</p>
+          <p class="text">設定手順は、該当ページをご確認ください。</p>
+          <p class="text">■ はじめてパスキーを設定する場合</p>
+          <div class="list-wrap-half">
+            <ul class="link-list" data-col-pc="1" data-col-sp="1">
+              <li><a href="/security/passkey_setting.html" target="_blank" rel="noopener" class="link-list__type--blank">日興イージートレードではじめてパスキーを設定する方法</a></li>
+            </ul>
+          </div>
+          <p class="text">■ 設定済みのパスキーを新しい端末に追加する場合</p>
+          <div class="list-wrap-half">
+            <ul class="link-list" data-col-pc="1" data-col-sp="1">
+              <li><a href="/security/additional_passey_setting.html" target="_blank" rel="noopener" class="link-list__type--blank">日興イージートレードですでにパスキーを設定済で、新たに他の端末でパスキーを設定する方法</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキーを設定する際、パスキーの保存先としてWindows Hello（Windows）iCloudキーチェーンまたはパスワード（Mac、iPadOS、iOS）、Googleパスワードマネージャー（Android）が表示されません。</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">お客さまの端末でパスキー認証の利用に必要な端末（パソコン・タブレット・スマートフォン）の設定がお済みでない可能性があります。<br>設定方法や設定状況の確認方法については以下をご覧ください。</p>
+          <p class="text"><span class="util-bold">【パソコン】</span><br>■Windows をご利用の場合<br><span class="util-underline"><a href="/security/passkey/howto.html" target="_blank" rel="noopener" class="util-link--blank">Windows パソコンでパスキー登録を行うための環境準備 ーWindows Hello</a></span></p>
+          <p class="text">■Mac をご利用の場合<br><span class="util-underline"><a href="/security/passkey/mac.html" target="_blank" rel="noopener" class="util-link--blank">Macでパスキー登録の環境を設定ーiCloudキーチェーンの設定</a></span></p>
+          <p class="text"><span class="util-bold">【スマートフォン・タブレット】</span><br>■Android をご利用の場合<br><span class="util-underline"><a href="/security/passkey/android.html" target="_blank" rel="noopener" class="util-link--blank">Androidでパスキー登録の環境を設定－Googleパスワードマネージャーの設定</a></span></p>
+          <p class="text">■iPhone・iPad をご利用の場合<br><span class="util-underline"><a href="/security/passkey/ios.html" target="_blank" rel="noopener" class="util-link--blank">iPhone・iPadでパスキー登録の環境を設定ーiCloudキーチェーンの設定</a></span></p>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">すでにパスキー認証を設定済の端末がありますが、他の端末でもパスキー認証を設定できますか</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">セキュリティ強化のため、2026年4月24日（金）19時頃以降、すでにパスキー認証を設定済のお客さまが、新たに他の端末でパスキー認証を設定する際には、パスキー認証設定済の端末（パソコンやスマートフォン）が必要となります。<br>具体的には、Bluetoothの接続と二次元コードの読み取りにより、パスキー認証設定済端末と新たにパスキー認証を設定する端末とを接続した状態でのみ新たな端末でパスキー認証設定が可能となります。<br>詳しい設定方法は「<span class="util-underline"><a href="/security/additional_passey_setting.html" target="_blank" rel="noopener" class="util-link--blank">日興イージートレードですでにパスキーを設定済で、新たに他の端末でパスキーを設定する方法</a></span>」をご確認ください。</p>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証の操作の際に二次元コードの読み取りがうまくできませんが、どうすればよいですか。</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">パスキー認証の操作の際に二次元コードが読み取れない場合は、以下をご確認ください。</p>
+					<div class="list-wrap">
+					  <ul class="unorder-list" data-col-pc="1" data-col-sp="1">
+					    <li>パスキーの仕様上、パソコンのカメラではパスキー認証の二次元コードは読み取れません。iPhone、iPad、Androidのスマートフォンまたはタブレットが必要です。</li>
+					    <li>二次元コードを表示する端末、二次元コードを読み取る端末の双方のBluetoothが有効になっている必要があります。</li>
+					    <li>端末の標準カメラで読み取りをお願いします。<br>Androidの端末で標準カメラでも読み取れない場合は、Googleレンズで読み取りをお願いします。</li>
+					  </ul>
+					</div>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証で利用するパソコン・タブレット・スマートフォンの認証方法（PINコード・パターン認証・生体認証）の設定内容を端末で変更する場合、日興イージートレードのパスキー認証も再設定が必要ですか</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">パソコンやスマートフォン等の端末側の設定で変更する場合、日興イージートレードでのパスキー認証の再設定は不要です。</p>
+          <p class="text">端末側の設定で認証方法を変更していただくと、新しい認証方法でそのまま日興イージートレードでのパスキー認証をご利用いただけます。</p>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証を設定した後、パソコン・スマートフォン・タブレットを買い替えた場合、何か連絡や操作が必要ですか</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">パスキー認証の設定後、パソコン・スマートフォン・タブレットを買い換えた場合の対応は、端末や機種変更の内容により異なります。</p>
+          <p class="text"><span class="util-bold">■iPhoneからiPhoneへ、またはAndroidからAndroidへ機種変更された場合</span></p>
+          <p class="text">原則、新しい端末でのパスキー認証の再設定は不要です。<br>「iCloudキーチェーン」や「Googleパスワードマネージャー」などのサービスをご利用のうえ、同じApple IDやGoogleアカウントをご利用の場合、パスキー認証の設定は共有されます。そのため、端末ごとの再設定は不要で、新しい端末でもそのままパスキー認証によるログインが可能です。</p>
+          <p class="text"><span class="util-bold">■iPhoneからAndroidへ、またはAndroidからiPhoneへ機種変更された場合、またはパソコンを買い替えた場合</span></p>
+          <p class="text">原則、新しい端末でパスキー認証の設定が必要です。<br>すでに1台以上の端末でパスキー認証を設定済のお客さまが、新たに他の端末で設定を行う場合は、以下をご確認ください。<br><span class="util-underline"><a href="/security/additional_passey_setting.html" target="_blank" rel="noopener" class="util-link--blank">日興イージートレードですでにパスキーを設定済で、新たに他の端末でパスキーを設定する方法</a></span></p>
+        </div>
+      </div>
+      <div class="accordion js-accordion is-initialOpen"> <a href="javascript:void(0);" class="accordion__head js-accordion__trigger">
+        <div class="accordion__title">パスキー認証の設定を削除することはできますか</div>
+        </a>
+        <div class="accordion__body js-accordion__panel">
+          <p class="text">パスキー認証を再設定する場合や、動作確認環境以外の保存先にパスキーを保存した場合など、パスキー認証の設定を削除される際は、下記の連絡先までお問い合わせください。</p>
+          <p class="text">日興コンタクトセンター 0120-166-250<br>平日9：00～17：30 ※祝日・年末年始を除く</p>
+        </div>
+      </div>
+      <p class="text">そのほかのFAQは<a href="https://qa.smbcnikko.co.jp/category/show/257?site_domain=default" target="_blank" rel="noopener" class="util-link--blank">こちら</a>からご確認ください。</p>
+    </section>
+    <section id="anc-07">
+      <div class="heading2">
+        <div class="heading2__inner">
+          <h2 class="heading2__title">パスキー認証に関するお問い合わせ先</h2>
+        </div>
+      </div>
+      <p class="text">パスキー認証についてご不明な点がございましたら、以下のダイヤルまでお問い合わせください。</p>
+      <p class="text">日興コンタクトセンター 0120-166-250<br>
+        平日9：00～17：30 ※祝日・年末年始を除く</p>
+    </section>
+    <!--/Main__content--> 
+  </div>
+  <!--/Main__body--> 
+</div>
+    <div class="Main__foot">
+    </div>
+    <!--/Main__inner-->
+  </div>
+  <!--/Main-->
+</main>
+<footer id="footer" class="Footer">
+  <div class="Footer__inner">
+    <div class="Footer__guide">
+      <div class="footer-pagetop">
+        <a href="#header">ページ上部へ</a>
+      </div>
+    </div>
+    <div class="Footer__body">
+      <div class="Footer__body__inner">
+        <nav class="footer-snav">
+          <div class="footer-snav__inner">
+            <div class="footer-snav__column">
+              <div class="footer-snav__column__item" data-size-pc="3/4col">
+                <div class="footer-snav__title"><a href="/" class="footer-snav__title__type">個人のお客さま</a></div>
+                <div class="footer-snav__column-v2">
+                  <div class="footer-snav__column-v2__item" data-size-pc="1/3col">
+                    <div class="footer-snav__block js-footer-accordion">
+                      <div class="footer-snav__block__head">
+                        <div class="footer-snav__block__title"><a href="/first/" class="footer-snav__block__title__type--toggle js-footer-accordion__trigger">日興ではじめる</a></div>
+                      </div>
+                      <div class="footer-snav__block__body js-footer-accordion__panel">
+                        <div class="footer-snav__block__link"><a href="/first/" class="footer-snav__block__link__type">日興ではじめるTOP</a></div>
+                        <ul class="footer-snav__list">
+                          <li><a href="/first/start/" class="footer-snav__list__type">ＳＭＢＣ日興証券で「想い」を叶える</a></li>
+                          <li><a href="/first/learn/" class="footer-snav__list__type">はじめての資産運用</a></li>
+                          <li><a href="/first/froggy/" class="footer-snav__list__type">記事で学んで株が買える投資サービス「日興フロッギー」</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="footer-snav__block">
+                      <div class="footer-snav__block__head">
+                        <div class="footer-snav__block__title"><a href="/market/" class="footer-snav__block__title__type">マーケット情報</a></div>
+                      </div>
+                    </div>
+                    <div class="footer-snav__block">
+                      <div class="footer-snav__block__head">
+                        <div class="footer-snav__block__title"><a href="/seminar/" class="footer-snav__block__title__type">学ぶ・セミナー</a></div>
+                      </div>
+                    </div>
+                    <div class="footer-snav__block">
+                      <div class="footer-snav__block__head">
+                        <div class="footer-snav__block__title"><a href="/service/office/" class="footer-snav__block__title__type">支店案内</a></div>
+                      </div>
+                    </div>
+                    <div class="footer-snav__block js-footer-accordion">
+                      <div class="footer-snav__block__head">
+                        <div class="footer-snav__block__title"><a href="/support/" class="footer-snav__block__title__type--toggle js-footer-accordion__trigger">お問い合わせ・お手続き</a></div>
+                      </div>
+                      <div class="footer-snav__block__body js-footer-accordion__panel">
+                        <div class="footer-snav__block__link"><a href="/support/" class="footer-snav__block__link__type">お問い合わせ・お手続きTOP</a></div>
+                        <ul class="footer-snav__list">
+                          <li><a href="https://qa.smbcnikko.co.jp/?site_domain=default" target="_blank" rel="noopener" class="footer-snav__list__type link-list__type--blank">よくあるご質問</a></li>
+                          <li><a href="/terms/" class="footer-snav__list__type">用語集</a></li>
+                          <li><a href="/library/" class="footer-snav__list__type">資料一覧</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-snav__column-v2__item" data-size-pc="2/3col">
+                    <div class="footer-snav__block js-footer-accordion">
+                      <div class="footer-snav__block__head">
+                        <div class="footer-snav__block__title"><a href="/service/" class="footer-snav__block__title__type--toggle js-footer-accordion__trigger">商品・サービス</a></div>
+                      </div>
+                      <div class="footer-snav__block__body js-footer-accordion__panel">
+                        <div class="footer-snav__block__link"><a href="/service/" class="footer-snav__block__link__type">商品・サービスTOP</a></div>
+                        <div class="footer-snav__block__column" data-col-pc="2">
+                          <div class="footer-snav__block__column__item">
+                            <div class="footer-snav__list-title">商品・資産運用サービス</div>
+                            <ul class="footer-snav__list">
+                              <li><a href="/products/cio/" class="footer-snav__list__type">資産運用の情報提供サービス（CIO）</a></li> 
+                              <li><a href="/products/stock/" class="footer-snav__list__type">株式</a></li>
+                              <li><a href="/products/bond/" class="footer-snav__list__type">債券</a></li>
+                              <li><a href="/products/inv/" class="footer-snav__list__type">投資信託</a></li>
+                              <li><a href="/products/inv/tsumitate/" class="footer-snav__list__type">投信つみたてプラン</a></li>
+                              <li><a href="/products/fundwrap/" class="footer-snav__list__type">日興ファンドラップ</a></li>
+                              <li><a href="/products/insurance/" class="footer-snav__list__type">保険</a></li>
+                              <li><a href="/products/zandaka_fee/" class="footer-snav__list__type">ＳＭＢＣ日興 残高フィーサービス</a></li>
+                              <li><a href="/products/nisa/" class="footer-snav__list__type">NISA</a></li>
+                              <li><a href="/products/ideco/" class="footer-snav__list__type">個人型確定拠出年金（iDeCo）</a></li>
+                              <li><a href="/products/robo_adviser/" class="footer-snav__list__type">THEO（ロボアドバイザー）</a></li>
+                              <li><a href="/products/fx/" class="footer-snav__list__type">FX</a></li>
+                              <li><a href="/products/comstock/" class="footer-snav__list__type">イージー・コムストックローン</a></li>
+                              <li><a href="/products/sto/" class="footer-snav__list__type">セキュリティ・トークン（ST）</a></li>
+                            </ul>
+                          </div>
+                          <div class="footer-snav__block__column__item">
+                            <div class="footer-snav__list-title">サービス</div>
+                            <ul class="footer-snav__list">
+                              <li><a href="/service/course/" class="footer-snav__list__type">2つのお取引コース</a></li>
+                              <li><a href="/service/fee/" class="footer-snav__list__type">手数料・諸費用</a></li>
+                              <li><a href="/service/account/" class="footer-snav__list__type">各種口座のご案内</a></li>
+                              <li><a href="/service/payment/" class="footer-snav__list__type">入出金・お預け替え（移管）</a></li>
+                              <li><a href="/service/online/" class="footer-snav__list__type">オンラインサービス</a></li>
+                              <li><a href="/service/point/info.html" class="footer-snav__list__type">ポイントサービス</a></li>
+                              <li><a href="/service/inheritance/" class="footer-snav__list__type">相続・贈与</a></li>
+                              <li><a href="/service/tax_sys/" class="footer-snav__list__type">税制関連</a></li>
+                              <li><a href="/service/group/" class="footer-snav__list__type">ＳＭＢＣグループ連携サービス</a></li>
+                              <li><a href="/service/procedure/" class="footer-snav__list__type">お手続き・送付書類</a></li>
+                              <li><a href="/service/campaign/" class="footer-snav__list__type">キャンペーン</a></li>
+                              <li><a href="/service/rooms/" target="_blank" rel="noopener" class="footer-snav__list__type link-list__type--blank">オンライン面談のご案内を受けたお客さま</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-snav__column__item" data-size-pc="1/4col">
+                <div class="footer-snav__title"><a href="/corporate/" class="footer-snav__title__type">法人のお客さま</a></div>
+                <div class="footer-snav__title"><a href="/company/" class="footer-snav__title__type">会社案内</a></div>
+                <div class="footer-snav__title"><a href="/csr/" class="footer-snav__title__type">サステナビリティ</a></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="footer-link-list-wrap">
+          <ul class="footer-link-list">
+            <li><a href="/company/customer/support/" class="footer-link-list__type">ご意見・苦情</a></li>
+            <li><a href="/complaint/" class="footer-link-list__type">当社以外のご意見・苦情窓口</a></li>
+            <li><a href="https://www.fsa.go.jp/sesc/watch/index.html" target="_blank" rel="noopener" class="footer-link-list__type">証券取引等監視委員会情報受付窓口</a></li>
+            <li><a href="https://www.jsda.or.jp/" target="_blank" rel="noopener" class="footer-link-list__type">日本証券業協会</a></li>
+            <li><a href="https://jipf.or.jp/" target="_blank" rel="noopener" class="footer-link-list__type">日本投資者保護基金</a></li>
+            <li><a href="https://disclosure2.edinet-fsa.go.jp/" target="_blank" rel="noopener" class="footer-link-list__type">EDINET(金融商品取引法に基づく有価証券報告書等の開示書類に関する電子開示システム)</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-list-wrap-v2">
+          <ul class="footer-link-list">
+            <li><a href="/policy/" class="footer-link-list__type">サイトポリシー</a></li>
+            <li><a href="/houshin/" class="footer-link-list__type">勧誘方針</a></li>
+            <li><a href="/riekisouhan/" class="footer-link-list__type">利益相反管理方針（概要）</a></li>
+            <li><a href="/sairyo/" class="footer-link-list__type">最良執行方針</a></li>
+            <li><a href="/hogo/" class="footer-link-list__type">個人情報保護方針</a></li>
+            <li><a href="/personal_data/" class="footer-link-list__type">パーソナルデータの取り扱いについて</a></li>
+            <li><a href="/antisocial/" class="footer-link-list__type">反社会的勢力に対する基本方針</a></li>
+            <li><a href="/fatf/" class="footer-link-list__type">マネー・ローンダリングおよびテロ資金供与対策に関する取組について</a></li>
+            <li><a href="/customer/" class="footer-link-list__type">お客さま本位の業務運営</a></li>
+            <li><a href="/stakeholder/" class="footer-link-list__type">マルチステークホルダー方針</a></li>
+            <li><a href="/jyuyojoho/pdf/jigyosha.pdf" target="_blank" rel="noopener" class="footer-link-list__type">重要情報シート（金融事業者編）</a></li>
+            <li><a href="/bunbetsu/" class="footer-link-list__type">分別管理</a></li>
+            <li><a href="/systemfault/" class="footer-link-list__type">システム障害時の対応</a></li>
+            <li><a href="/kinsyouhou/" class="footer-link-list__type">金融商品取引法に基づく表示</a></li>
+            <li><a href="/service/account/yakkan/" class="footer-link-list__type">約款・規定集</a></li>
+            <li><a href="/risk/index1.html" class="footer-link-list__type">上場有価証券等書面・契約締結前交付書面</a></li>
+            <li><a href="/j-ships/" class="footer-link-list__type">特定投資家向け銘柄制度（J-Ships）</a></li>
+            <li><a href="/company/pdf/gfxc.pdf" target="_blank" rel="noopener" class="footer-link-list__type">グローバル外為行動規範遵守表明</a></li>
+            <li><a href="/security/" class="footer-link-list__type">セキュリティ対策について</a></li>
+            <li><a href="/kashikingyou/" class="footer-link-list__type">貸金業法に基づく表示</a></li>
+            <li><a href="/giketsuken/" class="footer-link-list__type">当社名義商品有価証券の議決権行使について</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Footer__foot">
+      <div class="Footer__foot__inner">
+        <div class="Footer__foot__head">
+          <div class="footer-tradename-text">ＳＭＢＣ日興証券株式会社　　<br class="util-pc-hidden">金融商品取引業者　　関東財務局長（金商）　第2251号</div>
+        </div>
+        <div class="Footer__foot__body">
+          <div class="footer-copyright">
+            <small class="footer-copyright__label">Copyright &copy; SMBC Nikko Securities Inc.All Rights Reserved.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/app-files/js/app.js"></script>
+<script src="/app-files/lib/jquery-3.5.1.min.js"></script>
+<!--AA code-->
+<script language="JavaScript" src="/common/js/s_code.js" charset="SHIFT_JIS"></script>
+<script language="JavaScript">
+if (typeof(rt_rec) =="undefined" || s.getCk("_rt.uid")=="" || rt_rec_sent) {trackSC();};
+</script>
+<!--/AA code-->
+<!--AA DTM Footer Code-->
+<script type="text/javascript">_satellite.pageBottom();</script>
+<!--AA DTM Footer Code-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

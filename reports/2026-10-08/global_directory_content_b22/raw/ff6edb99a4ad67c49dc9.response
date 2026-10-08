@@ -1,0 +1,2909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="LF6R4sMuXXGSusYYYzcGUyJhzTCmNBOXYsTEkUv9">
+    <title>Bonds & Treasury Bills - Uganda Securities Exchange</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="description" content="View debt instruments including treasury bonds, corporate bonds, and treasury bills on the Uganda Securities Exchange.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #0f172a;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background: linear-gradient(180deg, var(--use-blue) 0%, var(--use-blue-light) 15%, var(--surface-secondary) 15%, var(--surface-secondary) 100%);
+        }
+
+        :root {
+            /* Official USE Brand Colors */
+            --use-blue: rgb(0, 128, 199);
+            --use-blue-dark: rgb(0, 102, 159);
+            --use-blue-light: rgb(51, 153, 219);
+            --use-yellow: rgb(253, 185, 19);
+            --use-yellow-light: rgb(254, 202, 56);
+            --use-gray: rgb(88, 89, 91);
+            --use-red: rgb(221, 39, 39);
+            --use-green: rgb(39, 221, 90);
+
+            /* Surface Colors */
+            --surface: #ffffff;
+            --surface-secondary: #f7fafc;
+            --surface-tertiary: #edf2f7;
+            --text-primary: #1a202c;
+            --text-secondary: var(--use-gray);
+            --text-tertiary: #718096;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+            /* USE Brand Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--use-blue) 0%, var(--use-blue-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--use-yellow) 0%, var(--use-yellow-light) 100%);
+            --gradient-success: linear-gradient(135deg, var(--use-green) 0%, rgba(39, 221, 90, 0.8) 100%);
+            --gradient-danger: linear-gradient(135deg, var(--use-red) 0%, rgba(221, 39, 39, 0.8) 100%);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: calc(100% - 2rem);
+            max-width: 1400px;
+        }
+
+        .header.scrolled {
+            top: 0.5rem;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(24px) saturate(200%);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(226, 232, 240, 0.3);
+        }
+
+        .nav-container {
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: translateY(-1px);
+        }
+
+        .market-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(248, 250, 252, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.3);
+            flex-shrink: 0;
+            min-width: fit-content;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ef4444;
+            animation: statusPulse 2s infinite;
+        }
+
+        .status-indicator.open {
+            background: var(--use-green);
+        }
+
+        .status-indicator.closed {
+            background: var(--use-red);
+            animation: none;
+        }
+
+        @keyframes  statusPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .status-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .status-time {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            background: rgba(248, 250, 252, 0.8);
+            padding: 0.375rem;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            flex-shrink: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .nav-link:hover {
+            color: var(--use-blue);
+            background: rgba(0, 128, 199, 0.05);
+            transform: translateY(-1px);
+        }
+
+        .nav-link.active {
+            color: var(--use-blue);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .chevron-down {
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid currentColor;
+            border-bottom: 1px solid currentColor;
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .nav-item:hover .chevron-down {
+            transform: rotate(225deg);
+        }
+
+        .dropdown {
+            list-style: none;
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            left: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            min-width: 220px;
+            padding: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            overflow: visible !important;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown > li {
+            position: relative;
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(0, 128, 199, 0.05);
+            color: var(--use-blue);
+        }
+
+        .dropdown > li:not(.has-submenu) .dropdown-item:hover {
+            transform: translateX(4px);
+        }
+
+        .dropdown > li.has-submenu > .dropdown-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dropdown > li.has-submenu::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            bottom: 0;
+            width: 15px;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        .chevron-right {
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid currentColor;
+            border-bottom: 1px solid currentColor;
+            transform: rotate(-45deg);
+            transition: all 0.2s ease;
+            opacity: 0.7;
+        }
+
+        .dropdown-item:hover .chevron-right {
+            transform: rotate(-45deg) translateX(2px);
+        }
+
+        .submenu {
+            list-style: none;
+            position: absolute !important;
+            top: 0 !important;
+            left: 100% !important;
+            background: white !important;
+            border-radius: 12px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border) !important;
+            min-width: 200px !important;
+            padding: 0.5rem !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+            transform: translateX(-5px) !important;
+            transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease !important;
+            z-index: 1050 !important;
+            display: block !important;
+            margin-left: 0 !important;
+        }
+
+        .dropdown > li.has-submenu:hover > .submenu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateX(0) !important;
+            pointer-events: auto !important;
+        }
+
+        .submenu:hover {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateX(0) !important;
+            pointer-events: auto !important;
+        }
+
+        .submenu > li {
+            position: relative;
+        }
+
+        .submenu-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .submenu-item:hover {
+            background: rgba(0, 128, 199, 0.05);
+            color: var(--use-blue);
+            transform: translateX(4px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12rem 0 4rem;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-content {
+            background: var(--surface);
+            padding: 0;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        /* Reports Table */
+        .reports-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .reports-table thead {
+            background: var(--surface-secondary);
+        }
+
+        .reports-table th {
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            font-weight: 700;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .reports-table tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        .reports-table tbody tr:hover {
+            background: var(--surface-secondary);
+        }
+
+        .reports-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .reports-table td {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .report-name {
+            color: var(--use-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .report-name:hover {
+            color: var(--use-blue-dark);
+        }
+
+        .report-name i {
+            font-size: 1.25rem;
+        }
+
+        .text-danger {
+            color: var(--use-red) !important;
+        }
+
+        .text-primary {
+            color: #2563eb !important;
+        }
+
+        .text-success {
+            color: #16a34a !important;
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .file-size {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .published-date {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .empty-state {
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            color: var(--border);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #001e2f;
+            padding: 4rem 2rem 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            height: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-address {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--use-yellow);
+        }
+
+        .footer-contact {
+            font-size: 0.875rem;
+            line-height: 1.7;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-contact a {
+            color: var(--use-blue-light);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--use-yellow);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--use-blue);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-legal a {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-legal a:hover {
+            color: var(--use-yellow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .market-status {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+                        .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10;
+                order: 3;
+                flex-shrink: 0;
+            }
+
+            .logo {
+                order: 1;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .logo img {
+                height: 55px;
+                display: block;
+            }
+
+            .market-status {
+                display: none !important;
+            }
+
+            .status-indicator {
+                flex-shrink: 0;
+            }
+
+            .status-text {
+                flex-shrink: 0;
+            }
+
+            .nav-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.75rem;
+                height: 72px;
+                gap: 0.5rem;
+            }
+
+            .nav-menu {
+                order: 4;
+            }
+
+            .nav-menu {
+                display: flex;
+                position: absolute;
+                top: calc(100% + 0.5rem);
+                left: 0.5rem;
+                right: 0.5rem;
+                background: white;
+                border-radius: 16px;
+                box-shadow: var(--shadow-xl);
+                border: 1px solid var(--border);
+                padding: 0.5rem;
+                flex-direction: column;
+                gap: 0;
+                max-height: calc(100vh - 100px);
+                overflow-y: auto;
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+                pointer-events: none;
+            }
+
+            .nav-menu.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .nav-item {
+                width: 100%;
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .nav-link {
+                padding: 0.875rem 1rem;
+                justify-content: space-between;
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            .nav-link:hover {
+                background: var(--surface);
+            }
+
+            .dropdown {
+                position: static;
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                overflow: hidden;
+                box-shadow: none;
+                border: none;
+                margin-top: 0;
+                border-radius: 0;
+                background: var(--surface);
+                transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+                display: block;
+            }
+
+            .dropdown.active {
+                opacity: 1;
+                visibility: visible;
+                max-height: 1000px;
+                display: block;
+            }
+
+            .dropdown-item {
+                padding: 0.75rem 1.5rem;
+                border-bottom: 1px solid var(--border-light);
+                justify-content: space-between;
+                font-size: 0.85rem;
+            }
+
+            .dropdown li:last-child .dropdown-item {
+                border-bottom: none;
+            }
+
+            .submenu {
+                position: static;
+                background: #f8fafc;
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                overflow: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+                display: block;
+            }
+
+            .submenu.active {
+                opacity: 1 !important;
+                visibility: visible !important;
+                max-height: 800px !important;
+                display: block !important;
+            }
+
+            .submenu-item {
+                padding: 0.625rem 2rem;
+                font-size: 0.8rem;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .submenu li:last-child .submenu-item {
+                border-bottom: none;
+            }
+
+            .chevron-down,
+            .chevron-right {
+                font-size: 0.7rem;
+                transition: transform 0.3s ease;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .section-content {
+                border-radius: 12px;
+            }
+
+            .reports-table {
+                font-size: 0.875rem;
+            }
+
+            .reports-table th,
+            .reports-table td {
+                padding: 1rem;
+            }
+
+            .report-name {
+                font-size: 0.875rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<style>
+    /* CSS Variables for Mobile Menu */
+    :root {
+        --use-blue: rgb(0, 128, 199);
+        --use-blue-dark: rgb(0, 102, 159);
+        --use-blue-light: rgb(51, 153, 219);
+        --use-yellow: rgb(253, 185, 19);
+        --use-yellow-light: rgb(254, 202, 56);
+        --use-gray: rgb(88, 89, 91);
+        --use-red: rgb(221, 39, 39);
+        --use-green: rgb(39, 221, 90);
+        --surface: #ffffff;
+        --surface-secondary: #f7fafc;
+        --surface-tertiary: #edf2f7;
+        --text-primary: #1a202c;
+        --text-secondary: var(--use-gray);
+        --text-tertiary: #718096;
+        --border: #e2e8f0;
+        --border-light: #f1f5f9;
+    }
+
+    /* Mobile Menu Styles */
+    .mobile-menu-btn {
+        display: none !important;
+        background: var(--use-blue) !important;
+        color: white !important;
+        border: none !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 8px !important;
+        font-size: 1.2rem !important;
+        cursor: pointer !important;
+    }
+
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .mobile-menu-overlay {
+            display: block;
+        }
+    }
+
+    .mobile-menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 400px;
+        height: 100vh;
+        background: white;
+        z-index: 10000;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .mobile-menu {
+            display: block;
+        }
+    }
+
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-bottom: 2px solid var(--border);
+        background: white;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .mobile-menu-logo {
+        height: 45px;
+        width: auto;
+    }
+
+    .mobile-menu-close {
+        background: var(--surface-secondary);
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    .mobile-menu-close:hover {
+        background: var(--use-blue);
+        color: white;
+    }
+
+    .mobile-menu-list {
+        list-style: none;
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+
+    .mobile-menu-item {
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .mobile-menu-item:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-link:hover {
+        background: var(--surface-secondary);
+        color: var(--use-blue);
+    }
+
+    .mobile-menu-link.has-children {
+        cursor: pointer;
+    }
+
+    .mobile-chevron {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        margin-left: auto;
+    }
+
+    .mobile-menu-link.active .mobile-chevron,
+    .mobile-submenu-link.active .mobile-chevron {
+        transform: rotate(180deg);
+    }
+
+    .mobile-submenu {
+        list-style: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: var(--surface-secondary);
+    }
+
+    .mobile-submenu.active {
+        max-height: 1000px;
+    }
+
+    .mobile-submenu-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.875rem 1.5rem 0.875rem 2.5rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-submenu-link:hover {
+        background: rgba(0, 128, 199, 0.05);
+        color: var(--use-blue);
+    }
+
+    .mobile-submenu-link.has-children {
+        cursor: pointer;
+    }
+
+    .mobile-grandsubmenu {
+        list-style: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: var(--surface-tertiary);
+    }
+
+    .mobile-grandsubmenu.active {
+        max-height: 1000px;
+    }
+
+    .mobile-grandsubmenu-link {
+        display: block;
+        padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-grandsubmenu-link:hover {
+        background: rgba(0, 128, 199, 0.05);
+        color: var(--use-blue);
+    }
+
+    @media (max-width: 1024px) {
+        .nav-menu {
+            display: none !important;
+        }
+
+        .mobile-menu-btn {
+            display: block !important;
+        }
+
+        .market-status {
+            display: none !important;
+        }
+
+        .header {
+            width: 100% !important;
+            left: 0 !important;
+            transform: none !important;
+            border-radius: 0 !important;
+            border: none !important;
+            border-bottom: 1px solid var(--border-light) !important;
+            top: 0 !important;
+        }
+
+        .nav-container {
+            padding: 0 1rem !important;
+        }
+
+        .logo img {
+            height: 50px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            width: 100% !important;
+            left: 0 !important;
+            transform: none !important;
+            top: 0 !important;
+        }
+
+        .nav-container {
+            padding: 0 0.75rem !important;
+            height: 56px !important;
+        }
+
+        .logo img {
+            height: 45px !important;
+        }
+
+        .mobile-menu-btn {
+            padding: 0.4rem 0.8rem !important;
+            font-size: 1.1rem !important;
+        }
+    }
+
+    /* Footer Disclaimer Styles */
+    .footer-disclaimer {
+        padding: 2rem 0;
+        margin: 2rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-disclaimer h4 {
+        margin-bottom: 1rem;
+    }
+
+    .footer-disclaimer p {
+        font-size: 0.8125rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 1rem;
+    }
+
+    .footer-disclaimer p:last-child {
+        margin-bottom: 0;
+    }
+</style>
+
+<script>
+    // USE Mobile Menu Functions - Unique names to avoid conflicts with page-level scripts
+    window.USE_toggleMobileDrawer = function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const body = document.body;
+
+        // Check if elements exist
+        if (mobileMenu && mobileMenuOverlay) {
+            mobileMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        }
+    };
+
+    window.USE_toggleMobileSubmenu = function(event, submenuId) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        const submenu = document.getElementById(submenuId);
+        const link = event ? event.currentTarget : null;
+
+        if (submenu) {
+            // Toggle active class on the submenu
+            submenu.classList.toggle('active');
+
+            // Toggle active class on the link (for chevron rotation)
+            if (link) {
+                link.classList.toggle('active');
+            }
+        }
+    };
+</script>
+
+<header class="header" id="header">
+    <nav class="nav-container">
+        <a href="/" class="logo">
+            <img src="/images/logo.PNG" alt="Uganda Securities Exchange">
+        </a>
+                <div class="market-status">
+            <span class="status-indicator closed"></span>
+            <span class="status-text">Market Closed</span>
+            <span class="status-time">9:00 AM - 1:00 PM EAT</span>
+        </div>
+        <ul class="nav-menu">
+                            <li class="nav-item">
+                    <a href="#" class="nav-link"
+                                               onclick="toggleMobileDropdown(event)" >
+                                                About USE
+                         <span class="chevron-down"></span>                     </a>
+                                            <ul class="dropdown">
+                                                            
+                                <li class="">
+                                    <a href="/about" class="dropdown-item"
+                                       >
+                                                                                About USE
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="has-submenu">
+                                    <a href="#governance" class="dropdown-item"
+                                       >
+                                                                                Governance
+                                         <span class="chevron-right"></span>                                     </a>
+
+                                                                            <ul class="submenu">
+                                                                                            <li>
+                                                    <a href="/about/governance/structure" class="submenu-item"
+                                                       >
+                                                                                                                Governance Structure
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            
+                                <li class="has-submenu">
+                                    <a href="#products-services" class="dropdown-item"
+                                       >
+                                                                                Products and Services
+                                         <span class="chevron-right"></span>                                     </a>
+
+                                                                            <ul class="submenu">
+                                                                                            <li>
+                                                    <a href="/about/products-and-services/international-securities-identification-number-isin" class="submenu-item"
+                                                       >
+                                                                                                                International Securities Identification Number (ISIN)
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            
+                                <li class="has-submenu">
+                                    <a href="#trading-participants" class="dropdown-item"
+                                       >
+                                                                                Trading Participants
+                                         <span class="chevron-right"></span>                                     </a>
+
+                                                                            <ul class="submenu">
+                                                                                            <li>
+                                                    <a href="/about/trading-participants/stock-broker-firms" class="submenu-item"
+                                                       >
+                                                                                                                Stock Broker Firms
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/about/trading-participants/custodian-banks" class="submenu-item"
+                                                       >
+                                                                                                                Custodian Banks
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/about/contact-us" class="dropdown-item"
+                                       >
+                                                                                Contact Us
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/annual-reports" class="dropdown-item"
+                                       >
+                                                                                Reports
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/about/academy" class="dropdown-item"
+                                       >
+                                                                                USE Academy
+                                                                            </a>
+
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="nav-item">
+                    <a href="#" class="nav-link"
+                                               onclick="toggleMobileDropdown(event)" >
+                                                Listings
+                         <span class="chevron-down"></span>                     </a>
+                                            <ul class="dropdown">
+                                                            
+                                <li class="">
+                                    <a href="/listings/how-to-list" class="dropdown-item"
+                                       >
+                                                                                How to List
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/listings/listing-rules" class="dropdown-item"
+                                       >
+                                                                                Listing Rules
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="has-submenu">
+                                    <a href="/securities" class="dropdown-item"
+                                       >
+                                                                                Listed Securities
+                                         <span class="chevron-right"></span>                                     </a>
+
+                                                                            <ul class="submenu">
+                                                                                            <li>
+                                                    <a href="/securities/equities" class="submenu-item"
+                                                       >
+                                                                                                                Equities
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/securities/bonds" class="submenu-item"
+                                                       >
+                                                                                                                Bonds
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/listings/listing-faqs" class="dropdown-item"
+                                       >
+                                                                                FAQs
+                                                                            </a>
+
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="nav-item">
+                    <a href="#" class="nav-link"
+                                               onclick="toggleMobileDropdown(event)" >
+                                                Investors
+                         <span class="chevron-down"></span>                     </a>
+                                            <ul class="dropdown">
+                                                            
+                                <li class="has-submenu">
+                                    <a href="#how-to-invest" class="dropdown-item"
+                                       >
+                                                                                How to Invest
+                                         <span class="chevron-right"></span>                                     </a>
+
+                                                                            <ul class="submenu">
+                                                                                            <li>
+                                                    <a href="/investors/how-to-invest/types-of-investors" class="submenu-item"
+                                                       >
+                                                                                                                Types of Investors
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/investors/how-to-invest/kyc-requirements" class="submenu-item"
+                                                       >
+                                                                                                                KYC Requirements
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/investors/private-transfers" class="dropdown-item"
+                                       >
+                                                                                Private Transfers
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/investors/investor-faqs" class="dropdown-item"
+                                       >
+                                                                                Investor FAQs
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/investors/corporate-announcements" class="dropdown-item"
+                                       >
+                                                                                Corporate Announcements
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/investors/complaints-escalation" class="dropdown-item"
+                                       >
+                                                                                Complaints Escalation
+                                                                            </a>
+
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="nav-item">
+                    <a href="#" class="nav-link"
+                                               onclick="toggleMobileDropdown(event)" >
+                                                SCD
+                         <span class="chevron-down"></span>                     </a>
+                                            <ul class="dropdown">
+                                                            
+                                <li class="">
+                                    <a href="/scd/about-scd" class="dropdown-item"
+                                       >
+                                                                                About the SCD
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/scd/scd-rules" class="dropdown-item"
+                                       >
+                                                                                Legal and Regulatory Framework
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="has-submenu">
+                                    <a href="#scd-services" class="dropdown-item"
+                                       >
+                                                                                Services
+                                         <span class="chevron-right"></span>                                     </a>
+
+                                                                            <ul class="submenu">
+                                                                                            <li>
+                                                    <a href="/scd/services/depository" class="submenu-item"
+                                                       >
+                                                                                                                Depository
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/scd/services/clearing-and-settlement" class="submenu-item"
+                                                       >
+                                                                                                                Clearing and Settlement
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/scd/services/easy-portal" class="submenu-item"
+                                                       >
+                                                                                                                Easy Portal
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/scd/services/registry" class="submenu-item"
+                                                       >
+                                                                                                                Registry
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/scd/scd-forms" class="dropdown-item"
+                                       >
+                                                                                SCD Forms
+                                                                            </a>
+
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="nav-item">
+                    <a href="#" class="nav-link"
+                                               onclick="toggleMobileDropdown(event)" >
+                                                Market Statistics
+                         <span class="chevron-down"></span>                     </a>
+                                            <ul class="dropdown">
+                                                            
+                                <li class="">
+                                    <a href="/market-statistics/market-snapshot" class="dropdown-item"
+                                       >
+                                                                                Market Snapshot
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/market-statistics/market-performance" class="dropdown-item"
+                                       >
+                                                                                Market Performance
+                                                                            </a>
+
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="nav-item">
+                    <a href="#" class="nav-link"
+                                               onclick="toggleMobileDropdown(event)" >
+                                                Rules &amp; Regulations
+                         <span class="chevron-down"></span>                     </a>
+                                            <ul class="dropdown">
+                                                            
+                                <li class="">
+                                    <a href="/rules-and-regulations/market-regulations" class="dropdown-item"
+                                       >
+                                                                                Market Regulations
+                                                                            </a>
+
+                                                                    </li>
+                                                            
+                                <li class="">
+                                    <a href="/scd/scd-rules" class="dropdown-item"
+                                       >
+                                                                                SCD
+                                                                            </a>
+
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="nav-item">
+                    <a href="/use-specialist-market" class="nav-link"
+                                              >
+                                                USE EDAALA
+                                            </a>
+                                    </li>
+                    </ul>
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" onclick="USE_toggleMobileDrawer(); return false;">☰</button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="USE_toggleMobileDrawer()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="/images/logo.PNG" alt="Uganda Securities Exchange" class="mobile-menu-logo">
+            <button type="button" class="mobile-menu-close" onclick="USE_toggleMobileDrawer()">✕</button>
+        </div>
+        <ul class="mobile-menu-list">
+                            <li class="mobile-menu-item">
+                                            <a href="#" class="mobile-menu-link has-children"
+                                                      onclick="USE_toggleMobileSubmenu(event, 'submenu-0')">
+                                                        About USE
+                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-0">
+                                                                                            <li>
+                                                                            <a href="/about" class="mobile-submenu-link"
+                                           >
+                                                                                        About USE
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="#governance" class="mobile-submenu-link has-children"
+                                                                                      onclick="USE_toggleMobileSubmenu(event, 'grandsubmenu-0-1')">
+                                                                                        Governance
+                                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                                        </a>
+                                        <ul class="mobile-grandsubmenu" id="grandsubmenu-0-1">
+                                                                                            <li>
+                                                    <a href="/about/governance/structure" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Governance Structure
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="#products-services" class="mobile-submenu-link has-children"
+                                                                                      onclick="USE_toggleMobileSubmenu(event, 'grandsubmenu-0-2')">
+                                                                                        Products and Services
+                                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                                        </a>
+                                        <ul class="mobile-grandsubmenu" id="grandsubmenu-0-2">
+                                                                                            <li>
+                                                    <a href="/about/products-and-services/international-securities-identification-number-isin" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                International Securities Identification Number (ISIN)
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="#trading-participants" class="mobile-submenu-link has-children"
+                                                                                      onclick="USE_toggleMobileSubmenu(event, 'grandsubmenu-0-3')">
+                                                                                        Trading Participants
+                                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                                        </a>
+                                        <ul class="mobile-grandsubmenu" id="grandsubmenu-0-3">
+                                                                                            <li>
+                                                    <a href="/about/trading-participants/stock-broker-firms" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Stock Broker Firms
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/about/trading-participants/custodian-banks" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Custodian Banks
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/about/contact-us" class="mobile-submenu-link"
+                                           >
+                                                                                        Contact Us
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/annual-reports" class="mobile-submenu-link"
+                                           >
+                                                                                        Reports
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/about/academy" class="mobile-submenu-link"
+                                           >
+                                                                                        USE Academy
+                                        </a>
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="mobile-menu-item">
+                                            <a href="#" class="mobile-menu-link has-children"
+                                                      onclick="USE_toggleMobileSubmenu(event, 'submenu-1')">
+                                                        Listings
+                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-1">
+                                                                                            <li>
+                                                                            <a href="/listings/how-to-list" class="mobile-submenu-link"
+                                           >
+                                                                                        How to List
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/listings/listing-rules" class="mobile-submenu-link"
+                                           >
+                                                                                        Listing Rules
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/securities" class="mobile-submenu-link has-children"
+                                                                                      onclick="USE_toggleMobileSubmenu(event, 'grandsubmenu-1-2')">
+                                                                                        Listed Securities
+                                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                                        </a>
+                                        <ul class="mobile-grandsubmenu" id="grandsubmenu-1-2">
+                                                                                            <li>
+                                                    <a href="/securities/equities" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Equities
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/securities/bonds" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Bonds
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/listings/listing-faqs" class="mobile-submenu-link"
+                                           >
+                                                                                        FAQs
+                                        </a>
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="mobile-menu-item">
+                                            <a href="#" class="mobile-menu-link has-children"
+                                                      onclick="USE_toggleMobileSubmenu(event, 'submenu-2')">
+                                                        Investors
+                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-2">
+                                                                                            <li>
+                                                                            <a href="#how-to-invest" class="mobile-submenu-link has-children"
+                                                                                      onclick="USE_toggleMobileSubmenu(event, 'grandsubmenu-2-0')">
+                                                                                        How to Invest
+                                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                                        </a>
+                                        <ul class="mobile-grandsubmenu" id="grandsubmenu-2-0">
+                                                                                            <li>
+                                                    <a href="/investors/how-to-invest/types-of-investors" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Types of Investors
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/investors/how-to-invest/kyc-requirements" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                KYC Requirements
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/investors/private-transfers" class="mobile-submenu-link"
+                                           >
+                                                                                        Private Transfers
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/investors/investor-faqs" class="mobile-submenu-link"
+                                           >
+                                                                                        Investor FAQs
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/investors/corporate-announcements" class="mobile-submenu-link"
+                                           >
+                                                                                        Corporate Announcements
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/investors/complaints-escalation" class="mobile-submenu-link"
+                                           >
+                                                                                        Complaints Escalation
+                                        </a>
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="mobile-menu-item">
+                                            <a href="#" class="mobile-menu-link has-children"
+                                                      onclick="USE_toggleMobileSubmenu(event, 'submenu-3')">
+                                                        SCD
+                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-3">
+                                                                                            <li>
+                                                                            <a href="/scd/about-scd" class="mobile-submenu-link"
+                                           >
+                                                                                        About the SCD
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/scd/scd-rules" class="mobile-submenu-link"
+                                           >
+                                                                                        Legal and Regulatory Framework
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="#scd-services" class="mobile-submenu-link has-children"
+                                                                                      onclick="USE_toggleMobileSubmenu(event, 'grandsubmenu-3-2')">
+                                                                                        Services
+                                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                                        </a>
+                                        <ul class="mobile-grandsubmenu" id="grandsubmenu-3-2">
+                                                                                            <li>
+                                                    <a href="/scd/services/depository" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Depository
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/scd/services/clearing-and-settlement" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Clearing and Settlement
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/scd/services/easy-portal" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Easy Portal
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="/scd/services/registry" class="mobile-grandsubmenu-link"
+                                                       >
+                                                                                                                Registry
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/scd/scd-forms" class="mobile-submenu-link"
+                                           >
+                                                                                        SCD Forms
+                                        </a>
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="mobile-menu-item">
+                                            <a href="#" class="mobile-menu-link has-children"
+                                                      onclick="USE_toggleMobileSubmenu(event, 'submenu-4')">
+                                                        Market Statistics
+                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-4">
+                                                                                            <li>
+                                                                            <a href="/market-statistics/market-snapshot" class="mobile-submenu-link"
+                                           >
+                                                                                        Market Snapshot
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/market-statistics/market-performance" class="mobile-submenu-link"
+                                           >
+                                                                                        Market Performance
+                                        </a>
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="mobile-menu-item">
+                                            <a href="#" class="mobile-menu-link has-children"
+                                                      onclick="USE_toggleMobileSubmenu(event, 'submenu-5')">
+                                                        Rules &amp; Regulations
+                            <i class="fas fa-chevron-down mobile-chevron"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-5">
+                                                                                            <li>
+                                                                            <a href="/rules-and-regulations/market-regulations" class="mobile-submenu-link"
+                                           >
+                                                                                        Market Regulations
+                                        </a>
+                                                                    </li>
+                                                                                            <li>
+                                                                            <a href="/scd/scd-rules" class="mobile-submenu-link"
+                                           >
+                                                                                        SCD
+                                        </a>
+                                                                    </li>
+                                                    </ul>
+                                    </li>
+                            <li class="mobile-menu-item">
+                                            <a href="/use-specialist-market" class="mobile-menu-link"
+                           >
+                                                        USE EDAALA
+                        </a>
+                                    </li>
+                    </ul>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">Debt Instruments</h1>
+            <p class="hero-subtitle">Treasury Bonds, Corporate Bonds, and Treasury Bills on the Uganda Securities Exchange</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Treasury Bonds Section -->
+        <div class="section">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">Treasury Bonds</h2>
+            <div class="section-content">
+                <div style="overflow-x: auto;">
+                    <table class="reports-table">
+                        <thead>
+                            <tr>
+                                <th>ISIN</th>
+                                <th>Issuer Name</th>
+                                <th>Type</th>
+                                <th>Issued Shares</th>
+                                <th>Issue Date</th>
+                                <th>Rate (%)</th>
+                                <th>Maturity</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UG12H2109215</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>100,000,000,000</td>
+                                <td>20160921</td>
+                                <td>16.50</td>
+                                <td>20210921</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12H2810218</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>200,000,000,000</td>
+                                <td>20161028</td>
+                                <td>16.75</td>
+                                <td>20211028</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12H0312217</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>100,000,000,000</td>
+                                <td>20161203</td>
+                                <td>17.00</td>
+                                <td>20211203</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12H1305228</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>156,300,000,000</td>
+                                <td>20170513</td>
+                                <td>15.38</td>
+                                <td>20220513</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG0000001079</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>145,000,000,000</td>
+                                <td>20120609</td>
+                                <td>11.00</td>
+                                <td>20220609</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12H0707226</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>300,000,000,000</td>
+                                <td>20150707</td>
+                                <td>14.13</td>
+                                <td>20220707</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12H2811224</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>156,300,000,000</td>
+                                <td>20151128</td>
+                                <td>12.50</td>
+                                <td>20221128</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12J1801248</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>580,000,000,000</td>
+                                <td>20140118</td>
+                                <td>14.00</td>
+                                <td>20240118</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12H1005240</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>153,700,000,000</td>
+                                <td>20190510</td>
+                                <td>14.88</td>
+                                <td>20240510</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG0000001467</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>500,000,000,000</td>
+                                <td>20140801</td>
+                                <td>14.00</td>
+                                <td>20240801</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG0000001517</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>100,000,000,000</td>
+                                <td>20150116</td>
+                                <td>11.00</td>
+                                <td>20250116</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12J1812252</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>120,000,000,000</td>
+                                <td>20151218</td>
+                                <td>19.50</td>
+                                <td>20251218</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12J2708269</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>300,000,000,000</td>
+                                <td>20160827</td>
+                                <td>16.63</td>
+                                <td>20260827</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12J0605277</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>360,000,000,000</td>
+                                <td>20170506</td>
+                                <td>16.00</td>
+                                <td>20270506</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12J1301280</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>220,000,000,000</td>
+                                <td>20180113</td>
+                                <td>14.13</td>
+                                <td>20280113</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG0000001376</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>220,000,000,000</td>
+                                <td>20131116</td>
+                                <td>15.25</td>
+                                <td>20281116</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG0000001533</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>900,000,000,000</td>
+                                <td>20140823</td>
+                                <td>14.25</td>
+                                <td>20290823</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12K0205308</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>120,000,000,000</td>
+                                <td>20150502</td>
+                                <td>17.50</td>
+                                <td>20300502</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12J1411303</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>165,000,000,000</td>
+                                <td>20201114</td>
+                                <td>16.00</td>
+                                <td>20301114</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12K0304317</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>300,000,000,000</td>
+                                <td>20160403</td>
+                                <td>17.00</td>
+                                <td>20310403</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12K0403325</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>320,000,000,000</td>
+                                <td>20170304</td>
+                                <td>16.38</td>
+                                <td>20320304</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12K0302337</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>750,000,000,000</td>
+                                <td>20180203</td>
+                                <td>14.38</td>
+                                <td>20330203</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12K2206346</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>140,000,000,000</td>
+                                <td>20190622</td>
+                                <td>14.88</td>
+                                <td>20340622</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12K0811352</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>496,700,000,000</td>
+                                <td>20201108</td>
+                                <td>16.25</td>
+                                <td>20351108</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG12L0111405</td>
+                                <td>Government of Uganda</td>
+                                <td>B</td>
+                                <td>624,500,000,000</td>
+                                <td>20201101</td>
+                                <td>17.5</td>
+                                <td>20401101</td>
+                                <td>GOVB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corporate Bonds Section -->
+        <div class="section" style="margin-top: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">Corporate Bonds</h2>
+            <div class="section-content">
+                <div style="overflow-x: auto;">
+                    <table class="reports-table">
+                        <thead>
+                            <tr>
+                                <th>ISIN</th>
+                                <th>Issuer Name</th>
+                                <th>Type</th>
+                                <th>Issued Shares</th>
+                                <th>Issue Date</th>
+                                <th>Rate (%)</th>
+                                <th>Maturity</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UG0000001384</td>
+                                <td>KAKIRA SUGAR LIMITED</td>
+                                <td>B</td>
+                                <td>75,355,000,000</td>
+                                <td>12/9/2013</td>
+                                <td>12.5</td>
+                                <td>12/7/2023</td>
+                                <td>CORPB</td>
+                            </tr>
+                            <tr>
+                                <td>UG0000001095</td>
+                                <td>AFRICAN DEVELOPMENT BANK</td>
+                                <td>B</td>
+                                <td>120,312,499,997</td>
+                                <td>7/25/2012</td>
+                                <td>6.25</td>
+                                <td>2/1/2022</td>
+                                <td>CORPB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Treasury Bills Section -->
+        <div class="section" style="margin-top: 3rem; margin-bottom: 3rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">Treasury Bills</h2>
+            <div class="section-content">
+                <div style="overflow-x: auto;">
+                    <table class="reports-table">
+                        <thead>
+                            <tr>
+                                <th>ISIN</th>
+                                <th>Issuer Name</th>
+                                <th>Type</th>
+                                <th>Issued Shares</th>
+                                <th>Issue Date</th>
+                                <th>Rate (%)</th>
+                                <th>Maturity</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UG11B0807211</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>15,000,000,000</td>
+                                <td>20210408</td>
+                                <td>0</td>
+                                <td>20210708</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C1607212</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210116</td>
+                                <td>0</td>
+                                <td>20210716</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11B2207212</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>15,000,000,000</td>
+                                <td>20210422</td>
+                                <td>0</td>
+                                <td>20210722</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2907211</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20200729</td>
+                                <td>0</td>
+                                <td>20210729</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C2907215</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210129</td>
+                                <td>0</td>
+                                <td>20210729</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11B0508215</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>15,000,000,000</td>
+                                <td>20210505</td>
+                                <td>0</td>
+                                <td>20210805</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C1208219</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210212</td>
+                                <td>0</td>
+                                <td>20210812</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11B1908216</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>15,000,000,000</td>
+                                <td>20210519</td>
+                                <td>0</td>
+                                <td>20210819</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1208215</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20200812</td>
+                                <td>0</td>
+                                <td>20210812</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2608215</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20200826</td>
+                                <td>0</td>
+                                <td>20210826</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C2608219</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210226</td>
+                                <td>0</td>
+                                <td>20210826</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11B0309218</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>15,000,000,000</td>
+                                <td>20210603</td>
+                                <td>0</td>
+                                <td>20210903</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E0909219</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20200909</td>
+                                <td>0</td>
+                                <td>20210909</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C0909213</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210309</td>
+                                <td>0</td>
+                                <td>20210909</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2309210</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20200923</td>
+                                <td>0</td>
+                                <td>20210923</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C2309214</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210323</td>
+                                <td>0</td>
+                                <td>20210923</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11B2309216</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>10,000,000,000</td>
+                                <td>20210623</td>
+                                <td>0</td>
+                                <td>20210923</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C0710215</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210407</td>
+                                <td>0</td>
+                                <td>20211007</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2110212</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20201021</td>
+                                <td>0</td>
+                                <td>20211021</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C2110216</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210421</td>
+                                <td>0</td>
+                                <td>20211021</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E0411216</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20201104</td>
+                                <td>0</td>
+                                <td>20211104</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C0411210</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210504</td>
+                                <td>0</td>
+                                <td>20211104</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1811216</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20201118</td>
+                                <td>0</td>
+                                <td>20211118</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C1811210</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210518</td>
+                                <td>0</td>
+                                <td>20211118</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E0212218</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20201202</td>
+                                <td>0</td>
+                                <td>20211202</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C0312210</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>35,000,000,000</td>
+                                <td>20210503</td>
+                                <td>0</td>
+                                <td>20211203</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1612218</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20201216</td>
+                                <td>0</td>
+                                <td>20211216</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11C2312218</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>20,000,000,000</td>
+                                <td>20210623</td>
+                                <td>0</td>
+                                <td>20211223</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E3012219</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20201230</td>
+                                <td>0</td>
+                                <td>20211230</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1401224</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210114</td>
+                                <td>0</td>
+                                <td>20220114</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2701226</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210127</td>
+                                <td>0</td>
+                                <td>20220127</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1002220</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210210</td>
+                                <td>0</td>
+                                <td>20220210</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2402221</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210224</td>
+                                <td>0</td>
+                                <td>20220224</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1003228</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210310</td>
+                                <td>0</td>
+                                <td>20220310</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2403229</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210324</td>
+                                <td>0</td>
+                                <td>20220324</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E0704222</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210407</td>
+                                <td>0</td>
+                                <td>20220407</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2104223</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210421</td>
+                                <td>0</td>
+                                <td>20220421</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E0505223</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210505</td>
+                                <td>0</td>
+                                <td>20220505</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E1905224</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210519</td>
+                                <td>0</td>
+                                <td>20220519</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E0306226</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>195,000,000,000</td>
+                                <td>20210603</td>
+                                <td>0</td>
+                                <td>20220603</td>
+                                <td>GOVB</td>
+                            </tr>
+                            <tr>
+                                <td>UG11E2306224</td>
+                                <td>Government of Uganda</td>
+                                <td>M</td>
+                                <td>125,000,000,000</td>
+                                <td>20210623</td>
+                                <td>0</td>
+                                <td>20220623</td>
+                                <td>GOVB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="/images/use-logo-white.png" alt="USE Logo" class="footer-logo">
+                <div class="footer-address">
+                    Plot 3-5 New Port-Bell Road, UAP Nakawa Business Park, Block A, 4th Floor
+P.O.Box 23552, Kampala, Uganda<br>
+                    Tel: +256-312-370815/7/8
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-section-title">About us</h4>
+                <ul class="footer-links">
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/about/governance/structure">Our Mission</a></li>
+                    <li><a href="/about/trading-participants/stock-broker-firms">Trading Participants</a></li>
+                    <li><a href="/about/contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-section-title">Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="/scd/about-scd">SCD</a></li>
+                    <li><a href="/market-statistics/market-snapshot">Securities</a></li>
+                    <li><a href="/scd/services/registry">Master Class</a></li>
+                    <li><a href="/market-statistics/market-performance">Market Bulletin</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-section-title">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="/listings/how-to-list">Listing</a></li>
+                    <li><a href="/investors/how-to-invest/types-of-investors">Investments</a></li>
+                    <li><a href="/annual-reports">Annual Reports</a></li>
+                    <li><a href="/listings/listing-rules">Rules & Regulations</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-section-title">Get in touch</h4>
+                <div class="footer-contact">
+                    <p><a href="mailto:info@use.or.ug">info@use.or.ug</a></p>
+                                            <p style="color: rgba(255, 255, 255, 0.7); margin-top: 0.5rem;">
+                            <i class="fas fa-clock"></i> Trading Hours: 9:00 AM - 1:00 PM EAT
+                        </p>
+                                    </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-disclaimer">
+            <h4 class="footer-section-title">Notice and Disclaimer</h4>
+            <p>
+                To access the Uganda Securities Exchange website (the "Website") and its data
+                product (the "Data"), you must agree to the below notice and disclaimer (the
+                "Terms"). If you do not agree to the Terms, then you must refrain from using the
+                Website and the Data.
+            </p>
+            <p>
+                Unless otherwise stated, the Website and Data is the copyright of the Uganda
+                Securities Exchange.
+            </p>
+            <p>
+                Access to and use of the Website and the Data is for personal and non-commercial
+                use only. No part of the Website or Data may be copied, reproduced, republished,
+                downloaded, posted, broadcast or transmitted in any way for any commercial
+                purpose and/or exploited for profit.
+            </p>
+            <p>
+                The Website and Data is provided "as is" and on an "as available" basis only and no
+                guarantee is made as to the accuracy, timeliness, completeness, or fitness for a
+                particular purpose of the Website or any of the Data. While care has been taken to
+                ensure that all Data provided on the Website is correct at the time of publication, the
+                Uganda Securities Exchange does not accept any responsibility for any errors,
+                omissions, or inaccurate Data on the Website.
+            </p>
+            <p>
+                The Uganda Securities Exchange reserves the right to make changes to the Website
+                and/or Data at any time without prior notice to you.
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2026 Uganda Securities Exchange. All rights reserved.
+            </div>
+            <div class="footer-legal">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Header scroll behavior
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        function toggleMobileMenu() {
+            console.log('toggleMobileMenu called');
+            const menu = document.querySelector('.nav-menu');
+            console.log('menu element:', menu);
+            if (menu) {
+                menu.classList.toggle('active');
+                console.log('menu active state:', menu.classList.contains('active'));
+            } else {
+                console.error('nav-menu not found!');
+            }
+        }
+
+        // Mobile dropdown toggle
+        let lastDropdownToggle = 0;
+        function toggleMobileDropdown(event) {
+            console.log('>>> toggleMobileDropdown called <<<');
+            console.log('Window width:', window.innerWidth);
+
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Prevent rapid double-clicks
+                const now = Date.now();
+                if (now - lastDropdownToggle < 300) {
+                    console.log('⚠️ Too fast, ignoring');
+                    return;
+                }
+                lastDropdownToggle = now;
+
+                const dropdown = event.currentTarget.nextElementSibling;
+                const chevron = event.currentTarget.querySelector('.chevron-down');
+
+                console.log('Dropdown element:', dropdown);
+                console.log('Has dropdown class:', dropdown?.classList.contains('dropdown'));
+                console.log('Chevron found:', !!chevron);
+
+                if (dropdown && dropdown.classList.contains('dropdown')) {
+                    const wasActive = dropdown.classList.contains('active');
+                    dropdown.classList.toggle('active');
+                    console.log('Dropdown toggled from', wasActive, 'to', dropdown.classList.contains('active'));
+
+                    if (chevron) {
+                        chevron.style.transform = dropdown.classList.contains('active')
+                            ? 'rotate(225deg)'
+                            : 'rotate(45deg)';
+                        console.log('Chevron rotated');
+                    }
+
+                    // List all dropdown items for debugging
+                    const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+                    console.log('Dropdown contains', dropdownItems.length, 'items');
+                    dropdownItems.forEach((item, index) => {
+                        const hasSubmenu = item.parentElement.classList.contains('has-submenu');
+                        const hasChevron = !!item.querySelector('.chevron-right');
+                        console.log(`  Item ${index + 1}:`, item.textContent.trim(), '- has-submenu:', hasSubmenu, '- has chevron-right:', hasChevron);
+                    });
+                }
+            }
+        }
+
+        // Initialize mobile menu functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOMContentLoaded - Initializing mobile menu');
+
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const menu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            console.log('Mobile button found:', mobileBtn);
+            console.log('Menu found:', menu);
+
+            // Add click handlers for mobile dropdown toggles
+            navLinks.forEach(link => {
+                if (link.querySelector('.chevron-down')) {
+                    link.addEventListener('click', toggleMobileDropdown);
+                }
+            });
+
+            // Use event delegation for submenu toggles
+            document.body.addEventListener('click', function(e) {
+                // Only on mobile
+                if (window.innerWidth > 768) return;
+
+                // Check if we clicked on a dropdown-item
+                const dropdownItem = e.target.closest('.dropdown-item');
+                if (!dropdownItem) return;
+
+                // Check if this dropdown-item has a submenu
+                const parentLi = dropdownItem.parentElement;
+                const hasSubmenuClass = parentLi && parentLi.classList.contains('has-submenu');
+
+                console.log('🔵 Clicked on dropdown-item:', dropdownItem.textContent.trim());
+                console.log('🔵 Parent li has has-submenu class:', hasSubmenuClass);
+
+                if (hasSubmenuClass) {
+                    const submenu = parentLi.querySelector('.submenu');
+                    const chevron = dropdownItem.querySelector('.chevron-right');
+
+                    console.log('🔵 Submenu found:', !!submenu);
+                    console.log('🔵 Chevron found:', !!chevron);
+
+                    // Prevent navigation
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (submenu) {
+                        const wasActive = submenu.classList.contains('active');
+                        submenu.classList.toggle('active');
+                        console.log('✅ Submenu toggled from', wasActive, 'to', submenu.classList.contains('active'));
+
+                        if (chevron) {
+                            chevron.style.transform = submenu.classList.contains('active')
+                                ? 'rotate(45deg)'
+                                : 'rotate(-45deg)';
+                            console.log('✅ Chevron rotated');
+                        }
+                    } else {
+                        console.log('❌ No submenu element found');
+                    }
+                }
+            }, false);
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                const menu = document.querySelector('.nav-menu');
+                const mobileBtn = document.querySelector('.mobile-menu-btn');
+                const header = document.querySelector('.header');
+
+                // Only close if clicking completely outside the header
+                if (menu && menu.classList.contains('active')) {
+                    if (!header.contains(e.target)) {
+                        console.log('🔴 Closing menu - clicked outside header');
+                        menu.classList.remove('active');
+                        // Close all dropdowns and submenus
+                        document.querySelectorAll('.dropdown.active, .submenu.active').forEach(el => {
+                            el.classList.remove('active');
+                        });
+                        // Reset all chevrons
+                        document.querySelectorAll('.chevron-down, .chevron-right').forEach(chevron => {
+                            if (chevron.classList.contains('chevron-down')) {
+                                chevron.style.transform = 'rotate(45deg)';
+                            } else {
+                                chevron.style.transform = 'rotate(-45deg)';
+                            }
+                        });
+                    }
+                }
+            }, true); // Use capture phase
+        });
+    </script>
+
+</body>
+</html>
