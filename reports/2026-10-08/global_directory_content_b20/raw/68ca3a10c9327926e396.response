@@ -1,0 +1,728 @@
+
+<html lang="en">
+    
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="The official website of the Cayman Islands Stock Exchange." />
+        <title>Listing Fees | Cayman Islands Stock Exchange</title>
+        <!-- Bootstrap -->
+        <link href="/Content/bootstrap.min.css" rel="stylesheet">
+		<link href="/Content/bootstrap-datepicker3.min.css" rel="stylesheet">
+        <link href="/Content/style.css" rel="stylesheet" />
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Scripts go here -->
+        <script src="/scripts/TickerTape3.js?v101" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/Scripts/html5shiv.min.js"></script>
+      <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+    <body>
+        <div id="not-home-page-wrapper" class="not-home-page-wrapper">
+            <div id="main-body" class="not-home-page container">
+                
+                
+				<div id="branding" class="row">
+                    <div class="col-xs-5">
+                        <a href="https://www.csx.ky"><img id="csx-logo" class="pull-left" src="/images/csx-logo-gold250.png"  title="Home"/></a>
+                    </div>
+                    <div class="col-7 brand-right" style="vertical-align: text-top;">
+                        <div class="col-xs-4 abouttime smallcaper pull-right reverse-gold">
+                            Cayman Time | 07:10 - 
+                            GMT Time | 12:10
+                            <!-- /input-group -->
+                            <form id="main-search" action="/companies/search.asp" method="post" role="form">
+                                <div class="form-group fadeaway">
+                                    <div class="input-group pull-right">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default fadeaway" type="submit">Search</button>
+                                        </span>
+                                        <input type="text" name="SearchText" class="form-control fadeaway">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="col-xs-4 top-links col-xs-offset-3">
+                            <a class="color-red" href="#">CUSIP/ISINs and LEI Services</a>
+                        </div> -->
+                    </div>
+<!--					
+                    <div class="row" >
+                        <div class="col-xs-10" style="margin-top: 20px;">
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick">
+                                    <script type="text/javascript">var ticker2 = new TickerTape('/_data/TickerDataMF.asp', 'HTickerTape', true, 100, 20);</script>
+                                </div>
+                            </div>
+							
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick" style="padding-top:5px;">
+                                    <script type="text/javascript">var ticker3 = new TickerTape('/_data/TickerDataAN.asp', 'HTickerTape', true, 100, 40);</script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+-->
+                </div><nav id="main-nav" class="navbar navbar-default navbar-static-top smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+                            <li class="dropdown"><a href="/" class="nav-level-1">Home</a></li>
+							
+                            <li class="dropdown nav-level-1">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; About Us &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/aboutus/overview.asp">Overview</a></li>
+									<li><a href="/aboutus/benefits.asp">Benefits</a></li>
+                                    <li><a href="/aboutus/news.asp">News and Events</a></li>
+                                    <li><a href="/aboutus/affiliations.asp">Affiliations</a></li>
+									 <li><a href="/aboutus/recognitions.asp">Recognitions</a></li>
+                                    <!--<li><a href="/aboutus/csx-on-xetra.asp">CSX on XETRA</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Exchange Holidays</a></li>
+									<!--<li><a href="/aboutus/contact-us.asp">Contact Us</a></li>-->
+									<li><a href="/aboutus/applicationform.asp">Employment Application Form</a></li>
+<!--                                    <li><a href="/aboutus/faqs.asp">FAQs</a></li>
+-->
+                                </ul>
+                            </li>
+ 
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Companies &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/companies/announcements.asp">Announcements</a></li>
+                                    <li><a href="/companies/investment-funds.asp">Investment Funds</a></li>
+                                    <li><a href="/companies/specialist-debts.asp">Specialist Debt</a></li>
+                                    <li><a href="/companies/corporate-debts.asp">Corporate Debt</a></li>
+                                    <li><a href="/companies/ils-cat-bonds.asp">ILS / CAT Bonds</a></li>
+									<li><a href="/companies/retail-debts.asp">Retail Debt</a></li>
+                                    <li><a href="/companies/equities.asp">Equity</a></li>
+                                    <li><a href="/companies/daily-official-list.asp">Official List</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Listing &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/listing/listing-on-csx.asp">Listing on CSX</a></li>
+                                    <li><a href="/listing/product-guides.asp">Product Guides</a></li>
+									<li><a href="/listing/listing-rules-and-forms.asp">Listing Rules and Forms</a></li>
+                                    <li><a href="/listing/listing-checklists.asp">Listing Checklists</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+<!-- 									<li><a href="/listing/fact-sheets.asp">Fact Sheets</a></li>
+-->
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Trading &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/trading/trading-on-csx.asp">Trading on CSX</a></li>
+                                    <li><a href="/trading/daily-trading-summary.asp">Daily Trading Summary</a></li>
+                                    <!-- <li><a href="/trading/trading-procedures.asp">Trading Procedures</a></li>
+                                    <li><a href="/trading/settlement-procedures.asp">Settlement Procedures</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Trading Calendar</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+                                </ul>
+                            </li>
+<!--
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">CSX FundStream <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/fundstream/csx-fundstream.asp">CSX FundStream</a></li>
+                                </ul>
+                            </li>
+-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; ISIN &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/isin/isin-cusip.asp">ISIN-CUSIP Services</a></li>
+                                    <li><a href="/isin/apply-for-isin.asp">Apply for ISIN</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Agents &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/listing-agent/listing-agents.asp">Listing Agents</a></li>
+                                    <li><a href="/listing-agent/listing-agent-guide.asp">Listing Agent Guide</a></li>
+									<li><a href="/listing-agent/listing-agent-benefits.asp">Listing Agent Benefits</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Members &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-members.asp">Broker Members</a></li>
+                                    <li><a href="/broker/broker-membership-rules-forms.asp">Broker Membership Rules and Forms</a></li>
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Fees &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+							
+							<li class="dropdown">
+							  <a href="#" class="esg" data-toggle="dropdown">&nbsp; ESG &nbsp;<b class="caret"></b></a>
+							     <ul class="dropdown-menu">
+                                    <li><a href="/companies/esg.asp">CSX ESG Market</a></li>
+								 </ul>
+                            </li>
+							
+							<!-- <li class="dropdown"><a href="/Documents/Covid-19 Business Continuity Messsage.docx" class="nav-level-1">Covid-19 Business Continuity</a></li>-->
+							<li class="dropdown"><a href="/aboutus/contact-us.asp" class="nav-level-1">&nbsp;Contact Us &nbsp;</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+				<nav id="sub-nav" class="navbar navbar-default smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+
+							<li class="dropdown"><a href="listing-on-csx.asp">Listing on CSX</a></li>
+
+							<li class="dropdown"><a href="product-guides.asp">Product Guides</a></li>
+
+							<li class="dropdown"><a href="listing-rules-and-forms.asp">Listing Rules and Forms</a></li>
+
+							<li class="dropdown"><a href="listing-checklists.asp">Listing Checklists</a></li>
+
+							<li class="dropdown"><a class="current-page" href="listing-fees.asp">Listing Fees</a></li>
+
+						</ul>
+					</div>
+				</nav>
+
+<ol class="breadcrumb">			
+<li><a href="/">Home</a></li><li>Listing</li>
+
+<li class="active">Listing Fees</li>
+
+</ol>
+
+				
+                <div id="content" class="row addtop">
+                    <div class="col-xs-12 main-content">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs smallcaper">
+                            <li class="active"><a href="#tab1" data-toggle="tab">Debt</a></li>
+                            <li><a href="#tab2" data-toggle="tab">Derivative Warrants</a></li>
+                            <li><a href="#tab3" data-toggle="tab">Investment Funds</a></li>
+                            <li><a href="#tab4" data-toggle="tab">ETF</a></li>
+                            <li><a href="#tab5" data-toggle="tab">Equity Securities &amp; Retail Debt</a></li>
+                            <li><a href="#tab6" data-toggle="tab">Depository Receipts</a></li>
+							<li><a href="#tab7" data-toggle="tab">Secondary Listings</a></li>
+							<li><a href="#tab8" data-toggle="tab">Admin/Continuing Obligation Fees</a></li>
+							<li><a href="#tab9" data-toggle="tab">Notes</a></li>
+							
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab1">
+								<h2>Debt</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="19%"></th>
+                                            <th width="27%">Initial<br>(per application)</th>
+                                            <th width="28%">Annual<br>(payable on initial application)</th>
+                                            <th width="26%">Total<br>(payable on application)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Specialist Debt - Chapter 8</td>
+                                            <td><b>US $2,500</b><sup>*1</sup><br>(CI $2,050)</td>
+                                            <td><b>US $3,500</b><sup>*2</sup><br>(CI $2,870)</td>
+											<td><b>US $6,000</b><br>(CI $4,920)</td>
+                                        </tr>
+										 <tr>
+                                            <td>Specialist Debt Securities per series - Chapter 8</td>
+                                            <td><b>US $500</b><sup>*3</sup><br>(CI $410)</td>
+                                            <td><b>N/A</b></td>
+											<td><b>US $500</b><br>(CI $410)</td>
+                                        </tr>
+										
+                                        <tr>
+                                            <td>Corporate/Sovereign Debt securities - <br> Chapter 12</td>
+                                            <td><b>US $2,500</b><br>(CI $2,050)</td>
+                                            <td><b>US $3,500</b><br>(CI $2,870)</td>
+											<td><b>US $6,000</b><br>(CI $4,920)</td>
+                                        </tr>
+										 <tr>
+                                            <td>Corporate/Sovereign Debt securities per series - Chapter 12</td>
+                                            <td><b>US $500</b><sup>*4</sup><br>(CI $410)</td>
+                                            <td><b>N/A</b></td>
+											<td><b>US $500</b><br>(CI $410)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Debt securities of Specialist Companies - Chapter 14</td>
+                                            <td><b>US $3,500</b><br>(CI $2,870)</td>
+                                            <td><b>US $3,500</b><br>(CI $2,870)</td>
+											<td><b>US $7,000</b><br>(CI $5,740)</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td colspan="4"><b>Notes :</b> 
+											<br>1. Initial fee per application (including all co-issuers).
+											<!--<br>2. For CLO/CDO/CBO transactions : Payable annually on each anniversary of the listing date. Applicable to<br>&nbsp;&nbsp;&nbsp;&nbsp; all issuers listed or approved to list. -->
+											
+											<br>2. Payable annually on each anniversary of the listing date. Applicable to all issuers listed or approved to list. 
+											<br>3. Initial fee per class/series of specialist debt securities listed under Chapter 8.
+											<br>4. Initial fee per class/series of corporate debt securities listed under Chapter 12.
+											
+											</td>
+                                           
+                                        </tr>
+                                    </tbody>
+                                </table>
+								<h2>Debt Programmes : Specialist/Corporate Sovereign</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="19%"></th>
+                                            <th width="27%">Initial</th>
+                                            <th width="28%">Annual</th>
+                                            <th width="26%">Total<br>(payable on application)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Programme</td>
+                                            <td><b>US $3,000</b><br>(CI $2,460)</td>
+                                            <td><b>US $1,500</b><br>(CI $1,230)</td>
+											<td><b>US $4,500</b><br>(CI $3,690)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Per series under Programme</td>
+                                            <td><b>US $1,000</b><br>(CI $820)</td>
+                                            <td><b>US $500</b><br>(CI $410)</td>
+											<td><b>US $1,500</b><br>(CI $1230)</td>
+                                        </tr>
+										
+										<tr>
+                                            <td>Programme Renewal Fee</td>
+                                            <td><b>US $3,000</b><sup>*5</sup><br>(CI $2460)</td>
+                                            <td>&nbsp;</td>
+											 <td>&nbsp;</td>
+                                        </tr>
+                                       
+									   <tr>
+                                            
+                                            <td colspan="4"><b>Notes :</b> 
+											<br>5. The debt programme renewal period has been reduced from five years to one year..
+																						
+											</td>
+                                           
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</div>
+							
+							<div class="tab-pane fade" id="tab2">
+								<h2>Derivative Warrants</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="19%"></th>
+                                            <th width="27%">Initial<br>(per application - including all co-issuers/series/classes)</th>
+                                            <th width="28%">Annual<br>(payable on initial application - covers all co-issuers/series/classes)</th>
+                                            <th width="26%">Total<br>(payable on application)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Derivative Warrants</td>
+                                            <td><b>US $3,500<br></b>(CI $2,870)</td>
+                                            <td><b>US $1,500</b><br>(CI $1,230)</td>
+											<td><b>US $5,000</b><br>(CI $4,100)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+								<h2>Derivative Warrants Programmes</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="19%"></th>
+                                            <th width="27%">Initial</th>
+                                            <th width="28%">Annual</th>
+                                            <th width="26%">Total<br>(payable on application)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Programme</td>
+                                            <td><b>US $3,000</b><sup>*</sup><br>(CI $2,460)</td>
+                                            <td><b>US $1,500</b><br>(CI $1,230)</td>
+											<td><b>US $4,500</b><br>(CI $3,690)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Per series under Programme</td>
+                                            <td><b>US $1,000</b><br>(CI $820)</td>
+                                            <td><b>US $500</b><br>(CI $410)</td>
+											<td><b>US $1,500</b><br>(CI $1230)</td>
+                                        </tr>
+										
+										<tr>
+                                            <td>Per series under Programme</td>
+                                            <td><b>US $1,000</b><br>(CI $820)</td>
+                                            <td><b>US $500</b><br>(CI $410)</td>
+											<td><b>US $1,500</b><br>(CI $1230)</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>*also payable on increase of face value or addition of co-issuer</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</div>
+							<div class="tab-pane fade" id="tab3">
+								<h2>Investment Funds</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="15%"></th>
+                                            <th width="20%">Initial<br>(per sub -fund/class/series/tranche)</th>
+                                            <th width="20%">Annual<br>(per sub -fund/class/series/tranche)</th>
+                                            <th width="20%">Total<br>(payable on application)</th>
+											
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Fund</td>
+                                            <td><b>US $5,000</b><br>(CI $4,100)</td>
+                                            <td><b>US $2,500</b><br>(CI $2,050)</td>
+											<td><b>US $7,500</b><br>(CI $6,150)</td>
+											
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td>Series<br>(of previously listed share class or sub fund)</td>
+                                            <td><b>US $1000</b><br>(CI $820)<td> n/a</td>
+                                            <td><b>US $1000</b><br>(CI $820)</td>
+											
+											
+                                        </tr>
+                                        <tr>
+                                            <td>Subsequent share class/sub fund</td>
+                                            <td><b>US $1,500</b><br>(CI $1230)</td>
+                                            <td><b>US $1,000</b><br>(CI $820)</td>
+											<td><b>US $2,500</b><br>(CI $2050)</td>
+											
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</div>
+							<div class="tab-pane fade" id="tab4">
+								<h2>Exchange Traded Funds</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="25%">According to market value of securities</th>
+                                            <th width="25%">Initial<br>(per share class/sub fund)<sup>*</sup></th>
+                                            <th width="25%">Annual<br>(per share class/sub fund)<sup>*</sup></th>
+                                            <th width="25%">Total<br>(payable on application)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Up to US $10m</td>
+                                            <td><b>US $2,500</b><br>(CI $2,050)</td>
+                                            <td><b>US $5,000</b><br>(CI $4,100)</td>
+											<td><b>US $7,500</b><br>(CI $6,150)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Up to US $100m</td>
+                                            <td><b>US $2,500</b><br>(CI $2,050)</td>
+                                            <td><b>US $7,500</b><br>(CI $6,150)</td>
+											<td><b>US $10,000</b><br>(CI $8,200)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Over US $100m</td>
+											<td><b>US $2,500</b><br>(CI $2,050)</td>
+                                            <td><b>US $10,000</b><br>(CI $8,200)</td>
+											<td><b>US $12,250</b><br>(CI $10,250)</td>
+                                        </tr>
+										<tr>
+                                            <td></td>
+                                            <td colspan=3>* with discretion to apply a discount for issuers with multiple classes/sub-fund</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</div>
+							<div class="tab-pane fade" id="tab5">
+								<h2>Equity Securities &amp; Retail Debt</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="25%">According to market value of securities</th>
+                                            <th width="25%">Initial</th>
+                                            <th width="25%">Annual</th>
+                                            <th width="25%">Total</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Up to US $10m</td>
+                                            <td><b>US $10,000</b><br>(CI $8,200)</td>
+                                            <td><b>US $10,000</b><br>(CI $8,200)</td>
+											<td><b>US $20,000</b><br>(CI $16,400)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Up to US $100m</td>
+                                            <td><b>US $15,000</b><br>(CI $12,300)</td>
+                                            <td><b>US $10,000</b><br>(CI $8,200)</td>
+											<td><b>US $25,000</b><br>(CI $20,500)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Over US $100m</td>
+											<td><b>US $20,000</b><br>(CI $16,400)</td>
+                                            <td><b>US $10,000</b><br>(CI $8,200)</td>
+											<td><b>US $30,000</b><br>(CI $24,600)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+							
+							</div>
+							<div class="tab-pane fade" id="tab6">
+								<h2>Depository Receipts</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="25%"></th>
+                                            <th width="25%">Initial<br>(per class)</th>
+                                            <th width="25%">Annual<br>(per class)</th>
+                                            <th width="25%">Total<br>(payable on application - per class)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sponsored</td>
+                                            <td><b>US $3,000</b><br>(CI $2,460)</td>
+                                            <td><b>US $4,000</b><br>(CI $3,280)</td>
+											<td><b>US $7,000</b><br>(CI $5,740)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unsponsored</td>
+                                            <td colspan=3>Fees will vary according to nature of transaction and work involved – early consultation with the Exchange is advised</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</div>
+							<div class="tab-pane fade" id="tab7">
+								<h2>Secondary Listings</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="25%"></th>
+                                            <th width="25%">Initial<br>(per class)</th>
+                                            <th width="25%">Annual</th>
+                                            <th width="25%">Total<br>(payable on application)</th>
+										</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Equity securities and retail debt securities</td>
+                                            <td><b>50% of primary fee</b></td>
+                                            <td><b>50% of primary fee</b></td>
+											<td><b>50% of primary fee</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>All other types of securities</td>
+                                            <td><b>US $2,000</b><br>(CI $1,640)</td>
+                                            <td><b>US $2,000</b><br>(CI $1,640)<sup>*</sup></td>
+											<td><b>US $4,000</b><br>(CI $3,280)</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>* for umbrella investment funds 50% of normal annual fees apply</td>
+											<td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</div>
+							<div class="tab-pane fade" id="tab8">
+								<h2>Administrative/Continuing Obligation Fees</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+											<th width="50%">Description of Service</th>
+                                            <th width="50%">Fee</th>
+                                         </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Express application fee<sup>*1</sup></td>
+                                            <td><b>US $1,500</b><br>(CI $1,230)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Partial de-listing application</td>
+                                            <td><b>US $350 per application</b><br>(CI $287)</td>
+                                        </tr>
+										<tr>
+                                            <td>Full de-listing application request<sup>*2</sup></td>
+                                            <td><b>US $500 per application</b><br>(CI $410)</td>
+                                        </tr>
+										<tr>
+                                            <td>Increase of headroom fee</td>
+                                            <td><b>US $2500</b><br>(CI $2050)</td>
+                                        </tr>
+										<tr>
+                                            <td>Further PIK listing (pre-empted issues of same class only<sup>*3</sup></td>
+                                            <td><b>US $300 per application</b><br>(CI $246)</td>
+                                        </tr>
+										<tr>
+                                            <td>Bloomberg announcement fee<sup>*4</sup></td>
+                                            <td><b>US $200</b><br>(CI $164)</td>
+                                        </tr>
+										<tr>
+                                            <td>Variable Funding Note Facility</td>
+                                            <td><b>US $1,500</b><br>(CI $1,230)</td>
+                                        </tr>
+										<tr>
+                                            <td>Change of Status<sup>*5</sup></td>
+                                            <td><b>US $2,000</b><br>(CI $1640)</td>
+                                        </tr>
+										<tr>
+                                            <td>Further Issue<sup>*6</sup></td>
+                                            <td><b>US $500</b><br>(CI $410)</td>
+                                        </tr>
+										<tr>
+                                            <td>Eligibility Application<sup>*7</sup></td>
+                                            <td><b>US $2,000</b><br>(CI $1640)</td>
+                                        </tr>
+										<tr>
+                                            <td>Extension of Maturity Date</td>
+                                            <td><b>US $500</b><br>(CI $410)</td>
+                                        </tr>
+										<tr>
+                                            <td>Complex Application<sup>*8</sup></td>
+                                            <td><b>US $2,000</b><br>(CI $1640)</td>
+                                        </tr>
+										<tr>
+                                            <td>Correction of Issue Data</td>
+                                            <td><b>US $300</b><br>(CI $246)</td>
+                                        </tr>
+										<tr>
+                                            <td>Re-listing Fee</td>
+                                            <td><b>US $2500</b><br>(CI $2050)</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><b>Notes :</b> <br>1. Comments provided within 48 hours. The fee would be charged as an addition to initial application fees, which are applicable.
+											<br>2. The de-listing fee would be raised on application to de-list an issuer, but will not apply to those securities reaching automatic maturity.
+											<br>3. Please refer to "Further issue fees" in Notes tab.
+											<br>4. Excluding first announcement in relation to admission to the official list of CSX.
+											<br>5. Applicable where an open-ended vehicle converts to closed-ended or vice-versa.
+											<br>6. For each fully fungible/tap issue of an existing listing.
+											<br>7. For approval in principal prior to submission of an official application
+											<br>8. May be raised in addition to relevant Listing Fees where application contains particularly complex features.
+											
+											</td>
+											
+									    </tr>
+										 
+                                    </tbody>
+                                </table>
+							</div>
+							<div class="tab-pane fade" id="tab9">
+								<h2>Notes</h2>
+								
+								<h3>Further issue fees</h3>
+								<p>A further issue fee, charged at the same rate as the initial fee, shall be payable by the issuer on making an application for listing for a further issue of a class of securities which is already listed on the Exchange.</p>
+								<p>This charge does not apply to the issue of securities on the exercise of options, warrants or similar rights to subscribe or purchase securities, the granting or issue of which has already been approved by the Exchange, or to a capitalisation issue or an issue of securities under a scrip dividend scheme or to the further issue of a class of specialist or corporate debt securities or debt securities of specialist companies already listed on the Exchange where the issue was pre-empted in a previously approved listing application.</p>
+								<p>A fee of US $500 (CI $410) shall be payable by the issuer of a class of securities already listed on the Exchange where the issue was pre-empted in a previously approved listing application and the nominal value of the securities to be issued does not exceed the maximum nominal amount of securities that may be in issue and listed at any one time previously approved by the Exchange.</p>
+								<p>Where the nominal value of the securities to be issued exceeds the notified maximum referred to above a fee, charged at the same rate as the initial fee, shall be payable by the issuer.</p>
+								
+								
+								<h3>Issues of debt securities under unlisted programmes</h3>
+								<p>Listings of series of debt securities under programmes which are not listed on the Exchange are treated as standalone issues with separate US $2,500 (CI $2,050) issue fees and annual fees of US$2,500 (CI $2,050) for the first and US $1,500 (CI $1,230) per additional series.</p>
+								
+								<h3>Annual fee</h3>
+								<p>The annual fee for the new applicants must be paid prior to admission of the securities to the Official List.</p>
+								<p>The annual fee in respect of the first year shall be payable on the admission of the securities to listing and thereafter shall be payable on the anniversary of the listing date.</p>
+								<p>All annual fees raised post listing should be settled within 14 days of the invoice date.</p>
+								<p>Where annual fees are paid in advance a discount may be applied.</p>
+								<p>The annual fee shall remain payable for the duration of a suspension of the issuer.</p>
+								
+															
+								<h3>Supplementary or revised listing documents</h3>
+								<p>A further fee of US $500 (CI $410) shall be payable by the issuer of securities already listed on the Exchange on submission of a supplementary or revised listing document for approval by the Exchange.</p>
+								<p>This charge does not apply to an issuer making an application for listing of a further issue of a class of securities which is already listed on the Exchange.</p>
+								
+								<h3>Additional fees</h3>
+								<p>The Exchange reserves the right to charge an administrative fee as it considers appropriate with reference to the nature of the transaction and amount of work required by the listing department or where an application for listing of securities is not followed by actual listing of such securities.</p>
+								<p>An additional administrative fee  of US $500 (CI $410) will be charged where the issuer fails  to file with the Exchange  financial statements in breach of the Exchange’s continuing obligations.</p>
+								<p>The CSX reserves the right to charge a discretionary fee for anything not covered in the fee schedules.<p>
+								
+								<h3>Net Asset Valuations</h3>
+								<p>Net Asset Values (“NAV’s”) of an issuer’s listed securities must be notified to the Exchange as soon as these are calculated for publication on the Exchange’s website. Fund administrators may be authorised to post such NAVs directly onto the Exchange’s website via a secure internet page.</p>
+								<p>An administrative fee of US $300 (CI $246), per class or sub-fund and per series of a class or sub-fund, payable quarterly, shall be charged where:</p>
+								<ul>
+									<li>(a)	the issuer has not authorised the Fund Administrator to post the Net Asset Valuations directly onto the Exchange’s website; or </li>
+									<li>(b)	the issuer does not notify the Exchange of their NAVs within the prescribed quarterly timeframe in breach of the Exchange’s continuing obligations.</li>
+								</ul>
+								
+								<h3>Equity and Retail Funds</h3>
+								<p>For the avoidance of doubt, retail funds listed pursuant to Chapter 9 Listing Rules will be charged as per the equity securities and retail debt fee schedule.</p>
+								
+								
+								<h3>Payment</h3>
+								<p>Initial listing fees must be paid by the date of the associated listing.  The Exchange reserves the right to delay listings where fees remain unpaid.</p>
+								
+								<h3>Bank Charges</h3>
+								<p>Any bank charges must be incurred by the remitter.</p>
+								
+								<h3>Refunds</h3>
+								<p>All fees raised are non-refundable and payable in full irrespective of any subsequent de-listing or cancelation.</p>
+							</div>
+							
+						</div>	<!-- Tab panes End -->
+                        
+                    </div> <!-- main content -->
+                    
+                </div>
+
+                
+
+
+<div id="footer" class="row addtop smallcaper reverse-gold">
+	<p class="reverse-gold"><a class="reverse-gold" href="/aboutus/contact-us.asp">Contact us</a> | 
+<!--	<a class="reverse-gold" href="/aboutus/faqs.asp">FAQs</a> | -->
+	<a class="reverse-gold" href="/disclaimer.asp">Disclaimer</a> |
+	<a class="reverse-gold" href="/terms-of-use.asp">Terms of use</a> |
+	<a class="reverse-gold" target="_blank" href="/Documents/CSX_Privacy_Notice.pdf">Privacy Notice</a>
+	 </p>
+    <p class="reverse-gold">Copyright &copy; 2026 Cayman Islands Stock Exchange Ltd. All rights reserved.</p>
+</div>
+
+                                
+            </div>
+        </div>
+    
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/Scripts/jquery-1.9.0.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/Scripts/bootstrap.min.js"></script>
+    
+    </body>
+</html>

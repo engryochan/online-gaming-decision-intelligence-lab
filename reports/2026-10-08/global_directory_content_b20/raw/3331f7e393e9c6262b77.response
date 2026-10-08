@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html PUBLIC >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	www.blberza.com
+</title><link rel="icon" href="../Content/Logo/favicon-light.svg" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" /><link href="/client/combined/css.css?v=96824701" rel="stylesheet" type="text/css"/>
+<meta name="description" content="Banjalučka berza hartija od vrijednosti, Banjaluka Stock Exchange"></meta><meta name="keywords" content="MDPF-O-J, MKD PRO FIN d.o.o. Istočno Sarajevo - 10. emisija"></meta>
+    
+    
+<link rel="stylesheet" type="text/css" href="../client/highstock/css/stocktools/gui.css" /><link rel="stylesheet" type="text/css" href="../client/highstock/css/annotations/popup.css" /><link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">$.noConflict()</script>
+
+</head>
+
+<body>
+    <form name="aspnetForm" method="post" action="./SecurityTrading.aspx?code=MDPF-O-J" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B0BDDC16" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="un8GYOhG6oX9Yr+YMYbivebV1UmwqaCOVAnM7fU3v4NRBH4Fcbafzgy3AjoLd2mB9Dgq3vsBmwJ/BysdcSShHGjHG3aNMv4i4eQiTYSfYpFaTYtpaEtc3t5I2mI5vLhBf+AbldgCFotTKbO8deQjsXsh2apujGVucPDzTi+U/Ufh//09bd11bAs+zaa4zdLzNPWLt0ffLt9CylWKiUkb/e/do95xI2X4obFkcmFZFb8zlvuw3s+gLvQqlZa8gyUC/oO+dF234txheq1Hu1NE1g==" />
+        <div id="wrapper" style="min-height: 100vh;">
+
+            <div class="d-flex flex-column" style="min-height: 100%">
+                <div class="position-sticky" style="top: 0; z-index: 10">
+                    <div class="container-xl bg-white grid-links-reset">
+                        <nav class="navbar navbar-expand-md navbar-default justify-content-between px-0">
+                            <div>
+                                <a href="/Pages/Default.aspx">
+                                    <img src="/Content/gridAssets/logo/berza-logo-1.svg" height="55" />
+                                </a>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="navbar-nav align-items-md-center flex-row">
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                    </li>
+                                    <li class="grid-divider-small primary mx-1 d-none d-lg-block"></li>
+                                    <li class="nav-item mr-4 d-none d-lg-inline-block" id="aboutus"></li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbLat" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbLat&#39;,&#39;&#39;)">Lat</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ctl00_ctl00_lbCir" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbCir&#39;,&#39;&#39;)">Ћир</a>
+                                    </li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbEng" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbEng&#39;,&#39;&#39;)">Eng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="grid-main-bg-color grid-links-reset">
+                        <div class="container-xl px-0 px-lg-3">
+                            <div class="d-flex align-items-center justify-content-between position-relative flex-wrap">
+                                <div id="divMenu0" class="d-none d-lg-flex justify-content-between grid-menu align-items-center">
+                                </div>
+                                <div id="div-search" class="pl-lg-3 pl-2 py-1">
+                                    <div class="input-group position-relative rounded">
+                                        <input name="ctl00$ctl00$tbSearch" type="text" value="Pretraga hartija" id="ctl00_ctl00_tbSearch" class="form-control rounded" onfocus="this.value=&#39;&#39;; this.style.color=&#39;#000000&#39;" style="color: gray" />
+                                        <div class="grid-append-button-icon">
+                                            <input type="submit" name="ctl00$ctl00$btSearch" value="" id="ctl00_ctl00_btSearch" class="grid-search" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="navbar-toggler d-lg-none" style="outline: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-button-icon secondary"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                                    <div class="d-flex d-lg-none text-white" id="mobileMenu1" style="max-height: 55vh; overflow-y: scroll;">
+                                    </div>
+                                    <script>
+                                        document.getElementById('mobileMenu1').addEventListener('scroll', (e) => e.stopPropagation())
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../client/combined/mootools-1.2.6.js?v=1" type="text/javascript"></script>
+                <script src="../client/combined/highstock-9.0.1.js?v=1" type="text/javascript"></script>
+                <script>
+                    Highcharts.theme = {
+                        colors: ['#3c3476', '#945fbe', '#090D48', '#039460', '#1926d4', '#e0e01b', '#de862f', '#66d4ed', '#6d8ead', '#Ed3911', '#585a83'],
+                        chart: {
+                            backgroundColor: "#f8f9fa",
+                            style: {
+                                fontFamily: 'Roboto'
+                            },
+                            width: null,
+                        },
+                        title: {
+                            style: {
+                                color: '#000',
+                                font: 'bold 16px "Roboto MS", Verdana, sans-serif'
+                            }
+                        },
+                    };
+                    // Apply the theme
+                    Highcharts.setOptions(Highcharts.theme);
+                </script>
+                <div class="grid-breadcrumbs container-xl"></div>
+                <script src="/client/combined/js.js?v=96824701" type="text/javascript"></script>
+<script src="/client/combined/loc1.js?v=96824701" type="text/javascript"></script>
+
+                <script type="text/javascript">loadMenu(getMenuData(), "securitytrading.aspx?code=mdpf-o-j", "securitytrading.aspx", {"indexcode":"BIRS","issuercode":"MDPF","securitycode":"MDPF-O-J"}); </script>
+                <script>
+                    jQuery(document).on('click', '.grid-dropdown-menu', function (e) {
+                        e.stopPropagation();
+                    });
+                </script>
+
+                <div id="pre-content" class="flex-grow-1 pt-3 pb-3 container-xl">
+                    
+                    
+                    
+            
+    <div class="row">
+        <div class="col-12">
+            
+
+    <h1 class="grid-column-header">
+        MKD PRO FIN d.o.o. Istočno Sarajevo - 10. emisija
+    </h1>
+    <nav class="grid-tab_div border-bottom-0 pt-3 pb-3 grid-links-reset">
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_SecurityTrading" class="grid-tab_selected">Podaci o hartiji</a>
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_Charts" class="grid-tab_tab" href="Charts.aspx?code=MDPF-O-J&amp;type=security">Grafikoni</a>
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_SecurityHistory" class="grid-tab_tab" href="SecurityHistory.aspx?code=MDPF-O-J">Cijene</a>
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_SecurityTrades" class="grid-tab_tab" href="SecurityTrades.aspx?code=MDPF-O-J">Poslovi</a>
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_IssuerData" class="grid-tab_tab" href="IssuerData.aspx?code=MDPF">Podaci o emitentu</a>
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_IssuerAnnouncements" class="grid-tab_tab" href="IssuerAnnouncements.aspx?code=MDPF-O-J">Objave</a>
+        <a id="ctl00_ctl00_Content_MainContent_SecurityHeader_FinancialReports" class="grid-tab_tab" href="FinancialReports.aspx?code=MDPF">Finansijski izvještaji</a>
+    </nav>
+
+        </div>
+        <div class="col-12 col-md-8 table-scrollable">
+            <h1 class="grid-column-header">
+                <img src="/Content/gridAssets/icons/icon-novosti.svg" class="grid-header-icon" />
+                Podaci o hartiji
+            </h1>
+            <table width="100%" class="grid-table-wrapper">
+                <tr>
+                    <td style="width: 50%; vertical-align: top" class="pt-0 pb-0">
+                        <table width="100%" class="har pad3 novUL grid-table-wrapper" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="hal item">
+                                    Posljednji datum trgovanja:
+                                </td>
+                                <td class="value">
+                                    7.10.2026.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Prosječna cijena:
+                                </td>
+                                <td class="value">
+                                    100,00%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Posljednja cijena:
+                                </td>
+                                <td class="value">
+                                    100,00%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Količina:
+                                </td>
+                                <td class="value">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Promet:
+                                </td>
+                                <td class="value">
+                                    0,00
+                                    KM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Apsolutna promjena:
+                                </td>
+                                <td class="value">
+                                    0,00%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Relativna promjena:
+                                </td>
+                                <td class="value">
+                                    0,00%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Najbolja kupovina/prodaja:
+                                </td>
+                                <td class="value">
+                                    
+                                    %
+                            /
+                            
+                                    %
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Kupovina/prodaja količina:
+                                </td>
+                                <td class="value">
+                                    
+                            /
+                            
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Otvarajuća cijena:
+                                </td>
+                                <td class="value">
+                                    %
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Zatvarajuća cijena:
+                                </td>
+                                <td class="value">
+                                    100,00%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Najviša cijena:
+                                </td>
+                                <td class="value">
+                                    %
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Najniža cijena:
+                                </td>
+                                <td class="value">
+                                    %
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Najviša cijena u toku 52 sedmice:
+                                </td>
+                                <td class="value">
+                                    100,00%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Najniža cijena u toku 52 sedmice:
+                                </td>
+                                <td class="value">
+                                    100,00%
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width: 50%; vertical-align: top" class="pl-md-2 pt-0 pb-0">
+                        <table width="100%" class="har pad3 novUL grid-table-wrapper" cellpadding="0" cellspacing="0">
+                            
+                            
+                            <tr id="ctl00_ctl00_Content_MainContent_trTotalBonds">
+	<td class="hal item">
+                                    Broj obveznica:
+                                </td>
+	<td class="value">
+                                    30.000
+                                </td>
+</tr>
+
+                            
+                            <tr>
+                                <td class="hal item">
+                                    Nominalna vrijednost:
+                                </td>
+                                <td class="value">
+                                    100,00
+                                    KM
+                                </td>
+                            </tr>
+                            <tr id="ctl00_ctl00_Content_MainContent_trRemNomValue">
+	<td class="hal item">
+                                    Preostali dio nominalne vrijednosti:
+                                </td>
+	<td class="value">
+                                    30,0631
+                                    KM
+                                </td>
+</tr>
+
+                            <tr>
+                                <td class="hal item">
+                                    Tržišna kapitalizacija:
+                                </td>
+                                <td class="value">
+                                    901.894
+                                    KM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Tržište:
+                                </td>
+                                <td class="value">
+                                    Službeno berzansko tržište
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Tržišni segment:
+                                </td>
+                                <td class="value">
+                                    Obveznice
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Način trgovanja:
+                                </td>
+                                <td class="value">
+                                    CONT
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Dozvoljeno fluktuiranje u toku dana:
+                                </td>
+                                <td class="value">
+                                    +20%/-20%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Datum listinga:
+                                </td>
+                                <td class="value">
+                                    22.7.2024.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Datum delistiranja:
+                                </td>
+                                <td class="value">
+                                    14.7.2027.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hal item">
+                                    Datum isteka:
+                                </td>
+                                <td class="value">
+                                    16.7.2027.
+                                </td>
+                            </tr>
+                            <tr id="ctl00_ctl00_Content_MainContent_trYTM">
+	<td class="hal item">
+                                    Prinos do dospijeća (zaključna cijena):
+                                </td>
+	<td class="value">
+                                    7,77%
+                                </td>
+</tr>
+
+                            <tr id="ctl00_ctl00_Content_MainContent_trBYD">
+	<td class="hal item font-italic" colspan="2">
+                                    Prinos do dospijeća je izračunat na bazi pretpostavke da će emitent isplatiti kupon na datum kupona
+                                </td>
+</tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-md-3 offset-md-1 pt-md-0 pt-3">
+            <div>
+                <h1 class="grid-column-header">
+                    <img src="/Content/gridAssets/icons/icon-novosti.svg" class="grid-header-icon" />
+                    Ukratko
+                </h1>
+                <div id="ukratko-wrapper" class="grid-table-outter-wrapper">
+                    
+
+
+
+<div>
+    <strong class="d-none">
+        MKD PRO FIN d.o.o. Istočno Sarajevo - 10. emisija
+    </strong>
+    <table cellpadding="0" cellspacing="0" class="pad3 novUL grid-table-wrapper">
+        <tr>
+            <td class="item w-100">
+                Oznaka HOV:
+            </td>
+            <td class="value">
+                MDPF-O-J
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                ISIN:
+            </td>
+            <td class="value">
+                BA100MDPFOJ5
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                CFI:
+            </td>
+            <td class="value">
+                DBFSBR
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                RIC:
+            </td>
+            <td class="value">
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                FIGI:
+            </td>
+            <td class="value">
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Posljednja cijena:
+            </td>
+            <td class="value">
+                100,00%
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Vrijeme posljednje trgovine:
+            </td>
+            <td class="value">
+                7.10.2026. 10:28:57
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Status:
+            </td>
+            <td class="value">
+                Trading
+            </td>
+        </tr>
+        
+    </table>
+</div>
+
+<table cellpadding="0" cellspacing="0" class="pad3 novUL grid-table-wrapper">
+    
+</table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 pt-3">
+            <div id="ctl00_ctl00_Content_MainContent_divBonds">
+                <h1 class="grid-column-header">
+                    <img src="/Content/gridAssets/icons/icon-novosti.svg" class="grid-header-icon" />
+                    Obveznice</h1>
+                <a href="YtmCalculator.aspx">Kalkulator prinosa obveznica</a>
+            </div>
+            <h1 class="grid-column-header pt-3">
+                <img src="/Content/gridAssets/icons/icon-novosti.svg" class="grid-header-icon" />
+                Ponuda i potražnja
+            </h1>
+            <div class="grid-table-outter-wrapper table-scrollable">
+                8.10.2026. (C)
+<div>
+
+</div>
+
+            </div>
+            <div id="ctl00_ctl00_Content_MainContent_divPaymentPlan" class="table-scrollable pt-3">
+                <h1 class="grid-column-header">
+                    <img src="/Content/gridAssets/icons/icon-novosti.svg" class="grid-header-icon" />
+                    Plan isplate
+                </h1>
+                <div>
+	<table class="har pad3 novUL grid-table-wrapper" cellspacing="0" border="0" id="ctl00_ctl00_Content_MainContent_gvPaymentPlan" width="100%">
+		<tr class="table-header har">
+			<th scope="col">Kupon</th><th scope="col">Datum početka<br/>trgovanja bez<br/>prava na kupon</th><th scope="col">Datum<br/>kupona</th><th scope="col">Krajnji rok<br/>za isplatu<br/>kupona</th><th scope="col">Kupon po<br/>obveznici</th><th scope="col">Kamata po<br/>obveznici</th><th scope="col">Preostali dio<br/>nominalne<br/>vrijednosti</th>
+		</tr><tr>
+			<td>0</td><td>16.7.2024.</td><td>16.7.2024.</td><td>16.7.2024.</td><td>0,00</td><td>0,00</td><td>100,00</td>
+		</tr><tr>
+			<td>1</td><td>14.8.2024.</td><td>16.8.2024.</td><td>23.8.2024.</td><td>3,11062182</td><td>0,625</td><td>97,51437818</td>
+		</tr><tr>
+			<td>2</td><td>12.9.2024.</td><td>16.9.2024.</td><td>23.9.2024.</td><td>3,11062182</td><td>0,60946486</td><td>95,01322123</td>
+		</tr><tr>
+			<td>3</td><td>14.10.2024.</td><td>16.10.2024.</td><td>23.10.2024.</td><td>3,11062182</td><td>0,59383263</td><td>92,49643204</td>
+		</tr><tr>
+			<td>4</td><td>14.11.2024.</td><td>16.11.2024.</td><td>22.11.2024.</td><td>3,11062182</td><td>0,5781027</td><td>89,96391293</td>
+		</tr><tr>
+			<td>5</td><td>12.12.2024.</td><td>16.12.2024.</td><td>23.12.2024.</td><td>3,11062182</td><td>0,56227446</td><td>87,41556557</td>
+		</tr><tr>
+			<td>6</td><td>14.1.2025.</td><td>16.1.2025.</td><td>23.1.2025.</td><td>3,11062182</td><td>0,54634728</td><td>84,85129103</td>
+		</tr><tr>
+			<td>7</td><td>13.2.2025.</td><td>16.2.2025.</td><td>21.2.2025.</td><td>3,11062182</td><td>0,53032057</td><td>82,27098979</td>
+		</tr><tr>
+			<td>8</td><td>13.3.2025.</td><td>16.3.2025.</td><td>21.3.2025.</td><td>3,11062182</td><td>0,51419369</td><td>79,67456166</td>
+		</tr><tr>
+			<td>9</td><td>14.4.2025.</td><td>16.4.2025.</td><td>23.4.2025.</td><td>3,11062182</td><td>0,49796601</td><td>77,06190586</td>
+		</tr><tr>
+			<td>10</td><td>14.5.2025.</td><td>16.5.2025.</td><td>23.5.2025.</td><td>3,11062182</td><td>0,48163691</td><td>74,43292095</td>
+		</tr><tr>
+			<td>11</td><td>12.6.2025.</td><td>16.6.2025.</td><td>23.6.2025.</td><td>3,11062182</td><td>0,46520576</td><td>71,78750489</td>
+		</tr><tr>
+			<td>12</td><td>14.7.2025.</td><td>16.7.2025.</td><td>23.7.2025.</td><td>3,11062182</td><td>0,44867191</td><td>69,12555499</td>
+		</tr><tr>
+			<td>13</td><td>14.8.2025.</td><td>16.8.2025.</td><td>22.8.2025.</td><td>3,11062182</td><td>0,43203472</td><td>66,44696789</td>
+		</tr><tr>
+			<td>14</td><td>12.9.2025.</td><td>16.9.2025.</td><td>23.9.2025.</td><td>3,11062182</td><td>0,41529355</td><td>63,75163963</td>
+		</tr><tr>
+			<td>15</td><td>14.10.2025.</td><td>16.10.2025.</td><td>23.10.2025.</td><td>3,11062182</td><td>0,39844775</td><td>61,03946556</td>
+		</tr><tr>
+			<td>16</td><td>13.11.2025.</td><td>16.11.2025.</td><td>21.11.2025.</td><td>3,11062182</td><td>0,38149666</td><td>58,3103404</td>
+		</tr><tr>
+			<td>17</td><td>12.12.2025.</td><td>16.12.2025.</td><td>23.12.2025.</td><td>3,11062182</td><td>0,36443963</td><td>55,56415822</td>
+		</tr><tr>
+			<td>18</td><td>14.1.2026.</td><td>16.1.2026.</td><td>23.1.2026.</td><td>3,11062182</td><td>0,34727599</td><td>52,80081239</td>
+		</tr><tr>
+			<td>19</td><td>12.2.2026.</td><td>16.2.2026.</td><td>23.2.2026.</td><td>3,11062182</td><td>0,33000508</td><td>50,02019565</td>
+		</tr><tr>
+			<td>20</td><td>12.3.2026.</td><td>16.3.2026.</td><td>23.3.2026.</td><td>3,11062182</td><td>0,31262622</td><td>47,22220006</td>
+		</tr><tr>
+			<td>21</td><td>14.4.2026.</td><td>16.4.2026.</td><td>23.4.2026.</td><td>3,11062182</td><td>0,29513875</td><td>44,40671699</td>
+		</tr><tr>
+			<td>22</td><td>14.5.2026.</td><td>16.5.2026.</td><td>22.5.2026.</td><td>3,11062182</td><td>0,27754198</td><td>41,57363716</td>
+		</tr><tr>
+			<td>23</td><td>12.6.2026.</td><td>16.6.2026.</td><td>23.6.2026.</td><td>3,11062182</td><td>0,25983523</td><td>38,72285057</td>
+		</tr><tr>
+			<td>24</td><td>14.7.2026.</td><td>16.7.2026.</td><td>23.7.2026.</td><td>3,11062182</td><td>0,24201782</td><td>35,85424657</td>
+		</tr><tr>
+			<td>25</td><td>13.8.2026.</td><td>16.8.2026.</td><td>21.8.2026.</td><td>3,11062182</td><td>0,22408904</td><td>32,9677138</td>
+		</tr><tr>
+			<td>26</td><td>14.9.2026.</td><td>16.9.2026.</td><td>23.9.2026.</td><td>3,11062182</td><td>0,20604821</td><td>30,06314019</td>
+		</tr><tr>
+			<td>27</td><td>14.10.2026.</td><td>16.10.2026.</td><td>23.10.2026.</td><td>3,11062182</td><td>0,18789463</td><td>27,14041301</td>
+		</tr><tr>
+			<td>28</td><td>12.11.2026.</td><td>16.11.2026.</td><td>23.11.2026.</td><td>3,11062182</td><td>0,16962758</td><td>24,19941877</td>
+		</tr><tr>
+			<td>29</td><td>14.12.2026.</td><td>16.12.2026.</td><td>23.12.2026.</td><td>3,11062182</td><td>0,15124637</td><td>21,24004332</td>
+		</tr><tr>
+			<td>30</td><td>14.1.2027.</td><td>16.1.2027.</td><td>22.1.2027.</td><td>3,11062182</td><td>0,13275027</td><td>18,26217178</td>
+		</tr><tr>
+			<td>31</td><td>12.2.2027.</td><td>16.2.2027.</td><td>23.2.2027.</td><td>3,11062182</td><td>0,11413857</td><td>15,26568853</td>
+		</tr><tr>
+			<td>32</td><td>12.3.2027.</td><td>16.3.2027.</td><td>23.3.2027.</td><td>3,11062182</td><td>0,09541055</td><td>12,25047727</td>
+		</tr><tr>
+			<td>33</td><td>14.4.2027.</td><td>16.4.2027.</td><td>23.4.2027.</td><td>3,11062182</td><td>0,07656548</td><td>9,21642093</td>
+		</tr><tr>
+			<td>34</td><td>13.5.2027.</td><td>16.5.2027.</td><td>21.5.2027.</td><td>3,11062182</td><td>0,05760263</td><td>6,16340174</td>
+		</tr><tr>
+			<td>35</td><td>14.6.2027.</td><td>16.6.2027.</td><td>23.6.2027.</td><td>3,11062182</td><td>0,03852126</td><td>3,09130119</td>
+		</tr><tr>
+			<td>36</td><td>14.7.2027.</td><td>16.7.2027.</td><td>23.7.2027.</td><td>3,11062182</td><td>0,01932063</td><td>0,00</td>
+		</tr>
+	</table>
+</div>
+                <p class="font-italic">
+                    Datum početka trgovanja bez prava na kupon za periode nakon tekuće godine su okvirni i zavise od neradnih dana u budućnosti. Banjalučka berza ne preuzima odgovornost za eventualnu štetu nastalu korištenjem informacija iz plana isplate.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+            
+
+
+                </div>
+                <a id="back2Top" title="Back to top" href="#">
+                    <img src="/Content/gridAssets/icons/icon-arrow-upwrads.svg" />
+                </a>
+                <script>
+                    jQuery(window).scroll(function () {
+                        var height = jQuery(window).scrollTop();
+                        if (height > 100) {
+                            jQuery('#back2Top').fadeIn();
+                        } else {
+                            jQuery('#back2Top').fadeOut();
+                        }
+                    });
+                    jQuery(document).ready(function () {
+                        jQuery("#back2Top").click(function (event) {
+                            event.preventDefault();
+                            jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+                            return false;
+                        });
+                    });
+                </script>
+                <div class="grid-footer-wrapper grid-main-bg-color">
+                    <div class="container-xl py-4 grid-footer grid-links-reset">
+                        <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-start align-items-lg-center">
+                            <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center grid-white-text-color">
+                                <a class="mb-2 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                <a class="pl-0 mb-2 mb-lg-0 grid-white-text-color hover" href="mailto:komentar@blberza.com?subject=Komentar na sajt" style="cursor: pointer;">
+                                    Sugestije na sajt
+                                </a>
+                                <span class="grid-divider-small d-none d-lg-inline-block mx-3"></span>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover" href="SiteMap.aspx">Mapa sajta</a>
+                                <div class="d-lg-none mb-3">
+                                    <a id="ctl00_ctl00_LinkButton1" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton1&#39;,&#39;&#39;)">Lat</a>
+                                    <a id="ctl00_ctl00_LinkButton2" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton2&#39;,&#39;&#39;)">Ћир</a>
+                                    <a id="ctl00_ctl00_LinkButton3" class="grid-font-weight-50 grid-small-text grid-white-text-color hover" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton3&#39;,&#39;&#39;)">Eng</a>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="grid-white-text-color grid-small-text">
+                                    © 2021 Banjalučka berza. Sva prava zadržana.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    
+    
+
+    <!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WXRLKX8GQ"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1WXRLKX8GQ');
+    </script>
+    <script>
+        if (typeof jQuery != 'undefined') {
+            (function ($) {
+                $(document).ready(function () {
+                    $('.carousel').each(function (index, element) {
+                        $(this)[index].slide = null;
+                    });
+                });
+            })(jQuery);
+        }
+    </script>
+    <script>
+        function applyIcon(type) {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+
+            if (type === "dark") {
+                link.href = '../Content/Logo/favicon-dark.svg';
+            } else {
+                link.href = '../Content/Logo/favicon-light.svg';
+            }
+
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        var dmQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        var lmQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+        // Check on initial load if dark mode is already there. Apply the dark
+        // mode favicon if true.
+        if (dmQuery.matches) {
+            applyIcon("dark");
+        }
+
+        dmQuery.addListener(function () {
+            applyIcon("dark")
+        });
+
+        lmQuery.addListener(function () {
+            applyIcon("light");
+        });
+    </script>
+
+</body>
+</html>

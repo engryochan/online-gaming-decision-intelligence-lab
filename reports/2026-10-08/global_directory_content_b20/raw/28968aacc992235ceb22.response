@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/favicon.png" sizes="any" />
+
+    <link rel="stylesheet" media="all" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <script type="text/plain" data-cookiecategory="analytics">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-11082354-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<noscript><img alt="" src="https://secure.smart-enterprise-52.com/267056.png" style="display:none;" /></noscript>
+<script type="text/javascript" src="https://secure.smart-enterprise-52.com/js/267056.js" ></script>
+    
+<title>Meet the Team | TISE</title>
+<meta property="og:title" content="Meet the Team | TISE">
+<meta name="twitter:title" content="Meet the Team | TISE">
+
+<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://tisegroup.com/company-profile/meet-the-team/">
+
+
+<meta property="og:description" content="Our senior team">
+<meta name="twitter:description" content="Our senior team">
+<meta name="description" content="Our senior team">
+</head>
+<body>
+
+    <div class="page blue">
+        
+<div id="navigation" v-cloak v-clickout="closeSearch">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-inner-brand">
+                <a href="/"><img src="/media/ezbnvbj3/tise-master-a-miax-company-logo-rgb-white.png?width=200&height=103&quality=80&v=1dbd56b4cd472d0" alt="TISE Logo" /></a>
+            </div>
+            <div class="header-inner-nav" v-tracked>
+                <ul :class="{'on': open}">
+                    <li v-for="i in structure" :class="[{'on': openNavs.includes(i.Id)}, {'hide-from-ml' : i.Special}]">
+                        <div class="header-item">
+                            <a v-if="i.Children && i.Children.length > 0" class="header-item-link" @click="toggleNav(i)">{{i.Name}} <i class="fas fa-chevron-down"></i></a>
+                            <a v-if="!i.Children || (i.Children && i.Children.length == 0)" class="header-item-link" :href="i.Url">{{i.Name}} </a>
+                        </div>
+                        <div class="header-drop" :class="{'on': openNavs.includes(i.Id)}">
+                            <template v-for="c in i.Children">
+                                <a :href="c.Url" :class="{ hasgc: i.HasGrandchildren }">{{c.Name}}</a>
+                                <div class="header-drop-sub" v-if="i.HasGrandchildren">
+                                    <a v-for="p in c.Children" :href="p.Url"><span>&mdash;</span> {{p.Name}}</a>
+                                </div>
+                            </template>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-inner-burger-wrap">
+                    <a class="btn small white" v-tracked href="https://apps.tisegroup.com/Identity/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dtise-portal%26redirect_uri%3Dhttps%253A%252F%252Fapps.tisegroup.com%252Fmy-tise%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520TISEAPI%26nonce%3D28c5ae753640fc10c766c1317bffd4a829RufsNki%26state%3Dfd59249a2eeff0b1326c77958c4e7e9c34pA5Avrk%26code_challenge%3Di9aYC48siflcen0jUgPiXFrl7-F91eJligrY8qDLRsA%26code_challenge_method%3DS256"><span>MyTISE</span></a>
+                    <a class="search" @click="toggleSearch"><i class="fas fa-search"></i></a>
+                <div class="header-inner-burger-wrap-burger" :class="{'on': open}" @click="toggleNav(null)">
+                    <svg viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" rx="2" ry="2" />
+                        <rect y="9" width="32" height="2" rx="2" ry="2" />
+                        <rect y="18" width="32" height="2" rx="2" ry="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="burger-nav" :class="{'on': open}">
+        <div class="burger-nav-left">
+            <div class="burger-nav-left-inner">
+                <ul>
+                    <li v-for="i in structure" :class="[{'on' : curPage != null && curPage.Id == i.Id}, {'hide-from-xl' : i.Special}]">
+                        <a v-if="i.Children && i.Children.length > 0" @click="curPage = i">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                        <a v-if="!i.Children || (i.Children && i.Children.length == 0)" :href="i.Url">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+
+
+</li>
+                </ul>
+            </div>
+        </div>
+        <div class="burger-nav-mid">
+            <div class="burger-nav-mid-inner" v-if="curPage != null">
+                <h3>{{curPage.Title}}</h3>
+                <p>{{curPage.Copy}}</p>
+                <p>&nbsp;</p>
+                <div class="burger-nav-mid-inner-cols" v-if="curPage.HasGrandchildren">
+                    <div v-for="c in curPage.Children" class="burger-nav-mid-inner-cols-col" :class="'c' + curPage.Children.length">
+                        <ul>
+                            <li class="overview"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                            <li v-for="gc in c.Children"><a :href="gc.Url">{{gc.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-nav-mid-inner-cols" v-if="!curPage.HasGrandchildren">
+                    <div class="burger-nav-mid-inner-cols-col c1">
+                        <ul>
+                            <li v-for="c in curPage.Children"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-nav-right">
+                <p>About TISE</p>
+                <a href="/company-profile/">Company Profile</a>
+                <a href="/company-profile/meet-the-team/">Meet the Team</a>
+                <a href="/news/">News</a>
+                <a href="/company-profile/careers/">Careers</a>
+                <a href="/company-profile/corporate-social-responsibility/">CSR</a>
+                <a href="/business-days/">Business Days</a>
+                <a href="/contact/">Contact</a>
+        </div>
+    </div>
+
+        <div class="burger-search" :class="{'on' : searchOpen}">
+            <form action="/search/" method="get">
+                <input type="text" name="query" placeholder="Enter Keywords or Mnemonic" />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+</div>
+        
+
+<div class="content-wrap mt-2 mb-2 box-bg" id="_4464befff0af48d68dfc8a8f2a1e972b" style="">
+    <div class="rte narrow">
+        <h2>Meet the Team</h2>
+    </div>
+</div><div class="content-wrap mt-2 mb-2 box-bg" id="_79a0c34185624396b9968ecae8f86547" style="">
+    <div class="rte narrow">
+        <h3>Group Board</h3>
+    </div>
+</div>
+<div class="content-wrap " id="_9d33385e9611425f8916baef85ac8b7d">
+    <div class="rte narrow">
+        <div class="people-block ">
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/thomas-gallagher/"><img src="/media/sqfo41rb/thomas-gallagher.png?rxy=0.4462553818207707,0.4112529182434082&width=480&height=350&quality=80&v=1dbd5742b4e3570" alt="Thomas Gallagher Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/thomas-gallagher/">Thomas Gallagher</a></h4>
+                        <p>Chair, TISEG</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/cees-vermaas/"><img src="/media/kctlzxem/cees-vermaas-web-4jpg.png?rxy=0.48522901226945764,0.38502027115367665&width=480&height=350&quality=80&v=1dcac814bdd5f70" alt="Cees Vermaas Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/cees-vermaas/">Cees Vermaas</a></h4>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/kurt-eckert/"><img src="/media/0f5dluch/kurt-eckert.png?rxy=0.49060680508279514,0.43000001907348634&width=480&height=350&quality=80&v=1dbd5743f878410" alt="Kurt Eckert Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/kurt-eckert/">Kurt Eckert</a></h4>
+                        <p>Non-Executive Director, TISEG</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/caroline-mackenzie-kennedy/"><img src="/media/rjamjpts/caroline-kennedy2.png?rxy=0.49124087496258645,0.5676334617010735&width=480&height=350&quality=80&v=1dbd57431629af0" alt="Caroline Mackenzie Kennedy Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/caroline-mackenzie-kennedy/">Caroline Mackenzie Kennedy</a></h4>
+                        <p>Non-Executive Director, TISEG</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/andy-watchman/"><img src="/media/r3lpkrgl/andrew-watchman-web.jpg?rxy=0.49731182795698925,0.405&width=480&height=350&quality=80&v=1dceeb6bcc41d60" alt="Andy Watchman Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/andy-watchman/">Andy Watchman</a></h4>
+                        <p>Chief Financial Officer</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div><div class="content-wrap mt-2 mb-2 box-bg" id="_2344a293e12445c7a8d87489480ed166" style="">
+    <div class="rte narrow">
+        <h3>Authority Board</h3>
+    </div>
+</div>
+<div class="content-wrap " id="_6c66abbc70c24a449f6f7ce0810a4ddc">
+    <div class="rte narrow">
+        <div class="people-block ">
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/nick-bayley/"><img src="/media/2xlbxs2q/nick-bayley-web.jpg?rxy=0.5739247311827957,0.3675&width=480&height=350&quality=80&v=1db18c60a43d350" alt="Nick Bayley Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/nick-bayley/">Nick Bayley</a></h4>
+                        <p>Chair, TISEA</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/philip-braun/"><img src="/media/3tmhnnto/phil-braun-web.jpg?rxy=0.5107804293779947,0.36625869750976564&width=480&height=350&quality=80&v=1db18c651267e30" alt="Philip Braun Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/philip-braun/">Philip Braun</a></h4>
+                        <p>Non-Executive Director, TISEA</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/cameron-craine/"><img src="/media/1xxegeje/cam-craine-web.jpg?rxy=0.5013519614479109,0.4250064132431713&width=480&height=350&quality=80&v=1dca4a51cc16df0" alt="Cameron Craine Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/cameron-craine/">Cameron Craine</a></h4>
+                        <p>Director &amp; Head of Listings</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/jon-richards/"><img src="/media/bgwj5lys/jon-richards-web.jpg?rxy=0.5510752688172043,0.36625&width=480&height=350&quality=80&v=1db18c5f8a63e30" alt="Jon Richards Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/jon-richards/">Jon Richards</a></h4>
+                        <p>Director &amp; Head of Market Regulation</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div><div class="content-wrap mt-2 mb-2 box-bg" id="_df9b5625961d485baa250db29436f5cf" style="">
+    <div class="rte narrow">
+        <h3>Senior Team</h3>
+    </div>
+</div>
+<div class="content-wrap mb-5" id="_33230faa88bb4bfcb7a27c64dadf7ff5">
+    <div class="rte narrow">
+        <div class="people-block mb-5">
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/adrian-darcy/"><img src="/media/opwdcu1p/adrian-darcy-web.jpg?rxy=0.5362984857867445,0.3525053066530861&width=480&height=350&quality=80&v=1dc9c1a35c61910" alt="Adrian D&#x27;Arcy Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/adrian-darcy/">Adrian D&#x27;Arcy</a></h4>
+                        <p>Manager, Market Regulation</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/alex-taylor/"><img src="/media/0v0j3tel/alex-taylor.jpg?rxy=0.4731182795698925,0.405&width=480&height=350&quality=80&v=1dceeb632b12140" alt="Alex Taylor Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/alex-taylor/">Alex Taylor</a></h4>
+                        <p>Business Development Lead</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/andrew-peterson/"><img src="/media/uhidbapp/andrew-peterson-web.jpg?rxy=0.5672043010752689,0.38&width=480&height=350&quality=80&v=1dceeb6a5cc7210" alt="Andrew Peterson Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/andrew-peterson/">Andrew Peterson</a></h4>
+                        <p>Head of Risk &amp; Compliance</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/andy-watchman/"><img src="/media/r3lpkrgl/andrew-watchman-web.jpg?rxy=0.49731182795698925,0.405&width=480&height=350&quality=80&v=1dceeb6bcc41d60" alt="Andy Watchman Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/andy-watchman/">Andy Watchman</a></h4>
+                        <p>Chief Financial Officer</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/cameron-craine/"><img src="/media/1xxegeje/cam-craine-web.jpg?rxy=0.5013519614479109,0.4250064132431713&width=480&height=350&quality=80&v=1dca4a51cc16df0" alt="Cameron Craine Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/cameron-craine/">Cameron Craine</a></h4>
+                        <p>Director &amp; Head of Listings</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/caroline-mackenzie-kennedy/"><img src="/media/rjamjpts/caroline-kennedy2.png?rxy=0.49124087496258645,0.5676334617010735&width=480&height=350&quality=80&v=1dbd57431629af0" alt="Caroline Mackenzie Kennedy Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/caroline-mackenzie-kennedy/">Caroline Mackenzie Kennedy</a></h4>
+                        <p>Non-Executive Director, TISEG</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/cees-vermaas/"><img src="/media/kctlzxem/cees-vermaas-web-4jpg.png?rxy=0.48522901226945764,0.38502027115367665&width=480&height=350&quality=80&v=1dcac814bdd5f70" alt="Cees Vermaas Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/cees-vermaas/">Cees Vermaas</a></h4>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/chloe-brown/"><img src="/media/rddb2izg/chloe-brown-web.jpg?rxy=0.505892821242825,0.37730015005184364&width=480&height=350&quality=80&v=1dd20f913622e90" alt="Chloe Brown Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/chloe-brown/">Chloe Brown</a></h4>
+                        <p>Project Manager</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/emily-humphry/"><img src="/media/b4rfpqk4/emily-humphry-web.jpg?rxy=0.5484021155981814,0.3775&width=480&height=350&quality=80&v=1db18c5d07fec30" alt="Emily Humphry Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/emily-humphry/">Emily Humphry</a></h4>
+                        <p>Chief Governance Officer</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/james-robert/"><img src="/media/ntzn0end/james-robert-web.jpg?rxy=0.5604838709677419,0.3675&width=480&height=350&quality=80&v=1db18c603647cb0" alt="James Robert Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/james-robert/">James Robert</a></h4>
+                        <p>Senior Marketing &amp; Communications Manager</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/janette-crowley/"><img src="/media/seyn05jd/janette-crowley-web.jpg?rxy=0.5120967741935484,0.38250001907348635&width=480&height=350&quality=80&v=1db18c657218f50" alt="Janette Crowley Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/janette-crowley/">Janette Crowley</a></h4>
+                        <p>Head of Finance</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/jon-richards/"><img src="/media/bgwj5lys/jon-richards-web.jpg?rxy=0.5510752688172043,0.36625&width=480&height=350&quality=80&v=1db18c5f8a63e30" alt="Jon Richards Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/jon-richards/">Jon Richards</a></h4>
+                        <p>Director &amp; Head of Market Regulation</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/josalen-manaloto/"><img src="/media/zngbhpie/josalen-manaloto-web.jpg?rxy=0.5174727580270798,0.3675&width=480&height=350&quality=80&v=1db47144206edf0" alt="Josalen Manaloto Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/josalen-manaloto/">Josalen Manaloto</a></h4>
+                        <p>Senior Manager, Listings</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/kay-mccarthy/"><img src="/media/xw0eo242/kay-mccarthy.jpg?rxy=0.5591397849462365,0.37625003814697267&width=480&height=350&quality=80&v=1dceeb5ba232930" alt="Kay McCarthy Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/kay-mccarthy/">Kay McCarthy</a></h4>
+                        <p>Head of Jersey Office</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/kurt-eckert/"><img src="/media/0f5dluch/kurt-eckert.png?rxy=0.49060680508279514,0.43000001907348634&width=480&height=350&quality=80&v=1dbd5743f878410" alt="Kurt Eckert Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/kurt-eckert/">Kurt Eckert</a></h4>
+                        <p>Non-Executive Director, TISEG</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/laura-cornelius/"><img src="/media/spnezrjg/laura-cornelius-web.jpg?rxy=0.5174313078161942,0.37873699188232424&width=480&height=350&quality=80&v=1db18c5dd4a7570" alt="Laura Cornelius Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/laura-cornelius/">Laura Cornelius</a></h4>
+                        <p>Head of HR</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/mark-oliphant/"><img src="/media/cbdcv21n/mark-oliphant-web.jpg?rxy=0.5672043010752689,0.41375003814697264&width=480&height=350&quality=80&v=1dceeb71e372ab0" alt="Mark Oliphant Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/mark-oliphant/">Mark Oliphant</a></h4>
+                        <p>Head of Marketing &amp; Communications</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/nick-bayley/"><img src="/media/2xlbxs2q/nick-bayley-web.jpg?rxy=0.5739247311827957,0.3675&width=480&height=350&quality=80&v=1db18c60a43d350" alt="Nick Bayley Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/nick-bayley/">Nick Bayley</a></h4>
+                        <p>Chair, TISEA</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/philip-braun/"><img src="/media/3tmhnnto/phil-braun-web.jpg?rxy=0.5107804293779947,0.36625869750976564&width=480&height=350&quality=80&v=1db18c651267e30" alt="Philip Braun Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/philip-braun/">Philip Braun</a></h4>
+                        <p>Non-Executive Director, TISEA</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/robbie-andrade/"><img src="/media/i0rlghb1/robbie-andrade-web.jpg?rxy=0.5739332484794043,0.3450051941513986&width=480&height=350&quality=80&v=1dc9c1a01c6f0d0" alt="Robbie Andrade Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/robbie-andrade/">Robbie Andrade</a></h4>
+                        <p>Chief Operating Officer</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <a href="/company-profile/meet-the-team/thomas-gallagher/"><img src="/media/sqfo41rb/thomas-gallagher.png?rxy=0.4462553818207707,0.4112529182434082&width=480&height=350&quality=80&v=1dbd5742b4e3570" alt="Thomas Gallagher Photo" /></a>
+                    <div class="person-detail">
+                        <h4><a href="/company-profile/meet-the-team/thomas-gallagher/">Thomas Gallagher</a></h4>
+                        <p>Chair, TISEG</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+        <footer class="footer ">
+    <div class="footer-top">
+        <div class="content-wrap">
+            <div class="footer-inner">
+                <div class="footer-inner-social">
+                        <a href="https://www.facebook.com/The-International-Stock-Exchange-106784734024704" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/the-international-stock-exchange/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/tisegroup" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/theinternationalstockexchange" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-inner-news">
+                    <a class="btn blue tracked" href="/subscribe/"><span>Subscribe to our email newsletters</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="locations">
+            <span>Dublin.</span>
+            <span>Guernsey.</span>
+            <span>Isle of Man.</span>
+            <span>Jersey.</span>
+            <span>London.</span>
+        </p>
+        <p class="address">
+            The International Stock Exchange Group Limited, PO&nbsp;Box&nbsp;623, Helvetia&nbsp;Court, 
+            Block&nbsp;B, 3rd&nbsp;Floor,
+            Les&nbsp;Echelons, St&nbsp;Peter&nbsp;Port, Guernsey&nbsp;GY1&nbsp;4PJ
+        </p>
+        <ul class="links">
+                <li><a href="/privacy-statement/">Privacy Statement</a></li>
+                <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+                <li><a href="/legal-and-regulatory/">Legal and Regulatory</a></li>
+                <li><a href="/complaints/">Complaints</a></li>
+                <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <p class="copyright">© The International Stock Exchange Group Limited 2026. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    </div>
+    
+    <script>
+        var navData = [{"Id":1814,"Name":"Listing","Title":"Listing","Copy":"We’re a leading stock exchange for listing a wide range of bonds and equities, with issuers attracted by our competitive fees and high quality, efficient service.  ","Url":"/listing/","HasGrandchildren":true,"Children":[{"Name":"Bonds","Url":"/listing/bonds/","Children":[{"Name":"High Yield Bonds","Url":"/listing/bonds/high-yield-bonds/"},{"Name":"Private Equity Debt","Url":"/listing/bonds/private-equity-debt/"},{"Name":"Securitisations","Url":"/listing/bonds/securitisations/"},{"Name":"Collateralised Loan Obligations (CLOs)","Url":"/listing/bonds/collateralised-loan-obligations-clos/"},{"Name":"Bond Programmes","Url":"/listing/bonds/bond-programmes/"},{"Name":"Aviation Finance","Url":"/listing/bonds/aviation-finance/"},{"Name":"Sukuks","Url":"/listing/bonds/sukuks/"},{"Name":"Defence","Url":"/listing/bonds/defence/"},{"Name":"Insurance Linked Securities (ILS)","Url":"/listing/bonds/insurance-linked-securities-ils/"},{"Name":"Bond Market Listing Rules","Url":"/listing/bonds/bond-market-listing-rules/"},{"Name":"Bond Market Listing Fees","Url":"/listing/bonds/bond-market-listing-fees/"}]},{"Name":"Equities","Url":"/listing/equities/","Children":[{"Name":"Funds","Url":"/listing/equities/funds/"},{"Name":"REITs","Url":"/listing/equities/reits/"},{"Name":"Specialist Companies","Url":"/listing/equities/specialist-companies/"},{"Name":"Trading Companies","Url":"/listing/equities/trading-companies/"},{"Name":"Equity Market Listing Rules","Url":"/listing/equities/equity-market-listing-rules/"},{"Name":"Specialist Companies Listing Rules","Url":"/listing/equities/specialist-companies-listing-rules/"},{"Name":"Equity Market Listing Fees","Url":"/listing/equities/equity-market-listing-fees/"}]}]},{"Id":1816,"Name":"Trading","Title":"Trading","Copy":"Our bespoke auction-based trading system, NOVA, combines choice and transparency to facilitate concentrated liquidity events.","Url":"/trading/","HasGrandchildren":false,"Children":[{"Name":"Trading Overview","Url":"/trading/trading-overview/","Children":[]},{"Name":"NOVA - TISE Trading System","Url":"/trading/nova-tise-trading-system/","Children":[]}]},{"Id":1819,"Name":"Sustainable","Title":"Sustainable","Copy":"Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.","Url":"/sustainable/","HasGrandchildren":false,"Children":[]},{"Id":1820,"Name":"Market","Title":"Market","Copy":"We have 2,600+ issuers from over 40+ countries listing 4,500+ bonds and equity securities on our market.","Url":"/market/","HasGrandchildren":false,"Children":[{"Name":"Market Overview","Url":"/market/market-overview/","Children":[]},{"Name":"Listed Securities","Url":"/market/securities/","Children":[]},{"Name":"Market News","Url":"/market/news/","Children":[]},{"Name":"Trade Price Data","Url":"/market/trade-price-data/","Children":[]}]},{"Id":1824,"Name":"Membership","Title":"Membership","Copy":"Becoming a Member is simple. We already serve international firms who benefit from being able to facilitate listing or trading on our market.","Url":"/membership/","HasGrandchildren":false,"Children":null},{"Id":1826,"Name":"Why TISE?","Title":"Why TISE","Copy":"TISE stands out from the crowd because of our culture of responsiveness and innovation.","Url":"/why-tise/","HasGrandchildren":false,"Children":[]},{"Id":-1,"Name":"About TISE","Special":true,"Copy":"","Url":"","HasGranndchildren":false,"Children":[{"Name":"Company Profile","Url":"/company-profile/"},{"Name":"Meet the Team","Url":"/company-profile/meet-the-team/"},{"Name":"News","Url":"/news/"},{"Name":"Careers","Url":"/company-profile/careers/"},{"Name":"CSR","Url":"/company-profile/corporate-social-responsibility/"},{"Name":"Business Days","Url":"/business-days/"},{"Name":"Contact","Url":"/contact/"}]}]
+    </script>
+    <script src="/main.js?v=zsdbg3c"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"965014478cea41e1bb80cae092c8f988","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
