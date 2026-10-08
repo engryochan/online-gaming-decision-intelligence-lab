@@ -1,0 +1,38 @@
+---
+title: "全球清單續作 B15：分頁核查、直接檔案及業務用途"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪完成範圍
+
+接續 B14 的 144 條頁面連結及 B13 的 3,723 條新連結，共覆核 3867 條觀測。分類 `{"PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 138, "NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 2329, "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1400}`；去重後嘗試全部 67 个合資格候選網址，HTTP 狀態分布 `{"200": 67}`，保存 594 條物理表格行、68 個表格及 210 條初步來源角色投影。數字、next 與 page 參數僅是分頁排程訊號，並非內容完整性的證明。
+
+新增 3024 條連結留待下一輪核查；本轮候選未選數為零不等於全站或所有遞迴分頁完成。所有 4,849 項原始工作列及 249 條現行母表保留，累計工作狀態 `{"HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1070, "FETCH_ERROR_OR_NON200_REVIEW": 62, "NOT_YET_ATTEMPTED": 3715, "HTTP200_BODY_TRUNCATED_REVIEW": 2}`。網站來源關係不代表企業註冊地，歷史政治實體仍沿用既有登記。
+
+## 下載與業務定義
+
+全部 59 條直接檔案觀測去重為 55 個網址，全部嘗試；54 個保存或沿用已核對的原始檔，其中 6 個沿用、48 個新增，1 個失敗保留逐檔錯誤及 HTTP 狀態。保存 934 個壓縮成員雜湊、15850 條 XLSX 行及 9905 條直接 CSV 邏輯行（含表頭與空行）。
+
+來源觀測包括 Nasdaq 交易所會員工作簿、Cboe 成交量及澳洲基金月報、巴西 CVM CRI 月報、挪威 OTC 歷史財報、圭亞那單項證券成交資料、PSX 歷史券商子集與會員申請範本。分別服務於交易所參與者、產品交易、歷史申報與公司財務分析；名稱與網址僅作用途初步分類，逐檔內容、時點與監管範圍仍待核定。會員申請範本、技術頻寬報告、歷史制裁名單及產品分類不能合算為持牌券商或上市公司；逐檔業務用途寫入覆核表。
+
+ZIP 成員原始內容留在原始壓縮檔，本輪核對成員雜湊，尚未把所有內嵌 CSV/PDF/XML 解析為業務表。舊 XLS 本輪保留原始檔，尚未抽取所有單元格；XLSX 保留可讀行及公式文字，完整工作簿物件仍需後續檢查。全球名錄完整性仍為 UNKNOWN。
+
+## 可回溯交付
+
+[分頁候選覆核](tables/40_global_directory_followup_b15_20261008/registry_pagination_candidate_review.csv)、[分頁收據](tables/40_global_directory_followup_b15_20261008/pagination_fetch_manifest.csv)、[逐檔用途](tables/40_global_directory_followup_b15_20261008/registry_file_business_scope_review.csv)、[下載缺口](tables/40_global_directory_followup_b15_20261008/registry_file_acquisition_gaps.csv)、[完整工作進度](tables/40_global_directory_followup_b15_20261008/registry_all_4849_work_progress.csv)、[SQLite](tables/40_global_directory_followup_b15_20261008/global_directory_followup_b15.sqlite)。
+
+121 個原始回應／下載收據位元組雜湊核對通過，SQLite 完整性檢查通過，來源 URL、原始行及內容雜湊可回溯。既有批次、兩份主報告及使用者文件修改未覆寫。
+
+## 大檔及工作簿解析限制
+
+HKEX 歷史保證金 ZIP 初次觸及 20MB 接收上限，部分回應及收據保留；本輪重新串流取得完整檔，共 67,805,489 位元組，核對 Content-Length、ZIP CRC 與 1102 個成員雜湊通過。追加收據與成員表另行入庫，未覆蓋初次資料。此檔是歷史清算風險參數，不是公司名錄。
+
+openpyxl 提示不支援部分資料驗證擴充；本輪未重寫任何來源工作簿，原始內容保留。抽取行不代表全部工作簿物件已解析。原始下載及後續完整重試合計 54 個網址已保存或沿用，Nasdaq 頻寬報告仍為 404。
+
+## 發佈與解析核查
+
+頁面解析及來源語義完整性仍待逐項核定；原始回應位元組保留。憑證模式掃描發現 13 個原始頁面候選檔，僅留本機並排除推送；未輸出候選值。

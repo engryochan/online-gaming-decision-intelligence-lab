@@ -1,0 +1,111 @@
+{
+  "pagination": {
+    "candidate_observations": 3867,
+    "candidate_review_reasons": {
+      "PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 138,
+      "NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 2329,
+      "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1400
+    },
+    "selected_pages": 67,
+    "fetched_additional_pages": 67,
+    "additional_table_rows": 594,
+    "pending_gap_records": 0,
+    "new_link_observations_pending_review": 3024,
+    "all_observed_in_scope_page_links_attempted": false,
+    "source_directory_total_completeness": "UNKNOWN"
+  },
+  "downloads": {
+    "download_observations": 59,
+    "unique_links": 55,
+    "selected_links": 55,
+    "saved_or_reused": 54,
+    "reused": 6,
+    "new_saved": 48,
+    "pending_unselected": 0,
+    "remaining_errors": 1,
+    "archive_members": 934,
+    "workbook_rows": 15850,
+    "csv_rows": 9905,
+    "global_complete": false
+  },
+  "structure": {
+    "all_table_rows": 594,
+    "tables": 68,
+    "structured_source_records": 210,
+    "source_urls_with_structured_records": 15,
+    "role_counts": {
+      "DIRECTORY_RECORD_REVIEW": 210
+    },
+    "distinct_company_count": "UNKNOWN",
+    "source_rows_not_dropped": true
+  },
+  "ledger": {
+    "original_queue": 4849,
+    "state_counts": {
+      "HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 1070,
+      "FETCH_ERROR_OR_NON200_REVIEW": 62,
+      "NOT_YET_ATTEMPTED": 3715,
+      "HTTP200_BODY_TRUNCATED_REVIEW": 2
+    },
+    "total_attempt_receipts": 1499,
+    "unique_attempted_urls": 1489,
+    "country_mother_rows": 249,
+    "countries_with_source_association": 151,
+    "global_complete": false
+  },
+  "sqlite_counts": {
+    "direct_file_fetch_manifest": 55,
+    "pagination_fetch_manifest": 67,
+    "registry_all_4849_work_progress": 4849,
+    "registry_all_country_cumulative_source_progress": 249,
+    "registry_all_download_workqueue": 55,
+    "registry_all_page_content_review": 67,
+    "registry_download_archive_members": 934,
+    "registry_download_csv_rows": 9905,
+    "registry_download_links": 59,
+    "registry_download_workbook_rows": 15850,
+    "registry_file_acquisition_gaps": 2,
+    "registry_file_business_scope_review": 55,
+    "registry_pagination_all_table_rows": 594,
+    "registry_pagination_candidate_review": 3867,
+    "registry_pagination_link_observations": 3024,
+    "registry_pagination_links": 144,
+    "registry_source_country_association_evidence": 2837,
+    "registry_source_table_semantic_review": 68,
+    "registry_structured_directory_records": 210,
+    "registry_full_file_retry_receipts": 1,
+    "registry_full_retry_archive_members": 1102
+  },
+  "raw_verified": 121,
+  "protected": [
+    {
+      "path": "Reference/Aerospace_Ecosystem_Report.qmd",
+      "sha256": "4cf895c4ddcb883594507d7ed5faccb87c910df729e699afb4056c8d4fd019a7",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd",
+      "sha256": "3f53b2ad9e56bead08b8ec3a5e6ec729df693a92d576c04ce0a81ff9f2193f88",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Inteligent_egaming_platform_ref_v000.000.001.qmd",
+      "sha256": "062ac07a98b6f10989799561e70106277f6a0a79a47164845080ef508b77fb16",
+      "batch_action": "NO_WRITE"
+    }
+  ],
+  "full_file_retries": [
+    {
+      "url": "https://www.hkex.com.hk/eng/market/rm/rm_dcrm/riskdata/margin_hkcc/Previous_HKCC_Margin_Levels_Eng.zip",
+      "http_status": 200,
+      "file": "reports/2026-10-08/global_directory_followup_b15/downloads/212d9e9e65fd570ed997.response",
+      "bytes": 67805489,
+      "sha256": "023008385382f32a886e9f1acb992ad8e933f55d22172e7242da8cb0df10b73d",
+      "content_length": "67805489",
+      "truncated": false,
+      "prior_partial_file": "reports/2026-10-08/global_directory_followup_b15/downloads/bb80b06d632bef8a758f.response",
+      "prior_partial_sha256": "42871d1196e56043b024e92c9949333d098771e6a43cc7f433cfd14d63eca394",
+      "scope": "HISTORICAL_CLEARING_MARGIN_LEVELS_NOT_ENTITY_DIRECTORY"
+    }
+  ]
+}
