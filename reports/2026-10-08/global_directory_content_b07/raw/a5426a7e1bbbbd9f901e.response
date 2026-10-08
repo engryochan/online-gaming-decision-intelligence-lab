@@ -1,0 +1,305 @@
+<!DOCTYPE html><html><head><script>
+
+
+const kcContext = {
+    "social": {
+        /* class: org.keycloak.forms.login.freemarker.model.IdentityProviderBean */
+        "baseURI": {
+            "path": "\/",
+            "rawPath": "\/",
+            "rawSchemeSpecificPart": "\/?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ&session_code=Nbhwiq2xQOddkbgh8PpRdkYXKaSaHFSZmguUj08Glr8",
+            "opaque": false,
+            "query": "client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ&session_code=Nbhwiq2xQOddkbgh8PpRdkYXKaSaHFSZmguUj08Glr8",
+            "schemeSpecificPart": "\/?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ&session_code=Nbhwiq2xQOddkbgh8PpRdkYXKaSaHFSZmguUj08Glr8",
+            "port": -1,
+            "absolute": false,
+            "rawQuery": "client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ&session_code=Nbhwiq2xQOddkbgh8PpRdkYXKaSaHFSZmguUj08Glr8",
+        },
+        "providers": [
+        ],
+    },
+    "auth": {
+        /* class: org.keycloak.forms.login.freemarker.model.AuthenticationContextBean */
+        "showResetCredentials": false,
+        "authenticationSelections": [
+            {
+                "helpText": "auth-username-form-help-text",
+                "displayName": "auth-username-form-display-name",
+                "iconCssClass": "kcAuthenticatorDefaultClass",
+                "authExecId": "e890d067-1ce6-4034-ba58-bd9e718eb021",
+                /*authenticationExecution: Should not be exposed */
+            },
+        ],
+        "showUsername": false,
+        "showTryAnotherWayLink": false,
+    },
+    "title": "Login",
+    "login": {
+        /* class: org.keycloak.forms.login.freemarker.model.LoginBean */
+    },
+    "pageId": "login-username",
+    "url": {
+        /* class: org.keycloak.forms.login.freemarker.model.UrlBean */
+        "oauthAction": "\/realms/clsa/login-actions/authenticate",
+        "resourcesPath": "\/resources/gb80i/login/keycloakify-theme-0-0-3",
+        "loginAction": "https://beta-id.clsa.com/realms/clsa/login-actions/authenticate?session_code=Nbhwiq2xQOddkbgh8PpRdkYXKaSaHFSZmguUj08Glr8&execution=e890d067-1ce6-4034-ba58-bd9e718eb021&client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "loginUrl": "\/realms/clsa/login-actions/authenticate?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "resourcesCommonPath": "\/resources/gb80i/common/keycloak",
+        "firstBrokerLoginUrl": "\/realms/clsa/login-actions/first-broker-login?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "registrationUrl": "\/realms/clsa/login-actions/registration?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "logoutConfirmAction": "\/realms/clsa/protocol/openid-connect/logout/logout-confirm?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "registrationAction": "https://beta-id.clsa.com/realms/clsa/login-actions/authenticate?session_code=Nbhwiq2xQOddkbgh8PpRdkYXKaSaHFSZmguUj08Glr8&execution=e890d067-1ce6-4034-ba58-bd9e718eb021&client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "loginResetCredentialsUrl": "\/realms/clsa/login-actions/reset-credentials?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ",
+        "ssoLoginInOtherTabsUrl": "\/realms/clsa/login-actions/restart?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ&skip_logout=true",
+        "resourcesUrl": "\/resources/gb80i?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ/login/keycloakify-theme-0-0-3",
+        "loginRestartFlowUrl": "\/realms/clsa/login-actions/restart?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ&skip_logout=false",
+        "resourcesCommonUrl": "\/resources/gb80i?client_id=legacy-research&tab_id=L8kf2hZ5Mj0&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNsc2EuY29tL29hdXRoL2NhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiIyOWQ4MDNlNi1mZjJhLTRhYTItODk0YS1hMDJjNmJiZWI1NjIifQ/common/keycloak",
+        "oauth2DeviceVerificationAction": "\/realms/clsa/login-actions/authenticate",
+    },
+    "authenticationSession": {
+        /* class: org.keycloak.forms.login.freemarker.model.AuthenticationSessionBean */
+        "tabId": "L8kf2hZ5Mj0",
+        "authSessionId": "svrGNVqnCDCWgyIlEJt4MfpR",
+        "authSessionIdHash": "DB4aUypFjebr3MlSDVilAGo8ROM3ERdI3K0GjHbcuTyExO7MunSgo4LOr6Lo2/BN",
+    },
+    "themeResources": {
+        /* class: org.keycloak.theme.ThemeResources */
+        "stylesCommon": [
+            {
+                /* class: org.keycloak.theme.ThemeResourceDescriptor */
+                "path": "vendor/patternfly-v4/patternfly.min.css",
+            },
+            {
+                /* class: org.keycloak.theme.ThemeResourceDescriptor */
+                "path": "vendor/patternfly-v3/css/patternfly.min.css",
+            },
+            {
+                /* class: org.keycloak.theme.ThemeResourceDescriptor */
+                "path": "vendor/patternfly-v3/css/patternfly-additions.min.css",
+            },
+            {
+                /* class: org.keycloak.theme.ThemeResourceDescriptor */
+                "path": "lib/pficon/pficon.css",
+            },
+        ],
+        "favicons": [
+        ],
+        "styles": [
+            {
+                /* class: org.keycloak.theme.ThemeResourceDescriptor */
+                "path": "css/login.css",
+            },
+        ],
+        "scripts": [
+        ],
+    },
+    "messagesPerField": {
+        /* class: org.keycloak.theme.beans.MessagesPerFieldBean */
+        "get": function (fieldName) { if(fieldName === 'firstName'){ return ''; } if(fieldName === 'lastName'){ return ''; } if(fieldName === 'email'){ return ''; } if(fieldName === 'username'){ return ''; } if(fieldName === 'password'){ return ''; } if(fieldName === 'password-confirm'){ return ''; } if(fieldName === 'global'){ return ''; } if(fieldName === 'totp'){ return ''; } if(fieldName === 'userLabel'){ return ''; } if(fieldName === 'recoveryCodeInput'){ return ''; } if(fieldName === 'termsAccepted'){ return ''; } },
+        "existsError": function (fieldName) { if(fieldName === 'firstName' ){ return false; }if(fieldName === 'lastName' ){ return false; }if(fieldName === 'email' ){ return false; }if(fieldName === 'username' ){ return false; }if(fieldName === 'password' ){ return false; }if(fieldName === 'password-confirm' ){ return false; }if(fieldName === 'global' ){ return false; }if(fieldName === 'totp' ){ return false; }if(fieldName === 'userLabel' ){ return false; }if(fieldName === 'recoveryCodeInput' ){ return false; }if(fieldName === 'termsAccepted' ){ return false; }},
+    },
+    "templateName": "login-username.ftl",
+    "client": {
+        /* class: org.keycloak.forms.login.freemarker.model.ClientBean */
+        "clientId": "legacy-research",
+        "description": "",
+        "baseUrl": "https://www.clsa.com/member",
+        "name": "",
+        "attributes": {
+            "logout.confirmation.enabled": "false",
+            "standard.token.exchange.enabled": "false",
+            "oauth2.jwt.authorization.grant.enabled": "false",
+            "frontchannel.logout.session.required": "true",
+            "post.logout.redirect.uris": "https://beta-www.clsa.com/member/*##https://beta-www.clsau.com/*##https://www.clsa.com/*##https://www.clsau.com/*",
+            "oauth2.device.authorization.grant.enabled": "false",
+            "backchannel.logout.revoke.offline.tokens": "false",
+            "realm_client": "false",
+            "oidc.ciba.grant.enabled": "false",
+            "backchannel.logout.session.required": "false",
+            "display.on.consent.screen": "false",
+            "pkce.code.challenge.method": "S256",
+            "dpop.bound.access.tokens": "false",
+        },
+    },
+    "passwordPolicies": {
+        /* class: org.keycloak.forms.login.freemarker.model.PasswordPoliciesBean */
+        "passwordHistory": 6,
+        "notEmail": true,
+        "lowerCase": 1,
+        "length": 8,
+        "notUsername": true,
+        "specialChars": 1,
+        "upperCase": 1,
+        "digits": 1,
+    },
+    "realm": {
+        /* class: org.keycloak.forms.login.freemarker.model.RealmBean */
+        "displayName": "clsa",
+        "registrationAllowed": false,
+        "displayNameHtml": "<style>a.cta:hover { color: #3d5198 !important; border-color: #3d5198 !important; } a.cta:active { color: #7085c0 !important; border-color: #7085c0 !important; }<\/style><div style=\"display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; font-family: &quot;Lato&quot;, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial;\"><span style=\"display: inline-block; padding: 8px 16px; border-radius: 9999px; background: #5065a6; font-size: 12px; font-weight: 400; line-height: 1.5; color: #fff;\">Upcoming<\/span><div style=\"display: flex; flex-direction: column; gap: 4px; width: 100%\"><h2 style=\"margin-bottom: 0; font-size: 32px; line-height: 1.25;\">33rd Investors\' Forum 2026<\/h2><h4 style=\"margin-bottom: 0; font-weight: 700;\">21 - 24 September (Monday - Thursday)<\/h4><div style=\"font-weight: 400;\">Hong Kong<\/div><\/div><div style=\"display: flex; gap: 16px; width: 100%; align-items: flex-start\"><p style=\"flex: 3; font-size: 14px; line-height: 1.43; color: rgba(0, 0, 0, 0.7)\">We are excited to announce an exceptional lineup of esteemed speakers who will offer insightful perspectives on the key issues shaping portfolios. Our event will merge senior executives and investors from across the globe, providing unparalleled corporate access through hundreds of one-on-one and group meetings with leading executives in the region.<\/p><img style=\"flex: 2; width: 33.333%; height: auto; border-radius: 12px\" alt=\"Event poster\" src=\"https://forumfiles.clsa.com/cms/IF26/forumThumbnail.jpeg\" /><\/div><a class=\"cta\" href=\"mailto:events.team@clsa.com\" style=\"display: flex; justify-content: center; align-items: center; width: 217px; height: 40px; padding: 0 24px; border-radius: 4px; border: 1px solid #006; background: transparent; font-weight: 700; color: #006; text-decoration: none;\">Contact Us<\/a><\/div>",
+        "resetPasswordAllowed": true,
+        "resetCredentialsActionTokenLifespanMinutes": 1440,
+        "password": true,
+        "actionTokenGeneratedByUserLifespanMinutes": 1440,
+        "internationalizationEnabled": false,
+        "idpVerifyAccountLinkActionTokenLifespanMinutes": 1440,
+        "verifyEmailActionTokenLifespanMinutes": 1440,
+        "loginWithEmailAllowed": true,
+        "duplicateEmailsAllowed": false,
+        "editUsernameAllowed": false,
+        "name": "clsa",
+        "rememberMe": true,
+        "registrationEmailAsUsername": false,
+        "identityFederationEnabled": false,
+    },
+    "darkMode": false,
+    "scripts": [
+    ],
+    "lang": "en",
+    "properties": {
+        "parent": "keycloak",
+        "styles": "css/login.css",
+        "stylesCommon": "vendor/patternfly-v4/patternfly.min.css vendor/patternfly-v3/css/patternfly.min.css vendor/patternfly-v3/css/patternfly-additions.min.css lib/pficon/pficon.css",
+        "APP_VERSION": "0.0.3",
+        "KEYCLOAKIFY_SPA_DEV_SERVER_PORT": "",
+        "abstract": "true",
+        "darkMode": "true",
+    },
+};
+kcContext.keycloakifyVersion = "11.15.3";
+kcContext.themeVersion = "0.0.3";
+kcContext.themeType = "login";
+kcContext.themeName = "keycloakify-theme-0-0-3";
+kcContext.pageId = "login-username.ftl";
+kcContext.ftlTemplateFileName = "login-username.ftl";
+
+
+kcContext["x-keycloakify"] = {};
+
+kcContext["x-keycloakify"].resourcesPath = "/resources/gb80i/login/keycloakify-theme-0-0-3";
+
+{
+    var messages = {};
+        messages["auth-username-form-help-text"] = decodeHtmlEntities("Start sign in by entering your username");
+        messages["auth-username-form-display-name"] = decodeHtmlEntities("Username");
+    kcContext["x-keycloakify"].messages = messages;
+}
+
+if( 
+    kcContext.url instanceof Object &&
+    typeof kcContext.url.resourcesPath === "string"
+){
+    kcContext.url.resourcesCommonPath = kcContext.url.resourcesPath + "/resources-common";
+}
+
+if( kcContext.messagesPerField ){
+    var existsError_singleFieldName = kcContext.messagesPerField.existsError;
+    kcContext.messagesPerField.existsError = function (){
+        for( let i = 0; i < arguments.length; i++ ){
+            if( existsError_singleFieldName(arguments[i]) ){
+                return true;
+            }
+        }
+        return false;
+    };
+    kcContext.messagesPerField.exists = function (fieldName) {
+        return kcContext.messagesPerField.get(fieldName) !== "";
+    };
+    kcContext.messagesPerField.printIfExists = function (fieldName, text) {
+        return kcContext.messagesPerField.exists(fieldName) ? text : undefined;
+    };
+    kcContext.messagesPerField.getFirstError = function () {
+        for( let i = 0; i < arguments.length; i++ ){
+            const fieldName = arguments[i];
+            if( kcContext.messagesPerField.existsError(fieldName) ){
+                return kcContext.messagesPerField.get(fieldName);
+            }
+        }
+    };
+}
+attributes_to_attributesByName: {
+    if( !kcContext.profile ){
+        break attributes_to_attributesByName;
+    }
+    if( !kcContext.profile.attributes ){
+        break attributes_to_attributesByName;
+    }
+    var attributes = kcContext.profile.attributes;
+    delete kcContext.profile.attributes;
+    kcContext.profile.attributesByName = {};
+    attributes.forEach(function(attribute){
+        kcContext.profile.attributesByName[attribute.name] = attribute;
+    });
+}
+
+redirect_to_dev_server: {
+
+    switch(kcContext.themeType){
+        case "login":
+            break redirect_to_dev_server;
+        case "account":
+            if( kcContext.pageId !== "index.ftl" ){
+                break redirect_to_dev_server;
+            }
+            break;
+        case "admin":
+            break;
+        default: 
+            break redirect_to_dev_server;
+    }
+
+    const devSeverPort = kcContext.properties.KEYCLOAKIFY_SPA_DEV_SERVER_PORT;
+
+    if( !devSeverPort ){
+        break redirect_to_dev_server;
+    }
+
+    const redirectUrl = new URL(window.location.href);
+
+    const keycloakServerPort = redirectUrl.port;
+
+    redirectUrl.port = devSeverPort;
+
+    delete kcContext.msgJSON;
+
+    console.log(kcContext);
+
+    redirectUrl.searchParams.set("kcContext", JSON.stringify(kcContext));
+    redirectUrl.searchParams.set("keycloakServerPort", keycloakServerPort);
+
+    window.location.href = redirectUrl.toString();
+
+}
+
+
+window.kcContext = kcContext;
+
+function decodeHtmlEntities(htmlStr){
+    var element = decodeHtmlEntities.element;
+    if (!element) {
+        element = document.createElement("textarea");
+        decodeHtmlEntities.element = element;
+    }
+    element.innerHTML = htmlStr;
+    return element.value;
+}
+
+
+</script>
+<base href="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/svg+xml" href="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/citics_research.svg">
+    <script type="module" crossorigin="" src="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/assets/index-BFfvX8az.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/assets/jsx-runtime-D-oznMWL.js">
+    <link rel="modulepreload" crossorigin="" href="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/assets/preload-helper-rov5CBGT.js">
+    <link rel="modulepreload" crossorigin="" href="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/assets/react-BeFwIp5l.js">
+    <link rel="modulepreload" crossorigin="" href="/resources/gb80i/login/keycloakify-theme-0-0-3/dist/assets/react-dom-C_Myac-V.js">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  
+
+</body></html>

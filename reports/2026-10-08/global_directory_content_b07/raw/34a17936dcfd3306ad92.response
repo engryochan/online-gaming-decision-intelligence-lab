@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html PUBLIC >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	www.blberza.com
+</title><link rel="icon" href="../Content/Logo/favicon-light.svg" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" /><link href="/client/combined/css.css?v=96824701" rel="stylesheet" type="text/css"/>
+<meta name="description" content="Banjalučka berza hartija od vrijednosti, Banjaluka Stock Exchange"></meta>
+    
+
+<link rel="stylesheet" type="text/css" href="../client/highstock/css/stocktools/gui.css" /><link rel="stylesheet" type="text/css" href="../client/highstock/css/annotations/popup.css" /><link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">$.noConflict()</script>
+
+</head>
+
+<body>
+    <form name="aspnetForm" method="post" action="./MemberInfo.aspx?code=ADBR" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EBB74C91" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="hEeA2MvBpu9bpGxrbbBcRoymhaXnVaqp1GQNVxDUlHXOvKpJ9SNbrg32GPHtBrP+0YKVkQuKmXYsK/Ystau32MYk6/+GxzfTQ+ygVxXSaxGGKnILNPlgCmdfLhL6wHO1JnlRRLGCBe+CglANY+DB9xyCJ2pN1sTkSqrNrMeJQPH5eynn6rmEVBevxKCNI1HafY3X15tGUEGRFhecITYWXrL8tO0aVxglvsvmwtCqJpbjwFqPM13OEBObpKDIc6KCiw0M5Xg40uqFRVor5kHwWA==" />
+        <div id="wrapper" style="min-height: 100vh;">
+
+            <div class="d-flex flex-column" style="min-height: 100%">
+                <div class="position-sticky" style="top: 0; z-index: 10">
+                    <div class="container-xl bg-white grid-links-reset">
+                        <nav class="navbar navbar-expand-md navbar-default justify-content-between px-0">
+                            <div>
+                                <a href="/Pages/Default.aspx">
+                                    <img src="/Content/gridAssets/logo/berza-logo-1.svg" height="55" />
+                                </a>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="navbar-nav align-items-md-center flex-row">
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-inline-block">
+                                        <a class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                    </li>
+                                    <li class="grid-divider-small primary mx-1 d-none d-lg-block"></li>
+                                    <li class="nav-item mr-4 d-none d-lg-inline-block" id="aboutus"></li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbLat" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbLat&#39;,&#39;&#39;)">Lat</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ctl00_ctl00_lbCir" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbCir&#39;,&#39;&#39;)">Ћир</a>
+                                    </li>
+                                    <li class="nav-item d-flex">
+                                        <a id="ctl00_ctl00_lbEng" class="nav-link grid-font-weight-500 grid-small-text grid-main-text-color hover pr-1 grid-opacity-03" href="javascript:__doPostBack(&#39;ctl00$ctl00$lbEng&#39;,&#39;&#39;)">Eng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="grid-main-bg-color grid-links-reset">
+                        <div class="container-xl px-0 px-lg-3">
+                            <div class="d-flex align-items-center justify-content-between position-relative flex-wrap">
+                                <div id="divMenu0" class="d-none d-lg-flex justify-content-between grid-menu align-items-center">
+                                </div>
+                                <div id="div-search" class="pl-lg-3 pl-2 py-1">
+                                    <div class="input-group position-relative rounded">
+                                        <input name="ctl00$ctl00$tbSearch" type="text" value="Pretraga hartija" id="ctl00_ctl00_tbSearch" class="form-control rounded" onfocus="this.value=&#39;&#39;; this.style.color=&#39;#000000&#39;" style="color: gray" />
+                                        <div class="grid-append-button-icon">
+                                            <input type="submit" name="ctl00$ctl00$btSearch" value="" id="ctl00_ctl00_btSearch" class="grid-search" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="navbar-toggler d-lg-none" style="outline: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-button-icon secondary"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                                    <div class="d-flex d-lg-none text-white" id="mobileMenu1" style="max-height: 55vh; overflow-y: scroll;">
+                                    </div>
+                                    <script>
+                                        document.getElementById('mobileMenu1').addEventListener('scroll', (e) => e.stopPropagation())
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../client/combined/mootools-1.2.6.js?v=1" type="text/javascript"></script>
+                <script src="../client/combined/highstock-9.0.1.js?v=1" type="text/javascript"></script>
+                <script>
+                    Highcharts.theme = {
+                        colors: ['#3c3476', '#945fbe', '#090D48', '#039460', '#1926d4', '#e0e01b', '#de862f', '#66d4ed', '#6d8ead', '#Ed3911', '#585a83'],
+                        chart: {
+                            backgroundColor: "#f8f9fa",
+                            style: {
+                                fontFamily: 'Roboto'
+                            },
+                            width: null,
+                        },
+                        title: {
+                            style: {
+                                color: '#000',
+                                font: 'bold 16px "Roboto MS", Verdana, sans-serif'
+                            }
+                        },
+                    };
+                    // Apply the theme
+                    Highcharts.setOptions(Highcharts.theme);
+                </script>
+                <div class="grid-breadcrumbs container-xl"></div>
+                <script src="/client/combined/js.js?v=96824701" type="text/javascript"></script>
+<script src="/client/combined/loc1.js?v=96824701" type="text/javascript"></script>
+
+                <script type="text/javascript">loadMenu(getMenuData(), "memberinfo.aspx?code=adbr", "memberinfo.aspx", {"indexcode":"BIRS","issuercode":"TLKM","securitycode":"TLKM-R-A"}); </script>
+                <script>
+                    jQuery(document).on('click', '.grid-dropdown-menu', function (e) {
+                        e.stopPropagation();
+                    });
+                </script>
+
+                <div id="pre-content" class="flex-grow-1 pt-3 pb-3 container-xl">
+                    
+                    
+                    
+        
+    <h2>
+        ADVANTIS BROKER AD BANJA LUKA
+    </h2>
+    <div class="py-2">
+
+        <img id="ctl00_ctl00_Content_MainContent_imgLogo" src="../Content/Member/Logo/ADBR.gif" border="0" />
+
+    </div>
+    <table style="width: 100%" cellspacing="5" class="grid-table-wrapper novUL mb-3">
+        <tr>
+            <td class="item">
+                Adresa:
+            </td>
+            <td class="hal value">
+                Krajiških brigada 113, 78 000 Banja Luka
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Telefon:
+            </td>
+            <td class="hal value">
+                +387 51 233 710
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Faks:
+            </td>
+            <td class="hal value">
+                +387 51 233 711
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                e-mail:
+            </td>
+            <td class="hal value">
+                <a id="ctl00_ctl00_Content_MainContent_hlMail" href="mailto:info@advantisbroker.com">info@advantisbroker.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                Web adresa:
+            </td>
+            <td class="value">
+                <a id="ctl00_ctl00_Content_MainContent_hlWWW" href="http://www.advantisbroker.com">www.advantisbroker.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="item vat">
+                Ovlašteni brokeri:
+            </td>
+            <td>
+                Tatjana Tomanić<br/>Vedrana Đukić<br/>
+            </td>
+        </tr>
+
+    </table>
+    <h2>
+        Kontakt
+    </h2>
+    <div class="table-scrollable">
+        <div>
+	<table class="novUL pad3 grid-table-wrapper" cellspacing="0" border="0" id="ctl00_ctl00_Content_MainContent_gvContacts" width="100%">
+		<tr class="table_header hal">
+			<th scope="col">Kontakt osoba</th><th scope="col">Grad</th><th scope="col">Adresa</th><th scope="col">Telefon</th><th scope="col">Fax</th><th scope="col">Email</th>
+		</tr><tr>
+			<td>Tatjana Tomanić</td><td>Banja Luka</td><td>Krajiških brigada 113</td><td>00387 51 233 710</td><td>00387 51 233 711</td><td>
+                        <a href='mailto:tatjana.tomanic@advantisbroker.com'>tatjana.tomanic@advantisbroker.com </a>
+                    </td>
+		</tr><tr>
+			<td>Saša Kujundžić</td><td>Banja Luka</td><td>APIF, Trg jasenovačkih žrtava bb</td><td>00387 51 308 079</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Vedrana Đukić</td><td>Banja Luka</td><td>Krajiških brigada 113</td><td>00387 51 233 713</td><td>00387 51 233 711</td><td>
+                        <a href='mailto:vedrana.djukic@advantisbroker.com'>vedrana.djukic@advantisbroker.com </a>
+                    </td>
+		</tr><tr>
+			<td>Nevena Đurić</td><td>Bijeljina</td><td>APIF, Jovana Dučića 2</td><td>00387 55 210 918</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dejan Rašić</td><td>Derventa</td><td>APIF, M. Bjeloševića 5</td><td>00387 53 490 271</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Snežana Gavrić</td><td>Doboj</td><td>APIF, Svetog Save 20</td><td>00387 53 241 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Cuca Đermanović </td><td>Doboj</td><td>APIF, Svetog Save 20</td><td>00387 53 241 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Radmila Krsmanović</td><td>Foča</td><td>APIF, M.Kovačevića 7</td><td>00387 58 210 848</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sanja Slijepčević</td><td>Gradiška</td><td>APIF, Vidovdanska 16</td><td>00387 51 813 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Slavica Borjanović</td><td>Gradiška</td><td>APIF, Vidovdanska 16</td><td>00387 51 813 241</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Slobodan Veselinović</td><td>Istočno Sarajevo</td><td>APIF, Karađorđeva bb</td><td>00387 57 340 882</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milka Novaković</td><td>Istočno Sarajevo</td><td>APIF, Karađorđeva bb</td><td>00387 57 340 882</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Slavica Jovanović </td><td>Modriča</td><td>APIF, Kneza Miloša bb</td><td>00387 53 812 805</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Sandra Lazić</td><td>Modriča</td><td>APIF, Kneza Miloša bb</td><td>00387 53 812 805</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milena Zeljković</td><td>Mrkonjić Grad</td><td>APIF, Karađorđeva 2</td><td>00387 50 212 001</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Vladislava Ivanović</td><td>Novi Grad</td><td>APIF, Petra I Karađorđa 36</td><td>00387 52 752 329</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Jelena Lučić</td><td>Pale</td><td>APIF, Srpskih ratnika bb</td><td>00387 57 223 337</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dušan Pecalj</td><td>Prijedor</td><td>APIF, Vožda Karađorđa 14</td><td>00387 52 232 266</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Suzana Gavranović</td><td>Prijedor</td><td>APIF, Vožda Karađorđa 14</td><td>00387 52 232 266</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Snežana Zorić Vujić</td><td>Prnjavor</td><td>APIF, Trg Srpskih boraca bb </td><td>00387 51 663 741</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Stana Vidaković</td><td>Šamac</td><td>APIF, Kralja A.Karađorđevića 1  </td><td>00387 54 612 625</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Jadranka Rašić</td><td>Teslić</td><td>APIF, Karađorđeva 9</td><td>00387 53 431 918</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Anka Grujičić</td><td>Trebinje</td><td>APIF, Kralja Petra I 39</td><td>00387 59 220 235</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Milojka Sarić</td><td>Višegrad</td><td>APIF, Kralja Petra I 6</td><td>00387 58 620 330</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Ljubica Mitrović</td><td>Zvornik</td><td>APIF, Svetog Save 62</td><td>00387 56 210 256</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr><tr>
+			<td>Dragana Mihajlović</td><td>Zvornik</td><td>APIF, Svetog Save 62</td><td>00387 56 210 256</td><td>&nbsp;</td><td>
+                        <a href='mailto:'> </a>
+                    </td>
+		</tr>
+	</table>
+</div>
+    </div>
+
+
+                </div>
+                <a id="back2Top" title="Back to top" href="#">
+                    <img src="/Content/gridAssets/icons/icon-arrow-upwrads.svg" />
+                </a>
+                <script>
+                    jQuery(window).scroll(function () {
+                        var height = jQuery(window).scrollTop();
+                        if (height > 100) {
+                            jQuery('#back2Top').fadeIn();
+                        } else {
+                            jQuery('#back2Top').fadeOut();
+                        }
+                    });
+                    jQuery(document).ready(function () {
+                        jQuery("#back2Top").click(function (event) {
+                            event.preventDefault();
+                            jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+                            return false;
+                        });
+                    });
+                </script>
+                <div class="grid-footer-wrapper grid-main-bg-color">
+                    <div class="container-xl py-4 grid-footer grid-links-reset">
+                        <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-start align-items-lg-center">
+                            <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center grid-white-text-color">
+                                <a class="mb-2 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.secrs.gov.ba/" target="_blank">Komisija za HOV</a>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover d-lg-none" href="http://www.crhovrs.org/" target="_blank">Centralni registar HOV</a>
+                                <a class="pl-0 mb-2 mb-lg-0 grid-white-text-color hover" href="mailto:komentar@blberza.com?subject=Komentar na sajt" style="cursor: pointer;">
+                                    Sugestije na sajt
+                                </a>
+                                <span class="grid-divider-small d-none d-lg-inline-block mx-3"></span>
+                                <a class="mb-3 mb-lg-0 grid-white-text-color hover" href="SiteMap.aspx">Mapa sajta</a>
+                                <div class="d-lg-none mb-3">
+                                    <a id="ctl00_ctl00_LinkButton1" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton1&#39;,&#39;&#39;)">Lat</a>
+                                    <a id="ctl00_ctl00_LinkButton2" class="grid-font-weight-50 grid-small-text grid-white-text-color hover pr-2" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton2&#39;,&#39;&#39;)">Ћир</a>
+                                    <a id="ctl00_ctl00_LinkButton3" class="grid-font-weight-50 grid-small-text grid-white-text-color hover" href="javascript:__doPostBack(&#39;ctl00$ctl00$LinkButton3&#39;,&#39;&#39;)">Eng</a>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="grid-white-text-color grid-small-text">
+                                    © 2021 Banjalučka berza. Sva prava zadržana.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    
+    
+
+    <!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WXRLKX8GQ"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1WXRLKX8GQ');
+    </script>
+    <script>
+        if (typeof jQuery != 'undefined') {
+            (function ($) {
+                $(document).ready(function () {
+                    $('.carousel').each(function (index, element) {
+                        $(this)[index].slide = null;
+                    });
+                });
+            })(jQuery);
+        }
+    </script>
+    <script>
+        function applyIcon(type) {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+
+            if (type === "dark") {
+                link.href = '../Content/Logo/favicon-dark.svg';
+            } else {
+                link.href = '../Content/Logo/favicon-light.svg';
+            }
+
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        var dmQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        var lmQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+        // Check on initial load if dark mode is already there. Apply the dark
+        // mode favicon if true.
+        if (dmQuery.matches) {
+            applyIcon("dark");
+        }
+
+        dmQuery.addListener(function () {
+            applyIcon("dark")
+        });
+
+        lmQuery.addListener(function () {
+            applyIcon("light");
+        });
+    </script>
+
+</body>
+</html>

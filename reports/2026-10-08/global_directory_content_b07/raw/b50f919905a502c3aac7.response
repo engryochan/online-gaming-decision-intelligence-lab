@@ -1,0 +1,569 @@
+
+	
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+<title>Security Guidelines</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description"/>
+<meta name="title" content="Security Guidelines"/>
+<meta name="keywords" content="Home, Security Guidelines"/>  
+
+<link rel="icon"/>
+
+
+        <!--/* Added Jquery & UI latest version*/ -->
+
+    
+<link rel="stylesheet" href="/etc/designs/barxpublic/barx-jquery.min.css" type="text/css">
+
+
+
+
+    
+<script src="/etc/designs/barxpublic/barx-jquery.min.js"></script>
+
+
+
+
+
+
+    
+<link rel="stylesheet" href="/etc/designs/barxpublic/clientlib-all.min.css" type="text/css">
+
+
+
+
+    
+<script src="/etc/designs/barxpublic/clientlib-all.min.js"></script>
+
+
+
+        
+
+
+	
+
+
+
+
+	
+       
+    
+
+	 
+
+<script type="text/javascript">
+if (navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
+	$.ajaxSetup({ cache: false });
+}
+
+checkheadpxlCookie();
+</script>
+    </head>
+    <body id="top">
+    	<div class="barx-container">
+	        <noscript>
+	            Please enable JavaScript for full functionality.
+	        </noscript>
+			<div id="wrapper">
+	            <header class="barx-header">
+	<div>
+        
+        
+
+
+<script>
+var showpecrmsg = true;
+var pathName = window.location.pathname;
+if(pathName.indexOf("/WC2") == 0){
+	showpecrmsg=false;
+}
+</script>
+
+
+
+<script>
+    var button1Title= "Manage cookies";
+	var button2Title=  "Accept all cookies";
+	var button3Title=  "Reject All";
+	
+	var env ='PROD';
+	var _host = document.location.host;
+	if(_host.split('.')[0].split('-').length>1)
+	env =  (/qa|uat|stage/i.test(_host)) ? _host.split('.')[0].split('-')[1].toUpperCase() : 'PROD';
+
+	var envurl="https://live.barcap.com/BC_S/PECR/src/barclays.cookie.consent.js";
+	var linkurl = "https://live.barcap.com/BC_S/PECR/src/barclays.cookie.consent.css";
+	if(env=="QA"){
+		envurl="https://livestage.barcap.com/BC_S/PECR/src/barclays.cookie.consent.js";
+	    linkurl = "https://livestage.barcap.com/BC_S/PECR/src/barclays.cookie.consent.css";
+	}
+	if(env=="UAT" || env=="STAGE"){
+		envurl="https://livestage.barcap.com/BC_S/PECR/src/barclays.cookie.consent.js";
+	    linkurl = "https://livestage.barcap.com/BC_S/PECR/src/barclays.cookie.consent.css";
+	}
+
+	var script = '<scr'+'ipt  src='+envurl+'>';
+	document.write(script);
+	var scriptEnd = "</scr" + "ipt>";
+	document.write(scriptEnd);
+	
+	var linkrel = '<link rel="stylesheet" href='+linkurl+' type="text/css">';
+	document.write(linkrel);
+</script>
+
+<script type="text/javascript" src="/etc/designs/barxpublic/clientlib-all/js/pecrconsent.data.js"></script>
+
+<script>
+$(document).ready(function () {
+	if(showpecrmsg){
+	    var consent = $.fn.PECR(config);
+	    $('.manage-cookie-view-desc').html("Please review and manage your cookie settings below. For more information, or to change your preferences at any time, please visit our <a href="+cookiepageurl+" target='_blank' style='font-size:18px;'><u>Cookie Policy</u></a> Page. Please select 'Save and close' to remember your preferences for future visits.");
+	    var pecrbarclaysConsent = getPECRCookie("barclaysConsent");
+	    if(pecrbarclaysConsent!==null){
+	    	var stylecheck = "$('.barclays-consent').css('display','none')";
+	    	$('.consent-header').before("<a class='close-icon' onclick="+stylecheck+"></a>");
+	    }
+	    		    
+	    
+	    console.log(consent);
+	    $('.open-modal').click(function () {
+	        consent.openAsModal();
+	        // console.log($.fn.PECR);
+	    });
+	    
+	    $(document).on("onConsent", function(){   // to load cookies just after consent save/updated
+	    	checkPerfCookie();
+	    	checkheadpxlCookie();
+	    	checkdblpxlCookie();
+  		  });
+	}
+});
+
+</script>
+
+
+
+	</div>
+    <div>
+        
+        
+        	
+            
+    
+
+
+
+
+
+ 
+<div>
+	
+	<div class="barx-user-menu-wrapper hide-in-devices">
+	    <div class="barx-user-menu"> 
+	        <div class="barx-page-title">
+	            <a href="https://www.investmentbank.barclays.com" target="_blank" title="Barclays IB">
+	    			Investment Bank </a></div>
+			<i class="bc-hamburger custom icon"></i>
+	        <div class="barx-user-controls">
+                <div class="dropdown-cont">
+                    
+                    
+                </div>
+
+	            <a href="/contact-us.html" class="user-control-link" title="Contact Us" target="_blank">
+	                Contact Us</a>
+				<a href="https://www.barx.com" class="user-control-link" title="login">
+	                Login</a>
+	            
+	        </div>
+		</div>
+	</div>
+	<div class="barx-logo-area">
+	    <div class="barx-bac-logo">
+	         <a href="/" target="_self" title="Barclays">
+				<img data-interchange="
+	                    [/content/dam/barxpublic/system/barclays_logo_42.png, (bc-mobile)],
+		                [/content/dam/barxpublic/public/Images/New Barclays_Logo_RGB_Cyan.png, (bc-default)]," alt="Barclays"/></a>
+				</a>
+		</div>
+		<div class="barx-logo">
+	        <img src="/content/dam/barxpublic/system/BARX%20Logo%20Resize%20-%20BARX.png" alt="Barx"/>
+	    </div>
+	</div>
+	<div class="nav-search-cont">
+	    <nav class="main-nav barx-menu" role="navigation">
+	        <div class="row">
+	            <div class="mega-menu">
+	                
+				</div>
+			</div>
+		</nav>
+		
+	</div>
+	<div class="barx-device-user-menu">
+        <div class="login-page-link-holder">
+            <!-- link to login page --> 
+                <a href="https://www.barx.com" class="link__page-parent" title="login">
+	                Login</a>
+		</div>
+	</div>  
+</div> 
+        
+	</div>
+	<div>
+        
+        
+        	
+            
+
+
+ <nav class="off-canvas-menu-external">
+     <nav class="off-canvas-menu" data-offcanvas-menu-left="">
+         <ul class="main-menu nav-level">
+             <li class="home">
+             	<a href="/" title="Home" target="_self">Home</a>
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/legal-notice.html" title="Legal Notices" target="_self">
+                 <span>Legal Notices</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/security-guidelines.html" title="Security Guidelines" target="_self">
+                 <span>Security Guidelines</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/error404.html" title="Page Not Found" target="_self">
+                 <span>Page Not Found</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/ecp-disclaimer.html" title="ECP Disclaimer" target="_self">
+                 <span>ECP Disclaimer</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/usage-guide.html" title="BARX User Guidelines" target="_self">
+                 <span>BARX User Guidelines</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/barx-live--quick-start-installation-guide.html" title="BARX FX Installation Guide" target="_self">
+                 <span>BARX FX Installation Guide</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/contact-us.html" title="Contact Us" target="_self">
+                 <span>Contact Us</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/accessibility.html" title="Accessibility" target="_self">
+                 <span>Accessibility</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/cookie-policy.html" title="Cookies Policy" target="_self">
+                 <span>Cookies Policy</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/privacy-policy.html" title="Privacy Policy" target="_self">
+                 <span>Privacy Policy</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/last-look-disclosure.html" title="Last Look Disclosure" target="_self">
+                 <span>Last Look Disclosure</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/sitemap.html" title="Sitemap" target="_self">
+                 <span>Sitemap</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/eqdisclosures.html" title="BARX Equities Disclosures" target="_self">
+                 <span>BARX Equities Disclosures</span></a>
+             	
+                 
+             </li>
+             
+             <li class="has-menu">
+             	<a href="/commissions-for-cancer.html" title="Commissions for Cancer" target="_self">
+                 <span>Commissions for Cancer</span></a>
+             	
+                 
+             </li>
+             
+             <li class="home bottom-links-contact">
+             	<a href="/contact-us.html" title="Contact Us" target="_self">Contact Us</a>
+             </li>
+             
+         </ul> 
+     </nav>
+ </nav>
+          
+	</div>
+</header>
+	            <div class="barx-content-container"> 
+    <div class="row__full-bleed">
+
+
+
+
+</div>
+<div class="row">
+
+
+
+
+    
+    
+    <div class="textimage parbase"><div class="barx-textimage">
+
+
+    <div class="textimage_cont">
+    	<div class="text">
+            <div class="textimage_text">
+                <h1 style="margin-left: 40.0px;">BARX Security Guidelines</h1>
+<ol style="list-style-position: inside;">
+<li>Password should be at least 8 characters and a mix of alphanumeric, without repeating any digit or character more than once. </li>
+<li>Do memorize your Password </li>
+<li>Do not record your Password anywhere </li>
+<li>Do not choose a Password based on user-id, personal telephone number, birthday or other personal information </li>
+<li>Password and OTP PIN (if applicable) must be kept confidential and not be divulged to anyone</li>
+<li>Do change your Password regularly and immediately if you suspect any fraud </li>
+<li>The same Password should not be used for different websites, applications or services, particularly when they relate to different entities. </li>
+<li>Do not use the browser option to store or remember user-id and Password </li>
+<li>Do check the authenticity of the BARX website by comparing the URL and the bank’s name in its digital certificate or by observing the indicators provided by an extended validation certificate. </li>
+<li>Do check that the BARX website address changes from http:// to https:// and a security icon that looks like a lock or key appear when authentication and encryption is expected. </li>
+<li>Do check your BARX transactions frequently and report any discrepancy </li>
+<li>Do install anti-virus, anti-spyware and personal firewall software in your computer and ensure they are updated regularly </li>
+<li>Remove file and printer sharing in computers, especially when they have internet access via cable modems, broadband connections or similar set-ups </li>
+<li>Make regular backup of critical data </li>
+<li>Consider the use of encryption technology to protect highly sensitive data </li>
+<li>Do log off properly when BARX is not in use </li>
+<li>Do clear the cache after logging off the session (use Tools/Internet Options) </li>
+<li>Do not install software or run programs of unknown or untrusted origin </li>
+<li>Delete junk or chain emails </li>
+<li>Do not open email attachments from unknown or untrusted parties </li>
+<li>Do not disclose personal, or financial or credit card information to little known or suspicious websites </li>
+<li>Do not use a computer or a device which cannot be trusted </li>
+<li>Do not use public or internet cafe computers to access or perform financial transactions via BARX</li>
+</ol>
+
+            </div>
+            
+		</div>
+	</div>
+</div></div>
+
+
+</div>
+	
+<footer class="barx-footer" id="barx-footer">
+	<div class="row">
+        
+        	
+            
+
+<div class="bottom-footer">
+    <ul class="bottom-footer__links">
+    	
+
+
+
+
+    
+    
+    <div class="listitem">
+
+
+
+	<li class="links-list-item">
+		<a href="https://www.investmentbank.barclays.com/disclosures/personal-information-use.html" title="Privacy Policy" target="_blank">Privacy Policy</a>
+	</li>
+
+
+</div>
+
+
+    
+    
+    <div class="listitem">
+
+
+
+	<li class="links-list-item">
+		<a href="/cookie-policy.html" title="cookies policy" target="_blank">Cookies Policy</a>
+	</li>
+
+
+</div>
+
+
+    
+    
+    <div class="listitem">
+
+
+
+	<li class="links-list-item">
+		<a href="/legal-notice.html" title="Legal Notices" target="_blank">Legal Notices</a>
+	</li>
+
+
+</div>
+
+
+    
+    
+    <div class="listitem">
+
+
+
+	<li class="links-list-item">
+		<a href="/security-guidelines.html" title="Security Guidelines" target="_blank">Security Guidelines</a>
+	</li>
+
+
+</div>
+
+
+    
+    
+    <div class="listitem">
+
+
+
+	<li class="links-list-item">
+		<a href="/accessibility.html" title="Accessibility" target="_blank">Accessibility</a>
+	</li>
+
+
+</div>
+
+
+    
+    
+    <div class="listitem">
+
+
+
+	<li class="links-list-item">
+		<a href="/eqdisclosures.html" title="BARX Equities Disclosures" target="_blank">Equities Disclosures</a>
+	</li>
+
+
+</div>
+
+
+
+    </ul>
+    <div class="bottom-footer__copyright">
+    	<p>© 2025 - Barclays Plc</p>
+    </div>
+</div>
+        
+    </div>
+	 <div class="row"> 
+          		
+         
+
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+
+</div>
+
+    
+
+		
+    </div>   
+    
+    
+
+<script type="text/javascript">	
+  var siteRootName = "public\u002Den";
+  var pageName = "Home\/Security Guidelines";
+  var pageContentPath = "barxpublic\/public\/en\/security\u002Dguidelines";
+  
+  checkPerfCookie(); 
+  
+</script>		
+
+<!-- SiteCatalyst code version: H.11.
+Copyright 1997-2007 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script type="text/javascript">
+<!--/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/-->
+if (typeof s != 'undefined') {
+ var s_code=s.t();if(s_code)document.write(s_code);
+}	
+</script>
+<script type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<noscript>
+	<a href="http://www.omniture.com" title="Web Analytics"><img src="https://bc.112.2o7.net/b/ss/barcapbarxdev/1/H.11--NS/0?[AQB]&cdp=3&[AQE]" height="1" width="1" border="0" alt=""/></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.11. -->
+<!-- End Web Analytics JS -->
+ 
+    
+</footer>
+</div>
+			</div>
+		</div>
+    </body>
+</html>

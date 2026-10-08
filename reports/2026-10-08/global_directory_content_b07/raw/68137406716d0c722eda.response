@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/favicon.png" sizes="any" />
+
+    <link rel="stylesheet" media="all" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <script type="text/plain" data-cookiecategory="analytics">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-11082354-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<noscript><img alt="" src="https://secure.smart-enterprise-52.com/267056.png" style="display:none;" /></noscript>
+<script type="text/javascript" src="https://secure.smart-enterprise-52.com/js/267056.js" ></script>
+    
+<title>Equities | TISE</title>
+<meta property="og:title" content="Equities | TISE">
+<meta name="twitter:title" content="Equities | TISE">
+
+<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://tisegroup.com/listing/equities/">
+
+    <meta property="og:image" content="https://tisegroup.com//media/yklcabj0/equity-market.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c53e017b30">
+    <meta name="twitter:image" content="https://tisegroup.com//media/yklcabj0/equity-market.jpg?width=1500&amp;height=900&amp;quality=80&amp;v=1db18c53e017b30">
+
+<meta property="og:description" content="TISE is a regulated stock exchange home to a range of innovative equity listings. ">
+<meta name="twitter:description" content="TISE is a regulated stock exchange home to a range of innovative equity listings. ">
+<meta name="description" content="TISE is a regulated stock exchange home to a range of innovative equity listings. ">
+</head>
+<body>
+
+    <div class="page blue">
+        
+<div id="navigation" v-cloak v-clickout="closeSearch">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-inner-brand">
+                <a href="/"><img src="/media/ezbnvbj3/tise-master-a-miax-company-logo-rgb-white.png?width=200&height=103&quality=80&v=1dbd56b4cd472d0" alt="TISE Logo" /></a>
+            </div>
+            <div class="header-inner-nav" v-tracked>
+                <ul :class="{'on': open}">
+                    <li v-for="i in structure" :class="[{'on': openNavs.includes(i.Id)}, {'hide-from-ml' : i.Special}]">
+                        <div class="header-item">
+                            <a v-if="i.Children && i.Children.length > 0" class="header-item-link" @click="toggleNav(i)">{{i.Name}} <i class="fas fa-chevron-down"></i></a>
+                            <a v-if="!i.Children || (i.Children && i.Children.length == 0)" class="header-item-link" :href="i.Url">{{i.Name}} </a>
+                        </div>
+                        <div class="header-drop" :class="{'on': openNavs.includes(i.Id)}">
+                            <template v-for="c in i.Children">
+                                <a :href="c.Url" :class="{ hasgc: i.HasGrandchildren }">{{c.Name}}</a>
+                                <div class="header-drop-sub" v-if="i.HasGrandchildren">
+                                    <a v-for="p in c.Children" :href="p.Url"><span>&mdash;</span> {{p.Name}}</a>
+                                </div>
+                            </template>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-inner-burger-wrap">
+                    <a class="btn small white" v-tracked href="https://apps.tisegroup.com/Identity/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dtise-portal%26redirect_uri%3Dhttps%253A%252F%252Fapps.tisegroup.com%252Fmy-tise%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520TISEAPI%26nonce%3D28c5ae753640fc10c766c1317bffd4a829RufsNki%26state%3Dfd59249a2eeff0b1326c77958c4e7e9c34pA5Avrk%26code_challenge%3Di9aYC48siflcen0jUgPiXFrl7-F91eJligrY8qDLRsA%26code_challenge_method%3DS256"><span>MyTISE</span></a>
+                    <a class="search" @click="toggleSearch"><i class="fas fa-search"></i></a>
+                <div class="header-inner-burger-wrap-burger" :class="{'on': open}" @click="toggleNav(null)">
+                    <svg viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" rx="2" ry="2" />
+                        <rect y="9" width="32" height="2" rx="2" ry="2" />
+                        <rect y="18" width="32" height="2" rx="2" ry="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="burger-nav" :class="{'on': open}">
+        <div class="burger-nav-left">
+            <div class="burger-nav-left-inner">
+                <ul>
+                    <li v-for="i in structure" :class="[{'on' : curPage != null && curPage.Id == i.Id}, {'hide-from-xl' : i.Special}]">
+                        <a v-if="i.Children && i.Children.length > 0" @click="curPage = i">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                        <a v-if="!i.Children || (i.Children && i.Children.length == 0)" :href="i.Url">{{i.Name}} <i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+
+
+</li>
+                </ul>
+            </div>
+        </div>
+        <div class="burger-nav-mid">
+            <div class="burger-nav-mid-inner" v-if="curPage != null">
+                <h3>{{curPage.Title}}</h3>
+                <p>{{curPage.Copy}}</p>
+                <p>&nbsp;</p>
+                <div class="burger-nav-mid-inner-cols" v-if="curPage.HasGrandchildren">
+                    <div v-for="c in curPage.Children" class="burger-nav-mid-inner-cols-col" :class="'c' + curPage.Children.length">
+                        <ul>
+                            <li class="overview"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                            <li v-for="gc in c.Children"><a :href="gc.Url">{{gc.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-nav-mid-inner-cols" v-if="!curPage.HasGrandchildren">
+                    <div class="burger-nav-mid-inner-cols-col c1">
+                        <ul>
+                            <li v-for="c in curPage.Children"><a :href="c.Url">{{c.Name}} <i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-nav-right">
+                <p>About TISE</p>
+                <a href="/company-profile/">Company Profile</a>
+                <a href="/company-profile/meet-the-team/">Meet the Team</a>
+                <a href="/news/">News</a>
+                <a href="/company-profile/careers/">Careers</a>
+                <a href="/company-profile/corporate-social-responsibility/">CSR</a>
+                <a href="/business-days/">Business Days</a>
+                <a href="/contact/">Contact</a>
+        </div>
+    </div>
+
+        <div class="burger-search" :class="{'on' : searchOpen}">
+            <form action="/search/" method="get">
+                <input type="text" name="query" placeholder="Enter Keywords or Mnemonic" />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+</div>
+        
+
+<div class="pagenav">
+    <div class="pagenav-inner">
+        <a class="title">On this page</a>
+        <ul class="pagenav-inner-items">
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_73bb0baabff24ac298def458bd7c175c"><a href="#_73bb0baabff24ac298def458bd7c175c">Products</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_0bc4d19aa5c44e99953ad4123784d3b6"><a href="#_0bc4d19aa5c44e99953ad4123784d3b6">How to List</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_7c04934cf3b54a94a449434e845d9998"><a href="#_7c04934cf3b54a94a449434e845d9998">Market Data</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_1a22e526e66d43f099f86c77d3edb6bd"><a href="#_1a22e526e66d43f099f86c77d3edb6bd">Documents</a></li>
+                    <li data-scroll-inview="40" data-scroll-toggle="on" data-scroll-target="#_ac33725118d54c32ad0af8466427da70"><a href="#_ac33725118d54c32ad0af8466427da70">Latest News</a></li>
+        </ul>
+        <p class="pad"></p>
+    </div>
+</div>
+<div class="hero   lazy blue opacity-after-6" data-bg="/media/yklcabj0/equity-market.jpg?width=1920&height=840&quality=80&v=1db18c53e017b30" id="_d26b9cbfc9e649099a6fdf9d080b6779">
+    <div class="hero-content">
+        <div class="hero-content-text">
+                <img src="/media/zhid5qyo/8830-tise-eqty-master-logo-cmyk-white-mar-2025-275px.png" />
+            <h1></h1>
+            <p class="intro  " style=max-width:500px;>TISE is a regulated stock exchange home to a range of innovative equity listings</p>
+        </div>
+    </div>
+</div>
+<div class="content-wrap mt-8 mb-5" id="_52206d8c3a3b48c094943a1d88dddc95">
+    <div class="infopanels">
+        <div class="infopanels-head">
+            <h2>Responsive. Innovative.</h2>
+            <p style="text-align: center;">We are a leading European stock exchange providing international capital markets participants with a high-quality product and service offering for the listing and trading of securities.</p>
+        </div>
+        <div class="infopanels-items" data-key="_52206d8c3a3b48c094943a1d88dddc95">
+                <div class="infopanels-items-item " data-index="0">
+                    <div class="infopanels-items-item-img">
+                        <img src="/media/i2agtr3h/fast-turnaround-tise-rgb.svg" />
+                    </div>
+                    <div class="infopanels-items-item-copy">
+                        <h4>Fast turnaround</h4>
+                        <p>We provide a quick review of all listing applications via our TISE Express 24-hour fast-track service, TISE Guarantee (2&#x2B;1) turnaround  for CLOs and standard TISE Guarantee (3&#x2B;1).</p>
+                    </div>
+                </div>
+                <div class="infopanels-items-item " data-index="0">
+                    <div class="infopanels-items-item-img">
+                        <img src="/media/qsqf12ws/fees-tise-rgb.svg" />
+                    </div>
+                    <div class="infopanels-items-item-copy">
+                        <h4>Competitive Fees</h4>
+                        <p>Attractive listing fees including one-off &#x2018;lifetime&#x2019; payment solutions can save issuers significant sums on both listing &amp; administration costs versus other European listing venues.</p>
+                    </div>
+                </div>
+                <div class="infopanels-items-item " data-index="0">
+                    <div class="infopanels-items-item-img">
+                        <img src="/media/agdf2tia/qualified-investor-tise-rgb.svg" />
+                    </div>
+                    <div class="infopanels-items-item-copy">
+                        <h4>Proportionate regulation</h4>
+                        <p>A globally recognised stock exchange, including for the Quoted Eurobond Exemption, where UK and EU rules do not apply and listing requirements are streamlined.</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="infopanels-popout" data-key="_52206d8c3a3b48c094943a1d88dddc95">
+        <i class="fas fa-times"></i>
+        <div class="infopanels-popout-slider">
+        </div>
+    </div>
+</div>
+<div class="products " id="_73bb0baabff24ac298def458bd7c175c">
+    <div class="content-wrap">
+        <h2>Equity Market Products</h2>
+        <div class="products-list">
+                <a class="products-list-item " href="/listing/equities/funds/" target="" data-id="_2fe0a9183abf41768007c3c4ad137f94">
+                    <div class="products-list-item-inner">
+                        <h4>Funds</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/equities/reits/" target="" data-id="_5bfb459b22d24c089c37ffbd58fe9eab">
+                    <div class="products-list-item-inner">
+                        <h4>REITs</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/equities/specialist-companies/" target="" data-id="_ee7da738e2454ff6b1160c20a91b97b6">
+                    <div class="products-list-item-inner">
+                        <h4>Specialist Companies</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+                <a class="products-list-item " href="/listing/equities/trading-companies/" target="" data-id="_dccfd1e825bc4ae18f9d4df564de5f99">
+                    <div class="products-list-item-inner">
+                        <h4>Trading Companies</h4>
+                        <p class="view"><span></span> View</p>
+                    </div>
+                </a>
+        </div>
+    </div>
+</div>
+<div class="content-wrap mt-8 mb-4 box-bg" id="_2c0899d5f78342dcb7581939f611d199" style="">
+    <div class="rte wide">
+        <h2 style="text-align: center;">Case Studies</h2>
+    </div>
+</div><div class="content-wrap mt-4 mb-7 box-bg" id="_082f3d9d0f22449ba0745e5f7b9b5ab2" style="">
+    <div class="rte wide">
+        <table border="0" class="table" style="height: 111px; width: 100%; border-collapse: collapse; border-style: hidden; border-color: #ffffff; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr style="height: 111px;">
+<td style="width: 20%; text-align: center; height: 111px;"><a href="/listing/equities/likewise/" title="Likewise"><img src="/media/lt3fjezh/likewise-v2.png?width=193&amp;height=96" alt="" width="193" height="96"></a></td>
+<td style="width: 20%; text-align: center; height: 111px;"><a href="/listing/equities/praxis/" title="Praxis"><img src="/media/lqbfdk3y/praxis-v2.png?width=192&amp;height=96" alt="" width="192" height="96"></a></td>
+<td style="width: 20%; text-align: center; height: 111px;"><a href="/listing/equities/sandpiperci/" title="SandpiperCI"><img src="/media/kh5cjxtn/sandpiperci-v2.png?width=192&amp;height=96" alt="" width="192" height="96"></a></td>
+</tr>
+</tbody>
+</table>
+    </div>
+</div><div class="content-wrap mt-5 mb-10 box-bg" id="_0bc4d19aa5c44e99953ad4123784d3b6" style="">
+    <div class="rte wide">
+        <h2>How to List Equities on TISE</h2>
+<h4 style="color: #54d5c4;">The submission process</h4>
+<p>The procedure for listing comprises four stages</p>
+    </div>
+</div>
+<div class="accordion mt--7 mb-5" id="_019ef514424d4992876523d1cc281f67">
+    <div class="content-wrap">
+        <h2></h2>
+            <div class="accordion-item">
+                <h4 class="num">
+                    Satisfying Listing Conditions 
+                </h4>
+                <p class="nowrap">Before an application to list a security is considered for submission on TISE, the appointed Sponsor is required to vet the application against certain conditions for listing prescribed within the Listing Rules.</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+            <div class="accordion-item">
+                <h4 class="num">
+                    Application for Listing 
+                </h4>
+                <p class="nowrap">The applicant, through its appointed Sponsor, must submit certain documents as required by the Listing Rules. Documentation requirements include a Listing Document (which can also take the form of an existing published prospectus, offering memorandum or equivalent document) together with supporting documentation such as accounts and certain material contracts (where applicable) as well as the application for admission, Sponsor’s Declaration and Directors Declaration.</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+            <div class="accordion-item">
+                <h4 class="num">
+                    Approval 
+                </h4>
+                <p class="nowrap">All applications for listing will be processed by the staff in our Listing Department. Once satisfied with an application they will submit a report, including their recommendations to TISE’s Listing and Membership Committee (LMC) for the LMC’s consideration.</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+            <div class="accordion-item">
+                <h4 class="num">
+                    Listing 
+                </h4>
+                <p class="nowrap">If the LMC approves the application, the Listing Document is then filed and the securities are admitted to the Official List with effect from a mutually agreed date.&nbsp;</p>
+                <a class="opener">Read <span class="more">More</span><span class="less">Less</span></a>
+            </div>
+    </div>
+</div><div class="content-wrap  box-bg" id="_b7c41087487b4d80a00bfde3537410ce" style="">
+    <div class="rte wide">
+        <h3 style="color: #54d5c4;">Key reference points</h3>
+<p>The key points of reference for the listing process:</p>
+    </div>
+</div><div class="content-wrap pt-2 pb-5 box-bg" id="_0443e0ea881a4ab99cb019a1b9154309" style="">
+    <div class="rte wide">
+        <div class="cols">
+                <div class="col-item">
+                    <h4>Appoint a Sponsor </h4>
+<p>A listing application must be made via one of our dedicated listing members</p>
+<p><a href="/membership/#_6d3688901cb44e2bb1deba669d44f24d" title="Home" class="btn">View our Sponsors</a></p>
+                </div>
+                <div class="col-item">
+                    <h4>Equity Market Listing Rules </h4>
+<p>We provide a rule book which sets out a proportionate disclosure regime for investment vehicles and trading companies</p>
+<p><a href="/rules/#Equity-Documents" title="Rules" class="btn" data-anchor="#Equity-Documents">View our Equity Market Listing Rules</a></p>
+                </div>
+                <div class="col-item">
+                    <h4>Listing Fees </h4>
+<p>Our fees are extremely competitive when compared with other venues</p>
+<p><a href="/listing/equities/equity-market-listing-fees/" title="Home" class="btn">View our Equity Market Listing Fees</a></p>
+                </div>
+                <div class="col-item">
+                    <h4>Equity Listing Rules - Specialist Companies </h4>
+<p>We provide a dedicated rule book which sets out a proportionate disclosure regime for Specialist Companies</p>
+<p><a href="/rules/#EquitySpec-Documents" title="Rules" class="btn" data-anchor="#EquitySpec-Documents">View our Specialist Companies Listing Rules</a></p>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="marketdata " id="_7c04934cf3b54a94a449434e845d9998">
+    <div class="content-wrap">
+        <h2>
+            TISE Equity Market Data
+        </h2>
+        <div class="marketdata-intro">
+            <p style="text-align: center;">A comprehensive list of securities listed on our Equity Market</p>
+        </div>
+        <div id="securities-vm" v-cloak>
+                <securitiesembed theme="blue" empty-message="" :page-size="7" :filter="{securityType: 'Equity', domicile: '', currency: '', hyb: false}" />
+        </div>
+    </div>
+</div><div class="content-wrap mt-10 mb-8 box-bg" id="_e80b2d02e81a479dadc90e483987a549" style="">
+    <div class="rte wide">
+        <h2 style="text-align: center;">Equity Market Documents<a id="Equity-Documents"></a></h2>
+    </div>
+</div>
+<div class="childlisting mt-0" id="_1a22e526e66d43f099f86c77d3edb6bd">
+    <div class="childlisting-list cards c10">
+        <div class="content-wrap">
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Equity Market Listing Rules</h4>
+                        <p>Effective August 2025</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/listing/equities/equity-market-listing-fees/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Equity Market Listing Fees</h4>
+                        <p>Effective January 2026</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/media/ygza4ftw/equity-market-brochure-2026.pdf" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Equity Market Brochure</h4>
+                        <p>Published June 2025</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/media/jcxpgrfl/tise-recognitions-memberships-2025.pdf" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>TISE Recognitions Brochure</h4>
+                        <p>Published June 2025</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix I</h4>
+                        <p>Application for admission of securities to listing&nbsp;</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix II</h4>
+                        <p>Sponsor's Declaration</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix III</h4>
+                        <p>Directors' Declaration</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix IV</h4>
+                        <p>Directors' Declaration (supplement)</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Supplement </h4>
+                        <p>Supplement Page</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#Equity-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Disclosure Obligations Checklist</h4>
+                        <p>For Equity Market Issuers</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+        </div>
+    </div>
+</div><div class="content-wrap mt-6 mb-8 box-bg" id="_6ab9c9de8ea34024b474bce2d8778919" style="">
+    <div class="rte wide">
+        <h2 style="text-align: center;">Specialist Companies Documents<a id="Equity-Documents"></a></h2>
+    </div>
+</div>
+<div class="childlisting mt-0" id="_fe6d8f23e96443abadbfa36e97282ffc">
+    <div class="childlisting-list cards c5">
+        <div class="content-wrap">
+                <a class="childlisting-list-item" href="/listing/equities/equity-market-listing-fees/" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Equity Market Listing Fees</h4>
+                        <p>Effective June 2025</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#EquitySpec-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Equity Listing Rules -Specialist Companies</h4>
+                        <p>Effective May 2026</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#EquitySpec-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Disclosure Obligations Checklist</h4>
+                        <p>For Specialist Companies</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#EquitySpec-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix I</h4>
+                        <p>Application For Admission Of Securities To Listing - Specialist Companies</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+                <a class="childlisting-list-item" href="/rules/#EquitySpec-Documents" target="">
+                    <div class="childlisting-list-item-inner">
+                        <h4>Appendix II</h4>
+                        <p>Sponsor's Declaration - Specialist Companies</p>
+                            <p class="view"><span></span> View More</p>
+                    </div>
+                </a>
+        </div>
+    </div>
+</div><div class="imagecta lazy yellow opacity-before-9" data-bg="/media/dfimx32y/nova.jpg?width=1920&height=840&quality=80&v=1db18c586748a10" id="_228e8acd489a418d83d1b14913f811bb">
+    <div class="imagecta-content">
+        <h2>NOVA - TISE Trading System</h2>
+        <p>TISE operates a bespoke auction-based trading system called NOVA which enables our Trading Members to input trade orders for all traded securities listed on TISE</p>
+            <div class="link-wrap mt-3">
+                <span class="line"></span>
+                <a class="btn tracked yellow" href="/trading/nova-tise-trading-system/">
+                    <span>
+                        NOVA - TISE Trading System
+                    </span>
+                </a>
+            </div>
+    </div>
+</div>
+<div class="content-wrap mt-5 mb-0 box-bg" id="_ac33725118d54c32ad0af8466427da70" style="">
+    <div class="rte wide">
+        <h3 style="text-align: center;">Latest Equity News</h3>
+    </div>
+</div>
+<div class="childlisting mt-8 mb-0" id="_e6af915f351848e3970a49dc385237ba">
+    <div class="childlisting-list cards c3">
+        <div class="content-wrap">
+                <div class="childlisting-list-item">
+                    <div class="childlisting-list-item-inner">
+                        <div>
+                            <p class="tag mid">Thursday, 13 Aug 2026</p>
+                            <h4><a href="/news/2026/tise-reports-h1-2026-listing-results-sets-records-for-total-number-and-value-of-listings/">TISE Reports H1 2026 Listing Results; Sets Records for Total Number and Value of Listings</a></h4>
+                        </div>
+                        <p class="view"><a class="blue" href="/news/2026/tise-reports-h1-2026-listing-results-sets-records-for-total-number-and-value-of-listings/">Read Article</a></p>
+                    </div>
+                </div>
+                <div class="childlisting-list-item">
+                    <div class="childlisting-list-item-inner">
+                        <div>
+                            <p class="tag mid">Thursday, 5 Feb 2026</p>
+                            <h4><a href="/news/2026/tise-reports-2025-listing-results-sets-record-new-listings-during-milestone-year/">TISE reports 2025 listing results; sets record new listings during milestone year</a></h4>
+                        </div>
+                        <p class="view"><a class="blue" href="/news/2026/tise-reports-2025-listing-results-sets-record-new-listings-during-milestone-year/">Read Article</a></p>
+                    </div>
+                </div>
+                <div class="childlisting-list-item">
+                    <div class="childlisting-list-item-inner">
+                        <div>
+                            <p class="tag mid">Tuesday, 23 Dec 2025</p>
+                            <h4><a href="/news/2025/tise-signs-memorandum-of-understanding-with-boursa-kuwait-to-strengthen-cooperation/">TISE signs Memorandum of Understanding with Boursa Kuwait to strengthen cooperation</a></h4>
+                        </div>
+                        <p class="view"><a class="blue" href="/news/2025/tise-signs-memorandum-of-understanding-with-boursa-kuwait-to-strengthen-cooperation/">Read Article</a></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>		<div class="page-contact" data-scroll-progress="100" data-scroll-class="inline" data-scroll-target="#_d26b9cbfc9e649099a6fdf9d080b6779">
+			<div class="page-contact-inner">
+				<div class="page-contact-inner-img lazy" data-bg="/media/i0rlghb1/robbie-andrade-web.jpg?rxy=0.5739332484794043,0.3450051941513986&width=200&height=180&quality=80&v=1dc9c1a01c6f0d0">
+				</div>
+				<div class="page-contact-inner-detail">
+					<a href="/company-profile/meet-the-team/robbie-andrade/">
+						<p>Contact</p>
+						<h4>Robbie Andrade</h4>
+						<h5>Chief Operating Officer</h5>
+					</a>
+					<a class="ctc blue" href="tel:&#x2B;44 (0) 1481 753030">&#x2B;44 (0) 1481 753030</a>
+					<a class="ctc blue" href="mailto:robbie.andrade@tisegroup.com">robbie.andrade@tisegroup.com</a>
+				</div>
+			</div>
+		</div>
+
+        <footer class="footer ">
+    <div class="footer-top">
+        <div class="content-wrap">
+            <div class="footer-inner">
+                <div class="footer-inner-social">
+                        <a href="https://www.facebook.com/The-International-Stock-Exchange-106784734024704" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/the-international-stock-exchange/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/tisegroup" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/theinternationalstockexchange" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-inner-news">
+                    <a class="btn blue tracked" href="/subscribe/"><span>Subscribe to our email newsletters</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="locations">
+            <span>Dublin.</span>
+            <span>Guernsey.</span>
+            <span>Isle of Man.</span>
+            <span>Jersey.</span>
+            <span>London.</span>
+        </p>
+        <p class="address">
+            The International Stock Exchange Group Limited, PO&nbsp;Box&nbsp;623, Helvetia&nbsp;Court, 
+            Block&nbsp;B, 3rd&nbsp;Floor,
+            Les&nbsp;Echelons, St&nbsp;Peter&nbsp;Port, Guernsey&nbsp;GY1&nbsp;4PJ
+        </p>
+        <ul class="links">
+                <li><a href="/privacy-statement/">Privacy Statement</a></li>
+                <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+                <li><a href="/legal-and-regulatory/">Legal and Regulatory</a></li>
+                <li><a href="/complaints/">Complaints</a></li>
+                <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <p class="copyright">© The International Stock Exchange Group Limited 2026. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    </div>
+    
+    <script>
+        var navData = [{"Id":1814,"Name":"Listing","Title":"Listing","Copy":"We’re a leading stock exchange for listing a wide range of bonds and equities, with issuers attracted by our competitive fees and high quality, efficient service.  ","Url":"/listing/","HasGrandchildren":true,"Children":[{"Name":"Bonds","Url":"/listing/bonds/","Children":[{"Name":"High Yield Bonds","Url":"/listing/bonds/high-yield-bonds/"},{"Name":"Private Equity Debt","Url":"/listing/bonds/private-equity-debt/"},{"Name":"Securitisations","Url":"/listing/bonds/securitisations/"},{"Name":"Collateralised Loan Obligations (CLOs)","Url":"/listing/bonds/collateralised-loan-obligations-clos/"},{"Name":"Bond Programmes","Url":"/listing/bonds/bond-programmes/"},{"Name":"Aviation Finance","Url":"/listing/bonds/aviation-finance/"},{"Name":"Sukuks","Url":"/listing/bonds/sukuks/"},{"Name":"Defence","Url":"/listing/bonds/defence/"},{"Name":"Insurance Linked Securities (ILS)","Url":"/listing/bonds/insurance-linked-securities-ils/"},{"Name":"Bond Market Listing Rules","Url":"/listing/bonds/bond-market-listing-rules/"},{"Name":"Bond Market Listing Fees","Url":"/listing/bonds/bond-market-listing-fees/"}]},{"Name":"Equities","Url":"/listing/equities/","Children":[{"Name":"Funds","Url":"/listing/equities/funds/"},{"Name":"REITs","Url":"/listing/equities/reits/"},{"Name":"Specialist Companies","Url":"/listing/equities/specialist-companies/"},{"Name":"Trading Companies","Url":"/listing/equities/trading-companies/"},{"Name":"Equity Market Listing Rules","Url":"/listing/equities/equity-market-listing-rules/"},{"Name":"Specialist Companies Listing Rules","Url":"/listing/equities/specialist-companies-listing-rules/"},{"Name":"Equity Market Listing Fees","Url":"/listing/equities/equity-market-listing-fees/"}]}]},{"Id":1816,"Name":"Trading","Title":"Trading","Copy":"Our bespoke auction-based trading system, NOVA, combines choice and transparency to facilitate concentrated liquidity events.","Url":"/trading/","HasGrandchildren":false,"Children":[{"Name":"Trading Overview","Url":"/trading/trading-overview/","Children":[]},{"Name":"NOVA - TISE Trading System","Url":"/trading/nova-tise-trading-system/","Children":[]}]},{"Id":1819,"Name":"Sustainable","Title":"Sustainable","Copy":"Europe’s most comprehensive sustainable market segment, enabling the flow of capital into investments that promote environmental, social or sustainable activities.","Url":"/sustainable/","HasGrandchildren":false,"Children":[]},{"Id":1820,"Name":"Market","Title":"Market","Copy":"We have 2,600+ issuers from over 40+ countries listing 4,500+ bonds and equity securities on our market.","Url":"/market/","HasGrandchildren":false,"Children":[{"Name":"Market Overview","Url":"/market/market-overview/","Children":[]},{"Name":"Listed Securities","Url":"/market/securities/","Children":[]},{"Name":"Market News","Url":"/market/news/","Children":[]},{"Name":"Trade Price Data","Url":"/market/trade-price-data/","Children":[]}]},{"Id":1824,"Name":"Membership","Title":"Membership","Copy":"Becoming a Member is simple. We already serve international firms who benefit from being able to facilitate listing or trading on our market.","Url":"/membership/","HasGrandchildren":false,"Children":null},{"Id":1826,"Name":"Why TISE?","Title":"Why TISE","Copy":"TISE stands out from the crowd because of our culture of responsiveness and innovation.","Url":"/why-tise/","HasGrandchildren":false,"Children":[]},{"Id":-1,"Name":"About TISE","Special":true,"Copy":"","Url":"","HasGranndchildren":false,"Children":[{"Name":"Company Profile","Url":"/company-profile/"},{"Name":"Meet the Team","Url":"/company-profile/meet-the-team/"},{"Name":"News","Url":"/news/"},{"Name":"Careers","Url":"/company-profile/careers/"},{"Name":"CSR","Url":"/company-profile/corporate-social-responsibility/"},{"Name":"Business Days","Url":"/business-days/"},{"Name":"Contact","Url":"/contact/"}]}]
+    </script>
+    <script src="/main.js?v=zsdbg3c"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"965014478cea41e1bb80cae092c8f988","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

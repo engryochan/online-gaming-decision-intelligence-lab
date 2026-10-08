@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-page="60e33597a01e024c420bf711" data-wf-site="5fc15c1451db5a0c23d959b4">
+<head>
+    <meta charset="utf-8">    <title>Companies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/favicon.ico" type="image/x-icon" rel="icon"><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <!-- Dynamic Meta & CSS -->
+            
+	<link rel="stylesheet" href="/ecsin_theme/css/normalize.css">
+	<link rel="stylesheet" href="/ecsin_theme/css/webflow.css">
+	<link rel="stylesheet" href="/ecsin_theme/css/ecsin.webflow.css">
+	<link rel="stylesheet" href="/ecsin_theme/css/webflow-custom.css">
+
+    <!-- JavaScript -->
+    <script src="/ecsin_theme/js/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+        var baseUrl = "";
+    </script>
+
+    <!-- Web Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: [
+                    "Lato:100,300,400,700,900",
+                    "Open Sans:300,400,600,700,800",
+                    "Montserrat:100,200,300,400,500,600,700,800,900",
+                    "Merriweather:300,400,700,900"
+                ]
+            }
+        });
+    </script>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <script>
+        !function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js";
+            ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+
+    <script type="text/javascript">
+
+        function basename(path, suffix) {
+            var b = path.replace(/^.*[\/\\]/g, '');
+            if (typeof(suffix) == 'string' && b.substr(b.length - suffix.length) == suffix) {
+                b = b.substr(0, b.length - suffix.length);
+            }
+            return b;
+        }
+
+        function htmlspecialchars(str) {
+            if (typeof(str) == "string") {
+                str = str.replace(/&/g, "&amp;");
+                str = str.replace(/"/g, "&quot;");
+                str = str.replace(/'/g, "&#039;");
+                str = str.replace(/</g, "&lt;");
+                str = str.replace(/>/g, "&gt;");
+            }
+            return str;
+        }
+
+        function rhtmlspecialchars(str) {
+            if (typeof(str) == "string") {
+                str = str.replace(/&gt;/ig, ">");
+                str = str.replace(/&lt;/ig, "<");
+                str = str.replace(/&#039;/g, "'");
+                str = str.replace(/&quot;/ig, '"');
+                str = str.replace(/&amp;/ig, '&');
+            }
+            return str;
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112423575-1"></script> -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-112423575-1');
+        gtag('config', 'G-PPXW5DHJ71');
+    </script> -->
+
+    <!-- CKEditor Scripts -->
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.css">		<script type="importmap">
+			{
+				"imports": {
+					"ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.js",
+					"ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.2/"
+				}
+			}
+		</script>
+
+		<script type="module">
+			import {
+				ClassicEditor,
+				AccessibilityHelp,
+				Alignment,
+				Autoformat,
+				AutoImage,
+				AutoLink,
+				Autosave,
+				BalloonToolbar,
+				BlockQuote,
+				BlockToolbar,
+				Bold,
+				CloudServices,
+				Code,
+				CodeBlock,
+				Essentials,
+				FindAndReplace,
+				FontBackgroundColor,
+				FontColor,
+				FontFamily,
+				FontSize,
+				GeneralHtmlSupport,
+				Heading,
+				Highlight,
+				HorizontalLine,
+				HtmlComment,
+				HtmlEmbed,
+				ImageBlock,
+				ImageCaption,
+				ImageInline,
+				ImageResize,
+				ImageStyle,
+				ImageTextAlternative,
+				ImageInsert,
+				ImageInsertViaUrl,
+				ImageToolbar,
+				ImageUpload,
+				Indent,
+				IndentBlock,
+				Italic,
+				Link,
+				List,
+				ListProperties,
+				// Markdown,
+				MediaEmbed,
+				PageBreak,
+				Paragraph,
+				PasteFromOffice,
+				RemoveFormat,
+				SelectAll,
+				ShowBlocks,
+				SimpleUploadAdapter,
+				SourceEditing,
+				SpecialCharacters,
+				SpecialCharactersArrows,
+				SpecialCharactersCurrency,
+				SpecialCharactersEssentials,
+				SpecialCharactersLatin,
+				SpecialCharactersMathematical,
+				SpecialCharactersText,
+				Strikethrough,
+				Style,
+				Subscript,
+				Superscript,
+				Table,
+				TableCaption,
+				TableCellProperties,
+				TableColumnResize,
+				TableProperties,
+				TableToolbar,
+				TextPartLanguage,
+				TextTransformation,
+				// Title,
+				TodoList,
+				Underline,
+				Undo,
+				ButtonView
+			} from 'ckeditor5';
+
+			class CustomFileBrowser {
+			    constructor(editor) {
+			        this.editor = editor;
+			    }
+
+			    init() {
+			        const editor = this.editor;
+
+			        editor.ui.componentFactory.add('customFileBrowser', locale => {
+			            const view = new /*editor.ui.button.*/ButtonView(locale);
+
+			            view.set({
+			                label: 'Open File Manager',
+			                icon: '<svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24"><path d="M11.627 16.5zm5.873-.196zm0-7.001V8h-13v8.5h4.341c.191.54.457 1.044.785 1.5H2a1.5 1.5 0 0 1-1.5-1.5v-13A1.5 1.5 0 0 1 2 2h4.5a1.5 1.5 0 0 1 1.06.44L9.122 4H16a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 19 8v2.531a6.027 6.027 0 0 0-1.5-1.228zM16 6.5v-1H8.5l-2-2H2v13h1V8a1.5 1.5 0 0 1 1.5-1.5H16z"></path><path d="M14.5 19.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zM15 14v-2h-1v2h-2v1h2v2h1v-2h2v-1h-2z"></path></svg>',
+			                withText: false,
+			                tooltip: true
+			            });
+
+			            view.on('execute', () => {
+			                this.openFileManager();
+			            });
+
+			            return view;
+			        });
+
+			        // Add the event listener only once
+			        window.addEventListener('message', (event) => {
+			            this.handleMessage(event);
+			        });
+			    }
+
+			    openFileManager() {
+			        const editor = this.editor;
+			        // console.log('My Editor ID: '+editor.id);
+			        const url = '/js/filemanager/dialog.php?type=2&editor=ckeditor5&fldr=&akey=' +'&editor_id='+editor.id; //+ ""
+			        this.fileManagerWindow = window.open(url, 'FileManager', 'width=900,height=600');
+			    }
+
+			    // getUrlParameter(sParam,windowUrl) {
+					//     var sPageURL = windowUrl.search.substring(1),
+					//         sURLVariables = sPageURL.split('&'),
+					//         sParameterName,
+					//         i;
+
+					//     for (i = 0; i < sURLVariables.length; i++) {
+					//         sParameterName = sURLVariables[i].split('=');
+
+					//         if (sParameterName[0] === sParam) {
+					//             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+					//         }
+					//     }
+					//     return false;
+					// };
+
+					getUrlParameter(name, url) {
+					    name = name.replace(/[\[\]]/g, '\\$&');
+					    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					        results = regex.exec(url);
+					    if (!results) return null;
+					    if (!results[2]) return '';
+					    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+					}
+
+
+
+			    // Listen for a message from the file browser
+			    handleMessage(event) {
+			      const editor = this.editor;
+
+			        // Make sure the message comes from the correct origin
+			        if (event.origin === 'https://www.ecsin.com' && event.data.sender == 'responsivefilemanager') {
+
+				        	let originFullUrl = event.source.window.location.href;
+				        	let correctEditorId = this.getUrlParameter('editor_id',originFullUrl);
+				        	// console.log(correctEditorId);
+				        	// console.log(editor.id);
+				        	// console.log('editor type: '+this.getUrlParameter('type',originFullUrl));
+				        	// console.log('the key: '+this.getUrlParameter('akey',originFullUrl));
+
+				        	if(editor.id == correctEditorId){ // ensure is correct editor and files aren't being added to all editors on page
+				            const fileUrl = event.data.url; // The URL of the selected file
+				            const fileExt = fileUrl.substr(fileUrl.lastIndexOf('.') + 1);
+
+				            const imageTypes = ['jpg','jpeg','gif','svg','webp','png','apng','bmp','ico'];
+				            const fileTypes = ['doc','docx','pdf','xls','xlsx','ppt','pptx','css','txt'];
+
+
+				            const selection = editor.model.document.selection;
+			              const selectedContent = editor.model.getSelectedContent(selection);
+
+			              let selectedText = '';
+			              for (const item of selectedContent.getChildren()) {
+			                  if (item.is('text')) {
+			                      selectedText += item.data;
+			                  }
+			              }
+
+				            const displayedText = selectedText || event.data.name;
+
+				            // check file type to input accordingly
+				            if($.inArray(fileExt,fileTypes) !== -1){ //document type
+
+				            	editor.model.change(writer => {
+				                  const insertPosition = editor.model.document.selection.getFirstPosition();
+				                            
+				                  // Create a link element
+				                  const linkElement = writer.createElement('linkHref', {
+				                      linkHref: fileUrl
+				                  });
+
+				                  // Insert the link element into the editor
+				                  writer.insertText(displayedText, { linkHref: fileUrl }, insertPosition);
+				              });
+				            }else if($.inArray(fileExt,imageTypes) !== -1){ //image type
+					            // Insert the image into the editor
+					            editor.model.change(writer => {
+					                const imageElement = writer.createElement('imageBlock', {
+					                    src: fileUrl
+					                });
+
+					                editor.model.insertContent(imageElement, editor.model.document.selection);
+					            });
+					          }else{ //default insertion
+					          	editor.model.change(writer => {
+					          		editor.model.insertContent(writer.createText(fileUrl), editor.model.document.selection);
+					          	});
+
+					          }
+					        }
+			        }
+			    }
+			}
+
+			const editorConfig = {
+				toolbar: {
+					items: [
+						'undo',
+						'redo',
+						'|',
+						'sourceEditing',
+						'showBlocks',
+						'findAndReplace',
+						'selectAll',
+						'textPartLanguage',
+						'|',
+						'heading',
+						'style',
+						'|',
+						'fontSize',
+						'fontFamily',
+						'fontColor',
+						'fontBackgroundColor',
+						'|',
+						'bold',
+						'italic',
+						'underline',
+						'strikethrough',
+						'subscript',
+						'superscript',
+						'code',
+						'removeFormat',
+						'|',
+						'specialCharacters',
+						'horizontalLine',
+						'pageBreak',
+						'link',
+						'insertImage',
+						'customFileBrowser',
+						'insertImageViaUrl',
+						'mediaEmbed',
+						'insertTable',
+						'highlight',
+						'blockQuote',
+						'codeBlock',
+						'htmlEmbed',
+						'|',
+						'alignment',
+						'|',
+						'bulletedList',
+						'numberedList',
+						'todoList',
+						'outdent',
+						'indent',
+						'|',
+						'accessibilityHelp',
+					],
+					shouldNotGroupWhenFull: true
+				},
+				plugins: [
+					AccessibilityHelp,
+					Alignment,
+					Autoformat,
+					AutoImage,
+					AutoLink,
+					Autosave,
+					BalloonToolbar,
+					BlockQuote,
+					BlockToolbar,
+					Bold,
+					CloudServices,
+					Code,
+					CodeBlock,
+					Essentials,
+					FindAndReplace,
+					FontBackgroundColor,
+					FontColor,
+					FontFamily,
+					FontSize,
+					GeneralHtmlSupport,
+					Heading,
+					Highlight,
+					HorizontalLine,
+					HtmlComment,
+					HtmlEmbed,
+					ImageBlock,
+					ImageCaption,
+					ImageInline,
+					ImageResize,
+					ImageStyle,
+					ImageTextAlternative,
+					ImageBlock,
+					ImageInsert,
+					ImageInsertViaUrl,
+					ImageToolbar,
+					ImageUpload,
+					Indent,
+					IndentBlock,
+					Italic,
+					Link,
+					List,
+					ListProperties,
+					// Markdown,
+					MediaEmbed,
+					PageBreak,
+					Paragraph,
+					PasteFromOffice,
+					RemoveFormat,
+					SelectAll,
+					ShowBlocks,
+					SimpleUploadAdapter,
+					SourceEditing,
+					SpecialCharacters,
+					SpecialCharactersArrows,
+					SpecialCharactersCurrency,
+					SpecialCharactersEssentials,
+					SpecialCharactersLatin,
+					SpecialCharactersMathematical,
+					SpecialCharactersText,
+					Strikethrough,
+					Style,
+					Subscript,
+					Superscript,
+					Table,
+					TableCaption,
+					TableCellProperties,
+					TableColumnResize,
+					TableProperties,
+					TableToolbar,
+					TextPartLanguage,
+					TextTransformation,
+					// Title,
+					TodoList,
+					Underline,
+					Undo
+				],
+				balloonToolbar: ['bold', 'italic', '|', 'link', 'customFileBrowser', 'insertImageViaUrl',/*'insertImage',*/ '|', 'bulletedList', 'numberedList'],
+				blockToolbar: [
+					'fontSize',
+					'fontColor',
+					'fontBackgroundColor',
+					'|',
+					'bold',
+					'italic',
+					'|',
+					'link',
+					'insertImage',
+					'insertTable',
+					'|',
+					'bulletedList',
+					'numberedList',
+					'outdent',
+					'indent'
+				],
+				fontFamily: {
+					supportAllValues: true
+				},
+				fontSize: {
+					options: [8, 10, 12, 14, 'default', 18, 20, 22],
+					supportAllValues: true
+				},
+				heading: {
+					options: [
+						{
+							model: 'paragraph',
+							title: 'Paragraph',
+							class: 'ck-heading_paragraph'
+						},
+						{
+							model: 'heading1',
+							view: 'h1',
+							title: 'Heading 1',
+							class: 'ck-heading_heading1'
+						},
+						{
+							model: 'heading2',
+							view: 'h2',
+							title: 'Heading 2',
+							class: 'ck-heading_heading2'
+						},
+						{
+							model: 'heading3',
+							view: 'h3',
+							title: 'Heading 3',
+							class: 'ck-heading_heading3'
+						},
+						{
+							model: 'heading4',
+							view: 'h4',
+							title: 'Heading 4',
+							class: 'ck-heading_heading4'
+						},
+						{
+							model: 'heading5',
+							view: 'h5',
+							title: 'Heading 5',
+							class: 'ck-heading_heading5'
+						},
+						{
+							model: 'heading6',
+							view: 'h6',
+							title: 'Heading 6',
+							class: 'ck-heading_heading6'
+						},
+						{
+							model: 'blockquote',
+							view: 'blockquote',
+							title: 'Block Quote',
+							class: 'ck-block_quote'
+						}
+					]
+				},
+				htmlSupport: {
+					allow: [
+						{
+							name: /^.*$/,
+							styles: true,
+							attributes: true,
+							classes: true
+						}
+					]
+				},
+				image: {
+					toolbar: [
+						// 'imageTextAlternative'
+						'toggleImageCaption',
+						'imageTextAlternative',
+						'|',
+						'imageStyle:inline',
+						'imageStyle:wrapText',
+						'imageStyle:breakText',
+						'|',
+						'resizeImage'
+					]
+				},
+				link: {
+					addTargetToExternalLinks: true,
+					defaultProtocol: 'https://',
+					decorators: {
+						toggleDownloadable: {
+							mode: 'manual',
+							label: 'Downloadable',
+							attributes: {
+								download: 'file'
+							}
+						}
+					}
+				},
+				list: {
+					properties: {
+						styles: true,
+						startIndex: true,
+						reversed: true
+					}
+				},
+				menuBar: {
+					isVisible: true
+				},
+				placeholder: 'Type or paste your content here!',
+				style: {
+					definitions: [
+						{
+							name: 'Article category',
+							element: 'h3',
+							classes: ['category']
+						},
+						{
+							name: 'Title',
+							element: 'h2',
+							classes: ['document-title']
+						},
+						{
+							name: 'Subtitle',
+							element: 'h3',
+							classes: ['document-subtitle']
+						},
+						{
+							name: 'Info box',
+							element: 'p',
+							classes: ['info-box']
+						},
+						{
+							name: 'Side quote',
+							element: 'blockquote',
+							classes: ['side-quote']
+						},
+						{
+							name: 'Marker',
+							element: 'span',
+							classes: ['marker']
+						},
+						{
+							name: 'Spoiler',
+							element: 'span',
+							classes: ['spoiler']
+						},
+						{
+							name: 'Code (dark)',
+							element: 'pre',
+							classes: ['fancy-code', 'fancy-code-dark']
+						},
+						{
+							name: 'Code (bright)',
+							element: 'pre',
+							classes: ['fancy-code', 'fancy-code-bright']
+						}
+					]
+				},
+				table: {
+					contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+				},
+				extraPlugins: [CustomFileBrowser]
+			};
+
+			let editorInstance5;
+
+			let activeEditor = null;
+			let editorInstances = {}; // Object to store editor instances by their index
+
+			// Ensure the global object exists
+			window.editorInstances = window.editorInstances || {};
+
+			// ClassicEditor.create(document.querySelector('.ckeditor5'), editorConfig);
+			$(".ckeditor5").each(function(index,element) {
+				ClassicEditor.create(element, editorConfig)
+				.then(editor => {
+		      // editorInstance5 = editor;
+		      editorInstances[index] = editor; // Store editor instance with index as key
+        	  window.editorInstances[index] = editor; // Also store globally
+		      element.dataset.editorId = index; // Assign a unique id to each instance
+		      editor.id = index;
+
+		      // // Just to show which elements have which ids for debugging purposes
+		      // console.log(index);
+		      // console.log(element);
+
+		      // element.addEventListener('click', () => {
+		      //     activeEditor = editor; // Set active editor when clicked
+		      //     console.log(activeEditor);
+		      // });
+
+		      // Trigger autosave when editor loses focus
+		      editor.model.document.on('change:data', function() {
+		        clearTimeout(editor.autosaveTimeout);
+		        editor.autosaveTimeout = setTimeout(function() {
+		          // const $field = $(editor.sourceElement);
+		          const correctField = $(editor.sourceElement).attr('name');
+		          const surroundedForm = $(editor.sourceElement.form).attr('id');
+		          const surroundedFormAction = $(editor.sourceElement.form).attr('action');
+
+		          // alert('autosave should run');
+		          const validForms = ['report-form', 'mc-form', 'or-form','myForm'];
+
+							if (validForms.includes(surroundedForm)) {
+		          	handleAutoSave(correctField, editor.getData(),surroundedForm,surroundedFormAction);
+		          }
+		        }, 2000); // save 2 seconds after user stops typing
+		      });
+		    });
+			});
+
+			// Function to update the editor data
+		  function updateEditorData(newData,index) {
+		  	index = index !== undefined ? index : 0;
+		  	if (editorInstances[index]) {
+		        editorInstances[index].setData(newData);
+		    } else {
+		        console.error(`Editor instance with index ${index} is not ready.`);
+		    }
+		      // if (editorInstance5) {
+		      //     editorInstance5.setData(newData);
+		      //     // console.log(newData);
+		      // } else {
+		      //     console.error('Editor instance is not ready.');
+		      // }
+		  }
+		  window.updateEditorData = updateEditorData;
+		  // document.getElementById('UpdateButton').addEventListener('click', updateEditorData());
+
+		  function handleAutoSave($field, overrideValue,formType,formAction) {
+			  // const form = $('#autosave-form');
+			  const formData = {};
+
+			  // Get ID (use your hidden input)
+			  if(formType == 'report-form'){ //K
+			  	var controllerName = 'report-forms';
+			  } else if(formType == 'mc-form'){ //MC
+			  	var controllerName = 'notification-of-material-changes';
+			  } else if(formType == 'or-form'){
+			  	var controllerName = 'or-quarterly-reports';
+			  } else if(formAction.includes('properties')){
+			  	var controllerName = 'properties';
+			  } else if(formAction.includes('director-meetings')){
+			  	var controllerName = 'director-meetings';
+			  } else if(formAction.includes('other-matters-voted-upons')){
+			  	var controllerName = 'other-matters-voted-upons';
+			  } else if(formAction.includes('other-matter-details')){
+			  	var controllerName = 'other-matter-details';
+			  } else if(formAction.includes('market-reporting-issuers-equity-stockholders')){
+			  	var controllerName = 'market-reporting-issuers-equity-stockholders';
+			  } else if(formAction.includes('risk-factor-disclosures')){
+			  	var controllerName = 'risk-factor-disclosures';
+			  } else if(formAction.includes('securities-and-use-of-protocol-changes')){
+			  	var controllerName = 'securities-and-use-of-protocol-changes';
+			  }
+
+			  formData['id'] = $('#form-id').val();
+			  formData['field'] = $field;
+
+			  // Determine the value
+			  if (overrideValue !== undefined) {
+			    formData['value'] = overrideValue;
+			  } else if ($field.is(':checkbox')) {
+			    formData['value'] = $field.is(':checked') ? 1 : 0;
+			  } else {
+			    formData['value'] = $field.val();
+			  }
+
+			  // Disable field briefly while saving
+			  // $field.prop('disabled', true);
+			  
+			  $.ajax({
+			    url: '/co/ecsin/'+controllerName+'/autosave', // adjust to your controller action
+			    method: 'POST',
+			    data: formData,
+			    headers: {
+			      'X-CSRF-Token': $('[name="_csrfToken"]').val() // ignore if CakePHP 2.x
+			    },
+			    success: function(response) {
+			      console.log('Saved:', formData['field']);
+			    },
+			    error: function(xhr) {
+			      console.error('Autosave failed:', xhr.responseText);
+			    },
+			    complete: function() {
+			      $field.prop('disabled', false);
+			    }
+			  });
+			}
+
+		</script>
+
+</head>
+
+<body>
+    <a href="#top" class="top-button w-button">top</a>
+
+    <div id="top" class="section-4">
+  <div class="main-wrapper-2 w-container">
+    <div class="w-layout-grid grid-20">
+      <div id="w-node-ada67947-08ff-12a8-3b4c-18a0259d2470-259d246d" class="div-block-29">
+        <a href="/" class="top-nav-link-2"><strong class="bold-text-3">home</strong></a>
+        <a href="https://www.ecsrc.com" target="_blank" class="top-nav-link-2"><strong class="bold-text-3">Go to ECSRC</strong></a>
+        <link rel="prefetch" href="https://www.ecsrc.com">
+        <a href="https://www.ecsrc.com/cms/contacts" class="top-nav-link-2">contact us</a>
+      </div>
+      <div id="w-node-ada67947-08ff-12a8-3b4c-18a0259d2479-259d246d">
+        <div class="w-layout-grid grid-19">
+          <div id="w-node-ada67947-08ff-12a8-3b4c-18a0259d247b-259d246d" class="div-block-59">
+          	<div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Anguilla_3-2.svg.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Antigua_and_Barbuda.svg.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Dominica_1981-1988.svg.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Grenada.svg.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Montserrat_3-2.svg.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/St_kitts_and_nevis_flag_300.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Saint_Lucia.svg.png" class="image-4" loading="lazy" alt=""></div><div class="flag-wrap"><img src="/ecsin_theme/img/320px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png" class="image-4" loading="lazy" alt=""></div>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    <div class="nav-section">
+    <div class="main-wrapper">
+      <div data-collapse="medium" data-animation="over-right" data-duration="400" role="banner" class="navbar w-nav">
+        <div class="w-layout-grid nav-grid">
+          <div>
+            <a href="/" aria-current="page" class="branding w-nav-brand w--current">
+              <div>ECSIN</div>
+            </a>
+          </div>
+          <div id="w-node-c72ca48d-ed93-e818-77cb-19c452bcfbb8-c00053d2" class="div-block-60">
+            <nav role="navigation" class="nav-menu w-nav-menu">
+            	<a href="/login" class="nav-link w-nav-link">Login</a><a href="/p/forms" class="nav-link w-nav-link">Forms</a><a href="/ecsin/ecsin-searches" class="nav-link w-nav-link">Company Search</a><a href="/companies-management/companies" class="nav-link w-nav-link">Company Registry</a><a href="/ecsin/insights/public_guide" class="nav-link w-nav-link">User Guide</a>
+              <div data-hover="" data-delay="0" class="dropdown-2 w-dropdown">
+                <div class="dropnav s-hub w-dropdown-toggle">
+                  <div class="icon-2 w-icon-dropdown-toggle"></div>
+                  <div title="Social Media Hub" class="s-icon"></div>
+                </div>
+                <nav class="dropdown-list-2 w-dropdown-list">
+                  <a href="http://www.facebook.com/theecsrc" class="dropdown-link s w-dropdown-link"><span class="text-icon-2"></span> Facebook</a>
+                  <a href="https://twitter.com/TheECSRC" class="dropdown-link s w-dropdown-link"><span class="text-icon-2"></span> Twitter</a>
+                  <a href="https://www.linkedin.com/company/eastern-caribbean-securities-regulatory-commission/" class="dropdown-link s w-dropdown-link"><span class="text-icon-2"></span> LinkedIn</a>
+                  <a href="https://youtube.com/channel/UCxnSysCj3WyQnpkyCVh6W_w" class="dropdown-link s w-dropdown-link"><span class="text-icon-2"></span> YouTube</a>
+                  <a href="https://instagram.com/theecsrc?utm_medium=copy_link" class="dropdown-link s w-dropdown-link"><span class="text-icon-2"></span> Instagram</a>
+                </nav>
+              </div>
+            </nav>
+            <div class="menu-button w-nav-button">
+              <div class="w-icon-nav-menu"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>    <header id="hero-overlay" class="hero-overlay"></header>    <style>
+#news-container1 ul li a {color:#999999;}
+#news-container1 ul li a:hover {color:#3F5B10;}
+#news-container1 ul li {display: none;}
+#news-container1 ul li:first-child {display: block;}
+</style>
+
+<div class="ticker-news">
+	<div class="w-layout-grid grid-17">
+	  <div class="div-block-49">
+	    <!-- <div class="div-block-50">
+	      <div class="text-block-7"><strong class="bold-text-2">NEWS:</strong></div>
+	    </div>
+	    <a href="#" class="link-block-5 w-inline-block">
+	      <div class="text-block-7">This will be your ticker new element scrolling from right to left.</div>
+	    </a> -->
+	    <div id="news-container1" style="width: 100%;">
+				<ul style="margin-bottom: 0;">
+																	<li style="margin-bottom: 0;"><div class="div-block-50" style="display: inline-block"><div class="text-block-7"><strong class="bold-text-2">NEWS:</strong></div></div><a href="/blog/posts/view/my-very-first-cakephp-4-post" title="My Very First cakePHP 4 post" class="link-block-5 w-inline-block"><div class="text-block-7">My Very First cakePHP 4 post</div></a></li>
+																						<!-- <li style="margin-bottom: 0;">
+													</li> -->
+																						<!-- <li></li> -->
+																						<!-- <li><i></i></li> -->
+									</ul>
+			</div>
+	  </div>
+	  <div id="w-node-fac6ab54-455a-846d-27fb-57d64b7f197e-4b7f1974" class="div-block-52">
+	    <a href="mailto:info@ecsrconline.org" class="con-links">Email us</a>
+	    <a href="tel:+18694652537" class="con-links">Call us</a>
+	    <a href="/send-feedback" class="con-links">Give us Feedback</a>
+	  </div>
+	</div>
+</div>
+
+    
+    <style type="text/css">
+    .pagi-link a{
+        color: inherit;
+    }
+    /* Style for the actual current page */
+    .pagi-link.current,
+    a.pagi-link.current {
+        background-color: #0a265d;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    /* Remove Webflow's auto-current styling on pagination links */
+    .pagi-link.w--current {
+        background-color: #189e99 !important;
+    }
+    .pagi-link.w--current:hover {
+        background-color: #0a265d !important;
+    }
+    .pagi-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      column-gap: 7px;
+    }
+    .pagination-wrapper {
+      display:block;
+    }
+    .pagination-counter {
+      margin-bottom: 10px;
+    }
+</style>
+<div id="welcome" class="section">
+  <div class="main-wrapper">
+    <div>
+      <h1 data-w-id="a389d454-f0d1-e29c-df22-ddae6c4993f5" style="opacity:0" class="h1-title">All Companies</h1>
+    </div>
+    <div class="infor-wrap">
+        <div class="note">This section provides information for licencees, prospective licencees, Reporting Issuers and persons interested in issuing securities on the Eastern Caribbean Securities Market (ECSM).<br/><br/>
+        All individuals who wish to engage in carrying on regulated activities or in the conduct of securities business within the Eastern Caribbean Securities Market must be licensed with the ECSRC.<br/><br/>
+        Want to sell your shares to the public? Interested in purchasing shares? Want to find out more about a company? Then this is the section for you.</br/><br/>
+            See below list of <b>ALL COMPANIES</b> that are registered with the ECSRC.</div>
+      <!-- <div class="note">To search the ECSIN for information about public companies use one of the following options:</div>
+      <ol role="list">
+        <li>
+          <div>Use the Quick Search above to search for specific reports and companies.</div>
+        </li>
+        <li>
+          <div>Browse the list of companies below and select either view profile or view reports for the company you are looking for.</div>
+        </li>
+      </ol> -->
+    </div>
+    <div>
+        <div class="w-form">
+            <form method="get" accept-charset="utf-8" action="/companies-management/companies/index/issuers?page=3">            
+            <div class="sort-by-text">Sort By:</div>
+
+            <div id="filter-grid" class="w-layout-grid filter-grid">
+                <div id="field-filter-grid" class="w-layout-grid" style="grid-template-columns: 13fr 1fr; grid-template-rows: auto;">
+                    
+                    <div class="input text"><input type="text" name="search_term" placeholder="Filter Results" class="text-field w-input" id="search-term" aria-label="Filter Results"></div>
+                    <div class="submit"><input type="submit" class="submit-button-2 w-button" value="Search"></div>                </div>
+
+                <div>
+                    <div class="space-flex">
+                        <div class="flex-wrap">
+                            <a href="/companies-management/companies/index/licenses" class="filter-link">All Licensees</a>
+                            <div class="vert-line">|</div>
+
+                            <a href="/companies-management/companies/index/issuers" class="filter-link">All Reporting Issuers</a>
+                            <div class="vert-line">|</div>
+
+                            <a href="/companies-management/companies/index/all" class="filter-link">All Companies</a>
+                        </div>
+                        <a href="/companies-management/companies" class="reset-link">Reset X</a>
+                    </div>
+                </div>
+            </div>
+
+            </form>        </div>
+
+      <div class="item-wrapper">
+        <div class="w-layout-grid card-grid">
+                      <div class="company-card">
+            <div class="w-layout-grid grid-13 test">
+              <div>
+                <div class="tag-title">Company Name:</div>
+                <div class="int-name-title">Trinidad Cement Limited</div>
+              </div>
+              <div>
+                <div class="tag-title">Type of Company:</div>
+                <div class="type-title">
+                    Reporting Issuer                </div>
+              </div>
+              <div>
+                    <div class="tag-title">Actions:</div>
+
+                    <a href="/companies-management/companies/view/44" class="profile-lix">View Profile</a>
+                                            <a href="/workflow-management/work-items/public-comp-filings/44" class="profile-lix">View Reports</a>                                  </div>
+
+            </div>
+          </div>
+                    <div class="company-card">
+            <div class="w-layout-grid grid-13 test">
+              <div>
+                <div class="tag-title">Company Name:</div>
+                <div class="int-name-title">West Indies Oil Company</div>
+              </div>
+              <div>
+                <div class="tag-title">Type of Company:</div>
+                <div class="type-title">
+                    Reporting Issuer                </div>
+              </div>
+              <div>
+                    <div class="tag-title">Actions:</div>
+
+                    <a href="/companies-management/companies/view/103" class="profile-lix">View Profile</a>
+                                            <a href="/workflow-management/work-items/public-comp-filings/103" class="profile-lix">View Reports</a>                                  </div>
+
+            </div>
+          </div>
+                  </div>
+        <div class="pagination-wrapper">
+          <div class="pagination-counter">
+              Page 3 of 3, showing 43 - 44 records out of 44 total          </div>
+          <div class="pagi-wrapper">
+            <div><a class="pagi-link w-inline-block" href="/companies-management/companies/index/issuers">1</a></div><div><a class="pagi-link w-inline-block" href="/companies-management/companies/index/issuers?page=2">2</a></div><div><a class="pagi-link w-inline-block current">3</a></div>          <div>
+          <!-- <div class="w-layout-grid pagination-grid">           -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.pagi-link').each( function(){
+            var allClasses = $(this).attr('class');
+
+            $(this).children().addClass(allClasses);
+            var innerA = $(this).html();
+            $(this).css('display','none');
+
+            $('.pagination-grid').append('<div>' + innerA + '</div>');
+        })
+
+    });
+</script> -->
+
+    <div class="footer-section">
+  <div class="footer">
+    <div class="main-wrapper">
+      <div class="w-layout-grid ft-grid">
+        <div>
+        	<img src="/ecsin_theme/img/ecsrc_white_logo.png" class="footer-image" alt="">        </div>
+        <div class="div-block-20"><h2 class="footer-heading">Address</h2><p class="footer-para"><strong>Eastern Caribbean Securities Regulatory Commission (ECSRC)</strong><br><strong>‍</strong><br><strong>‍</strong>ECCB Campus<br>P.O. Box 1855<br>Basseterre<br>St. Kitts</p></div><div class="div-block-20"><h2 class="footer-heading">Contact Details</h2><p class="footer-para"><strong>Tel: (869) 465-2537 Ext. 3279</strong><br><br><strong>Email:&nbsp;</strong><a style="color:inherit;" href="mailto:info@ecsrconline.org" data-mce-href="mailto:info@ecsrconline.org" data-mce-style="color: inherit;"><em class="footer-link"><i><strong>info@ecsrconline.org</strong></i></em></a></p></div>        <div class="div-block-6">
+          <!-- <div class="map w-widget w-widget-map"></div> -->
+          <div id="map" class="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="base">
+    <div class="container-2 w-container">
+      <div class="w-layout-grid grid-5">
+        <div id="w-node-_6971671e-503e-84e4-6186-d09001243962-0124395f" class="copyright">Copyright © 2007 - 2021<strong> </strong>|<strong> Eastern Caribbean Securities Regulatory Commission</strong></div>
+        <div id="w-node-_6971671e-503e-84e4-6186-d09001243969-0124395f" class="emagine">
+          <a href="#" class="footer-link-copy">Developed by <strong>eMagine</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<!-- <script
+  src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyBlivhawBXVaoZVwXAWI7N5U6MFB2RVFBE&callback=initMap&libraries=&v=weekly&loading=async"
+  async
+></script>
+<script type="text/javascript">
+
+	function initMap() {
+	  const myLatLng = { lat: 17.299, lng: -62.708 };
+	  const map = new google.maps.Map(document.getElementById("map"), {
+	    zoom: 14,
+	    center: myLatLng,
+	  });
+
+	  new google.maps.Marker({
+	    position: myLatLng,
+	    map,
+	    title: "ECSRC",
+	  });
+	}
+</script> -->
+
+<!-- Load the Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB36qES_BJZz8vWT3jZaFGBtr_h5QNsAJQ"></script>
+<script>
+  function initMap() {
+    var location = { lat: 17.2987, lng: -62.7081 };
+
+    // Create the map
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 18,
+      center: location,
+    });
+
+    // Add a marker with a name
+    // var marker = new google.maps.Marker({
+    //   position: location,
+    //   map: map,
+    //   title: "ECSRC", // Tooltip text
+    // });
+
+    // // Optional: Add info window (popup)
+    // var infoWindow = new google.maps.InfoWindow({
+    //   content: "<h3>ECSRC</h3>",
+    // });
+
+    // marker.addListener("click", function () {
+    //   infoWindow.open(map, marker);
+    // });
+  }
+
+  // Initialize map after page load
+  window.onload = initMap;
+</script>
+    <script src="/ecsin_theme/js/webflow.js"></script>            
+</body>
+</html>

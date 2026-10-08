@@ -1,0 +1,942 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/adgm-components-v4.3.umd.js"></script>
+    <link rel="shortcut icon" href="/Adgm/images/favicon.png" type="image/x-icon" />
+    <script src="/js/ADGM/jQuery.js"></script>
+    <script src="/js/lib/mustache.js"></script>
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/ADGM/Forms/style.css" rel="stylesheet" />
+    <link href="/css/ADGM/loader.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" integrity="sha256-1tqylytcbuAWBFBOlWMr2kGIIT49lQb5xruJh6a4UzA=" crossorigin="anonymous" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" integrity="sha256-vv8YcBRyeWnfJC8EPuJ0g3eaR6mAI3l4cUWTsRmQVL8=" crossorigin="anonymous" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha256-0n6YDYIexWJmHyTKtRRHTXvoanQrXpFfpsfv0h53qvk=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+    
+
+
+
+    <title>The Official Public Register of Abu Dhabi Global Market</title>
+    <meta name="description" content="The Abu Dhabi Global Market (ADGM) official online registry solutions for public register and Financial Services Regulatory Authority and Registrations (FSRA)." />
+    <meta key="keywords" name="keywords" />
+    <link rel="canonical" href="https://www.adgm.com/public-registers">
+            <link rel="alternate" href="https://www.adgm.com/public-registers" hreflang="en" />
+    <!-- Robots -->
+            <meta key="robots" name="robots" content="index, follow" />
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Public Registers">
+    <meta property="og:url" content="https://www.adgm.com/public-registers">
+    <meta property="og:description" content="The Abu Dhabi Global Market (ADGM) official online registry solutions for public register and Financial Services Regulatory Authority and Registrations (FSRA).">
+    <meta property="og:type">
+    <!-- Twitter meta tags -->
+    <meta name="twitter:title" content="Public Registers">
+    <meta name="twitter:description" content="The Abu Dhabi Global Market (ADGM) official online registry solutions for public register and Financial Services Regulatory Authority and Registrations (FSRA).">
+    <meta name="twitter:card">
+    <meta name="twitter:site" content="ADGM">
+    <meta name="twitter:properties">
+    <meta name="twitter:url" content="https://www.adgm.com/public-registers">
+    <meta property="article:author" content="">
+    <meta property="article:published_time" content="07/05/2024 11:24:50 AM">
+
+ <!-- Verification code is missing -->
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PJKKFG7');</script>
+
+
+    <link href="/css/main.css" rel="stylesheet" />
+
+
+    <div class="leader-modal modal-hidden">
+        <div class="leader-modal__container">
+            <div class="loader-sec"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        /* Loading Stuff*/
+        function showLoading() {
+            var loadingCheck = document.getElementById("leader-modal");
+            if (loadingCheck == null || loadingCheck == undefined) {
+
+                const scrollHide = document.querySelector('body');
+                scrollHide.style.overflow = 'hidden';
+
+                const loadingDiv = document.createElement('div');
+                loadingDiv.setAttribute("id", "leader-modal");
+                loadingDiv.setAttribute("class", "leader-modal active");
+
+                const loadingContainer = document.createElement('div');
+                loadingContainer.setAttribute("class", "leader-modal__container active");
+
+                const loadingImage = document.createElement('div');
+                loadingImage.setAttribute("class", "loader-sec");
+                loadingImage.style.visibility = "visible";
+
+                loadingContainer.appendChild(loadingImage);
+                loadingDiv.appendChild(loadingContainer);
+
+                var loadingMaster = document.getElementById("loading-master");
+                loadingMaster.appendChild(loadingDiv);
+            }
+        }
+
+        function hideLoading() {
+            const scrollHide = document.querySelector('body');
+            scrollHide.style.overflow = 'auto';
+            const loadingMaster = document.getElementById("loading-master");
+            loadingMaster.innerText = '';
+        }
+    </script>
+
+    <!--Application Insights-->
+<script>
+!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: {connectionString: 'InstrumentationKey=7d6f3f3f-e2c9-47eb-8779-8b867d3a0b4c;IngestionEndpoint=https://uaenorth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uaenorth.livediagnostics.monitor.azure.com/;ApplicationId=df66a777-0a52-4947-a167-9cfb8466cc67', disableCookiesUsage: true }});
+</script>
+</head>
+<body style="margin: 0px;">
+
+    
+
+
+    <div id="loading-master"></div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJKKFG7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <adgm-application font-path="/fonts/">
+        <adgm-page>
+
+        <adgm-navigation float="true" 
+>
+
+<svg slot="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.17 52.84" xmlns:v="https://vecta.io/nano"><defs><clipPath id="svg2_A"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg2_B"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg2_C"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg2_D"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg2_E"><path d="M203.31,20.82c.13.85.19,1.8.19,2.84,0,5.3-1.61,8.17-4.91,8.17-2.84,0-4.43-2.12-4.81-6.09-2.02.77-4.05,1.41-6.04,1.94,1.11,6.25,4.93,10.28,10.85,10.28,7.11,0,11.19-5.81,11.19-14.3,0-2.7-.42-5.13-1.21-7.19-1.63,1.64-3.4,3.08-5.26,4.35" fill="none"/></clipPath><linearGradient id="svg2_F" x1="-19.14" y1="831.14" x2="-18.8" y2="831.14" gradientTransform="translate(-32009.62 763.78) rotate(90) scale(38.75 -38.75)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient><clipPath id="svg2_G"><path d="M178.12 29.5v8.45h.67a5.61 5.61 0 0 0 5.61-5.61v-3.91l-6.28 1.07" fill="none"/></clipPath><linearGradient id="svg2_H" y1="830.68" y2="830.68" gradientTransform="translate(-32009.29 767.03) rotate(90) scale(38.75 -38.75)" href="#svg2_F"/><clipPath id="svg2_I"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><path id="svg2_J" d="M70.78 42.68c-.23 0-.42.08-.58.23-.16.16-.23.34-.23.56s.08.4.24.56.35.24.58.24.42-.08.58-.24a.76.76 0 0 0 .23-.56c0-.21-.08-.4-.24-.56s-.35-.23-.58-.23" fill="#FFFFFF"/><path id="svg2_K" d="M73.24 42.68a.78.78 0 0 0-.57.24c-.17.16-.25.34-.25.55s.08.4.24.56.35.24.58.24.43-.08.59-.24.24-.35.24-.56-.08-.4-.24-.56-.36-.23-.59-.23" fill="#FFFFFF"/></defs><g clip-path="url(#svg2_A)" fill="#FFFFFF"><use href="#svg2_J"/><use href="#svg2_K"/><path d="M86 40.31l.04.13c.11.35.31.62.59.81s.64.29 1.06.29h.49c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-6.51h-1.43v6.51c0 .81-.34 1.23-1 1.23h-.49c-.28 0-.51-.09-.67-.27-.16-.17-.24-.41-.24-.7v-.85c0-.88-.33-1.65-.97-2.28s-1.43-.94-2.33-.94-1.69.32-2.33.94a3.09 3.09 0 0 0-.97 2.28 1.96 1.96 0 0 0 .86 1.68l.18.13h-2.06c-.63 0-.95-.39-.95-1.16v-3.87h-1.87c-1.14 0-2.02.3-2.63.88-.61.59-.92 1.45-.92 2.57v1.58h-1.29c-.84 0-1.5-.21-1.95-.64-.45-.42-.68-1.05-.68-1.85v-1.24h-1.43v1.24c0 1.17.36 2.12 1.08 2.81.72.7 1.72 1.05 2.99 1.05h2.71v-2.97c0-.71.18-1.24.53-1.58s.9-.51 1.64-.51h.41V39c0 .77.21 1.4.63 1.85.41.45 1 .68 1.75.68h4.32c1 0 1.81-.38 2.43-1.13l.09-.11zm-2.51-.14a1.78 1.78 0 0 1-1.32-.55c-.36-.35-.55-.79-.55-1.29a1.73 1.73 0 0 1 .55-1.29 1.81 1.81 0 0 1 1.32-.54 1.81 1.81 0 0 1 1.32.54 1.77 1.77 0 0 1 .55 1.29 1.73 1.73 0 0 1-.55 1.29 1.81 1.81 0 0 1-1.32.54m8.78-7.73v6.51c0 .77.23 1.41.67 1.88.44.48 1.04.72 1.77.72h9.89c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-6.51h-1.43v6.51c0 .81-.34 1.23-1 1.23h-3.18l.12-.12.73-.79.58-.73c.21-.29.37-.56.47-.82a2.13 2.13 0 0 0 .14-.77c0-.62-.22-1.06-.69-1.35-.47-.3-1.1-.45-1.88-.45h-5.09v2.21l1.94 2.82h-3.03c-.67 0-1-.41-1-1.23v-6.51h-1.43zm7.56 7.74h-.42l-1.91-2.83v-.83h2.81c.51 0 .88.06 1.13.19.26.13.39.38.39.75 0 .08 0 .17-.03.25-.02.09-.06.18-.11.27l-.14.26a2.73 2.73 0 0 1-.22.3l-.24.28-.28.32-.29.32-.33.35-.34.35-.02.02z"/></g><path d="M108.61 32.43h1.43v9.11h-1.43z" fill="#FFFFFF"/><g clip-path="url(#svg2_B)" fill="#FFFFFF"><path d="M119.64 42.68a.78.78 0 0 0-.57.24c-.17.16-.25.34-.25.55s.08.4.24.56.35.24.58.24.43-.08.59-.24.24-.35.24-.56-.08-.4-.24-.56-.36-.23-.59-.23m-2.45 0c-.23 0-.42.08-.58.23-.16.16-.23.34-.23.56s.08.4.24.56.35.24.58.24.42-.08.58-.24a.76.76 0 0 0 .23-.56c0-.21-.08-.4-.24-.56s-.35-.23-.58-.23m10.53-.07c-.23 0-.43.08-.6.24s-.25.35-.25.59.08.43.25.59.37.24.6.24.43-.08.61-.24c.17-.16.25-.35.25-.59s-.08-.43-.25-.59-.37-.24-.6-.24m.02-1.96l.06.09c.37.54.93.81 1.67.81h7.16c.77 0 1.37-.22 1.8-.65s.66-1.05.67-1.84v-.58c0-.97-.3-1.78-.89-2.4s-1.36-.93-2.3-.93c-1.12 0-2.26.58-3.37 1.72l-.13.13v-4.56H131v7.74h-1.53c-.68 0-1.02-.41-1.02-1.23v-3.81h-1.43v3.81c0 .81-.34 1.23-1 1.23h-.44c-.63 0-.95-.39-.95-1.16v-3.87h-1.87c-1.14 0-2.02.3-2.63.88-.61.59-.92 1.45-.92 2.57v1.58h-1.29c-.84 0-1.5-.21-1.95-.64-.45-.42-.68-1.05-.68-1.85v-1.24h-1.43v1.24c0 1.17.36 2.12 1.08 2.81.72.7 1.72 1.05 2.99 1.05h2.71v-2.97c0-.71.18-1.24.53-1.58s.9-.51 1.64-.51h.41v2.53c0 .77.21 1.4.63 1.85s1.01.68 1.75.68h.44c.72 0 1.28-.27 1.67-.81l.06-.08zm8.89-.48h-4.21v-1.6l.02-.02c1.22-1.36 2.34-2.04 3.31-2.04.6 0 1.08.18 1.43.54s.52.84.52 1.42v.49c0 .81-.36 1.21-1.06 1.21m-1.21-7.76c-.23 0-.43.08-.6.24s-.25.35-.25.59.08.43.25.59a.83.83 0 0 0 .6.24c.24 0 .43-.08.61-.25.17-.16.25-.35.25-.58s-.08-.42-.25-.58c-.17-.17-.37-.25-.6-.25m5.08 10.92c.3.37.7.67 1.18.89.51.23 1.05.34 1.6.34.93 0 1.69-.28 2.28-.84.58-.56.92-1.27 1-2.11v-.07h1.21c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-2.51h-1.43v2.51c0 .81-.34 1.23-1 1.23h-1.19v-1.59c0-1.02-.31-1.86-.92-2.5s-1.42-.97-2.39-.97a3.26 3.26 0 0 0-2.34.94c-.65.62-.98 1.38-.98 2.27s.33 1.69.98 2.31c.65.61 1.48.92 2.47.92h1.76v.08c-.06.42-.25.79-.59 1.1s-.77.47-1.29.47a2.48 2.48 0 0 1-1.03-.22 2.02 2.02 0 0 1-.76-.54l-.99.9zm4.64-3.16h-1.75c-.58 0-1.07-.17-1.44-.52-.38-.34-.58-.79-.58-1.34 0-.51.18-.94.55-1.3a1.85 1.85 0 0 1 1.33-.53c.56 0 1.02.19 1.36.55.34.37.52.84.52 1.41v1.73zm4.32 2.39c-.23 0-.43.08-.6.24s-.25.35-.25.58a.78.78 0 0 0 .25.59.83.83 0 0 0 .6.24.86.86 0 0 0 .62-.25c.17-.17.25-.36.25-.58s-.08-.41-.25-.58a.86.86 0 0 0-.62-.24"/></g><path d="M151.66 34.72h1.43v6.82h-1.43z" fill="#FFFFFF"/><g clip-path="url(#svg2_C)" fill="#FFFFFF"><path d="M152.6 33.46a.52.52 0 0 1-.38-.16.49.49 0 0 1-.16-.38.43.43 0 0 1 .16-.35c.1-.1.23-.14.38-.14.2 0 .35.07.46.21l.44-.41c-.27-.28-.58-.42-.93-.42-.31 0-.58.1-.8.3a.96.96 0 0 0-.33.73.93.93 0 0 0 .24.62h-.57v.63h2.51v-.63h-1.03z"/><path d="M24.48,26.09l-5.71,5.71c-.81.81-1.88,1.25-3.02,1.25s-2.22-.44-3.03-1.25l-.06-.06,5.65-5.65-5.65-5.65.06-.06c1.67-1.67,4.38-1.67,6.05,0l5.71,5.71ZM33.88,5.61v45.22h.08c2.36,0,4.28-1.92,4.28-4.28V1.33h-.08c-2.36,0-4.28,1.92-4.28,4.28M20.22,8.19l-.08.03,7.22,17.86-7.22,17.85.08.03c.52.21,1.06.31,1.6.31,1.69,0,3.3-1.01,3.97-2.68l6.27-15.52-6.27-15.53c-.88-2.19-3.38-3.25-5.57-2.36M59.47,20.43l-.06-.06c-1.67-1.67-4.38-1.67-6.05,0l-5.71,5.71,5.71,5.71c.83.83,1.93,1.25,3.03,1.25s2.19-.42,3.03-1.25l.06-.06-5.65-5.65,5.65-5.65ZM51.99,8.22l-.08-.03c-2.19-.88-4.69.18-5.57,2.36l-6.27,15.52,6.27,15.53c.43,1.06,1.24,1.89,2.3,2.34.54.23,1.1.34,1.67.34s1.09-.1,1.6-.31l.08-.03-7.22-17.86,7.22-17.86Z" fill="#FFFFFF"/><path d="M91.26 9.41a1.61 1.61 0 0 0-1.61 1.61V27.5a1.61 1.61 0 0 0 1.61 1.61h6.86c5.43 0 9.85-4.42 9.85-9.85s-4.42-9.85-9.85-9.85h-6.86zm6.86 16.07h-4.84V13.04h4.84a6.23 6.23 0 0 1 6.22 6.22 6.23 6.23 0 0 1-6.22 6.22m-14.27 3.63h4.02l-8.14-18.66c-.28-.64-.92-1.05-1.62-1.05h-1.26a1.76 1.76 0 0 0-1.62 1.06l-8.14 18.65h4.02l1.71-3.96h9.31v.03l1.71 3.93zm-3.2-7.39h-6.33l3.17-7.31 3.17 7.31zm69.43 7.4h3.63V9.42h-3.9l-6.87 11.06-6.86-11.06h-3.91v19.7h3.63V15.41l5.64 8.97c.3.49.86.79 1.5.79s1.21-.31 1.5-.79l5.64-8.97v13.71zm-24.37-7.17v6.81l.17-.05c1.97-.55 3.29-2.06 3.29-3.76v-6.46h-6.66c-1.83 0-3.34 1.49-3.36 3.32v.14h6.56zm-5.33-12.88a10.2 10.2 0 0 0-10.19 10.18c0 5.9 4.4 10.19 10.47 10.19 1.3 0 2.38-.1 3.37-.32v-3.73c-.83.31-1.88.45-3.37.45-4 0-6.79-2.71-6.79-6.59a6.52 6.52 0 0 1 6.51-6.51 6.48 6.48 0 0 1 4.88 2.22l.09.1 2.69-2.51-.09-.1c-1.93-2.16-4.7-3.39-7.58-3.39"/></g><path d="M166.55 44.54V9.4" fill="none" stroke="#FFFFFF" stroke-width=".25"/><g clip-path="url(#svg2_D)" fill="#FFFFFF"><path d="M193.68 23.66c0-5.3 1.61-8.17 4.91-8.17 2.65 0 4.21 1.85 4.72 5.33 1.86-1.27 3.63-2.71 5.26-4.35-1.7-4.4-5.14-7.1-9.98-7.1-7.11 0-11.19 5.81-11.19 14.3 0 1.42.12 2.76.34 4.02 1.99-.53 4.02-1.17 6.04-1.94-.06-.64-.1-1.33-.1-2.08M184.4 9.36h-.55a5.73 5.73 0 0 0-5.73 5.73V29.5l6.28-1.07V9.36z"/></g><g clip-path="url(#svg2_E)"><path transform="matrix(.982935 -.183951 .183951 .982935 -1.61 37.03)" d="M185.95 14.62h25.62V39.8h-25.62z" fill="url(#svg2_F)"/></g><g clip-path="url(#svg2_G)"><path transform="matrix(.982935 -.183951 .183951 .982935 -3.01 33.91)" d="M177.3 27.94h7.93v10.51h-7.93z" fill="url(#svg2_H)"/></g><g clip-path="url(#svg2_I)" fill="#FFFFFF"><path d="M193.28 41.89c0-.32.31-.47.62-.47s.62.13.75.45l.51-.29c-.22-.46-.69-.73-1.26-.73-.71 0-1.24.43-1.24 1.05 0 1.27 1.96.84 1.96 1.59 0 .34-.32.48-.69.48-.44 0-.76-.21-.87-.55l-.53.3c.2.48.69.82 1.4.82.75 0 1.31-.4 1.31-1.05 0-1.29-1.96-.85-1.96-1.6m-2.08-.36v-.59h-.61v3.51h.61v-1.86c0-.83.57-1.09 1.09-1.07v-.64c-.44 0-.87.16-1.09.65m-3.4 2.42c-.7 0-1.24-.54-1.24-1.26s.54-1.26 1.24-1.26 1.25.54 1.25 1.26-.54 1.26-1.25 1.26m1.25-3.01v.6c-.28-.43-.73-.69-1.33-.69-.98 0-1.78.81-1.78 1.85s.8 1.85 1.78 1.85c.6 0 1.05-.27 1.33-.69v.6h.61v-3.51h-.61zm-5.34.49c.53 0 1.02.32 1.13 1.02h-2.34a1.16 1.16 0 0 1 1.21-1.02m-1.22 1.55h2.94l.02-.27c0-.98-.69-1.85-1.75-1.85s-1.84.81-1.84 1.85.75 1.85 1.88 1.85c.7 0 1.23-.32 1.54-.79l-.52-.29c-.18.29-.53.51-1.01.51-.65 0-1.15-.36-1.27-.99m-.23-3.46h-.73l-1.33 2.3-1.33-2.3h-.73l1.73 2.92v1.99h.65v-1.99l1.74-2.93z"/></g></svg><svg slot ="logoAlternative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.17 52.84" xmlns:v="https://vecta.io/nano"><defs><clipPath id="svg1_A"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg1_B"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg1_C"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg1_D"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><clipPath id="svg1_E"><path d="M203.31,20.82c.13.85.19,1.8.19,2.84,0,5.3-1.61,8.17-4.91,8.17-2.84,0-4.43-2.12-4.81-6.09-2.02.77-4.05,1.41-6.04,1.94,1.11,6.25,4.93,10.28,10.85,10.28,7.11,0,11.19-5.81,11.19-14.3,0-2.7-.42-5.13-1.21-7.19-1.63,1.64-3.4,3.08-5.26,4.35" fill="none"/></clipPath><linearGradient id="svg1_F" x1="-19.14" y1="831.14" x2="-18.8" y2="831.14" gradientTransform="translate(-32009.62 763.78) rotate(90) scale(38.75 -38.75)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#002ed9"/><stop offset="1" stop-color="#008aff"/></linearGradient><clipPath id="svg1_G"><path d="M178.12 29.5v8.45h.67a5.61 5.61 0 0 0 5.61-5.61v-3.91l-6.28 1.07" fill="none"/></clipPath><linearGradient id="svg1_H" y1="830.68" y2="830.68" gradientTransform="translate(-32009.29 767.03) rotate(90) scale(38.75 -38.75)" href="#svg1_F"/><clipPath id="svg1_I"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"/></clipPath><path id="svg1_J" d="M70.78 42.68c-.23 0-.42.08-.58.23-.16.16-.23.34-.23.56s.08.4.24.56.35.24.58.24.42-.08.58-.24a.76.76 0 0 0 .23-.56c0-.21-.08-.4-.24-.56s-.35-.23-.58-.23"/><path id="svg1_K" d="M73.24 42.68a.78.78 0 0 0-.57.24c-.17.16-.25.34-.25.55s.08.4.24.56.35.24.58.24.43-.08.59-.24.24-.35.24-.56-.08-.4-.24-.56-.36-.23-.59-.23"/></defs><g style="fill:initial;" clip-path="url(#svg1_A)"><use href="#svg1_J"/><use href="#svg1_K"/><path d="M86 40.31l.04.13c.11.35.31.62.59.81s.64.29 1.06.29h.49c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-6.51h-1.43v6.51c0 .81-.34 1.23-1 1.23h-.49c-.28 0-.51-.09-.67-.27-.16-.17-.24-.41-.24-.7v-.85c0-.88-.33-1.65-.97-2.28s-1.43-.94-2.33-.94-1.69.32-2.33.94a3.09 3.09 0 0 0-.97 2.28 1.96 1.96 0 0 0 .86 1.68l.18.13h-2.06c-.63 0-.95-.39-.95-1.16v-3.87h-1.87c-1.14 0-2.02.3-2.63.88-.61.59-.92 1.45-.92 2.57v1.58h-1.29c-.84 0-1.5-.21-1.95-.64-.45-.42-.68-1.05-.68-1.85v-1.24h-1.43v1.24c0 1.17.36 2.12 1.08 2.81.72.7 1.72 1.05 2.99 1.05h2.71v-2.97c0-.71.18-1.24.53-1.58s.9-.51 1.64-.51h.41V39c0 .77.21 1.4.63 1.85.41.45 1 .68 1.75.68h4.32c1 0 1.81-.38 2.43-1.13l.09-.11zm-2.51-.14a1.78 1.78 0 0 1-1.32-.55c-.36-.35-.55-.79-.55-1.29a1.73 1.73 0 0 1 .55-1.29 1.81 1.81 0 0 1 1.32-.54 1.81 1.81 0 0 1 1.32.54 1.77 1.77 0 0 1 .55 1.29 1.73 1.73 0 0 1-.55 1.29 1.81 1.81 0 0 1-1.32.54m8.78-7.73v6.51c0 .77.23 1.41.67 1.88.44.48 1.04.72 1.77.72h9.89c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-6.51h-1.43v6.51c0 .81-.34 1.23-1 1.23h-3.18l.12-.12.73-.79.58-.73c.21-.29.37-.56.47-.82a2.13 2.13 0 0 0 .14-.77c0-.62-.22-1.06-.69-1.35-.47-.3-1.1-.45-1.88-.45h-5.09v2.21l1.94 2.82h-3.03c-.67 0-1-.41-1-1.23v-6.51h-1.43zm7.56 7.74h-.42l-1.91-2.83v-.83h2.81c.51 0 .88.06 1.13.19.26.13.39.38.39.75 0 .08 0 .17-.03.25-.02.09-.06.18-.11.27l-.14.26a2.73 2.73 0 0 1-.22.3l-.24.28-.28.32-.29.32-.33.35-.34.35-.02.02z"/></g><path style="fill:initial;" d="M108.61 32.43h1.43v9.11h-1.43z"/><g style="fill:initial;" clip-path="url(#svg1_B)"><path d="M119.64 42.68a.78.78 0 0 0-.57.24c-.17.16-.25.34-.25.55s.08.4.24.56.35.24.58.24.43-.08.59-.24.24-.35.24-.56-.08-.4-.24-.56-.36-.23-.59-.23m-2.45 0c-.23 0-.42.08-.58.23-.16.16-.23.34-.23.56s.08.4.24.56.35.24.58.24.42-.08.58-.24a.76.76 0 0 0 .23-.56c0-.21-.08-.4-.24-.56s-.35-.23-.58-.23m10.53-.07c-.23 0-.43.08-.6.24s-.25.35-.25.59.08.43.25.59.37.24.6.24.43-.08.61-.24c.17-.16.25-.35.25-.59s-.08-.43-.25-.59-.37-.24-.6-.24m.02-1.96l.06.09c.37.54.93.81 1.67.81h7.16c.77 0 1.37-.22 1.8-.65s.66-1.05.67-1.84v-.58c0-.97-.3-1.78-.89-2.4s-1.36-.93-2.3-.93c-1.12 0-2.26.58-3.37 1.72l-.13.13v-4.56H131v7.74h-1.53c-.68 0-1.02-.41-1.02-1.23v-3.81h-1.43v3.81c0 .81-.34 1.23-1 1.23h-.44c-.63 0-.95-.39-.95-1.16v-3.87h-1.87c-1.14 0-2.02.3-2.63.88-.61.59-.92 1.45-.92 2.57v1.58h-1.29c-.84 0-1.5-.21-1.95-.64-.45-.42-.68-1.05-.68-1.85v-1.24h-1.43v1.24c0 1.17.36 2.12 1.08 2.81.72.7 1.72 1.05 2.99 1.05h2.71v-2.97c0-.71.18-1.24.53-1.58s.9-.51 1.64-.51h.41v2.53c0 .77.21 1.4.63 1.85s1.01.68 1.75.68h.44c.72 0 1.28-.27 1.67-.81l.06-.08zm8.89-.48h-4.21v-1.6l.02-.02c1.22-1.36 2.34-2.04 3.31-2.04.6 0 1.08.18 1.43.54s.52.84.52 1.42v.49c0 .81-.36 1.21-1.06 1.21m-1.21-7.76c-.23 0-.43.08-.6.24s-.25.35-.25.59.08.43.25.59a.83.83 0 0 0 .6.24c.24 0 .43-.08.61-.25.17-.16.25-.35.25-.58s-.08-.42-.25-.58c-.17-.17-.37-.25-.6-.25m5.08 10.92c.3.37.7.67 1.18.89.51.23 1.05.34 1.6.34.93 0 1.69-.28 2.28-.84.58-.56.92-1.27 1-2.11v-.07h1.21c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-2.51h-1.43v2.51c0 .81-.34 1.23-1 1.23h-1.19v-1.59c0-1.02-.31-1.86-.92-2.5s-1.42-.97-2.39-.97a3.26 3.26 0 0 0-2.34.94c-.65.62-.98 1.38-.98 2.27s.33 1.69.98 2.31c.65.61 1.48.92 2.47.92h1.76v.08c-.06.42-.25.79-.59 1.1s-.77.47-1.29.47a2.48 2.48 0 0 1-1.03-.22 2.02 2.02 0 0 1-.76-.54l-.99.9zm4.64-3.16h-1.75c-.58 0-1.07-.17-1.44-.52-.38-.34-.58-.79-.58-1.34 0-.51.18-.94.55-1.3a1.85 1.85 0 0 1 1.33-.53c.56 0 1.02.19 1.36.55.34.37.52.84.52 1.41v1.73zm4.32 2.39c-.23 0-.43.08-.6.24s-.25.35-.25.58a.78.78 0 0 0 .25.59.83.83 0 0 0 .6.24.86.86 0 0 0 .62-.25c.17-.17.25-.36.25-.58s-.08-.41-.25-.58a.86.86 0 0 0-.62-.24"/></g><path style="fill:initial;" d="M151.66 34.72h1.43v6.82h-1.43z"/><g style="fill:initial;" clip-path="url(#svg1_C)"><path d="M152.6 33.46a.52.52 0 0 1-.38-.16.49.49 0 0 1-.16-.38.43.43 0 0 1 .16-.35c.1-.1.23-.14.38-.14.2 0 .35.07.46.21l.44-.41c-.27-.28-.58-.42-.93-.42-.31 0-.58.1-.8.3a.96.96 0 0 0-.33.73.93.93 0 0 0 .24.62h-.57v.63h2.51v-.63h-1.03z"/><path d="M24.48,26.09l-5.71,5.71c-.81.81-1.88,1.25-3.02,1.25s-2.22-.44-3.03-1.25l-.06-.06,5.65-5.65-5.65-5.65.06-.06c1.67-1.67,4.38-1.67,6.05,0l5.71,5.71ZM33.88,5.61v45.22h.08c2.36,0,4.28-1.92,4.28-4.28V1.33h-.08c-2.36,0-4.28,1.92-4.28,4.28M20.22,8.19l-.08.03,7.22,17.86-7.22,17.85.08.03c.52.21,1.06.31,1.6.31,1.69,0,3.3-1.01,3.97-2.68l6.27-15.52-6.27-15.53c-.88-2.19-3.38-3.25-5.57-2.36M59.47,20.43l-.06-.06c-1.67-1.67-4.38-1.67-6.05,0l-5.71,5.71,5.71,5.71c.83.83,1.93,1.25,3.03,1.25s2.19-.42,3.03-1.25l.06-.06-5.65-5.65,5.65-5.65ZM51.99,8.22l-.08-.03c-2.19-.88-4.69.18-5.57,2.36l-6.27,15.52,6.27,15.53c.43,1.06,1.24,1.89,2.3,2.34.54.23,1.1.34,1.67.34s1.09-.1,1.6-.31l.08-.03-7.22-17.86,7.22-17.86Z" fill="#0087ff"/><path d="M91.26 9.41a1.61 1.61 0 0 0-1.61 1.61V27.5a1.61 1.61 0 0 0 1.61 1.61h6.86c5.43 0 9.85-4.42 9.85-9.85s-4.42-9.85-9.85-9.85h-6.86zm6.86 16.07h-4.84V13.04h4.84a6.23 6.23 0 0 1 6.22 6.22 6.23 6.23 0 0 1-6.22 6.22m-14.27 3.63h4.02l-8.14-18.66c-.28-.64-.92-1.05-1.62-1.05h-1.26a1.76 1.76 0 0 0-1.62 1.06l-8.14 18.65h4.02l1.71-3.96h9.31v.03l1.71 3.93zm-3.2-7.39h-6.33l3.17-7.31 3.17 7.31zm69.43 7.4h3.63V9.42h-3.9l-6.87 11.06-6.86-11.06h-3.91v19.7h3.63V15.41l5.64 8.97c.3.49.86.79 1.5.79s1.21-.31 1.5-.79l5.64-8.97v13.71zm-24.37-7.17v6.81l.17-.05c1.97-.55 3.29-2.06 3.29-3.76v-6.46h-6.66c-1.83 0-3.34 1.49-3.36 3.32v.14h6.56zm-5.33-12.88a10.2 10.2 0 0 0-10.19 10.18c0 5.9 4.4 10.19 10.47 10.19 1.3 0 2.38-.1 3.37-.32v-3.73c-.83.31-1.88.45-3.37.45-4 0-6.79-2.71-6.79-6.59a6.52 6.52 0 0 1 6.51-6.51 6.48 6.48 0 0 1 4.88 2.22l.09.1 2.69-2.51-.09-.1c-1.93-2.16-4.7-3.39-7.58-3.39"/></g><path d="M166.55 44.54V9.4" fill="none" stroke="#231f20" stroke-width=".25"/><g clip-path="url(#svg1_D)" fill="#0085ff"><path d="M193.68 23.66c0-5.3 1.61-8.17 4.91-8.17 2.65 0 4.21 1.85 4.72 5.33 1.86-1.27 3.63-2.71 5.26-4.35-1.7-4.4-5.14-7.1-9.98-7.1-7.11 0-11.19 5.81-11.19 14.3 0 1.42.12 2.76.34 4.02 1.99-.53 4.02-1.17 6.04-1.94-.06-.64-.1-1.33-.1-2.08M184.4 9.36h-.55a5.73 5.73 0 0 0-5.73 5.73V29.5l6.28-1.07V9.36z"/></g><g clip-path="url(#svg1_E)"><path transform="matrix(.982935 -.183951 .183951 .982935 -1.61 37.03)" d="M185.95 14.62h25.62V39.8h-25.62z" fill="url(#svg1_F)"/></g><g clip-path="url(#svg1_G)"><path transform="matrix(.982935 -.183951 .183951 .982935 -3.01 33.91)" d="M177.3 27.94h7.93v10.51h-7.93z" fill="url(#svg1_H)"/></g><g clip-path="url(#svg1_I)"><path d="M193.28 41.89c0-.32.31-.47.62-.47s.62.13.75.45l.51-.29c-.22-.46-.69-.73-1.26-.73-.71 0-1.24.43-1.24 1.05 0 1.27 1.96.84 1.96 1.59 0 .34-.32.48-.69.48-.44 0-.76-.21-.87-.55l-.53.3c.2.48.69.82 1.4.82.75 0 1.31-.4 1.31-1.05 0-1.29-1.96-.85-1.96-1.6m-2.08-.36v-.59h-.61v3.51h.61v-1.86c0-.83.57-1.09 1.09-1.07v-.64c-.44 0-.87.16-1.09.65m-3.4 2.42c-.7 0-1.24-.54-1.24-1.26s.54-1.26 1.24-1.26 1.25.54 1.25 1.26-.54 1.26-1.25 1.26m1.25-3.01v.6c-.28-.43-.73-.69-1.33-.69-.98 0-1.78.81-1.78 1.85s.8 1.85 1.78 1.85c.6 0 1.05-.27 1.33-.69v.6h.61v-3.51h-.61zm-5.34.49c.53 0 1.02.32 1.13 1.02h-2.34a1.16 1.16 0 0 1 1.21-1.02m-1.22 1.55h2.94l.02-.27c0-.98-.69-1.85-1.75-1.85s-1.84.81-1.84 1.85.75 1.85 1.88 1.85c.7 0 1.23-.32 1.54-.79l-.52-.29c-.18.29-.53.51-1.01.51-.65 0-1.15-.36-1.27-.99m-.23-3.46h-.73l-1.33 2.3-1.33-2.3h-.73l1.73 2.92v1.99h.65v-1.99l1.74-2.93z" fill="#231f20"/></g></svg>                            <adgm-navigation-item title="About" href="/about/the-abu-dhabi-lifestyle" key="About">
+                                                       
+                                            <div class="mobile-expansion-panel">
+                                                           <a href="/about"
+                                                                >
+                                                                    Overview
+                                                           </a>
+                                                           <a href="/about/jurisdiction"
+                                                                >
+                                                                    Jurisdiction
+                                                           </a>
+                                                           <a href="/about/authorities"
+                                                                >
+                                                                    Authorities
+                                                           </a>
+                                                           <a href="/initiatives"
+                                                                >
+                                                                    Initiatives
+                                                           </a>
+                                                           <a href="https://academy.adgm.com"
+                                                                target="_blank">
+                                                                    ADGM Academy
+                                                           </a>
+                                                           <a href="https://disputeresolution.adgm.com"
+                                                                target="_blank">
+                                                                    Dispute Resolution
+                                                           </a>
+                                                           <a href="/careers"
+                                                                >
+                                                                    Careers
+                                                           </a>
+                                            </div>
+                             </adgm-navigation-item>
+                                            <adgm-navigation-item-content slot="About">
+                                                                        <div>
+                                                                            <adgm-text variant="text2XL" weight="300">
+                                                A platform that offers limitless opportunities and paves the way for a brighter future
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-text variant="textS" weight="300">
+                                                
+<p>Abu Dhabi boasts first-class infrastructure and unparalleled global connectivity, making it a premier international destination. Its exceptional qualities make it an ideal location to live, work, and conduct business.</p>
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-link-button href="/about/the-abu-dhabi-lifestyle" icon="arrowM" size="m" variant="secondary" anim>
+                                                Read about Abu Dhabi&#x2019;s life style
+                                                                            </adgm-link-button>
+                                                                        </div>
+                                                                 <div>
+                                                                          <adgm-text variant="text2XL" weight="300">
+                                            Latest News
+                                                                          </adgm-text>
+                                                                          <adgm-spacer height="rBodyM"></adgm-spacer>
+
+                                                                                    <adgm-flex direction="row" gap="s16">
+                                                                                                <adgm-highlight-card href="/media/announcements/numou-and-comera-financial-holding-partner-to-expand-financing-and-payment-solutions-for-uae-smes"
+                                                         style="display : block;" chip='ADGM 'date='07 Oct 2026'
+                                                                                                                                                                                     variant='primary'>
+                                                                                                                                                                                                      <adgm-image slot="image" src='https://assets.adgm.com/images/assets/adgm_h1_2026_871x491.jpg/Zz05YTkzNGU1Y2FiNTYxMWYxOWM3YzBhMzk4ZGRmMzdhYw==' blur-hash="" alt="Numou and Comera Financial Holding Partner to Expand Financing and Payment Solutions for UAE SMEs"></adgm-image>
+Numou and Comera Financial Holding Partner to Expand Financing and Payment Solutions for UAE SMEs                                                                                                </adgm-highlight-card>
+                                                                                                <adgm-highlight-card href="/media/announcements/adgm-registration-authority-publishes-consultation-paper-on-enhanced-strata-regulations"
+                                                         style="display : block;" chip='ADGM RA 'date='07 Oct 2026'
+                                                                                                                                                                                     variant='primary'>
+                                                                                                                                                                                                      <adgm-image slot="image" src='https://assets.adgm.com/images/assets/announcement_banner_new3_871x491.jpg/Zz0zZjE3ZmYwMmFmZGQxMWYwYWJlNmFlZjJkNzcwOThkNg==' blur-hash="" alt="ADGM Registration Authority Publishes Consultation Paper on Enhanced Strata Regulations"></adgm-image>
+ADGM Registration Authority Publishes Consultation Paper on Enhanced Strata Regulations                                                                                                </adgm-highlight-card>
+                                                                                    </adgm-flex>
+
+
+                                                                 </div>
+                                          </adgm-navigation-item-content>
+                            <adgm-navigation-item title="Business" href="/setting-up" key="Business">
+                                                       
+                                            <div class="mobile-expansion-panel">
+                                                           <a href="/business"
+                                                                >
+                                                                    Overview
+                                                           </a>
+                                                           <a href="/business-areas"
+                                                                >
+                                                                    Business Areas
+                                                           </a>
+                                                           <a href="/setting-up"
+                                                                >
+                                                                    Setting up
+                                                           </a>
+                                                           <a href="/operating-in-adgm"
+                                                                >
+                                                                    Operating in
+                                                           </a>
+                                                           <a href="/public-registers"
+                                                                >
+                                                                    Public Registers
+                                                           </a>
+                                                           <a href="/legal-framework"
+                                                                >
+                                                                    Legal Framework
+                                                           </a>
+                                            </div>
+                             </adgm-navigation-item>
+                                            <adgm-navigation-item-content slot="Business">
+                                                                        <div>
+                                                                            <adgm-text variant="text2XL" weight="300">
+                                                Providing an environment that empowers the future
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-text variant="textS" weight="300">
+                                                
+<p>A financial centre that provides transparency, efficiency, and integrity, through its progressive frameworks, future focused infrastructure, all within a familiar independent legal jurisdiction &ndash; ADGM is the perfect platform for success.</p>
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-link-button href="/setting-up" target="_self" icon="arrowM" size="m" variant="secondary" anim>
+                                                Find out how to setup in ADGM
+                                                                            </adgm-link-button>
+                                                                        </div>
+                                                                 <div>
+                                                                          <adgm-text variant="text2XL" weight="300">
+                                            Latest News
+                                                                          </adgm-text>
+                                                                          <adgm-spacer height="rBodyM"></adgm-spacer>
+
+                                                                                    <adgm-flex direction="row" gap="s16">
+                                                                                                <adgm-highlight-card href="/media/announcements/numou-and-comera-financial-holding-partner-to-expand-financing-and-payment-solutions-for-uae-smes"
+                                                         style="display : block;" chip='ADGM 'date='07 Oct 2026'
+                                                                                                                                                                                     variant='primary'>
+                                                                                                                                                                                                      <adgm-image slot="image" fit="cover" src='https://assets.adgm.com/images/assets/adgm_h1_2026_871x491.jpg/Zz05YTkzNGU1Y2FiNTYxMWYxOWM3YzBhMzk4ZGRmMzdhYw==' blur-hash="" alt="Numou and Comera Financial Holding Partner to Expand Financing and Payment Solutions for UAE SMEs"></adgm-image>
+Numou and Comera Financial Holding Partner to Expand Financing and Payment Solutions for UAE SMEs                                                                                                </adgm-highlight-card>
+                                                                                                <adgm-highlight-card href="/media/announcements/adgm-registration-authority-publishes-consultation-paper-on-enhanced-strata-regulations"
+                                                         style="display : block;" chip='ADGM RA 'date='07 Oct 2026'
+                                                                                                                                                                                     variant='primary'>
+                                                                                                                                                                                                      <adgm-image slot="image" fit="cover" src='https://assets.adgm.com/images/assets/announcement_banner_new3_871x491.jpg/Zz0zZjE3ZmYwMmFmZGQxMWYwYWJlNmFlZjJkNzcwOThkNg==' blur-hash="" alt="ADGM Registration Authority Publishes Consultation Paper on Enhanced Strata Regulations"></adgm-image>
+ADGM Registration Authority Publishes Consultation Paper on Enhanced Strata Regulations                                                                                                </adgm-highlight-card>
+                                                                                    </adgm-flex>
+
+
+                                                                 </div>
+                                          </adgm-navigation-item-content>
+                            <adgm-navigation-item title="eServices" href="https://accessrp.adgm.com" key="eServices">
+                                                       
+                                            <div class="mobile-expansion-panel">
+                                                           <a href="/operating-in-adgm/e-services/accessrp"
+                                                                >
+                                                                    AccessRP
+                                                           </a>
+                                                           <a href="/operating-in-adgm/e-services/accessadgm-government-services-portal"
+                                                                target="_blank">
+                                                                    ACCESSADGM
+                                                           </a>
+                                                           <a href="/operating-in-adgm/e-services/online-registry-solution"
+                                                                target="_blank">
+                                                                    Online Registry Solution
+                                                           </a>
+                                                           <a href="/operating-in-adgm/e-services/electronic-prudential-reporting"
+                                                                >
+                                                                    Electronic Prudential Reporting
+                                                           </a>
+                                                           <a href="/operating-in-adgm/e-services/fsra-connect"
+                                                                target="_blank">
+                                                                    FSRA Connect
+                                                           </a>
+                                                           <a href="/adgm-courts/digital-approach"
+                                                                >
+                                                                    ADGM eCourts Platform
+                                                           </a>
+                                            </div>
+                             </adgm-navigation-item>
+                                            <adgm-navigation-item-content slot="eServices">
+                                                                        <div>
+                                                                            <adgm-text variant="text2XL" weight="300">
+                                                All Your Real Property Needs in One Platform on AccessRP
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-text variant="textS" weight="300">
+                                                
+<p>AccessRP is a next-generation digital platform transforming the real estate experience in ADGM. Designed to streamline interactions across the ecosystem, AccessRP brings together landlords, developers, and tenants in one seamless environment, providing real-time access to services, data, and insights.</p>
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-link-button href="https://accessrp.adgm.com" target="_blank" icon="arrowM" size="m" variant="secondary" anim>
+                                                Explore AccessRP
+                                                                            </adgm-link-button>
+                                                                        </div>
+                                                                 <div>
+                                                                          <adgm-text variant="text2XL" weight="300">
+                                            Latest News
+                                                                          </adgm-text>
+                                                                          <adgm-spacer height="rBodyM"></adgm-spacer>
+
+                                                                                    <adgm-flex direction="row" gap="s16">
+                                                                                                <adgm-highlight-card href="/media/announcements/numou-and-comera-financial-holding-partner-to-expand-financing-and-payment-solutions-for-uae-smes"
+                                                         style="display : block;" chip='ADGM 'date='07 Oct 2026'
+                                                                                                                                                                                     variant='primary'>
+                                                                                                                                                                                                      <adgm-image slot="image" fit="cover" src='https://assets.adgm.com/images/assets/adgm_h1_2026_871x491.jpg/Zz05YTkzNGU1Y2FiNTYxMWYxOWM3YzBhMzk4ZGRmMzdhYw==' blur-hash="" alt="Numou and Comera Financial Holding Partner to Expand Financing and Payment Solutions for UAE SMEs"></adgm-image>
+Numou and Comera Financial Holding Partner to Expand Financing and Payment Solutions for UAE SMEs                                                                                                </adgm-highlight-card>
+                                                                                                <adgm-highlight-card href="/media/announcements/adgm-registration-authority-publishes-consultation-paper-on-enhanced-strata-regulations"
+                                                         style="display : block;" chip='ADGM RA 'date='07 Oct 2026'
+                                                                                                                                                                                     variant='primary'>
+                                                                                                                                                                                                      <adgm-image slot="image" fit="cover" src='https://assets.adgm.com/images/assets/announcement_banner_new3_871x491.jpg/Zz0zZjE3ZmYwMmFmZGQxMWYwYWJlNmFlZjJkNzcwOThkNg==' blur-hash="" alt="ADGM Registration Authority Publishes Consultation Paper on Enhanced Strata Regulations"></adgm-image>
+ADGM Registration Authority Publishes Consultation Paper on Enhanced Strata Regulations                                                                                                </adgm-highlight-card>
+                                                                                    </adgm-flex>
+
+
+                                                                 </div>
+                                          </adgm-navigation-item-content>
+                            <adgm-navigation-item title="Resources" href="/media" key="Resources">
+                                                       
+                                            <div class="mobile-expansion-panel">
+                                                           <a href="/media/announcements"
+                                                                >
+                                                                    News
+                                                           </a>
+                                                           <a href="/publications"
+                                                                >
+                                                                    Publications
+                                                           </a>
+                                                           <a href="/the-district"
+                                                                >
+                                                                    The ADGM District
+                                                           </a>
+                                                           <a href="/events"
+                                                                >
+                                                                    Events
+                                                           </a>
+                                                           <a href="/spotlight"
+                                                                >
+                                                                    Spotlight
+                                                           </a>
+                                                           <a href="/think-by-adgm"
+                                                                >
+                                                                    Podcasts
+                                                           </a>
+                                            </div>
+                             </adgm-navigation-item>
+                                            <adgm-navigation-item-content slot="Resources">
+                                                                        <div>
+                                                                            <adgm-text variant="text2XL" weight="300">
+                                                Stay up-to-date with our wide range of available resources
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-text variant="textS" weight="300">
+                                                
+<p>Our community of business professionals, entrepreneurs, and investors can depend on ADGM to provide timely news and reliable insights.</p>
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-link-button href="/media" target="_self" icon="arrowM" size="m" variant="secondary" anim>
+                                                Read our latest news articles
+                                                                            </adgm-link-button>
+                                                                        </div>
+                                                                 <div>
+                                                                          <adgm-text variant="text2XL" weight="300">
+                                            Upcoming Events
+                                                                          </adgm-text>
+                                                                          <adgm-spacer height="rBodyM"></adgm-spacer>
+
+
+                                                                                    <adgm-flex direction="column" gap="s16">
+                                                                                                <adgm-event-card date-month='Oct'
+                                                                                                                 date-day='14-15'
+                                                                                                                 location='Virtual'
+                                                                                                                 href='/events/adgm-virtual-career-fair' >
+                                                            ADGM Virtual Career Fair
+                                                                                                </adgm-event-card>
+                                                                                                <adgm-event-card date-month='Dec'
+                                                                                                                 date-day='07-10'
+                                                                                                                 location='The Grand Steps, Al Maryah Island, Abu Dhabi'
+                                                                                                                 href='https://adfw.com/?utm_source=adgm&amp;utm_medium=website&amp;utm_campaign=adfw2026-ryi&amp;utm_id=adgmevnt-sep26'  target="_blank" >
+                                                            ADFW 2026
+                                                                                                </adgm-event-card>
+                                                                                     </adgm-flex>
+
+                                                                 </div>
+                                          </adgm-navigation-item-content>
+                            <adgm-navigation-item title="Contact &amp; Support" href="/contact-us" key="Contact &amp; Support">
+                                                       
+                                            <div class="mobile-expansion-panel">
+                                                           <a href="/contact-us"
+                                                                >
+                                                                    Support
+                                                           </a>
+                                                           <a href="/contact-us/make-an-enquiry"
+                                                                >
+                                                                    Make an enquiry
+                                                           </a>
+                                                           <a href="/contact-us/speaking-up"
+                                                                >
+                                                                    Speaking Up
+                                                           </a>
+                                                           <a href="/faqs"
+                                                                >
+                                                                    FAQs
+                                                           </a>
+                                            </div>
+                             </adgm-navigation-item>
+                                            <adgm-navigation-item-content slot="Contact &amp; Support">
+                                                                        <div>
+                                                                            <adgm-text variant="text2XL" weight="300">
+                                                We are here to help
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-text variant="textS" weight="300">
+                                                
+<p>At ADGM, we offer various support options, including contact details, FAQs, enquiry forms, and a whistleblowing form.</p>
+                                                                            </adgm-text>
+                                                                            <adgm-spacer height="rBodyM"></adgm-spacer>
+                                                                            <adgm-link-button href="/contact-us" icon="arrowM" size="m" variant="secondary" anim>
+                                                View available support options
+                                                                            </adgm-link-button>
+                                                                        </div>
+                                                                 <div>
+                                                                          <adgm-text variant="text2XL" weight="300">
+                                            Some of our FAQ topics
+                                                                          </adgm-text>
+                                                                          <adgm-spacer height="rBodyM"></adgm-spacer>
+
+                                                                                    <adgm-flex direction="row" gap="s16">
+                                                                                                <adgm-highlight-card href="/faqs/setting-up"
+                                                        chip='Setting up 'date=''
+                                                                                                                                                                                     variant='secondary'>
+                                                    <adgm-ul slot="content">
+                                                                <li>Getting started</li>
+                                                                <li>Foundations regime</li>
+                                                                <li>Resolution for incorporation</li>
+                                                    </adgm-ul>
+                                                                                                </adgm-highlight-card>
+                                                                                                <adgm-highlight-card href="/faqs/operating-in-adgm"
+                                                        chip='Operating in 'date=''
+                                                                                                                                                                                     variant='secondary'>
+                                                    <adgm-ul slot="content">
+                                                                <li>Existing auditors</li>
+                                                                <li>New auditors</li>
+                                                                <li>ACCESSADGM</li>
+                                                    </adgm-ul>
+                                                                                                </adgm-highlight-card>
+                                                                                    </adgm-flex>
+
+
+                                                                 </div>
+                                          </adgm-navigation-item-content>
+
+                        </adgm-navigation>
+
+<script>
+    function eventCardAlignment() {
+        const eventCard = document.querySelectorAll('adgm-event-card');
+
+        if (eventCard) {
+            eventCard.forEach(item => {
+                item.shadowRoot.querySelector('.date').setAttribute("style", "width: 90px !important;");
+            });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        eventCardAlignment();
+    });
+
+</script>
+            
+	<span>
+		<span>
+        <adgm-hero size='s'>
+                        <adgm-image  src='https://assets.adgm.com/images/assets/public_registers_1905x506.jpg/Zz0wZTMyZmJmZTM5YmQxMWVmYWMyYzdlYzllM2RjNWRiMQ=='  loading="eager">
+                                        </adgm-image>
+                    <div slot="content">
+                            <adgm-text variant="tagLine" >
+                                Business
+                            </adgm-text>
+                            <adgm-spacer height="rBodyXS"></adgm-spacer>
+                            <adgm-text variant='heroTitleM' >
+                                <h1>Public Registers</h1>
+                            </adgm-text>
+                    </div>
+        </adgm-hero>
+</span>
+	
+		<span>
+
+
+
+<adgm-container>
+    <adgm-breadcrumbs>
+                        <adgm-breadcrumb>Public Registers</adgm-breadcrumb>
+
+    </adgm-breadcrumbs>
+</adgm-container>
+
+<adgm-spacer height="s80"></adgm-spacer>
+
+</span>
+	
+		<span>
+<adgm-section variant='primary'>
+        <adgm-container>
+            
+<div>
+    <adgm-presentation-grid variant="imageText">
+            <adgm-image src='https://assets.adgm.com/images/assets/public_registry_1080x1080.jpg/Zz1kOTZjMWZlYTM5MGQxMWVmYTg2ZDZlYjQ5OGJlMTJiNA=='
+                        src-small=' : https://assets.adgm.com/images/assets/public_registry_1080x1080.jpg/Zz1kOTZjMWZlYTM5MGQxMWVmYTg2ZDZlYjQ5OGJlMTJiNA==)'
+                        src-medium=' : https://assets.adgm.com/images/assets/public_registry_1080x1080.jpg/Zz1kOTZjMWZlYTM5MGQxMWVmYTg2ZDZlYjQ5OGJlMTJiNA==)'
+                        src-large=' : https://assets.adgm.com/images/assets/public_registry_1080x1080.jpg/Zz1kOTZjMWZlYTM5MGQxMWVmYTg2ZDZlYjQ5OGJlMTJiNA==)'
+                        ratio="1/1"
+                        alt="ADGM&#x27;s official online registry solutions">
+            </adgm-image>
+        <div>
+                    <adgm-text variant="tagLine">Public Registers</adgm-text>
+                    <adgm-spacer height="rBodyXS"></adgm-spacer>
+                    <adgm-text variant="sectionTitle">
+                        <h2>ADGM&#x27;s official online registry solutions</h2>
+                    </adgm-text>
+                        <adgm-spacer height="rBodyL"></adgm-spacer>
+                    <adgm-text  variant="textL" weight="400">
+                        
+<p>The ADGM official online registry solutions for public register and Financial Services Regulatory Authority and Registrations (FSRA).</p>
+                                </adgm-text>
+        </div>
+    </adgm-presentation-grid>
+</div>
+        </adgm-container>
+
+</adgm-section></span>
+	
+		<span>
+<adgm-section variant='primary'>
+        <adgm-container>
+            <adgm-spacer height="rSectionM"></adgm-spacer>
+            
+<div>
+    <adgm-overview-grid variant='three'  content-align="[&quot;.title&quot;,&quot;.body&quot;]" >
+        
+<div>
+        <adgm-icon-card title='FSRA Public Register' href='/public-registers/fsra' variant="primary"  target="_self" button-text="Read more" >
+                            <adgm-icon slot="icon">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2617 21.5057C10.4612 21.3148 10.7777 21.3217 10.9686 21.5212C12.6441 23.2719 14.6581 24.6636 16.8881 25.6118C19.1181 26.56 21.5176 27.0449 23.9408 27.0369L23.9425 27.0369C26.3938 27.0372 28.8189 26.5332 31.0672 25.5564C31.3204 25.4463 31.615 25.5624 31.725 25.8157C31.835 26.069 31.7189 26.3635 31.4657 26.4735C29.0919 27.5049 26.5313 28.0371 23.9432 28.0369C21.3847 28.0452 18.8513 27.5332 16.4968 26.5321C14.142 25.5308 12.0154 24.0613 10.2462 22.2127C10.0553 22.0132 10.0622 21.6967 10.2617 21.5057Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9727 19.2956C14.1587 17.1096 17.1236 15.8815 20.2151 15.8815C23.3066 15.8815 26.2715 17.1096 28.4575 19.2956C30.6435 21.4816 31.8716 24.4465 31.8716 27.538C31.8716 30.6295 30.6435 33.5943 28.4575 35.7804C26.2715 37.9664 23.3066 39.1945 20.2151 39.1945C17.1236 39.1945 14.1587 37.9664 11.9727 35.7804C9.78669 33.5943 8.55859 30.6295 8.55859 27.538C8.55859 24.4465 9.78669 21.4816 11.9727 19.2956ZM20.2151 16.8815C17.3888 16.8815 14.6783 18.0042 12.6798 20.0027C10.6813 22.0012 9.55859 24.7117 9.55859 27.538C9.55859 30.3642 10.6813 33.0748 12.6798 35.0733C14.6783 37.0717 17.3888 38.1945 20.2151 38.1945C23.0414 38.1945 25.7519 37.0717 27.7504 35.0733C29.7489 33.0748 30.8716 30.3642 30.8716 27.538C30.8716 24.7117 29.7489 22.0012 27.7504 20.0027C25.7519 18.0042 23.0414 16.8815 20.2151 16.8815Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 43.131C17.8675 43.131 15.5431 43.5933 13.3744 44.4916C11.2057 45.3899 9.23516 46.7066 7.57531 48.3664C5.91546 50.0263 4.5988 51.9968 3.7005 54.1655C2.86603 56.1801 2.40775 58.3291 2.34684 60.506H38.0829C38.0219 58.3291 37.5637 56.1801 36.7292 54.1655C35.8309 51.9968 34.5142 50.0263 32.8544 48.3664C31.1945 46.7066 29.224 45.3899 27.0553 44.4916C24.8866 43.5933 22.5622 43.131 20.2148 43.131ZM12.9917 43.5678C15.2817 42.6192 17.7361 42.131 20.2148 42.131C22.6935 42.131 25.148 42.6192 27.438 43.5678C29.728 44.5163 31.8088 45.9066 33.5615 47.6593C35.3142 49.412 36.7045 51.4928 37.6531 53.7828C38.6016 56.0729 39.0898 58.5273 39.0898 61.006C39.0898 61.2821 38.866 61.506 38.5898 61.506H1.83984C1.5637 61.506 1.33984 61.2821 1.33984 61.006C1.33984 58.5273 1.82806 56.0729 2.77662 53.7828C3.72518 51.4928 5.1155 49.412 6.8682 47.6593C8.62091 45.9066 10.7017 44.5163 12.9917 43.5678Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 47.381C20.491 47.381 20.7148 47.6048 20.7148 47.881V54.444C20.7148 54.7201 20.491 54.944 20.2148 54.944C19.9387 54.944 19.7148 54.7201 19.7148 54.444V47.881C19.7148 47.6048 19.9387 47.381 20.2148 47.381Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M40.4893 3.69972C41.9927 3.07699 43.6041 2.75647 45.2313 2.75647C46.8586 2.75647 48.47 3.07699 49.9734 3.69972C51.4768 4.32245 52.8428 5.2352 53.9935 6.38586C55.1441 7.53651 56.0569 8.90254 56.6796 10.4059C57.3023 11.9094 57.6228 13.5207 57.6228 15.148C57.6228 16.7752 57.3023 18.3866 56.6796 19.89C56.0569 21.3934 55.1441 22.7594 53.9935 23.9101C52.8428 25.0607 51.4768 25.9735 49.9734 26.5962C48.47 27.219 46.8586 27.5395 45.2313 27.5395C43.6041 27.5395 41.9927 27.219 40.4893 26.5962C38.9859 25.9735 37.6199 25.0607 36.4692 23.9101C35.3186 22.7594 34.4058 21.3934 33.7831 19.89C33.1604 18.3866 32.8398 16.7752 32.8398 15.148C32.8398 13.5207 33.1604 11.9094 33.7831 10.4059C34.4058 8.90254 35.3186 7.53651 36.4692 6.38586C37.6199 5.2352 38.9859 4.32245 40.4893 3.69972ZM45.2313 3.75647C43.7354 3.75647 42.2541 4.05112 40.872 4.6236C39.4899 5.19607 38.2341 6.03516 37.1763 7.09296C36.1185 8.15076 35.2794 9.40655 34.707 10.7886C34.1345 12.1707 33.8398 13.652 33.8398 15.148C33.8398 16.6439 34.1345 18.1252 34.707 19.5073C35.2794 20.8894 36.1185 22.1452 37.1763 23.203C38.2341 24.2608 39.4899 25.0999 40.872 25.6723C42.2541 26.2448 43.7354 26.5395 45.2313 26.5395C46.7273 26.5395 48.2086 26.2448 49.5907 25.6723C50.9728 25.0999 52.2286 24.2608 53.2864 23.203C54.3441 22.1452 55.1832 20.8894 55.7557 19.5073C56.3282 18.1252 56.6228 16.6439 56.6228 15.148C56.6228 13.652 56.3282 12.1707 55.7557 10.7886C55.1832 9.40655 54.3441 8.15076 53.2864 7.09296C52.2286 6.03516 50.9728 5.19607 49.5907 4.6236C48.2086 4.05112 46.7273 3.75647 45.2313 3.75647Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M53.33 23.2464C53.5253 23.0512 53.8419 23.0512 54.0371 23.2464L62.5681 31.7774C62.7634 31.9727 62.7634 32.2893 62.5681 32.4845C62.3729 32.6798 62.0563 32.6798 61.861 32.4845L53.33 23.9535C53.1348 23.7583 53.1348 23.4417 53.33 23.2464Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M40.989 47.7239C43.2651 46.5709 45.7982 46.0191 48.3477 46.1208C50.8971 46.2225 53.3783 46.9744 55.5553 48.3051C57.7323 49.6358 59.5329 51.501 60.786 53.7236C62.0391 55.9461 62.7031 58.4522 62.7149 61.0036C62.7156 61.1366 62.6632 61.2644 62.5693 61.3587C62.4755 61.4529 62.348 61.5059 62.215 61.5059H43.84C43.5638 61.5059 43.34 61.2821 43.34 61.0059C43.34 60.7298 43.5638 60.5059 43.84 60.5059H61.7036C61.6139 58.2992 61.0019 56.1427 59.9149 54.2147C58.7455 52.1407 57.0653 50.4001 55.0337 49.1583C53.0022 47.9166 50.6869 47.2149 48.3078 47.12C45.9287 47.0251 43.5649 47.54 41.4409 48.616C41.1946 48.7408 40.8937 48.6422 40.7689 48.3959C40.6441 48.1495 40.7427 47.8487 40.989 47.7239Z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M39.4315 31.6426C39.7012 31.7019 39.8717 31.9687 39.8124 32.2384C39.5769 33.3091 39.5632 34.4168 39.7721 35.4931C39.9809 36.5693 40.4079 37.5915 41.0268 38.4965C41.6456 39.4015 42.4432 40.1702 43.3704 40.7552C44.2976 41.3403 45.3348 41.7293 46.4181 41.8983C47.5013 42.0672 48.6077 42.0127 49.6691 41.7378C50.7304 41.463 51.7243 40.9738 52.5894 40.3003C53.4545 39.6268 54.1725 38.7834 54.6993 37.8218C55.2261 36.8603 55.5504 35.8011 55.6523 34.7095C55.6779 34.4346 55.9216 34.2325 56.1966 34.2581C56.4715 34.2838 56.6736 34.5275 56.6479 34.8024C56.5334 36.03 56.1687 37.221 55.5763 38.3023C54.984 39.3835 54.1765 40.3321 53.2037 41.0894C52.2308 41.8467 51.1132 42.3969 49.9197 42.7059C48.7262 43.015 47.4821 43.0763 46.2639 42.8863C45.0458 42.6963 43.8795 42.2588 42.8368 41.6009C41.7941 40.943 40.8972 40.0786 40.2013 39.0609C39.5054 38.0432 39.0252 36.8938 38.7904 35.6835C38.5555 34.4732 38.571 33.2277 38.8358 32.0236C38.8951 31.7539 39.1618 31.5833 39.4315 31.6426Z"></path>
+    </svg>
+                            </adgm-icon>
+            View the list of financial services firms and learn more about them.
+                        </adgm-icon-card>
+
+</div><div>
+        <adgm-icon-card title='Public Register' href='https://newreg.adgm.com/s/search-results' variant="primary"  target="_blank" button-text="Read more" >
+                            <adgm-icon slot="icon">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2617 21.5057C10.4612 21.3148 10.7777 21.3217 10.9686 21.5212C12.6441 23.2719 14.6581 24.6636 16.8881 25.6118C19.1181 26.56 21.5176 27.0449 23.9408 27.0369L23.9425 27.0369C26.3938 27.0372 28.8189 26.5332 31.0672 25.5564C31.3204 25.4463 31.615 25.5624 31.725 25.8157C31.835 26.069 31.7189 26.3635 31.4657 26.4735C29.0919 27.5049 26.5313 28.0371 23.9432 28.0369C21.3847 28.0452 18.8513 27.5332 16.4968 26.5321C14.142 25.5308 12.0154 24.0613 10.2462 22.2127C10.0553 22.0132 10.0622 21.6967 10.2617 21.5057Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9727 19.2956C14.1587 17.1096 17.1236 15.8815 20.2151 15.8815C23.3066 15.8815 26.2715 17.1096 28.4575 19.2956C30.6435 21.4816 31.8716 24.4465 31.8716 27.538C31.8716 30.6295 30.6435 33.5943 28.4575 35.7804C26.2715 37.9664 23.3066 39.1945 20.2151 39.1945C17.1236 39.1945 14.1587 37.9664 11.9727 35.7804C9.78669 33.5943 8.55859 30.6295 8.55859 27.538C8.55859 24.4465 9.78669 21.4816 11.9727 19.2956ZM20.2151 16.8815C17.3888 16.8815 14.6783 18.0042 12.6798 20.0027C10.6813 22.0012 9.55859 24.7117 9.55859 27.538C9.55859 30.3642 10.6813 33.0748 12.6798 35.0733C14.6783 37.0717 17.3888 38.1945 20.2151 38.1945C23.0414 38.1945 25.7519 37.0717 27.7504 35.0733C29.7489 33.0748 30.8716 30.3642 30.8716 27.538C30.8716 24.7117 29.7489 22.0012 27.7504 20.0027C25.7519 18.0042 23.0414 16.8815 20.2151 16.8815Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 43.131C17.8675 43.131 15.5431 43.5933 13.3744 44.4916C11.2057 45.3899 9.23516 46.7066 7.57531 48.3664C5.91546 50.0263 4.5988 51.9968 3.7005 54.1655C2.86603 56.1801 2.40775 58.3291 2.34684 60.506H38.0829C38.0219 58.3291 37.5637 56.1801 36.7292 54.1655C35.8309 51.9968 34.5142 50.0263 32.8544 48.3664C31.1945 46.7066 29.224 45.3899 27.0553 44.4916C24.8866 43.5933 22.5622 43.131 20.2148 43.131ZM12.9917 43.5678C15.2817 42.6192 17.7361 42.131 20.2148 42.131C22.6935 42.131 25.148 42.6192 27.438 43.5678C29.728 44.5163 31.8088 45.9066 33.5615 47.6593C35.3142 49.412 36.7045 51.4928 37.6531 53.7828C38.6016 56.0729 39.0898 58.5273 39.0898 61.006C39.0898 61.2821 38.866 61.506 38.5898 61.506H1.83984C1.5637 61.506 1.33984 61.2821 1.33984 61.006C1.33984 58.5273 1.82806 56.0729 2.77662 53.7828C3.72518 51.4928 5.1155 49.412 6.8682 47.6593C8.62091 45.9066 10.7017 44.5163 12.9917 43.5678Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 47.381C20.491 47.381 20.7148 47.6048 20.7148 47.881V54.444C20.7148 54.7201 20.491 54.944 20.2148 54.944C19.9387 54.944 19.7148 54.7201 19.7148 54.444V47.881C19.7148 47.6048 19.9387 47.381 20.2148 47.381Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.4893 3.69972C41.9927 3.07699 43.6041 2.75647 45.2313 2.75647C46.8586 2.75647 48.47 3.07699 49.9734 3.69972C51.4768 4.32245 52.8428 5.2352 53.9935 6.38586C55.1441 7.53651 56.0569 8.90254 56.6796 10.4059C57.3023 11.9094 57.6228 13.5207 57.6228 15.148C57.6228 16.7752 57.3023 18.3866 56.6796 19.89C56.0569 21.3934 55.1441 22.7594 53.9935 23.9101C52.8428 25.0607 51.4768 25.9735 49.9734 26.5962C48.47 27.219 46.8586 27.5395 45.2313 27.5395C43.6041 27.5395 41.9927 27.219 40.4893 26.5962C38.9859 25.9735 37.6199 25.0607 36.4692 23.9101C35.3186 22.7594 34.4058 21.3934 33.7831 19.89C33.1604 18.3866 32.8398 16.7752 32.8398 15.148C32.8398 13.5207 33.1604 11.9094 33.7831 10.4059C34.4058 8.90254 35.3186 7.53651 36.4692 6.38586C37.6199 5.2352 38.9859 4.32245 40.4893 3.69972ZM45.2313 3.75647C43.7354 3.75647 42.2541 4.05112 40.872 4.6236C39.4899 5.19607 38.2341 6.03516 37.1763 7.09296C36.1185 8.15076 35.2794 9.40655 34.707 10.7886C34.1345 12.1707 33.8398 13.652 33.8398 15.148C33.8398 16.6439 34.1345 18.1252 34.707 19.5073C35.2794 20.8894 36.1185 22.1452 37.1763 23.203C38.2341 24.2608 39.4899 25.0999 40.872 25.6723C42.2541 26.2448 43.7354 26.5395 45.2313 26.5395C46.7273 26.5395 48.2086 26.2448 49.5907 25.6723C50.9728 25.0999 52.2286 24.2608 53.2864 23.203C54.3441 22.1452 55.1832 20.8894 55.7557 19.5073C56.3282 18.1252 56.6228 16.6439 56.6228 15.148C56.6228 13.652 56.3282 12.1707 55.7557 10.7886C55.1832 9.40655 54.3441 8.15076 53.2864 7.09296C52.2286 6.03516 50.9728 5.19607 49.5907 4.6236C48.2086 4.05112 46.7273 3.75647 45.2313 3.75647Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M53.33 23.2464C53.5253 23.0512 53.8419 23.0512 54.0371 23.2464L62.5681 31.7774C62.7634 31.9727 62.7634 32.2893 62.5681 32.4845C62.3729 32.6798 62.0563 32.6798 61.861 32.4845L53.33 23.9535C53.1348 23.7583 53.1348 23.4417 53.33 23.2464Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.989 47.7239C43.2651 46.5709 45.7982 46.0191 48.3477 46.1208C50.8971 46.2225 53.3783 46.9744 55.5553 48.3051C57.7323 49.6358 59.5329 51.501 60.786 53.7236C62.0391 55.9461 62.7031 58.4522 62.7149 61.0036C62.7156 61.1366 62.6632 61.2644 62.5693 61.3587C62.4755 61.4529 62.348 61.5059 62.215 61.5059H43.84C43.5638 61.5059 43.34 61.2821 43.34 61.0059C43.34 60.7298 43.5638 60.5059 43.84 60.5059H61.7036C61.6139 58.2992 61.0019 56.1427 59.9149 54.2147C58.7455 52.1407 57.0653 50.4001 55.0337 49.1583C53.0022 47.9166 50.6869 47.2149 48.3078 47.12C45.9287 47.0251 43.5649 47.54 41.4409 48.616C41.1946 48.7408 40.8937 48.6422 40.7689 48.3959C40.6441 48.1495 40.7427 47.8487 40.989 47.7239Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M39.4315 31.6426C39.7012 31.7019 39.8717 31.9687 39.8124 32.2384C39.5769 33.3091 39.5632 34.4168 39.7721 35.4931C39.9809 36.5693 40.4079 37.5915 41.0268 38.4965C41.6456 39.4015 42.4432 40.1702 43.3704 40.7552C44.2976 41.3403 45.3348 41.7293 46.4181 41.8983C47.5013 42.0672 48.6077 42.0127 49.6691 41.7378C50.7304 41.463 51.7243 40.9738 52.5894 40.3003C53.4545 39.6268 54.1725 38.7834 54.6993 37.8218C55.2261 36.8603 55.5504 35.8011 55.6523 34.7095C55.6779 34.4346 55.9216 34.2325 56.1966 34.2581C56.4715 34.2838 56.6736 34.5275 56.6479 34.8024C56.5334 36.03 56.1687 37.221 55.5763 38.3023C54.984 39.3835 54.1765 40.3321 53.2037 41.0894C52.2308 41.8467 51.1132 42.3969 49.9197 42.7059C48.7262 43.015 47.4821 43.0763 46.2639 42.8863C45.0458 42.6963 43.8795 42.2588 42.8368 41.6009C41.7941 40.943 40.8972 40.0786 40.2013 39.0609C39.5054 38.0432 39.0252 36.8938 38.7904 35.6835C38.5555 34.4732 38.571 33.2277 38.8358 32.0236C38.8951 31.7539 39.1618 31.5833 39.4315 31.6426Z"></path>     </svg>
+                            </adgm-icon>
+            The online registry solution allows registering and incorporating entities, and searching for entities and their associated details.
+                        </adgm-icon-card>
+
+</div><div>
+        <adgm-icon-card title='Registered Auditors' href='/operating-in-adgm/auditors/find-an-auditor' variant="primary"  target="_self" button-text="Read more" >
+                            <adgm-icon slot="icon">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2617 21.5057C10.4612 21.3148 10.7777 21.3217 10.9686 21.5212C12.6441 23.2719 14.6581 24.6636 16.8881 25.6118C19.1181 26.56 21.5176 27.0449 23.9408 27.0369L23.9425 27.0369C26.3938 27.0372 28.8189 26.5332 31.0672 25.5564C31.3204 25.4463 31.615 25.5624 31.725 25.8157C31.835 26.069 31.7189 26.3635 31.4657 26.4735C29.0919 27.5049 26.5313 28.0371 23.9432 28.0369C21.3847 28.0452 18.8513 27.5332 16.4968 26.5321C14.142 25.5308 12.0154 24.0613 10.2462 22.2127C10.0553 22.0132 10.0622 21.6967 10.2617 21.5057Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9727 19.2956C14.1587 17.1096 17.1236 15.8815 20.2151 15.8815C23.3066 15.8815 26.2715 17.1096 28.4575 19.2956C30.6435 21.4816 31.8716 24.4465 31.8716 27.538C31.8716 30.6295 30.6435 33.5943 28.4575 35.7804C26.2715 37.9664 23.3066 39.1945 20.2151 39.1945C17.1236 39.1945 14.1587 37.9664 11.9727 35.7804C9.78669 33.5943 8.55859 30.6295 8.55859 27.538C8.55859 24.4465 9.78669 21.4816 11.9727 19.2956ZM20.2151 16.8815C17.3888 16.8815 14.6783 18.0042 12.6798 20.0027C10.6813 22.0012 9.55859 24.7117 9.55859 27.538C9.55859 30.3642 10.6813 33.0748 12.6798 35.0733C14.6783 37.0717 17.3888 38.1945 20.2151 38.1945C23.0414 38.1945 25.7519 37.0717 27.7504 35.0733C29.7489 33.0748 30.8716 30.3642 30.8716 27.538C30.8716 24.7117 29.7489 22.0012 27.7504 20.0027C25.7519 18.0042 23.0414 16.8815 20.2151 16.8815Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 43.131C17.8675 43.131 15.5431 43.5933 13.3744 44.4916C11.2057 45.3899 9.23516 46.7066 7.57531 48.3664C5.91546 50.0263 4.5988 51.9968 3.7005 54.1655C2.86603 56.1801 2.40775 58.3291 2.34684 60.506H38.0829C38.0219 58.3291 37.5637 56.1801 36.7292 54.1655C35.8309 51.9968 34.5142 50.0263 32.8544 48.3664C31.1945 46.7066 29.224 45.3899 27.0553 44.4916C24.8866 43.5933 22.5622 43.131 20.2148 43.131ZM12.9917 43.5678C15.2817 42.6192 17.7361 42.131 20.2148 42.131C22.6935 42.131 25.148 42.6192 27.438 43.5678C29.728 44.5163 31.8088 45.9066 33.5615 47.6593C35.3142 49.412 36.7045 51.4928 37.6531 53.7828C38.6016 56.0729 39.0898 58.5273 39.0898 61.006C39.0898 61.2821 38.866 61.506 38.5898 61.506H1.83984C1.5637 61.506 1.33984 61.2821 1.33984 61.006C1.33984 58.5273 1.82806 56.0729 2.77662 53.7828C3.72518 51.4928 5.1155 49.412 6.8682 47.6593C8.62091 45.9066 10.7017 44.5163 12.9917 43.5678Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 47.381C20.491 47.381 20.7148 47.6048 20.7148 47.881V54.444C20.7148 54.7201 20.491 54.944 20.2148 54.944C19.9387 54.944 19.7148 54.7201 19.7148 54.444V47.881C19.7148 47.6048 19.9387 47.381 20.2148 47.381Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.4893 3.69972C41.9927 3.07699 43.6041 2.75647 45.2313 2.75647C46.8586 2.75647 48.47 3.07699 49.9734 3.69972C51.4768 4.32245 52.8428 5.2352 53.9935 6.38586C55.1441 7.53651 56.0569 8.90254 56.6796 10.4059C57.3023 11.9094 57.6228 13.5207 57.6228 15.148C57.6228 16.7752 57.3023 18.3866 56.6796 19.89C56.0569 21.3934 55.1441 22.7594 53.9935 23.9101C52.8428 25.0607 51.4768 25.9735 49.9734 26.5962C48.47 27.219 46.8586 27.5395 45.2313 27.5395C43.6041 27.5395 41.9927 27.219 40.4893 26.5962C38.9859 25.9735 37.6199 25.0607 36.4692 23.9101C35.3186 22.7594 34.4058 21.3934 33.7831 19.89C33.1604 18.3866 32.8398 16.7752 32.8398 15.148C32.8398 13.5207 33.1604 11.9094 33.7831 10.4059C34.4058 8.90254 35.3186 7.53651 36.4692 6.38586C37.6199 5.2352 38.9859 4.32245 40.4893 3.69972ZM45.2313 3.75647C43.7354 3.75647 42.2541 4.05112 40.872 4.6236C39.4899 5.19607 38.2341 6.03516 37.1763 7.09296C36.1185 8.15076 35.2794 9.40655 34.707 10.7886C34.1345 12.1707 33.8398 13.652 33.8398 15.148C33.8398 16.6439 34.1345 18.1252 34.707 19.5073C35.2794 20.8894 36.1185 22.1452 37.1763 23.203C38.2341 24.2608 39.4899 25.0999 40.872 25.6723C42.2541 26.2448 43.7354 26.5395 45.2313 26.5395C46.7273 26.5395 48.2086 26.2448 49.5907 25.6723C50.9728 25.0999 52.2286 24.2608 53.2864 23.203C54.3441 22.1452 55.1832 20.8894 55.7557 19.5073C56.3282 18.1252 56.6228 16.6439 56.6228 15.148C56.6228 13.652 56.3282 12.1707 55.7557 10.7886C55.1832 9.40655 54.3441 8.15076 53.2864 7.09296C52.2286 6.03516 50.9728 5.19607 49.5907 4.6236C48.2086 4.05112 46.7273 3.75647 45.2313 3.75647Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M53.33 23.2464C53.5253 23.0512 53.8419 23.0512 54.0371 23.2464L62.5681 31.7774C62.7634 31.9727 62.7634 32.2893 62.5681 32.4845C62.3729 32.6798 62.0563 32.6798 61.861 32.4845L53.33 23.9535C53.1348 23.7583 53.1348 23.4417 53.33 23.2464Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.989 47.7239C43.2651 46.5709 45.7982 46.0191 48.3477 46.1208C50.8971 46.2225 53.3783 46.9744 55.5553 48.3051C57.7323 49.6358 59.5329 51.501 60.786 53.7236C62.0391 55.9461 62.7031 58.4522 62.7149 61.0036C62.7156 61.1366 62.6632 61.2644 62.5693 61.3587C62.4755 61.4529 62.348 61.5059 62.215 61.5059H43.84C43.5638 61.5059 43.34 61.2821 43.34 61.0059C43.34 60.7298 43.5638 60.5059 43.84 60.5059H61.7036C61.6139 58.2992 61.0019 56.1427 59.9149 54.2147C58.7455 52.1407 57.0653 50.4001 55.0337 49.1583C53.0022 47.9166 50.6869 47.2149 48.3078 47.12C45.9287 47.0251 43.5649 47.54 41.4409 48.616C41.1946 48.7408 40.8937 48.6422 40.7689 48.3959C40.6441 48.1495 40.7427 47.8487 40.989 47.7239Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M39.4315 31.6426C39.7012 31.7019 39.8717 31.9687 39.8124 32.2384C39.5769 33.3091 39.5632 34.4168 39.7721 35.4931C39.9809 36.5693 40.4079 37.5915 41.0268 38.4965C41.6456 39.4015 42.4432 40.1702 43.3704 40.7552C44.2976 41.3403 45.3348 41.7293 46.4181 41.8983C47.5013 42.0672 48.6077 42.0127 49.6691 41.7378C50.7304 41.463 51.7243 40.9738 52.5894 40.3003C53.4545 39.6268 54.1725 38.7834 54.6993 37.8218C55.2261 36.8603 55.5504 35.8011 55.6523 34.7095C55.6779 34.4346 55.9216 34.2325 56.1966 34.2581C56.4715 34.2838 56.6736 34.5275 56.6479 34.8024C56.5334 36.03 56.1687 37.221 55.5763 38.3023C54.984 39.3835 54.1765 40.3321 53.2037 41.0894C52.2308 41.8467 51.1132 42.3969 49.9197 42.7059C48.7262 43.015 47.4821 43.0763 46.2639 42.8863C45.0458 42.6963 43.8795 42.2588 42.8368 41.6009C41.7941 40.943 40.8972 40.0786 40.2013 39.0609C39.5054 38.0432 39.0252 36.8938 38.7904 35.6835C38.5555 34.4732 38.571 33.2277 38.8358 32.0236C38.8951 31.7539 39.1618 31.5833 39.4315 31.6426Z"></path>     </svg>
+                            </adgm-icon>
+            The Registration Authority (RA) has a statutory responsibility to oversee the regulated area of audit within the jurisdiction of ADGM.
+                        </adgm-icon-card>
+
+</div><div>
+        <adgm-icon-card title='Registration of Insolvency Practitioners' href='/operating-in-adgm/insolvency-practitioners/register-of-insolvency-practitioners' variant="primary"  target="_self" button-text="Read more" >
+                            <adgm-icon slot="icon">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2617 21.5057C10.4612 21.3148 10.7777 21.3217 10.9686 21.5212C12.6441 23.2719 14.6581 24.6636 16.8881 25.6118C19.1181 26.56 21.5176 27.0449 23.9408 27.0369L23.9425 27.0369C26.3938 27.0372 28.8189 26.5332 31.0672 25.5564C31.3204 25.4463 31.615 25.5624 31.725 25.8157C31.835 26.069 31.7189 26.3635 31.4657 26.4735C29.0919 27.5049 26.5313 28.0371 23.9432 28.0369C21.3847 28.0452 18.8513 27.5332 16.4968 26.5321C14.142 25.5308 12.0154 24.0613 10.2462 22.2127C10.0553 22.0132 10.0622 21.6967 10.2617 21.5057Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9727 19.2956C14.1587 17.1096 17.1236 15.8815 20.2151 15.8815C23.3066 15.8815 26.2715 17.1096 28.4575 19.2956C30.6435 21.4816 31.8716 24.4465 31.8716 27.538C31.8716 30.6295 30.6435 33.5943 28.4575 35.7804C26.2715 37.9664 23.3066 39.1945 20.2151 39.1945C17.1236 39.1945 14.1587 37.9664 11.9727 35.7804C9.78669 33.5943 8.55859 30.6295 8.55859 27.538C8.55859 24.4465 9.78669 21.4816 11.9727 19.2956ZM20.2151 16.8815C17.3888 16.8815 14.6783 18.0042 12.6798 20.0027C10.6813 22.0012 9.55859 24.7117 9.55859 27.538C9.55859 30.3642 10.6813 33.0748 12.6798 35.0733C14.6783 37.0717 17.3888 38.1945 20.2151 38.1945C23.0414 38.1945 25.7519 37.0717 27.7504 35.0733C29.7489 33.0748 30.8716 30.3642 30.8716 27.538C30.8716 24.7117 29.7489 22.0012 27.7504 20.0027C25.7519 18.0042 23.0414 16.8815 20.2151 16.8815Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 43.131C17.8675 43.131 15.5431 43.5933 13.3744 44.4916C11.2057 45.3899 9.23516 46.7066 7.57531 48.3664C5.91546 50.0263 4.5988 51.9968 3.7005 54.1655C2.86603 56.1801 2.40775 58.3291 2.34684 60.506H38.0829C38.0219 58.3291 37.5637 56.1801 36.7292 54.1655C35.8309 51.9968 34.5142 50.0263 32.8544 48.3664C31.1945 46.7066 29.224 45.3899 27.0553 44.4916C24.8866 43.5933 22.5622 43.131 20.2148 43.131ZM12.9917 43.5678C15.2817 42.6192 17.7361 42.131 20.2148 42.131C22.6935 42.131 25.148 42.6192 27.438 43.5678C29.728 44.5163 31.8088 45.9066 33.5615 47.6593C35.3142 49.412 36.7045 51.4928 37.6531 53.7828C38.6016 56.0729 39.0898 58.5273 39.0898 61.006C39.0898 61.2821 38.866 61.506 38.5898 61.506H1.83984C1.5637 61.506 1.33984 61.2821 1.33984 61.006C1.33984 58.5273 1.82806 56.0729 2.77662 53.7828C3.72518 51.4928 5.1155 49.412 6.8682 47.6593C8.62091 45.9066 10.7017 44.5163 12.9917 43.5678Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 47.381C20.491 47.381 20.7148 47.6048 20.7148 47.881V54.444C20.7148 54.7201 20.491 54.944 20.2148 54.944C19.9387 54.944 19.7148 54.7201 19.7148 54.444V47.881C19.7148 47.6048 19.9387 47.381 20.2148 47.381Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.4893 3.69972C41.9927 3.07699 43.6041 2.75647 45.2313 2.75647C46.8586 2.75647 48.47 3.07699 49.9734 3.69972C51.4768 4.32245 52.8428 5.2352 53.9935 6.38586C55.1441 7.53651 56.0569 8.90254 56.6796 10.4059C57.3023 11.9094 57.6228 13.5207 57.6228 15.148C57.6228 16.7752 57.3023 18.3866 56.6796 19.89C56.0569 21.3934 55.1441 22.7594 53.9935 23.9101C52.8428 25.0607 51.4768 25.9735 49.9734 26.5962C48.47 27.219 46.8586 27.5395 45.2313 27.5395C43.6041 27.5395 41.9927 27.219 40.4893 26.5962C38.9859 25.9735 37.6199 25.0607 36.4692 23.9101C35.3186 22.7594 34.4058 21.3934 33.7831 19.89C33.1604 18.3866 32.8398 16.7752 32.8398 15.148C32.8398 13.5207 33.1604 11.9094 33.7831 10.4059C34.4058 8.90254 35.3186 7.53651 36.4692 6.38586C37.6199 5.2352 38.9859 4.32245 40.4893 3.69972ZM45.2313 3.75647C43.7354 3.75647 42.2541 4.05112 40.872 4.6236C39.4899 5.19607 38.2341 6.03516 37.1763 7.09296C36.1185 8.15076 35.2794 9.40655 34.707 10.7886C34.1345 12.1707 33.8398 13.652 33.8398 15.148C33.8398 16.6439 34.1345 18.1252 34.707 19.5073C35.2794 20.8894 36.1185 22.1452 37.1763 23.203C38.2341 24.2608 39.4899 25.0999 40.872 25.6723C42.2541 26.2448 43.7354 26.5395 45.2313 26.5395C46.7273 26.5395 48.2086 26.2448 49.5907 25.6723C50.9728 25.0999 52.2286 24.2608 53.2864 23.203C54.3441 22.1452 55.1832 20.8894 55.7557 19.5073C56.3282 18.1252 56.6228 16.6439 56.6228 15.148C56.6228 13.652 56.3282 12.1707 55.7557 10.7886C55.1832 9.40655 54.3441 8.15076 53.2864 7.09296C52.2286 6.03516 50.9728 5.19607 49.5907 4.6236C48.2086 4.05112 46.7273 3.75647 45.2313 3.75647Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M53.33 23.2464C53.5253 23.0512 53.8419 23.0512 54.0371 23.2464L62.5681 31.7774C62.7634 31.9727 62.7634 32.2893 62.5681 32.4845C62.3729 32.6798 62.0563 32.6798 61.861 32.4845L53.33 23.9535C53.1348 23.7583 53.1348 23.4417 53.33 23.2464Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.989 47.7239C43.2651 46.5709 45.7982 46.0191 48.3477 46.1208C50.8971 46.2225 53.3783 46.9744 55.5553 48.3051C57.7323 49.6358 59.5329 51.501 60.786 53.7236C62.0391 55.9461 62.7031 58.4522 62.7149 61.0036C62.7156 61.1366 62.6632 61.2644 62.5693 61.3587C62.4755 61.4529 62.348 61.5059 62.215 61.5059H43.84C43.5638 61.5059 43.34 61.2821 43.34 61.0059C43.34 60.7298 43.5638 60.5059 43.84 60.5059H61.7036C61.6139 58.2992 61.0019 56.1427 59.9149 54.2147C58.7455 52.1407 57.0653 50.4001 55.0337 49.1583C53.0022 47.9166 50.6869 47.2149 48.3078 47.12C45.9287 47.0251 43.5649 47.54 41.4409 48.616C41.1946 48.7408 40.8937 48.6422 40.7689 48.3959C40.6441 48.1495 40.7427 47.8487 40.989 47.7239Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M39.4315 31.6426C39.7012 31.7019 39.8717 31.9687 39.8124 32.2384C39.5769 33.3091 39.5632 34.4168 39.7721 35.4931C39.9809 36.5693 40.4079 37.5915 41.0268 38.4965C41.6456 39.4015 42.4432 40.1702 43.3704 40.7552C44.2976 41.3403 45.3348 41.7293 46.4181 41.8983C47.5013 42.0672 48.6077 42.0127 49.6691 41.7378C50.7304 41.463 51.7243 40.9738 52.5894 40.3003C53.4545 39.6268 54.1725 38.7834 54.6993 37.8218C55.2261 36.8603 55.5504 35.8011 55.6523 34.7095C55.6779 34.4346 55.9216 34.2325 56.1966 34.2581C56.4715 34.2838 56.6736 34.5275 56.6479 34.8024C56.5334 36.03 56.1687 37.221 55.5763 38.3023C54.984 39.3835 54.1765 40.3321 53.2037 41.0894C52.2308 41.8467 51.1132 42.3969 49.9197 42.7059C48.7262 43.015 47.4821 43.0763 46.2639 42.8863C45.0458 42.6963 43.8795 42.2588 42.8368 41.6009C41.7941 40.943 40.8972 40.0786 40.2013 39.0609C39.5054 38.0432 39.0252 36.8938 38.7904 35.6835C38.5555 34.4732 38.571 33.2277 38.8358 32.0236C38.8951 31.7539 39.1618 31.5833 39.4315 31.6426Z"></path>     </svg>
+                            </adgm-icon>
+            Individuals listed in this register have been authorised to conduct controlled activities pursuant to the relevant sections of ADGM Commercial Licensing Regulations and ADGM Commercial Licensing Regulations 2018.
+                        </adgm-icon-card>
+
+</div><div>
+        <adgm-icon-card title='Professional Services Providers Directory' href='/public-registers/professional-services-providers-directory' variant="primary"  target="_self" button-text="Read more" >
+                            <adgm-icon slot="icon">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2617 21.5057C10.4612 21.3148 10.7777 21.3217 10.9686 21.5212C12.6441 23.2719 14.6581 24.6636 16.8881 25.6118C19.1181 26.56 21.5176 27.0449 23.9408 27.0369L23.9425 27.0369C26.3938 27.0372 28.8189 26.5332 31.0672 25.5564C31.3204 25.4463 31.615 25.5624 31.725 25.8157C31.835 26.069 31.7189 26.3635 31.4657 26.4735C29.0919 27.5049 26.5313 28.0371 23.9432 28.0369C21.3847 28.0452 18.8513 27.5332 16.4968 26.5321C14.142 25.5308 12.0154 24.0613 10.2462 22.2127C10.0553 22.0132 10.0622 21.6967 10.2617 21.5057Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9727 19.2956C14.1587 17.1096 17.1236 15.8815 20.2151 15.8815C23.3066 15.8815 26.2715 17.1096 28.4575 19.2956C30.6435 21.4816 31.8716 24.4465 31.8716 27.538C31.8716 30.6295 30.6435 33.5943 28.4575 35.7804C26.2715 37.9664 23.3066 39.1945 20.2151 39.1945C17.1236 39.1945 14.1587 37.9664 11.9727 35.7804C9.78669 33.5943 8.55859 30.6295 8.55859 27.538C8.55859 24.4465 9.78669 21.4816 11.9727 19.2956ZM20.2151 16.8815C17.3888 16.8815 14.6783 18.0042 12.6798 20.0027C10.6813 22.0012 9.55859 24.7117 9.55859 27.538C9.55859 30.3642 10.6813 33.0748 12.6798 35.0733C14.6783 37.0717 17.3888 38.1945 20.2151 38.1945C23.0414 38.1945 25.7519 37.0717 27.7504 35.0733C29.7489 33.0748 30.8716 30.3642 30.8716 27.538C30.8716 24.7117 29.7489 22.0012 27.7504 20.0027C25.7519 18.0042 23.0414 16.8815 20.2151 16.8815Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 43.131C17.8675 43.131 15.5431 43.5933 13.3744 44.4916C11.2057 45.3899 9.23516 46.7066 7.57531 48.3664C5.91546 50.0263 4.5988 51.9968 3.7005 54.1655C2.86603 56.1801 2.40775 58.3291 2.34684 60.506H38.0829C38.0219 58.3291 37.5637 56.1801 36.7292 54.1655C35.8309 51.9968 34.5142 50.0263 32.8544 48.3664C31.1945 46.7066 29.224 45.3899 27.0553 44.4916C24.8866 43.5933 22.5622 43.131 20.2148 43.131ZM12.9917 43.5678C15.2817 42.6192 17.7361 42.131 20.2148 42.131C22.6935 42.131 25.148 42.6192 27.438 43.5678C29.728 44.5163 31.8088 45.9066 33.5615 47.6593C35.3142 49.412 36.7045 51.4928 37.6531 53.7828C38.6016 56.0729 39.0898 58.5273 39.0898 61.006C39.0898 61.2821 38.866 61.506 38.5898 61.506H1.83984C1.5637 61.506 1.33984 61.2821 1.33984 61.006C1.33984 58.5273 1.82806 56.0729 2.77662 53.7828C3.72518 51.4928 5.1155 49.412 6.8682 47.6593C8.62091 45.9066 10.7017 44.5163 12.9917 43.5678Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2148 47.381C20.491 47.381 20.7148 47.6048 20.7148 47.881V54.444C20.7148 54.7201 20.491 54.944 20.2148 54.944C19.9387 54.944 19.7148 54.7201 19.7148 54.444V47.881C19.7148 47.6048 19.9387 47.381 20.2148 47.381Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.4893 3.69972C41.9927 3.07699 43.6041 2.75647 45.2313 2.75647C46.8586 2.75647 48.47 3.07699 49.9734 3.69972C51.4768 4.32245 52.8428 5.2352 53.9935 6.38586C55.1441 7.53651 56.0569 8.90254 56.6796 10.4059C57.3023 11.9094 57.6228 13.5207 57.6228 15.148C57.6228 16.7752 57.3023 18.3866 56.6796 19.89C56.0569 21.3934 55.1441 22.7594 53.9935 23.9101C52.8428 25.0607 51.4768 25.9735 49.9734 26.5962C48.47 27.219 46.8586 27.5395 45.2313 27.5395C43.6041 27.5395 41.9927 27.219 40.4893 26.5962C38.9859 25.9735 37.6199 25.0607 36.4692 23.9101C35.3186 22.7594 34.4058 21.3934 33.7831 19.89C33.1604 18.3866 32.8398 16.7752 32.8398 15.148C32.8398 13.5207 33.1604 11.9094 33.7831 10.4059C34.4058 8.90254 35.3186 7.53651 36.4692 6.38586C37.6199 5.2352 38.9859 4.32245 40.4893 3.69972ZM45.2313 3.75647C43.7354 3.75647 42.2541 4.05112 40.872 4.6236C39.4899 5.19607 38.2341 6.03516 37.1763 7.09296C36.1185 8.15076 35.2794 9.40655 34.707 10.7886C34.1345 12.1707 33.8398 13.652 33.8398 15.148C33.8398 16.6439 34.1345 18.1252 34.707 19.5073C35.2794 20.8894 36.1185 22.1452 37.1763 23.203C38.2341 24.2608 39.4899 25.0999 40.872 25.6723C42.2541 26.2448 43.7354 26.5395 45.2313 26.5395C46.7273 26.5395 48.2086 26.2448 49.5907 25.6723C50.9728 25.0999 52.2286 24.2608 53.2864 23.203C54.3441 22.1452 55.1832 20.8894 55.7557 19.5073C56.3282 18.1252 56.6228 16.6439 56.6228 15.148C56.6228 13.652 56.3282 12.1707 55.7557 10.7886C55.1832 9.40655 54.3441 8.15076 53.2864 7.09296C52.2286 6.03516 50.9728 5.19607 49.5907 4.6236C48.2086 4.05112 46.7273 3.75647 45.2313 3.75647Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M53.33 23.2464C53.5253 23.0512 53.8419 23.0512 54.0371 23.2464L62.5681 31.7774C62.7634 31.9727 62.7634 32.2893 62.5681 32.4845C62.3729 32.6798 62.0563 32.6798 61.861 32.4845L53.33 23.9535C53.1348 23.7583 53.1348 23.4417 53.33 23.2464Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M40.989 47.7239C43.2651 46.5709 45.7982 46.0191 48.3477 46.1208C50.8971 46.2225 53.3783 46.9744 55.5553 48.3051C57.7323 49.6358 59.5329 51.501 60.786 53.7236C62.0391 55.9461 62.7031 58.4522 62.7149 61.0036C62.7156 61.1366 62.6632 61.2644 62.5693 61.3587C62.4755 61.4529 62.348 61.5059 62.215 61.5059H43.84C43.5638 61.5059 43.34 61.2821 43.34 61.0059C43.34 60.7298 43.5638 60.5059 43.84 60.5059H61.7036C61.6139 58.2992 61.0019 56.1427 59.9149 54.2147C58.7455 52.1407 57.0653 50.4001 55.0337 49.1583C53.0022 47.9166 50.6869 47.2149 48.3078 47.12C45.9287 47.0251 43.5649 47.54 41.4409 48.616C41.1946 48.7408 40.8937 48.6422 40.7689 48.3959C40.6441 48.1495 40.7427 47.8487 40.989 47.7239Z"></path>       <path fill-rule="evenodd" clip-rule="evenodd" d="M39.4315 31.6426C39.7012 31.7019 39.8717 31.9687 39.8124 32.2384C39.5769 33.3091 39.5632 34.4168 39.7721 35.4931C39.9809 36.5693 40.4079 37.5915 41.0268 38.4965C41.6456 39.4015 42.4432 40.1702 43.3704 40.7552C44.2976 41.3403 45.3348 41.7293 46.4181 41.8983C47.5013 42.0672 48.6077 42.0127 49.6691 41.7378C50.7304 41.463 51.7243 40.9738 52.5894 40.3003C53.4545 39.6268 54.1725 38.7834 54.6993 37.8218C55.2261 36.8603 55.5504 35.8011 55.6523 34.7095C55.6779 34.4346 55.9216 34.2325 56.1966 34.2581C56.4715 34.2838 56.6736 34.5275 56.6479 34.8024C56.5334 36.03 56.1687 37.221 55.5763 38.3023C54.984 39.3835 54.1765 40.3321 53.2037 41.0894C52.2308 41.8467 51.1132 42.3969 49.9197 42.7059C48.7262 43.015 47.4821 43.0763 46.2639 42.8863C45.0458 42.6963 43.8795 42.2588 42.8368 41.6009C41.7941 40.943 40.8972 40.0786 40.2013 39.0609C39.5054 38.0432 39.0252 36.8938 38.7904 35.6835C38.5555 34.4732 38.571 33.2277 38.8358 32.0236C38.8951 31.7539 39.1618 31.5833 39.4315 31.6426Z"></path>     </svg>
+                            </adgm-icon>
+            The Professional Services Providers Directory has been compiled to help increase visibility for ADGM Professional Service Providers.
+                        </adgm-icon-card>
+
+</div>
+    </adgm-overview-grid>
+</div>
+            <adgm-spacer height="rSectionM"></adgm-spacer>
+        </adgm-container>
+
+</adgm-section></span>
+	
+		<span>
+    <adgm-spacer height='rSectionM'></adgm-spacer>
+</span>
+	</span>
+
+
+
+        <adgm-footer>
+<svg slot="logo" xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" viewBox="0 0 220.17 52.84"><defs><clipPath id="svg2_A1"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"></path></clipPath><clipPath id="svg2_B1"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"></path></clipPath><clipPath id="svg2_C1"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"></path></clipPath><clipPath id="svg2_D1"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"></path></clipPath><clipPath id="svg2_E1"><path d="M203.31,20.82c.13.85.19,1.8.19,2.84,0,5.3-1.61,8.17-4.91,8.17-2.84,0-4.43-2.12-4.81-6.09-2.02.77-4.05,1.41-6.04,1.94,1.11,6.25,4.93,10.28,10.85,10.28,7.11,0,11.19-5.81,11.19-14.3,0-2.7-.42-5.13-1.21-7.19-1.63,1.64-3.4,3.08-5.26,4.35" fill="none"></path></clipPath><linearGradient id="svg2_F1" x1="-19.14" y1="831.14" x2="-18.8" y2="831.14" gradientTransform="translate(-32009.62 763.78) rotate(90) scale(38.75 -38.75)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#FFFFFF"></stop></linearGradient><clipPath id="svg2_G1"><path d="M178.12 29.5v8.45h.67a5.61 5.61 0 0 0 5.61-5.61v-3.91l-6.28 1.07" fill="none"></path></clipPath><linearGradient id="svg2_H1" y1="830.68" y2="830.68" gradientTransform="translate(-32009.29 767.03) rotate(90) scale(38.75 -38.75)" href="#svg2_F1"></linearGradient><clipPath id="svg2_I1"><path d="M12.66 1.33h197.12v49.5H12.66z" fill="none"></path></clipPath><path id="svg2_J1" d="M70.78 42.68c-.23 0-.42.08-.58.23-.16.16-.23.34-.23.56s.08.4.24.56.35.24.58.24.42-.08.58-.24a.76.76 0 0 0 .23-.56c0-.21-.08-.4-.24-.56s-.35-.23-.58-.23" fill="#FFFFFF"></path><path id="svg2_K1" d="M73.24 42.68a.78.78 0 0 0-.57.24c-.17.16-.25.34-.25.55s.08.4.24.56.35.24.58.24.43-.08.59-.24.24-.35.24-.56-.08-.4-.24-.56-.36-.23-.59-.23" fill="#FFFFFF"></path></defs><g clip-path="url(#svg2_A1)" fill="#FFFFFF"><use href="#svg2_J1"></use><use href="#svg2_K1"></use><path d="M86 40.31l.04.13c.11.35.31.62.59.81s.64.29 1.06.29h.49c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-6.51h-1.43v6.51c0 .81-.34 1.23-1 1.23h-.49c-.28 0-.51-.09-.67-.27-.16-.17-.24-.41-.24-.7v-.85c0-.88-.33-1.65-.97-2.28s-1.43-.94-2.33-.94-1.69.32-2.33.94a3.09 3.09 0 0 0-.97 2.28 1.96 1.96 0 0 0 .86 1.68l.18.13h-2.06c-.63 0-.95-.39-.95-1.16v-3.87h-1.87c-1.14 0-2.02.3-2.63.88-.61.59-.92 1.45-.92 2.57v1.58h-1.29c-.84 0-1.5-.21-1.95-.64-.45-.42-.68-1.05-.68-1.85v-1.24h-1.43v1.24c0 1.17.36 2.12 1.08 2.81.72.7 1.72 1.05 2.99 1.05h2.71v-2.97c0-.71.18-1.24.53-1.58s.9-.51 1.64-.51h.41V39c0 .77.21 1.4.63 1.85.41.45 1 .68 1.75.68h4.32c1 0 1.81-.38 2.43-1.13l.09-.11zm-2.51-.14a1.78 1.78 0 0 1-1.32-.55c-.36-.35-.55-.79-.55-1.29a1.73 1.73 0 0 1 .55-1.29 1.81 1.81 0 0 1 1.32-.54 1.81 1.81 0 0 1 1.32.54 1.77 1.77 0 0 1 .55 1.29 1.73 1.73 0 0 1-.55 1.29 1.81 1.81 0 0 1-1.32.54m8.78-7.73v6.51c0 .77.23 1.41.67 1.88.44.48 1.04.72 1.77.72h9.89c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-6.51h-1.43v6.51c0 .81-.34 1.23-1 1.23h-3.18l.12-.12.73-.79.58-.73c.21-.29.37-.56.47-.82a2.13 2.13 0 0 0 .14-.77c0-.62-.22-1.06-.69-1.35-.47-.3-1.1-.45-1.88-.45h-5.09v2.21l1.94 2.82h-3.03c-.67 0-1-.41-1-1.23v-6.51h-1.43zm7.56 7.74h-.42l-1.91-2.83v-.83h2.81c.51 0 .88.06 1.13.19.26.13.39.38.39.75 0 .08 0 .17-.03.25-.02.09-.06.18-.11.27l-.14.26a2.73 2.73 0 0 1-.22.3l-.24.28-.28.32-.29.32-.33.35-.34.35-.02.02z"></path></g><path d="M108.61 32.43h1.43v9.11h-1.43z" fill="#FFFFFF"></path><g clip-path="url(#svg2_B1)" fill="#FFFFFF"><path d="M119.64 42.68a.78.78 0 0 0-.57.24c-.17.16-.25.34-.25.55s.08.4.24.56.35.24.58.24.43-.08.59-.24.24-.35.24-.56-.08-.4-.24-.56-.36-.23-.59-.23m-2.45 0c-.23 0-.42.08-.58.23-.16.16-.23.34-.23.56s.08.4.24.56.35.24.58.24.42-.08.58-.24a.76.76 0 0 0 .23-.56c0-.21-.08-.4-.24-.56s-.35-.23-.58-.23m10.53-.07c-.23 0-.43.08-.6.24s-.25.35-.25.59.08.43.25.59.37.24.6.24.43-.08.61-.24c.17-.16.25-.35.25-.59s-.08-.43-.25-.59-.37-.24-.6-.24m.02-1.96l.06.09c.37.54.93.81 1.67.81h7.16c.77 0 1.37-.22 1.8-.65s.66-1.05.67-1.84v-.58c0-.97-.3-1.78-.89-2.4s-1.36-.93-2.3-.93c-1.12 0-2.26.58-3.37 1.72l-.13.13v-4.56H131v7.74h-1.53c-.68 0-1.02-.41-1.02-1.23v-3.81h-1.43v3.81c0 .81-.34 1.23-1 1.23h-.44c-.63 0-.95-.39-.95-1.16v-3.87h-1.87c-1.14 0-2.02.3-2.63.88-.61.59-.92 1.45-.92 2.57v1.58h-1.29c-.84 0-1.5-.21-1.95-.64-.45-.42-.68-1.05-.68-1.85v-1.24h-1.43v1.24c0 1.17.36 2.12 1.08 2.81.72.7 1.72 1.05 2.99 1.05h2.71v-2.97c0-.71.18-1.24.53-1.58s.9-.51 1.64-.51h.41v2.53c0 .77.21 1.4.63 1.85s1.01.68 1.75.68h.44c.72 0 1.28-.27 1.67-.81l.06-.08zm8.89-.48h-4.21v-1.6l.02-.02c1.22-1.36 2.34-2.04 3.31-2.04.6 0 1.08.18 1.43.54s.52.84.52 1.42v.49c0 .81-.36 1.21-1.06 1.21m-1.21-7.76c-.23 0-.43.08-.6.24s-.25.35-.25.59.08.43.25.59a.83.83 0 0 0 .6.24c.24 0 .43-.08.61-.25.17-.16.25-.35.25-.58s-.08-.42-.25-.58c-.17-.17-.37-.25-.6-.25m5.08 10.92c.3.37.7.67 1.18.89.51.23 1.05.34 1.6.34.93 0 1.69-.28 2.28-.84.58-.56.92-1.27 1-2.11v-.07h1.21c.73 0 1.33-.24 1.77-.72s.67-1.11.67-1.88v-2.51h-1.43v2.51c0 .81-.34 1.23-1 1.23h-1.19v-1.59c0-1.02-.31-1.86-.92-2.5s-1.42-.97-2.39-.97a3.26 3.26 0 0 0-2.34.94c-.65.62-.98 1.38-.98 2.27s.33 1.69.98 2.31c.65.61 1.48.92 2.47.92h1.76v.08c-.06.42-.25.79-.59 1.1s-.77.47-1.29.47a2.48 2.48 0 0 1-1.03-.22 2.02 2.02 0 0 1-.76-.54l-.99.9zm4.64-3.16h-1.75c-.58 0-1.07-.17-1.44-.52-.38-.34-.58-.79-.58-1.34 0-.51.18-.94.55-1.3a1.85 1.85 0 0 1 1.33-.53c.56 0 1.02.19 1.36.55.34.37.52.84.52 1.41v1.73zm4.32 2.39c-.23 0-.43.08-.6.24s-.25.35-.25.58a.78.78 0 0 0 .25.59.83.83 0 0 0 .6.24.86.86 0 0 0 .62-.25c.17-.17.25-.36.25-.58s-.08-.41-.25-.58a.86.86 0 0 0-.62-.24"></path></g><path d="M151.66 34.72h1.43v6.82h-1.43z" fill="#FFFFFF"></path><g clip-path="url(#svg2_C1)" fill="#FFFFFF"><path d="M152.6 33.46a.52.52 0 0 1-.38-.16.49.49 0 0 1-.16-.38.43.43 0 0 1 .16-.35c.1-.1.23-.14.38-.14.2 0 .35.07.46.21l.44-.41c-.27-.28-.58-.42-.93-.42-.31 0-.58.1-.8.3a.96.96 0 0 0-.33.73.93.93 0 0 0 .24.62h-.57v.63h2.51v-.63h-1.03z"></path><path d="M24.48,26.09l-5.71,5.71c-.81.81-1.88,1.25-3.02,1.25s-2.22-.44-3.03-1.25l-.06-.06,5.65-5.65-5.65-5.65.06-.06c1.67-1.67,4.38-1.67,6.05,0l5.71,5.71ZM33.88,5.61v45.22h.08c2.36,0,4.28-1.92,4.28-4.28V1.33h-.08c-2.36,0-4.28,1.92-4.28,4.28M20.22,8.19l-.08.03,7.22,17.86-7.22,17.85.08.03c.52.21,1.06.31,1.6.31,1.69,0,3.3-1.01,3.97-2.68l6.27-15.52-6.27-15.53c-.88-2.19-3.38-3.25-5.57-2.36M59.47,20.43l-.06-.06c-1.67-1.67-4.38-1.67-6.05,0l-5.71,5.71,5.71,5.71c.83.83,1.93,1.25,3.03,1.25s2.19-.42,3.03-1.25l.06-.06-5.65-5.65,5.65-5.65ZM51.99,8.22l-.08-.03c-2.19-.88-4.69.18-5.57,2.36l-6.27,15.52,6.27,15.53c.43,1.06,1.24,1.89,2.3,2.34.54.23,1.1.34,1.67.34s1.09-.1,1.6-.31l.08-.03-7.22-17.86,7.22-17.86Z" fill="#FFFFFF"></path><path d="M91.26 9.41a1.61 1.61 0 0 0-1.61 1.61V27.5a1.61 1.61 0 0 0 1.61 1.61h6.86c5.43 0 9.85-4.42 9.85-9.85s-4.42-9.85-9.85-9.85h-6.86zm6.86 16.07h-4.84V13.04h4.84a6.23 6.23 0 0 1 6.22 6.22 6.23 6.23 0 0 1-6.22 6.22m-14.27 3.63h4.02l-8.14-18.66c-.28-.64-.92-1.05-1.62-1.05h-1.26a1.76 1.76 0 0 0-1.62 1.06l-8.14 18.65h4.02l1.71-3.96h9.31v.03l1.71 3.93zm-3.2-7.39h-6.33l3.17-7.31 3.17 7.31zm69.43 7.4h3.63V9.42h-3.9l-6.87 11.06-6.86-11.06h-3.91v19.7h3.63V15.41l5.64 8.97c.3.49.86.79 1.5.79s1.21-.31 1.5-.79l5.64-8.97v13.71zm-24.37-7.17v6.81l.17-.05c1.97-.55 3.29-2.06 3.29-3.76v-6.46h-6.66c-1.83 0-3.34 1.49-3.36 3.32v.14h6.56zm-5.33-12.88a10.2 10.2 0 0 0-10.19 10.18c0 5.9 4.4 10.19 10.47 10.19 1.3 0 2.38-.1 3.37-.32v-3.73c-.83.31-1.88.45-3.37.45-4 0-6.79-2.71-6.79-6.59a6.52 6.52 0 0 1 6.51-6.51 6.48 6.48 0 0 1 4.88 2.22l.09.1 2.69-2.51-.09-.1c-1.93-2.16-4.7-3.39-7.58-3.39"></path></g><path d="M166.55 44.54V9.4" fill="none" stroke="#FFFFFF" stroke-width=".25"></path><g clip-path="url(#svg2_D1)" fill="#FFFFFF"><path d="M193.68 23.66c0-5.3 1.61-8.17 4.91-8.17 2.65 0 4.21 1.85 4.72 5.33 1.86-1.27 3.63-2.71 5.26-4.35-1.7-4.4-5.14-7.1-9.98-7.1-7.11 0-11.19 5.81-11.19 14.3 0 1.42.12 2.76.34 4.02 1.99-.53 4.02-1.17 6.04-1.94-.06-.64-.1-1.33-.1-2.08M184.4 9.36h-.55a5.73 5.73 0 0 0-5.73 5.73V29.5l6.28-1.07V9.36z"></path></g><g clip-path="url(#svg2_E1)"><path transform="matrix(.982935 -.183951 .183951 .982935 -1.61 37.03)" d="M185.95 14.62h25.62V39.8h-25.62z" fill="url(#svg2_F1)"></path></g><g clip-path="url(#svg2_G1)"><path transform="matrix(.982935 -.183951 .183951 .982935 -3.01 33.91)" d="M177.3 27.94h7.93v10.51h-7.93z" fill="url(#svg2_H1)"></path></g><g clip-path="url(#svg2_I1)" fill="#FFFFFF"><path d="M193.28 41.89c0-.32.31-.47.62-.47s.62.13.75.45l.51-.29c-.22-.46-.69-.73-1.26-.73-.71 0-1.24.43-1.24 1.05 0 1.27 1.96.84 1.96 1.59 0 .34-.32.48-.69.48-.44 0-.76-.21-.87-.55l-.53.3c.2.48.69.82 1.4.82.75 0 1.31-.4 1.31-1.05 0-1.29-1.96-.85-1.96-1.6m-2.08-.36v-.59h-.61v3.51h.61v-1.86c0-.83.57-1.09 1.09-1.07v-.64c-.44 0-.87.16-1.09.65m-3.4 2.42c-.7 0-1.24-.54-1.24-1.26s.54-1.26 1.24-1.26 1.25.54 1.25 1.26-.54 1.26-1.25 1.26m1.25-3.01v.6c-.28-.43-.73-.69-1.33-.69-.98 0-1.78.81-1.78 1.85s.8 1.85 1.78 1.85c.6 0 1.05-.27 1.33-.69v.6h.61v-3.51h-.61zm-5.34.49c.53 0 1.02.32 1.13 1.02h-2.34a1.16 1.16 0 0 1 1.21-1.02m-1.22 1.55h2.94l.02-.27c0-.98-.69-1.85-1.75-1.85s-1.84.81-1.84 1.85.75 1.85 1.88 1.85c.7 0 1.23-.32 1.54-.79l-.52-.29c-.18.29-.53.51-1.01.51-.65 0-1.15-.36-1.27-.99m-.23-3.46h-.73l-1.33 2.3-1.33-2.3h-.73l1.73 2.92v1.99h.65v-1.99l1.74-2.93z"></path></g></svg>                        <adgm-footer-category>
+                            <h3 slot="title">About</h3>
+                                    <a href='/about' >Overview</a>
+                                    <a href='/about/jurisdiction' >Jurisdiction</a>
+                                    <a href='/about/authorities' >Authorities</a>
+                                    <a href='/initiatives' >Initiatives</a>
+                                    <a href='https://academy.adgm.com'  target="_blank" >ADGM Academy</a>
+                                    <a href='https://disputeresolution.adgm.com'  target="_blank" >Dispute Resolution</a>
+                                    <a href='/careers' >Careers</a>
+                                    <a href='https://assets.adgm.com/download/assets/ADGM&#x2B;Brand&#x2B;Book_2025.pdf/8dcd54d6356111f0aef28a0f7419fcea'  target="_blank" >ADGM Brand Book</a>
+                        </adgm-footer-category>
+                        <adgm-footer-category>
+                            <h3 slot="title">Business</h3>
+                                    <a href='/business' >Overview</a>
+                                    <a href='/business-areas' >Business areas</a>
+                                    <a href='/setting-up' >Setting up</a>
+                                    <a href='/operating-in-adgm' >Operating in</a>
+                                    <a href='/public-registers' >Public registers</a>
+                                    <a href='/legal-framework' >Legal framework</a>
+                        </adgm-footer-category>
+                        <adgm-footer-category>
+                            <h3 slot="title">eServices</h3>
+                                    <a href='/operating-in-adgm/e-services/accessrp' >AccessRP</a>
+                                    <a href='/operating-in-adgm/e-services/accessadgm-government-services-portal'  target="_blank" >ACCESSADGM</a>
+                                    <a href='/operating-in-adgm/e-services/online-registry-solution'  target="_blank" >Online Registry Solution</a>
+                                    <a href='/operating-in-adgm/e-services/electronic-prudential-reporting' >Electronic Prudential Reporting</a>
+                                    <a href='/operating-in-adgm/e-services/fsra-connect'  target="_blank" >FSRA Connect</a>
+                        </adgm-footer-category>
+                        <adgm-footer-category>
+                            <h3 slot="title">Discover</h3>
+                                    <a href='/media' >Media</a>
+                                    <a href='/media/announcements' >News</a>
+                                    <a href='/events' >Events</a>
+                                    <a href='/spotlight' >Spotlight</a>
+                                    <a href='/think-by-adgm' >Podcasts</a>
+                                    <a href='/publications' >Publications</a>
+                                    <a href='/the-district' >The ADGM District</a>
+                        </adgm-footer-category>
+                        <adgm-footer-category>
+                            <h3 slot="title">Contact &amp; Support</h3>
+                                    <a href='/contact-us/make-an-enquiry' >Make an enquiry</a>
+                                    <a href='/contact-us/speaking-up' >Speaking Up</a>
+                                    <a href='/faqs' >Frequently Asked Questions</a>
+                        </adgm-footer-category>
+                <span slot="legalText">
+&#xA9; 2026 ADGM. All rights reserved.                </span>
+                <adgm-footer-legal-links slot="legalLinks">
+                            <a href='/sitemap' >Sitemap</a>
+                            <a href='/information/terms-and-conditions' >Terms and conditions</a>
+                            <a href='/information/privacy-policy' >Privacy policy</a>
+                            <a href='/information/cookies-policy' >Cookies policy</a>
+                </adgm-footer-legal-links>
+                <adgm-footer-social-links slot="socialLinks">
+                            <a href='https://www.linkedin.com/company/adgm' target="_blank">
+                                <adgm-icon icon="socialLinkedIn"></adgm-icon>
+                            </a>
+                            <a href='https://x.com/adglobalmarket'>
+                                <adgm-icon icon="socialTwitter"></adgm-icon>
+                            </a>
+                            <a href='https://www.instagram.com/adgm' target="_blank">
+                                <adgm-icon icon="socialInstagram"></adgm-icon>
+                            </a>
+                            <a href='https://www.youtube.com/abudhabiglobalmarket'>
+                                <adgm-icon icon="socialYouTube"></adgm-icon>
+                            </a>
+                </adgm-footer-social-links>
+        </adgm-footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="back-to-top">
+        <adgm-back-to-top>
+            <adgm-icon-button size="s" variant="tertiary" icon="chevronUpL">
+                <button class="button --variant-tertiary --size-s" type="button">
+                    <slot name="icon">
+                        <adgm-icon color="currentColor" icon="chevronUpL" size="s20"></adgm-icon>
+                    </slot>
+                </button>
+            </adgm-icon-button>
+        </adgm-back-to-top>
+    </div>
+<!-- Chatbot Implementation -->
+
+            
+        </adgm-page>
+    </adgm-application>
+        <adgm-cookie-notification class="cookie-hide">
+                <adgm-body>
+                    <p>We use cookies and similar technologies that are necessary to operate the website. Additional cookies are used to perform analysis of website usage. By continuing to use our website, you consent to our use of cookies. For more information, please read our <a href="/information/cookies-policy">Cookies Policy</a>.</p>
+                </adgm-body>
+            <adgm-spacer height="rBodyXS"></adgm-spacer>
+            <adgm-flex gap="s8" direction="row">
+                    <adgm-button id="cookie-reject" size="s" outlined>Reject cookies</adgm-button>
+                    <adgm-button id="cookie-accept" size="s">Accept cookies</adgm-button>
+
+
+            </adgm-flex>
+        </adgm-cookie-notification>
+    <!--Footer Client Resources-->
+    <script defer="defer" src="/Util/Find/epi-util/find.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}})
+</script>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+
+        <script src="/js/hideheaderfooter.js"></script>
+
+</body>
+</html>
+<script>
+        // Get the button
+        var mybutton = document.querySelector('.back-to-top');
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() { scrollFunction() };
+
+        if (navigator.platform === "iPhone") {
+            document.body.classList?.add("iphone");
+        }
+
+        const cookieNotification = document.querySelector(".iphone adgm-cookie-notification");
+        if (cookieNotification) {
+            const cookieContainer = cookieNotification.shadowRoot.querySelector(".container");
+
+            if (cookieContainer) {
+                cookieContainer.style.marginBottom = "50%";
+            }
+        }
+
+        function scrollFunction() {
+            if (mybutton) {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        if (mybutton !== null) {
+            mybutton.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        const cookieReject = document.getElementById('cookie-reject');
+        const cookieAccept = document.getElementById('cookie-accept');
+        var showPopUp;
+        // Function to create a cookie with a 1-year expiry
+        function createCookie(cname, cvalue) {
+            var d = new Date();
+            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1 year in milliseconds
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;secure";
+        }
+
+        function getCookie(cookieName) {
+            if (typeof document !== "undefined") {  // Check if running in a browser environment
+                var cookieNameEQ = cookieName + '=';
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i].trim(); // Trim any leading spaces
+                    if (c.indexOf(cookieNameEQ) === 0) {  // Check if the cookie starts with the cookie name
+                        return c.substring(cookieNameEQ.length, c.length);  // Return the cookie value
+                    }
+                }
+                return '';  // Return empty string if cookie not found
+            }
+            return null;  // Return null if not in a browser environment
+        }
+        // Function to check the cookie and set the popup state
+        function checkCookieAndSetPopup() {
+            var cookieRejected = getCookie("cookies_rejected");
+            var cookieAccepted = getCookie("cookies_accepted");
+
+            if (cookieRejected || cookieAccepted) {
+                document.querySelector('.cookie-hide').style.visibility = "hidden";
+            } else {
+                document.querySelector('.cookie-hide').style.visibility = 'visible';
+            }
+        }
+
+        if (cookieReject !== null) {
+            cookieReject.addEventListener('click', () => {
+                document.querySelector('.cookie-hide').style.visibility = "hidden";
+                createCookie("cookies_rejected", "rejected")
+
+            })
+        }
+
+        if (cookieAccept !== null) {
+            cookieAccept.addEventListener('click', () => {
+                document.querySelector('.cookie-hide').style.visibility = "hidden";
+                createCookie("cookies_accepted", "accepted")
+            })
+        }
+        window.onload = checkCookieAndSetPopup;
+
+        const articleCards = document.querySelectorAll('adgm-article-card');
+        articleCards?.forEach((card, idx) => {
+            const links = card?.shadowRoot?.querySelectorAll('.content adgm-link-button');
+            var target = card?.getAttribute('target');
+            if (target !== undefined && target !== null) {
+                links[0]?.setAttribute('target', target);
+            }
+        })
+
+        const iconCards = document.querySelectorAll('adgm-icon-card');
+        iconCards?.forEach((card, idx) => {
+            const links = card?.shadowRoot?.querySelectorAll('.content adgm-link-button');
+            var target = card?.getAttribute('target');
+            if (target !== undefined && target !== null) {
+                links[0]?.setAttribute('target', target);
+            }
+        })
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.querySelector("adgm-navigation")
+                  if(header) {
+                    header.updateComplete.then(() => {
+                        header.firstUpdated();
+                    })
+                  }
+
+            function updateLinks(root) {
+            if (!root) return;
+
+            root.querySelectorAll('a[target="_blank"]').forEach(anchor => {
+              anchor.setAttribute("rel", "noopener");
+            });
+          }
+
+          function scanAllElements(root = document) {
+            root.querySelectorAll("*").forEach(element => {
+              element.querySelectorAll('a[target="_blank"]').forEach(anchor => {
+                anchor.setAttribute("rel", "noopener");
+              });
+              if (element.shadowRoot) {
+                updateLinks(element.shadowRoot); // Check for <a> in shadowRoot
+                scanAllElements(element.shadowRoot); // Recursively scan deeper shadow DOMs
+              }
+            });
+          }
+
+      // Initial scan for all elements in the page
+
+
+      setTimeout(() => {
+        scanAllElements()
+      });
+
+      // Watch for dynamically added elements
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) { // Ensure it's an element
+               setTimeout(() => {
+                scanAllElements(node)
+              });
+            }
+          });
+        });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+
+        document.addEventListener('click', e => {
+      const path = e.composedPath?.() || [];
+      if (!path.some(el => el.tagName === 'ADGM-LINK-BUTTON')) return;
+      const anchor = (path.find(el => el.tagName === 'A'));
+      if (!anchor) return;
+      const host       = anchor.getRootNode().host;
+      const elementText = host.textContent.trim();
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event:                   'gtm.adgmLinkClick',
+        'gtm.element':           anchor,
+        'gtm.elementId':         anchor.id || '',
+        'gtm.elementClasses':    anchor.className || '',
+        'gtm.elementTarget':     anchor.target || '',
+        'gtm.elementUrl':        anchor.href,
+        'gtm.elementText':       elementText,
+        'gtm.willOpenInNewWindow': anchor.target === '_blank',
+          eventCallback:          () => { },
+        eventTimeout:            2000
+      });
+    });
+
+        // Function to update query parameters in the URL, usually for searching and filtering
+    function updateQueryParams(params, { replace = false } = {}) {
+        const searchParams = new URLSearchParams(window.location.search);
+
+        for (const [key, value] of Object.entries(params)) {
+
+            const isEmpty =
+                value === null ||
+                value === undefined ||
+                value === "" ||
+                value === 0 ||
+                value === "0";
+
+            if (isEmpty) {
+                searchParams.delete(key);
+                continue;
+            }
+
+            if (Array.isArray(value)) {
+                searchParams.delete(key);
+                value.forEach(v => {
+                    if (v !== null && v !== "" && v !== 0 && v !== "0") {
+                        searchParams.append(key, v);
+                    }
+                });
+            } else {
+                searchParams.set(key, value);
+            }
+        }
+
+        searchParams.sort();
+        const newUrl = `${window.location.pathname}?${searchParams.toString()}`;
+
+        if (replace) {
+            window.history.replaceState({}, "", newUrl);
+        } else {
+            window.history.pushState({}, "", newUrl);
+        }
+    }
+
+</script>
