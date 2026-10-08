@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+  <title>Trader List | BBJ</title>
+  
+  <link rel="shortcut icon" href="/files/favicon.gif" type="image/x-icon">
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/modules/forum/forum.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/modules/node/node.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/modules/system/defaults.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/modules/system/system.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/modules/user/user.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/modules/cck/content.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/modules/date/date.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/modules/img_assist/img_assist.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/modules/nice_menus/nice_menus.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/modules/nice_menus/nice_menus_default.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/modules/cck/fieldgroup.css";
+  /*]]>*/
+  </style>
+  <style type="text/css" media="all">
+  /*<![CDATA[*/
+  @import "/sites/all/themes/BBJ/style.css";
+  /*]]>*/
+  </style>
+  <script type="text/javascript" src="/misc/jquery.js?1272650165"></script>
+  <script type="text/javascript" src="/misc/drupal.js?1272650165"></script>
+  <script type="text/javascript" src="/sites/all/themes/BBJ/script.js?1272650165"></script>
+  <script type="text/javascript" src="/sites/all/modules/img_assist/img_assist.js"></script>
+  
+</head>
+<body>
+  <div id="container" class="clear-block">
+    <div id="header">
+      <a href="/" title="Trader List | BBJ"><img src="/files/BBJ_logo.jpg" width="355" height="53" alt="Trader List | BBJ" class="logo"></a>
+      <div class="header_right">
+        <div id="block-block-1" class="block block-block">
+          <div class="content">
+            <p>Disscusion Forum |  Member's Area    <img src="/img/ico_id.jpg" width="16" height="11" alt="Indonesia Version"> <img src="/img/ico_eng.jpg" width="16" height="11" alt="English Version"></p>
+          </div>
+        </div>
+        <div id="block-search-0" class="block block-search">
+          <div class="content">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="navigation">
+      <div id="block-nice_menus-1" class="block block-nice_menus">
+        <h2><span class="nice-menu-hide-title">Description</span></h2>
+        <div class="content">
+          <ul class="nice-menu nice-menu-down" id="nice-menu-1">
+            <li id="menu-73" class="menu-path-node-101"><a href="/home" title="Home page">Home</a></li>
+            <li id="menu-48" class="menuparent menu-path-node-19">
+              <a href="/foreword" title="About Us">About Us</a>
+              <ul>
+                <li id="menu-126" class="menu-path-node-19"><a href="/foreword" title="Foreword">Foreword</a></li>
+                <li id="menu-130" class="menu-path-node-1"><a href="/history" title="History">History</a></li>
+                <li id="menu-128" class="menu-path-node-21"><a href="/profile" title="Profile">Profile</a></li>
+                <li id="menu-96" class="menu-path-node-22"><a href="/organization" title="Organization">Organization</a></li>
+                <li id="menu-133" class="menu-path-node-23"><a href="/shareholders" title="Founders">Founders</a></li>
+                <li id="menu-138" class="menu-path-node-48"><a href="/jafets" title="JAFeTS">JAFeTS</a></li>
+              </ul>
+            </li>
+            <li id="menu-74" class="menuparent menu-path-node-25">
+              <a href="/gold_spec" title="Products page">Products</a>
+              <ul>
+                <li id="menu-101" class="menuparent menu-path-node-25">
+                  <a href="/gold_spec" title="Gold Contract Specification">Gold</a>
+                  <ul>
+                    <li id="menu-139" class="menu-path-node-25"><a href="/gold_spec" title="Gold Specification">Specification</a></li>
+                    <li id="menu-136" class="menu-path-node-126"><a href="/gold_description" title="Description">Description</a></li>
+                    <li id="menu-137" class="menu-path-node-571"><a href="/gold_delivery_points" title="Delivery Points">Delivery Points</a></li>
+                  </ul>
+                </li>
+                <li id="menu-102" class="menuparent menu-path-node-26">
+                  <a href="/ole_spec" title="Olein Contract Specification">Olein</a>
+                  <ul>
+                    <li id="menu-140" class="menu-path-node-26"><a href="/ole_spec" title="Olein Specification">Specification</a></li>
+                    <li id="menu-135" class="menu-path-node-572"><a href="/ole_description" title="Description">Description</a></li>
+                    <li id="menu-106" class="menu-path-node-29"><a href="/ole_delivery_points" title="Delivery Points">Delivery Points</a></li>
+                  </ul>
+                </li>
+                <li id="menu-103" class="menu-path-node-27"><a href="/kge" title="Rolling Gold Specification">Rolling Gold</a></li>
+                <li id="menu-104" class="menuparent menu-path-node-28">
+                  <a href="/">Rolling Gold Index</a>
+                  <ul>
+                    
+                    <li id="menu-170" class="menu-path-node-125"><a href="/kie_description" title="Description">Description</a></li>
+                  </ul>
+                </li>
+                <li id="menu-190" class="menuparent menu-path-node-1025">
+                  <a href="/node/1025">KGEUSD</a>
+                  <ul>
+                    <li id="menu-192" class="menu-path-node-1026"><a href="/node/1026" title="Specification">Specification</a></li>
+                    <li id="menu-191" class="menu-path-node-1027"><a href="/node/1027" title="Description">Description</a></li>
+                  </ul>
+                </li>
+                <li id="menu-193" class="menu-path-node-1034"><a href="/node/1034" title="Organized CPO Auction">Organized CPO Auction</a></li>
+              </ul>
+            </li>
+            <li id="menu-75" class="menuparent menu-path-node-56">
+              <a href="/transaction_history" title="Prices & Data">Prices & Data</a>
+              <ul>
+                <li id="menu-152" class="menu-path-node-56"><a href="/transaction_history" title="Historical Price">Historical Price</a></li>
+                <li id="menu-155" class="menu-path-node-562"><a href="/settlement_price" title="Settlement Prices">Settlement Prices</a></li>
+                <li id="menu-165" class="menu-path-node-88"><a href="/live_price" title="Live Price">Live Price</a></li>
+              </ul>
+            </li>
+            <li id="menu-76" class="menuparent menu-path-news-agenda event">
+              <a href="/news/agenda+%2526+event" title="News">News</a>
+              <ul>
+                <li id="menu-108" class="menu-path-news-agenda event"><a href="/news/agenda+%2526+event" title="Agenda & Event">Agenda & Event</a></li>
+                
+               
+              </ul>
+            </li>
+            <li id="menu-77" class="menuparent menu-path-node-36">
+              <a href="/join" title="Members">Members</a>
+              <ul>
+                <li id="menu-105" class="menu-path-node-36"><a href="/join" title="How To Join">How To Join</a></li>
+                <li id="menu-112" class="menu-path-views-member_broker_custom"><a href="/views/member_broker_custom" title="Member List - Brokers">Member List - Brokers</a></li>
+                <li id="menu-113" class="menu-path-traders"><a href="/traders" title="Member List - Traders" class="active">Member List - Traders</a></li>
+                <li id="menu-114" class="menu-path-blacklist"><a href="/blacklist" title="Member List - Black List">Member List - Black List</a></li>
+                <li id="menu-189" class="menu-path-node-1017">Submit Report</li>
+              </ul>
+            </li>
+            <li id="menu-78" class="menuparent menu-path-glossary-a">
+              <a href="/glossary/a" title="Resources & Community">Resources & Community</a>
+              <ul>
+                <li id="menu-115" class="menu-path-glossary-a"><a href="/glossary/a" title="Glossary">Glossary</a></li>
+                <li id="menu-98" class="menu-path-gallery"><a href="/gallery" title="Photo Gallery">Photo Gallery</a></li>
+                <li id="menu-116" class="menu-path-faq"><a href="/faq" title="FAQ">FAQ</a></li>
+                <li id="menu-117" class="menu-path-node-37"><a href="/trading_manual" title="Trading Manual">Trading Manual</a></li>
+                <li id="menu-178" class="menu-path-articles"><a href="/articles" title="Articles">Articles</a></li>
+                <li id="menu-180" class="menu-path-node-596"><a href="/links" title="Links">Links</a></li>
+                <li id="menu-182" class="menu-path-forum"><a href="/forum">Forums</a></li>
+              </ul>
+            </li>
+            <li id="menu-72" class="menu-path-contact"><a href="/contact" title="Contact Us">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="sidebar-left" class="sidebar">
+        <div class="about_header">
+          <div class="breadcrumb">
+            <a href="/">Home</a>  >>  Members  >>  Member List - Traders
+          </div>
+        </div>
+        <div class="view view-member-trader">
+          <div class="view-content view-content-member-trader">
+            <table>
+              <thead>
+                <tr>
+                  <th class="view-cell-header view-field-node-title">Code</th>
+                  <th class="view-cell-header view-field-node-data-field-member-name-field-member-name-value">Name</th>
+                  <th class="view-cell-header view-field-node-data-field-member-address-field-member-address-value">Address</th>
+                  <th class="view-cell-header view-field-node-data-field-member-phone-field-member-phone-value">Telephone</th>
+                  <th class="view-cell-header view-field-node-data-field-member-fax-field-member-fax-value">Fax</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td class="view-field view-field-node-title">111</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Adhikarya Cipta Persada, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="even">
+                  <td class="view-field view-field-node-title">078</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Aperdi, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="odd">
+                  <td class="view-field view-field-node-title"><a href="/node/523">018</a></td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Asia Nusa Prima, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="even">
+                  <td class="view-field view-field-node-title">019</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Bina Karya Prima, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="odd">
+                  <td class="view-field view-field-node-title">077</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Capital Megah Mandiri, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="even">
+                  <td class="view-field view-field-node-title"><a href="/node/526">069</a></td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Danpac Finansa Utama, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="odd">
+                  <td class="view-field view-field-node-title"><a href="/node/527">075</a></td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Globex Indonesia, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="even">
+                  <td class="view-field view-field-node-title">028</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Gunung Lintong, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="odd">
+                  <td class="view-field view-field-node-title">035</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Halim Mitradana International, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+                <tr class="even">
+                  <td class="view-field view-field-node-title">087</td>
+                  <td class="view-field view-field-node-data-field-member-name-field-member-name-value">Indonesia Konsorsium Investama, PT</td>
+                  <td class="view-field view-field-node-data-field-member-address-field-member-address-value"></td>
+                  <td class="view-field view-field-node-data-field-member-phone-field-member-phone-value"></td>
+                  <td class="view-field view-field-node-data-field-member-fax-field-member-fax-value"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pager">
+            <span class="pager-list"><strong class="pager-current">1</strong>23</span>next ›last »
+          </div>
+        </div>
+      </div>
+      <div id="sidebar-right" class="sidebar">
+        <div id="block-block-8" class="block block-block">
+          <h2>Members</h2>
+          <div class="content">
+            <ul>
+              <li><a href="/join" title="How To Join">How To Join</a></li>
+              <li><a href="/views/member_broker_custom" title="Member List - Brokers">Member List - Brokers</a></li>
+              <li><a href="/traders" title="Member List - Traders">Member List - Traders</a></li>
+              <li><a href="/blacklist" title="Member List - Black List">Member List - Black List</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="front-right">
+          <div id="block-user-0" class="block block-user">
+            <div class="content">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footer_left">
+        <ul>
+          <li>
+<a href="/disclaimer" title="Disclaimer">Disclaimer</a> |</li>
+          <li>
+<a href="/sitemap" title="Site Map">Site Map</a> |</li>
+          <li><a href="/contact" title="Contact Us">Contact</a></li>
+        </ul>
+      </div>
+      <div id="footer_right">
+        © Copyright 1999-2008. Jakarta Futures Exchange. All Rights Reserved.
+      </div>
+    </div>
+  </div>
+  
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"8a8d4a2515074813af5ad9278a9f0c5a","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

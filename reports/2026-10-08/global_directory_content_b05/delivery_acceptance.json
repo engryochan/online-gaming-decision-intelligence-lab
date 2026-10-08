@@ -1,0 +1,78 @@
+{
+  "summaries": {
+    "intake_acceptance.json": {
+      "input_work_rows": 4849,
+      "selected_sources": 132,
+      "checked_sources": 132,
+      "HTTP200": 128,
+      "source_table_rows": 4132,
+      "download_link_observations": 20,
+      "pagination_observations": 18,
+      "global_complete": false
+    },
+    "pagination_acceptance.json": {
+      "fetched_additional_pages": 14,
+      "additional_table_rows": 54,
+      "observed_links": 90,
+      "pending_gap_records": 0,
+      "all_observed_in_scope_page_links_attempted": true,
+      "source_directory_total_completeness": "UNKNOWN"
+    },
+    "structure_acceptance.json": {
+      "all_table_rows": 4186,
+      "tables": 151,
+      "structured_source_records": 2809,
+      "source_urls_with_structured_records": 25,
+      "role_counts": {
+        "NON_LISTED_ISSUER_OR_PARTICIPANT_REVIEW": 88,
+        "BLACKLIST_SOURCE_RECORD_NOT_ACTIVE_LICENSE": 6,
+        "DIRECTORY_RECORD_REVIEW": 10,
+        "TRANSPOSED_PARTICIPANT_PROFILE": 16,
+        "LISTED_COMPANY_SOURCE_RECORD_SCOPE_PENDING": 235,
+        "DEBT_ISSUER_SOURCE_RECORD_NOT_COMMON_SHARE_UNIVERSE": 15,
+        "FUND_MARKET_BROKER_SOURCE_RECORD": 30,
+        "NEW_LISTING_EVENT_NOT_CURRENT_UNIVERSE": 343,
+        "MEMBER_OR_PARTICIPANT_SOURCE_RECORD": 69,
+        "COMMODITY_CLEARING_PARTICIPANT_NOT_EQUITY_BROKER_LICENSE": 1194,
+        "DELISTED_OR_SUSPENDED_SOURCE_RECORD": 7,
+        "PENSION_FUND_SOURCE_RECORD_NOT_BROKER": 31,
+        "MARKET_SNAPSHOT_SECURITY_RECORD": 17,
+        "SECURITY_SCREEN_RECORD_NOT_VERIFIED_UNIQUE_COMPANY": 748
+      },
+      "distinct_company_count": "UNKNOWN",
+      "source_rows_not_dropped": true
+    },
+    "completion_acceptance.json": {
+      "cma_cards": 93,
+      "cma_sections": 19,
+      "cma_section_count_mismatches": 1,
+      "unique_download_links": 9,
+      "downloads_saved": 9,
+      "archive_members": 284,
+      "workbook_rows": 247,
+      "global_complete": false
+    }
+  },
+  "database_table_counts": {
+    "direct_file_fetch_manifest": 9,
+    "directory_fetch_manifest": 132,
+    "pagination_fetch_manifest": 14,
+    "registry_all_page_content_review": 146,
+    "registry_all_workqueue_priority_review": 4849,
+    "registry_cma_all_licensed_category_cards": 93,
+    "registry_cma_section_count_reconciliation": 19,
+    "registry_directory_all_table_rows": 4132,
+    "registry_directory_observed_download_links": 20,
+    "registry_directory_observed_pagination": 18,
+    "registry_download_archive_members": 284,
+    "registry_download_workbook_rows": 247,
+    "registry_identical_body_source_observations": 3,
+    "registry_pagination_all_table_rows": 54,
+    "registry_pagination_link_observations": 90,
+    "registry_selected_directory_sources": 132,
+    "registry_source_table_semantic_review": 151,
+    "registry_structured_directory_records": 2809
+  },
+  "database_integrity": "ok",
+  "global_complete": false
+}
