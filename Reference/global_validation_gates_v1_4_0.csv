@@ -1,0 +1,10 @@
+﻿gate,requirement,state,evidence
+G01,ISO key count and uniqueness,PASS,249 ISO2 verified against provided prior artifact; not independent ISO current edition verification
+G02,Prior providers preserved,PASS,31 previous provider rows accessible; prior matrix file retained unchanged
+G03,Official ISIC structure imported,BLOCKED,Direct file download failed in environment; importer supplied
+G04,GLEIF Level 1 corpus imported,BLOCKED,Source announced by GLEIF but file not downloaded/ingested
+G05,GLEIF Level 2 corpus imported,BLOCKED,Source announced by GLEIF but file not downloaded/ingested
+G06,Legal entity count truthful,PASS,0 verified entities ingested
+G07,Country coverage denominator,UNKNOWN,Per-country authoritative denominators not retrieved
+G08,Revenue/legal reuse,REQUIRES_REVIEW,Country-by-country and provider license checks necessary
+G09,Production safety,PASS,No access to prohibited systems; offline-only importer

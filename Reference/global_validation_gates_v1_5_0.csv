@@ -1,0 +1,11 @@
+﻿gate,check,status,detail
+G01,ISO 249 uniqueness,PASS,249 rows; alpha2 distinct
+G02,Global 8-channel coverage,PASS,249 * 8 = 1992 slots; all listed
+G03,Global official registry URLs,BLOCKED,No claim every registry URL has been independently verified
+G04,UN ISIC Rev5 official CSV ingestion,BLOCKED,"UN CSV URL found, binary fetch failed"
+G05,GLEIF Level 1 records,BLOCKED,No real LEI records downloaded or ingested
+G06,GLEIF Level 2 relationships,BLOCKED,No real RR records downloaded or ingested
+G07,Source licenses / legal review,PENDING,Jurisdiction and source licensing review required
+G08,Entity-to-national-registry matching,PENDING,No truthful entity count until records ingested
+G09,Time validity and identity dedup,SCHEMA_READY,Schemas include valid_from/to and identifier keys
+G10,Prior weather record preservation,PASS,Prior v1.1 assets remain separate and not overwritten

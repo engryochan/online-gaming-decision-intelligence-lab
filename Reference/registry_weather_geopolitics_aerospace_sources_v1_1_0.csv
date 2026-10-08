@@ -1,0 +1,8 @@
+﻿id,kind,title,url,evidence,notes
+SRC01,WMO_MEMBER_DIRECTORY,WMO Members,https://contacts.wmo.int/members/,P0/P1,193 member entities 187 states and 6 territories; not ISO249 equivalence
+SRC02,WMO_OFFICIAL_SERVICE_DIRECTORY,WMO World Weather Information Service Participating Members,https://worldweather.wmo.int/en/members.html,P1,Named participating NMHS; participation does not establish specific alert feed
+SRC03,GLOBAL_ALERT_PORTAL,WMO Severe Weather Information Centre,https://severeweather.wmo.int/,P1,Live alert records vary over time; absence of alert not absence of warning service
+SRC04,ALERT_AUTHORITY_DIRECTORY,WMO Register of Alerting Authorities,https://alertingauthority.wmo.int/,P1,Country dropdown does not mean active feed or certified alert coverage
+SRC05,ORIGINAL_ISO_LIST,User supplied ISO3166 country-area registry,LOCAL:registry_country_area_iso3166_20261003.csv,USER_SUPPLIED,249 technical code entries; source-of-truth for this lineage
+SRC06,PROVIDER_LEDGER,31 service providers previous registry,LOCAL:registry_weather_geopolitics_aerospace_providers_v1_0.csv,INHERITED_P1_MIX,Pricing from earlier version; not revalidated in this upgrade
+SRC07,ISO_CODE_SYSTEM,ISO 3166 country codes,https://www.iso.org/iso-3166-country-codes.html,P0,ISO includes territories and areas; numeric code should not be assumed M49 crosswalk without verification

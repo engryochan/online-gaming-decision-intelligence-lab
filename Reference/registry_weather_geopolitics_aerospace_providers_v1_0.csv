@@ -1,0 +1,32 @@
+﻿provider_id,provider_name,segment,coverage_assertion_scope,commercial_model,public_price_or_terms,currency,official_url,evidence_grade,limitation
+TWC,The Weather Company Weather Data APIs,WEATHER_API,GLOBAL_VENDOR_CLAIM,TRIAL_FREE / PAID / QUOTE,30-day trial 50K calls/day; Standard USD 500/month annual 1M/month; Enterprise quote,USD,https://www.weathercompany.com/weather-data-apis/weather-data-apis-packages-pricing/,P1,airlines must use enterprise; country verification not conducted
+ACC,AccuWeather APIs,WEATHER_API,GLOBAL_VENDOR_CLAIM,FREE_TIER / PAID / QUOTE,Tiered developer/API plans; current exact plans require confirmation,USD,https://developer.accuweather.com/,P1,Local alerts and data layers vary
+TMR,Tomorrow.io,WEATHER_API / SPACE / GOV,GLOBAL_VENDOR_CLAIM,FREE_TIER / QUOTE,Free API limited plan; enterprise and government quote,USD,https://www.tomorrow.io/,P1,Satellite/defense services may require eligibility
+MET,Meteomatics,WEATHER_API,GLOBAL_VENDOR_CLAIM,QUOTE,Custom weather data subscription; quote,,https://www.meteomatics.com/en/pricing/,P1,Model granularity not uniformly country verified
+SPR,Spire Global,SPACE_WEATHER / AVIATION,GLOBAL_VENDOR_CLAIM,QUOTE,Subscription/custom contract,,https://spire.com/weather-climate/,P1,No per-country contractual confirmation
+XWE,Vaisala Xweather,LIGHTNING / WEATHER_API,GLOBAL_VENDOR_CLAIM,FREE_TIER / USAGE / QUOTE,Pay as you go; regional terms vary,USD,https://www.xweather.com/pricing/weather-api-pay-as-you-go,P1,Lightning coverage and prices vary
+GGL,Google Maps Weather API,PLATFORM_WEATHER_API,GLOBAL_VENDOR_CLAIM,FREE_ALLOWANCE / USAGE,Usage-based; verify current SKU pricing,USD,https://developers.google.com/maps/billing-and-pricing/pricing,P1,Coverage subject to supported regions
+APL,Apple WeatherKit,PLATFORM_WEATHER_API,GLOBAL_VENDOR_CLAIM,FREE_ALLOWANCE / PAID,Included API calls with Apple Developer Program; excess paid,USD,https://developer.apple.com/weatherkit/,P1,Regional Apple services may vary
+DTN,DTN Weather,WEATHER_ENTERPRISE,GLOBAL_VENDOR_CLAIM,QUOTE,B2B subscription / quote,,https://www.dtn.com/,P1,Contract pricing unpublished
+FOR,Foreca,WEATHER_API,180_PLUS_COUNTRIES_VENDOR_CLAIM,PAID / QUOTE,Weather API tiers; confirm current quote,EUR,https://business.foreca.com/weather-api/pricing,P1,Do not equate 180+ with ISO 249
+OWM,OpenWeather,WEATHER_API,GLOBAL_VENDOR_CLAIM,FREE_ALLOWANCE / USAGE,One Call pay-per-call + free allowance; tariff version dependent,USD,https://openweathermap.org/price,P1,Licensing and feature tiers apply
+VCX,Visual Crossing,WEATHER_API / HISTORY,GLOBAL_VENDOR_CLAIM,FREE_TIER / PAID / QUOTE,Developer free tier / subscription,USD,https://www.visualcrossing.com/weather-data-pricing/,P1,Actual local observations vary
+WAPI,WeatherAPI.com,WEATHER_API,GLOBAL_VENDOR_CLAIM,FREE_TIER / PAID / QUOTE,Developer free tier and paid packages,USD,https://www.weatherapi.com/pricing.aspx,P1,Data product limitations vary
+OM,Open-Meteo,OPEN_WEATHER_API,GLOBAL_GRID_MODEL_CANDIDATE,NONCOMMERCIAL_FREE / COMMERCIAL_PAID / SELF_HOST,"Noncommercial 10K/day, commercial API plans or AGPLv3 self-host",,https://open-meteo.com/en/pricing,P1,Provider model grid ≠ local warning coverage
+MB,meteoblue,WEATHER_API,GLOBAL_VENDOR_CLAIM,PAID / QUOTE,API subscription / usage,EUR,https://www.meteoblue.com/,P1,Check exact coverage per API
+NOAA,NOAA NCEI/NWS,PUBLIC_METEOROLOGY,US + GLOBAL_DATASETS,PUBLIC_FREE,Many public data products free; licences and availability vary,,https://www.noaa.gov/,P0/P1,US official alerts not global official alerts
+ECMWF,ECMWF Open Data,OPEN_NWP,GLOBAL_MODEL_GRID,PUBLIC_FREE / PAID_SERVICE,Selected model outputs open; premium services/licensed access may cost,,https://www.ecmwf.int/en/forecasts/datasets/open-data,P1,Model grid not service-level country certification
+NASA,NASA Earthdata,EARTH_OBSERVATION,GLOBAL_EO,PUBLIC_FREE,Open Earth observation data; product terms vary,,https://www.earthdata.nasa.gov/,P0/P1,Cloud compute/distribution may cost
+COP,Copernicus Sentinel,EARTH_OBSERVATION,GLOBAL_EO,PUBLIC_FREE,Open Sentinel Earth observation imagery,,https://dataspace.copernicus.eu/,P0/P1,Third-party downstream processing may cost
+EUM,EUMETSAT,MET_SATELLITE,REGIONAL_AND_GLOBAL_PRODUCTS,MIXED,Some products free; licensing/fees may apply,,https://www.eumetsat.int/,P1,Product-level access terms needed
+RANE,RANE Stratfor,GEOPOLITICAL_INTELLIGENCE,SELECTED_MARKETS,PAID / QUOTE,Subscriber and enterprise products,USD,https://worldview.ranenetwork.com/,P1,Not 249-coverage verified
+EIU,Economist Intelligence Unit,COUNTRY_RISK,SELECTED_MARKETS,PAID / QUOTE,Country analysis / risk subscription,USD,https://www.eiu.com/,P1,Product-level market count varies
+EURASIA,Eurasia Group,GEOPOLITICAL_RISK,SELECTED_MARKETS,QUOTE,Advisory engagement / enterprise,,https://www.eurasiagroup.net/,P1,No fixed public universal rate
+CONTROL,Control Risks,GEOPOLITICAL_RISK,SELECTED_MARKETS,QUOTE,Advisory intelligence subscriptions,,https://www.controlrisks.com/,P1,No fixed public universal rate
+PAL,Palantir Foundry/Gotham/AIP,DECISION_INTELLIGENCE,CUSTOMER_DATA_SCOPED,QUOTE,Enterprise deployment contracts,,https://www.palantir.com/,P1,Platform purchase does not include universal data rights
+DROP,The Weather Company DROP,GOV_DEFENSE_WEATHER,ELIGIBLE_CUSTOMERS,QUOTE / RESTRICTED,Public sector / defense proposal-based,,https://www.weathercompany.com/government-and-defense/,P1,Not a general consumer platform
+PLANET,Planet Labs,EARTH_OBSERVATION,SATELLITE_COVERAGE_VARIABLE,PAID / QUOTE,Commercial imagery plans; price by package,USD,https://www.planet.com/pricing/,P1,Satellite revisit/cloud cover restrictions
+MAXAR,Maxar Intelligence,GEOSPATIAL_INTELLIGENCE,SATELLITE_COVERAGE_VARIABLE,QUOTE,Imagery / geospatial enterprise contracts,,https://maxar.com/,P1,Task and resolution pricing
+BSKY,BlackSky,SPACE_INTELLIGENCE,SATELLITE_COVERAGE_VARIABLE,QUOTE,Monitoring and analytics subscriptions,,https://blacksky.com/,P1,Coverage and resolution restricted
+ICEYE,ICEYE,SAR_EARTH_OBSERVATION,SATELLITE_COVERAGE_VARIABLE,QUOTE,SAR tasking / imagery priced by quote,,https://www.iceye.com/,P1,Task feasibility requires evaluation
+WMO,WMO Member Profiles,OFFICIAL_NMHS_DIRECTORY,WMO_193_MEMBERS,PUBLIC_INFORMATION,Directory open; national datasets independently licensed,,https://contacts.wmo.int/members/,P0/P1,No one-to-one ISO249 correspondence
