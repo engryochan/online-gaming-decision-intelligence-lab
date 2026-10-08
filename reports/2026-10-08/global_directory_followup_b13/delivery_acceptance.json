@@ -1,0 +1,110 @@
+{
+  "pagination": {
+    "candidate_observations": 4017,
+    "candidate_review_reasons": {
+      "PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 121,
+      "NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 2561,
+      "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1335
+    },
+    "selected_pages": 75,
+    "fetched_additional_pages": 75,
+    "additional_table_rows": 1271,
+    "pending_gap_records": 0,
+    "new_link_observations_pending_review": 3723,
+    "all_observed_in_scope_page_links_attempted": false,
+    "source_directory_total_completeness": "UNKNOWN"
+  },
+  "downloads": {
+    "download_observations": 28,
+    "unique_links": 24,
+    "selected_links": 24,
+    "saved_or_reused": 22,
+    "reused": 4,
+    "new_saved": 18,
+    "pending_unselected": 0,
+    "remaining_errors": 2,
+    "archive_members": 207,
+    "workbook_rows": 6080,
+    "csv_rows": 5725,
+    "global_complete": false
+  },
+  "structure": {
+    "all_table_rows": 1271,
+    "tables": 69,
+    "structured_source_records": 455,
+    "source_urls_with_structured_records": 22,
+    "role_counts": {
+      "DIRECTORY_RECORD_REVIEW": 455
+    },
+    "distinct_company_count": "UNKNOWN",
+    "source_rows_not_dropped": true
+  },
+  "ledger": {
+    "original_queue": 4849,
+    "state_counts": {
+      "HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 857,
+      "FETCH_ERROR_OR_NON200_REVIEW": 57,
+      "NOT_YET_ATTEMPTED": 3933,
+      "HTTP200_BODY_TRUNCATED_REVIEW": 2
+    },
+    "total_attempt_receipts": 1212,
+    "unique_attempted_urls": 1204,
+    "country_mother_rows": 249,
+    "countries_with_source_association": 151,
+    "global_complete": false
+  },
+  "sqlite_counts": {
+    "direct_file_fetch_manifest": 24,
+    "pagination_fetch_manifest": 75,
+    "registry_all_4849_work_progress": 4849,
+    "registry_all_country_cumulative_source_progress": 249,
+    "registry_all_download_workqueue": 24,
+    "registry_all_page_content_review": 75,
+    "registry_download_archive_members": 207,
+    "registry_download_csv_rows": 5725,
+    "registry_download_links": 28,
+    "registry_download_workbook_rows": 6080,
+    "registry_file_acquisition_gaps": 2,
+    "registry_file_business_scope_review": 24,
+    "registry_pagination_all_table_rows": 1271,
+    "registry_pagination_candidate_review": 4017,
+    "registry_pagination_link_observations": 3723,
+    "registry_pagination_links": 232,
+    "registry_source_country_association_evidence": 2837,
+    "registry_source_table_semantic_review": 69,
+    "registry_structured_directory_records": 455,
+    "registry_literal_url_retry_receipts": 1
+  },
+  "raw_verified": 97,
+  "protected": [
+    {
+      "path": "Reference/Aerospace_Ecosystem_Report.qmd",
+      "sha256": "4cf895c4ddcb883594507d7ed5faccb87c910df729e699afb4056c8d4fd019a7",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd",
+      "sha256": "3f53b2ad9e56bead08b8ec3a5e6ec729df693a92d576c04ce0a81ff9f2193f88",
+      "batch_action": "NO_WRITE"
+    },
+    {
+      "path": "Reference/Inteligent_egaming_platform_ref_v000.000.001.qmd",
+      "sha256": "062ac07a98b6f10989799561e70106277f6a0a79a47164845080ef508b77fb16",
+      "batch_action": "NO_WRITE"
+    }
+  ],
+  "literal_url_retry": [
+    {
+      "url": "https://www.enexgroup.gr/documents/20126/978740/EnEx_S1-7+%28Annex%29_ALGO+Declaration.xlsx",
+      "prior_requested_url": "https://www.enexgroup.gr/documents/20126/978740/EnEx_S1-7%2B%28Annex%29_ALGO%2BDeclaration.xlsx",
+      "retry_reason": "PRESERVE_LITERAL_PLUS_IN_PATH",
+      "checked_on": "2026-10-08",
+      "http_status": 200,
+      "final_url": "https://www.enexgroup.gr/documents/20126/978740/EnEx_S1-7+%28Annex%29_ALGO+Declaration.xlsx",
+      "bytes": 12970,
+      "sha256": "8110009da47bd6998de19bd792064347915c3d92946e0450e7cef55ec7b2ef49",
+      "truncated": false,
+      "file": "reports/2026-10-08/global_directory_followup_b13/downloads/b5a84f3f9161d673d1aa.response"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+---
+title: "全球清單續作 B13：分頁核查、直接檔案及業務用途"
+date: 2026-10-08
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪完成範圍
+
+接續 B12 的 232 條頁面連結及 B10 的 3,785 條新連結，共覆核 4017 條觀測。分類 `{"PAGINATION_SIGNAL_REQUIRES_SOURCE_SCOPE_REVIEW": 121, "NAVIGATION_LINK_NOT_CONFIRMED_PAGINATION": 2561, "ALREADY_ATTEMPTED_IN_PRIOR_OR_CURRENT_BATCH": 1335}`；去重後嘗試全部 75 个合資格候選網址，HTTP 狀態分布 `{"200": 75}`，保存 1271 條物理表格行、69 個表格及 455 條初步來源角色投影。數字、next 與 page 參數僅是分頁排程訊號，並非內容完整性的證明。
+
+新增 3723 條連結留待下一輪核查；本轮候選未選數為零不等於全站或所有遞迴分頁完成。所有 4,849 項原始工作列及 249 條現行母表保留，累計工作狀態 `{"HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW": 857, "FETCH_ERROR_OR_NON200_REVIEW": 57, "NOT_YET_ATTEMPTED": 3933, "HTTP200_BODY_TRUNCATED_REVIEW": 2}`。網站來源關係不代表企業註冊地，歷史政治實體仍沿用既有登記。
+
+## 下載與業務定義
+
+全部 28 條直接檔案觀測去重為 24 個網址，全部嘗試；22 個保存或沿用已核對的原始檔，其中 4 個沿用、18 個新增，2 個失敗保留逐檔錯誤及 HTTP 狀態。保存 207 個壓縮成員雜湊、6080 條 XLSX 行及 5725 條直接 CSV 邏輯行（含表頭與空行）。
+
+來源包括保加利亞 CSD 結算失敗年報、巴西 CVM CRA 月報與元數據、Nodal 衍生工具合約及持倉限制。它們分別服務於歷史結算風險、监管申報、工具條款及交易限制分析。會員申請範本、技術頻寬報告、歷史制裁名單及產品分類不能合算為持牌券商或上市公司；逐檔業務用途寫入覆核表。
+
+ZIP 成員原始內容留在原始壓縮檔，本輪核對成員雜湊，尚未把所有內嵌 CSV/PDF/XML 解析為業務表。舊 XLS 本輪保留原始檔，尚未抽取所有單元格；XLSX 保留可讀行及公式文字，完整工作簿物件仍需後續檢查。全球名錄完整性仍為 UNKNOWN。
+
+## 可回溯交付
+
+[分頁候選覆核](tables/38_global_directory_followup_b13_20261008/registry_pagination_candidate_review.csv)、[分頁收據](tables/38_global_directory_followup_b13_20261008/pagination_fetch_manifest.csv)、[逐檔用途](tables/38_global_directory_followup_b13_20261008/registry_file_business_scope_review.csv)、[下載缺口](tables/38_global_directory_followup_b13_20261008/registry_file_acquisition_gaps.csv)、[完整工作進度](tables/38_global_directory_followup_b13_20261008/registry_all_4849_work_progress.csv)、[SQLite](tables/38_global_directory_followup_b13_20261008/global_directory_followup_b13.sqlite)。
+
+97 個原始回應／下載收據位元組雜湊核對通過，SQLite 完整性檢查通過，來源 URL、原始行及內容雜湊可回溯。既有批次、兩份主報告及使用者文件修改未覆寫。
+
+## 發佈與解析核查
+
+頁面解析及來源語義完整性仍待逐項核定；原始回應位元組保留。憑證模式掃描發現 10 個原始頁面候選檔，僅留本機並排除推送；未輸出候選值。
+
+## 原始網址重試
+
+下載器將 EnEx 路徑中的字面加號編碼為 %2B，可能影響伺服器路由。本輪按來源原始網址重試並保留初次失敗收據，重試 HTTP 狀態為 [200]。重試收據另表入庫，不抹除初次觀測。
