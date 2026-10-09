@@ -1,0 +1,24 @@
+---
+title: "B41：餘26站HOMR再核對與最新40站判定"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 完整未結站史覆核
+
+B40未取得全年共時佐證的26站全部依ICAO重新查詢官方HOMR；0項查詢失敗，保存17筆完整站史、78個識別碼時段、6項GHCNH／ICAO關聯。最新全部40站狀態 `{"CARRIED_B40_2024_ASSOCIATION_LOCATION_CORROBORATED": 14, "EMPTY_QUERY_RESULT_NOT_PROOF_STATION_ABSENT": 11, "IDENTIFIER_ASSOCIATION_PRESENT_TIME_UNKNOWN_OR_OUTSIDE_2024": 4, "TIMED_ASSOCIATION_LOCATION_OR_STATION_LIST_REVIEW": 1, "NO_GHCNH_ID_IN_RETURNED_STATION_HISTORY": 9, "NEW_HOMR_2024_ASSOCIATION_LOCATION_CORROBORATED": 1}`。原14站佐證直接保留並標明B40未重新下載，不假稱本輪全部重新查詢。
+
+## 未結原因與判定規則
+
+明確區分來源起訖日期Unknown、日期不涵蓋2024、沒有GHCNH識別碼、空回傳、多候選與位置差異；Unknown日期不自行補成最早日期。三個B40未結項本輪亦重新取得，而非只重述舊摘要。GHCND／GHCNMLT與GHCNH識別碼分開，不用相同字串替代資料集命名空間。
+
+只有同一NCDC記錄內ICAO與GHCNH都具有全年2024時段、GHCNH在官方站表、有效時段坐標在1公里工程覆核參數內，且唯一關聯，才增加共時關聯佐證。仍不證明物理站跨年代連續，不開放疑似缺值數值分析；高空／地面平台原欄位保留，不因同ICAO合併。
+
+## 可追溯交付與下一步
+
+[26項來源收據](tables/65_homr_remaining_b41_20261009/registry_homr_fetch_receipts.csv)、[完整站史](tables/65_homr_remaining_b41_20261009/registry_complete_station_records.csv)、[所有識別碼時段](tables/65_homr_remaining_b41_20261009/registry_all_identifier_periods.csv)、[GHCNH／ICAO關聯](tables/65_homr_remaining_b41_20261009/registry_ghcnh_icao_dated_associations.csv)、[最新40站判定](tables/65_homr_remaining_b41_20261009/registry_latest_40_station_adjudication.csv)、[SQLite](tables/65_homr_remaining_b41_20261009/homr_remaining_b41.sqlite)。[官方API規則](https://www.ncei.noaa.gov/access/homr/api)本輪重新閱讀，完整來源JSON及SHA256保留。
+
+下一步針對時段Unknown與位置／站表不一致的站查正式站史字段，並核新版缺值規則後再作新舊量測比較。125筆舊風速衝突、新版疑似缺值、金融、工商、分頁與其他全球待辦保持開放。SDG業務分析凍結，Untitled不恢復，所有舊報告和已提交修改保留。
