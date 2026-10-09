@@ -1,0 +1,605 @@
+README  FILE  FOR  THE  SYNOPTIC  SUMMARY  OF  THE  DAY  (SSOD)  DATASET   Version  2.0.0    
+I.  DOWNLOAD  QUICK  START   Bulk  SSOD  station  data  download  access  is  available  in  three  ways:  1)  Period  of  record  station  files  (data  for  all  years  and  variables  for  a  particular  station)  2)  Station/year  files  (one  year  of  data  for  a  particular  station)  3)  A  tar  file  of  all  stations  with  data  in  a  particular  year    Data  Access  Locations  
+●  HTTPS  WAF: 1.  https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/access/by-year/<YYYY>/SSOD_<station>_yyyy.csv  2.  https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/access/by-station/SSOD_<station>.csv  3.  https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/archive/<archived  files>  Where  <station>  refers  to  the  GHCN  identifier  ●  Example  file  URL:  4.  https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/access/by-year/2023/ssod_USW00003812_2023.csv     OVERVIEW   The  Synoptic  Summary  of  the  Day  (SSOD)  version  2  dataset  is  a  collection  of  Daily  Climate  
+Summaries
+ 
+derived
+ 
+from
+ 
+the
+ 
+synoptic
+ 
+and
+ 
+hourly
+ 
+reports
+ 
+provided
+ 
+in
+ 
+the
+ 
+Global
+ 
+Historical
+ 
+Climatology
+ 
+Network
+ 
+hourly
+ 
+(GHCNh)
+ 
+dataset.
+  
+SSOD
+ 
+v2
+ 
+is
+ 
+the
+ 
+successor
+ 
+to
+ 
+the
+ 
+Global
+ 
+Summary
+ 
+of
+ 
+the
+ 
+Day
+ 
+(GSOD)
+ 
+dataset,
+ 
+which
+ 
+was
+ 
+derived
+ 
+from
+ 
+the
+ 
+Integrated
+ 
+Surface
+ 
+Dataset
+ 
+or
+ 
+ISD.
+  
+GHCNh
+ 
+is
+ 
+the
+ 
+successor
+ 
+dataset
+ 
+to
+ 
+ISD.
+  
+  The  SSOD  daily  summaries  are  based  on  hourly  (e.g.  METAR/FM15)  or  6-hourly  
+(SYNOP/FM16)
+ 
+reports
+ 
+for
+ 
+a
+ 
+calendar
+ 
+day
+ 
+that
+ 
+runs
+ 
+from
+ 
+00
+ 
+to
+ 
+24
+ 
+UTC.
+ 
+In
+ 
+this
+ 
+way,
+ 
+all
+ 
+daily
+ 
+climate
+ 
+summaries
+ 
+in
+ 
+SSOD
+ 
+nominally
+ 
+conform
+ 
+to
+ 
+the
+ 
+same
+ 
+synchronous
+ 
+24-hour
+ 
+period
+ 
+(i.e,
+ 
+the
+ 
+same
+ 
+“synoptic
+ 
+day")
+ 
+worldwide.
+ 
+This
+ 
+contrasts
+ 
+with
+ 
+the
+ 
+daily
+ 
+summaries
+ 
+provided
+ 
+in
+ 
+Global
+ Historical  Climatology  Network  daily  (GHCNd)  dataset.  In  GHCNd,  daily  climate  summaries  are  provided  by  national  Met  Services  and  are  compiled  according  to  the  observation  time  and  
+conventions
+ 
+used
+ 
+in
+ 
+their
+ 
+country
+ 
+for
+ 
+daily
+ 
+climate
+ 
+reports
+ 
+(e.g.,
+ 
+midnight
+ 
+local
+ 
+time
+ 
+for
+ 
+US
+ 
+Airports,
+ 
+06
+ 
+UTC
+ 
+stations
+ 
+in
+ 
+Canada,
+ 
+9
+ 
+am
+ 
+local
+ 
+in
+ 
+Australia
+ 
+etc.).
+   
+  The  utility  of  SSOD  is  that  daily  summaries  are  provided  in  short  time  delay  for  the  network  of  
+many
+ 
+thousands
+ 
+of
+ 
+stations
+ 
+that
+ 
+transmit
+ 
+hourly
+ 
+and
+ 
+synoptic
+ 
+reports.
+ 
+This
+ 
+ensures
+ 
+the
+ 
+SSOD
+ 
+summary  day  is  consistent  for  all  stations  worldwide,  in  theory  making  comparisons  to  numerical  
+weather
+ 
+prediction
+ 
+model
+ 
+output
+ 
+and
+ 
+remotely
+ 
+sensed
+ 
+data
+ 
+more
+ 
+straightforward.
+ 
+One
+ 
+disadvantage
+ 
+of
+ 
+SSOD
+ 
+is
+ 
+that
+ 
+daily
+ 
+precipitation
+ 
+totals
+ 
+may
+ 
+be
+ 
+underreported
+ 
+in
+ 
+the
+ 
+synoptic
+ 
+messages.
+ 
+Additionally,
+ 
+maximum
+ 
+and
+ 
+minimum
+ 
+temperatures
+ 
+gleaned
+ 
+from
+ 
+the
+ 
+hourly
+ 
+or
+ 
+synoptic
+ 
+messages
+ 
+also
+ 
+may
+ 
+not
+ 
+correspond
+ 
+to
+ 
+the
+ 
+true
+ 
+daily
+ 
+extremes.
+ 
+The
+ 
+daily
+ 
+summaries
+ 
+provided
+ 
+by
+ 
+national
+ 
+Met
+ 
+Services
+ 
+in
+ 
+GHCNd
+ 
+are
+ 
+therefore
+ 
+recommended
+ 
+when
+ 
+the
+ 
+most
+ 
+accurate
+ 
+reports
+ 
+are
+ 
+required
+ 
+for
+ 
+daily
+ 
+rainfall
+ 
+and
+ 
+maximum/minimum
+ 
+temperatures.
+ 
+However,
+ 
+as
+ 
+noted
+ 
+above,
+ 
+the
+ 
+24-hour
+ 
+periods
+ 
+represented
+ 
+in
+ 
+the
+ 
+daily
+ 
+summaries
+ 
+provided
+ 
+in
+ 
+GHCNd
+ 
+are
+ 
+not
+ 
+the
+ 
+same
+ 
+worldwide.
+  
+This
+ 
+distinction
+ 
+between
+ 
+the
+ 
+consistent
+ 
+summary
+ 
+day
+ 
+in
+ 
+SSOD
+ 
+and
+ 
+the
+ 
+mix
+ 
+of
+ 
+summary
+ 
+days
+ 
+in
+ 
+GHCNd
+ 
+is
+ 
+the
+ 
+reason
+ 
+for
+ 
+the
+ 
+name
+ 
+change
+ 
+from
+ 
+Global
+ 
+Summary
+ 
+of
+ 
+the
+ 
+Day
+ 
+(GSOD)
+ 
+to
+ 
+Synoptic
+ 
+Summary
+ 
+of
+ 
+the
+ 
+Day
+ 
+(SSOD,
+ 
+version
+ 
+2).
+     
+  The  headers  used  in  csv  files  and  definition  of  each  daily  element  included  in  the  dataset  (as   available  from  each  station)  are  as  follows:   Column  Number    1  STATION  
+GHCN  identifier  
+2  Station_name  
+Station  Name  from  source  metadata  
+3  DATE  
+ Date  (YYYY-MM-DD)  in  UTC   
+4  Year  
+Year  of  Daily  Summary  (in  UTC)  
+5  Month  
+Month  of  Daily  Summary  (in  UTC)  
+6  Day  
+Day  of  Daily  Summary  (in  UTC)  
+7  LATITUDE  
+Station  Latitude  (decimal  degrees)  
+8  LONGITUDE  
+Station  Longitude  (decimal  degrees)  9  ELEVATION  Elevation  (meters)  
+10  mean_temperature  
+Average  of  synoptic  hourly  or  syntopic  +  off  synoptic  hourly  temperatures  (from  00  to  24  UTC)--in  °C  
+11  mean_temperature_Measurement_Code  
+ Number  of  hourly  values  available  (from  4  to  24).  For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+12  mean_dew_point_temperature  
+Average  of  synoptic  hourly  or  syntopic  +  off-  synoptic  hourly  dew  point  temperatures  (from  00  to  24  UTC)  in  degrees  C.   For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+13  mean_dew_point_temperature_Measurement_Code  
+ Number  of  hourly  values  available  (from  4  to  24)  
+14  mean_sea_level_pressure  
+Average  of  synoptic  hourly  or  syntopic  +  off  synoptic  hourly  dew  point  temperatures  (from  00  to  24  UTC)--in  hPa.   For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+15  mean_sea_level_pressure_Measurement_Code  
+ Number  of  hourly  values  available  (from  4  to  24)  
+16  mean_station_level_pressure  
+Average  of  synoptic  hourly  or  syntopic  +  off  synoptic  hourly  dew  point  temperatures  (from  00  to  24  UTC)--in  hPa.   For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+17  mean_station_level_pressure_Measurement_Code  
+ Number  of  hourly  values  available  (from  4  to  24)  
+18  mean_visibility  
+Average  of  synoptic  hourly  or  syntopic  +  off  synoptic  hourly  dew  point  temperatures  (from  00  to  24  UTC)--in  km.   For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+19  mean_visibility_Measurement_Code  
+ Number  of  hourly  values  available  (from  4  to  24)  
+20  mean_wind_speed  
+Average  of  synoptic  hourly  or  syntopic  +  off  synoptic  hourly  dew  point  temperatures  (from  00  to  24  UTC)--in  
+meters  per  second.   For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+21  mean_wind_speed_Measurement_Code  
+ Number  of  hourly  values  available  (from  4  to  24)  
+22  max_wind_speed  
+Maximum  wind  speed  reported  for  the  day–in  meters  per  second  
+23  max_wind_gust  
+ Maximum  wind  gust  reported  for  the  day–in  meters  per  second  
+24  max_temperature  
+Maximum  temperature  for  the  day  drive  from  hourly  reports  or  from  the  climate  code  group  in  the  SYNOP/FM12  report–in  °C  
+25  max_temperature_Measurement_Code  
+*  indicates  value  was  derived  from  the  hourly  data  (FM15/METAR/SA/  etc)  rather  than  from  the  climate  code  group  of  the  SYNOP/FM12    
+26  min_temperature  
+Minimum  temperature  for  the  day  drive  from  hourly  reports  or  from  the  climate  code  group  in  the  SYNOP/FM12  report–For  a  daily  mean  to  be  computed,  at  least  one  report  in  each  of  the  6-hour  synoptic  periods  (00:00  to  05:59  UTC,  
+06:00  to  11:59  UTC,  12:00  to  17:59  UTC,  and  18:00  to  23:59  UTC)  must  be  available.  
+27  min_temperature_Measurement_Code  
+*  indicates  value  was  derived  from  the  hourly  data  (METAR/SA/FM15  etc)  rather  than  from  the  climate  code  group  of  the  SYNOP/FM12   
+28  total_precipitation  
+Total  precipitation  reported  for  the  day  as  reported  in  e.g.,  FM15/METAR  hourlies  or  SYNOP/FM12  reports  –in  mm  
+29  total_precipitation_Measurement_Code  
+n  (Number  of  hours)  =  Sum  of  hourly  reports,  where  n  is  the  count  of  hourly  totals  reported  A  =  1  report  of  6-hour  precipitation  amount.  B  =  Summation  of  2  reports  of  6-hour  precipitation  amount.  C  =  Summation  of  3  reports  of  6-hour  precipitation  amount.  D  =  Summation  of  4  reports  of  6-hour  precipitation  amount.  E  =  1  report  of  12-hour  precipitation  amount.  F  =  Summation  of  2  reports  of  12-hour  precipitation  amount.  G  =  1  report  of  24-hour  precipitation  amount.  H  =  Station  reported  '0'  as  the  amount  for  the  day  (eg,  from  hourly,  6-hourly  reports,  etc.)  or  the  amount  could  not  be  
+calculated,  but  at  least  one  occurrence  of  precipitation  was  noted  in  the  present  weather  observations.  This  could  indicate  that  a  trace  occurred  (or  more  if  the  value  is  missing).  I  =  Station  did  not  report  any  precipitation  data  for  the  day  and  did  not  report  any  occurrences  of  precipitation  in  its  present  weather  observations.   
+30  snow_depth  
+From  the  last  report  for  the  day  if  reported  more  than  once–in  mm  
+31  observed_pres_wx  
+Observed  weather  reported  across  all  available  reports  for  the  day  for  weather  types  “Fog/Rain/Snow  or  Ice  Pellets/Hail/Thunder/Tornado  or  Funnel  Cloud”   The  presence  or  absence  of  the  above  weather  types  is  noted  as  a  zero  (‘0’)  or  a  one  (‘1’):   reported=1;  no  report=0  yielding  a  string  of  six  digits  (one  digit  for  each  weather  type).     ********************************************************************    

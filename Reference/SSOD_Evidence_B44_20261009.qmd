@@ -1,0 +1,33 @@
+---
+title: "B44：SSODv2授權補證、現行文件與四份樣本缺值覆核"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 授權證據補齊
+
+[NCEI官方SSODv2落地頁](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C01690)明列資料集適用CC0-1.0，已保存原始頁面與SHA256；先前Geoportal視圖沒有同等完整展示，不再以該視圖的缺項當作授權未公布。這是C01690／SSODv2資料集的版權證據，不擴展到所有NOAA產品或舊GSOD。
+
+[CC0條款](https://creativecommons.org/publicdomain/zero/1.0/legalcode)允許版權範圍內的重用、修改與商業用途，其他權利與免責條件仍須按條款處理。保留NCEI要求的作者、子集與存取日期引用，不將它誤寫成CC0強制署名條件；官方DOI仍為佔位字串，不能捏造DOI。授權證據不代替值品質、身份映射與商業收益驗證。
+
+## 文件與缺值覆核
+
+重新取得現行SSODv2格式PDF並比對B38原始字節，讀取全部頁面。四份既有樣本為2023 ASHEVILLE及2024 ENJA、ENSB、GVAC，僅重新核對本地字節與原值，不聲稱四份觀測已重新下載或具有全球代表性。12個量測欄位逐站統計，所有疑似缺值保留原值及對應屬性碼，沒有產生已放行的數值。
+
+缺值規則仍未由本輪來源明確建立，觀察到的-9999.9僅列待核；不得借用上游GHCNh或舊GSOD規則替代SSODv2定義。有限文件prefix查詢亦不能當作掃遍整個官方網站。
+
+## 交付與下一步
+
+統計：`{"new_source_requests": 8, "fetch_errors": 2, "dataset_rights": "OFFICIAL_SSODV2_CC0_1_0", "documentation_same_as_b38": true, "prior_sample_files": 4, "sample_days": 1463, "field_profiles": 48, "suspect_values": 3114, "sample_cells_audited": 17556, "numeric_release": false, "sqlite_counts": {"registry_48_field_missing_profiles": 48, "registry_dataset_rights_adjudication": 1, "registry_document_recheck": 1, "registry_source_receipts": 12, "registry_suspect_value_evidence": 3114}, "old_documents_preserved": true, "global_complete": false}`。
+
+
+[授權裁定](tables/68_ssod_evidence_b44_20261009/registry_dataset_rights_adjudication.csv)、[來源收據](tables/68_ssod_evidence_b44_20261009/registry_source_receipts.csv)、[48項欄位統計](tables/68_ssod_evidence_b44_20261009/registry_48_field_missing_profiles.csv)、[逐值待核證據](tables/68_ssod_evidence_b44_20261009/registry_suspect_value_evidence.csv)、[文件比對](tables/68_ssod_evidence_b44_20261009/registry_document_recheck.csv)、[SQLite](tables/68_ssod_evidence_b44_20261009/ssod_evidence_b44.sqlite)。
+
+15項測站佐證與25項未結保留於B43，不在本輪重作身份裁定。125筆舊風速衝突、全球金融、工商與歷史政治實體清單仍開放。下一步以欄位特定正式規則核缺值與屬性碼，再決定是否能作新舊量測比較；SDG業務分析保持凍結，Untitled不恢復。
+
+## 來源存取差異
+
+8項原始來源請求中，NCEI落地頁、Geoportal HTML／XML、文件清單、PDF及SPDX頁6項成功；Creative Commons摘要與法律條款頁直接下載均回傳403，未冒充保存成功。瀏覽工具已閱讀CC0摘要，SPDX保存頁包含CC0條款全文，可對照商標／專利及免責限制。兩項403如實列在來源收據；正式資料集的CC0適用證據来自成功保存的NCEI落地頁。
