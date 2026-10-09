@@ -1,0 +1,28 @@
+---
+title: "B40：HOMR全歷史識別碼與2024共時關聯核查"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 一手查詢與時段證據
+
+依[HOMR官方API](https://www.ncei.noaa.gov/access/homr/api)對17個B39唯一近距離候選精確查ICAO，date=all保留全部歷史，phrData=false僅略過本輪不需要的元素歷史。搜尋匹配預設跨歷史，不能把回傳當作2024現行資料；本輪另逐項核識別碼與坐標有效時段涵蓋全年2024。GHCNH字段在實測JSON出現，完整原始回傳保留，不猜測API未列出的查詢類型。
+
+17項查詢中0項錯誤，保存24筆完整站史及109個識別碼時段；全部40站判定狀態 `{"HOMR_CONCURRENT_GHCNH_ICAO_ASSOCIATION_2024_LOCATION_CORROBORATED": 14, "B39_AMBIGUOUS_OR_NO_NEAR_CANDIDATE_RETAINED_NOT_QUERIED": 23, "NO_FULL_2024_ASSOCIATION_FOUND_OR_FETCH_FAILED": 3}`。
+
+只有同一NCDC站史同時包含精確GHCNH與ICAO且各自涵蓋2024，再以有時段的坐標對照符合1公里工程參數，才標記共時識別碼關聯有佐證。這不是從最相近名稱猜映射，不證明所有年代的物理站連續或從未搬遷。
+
+## 平台與品質邊界
+
+例如ENJA查詢同時回傳高空站及地面站，不能僅按ICAO合併。完整平台、名稱、地理時段與識別碼保留供後續核查；缺少平台欄位不能推斷平台一致。23個無唯一近距離候選的舊站保留未查詢狀態，沒有被移除。
+
+三個B39樣本的日期覆蓋對照附上本輪站史狀態；仍不比較氣象數值，新版疑似缺值與舊125筆風速衝突未解除。來源Present表示來源開放結束時段，不是永久有效保證。
+
+## 可追溯交付與續作
+
+[逐查收據](tables/64_homr_identity_b40_20261009/registry_homr_fetch_receipts.csv)、[完整站史](tables/64_homr_identity_b40_20261009/registry_homr_complete_station_records.csv)、[識別碼時段](tables/64_homr_identity_b40_20261009/registry_homr_identifier_periods.csv)、[40站判定](tables/64_homr_identity_b40_20261009/registry_40_station_identity_adjudication.csv)、[三樣本日期覆蓋及站史狀態](tables/64_homr_identity_b40_20261009/registry_three_sample_date_comparison_with_identity.csv)、[SQLite](tables/64_homr_identity_b40_20261009/homr_identity_b40.sqlite)。
+
+下一步覆核無候選／多候選站的歷史識別碼、遷移與來源坐標，並取得格式專用缺值證據後才比較量測。金融、工商、分頁、全球與授權待辦不結案；SDG業務分析凍結，Untitled不恢復，所有既有報告與原件保留。
