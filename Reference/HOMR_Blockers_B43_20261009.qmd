@@ -1,0 +1,29 @@
+---
+title: "B43：未結站史的明確阻塞原因與提交失敗中止機制"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 核查範圍與證據
+
+本輪合併審閱25項未結測站的B41 ICAO與B42 WBAN／精確站名查詢證據，共50份原始JSON逐份重新核對SHA256。使用既有官方來源證據，沒有重新下載，亦不宣稱外部資料已更新。既有15項共時／位置佐證保留，所有40站仍在最新判定表。
+
+## 明確區分待核原因
+
+逐個來源站史與GHCNH識別碼分開記錄：缺少完全相符ICAO、日期Unknown或不能涵蓋2024全年、沒有可解析全年有效坐標、位置超出1公里工程參數、或官方站表缺項。同一候選可以具有多項阻塞，計數不能相加當作測站數；不同查詢與平台的識別碼不拼接成一項已核實配對。
+
+這也保留B41的BGTL位置差異證據，避免B42站名查詢沒有GHCNH時將原有位置待核原因掩蓋。BALTASOUND的站名查詢雖回傳全年GHCNH與相符坐標，該記錄沒有相符ICAO，因此不誤標為單純日期不符。KNXP的Unknown日期保持Unknown。
+
+## 交付與驗收
+
+統計：`{"stations": 40, "prior_corroborated_retained": 15, "unresolved": 25, "prior_source_queries_verified": 50, "candidate_evidence_rows": 16, "candidate_blocker_counts": {"GHCNH_NOT_FULL_2024": 10, "ICAO_NOT_FULL_2024": 5, "NO_PARSEABLE_FULL_2024_COORDINATE_PAIR": 12, "LOCATION_EXCEEDS_1KM_ENGINEERING_PARAMETER": 1, "GHCNH_BEGIN_UNKNOWN_OR_UNPARSEABLE": 4, "ICAO_BEGIN_UNKNOWN_OR_UNPARSEABLE": 2, "EXACT_ICAO_ABSENT_IN_RETURNED_RECORD": 8}, "sqlite_counts": {"registry_candidate_blocker_details": 16, "registry_latest_40_station_adjudication": 40, "registry_query_outcomes": 50, "registry_verified_source_lineage": 50}, "prior_documents_preserved": true, "external_sources_refetched": false, "global_complete": false}`。
+
+
+[候選明細](tables/67_homr_blockers_b43_20261009/registry_candidate_blocker_details.csv)、[50份來源譜系](tables/67_homr_blockers_b43_20261009/registry_verified_source_lineage.csv)、[查詢結果](tables/67_homr_blockers_b43_20261009/registry_query_outcomes.csv)、[最新40站判定](tables/67_homr_blockers_b43_20261009/registry_latest_40_station_adjudication.csv)、[SQLite](tables/67_homr_blockers_b43_20261009/homr_blockers_b43.sqlite)。來源API規則參見[官方HOMR文件](https://www.ncei.noaa.gov/access/homr/api)；本輪分類是本地證據分析。
+
+新提交工具以每個子程序的非零退出碼立即中止，驗收未通過不得提交或推送；使用注入驗收失敗測試確認後續命令不執行。B42的失敗回執與原基線保留，不改寫過往驗收結果。本輪基線記錄開始時Inteligent文件已有的工作區修改，該文件不列入本輪提交。
+
+下一步續查新版量測缺值規則，以及日期Unknown、識別碼不符與位置差異的正式證據。125筆舊風速衝突及全球金融、工商、歷史政治實體清單保持開放，不宣稱全球收齊。所有既有報告保留，Untitled不恢復。
