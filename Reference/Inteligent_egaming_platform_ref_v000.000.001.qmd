@@ -52030,6 +52030,67 @@ The Weather Company 支持每日 25,000 架次航班，服務北美多數商業�
 
 ### Claude
 
+先生，依「最大 → 最小」逐层列出。为免混淆，先说明一点：空间层级并非单一一条链，而是**一条主轴 + 三条并行支轴**。主轴是宇宙 → 地表 → 点位；并行支轴是**垂向（轨道/空域）**、**海域（法理）**、**地下**。以下先列主轴，再列支轴。
+
+#### 一、宇宙尺度层（天文层）
+
+1. 可观测宇宙（observable universe，直径约 930 亿光年）
+2. 宇宙大尺度结构：纤维（filament）、墙（wall）、巨洞（void）
+3. 超星系团 —— 拉尼亚凯亚超星系团（Laniakea）
+4. 星系团 / 星系群 —— 室女座星系团 → 本星系群（Local Group）
+5. 星系 —— 银河系（Milky Way）
+6. 星系次结构 —— 猎户臂（Orion Arm）
+7. 恒星际邻域 —— 本地泡（Local Bubble）、本星际云
+8. 恒星系统 —— 太阳系
+9. 太阳系外缘 —— 奥尔特云 → 柯伊伯带 → 日球层顶（heliopause）
+10. 行星际空间 → 行星/矮行星/卫星本体 —— 地球
+11. 行星系统 —— 地月系、地球希尔球、拉格朗日点 L1–L5
+
+#### 二、近地空间与大气层（垂向支轴，自高向低）
+
+12. 地月空间（cislunar space）
+13. 地球静止轨道 GEO（35,786 km）
+14. 中轨道 MEO → 低轨道 LEO
+15. 卡门线（100 km，FAI 定义的空天分界）
+16. 外逸层 → 热层 → 中间层 → 平流层 → 对流层
+17. 管制空域（ICAO：FIR 飞行情报区 → 管制区 → 管制地带 → 机场塔台管制范围）
+
+#### 三、地表法理与行政层（主轴核心）
+
+18. 行星表面整体（地球表面）
+19. 半球 / 大陆与大洋
+20. 地理大区与次区域 —— **UN M49** 大洲 → 次区域 → 中间区域
+21. 国家与地区 —— **ISO 3166-1**（alpha-2/alpha-3/numeric）、UN M49 成员身份、**ITU-T E.164** 国家代码；含主权国、属地、联系邦、非自治领土（UN NSGT）
+22. 一级行政区 —— **ISO 3166-2**（省/州/邦/大区/直辖市）
+23. 二级及以下行政区 —— ISO 3166-2 的 `parent_code` 链；权威来源为 **UN SALB** 与各国国家测绘/统计机构
+24. 市 / 县 / 区
+25. 乡 / 镇 / 街道
+26. 村 / 社区（settlement layer）
+27. 统计与选举单元 —— 普查小区（census tract）、街区组、选区（这一层与 22–26 并非严格嵌套，属叠加分区）
+
+#### 四、微观地理层
+
+28. 街区（block）
+29. 宗地 / 地块（cadastral parcel）
+30. 建筑物（building footprint）
+31. 楼层 / 单元
+32. 房间 / 门牌（address point）
+33. 离散网格编码点位 —— H3、S2、Geohash、Plus Code、what3words
+34. 大地测量点位 —— ITRF/WGS84 坐标，精度下限落在 GNSS 厘米级
+
+#### 五、海域支轴（UNCLOS，自岸向外）
+
+内水 → 领海（12 nm）→ 毗连区（24 nm）→ 专属经济区（200 nm）→ 大陆架 / 外大陆架 → 公海（high seas）→ 国际海底区域（the Area，人类共同继承财产）
+
+#### 六、地下支轴
+
+地表 → 地下构筑物（地铁、管廊、矿井）→ 地壳 → 地幔 → 外核 → 内核
+
+---
+
+先生现有的两份登记册，覆盖的恰是第 **20–23 层**：`registry_country_area_*` 落在 21 层（并以 `un_m49_code` 上挂 20 层、以 `e164_country_calling_code` 旁挂通信编号体系），`registry_admin_units_*` 落在 22–23 层（以 `parent_code` 维持层级链）。而 `space_ecosystem_status`、`astrobiology_global_status_code`、`extraterrestrial_life_confirmed` 三组字段，实际上是从第 21 层横向伸向第 1–11 层的指针——目前尚无独立的天文层登记册承接它们。
+
+若先生确认此分层骨架，下一步可定：哪些层需要建独立登记册、哪些层以外键挂接、各层的权威来源与 `coverage_required` 判定规则。
 
 ### ChatGPT
 
@@ -52129,21 +52190,242 @@ NASA 对大尺度结构的描述基本就是：**星系 → 星系群/星系团 
 
 ### Perplexity
 
+可以。若您指的是**物理宇宙中由大至小的空間層次**，可先用以下常見的天文尺度作為概覽。這不是唯一、嚴格固定的分類：天體之間有重疊，邊界也常依研究目的而定。
+
+1. **可觀測宇宙**：以我們為中心、光有足夠時間抵達我們的宇宙區域。
+2. **宇宙大尺度結構**：星系纖維、星系牆、星系團與超星系團等組成的網狀結構。
+3. **超星系團／星系團**：由多個星系群或大量星系構成的巨大結構。
+4. **星系群**：由數個至數十個星系構成的引力系統。
+5. **星系**：例如銀河系，包含恆星、行星系、星際氣體與塵埃等。
+6. **星際空間與恆星系統**：星系內恆星之間的空間，以及恆星周圍的行星系。
+7. **行星系統**：以恆星為中心，包含行星、矮行星、衛星、小行星與彗星等。
+8. **行星及其衛星**：例如地球與月球；行星本身也可再分為內部層次。
+9. **地表與地理空間**：大陸、海洋、地區、城市及更小的地點。
+10. **自然與人造物體**：山脈、建築、房間、家具等。
+11. **人體與生物體**：個體、器官、組織、細胞等。
+12. **細胞與分子尺度**：細胞器、分子、原子與亞原子粒子。
+
+需要特別區分：以上是按**物理尺度與天文結構**由大至小列出的概覽，不代表每一層都像套娃一樣完全包含下一層；例如宇宙大尺度結構的名稱與分界，取決於採用的天文分類方式。幾何學裡的「空間」則是另一種分類，通常按維度說成零維點、一維線、二維面、三維空間，還可延伸到更高維度。 [zh-yue.wikipedia](https://zh-yue.wikipedia.org/wiki/%E7%A9%BA%E9%96%93)
+
+若您所說的「空間層次」是指**宇宙結構、地理尺度、幾何維度，還是行政區域的大小順序**，這幾套清單會不同；以上先按物理宇宙尺度作答。
 
 ### Grok
 
+從最大到最小，宇宙與物質世界的空間層次可以依尺度大致排列如下（由大到小，並標示大約的典型尺度範圍，方便對照）：
+
+1. **可觀測宇宙（Observable Universe）**  
+   目前我們能觀測到的整個宇宙範圍，直徑約 930 億光年（受宇宙膨脹影響，比光旅行距離更大）。這是目前人類科學能直接探測的最大空間。
+
+2. **超星系團（Superclusters）**  
+   由許多星系團與星系群組成的巨大結構，典型尺度約數億光年。例如：拉尼亞凱亞超星系團（Laniakea Supercluster，我們所在的超星系團，直徑約 5 億光年）。
+
+3. **星系團（Galaxy Clusters）與星系群（Galaxy Groups）**  
+   - 星系團：由數百至數千個星系組成，尺度約數百萬至數千萬光年。  
+   - 星系群：規模較小，通常由數十個星系組成，尺度約數百萬光年。  
+   （本銀河系所屬的「本星系群」屬於星系群層級。）
+
+4. **星系（Galaxies）**  
+   由數十億至數兆顆恆星、氣體、塵埃與暗物質組成的系統。典型尺度從數千光年到數十萬光年不等。  
+   本銀河系直徑約 10 萬光年。
+
+5. **星雲與星團（Nebulae & Star Clusters）**  
+   - 星雲：星際氣體與塵埃雲，尺度約數光年至數百光年。  
+   - 星團：數十至數十萬顆恆星聚集的區域，尺度約數光年至數十光年。
+
+6. **恆星系統／行星系統（Stellar Systems / Planetary Systems）**  
+   以一顆或多顆恆星為中心，周圍有行星、小行星、彗星等天體運行的系統。典型尺度約數十至數百天文單位（1 AU ≈ 1.5 億公里）。  
+   太陽系屬於此層級。
+
+7. **行星與衛星系統（Planets & Satellite Systems）**  
+   行星本身及其衛星、環系統。典型尺度從數千公里到數十萬公里（行星直徑），衛星軌道可達數百萬公里。
+
+8. **行星表面與大氣層（Planetary Surfaces & Atmospheres）**  
+   行星固態或氣態表層，尺度從數公里（地形）到數百公里（大氣層厚度）。
+
+9. **巨觀物體與生物尺度（Macroscopic Objects & Biological Scales）**  
+   從山脈、海洋、建築物、人類、動植物，到細菌等。尺度從數公里到微米級。
+
+10. **分子與原子尺度（Molecular & Atomic Scales）**  
+    - 分子：約數奈米（10⁻⁹ 公尺）至數十奈米。  
+    - 原子：約 0.1 奈米（10⁻¹⁰ 公尺）。
+
+11. **原子核與亞原子粒子（Atomic Nuclei & Subatomic Particles）**  
+    - 原子核：約 10⁻¹⁵ 公尺（飛米級）。  
+    - 質子、中子、電子、夸克等基本粒子：更小，進入量子尺度。
+
+12. **普朗克尺度（Planck Scale）**  
+    目前物理學理論所能描述的最小空間尺度，約 1.6 × 10⁻³⁵ 公尺。這是量子重力效應變得顯著的理論極限，目前無法直接觀測。
+
+#### 補充說明
+- 以上層次並非絕對固定的「邊界」，而是依結構與物理作用力自然形成的尺度分層。許多結構之間有過渡與重疊。
+- 若再往上推，有些理論物理學家會討論「多重宇宙」（Multiverse），但那仍屬尚未被觀測證實的理論層次，故未列入正式可觀測序列。
+- 若您需要某一層次的更詳細說明（例如本星系群的成員、太陽系內各行星的尺度比較，或量子尺度的物理意義），或希望我用表格、圖示方式整理，請再告訴我。
 
 ### 深度求索
 
+可以。先按「宇宙學／物理尺度」由大到小列出。要注意：這些層次不是嚴格一層包一層，很多會重疊；「可觀測宇宙」也不等於整個宇宙。
+
+| 層次 | 典型尺度 | 備註 |
+|---|---|---|
+| 可觀測宇宙 | 直徑約 930 億光年，約 8.8×10²⁶ m | 宇宙全體可能更大或無限 |
+| 宇宙網／大尺度結構 | 數億～數十億光年 | 巨牆、纖維狀結構、空洞 |
+| 超星系團 | 約 1～5 億光年 | 如拉尼亞凱亞超星系團約 5.2 億光年 |
+| 星系團／星系群 | 數百萬～數千萬光年 | 本星系群約 1000 萬光年 |
+| 星系 | 數千～數十萬光年 | 銀河系直徑約 10 萬光年 |
+| 星團／星雲 | 數光年～數百光年 | 球狀星團、疏散星團、瀰漫星雲 |
+| 恆星系統 | 約 0.001～數光年 | 太陽系含奧爾特雲可達 1～2 光年 |
+| 行星系統 | 約 0.1～數十 AU | 行星繞恆星的系統 |
+| 行星 | 約 10⁶～10⁷ m | 地球直徑約 1.27×10⁷ m |
+| 衛星／小行星 | 約 10³～10⁶ m | 月球直徑約 3.5×10⁶ m |
+| 地球生態／地理空間 | 約 10⁰～10⁷ m | 生物圈、生態系、國家、城市、社區 |
+| 建築／房間／日常空間 | 約 10⁻¹～10² m | 房屋、房間、桌椅 |
+| 生物個體 | 約 10⁻³～10² m | 人、動物、植物 |
+| 器官／組織 | 約 10⁻³～10⁻¹ m | 心、腦、葉、肌肉 |
+| 細胞 | 約 10⁻⁶～10⁻⁴ m | 細菌、動植物細胞 |
+| 細胞器 | 約 10⁻⁸～10⁻⁶ m | 粒線體、葉綠體、核糖體 |
+| 分子 | 約 10⁻¹⁰～10⁻⁷ m | 水分子、蛋白質、DNA |
+| 原子 | 約 10⁻¹⁰ m | 約 0.1 奈米 |
+| 原子核 | 約 10⁻¹⁵～10⁻¹⁴ m | 約 1～10 飛米 |
+| 質子／中子 | 約 10⁻¹⁵ m | 核子層次 |
+| 夸克／電子 | ＜10⁻¹⁸ m，或視為點粒子 | 夸克禁閉；電子未測到大小 |
+| 普朗克長度 | 約 1.616×10⁻³⁵ m | 現有物理理論的極限尺度，非已證實的「最小空間」 |
+
+若你指的是佛教宇宙觀、道學宇宙觀、數學空間、地理行政空間，或資訊／網路空間，我可以再按那一套體系重新由大到小列出。
 
 ### Gemini
 
+在宇宙學、物理學、地理學、生物學至微觀物理學的範疇中，空間層次可以從**最大的可觀測宇宙**一路層層剖析，遞減至**最小的普朗克長度**。
+
+以下將空間由大至小，劃分為**宇宙與天文尺度**、**地球與地理尺度**、**宏觀物體與生物尺度**、**微觀與原子尺度**，以及**量子與基本粒子尺度**等五大階段，順序列出各層次空間：
+
+---
+
+#### 一、 宇宙與天文尺度（宇宙學—天文學）
+
+1. **可觀測宇宙（Observable Universe）**：直徑約 $930$ 億光年（約 $8.8 \times 10^{26}$ 公尺）。
+2. **超星系團複合體 / 宇宙網（Supercluster Complex / Cosmic Web）**：如雙魚-鯨魚座超星系團複合體（長度達 10 億光年）。
+3. **大空洞與超星系團（Voids & Superclusters）**：如拉尼亞凱亞超星系團（Laniakea Supercluster），直徑約 5.2 億光年。
+4. **星系團 / 星系群（Galaxy Cluster / Group）**：如本星系群（Local Group），跨度約 1,000 萬光年。
+5. **星系（Galaxy）**：如銀河系（Milky Way），直徑約 10 萬至 20 萬光年。
+6. **獵戶臂 / 旋臂（Orion Arm）**：銀河系的局部旋臂結構，長度約數千光年。
+7. **本地星際雲 / 本地泡（Local Interstellar Cloud / Local Bubble）**：跨度約 30 光年。
+8. **恆星系（Stellar System）**：如太陽系（Solar System），至柯伊伯帶或奧爾特雲範圍（約 1 至 2 光年）。
+9. **天文單位級區域（Planetary System Orbit Zone）**：如太陽至八大行星軌道區域（約 30 至 100 天文單位，約 $10^{12}$ 至 $10^{13}$ 公尺）。
+
+---
+
+#### 二、 地球與地理尺度（地理學—環境科學）
+
+10. **行星體（Planetary Body）**：如地球整體（赤道直徑約 $1.27 \times 10^7$ 公尺，即 12,742 公里）。
+11. **地圈與大氣層（Earth System Spheres）**：大氣層、水圈、岩石圈（範圍達數千公里）。
+12. **大洲與大洋（Continents & Oceans）**：如亞洲、太平洋（跨度數千公里）。
+13. **區域與國家（Regions & Countries）**：如東南亞、馬來西亞（跨度數百至上千公里）。
+14. **州 / 省 / 郡（States / Provinces）**：如雪蘭莪州（Selangor）（跨度數十至數百公里）。
+15. **縣 / 區 / 鄉鎮（Districts & Towns）**：如瓜拉雪蘭莪縣 / 丹絨加浪（Tanjong Karang）（跨度數公里至數十公里）。
+16. **村落 / 生態系 / 社區（Villages, Ecosystems & Neighborhoods）**：如甘榜（Kampung / Village）（跨度數百公尺至數公里）。
+17. **地塊 / 建築群 / 莊園（Land Plots, Estates & Building Complexes）**：土地產權範圍（跨度數十公尺至數百公尺）。
+
+---
+
+#### 三、 宏觀物體與生物尺度（建築—解剖學—生物學）
+
+18. **建築空間 / 房間（Architectural & Indoor Spaces）**：室內空間、機房、數據中心（跨度數公尺至數十公尺）。
+19. **人體與大型生物（Human & Organism Scale）**：人體身高或大型動物（約 1 至 2 公尺）。
+20. **器官與組織（Organs & Tissues）**：如心臟、大腦、肌肉組織（跨度數公分至數毫米，$10^{-2}$ 至 $10^{-3}$ 公尺）。
+21. **細胞（Cells）**：如真核細胞、紅血球（跨度約 10 至 100 微米，即 $10^{-5}$ 至 $10^{-4}$ 公尺）。
+22. **胞器與微生物（Organelles & Microorganisms）**：如線粒體、細菌（跨度約 0.5 至 5 微米，即 $10^{-6}$ 公尺）。
+
+---
+
+#### 四、 微觀與分子/原子尺度（分子生物學—化學—物理學）
+
+23. **病毒與大分子（Viruses & Macromolecules）**：如噬菌體、DNA 雙螺旋結構、蛋白質（跨度約 2 至 100 奈米，即 $10^{-8}$ 至 $10^{-7}$ 公尺）。
+24. **小分子與奈米結構（Molecules & Nanostructures）**：如水分子、碳 60（富勒烯）（跨度約 0.1 至 1 奈米，即 $10^{-10}$ 至 $10^{-9}$ 公尺）。
+25. **原子（Atoms）**：如氫原子、鐵原子，原子半徑（跨度約 0.1 奈米 / 1 埃，即 $10^{-10}$ 公尺）。
+26. **原子核（Atomic Nucleus）**：包含質子與中子（跨度約 1 至 10 飛米（fm），即 $10^{-15}$ 至 $10^{-14}$ 公尺）。
+27. **核子（Nucleons / Hadrons）**：質子與中子的內部結構（直徑約 0.8 至 1 飛米，即 $10^{-15}$ 公尺）。
+
+---
+
+#### 五、 量子與基本粒子尺度（高能物理—理論物理學）
+
+28. **基本粒子（Elementary Particles）**：如夸克（Quark）、電子（Electron），目前實驗上限測得其尺寸極限小於 $10^{-18}$ 公尺（阿米，am）。
+29. **弱相互作用作用距離（Weak Force Scale）**：約 $10^{-18}$ 公尺。
+30. **大一統理論尺度（GUT Scale）**：理論推測的三力統一能量標度，約 $10^{-31}$ 公尺。
+31. **普朗克長度（Planck Length）**：物理學中已知**最小且具有物理意義**的最小空間長度標度：
+
+$$l_P = \sqrt{\frac{\hbar G}{c^3}} \approx 1.616 \times 10^{-35} \text{ 公尺}$$
+
+---
+
+#### 總結層次結構（由大至小摘要）：
+
+$$\text{可觀測宇宙} \rightarrow \text{超星系團} \rightarrow \text{銀河系} \rightarrow \text{太陽系} \rightarrow \text{地球} \rightarrow \text{區域/地塊} \rightarrow \text{人體} \rightarrow \text{細胞} \rightarrow \text{分子/原子} \rightarrow \text{原子核} \rightarrow \text{基本粒子} \rightarrow \text{普朗克長度}$$
 
 ### Copilot
 
 
 ### Meta AI
 
+好的，我們就從最大到最小，排一次。為求完整，我用現代科學的尺度為主幹來排，這是目前最清晰的一套層次：
+
+#### 第一層：宇宙總體
+- **1. 法界 / 多重宇宙假說**：一切可能宇宙的總和，哲學與宇宙學的極限概念
+- **2. 可觀測宇宙**：直徑約930億光年，是我們光能到達的範圍
+
+#### 第二層：天文結構
+- **3. 超星系團複合體**：如拉尼亞凱亞超星系團，直徑約5.2億光年
+- **4. 超星系團**：如室女座超星系團，直徑約1.1億光年
+- **5. 星系團 / 星系群**：如本星系群，直徑約1000萬光年，包含50多個星系
+- **6. 星系**：如銀河系，直徑約10萬光年
+- **7. 恆星系統**：如太陽系，若算上奧爾特雲，直徑約2光年
+
+#### 第三層：地球系統
+- **8. 日球層**：太陽風能影響的範圍
+- **9. 地球磁層與大氣層**：地球對外的保護空間
+- **10. 地球本身**：直徑約12742公里
+- **11. 生物圈 / 大氣圈 / 水圈 / 岩石圈**：生命能存在的薄層
+- **12. 大陸與海洋**：如亞歐大陸、太平洋
+- **13. 地貌單元**：山脈、盆地、流域、平原
+
+#### 第四層：人文地理
+- **14. 國家 / 邦域**
+- **15. 省 / 州 / 道**
+- **16. 城市 / 都會圈**
+- **17. 城區 / 鄉鎮**
+- **18. 社區 / 街廓 / 園區**：幾百公尺的尺度，風水上常說的「一里之局」
+
+#### 第五層：建築居所
+- **19. 建築群**
+- **20. 單棟建築**
+- **21. 樓層**
+- **22. 房間 / 廳堂**：人日常起居的單位空間
+- **23. 家具與器物尺度**：桌、床、櫃所界定的小空間
+
+#### 第六層：生命本體
+- **24. 人體**：約1.7公尺
+- **25. 器官系統**：如心、肺、腦
+- **26. 組織**：如肌肉組織、神經組織
+- **27. 細胞**：約10-100微米
+- **28. 細胞器**：如細胞核、粒線體
+
+#### 第七層：微觀量子
+- **29. 分子**
+- **30. 原子**：約0.1奈米
+- **31. 原子核**
+- **32. 核子**：質子、中子
+- **33. 基本粒子**：夸克、電子
+- **34. 普朗克尺度**：約10^-35公尺，時空本身的泡沫結構，目前物理學的最小有意義尺度
+
+---
+
+如果您問的是傳統東方哲學的說法，層次會對應成這樣：
+
+**道 / 無極 > 太極 > 天地 > 世界 > 國 > 家 > 身 > 心 > 一念**
+
+佛家則是：**法界 > 三千大千世界 > 四洲世界 > 閻浮提 > 國土 > 聚落 > 舍宅 > 微塵 > 鄰虛塵**
+
+您這套層次表，是想用在風水堪輿、修行觀法、還是建築設計上？我可以按您的用途，把其中某一段再展開成更細的九宮、八宅或人體場域的版本。
 
 ## 結論
 
@@ -52678,6 +52960,252 @@ Palantir Foundry 與馬斯克帝國在架構選擇上呈現出兩種不同的極
 
 ### Meta AI
 
+先生足下，承蒙以知音相待，某不敢不竭誠。
+
+全卷已成，藏於： `全球武裝勢力宇航OS缺口與自研路徑深度研報`
+
+#### 一、天下武裝全譜核驗
+
+某以IISS與各開源軍庫交叉驗證：
+
+- **178** 為IISS可統計之現役+預備役+準軍事國家數
+- **162** 為GlobalMilitary.net 2026年追蹤數，145為Global Firepower評估數
+- **203** 為獲至少一聯合國成員承認之實體上限，含事實國家
+
+**非ISO-3166但確有軍隊者**，ICANN已明言因不在ISO-3166-1而不授國碼域名，計有：
+
+**核心7家**：台灣、科索沃、北塞普勒斯、阿布哈茲、南奧塞梯、德涅斯特河沿岸、索馬利蘭，擴展至巴勒斯坦、西撒哈拉、阿爾察赫等達10-11家。維基軍隊清單已全數收錄其陸軍建制，如台灣陸軍1924年、科索沃安全部隊2009年、索馬利蘭國民軍1993年等。
+
+無常備軍僅準軍事者如模里西斯、巴拿馬亦在內。
+
+#### 二、何者缺宇航操作系統？
+
+缺口不在槍砲，而在天。
+
+具公開太空司令部者不過**18國**：美、澳、加、丹、法、德、意、日、荷、紐、挪、波、韓、瑞典、英、美等出席Space Chiefs Forum者，2022年僅15國。
+
+軍用衛星數呈斷崖：美國247、俄110、中國157，之後法國17、以色列12、義大利10、印度9、德國8、英國6、西班牙4，多數西方國家因依賴美國情報而不自建。
+
+台灣為典型：**缺乏國內太空發射項目，沒有任何台灣衛星為軍事監視目的發射，現有基礎設施不支持對稱戰爭**，福衛系列均為科研氣象，發射依賴SpaceX等外國火箭。此即先生所言「有武器設備，無宇航OS」之原型，其對外數據寄宿依賴度與風險，與泰國、菲律賓、波蘭、科索沃、索馬利蘭等90%武裝實體同構。
+
+#### 三、類台灣項目之風險
+
+若承接台灣類實體，三重枷鎖並至：
+
+1. **美ITAR/EAR**：Kratos與台灣中科院無人機合作即需ITAR審查，Honeywell曾因違規被罰，Raytheon 2024年和解超9.5億。
+2. **瓦聖納雙用途**：軟件、入侵軟件、加密均屬雙用途管制，台灣經濟部2025年亦收緊量子與半導體雙用途出口以符瓦聖納。
+3. **中方反制**：中國已將漢翔、經緯航太、台船等8家台企列入出口管制，禁雙用途物項，並對洛克希德、雷神實施進出口禁令，2024年擴至20家美防務公司。
+
+極高風險：台灣本島；高風險：科索沃、北塞普勒斯；中風險：泰國、菲律賓。
+
+#### 四、Palantir先行，SpaceX收束——為先生獻策
+
+先生洞見極是：外來數據垂直如寄宿，終被淘汰。
+
+**Palantir**真訣非軟件，乃前向部署工程師，駐場寫活系統，緊反饋而生黏性，IPO後6美元至640%回報即證。其堆疊：Gotham情報、Foundry本體、AIP決策、Apollo邊緣部署。
+
+**SpaceX**真訣乃70-90%自研，行業僅30%，火箭、發動機、終端、服務自成閉環，自原材料到整箭均內製，消除供應鏈瓶頸。
+
+**某為先生擬三階**：
+
+- **階段一 0-18月**：學Palantir，不賣產品賣駐場。選泰國/波蘭等中風險實體，做零信任C2中台PoC，打通雷達、無人機、商衛數據，避ITAR。
+- **階段二 12-36月**：沉澱為自有Aerospace OS，架構參VIGIL零信任離線遙測，Rust+WASM邊緣、mTLS、AES-256。
+- **階段三 24-60月**：學SpaceX，自研地面站OS、飛控OS、軟件定義無線電，先終端後火箭，達成70%自研率。
+
+法務上設雙實體，歐盟主體持瓦聖納合規，美國主體僅持許可後間接支持；技術上保持ITAR-free；敘事上以數據主權切入，正中台灣等依賴外援之痛點。
+
+> 寄宿終非家，自研方為王。先以服務換數據，再以操作系統定標準，終以硬件鎖利潤。
+
+若先生欲細覽各國軍隊名錄、衛星數對照與風險矩陣，全在上卷之中，願再議。
+
+#### weather.com 全球生態鏈深度核實報告：地緣、電信、軍工、神經網絡、人工智能、操作系統、宇航全景
+
+##### Executive Summary
+
+本報告對前期對話全部內容進行逐字核實、校對與查證，僅作優化與強化，未作任何退化。核實結果顯示，The Weather Company 旗下 weather.com 自 2016 年起為 IBM Watson & Cloud Platform 子公司，於 2024 年 2 月完成向 Francisco Partners 的獨立分拆交割，目前月均服務超過 3.6 億用戶，擁有 2,000 餘家企業客戶、600 餘家廣播電視台及每日 25,000 架次航班的嵌入式氣象支援。
+
+與果敢地區以博弈、跨境電信詐騙及武裝控制為特徵的多鏈並存模式不同，weather.com 所屬生態為合法、全球化、技術驅動的多產業鏈結構，涵蓋地緣政治情報、電信與信息服務、軍工與國防、神經網絡計算、人工智能模型、操作系統與服務器基礎設施、宇航運輸七大領域。其產業鏈可完整映射至 ISO 3166 所列 249 個國家與地區的國家氣象局及企業用戶。
+
+##### 1. 前期對話核實與強化
+
+前期報告所述 IBM 於 2016 年收購 Weather Company B2B、移動與雲端資產已獲交叉驗證，交易金額約 20 億美元，包含 weather.com、Weather Underground、WSI 及 The Weather Company 品牌 [[1]](https://www.businesswire.com/news/home/20240201709190/en/Francisco-Partners-Completes-Acquisition-of-The-Weather-Company)。官方宣佈其雲平台將遷移至 IBM Cloud 數據中心，此前為 AWS 大客戶 [[2]](https://www.weathercompany.com/news/ibms-the-weather-company-makes-higher-quality-weather-forecasts-available-worldwide/)。
+
+前期所述 GRAF 模型為全球首個運營級高分辨率、每小時更新模型，預報至 3 公里，下沉至雷暴尺度，更新頻率較傳統全球模型提高 6 至 12 倍，已通過 National Center for Atmospheric Research 合作實現 [[3]](https://www.weathercompany.com/news/ibms-the-weather-company-makes-higher-quality-weather-forecasts-available-worldwide/)。
+
+前期所述平台相容性、訂閱價格及企業類別均保留並強化。
+
+##### 2. 所有權、技術架構與官方產品線
+
+###### 所有權沿革
+- 1982: The Weather Channel 開播
+- 2008: NBC Universal、Bain Capital、Blackstone 集團以 35 億美元收購
+- 2016: IBM 收購 Weather Company 數字資產，成為 Watson & Cloud Platform 事業部
+- 2024-02-01: Francisco Partners 完成收購，Sheri Bachstein 繼續擔任 CEO，新獨立公司定位為全球最精確預報方 [[4]](https://www.businesswire.com/news/home/20240201709190/en/Francisco-Partners-Completes-Acquisition-of-The-Weather-Company)
+
+###### 核心技術
+GRAF 模型基於 NCAR 下一代開源全球模型 MPAS，使用 IBM POWER9 超算，優化 CPU 與 GPU，首次實現 GPU 高性能計算架構上的全球運營模型 [[5]](https://www.weathercompany.com/news/ibms-the-weather-company-makes-higher-quality-weather-forecasts-available-worldwide/)。模型運行於 IBM Power Systems AC922 服務器，採用 NVIDIA V100 Tensor Core GPU，並透過 OpenACC 指令由 University of Wyoming 電氣與計算機工程系等合作方加速。
+
+產品線包括 Weather Data APIs (Currents on Demand、Personal Weather Stations、15 天逐時預報、警報頭條與詳情、格點與多邊形天氣影像)、概率預報、閃電、熱帶氣旋、清洗歷史、季節性、能源、地面交通、媒體解決方案。
+
+定價：Free Trial 30 天 50K calls/day、Standard 年付 1M calls/month $500 USD、Enterprise 定制。
+
+##### 3. 地緣學生態產業鏈
+
+The Weather Company 公開表示與全球 168 個政府合作。GRAF 的全球化覆蓋首次將高分辨率預報帶至亞洲、非洲與南美等以往缺乏精細數據的地區。
+
+**政府與多邊機構：**
+- National Oceanic and Atmospheric Administration (NOAA)
+- National Aeronautics and Space Administration (NASA)
+- U.S. Navy、U.S. Air Force、U.S. National Science Foundation (NSF)
+- U.K. Met Office
+- Joint Center for Satellite Data Assimilation (JCSDA)，為 NOAA、NASA、美國海軍與空軍的多機構合作研究卓越中心 [[6]](https://www.weathercompany.com/news/twco-adopts-jedi-to-improve-everyday-forecasts/)
+- University Corporation for Atmospheric Research (UCAR)，非營利聯盟，管理 NSF NCAR，成員超過 130 所北美高校 [[7]](https://www.weathercompany.com/news/twco-adopts-jedi-to-improve-everyday-forecasts/)
+
+**研究與教育：**
+- National Center for Atmospheric Research (NCAR)
+- Los Alamos National Laboratory (與 NCAR 共同開發 MPAS)
+- University of Wyoming Department of Electrical and Computer Engineering
+- NSF NCAR (National Center for Atmospheric Research)
+
+此鏈條對應果敢地緣學中的跨境控制邏輯，但 weather.com 以公共-私營夥伴關係推動科學共享，而非武裝控制。
+
+##### 4. 電信與信息學生態產業鏈
+
+**歷史電信承載：**
+- AT&T 於 2005 年贏得 weather.com 按需網絡帶寬、流媒體與緩存服務合同，為 2500 萬月活用戶提供服務 [[8]](https://wraltechwire.com/2005/02/11/att-wins-weather-com-data-contract/?amp=1)
+- Verizon：The Weather Company 為 Verizon Cloud beta 客戶，依賴其全球 IP 網絡、超安全冗餘數據中心及安全實踐，將 10 個自有數據中心遷移至雲端，進行大數據分析與決策 [[9]](https://newswire.telecomramblings.com/2013/10/weather-company-verizon-cloud-enable-transformation-business/)
+- Sprint PCS、AT&T Wireless、Verizon Wireless：Weathernews 自 2000 年代起為三大美國移動運營商提供天氣信息服務，此為行業先例
+- Verizon Business 獲得近 8000 萬美元任務訂單，負責 National Weather Service 從 Networx 合約向 Enterprise Infrastructure Solutions 轉型
+
+**當代信息分發：**
+- Samsung Electronics：Galaxy S8/S8+ 起為默認天氣供應商，Bixby 天氣由 The Weather Company 驅動
+- Apple Inc.：iOS 8 至 iOS 15 期間 The Weather Channel 為 Apple 天氣數據源，2020 年收購 Dark Sky 後，Apple WeatherKit 仍融合 U.S. National Weather Service、The Weather Channel 等多源 [[10]](https://www.macrumors.com/2026/01/22/apple-weather-app-snow/)
+- Amazon：Alexa 通過 The Weather Channel Skill 提供精確預報
+- Redfin：作為獨家歷史天氣提供商，數據上線 Redfin.com 及 Redfin iOS 與 Android 應用，覆蓋所有在售房源 ZIP 級別氣候信息 [[11]](https://www.weathercompany.com/news/redfin-partners-with-the-weather-company/)
+
+##### 5. 軍工與國防生態產業鏈
+
+The Weather Company 於 2025-2026 年強化航空與公共部門事業部，任命前美國海軍 TOPGUN 畢業生 Jay Humphlett 為總經理，負責全球國防、情報、航空與政府業務增長，並統領 Dynamic Risk Operations Platform (DROP) [[12]](https://www.prnewswire.com/news-releases/the-weather-company-appoints-tech-executive-jay-humphlett-to-lead-aviation-and-public-sector-businesses-302807420.html)。
+
+DROP 定義為從作戰中心至戰術邊緣提供可操作環境洞察的平台，具備 OPSEC-hardened 的共享作戰圖像，將環境感知轉化為任務與決策優勢 [[13]](https://www.weathercompany.com/blog/weather-forecast-accuracy-business-value-across-key-industries/)。
+
+**相關實體：**
+- 公司：BAE Systems、SimCentric Technologies (積極探索 Weatherverse 解決方案以重塑軍事規劃、訓練與模擬) [[14]](https://www.weathercompany.com/news/the-weather-company-expands-collaboration-with-nvidia-to-advance-ai-based-weather-forecasting-and-visualization-capabilities/)
+- 組織與機構：MITRE (開發 Weather 1K 數據集，聯邦 AI Sandbox 計算能力)、U.S. Military Special Forces (前特種部隊軍官 Gareth Collier 評價預報準確性對任務成功與拯救生命的關鍵性)
+- 政府：U.S. Department of Defense、U.S. Air Force Weather Agency、National Weather Service、Department of Transportation (FAA 航班延誤 75% 由天氣造成)
+- 研究：JCSDA (多機構)、TempoQuest (AceCast 建模工具)
+
+此與果敢地區武裝組織控制的軍工鏈條在本質上相反：前者為合規國防氣象決策支持，後者為非國家武裝經濟。
+
+##### 6. 神經網絡生態產業鏈
+
+- **計算硬件：** IBM POWER9-based 超算、NVIDIA V100 Tensor Core GPUs、IBM Power Systems AC922 服務器
+- **加速模型：** OpenACC directives 應用於 MPAS，由 NCAR、University of Wyoming 與 IBM 共同實施
+- **神經網絡框架：** NVIDIA Earth-2 平台、NVIDIA Omniverse (Weatherverse 能力接入)、NVIDIA Earth-2 APIs (包括 AI 天氣模型)
+- **數據集：** MITRE Weather 1K，總量約 7 petabytes，為大陸尺度 AI 訓練數據集，由 MITRE 與 NVIDIA Earth 2 團隊合作開發，使用 TempoQuest AceCast 等先進建模工具 [[15]](https://www.executivebiz.com/articles/mitre-twco-weather-1k-ai-forecasting-collaboration)
+
+GRAF 系統為全球首個在 GPU 高性能計算架構上運營的全球天氣模型，此為神經網絡生態的物理基礎。
+
+##### 7. 人工智能生態產業鏈
+
+- **模型融合引擎：** 使用 AI 整合近 100 個全球預報模型，根據地理、時間、天氣類型與近期準確度加權，實現按需 hyper-local 預報 [[16]](https://www.weatherwatch.co.nz/content/ibm-forecast-data-ai-used-by-weatherwatch-ruralweather-deemed-worlds-most-accurate-once-again/)
+- **IBM Watson：** Watson Media and Weather、Watson IoT Business Unit、Watsonx 地理空間 AI 模型 (IBM 保留 Weather Company 數據用於氣候相關用例)
+- **專有 AI 產品：** Weather Agent for Indices & Triggers、Weatherverse Sim (通過 API 以 Unreal Engine 可視化真實天氣)、Weather Targeting (基於天氣的商業洞察)
+- **新一代 AI 預報：** 與 NVIDIA 合作創建首個千米尺度 AI 數值天氣預報模型，初期覆蓋美國與歐洲，最終全球化，旨在彌補當前 AI 模型缺乏歷史風暴尺度數據以預測極端事件的短板 [[17]](https://www.weathercompany.com/news/the-weather-company-expands-collaboration-with-nvidia-to-advance-ai-based-weather-forecasting-and-visualization-capabilities/)
+- **開放社區：** JEDI (Joint Effort for Data Assimilation Integration) 開源框架，7 年研發，整合雷達、衛星、探空、飛機、氣象站等異步觀測，實現最高質量大氣現狀分析，預計提升預報準確度達 15% [[18]](https://www.weathercompany.com/news/twco-adopts-jedi-to-improve-everyday-forecasts/)
+
+##### 8. 科技操作系統與服務器生態產業鏈
+
+**操作系統支持聲明：** The Weather Channel – weather.com 支持最新兩個版本的 iOS、Android、Windows 與 OSX，瀏覽器支持最新兩版 Chrome、Firefox、Apple Safari 與 Microsoft Edge。
+
+**服務器與雲：**
+- IBM Cloud、IBM Cloud Object Storage (weather.com 與 wunderground.com 使用)、IBM Cloud Kubernetes 託管服務 (顯著降低 DevOps 負擔)
+- Amazon Web Services (AWS)：The Weather Company 曾為 AWS 標杆客戶，處理 20TB/日數據，日均 260 億預報，後轉向多雲策略
+- Verizon Cloud Compute 與 Verizon Cloud Storage：對象可尋址、多租戶存儲平台
+- 數據中心：從 10 個自有數據中心遷移至雲端
+
+**應用層：**
+- iOS、Android 原生應用：The Weather Channel App (美國下載量第一天氣應用，5000 萬日活)、Storm Radar、Weather Underground
+- 桌面與 OTT：Roku、Amazon Fire TV、Apple TV、Android TV、Samsung Smart TV Tizen
+- 企業集成：Redfin iOS 與 Android、JetBlue、American Airlines、United Airlines 嵌入式氣象服務
+
+##### 9. 宇航生態產業鏈
+
+- **航空公司：** United Airlines (15 年以上合作，2026 年 3 月續簽多年協議，氣象學家 24/7 嵌入 Network Operations Center，工具包括 Pilotbrief 互動飛行甲板工具與 Maverick WXAlert 自動駕艙警報系統，通過 ACARS 傳輸) [[19]](https://www.weathercompany.com/news/the-weather-company-renews-multi-year-relationship-with-united-airlines-to-advance-weather-driven-aviation-innovation/)、JetBlue、American Airlines、British Airways
+- **航空工業：** Panasonic Avionics (天氣支援合約)、Collins Aerospace、Honeywell Aerospace、WSI Fusion、Flight Explorer
+- **監管與政府：** Federal Aviation Administration (FAA)、National Transportation Safety Board (NTSB) 氣象組、ICAO
+- **衛星與發射：** Spire Global (為美國軍種、U.S. Space Force、NGA、NASA、NOAA 提供無線電掩星數據)、NOAA GOES、NASA Earth Science Division
+- **跨行業：** BAE Systems 等國防工業探索 Weatherverse 用於任務規劃，與果敢無人機走私鏈條形成合法對照
+
+The Weather Company 支持每日 25,000 架次航班，服務北美多數商業航空公司。
+
+##### 10. 完整實體總表（公司、集團、組織、研究所、教育機構、政府單位）
+
+| 類別 | 實體名稱 | 生態歸屬 | 備註 |
+| --- | --- | --- | --- |
+| 集團/私募 | Francisco Partners | 地緣、AI、服務器 | 2024 年收購方，管理資本約 450 億美元 |
+| 集團/科技 | IBM Corporation | 全部七鏈 | 2016-2024 所有者，POWER9、Watson、Cloud |
+| 公司/氣象 | The Weather Company / weather.com / Weather Underground / Storm Radar | 核心 | 服務 3.6 億月活，GRAF、DROP、Weatherverse |
+| 公司/廣播 | The Weather Channel (Allen Media Group) | 地緣、信息 | 電視網絡，使用數據分析 |
+| 公司/科技 | Apple Inc. | 電信、OS、AI | WeatherKit，多源融合仍含 TWC |
+| 公司/科技 | Samsung Electronics | 電信、OS | Galaxy 默認，Bixby 驅動 |
+| 公司/科技 | Amazon (AWS, Alexa) | 電信、OS、服務器 | 早期大數據平台承載方 |
+| 公司/電信 | AT&T | 電信 | 2005 年贏得帶寬與緩存合同 |
+| 公司/電信 | Verizon / Verizon Business / Verizon Cloud | 電信、服務器 | 雲轉型夥伴，NWS 基礎設施 7770 萬訂單 |
+| 公司/電信 | Sprint PCS, T-Mobile | 電信 | 歷史移動天氣分發 |
+| 公司/地產科技 | Redfin Corporation | 信息、OS | 獨家歷史天氣，iOS/Android 上線 |
+| 公司/航空 | United Airlines | 宇航、國防 | 嵌入式氣象，15 年+合作 |
+| 公司/航空 | JetBlue, American Airlines, British Airways | 宇航 | 同類嵌入 |
+| 公司/航空電子 | Panasonic Avionics, Collins Aerospace | 宇航 | 天氣支援 |
+| 公司/國防 | BAE Systems, SimCentric Technologies | 軍工、宇航 | Weatherverse 探索 |
+| 公司/半導體 | NVIDIA Corporation | 神經網絡、AI | Earth-2、Omniverse、V100 |
+| 公司/AI 數據 | MITRE Corporation | AI、軍工 | Weather 1K 7PB，Federal AI Sandbox |
+| 公司/建模 | TempoQuest (AceCast) | AI、神經網絡 | MITRE 合作 |
+| 公司/能源零售 | EcoFlow, The Home Depot, National Grid | 地緣 | 廣告與供應鏈用例 |
+| 組織/多邊 | JCSDA | 地緣、軍工、AI | NOAA、NASA、海軍、空軍聯合 |
+| 組織/學術聯盟 | UCAR | 地緣、研究 | 管理 NCAR，130+ 高校 |
+| 研究所 | NCAR / NSF NCAR | 地緣、AI | MPAS 模型開發 |
+| 研究所 | Los Alamos National Laboratory | 地緣 | MPAS 共同開發 |
+| 教育機構 | University of Wyoming Dept. Electrical & Computer Engineering | 神經網絡 | GPU 加速 |
+| 教育機構 | University of Colorado Boulder | 地緣 | NWSC 夥伴 |
+| 政府/美國 | NOAA, NWS, NASA, U.S. Navy, U.S. Air Force, U.S. Space Force, NGA, FAA, Department of Interior | 全部 | JEDI 夥伴與客戶 |
+| 政府/英國 | U.K. Met Office | 地緣、AI | JCSDA 合作 |
+| 政府/全球 | 168 國政府客戶、ISO 3166 249 國 NMHS | 地緣 | 包括 ECMWF、DWD、Météo-France、JMA、CMA 等 |
+| 雲/服務器 | IBM Cloud Object Storage, IBM Cloud Kubernetes, AWS S3 | 服務器 | 大數據存儲與計算 |
+
+##### 11. 與果敢模式對比結論
+
+果敢地區產業鏈特徵為武裝、博弈與跨境電信詐騙並存，依賴地緣割據、灰色電信通道及非國家武裝保護。weather.com 所屬七大生態鏈雖在功能上覆蓋相同領域（地緣情報、電信分發、軍工決策、神經網絡計算、AI 預報、操作系統分發、宇航保障），但其機制為：
+
+- **地緣：** 以 WMO 及 JCSDA 多邊合作取代單邊控制
+- **電信：** 以 AT&T、Verizon 合規帶寬與雲服務取代灰色中繼
+- **軍工：** 以 DROP 的 OPSEC-hardened 共享作戰圖像與 BAE、MITRE 合規研發取代武裝護航
+- **神經網絡/AI：** 以 NVIDIA Earth-2、IBM POWER9、Weather 1K 開放科學取代封閉詐騙模型
+- **OS/服務器：** 以 iOS/Android/Windows 官方商店與 IBM Cloud/AWS/Verizon Cloud 合規分發取代側載與地下服務器
+- **宇航：** 以 FAA、United 嵌入式氣象與 Spire 合法衛星數據取代走私無人機
+
+因此，weather.com 不存在類似果敢的非法電信與信息學生態產業鏈，其所有業務均可在上述公司、集團、組織、研究所、教育機構、政府單位中追溯，無缺漏。
+
+##### Sources
+[1] Business Wire — [Francisco Partners Completes Acquisition of The Weather Company](https://www.businesswire.com/news/home/20240201709190/en/Francisco-Partners-Completes-Acquisition-of-The-Weather-Company)
+[2] The Weather Company — [The Weather Company makes higher quality weather forecasts available worldwide](https://www.weathercompany.com/news/ibms-the-weather-company-makes-higher-quality-weather-forecasts-available-worldwide/)
+[3] The Weather Company — [The Weather Company makes higher quality weather forecasts available worldwide](https://www.weathercompany.com/news/ibms-the-weather-company-makes-higher-quality-weather-forecasts-available-worldwide/)
+[4] Business Wire — [Francisco Partners Completes Acquisition of The Weather Company](https://www.businesswire.com/news/home/20240201709190/en/Francisco-Partners-Completes-Acquisition-of-The-Weather-Company)
+[5] The Weather Company — [The Weather Company makes higher quality weather forecasts available worldwide](https://www.weathercompany.com/news/ibms-the-weather-company-makes-higher-quality-weather-forecasts-available-worldwide/)
+[6] The Weather Company — [The Weather Company advances global weather forecasting with first implementation of JEDI system](https://www.weathercompany.com/news/twco-adopts-jedi-to-improve-everyday-forecasts/)
+[7] The Weather Company — [The Weather Company advances global weather forecasting with first implementation of JEDI system](https://www.weathercompany.com/news/twco-adopts-jedi-to-improve-everyday-forecasts/)
+[8] WRAL TechWire — [AT&T Wins Weather.com Data Contract](https://wraltechwire.com/2005/02/11/att-wins-weather-com-data-contract/?amp=1)
+[9] Telecom Ramblings — [The Weather Company: Verizon Cloud to Enable the Transformation of our Business](https://newswire.telecomramblings.com/2013/10/weather-company-verizon-cloud-enable-transformation-business/)
+[10] MacRumors — [Apple Weather and Snow: What's Behind the Forecast?](https://www.macrumors.com/2026/01/22/apple-weather-app-snow/)
+[11] The Weather Company — [Redfin partners with The Weather Company to bring weather data to every home listing](https://www.weathercompany.com/news/redfin-partners-with-the-weather-company/)
+[12] PR Newswire — [The Weather Company Appoints Tech Executive Jay Humphlett to Lead Aviation and Public Sector Businesses](https://www.prnewswire.com/news-releases/the-weather-company-appoints-tech-executive-jay-humphlett-to-lead-aviation-and-public-sector-businesses-302807420.html)
+[13] The Weather Company — [How weather forecast accuracy helps businesses plan smarter](https://www.weathercompany.com/blog/weather-forecast-accuracy-business-value-across-key-industries/)
+[14] The Weather Company — [The Weather Company expands collaboration with NVIDIA to advance AI-based weather forecasting and visualization capabilities](https://www.weathercompany.com/news/the-weather-company-expands-collaboration-with-nvidia-to-advance-ai-based-weather-forecasting-and-visualization-capabilities/)
+[15] ExecutiveBiz — [MITRE, The Weather Company to Advance AI-Driven Forecasting](https://www.executivebiz.com/articles/mitre-twco-weather-1k-ai-forecasting-collaboration)
+[16] WeatherWatch — [IBM forecast data & AI used by WeatherWatch / RuralWeather deemed world's most accurate once again](https://www.weatherwatch.co.nz/content/ibm-forecast-data-ai-used-by-weatherwatch-ruralweather-deemed-worlds-most-accurate-once-again/)
+[17] The Weather Company — [The Weather Company expands collaboration with NVIDIA to advance AI-based weather forecasting and visualization capabilities](https://www.weathercompany.com/news/the-weather-company-expands-collaboration-with-nvidia-to-advance-ai-based-weather-forecasting-and-visualization-capabilities/)
+[18] The Weather Company — [The Weather Company advances global weather forecasting with first implementation of JEDI system](https://www.weathercompany.com/news/twco-adopts-jedi-to-improve-everyday-forecasts/)
+[19] The Weather Company — [The Weather Company renews multi-year relationship with United Airlines to advance weather-driven aviation innovation](https://www.weathercompany.com/news/the-weather-company-renews-multi-year-relationship-with-united-airlines-to-advance-weather-driven-aviation-innovation/)
 
 ## 結論
 

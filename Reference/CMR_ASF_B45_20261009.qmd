@@ -1,0 +1,33 @@
+---
+title: "B45：NASA CMR／ASF全分頁集合目錄與逐產品工作清單"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 交接清單中的衛星地球觀測
+
+按[官方CMR API](https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html)的provider參數採集ASF公開集合中繼資料，使用每頁50項、原始JSON及回應標頭逐頁保存。以CMR-Hits核對累計及唯一concept_id，另取空終止頁。ASF是地球觀測來源供應單位，不是國家、上市公司或單一衛星。[ASF官方資料發現說明](https://asf.alaska.edu/asf/asf-services-data-discovery/)亦列出Earthdata Search等入口。
+
+此交付涵蓋本輪ASF查詢所回傳的全部最新公開集合，不等於所有NASA／全球資料源、所有歷史版本或全部影像。分頁不是原子交易快照：保存各次請求時間、來源版本與筆數，不宣稱期間無中繼資料更新。
+
+## 內容、價值與限制
+
+完整meta與UMM記錄保留在raw_item_json及原始檔；投影集合識別碼、來源修訂、短名／版本、時間、空間、平台、DOI、約束與連結，不因表格欄位有限而丟棄其餘資訊。相關網址逐項保留原始型別，但本輪沒有逐一下載或測可用性。
+
+用途是災害韌性與環境風險資料集選型及來源追溯。目錄時間／幾何不證明連續觀測或逐國實測覆蓋，資料集不是公司或物理衛星統計。各集合另列授權、granule可用性及產品格式品質三項待辦；不把SSODv2的CC0授權移植至ASF產品，不宣稱已下載影像或已驗證收益。
+
+## 可追溯交付
+
+統計：`{"provider": "ASF", "server_reported_hits": 166, "collections": 166, "distinct_concept_ids": 166, "related_url_references": 597, "pages_including_empty_terminal": 5, "scoped_pagination_reconciled": true, "atomic_source_snapshot": false, "all_historical_revisions_ingested": false, "imagery_downloaded": false, "per_collection_open_tasks": 498, "sqlite_counts": {"registry_all_asf_collections": 166, "registry_all_related_url_references": 597, "registry_business_field_definitions": 12, "registry_pagination_reconciliation": 5, "registry_per_collection_workqueue": 498, "registry_source_receipts": 6}, "old_documents_preserved": true, "global_complete": false}`。
+
+
+[全部集合](tables/69_cmr_asf_b45_20261009/registry_all_asf_collections.csv)、[相關網址](tables/69_cmr_asf_b45_20261009/registry_all_related_url_references.csv)、[分頁對賬](tables/69_cmr_asf_b45_20261009/registry_pagination_reconciliation.csv)、[來源收據](tables/69_cmr_asf_b45_20261009/registry_source_receipts.csv)、[業務欄位定義](tables/69_cmr_asf_b45_20261009/registry_business_field_definitions.csv)、[逐集合清單](tables/69_cmr_asf_b45_20261009/registry_per_collection_workqueue.csv)、[SQLite](tables/69_cmr_asf_b45_20261009/cmr_asf_b45.sqlite)。
+
+先前15项測站佐證、25項未結、3,114個SSOD待核值、125筆GSOD風速衝突均保留；全球金融、工商、歷史政治實體等待辦不結案。下一步依集合特定授權與granule證據選定可驗收的地球觀測產品；SDG業務分析仍凍結，Untitled不恢復。既有並行修改不納入本輪提交。
+
+## 提交狀態
+
+本輪生成後，受保護的Inteligent文件再次發生並行修改，基線驗收即中止；沒有暫存、提交或推送B45，沒有刷新原基線。其餘受保護文件雜湊未變，6份新來源原始檔雜湊核對通過。報告與數據目前為本地交付，來源SHA256不能替代語意真偽核證。中止回執見 `reports/2026-10-09/cmr_asf_b45/publication_hold.json`。
