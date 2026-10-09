@@ -1,0 +1,24 @@
+---
+title: "B36：MXSPD風速缺值衝突的一手來源覆核"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 已接續的未結項
+
+重新嘗試5個NOAA官方說明網址，保存1份具MXSPD段落的文件；其中0份詳細段落明確支持999.9缺值。B35全部125筆衝突逐站逐日與原始JSON對賬，涉及7站，未遺漏、未填零。
+
+## 判定邊界
+
+[現行GSOD說明](https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt)與備選官方說明分別記錄URL、時間、HTTP狀態、SHA256及原段落。404或受阻不代表相關資料不存在；其他機構或社群解析器的慣例不能冒充NOAA當期schema。
+
+本輪判定保留來源文件衝突，125筆標準化值均留空、暫停數值分析。即使另有官方文件支持999.9，也不消除現行說明999的版本差異。平均風／陣風同日缺值的伴隨情況只作診斷，不能獨立證明缺值定義。不以物理不合理值直接篡改原文，不把999值規則全局套用其他欄位。
+
+## 交付與下一步
+
+[官方文件嘗試](tables/60_weather_sentinel_b36_20261009/registry_official_documentation_attempts.csv)、[125筆逐項判定](tables/60_weather_sentinel_b36_20261009/registry_mxspd_adjudication.csv)、[逐站診斷](tables/60_weather_sentinel_b36_20261009/registry_conflict_station_summary.csv)、[SQLite](tables/60_weather_sentinel_b36_20261009/weather_sentinel_b36.sqlite)。原B31/B35規則與文件均保留；本批為有界覆核增補。
+
+下一步只對具有版本化明確缺值規則的欄位建立模型輸入條件；風速衝突在來源正式釐清或取得格式專用一手定義之前保持扣留。金融2608项、工商6项、分頁378项及授權CSV等清單仍未結案，SDG业务分析仍凍結，Untitled不恢復。這次覆核不是全球觀測完整性或預報能力驗收。
