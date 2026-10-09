@@ -1,0 +1,24 @@
+---
+title: "B33：全球經緯分層34站公開觀測實取與缺日台帳"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 實際取得
+
+接續B32全部34個預覽站，取得 34 份2024公開日摘要檔、11,163 條來源行；下載或解析失敗 0 項。逐站全年366日對賬，本批未觀測站日 1,281 項，站號／日期旗標 0 行。
+
+## 來源與可用性
+
+逐站網址直接指向 [NOAA NCEI GSOD年度公開目錄](https://www.ncei.noaa.gov/data/global-summary-of-the-day/access/2024/)。[官方摘要說明](https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt)的單位、哨兵值及報告窗口仍需對新站逐項套用；本批保留完整來源欄位，不填零、不推算缺日，也不產生預報能力或災害風險分數。下載SHA256只證實本地位元組身份，不是氣象真值證明。
+
+選站是B32的30°×60°非等面積網格內按站號排序，具有ICAO及涵蓋2024的站史期間；不是隨機樣本，亦非249國逐國覆蓋。來源國碼是FIPS，不直接對接ISO。失敗表示本次未取得；空缺日期表示本檔沒有該日，不推論其他NOAA產品或其他機構沒有觀測。B30六站與所有歷史批次保留。
+
+## 交付與後續
+
+[逐檔收據](tables/58_weather_spatial_b33_20261009/registry_fetch_manifest.csv)、[完整日摘要行](tables/58_weather_spatial_b33_20261009/registry_daily_observation_rows.csv)、[逐站可得性](tables/58_weather_spatial_b33_20261009/registry_station_availability.csv)、[缺日台帳](tables/58_weather_spatial_b33_20261009/registry_unobserved_calendar_dates.csv)、[SQLite](tables/58_weather_spatial_b33_20261009/weather_spatial_b33.sqlite)。驗收含原件雜湊、全年日期對賬、CSV／SQL計數、資料庫完整性與保留文件指紋。
+
+下一步將B31單位／缺值及B32窗口／位置覆核套用新站，才建立可比較指標。您新增的weather.com競爭盤點原文保留，其價格、客戶與市場數字本輪尚未外部逐項核實。SDG業務分析仍凍結；金融2608項、工商六項及其他歷史缺口未結案；全球完整度與商業收益未證实。
