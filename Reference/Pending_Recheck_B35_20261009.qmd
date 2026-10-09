@@ -1,0 +1,36 @@
+---
+title: "B35：最新版待辦再核對與34站氣象品質續作"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 最新基線與清單再核對
+
+依使用者確認，Untitled.qmd無需恢復。以92358bd及已提交的Inteligent／weather.com最新版為基線，所有原有追蹤QMD及MD指紋保持不變。全量重新讀取93份名稱含pending／queue／gap／remaining／actionplan／work_progress的追蹤CSV，逐表核算行數、狀態與SHA256；另保留11版行動清單正文。清單涵蓋本地已辨識的待辦表，並非宣稱所有正文中的隱含任務已自動識別。歷史版各自保留，不能累加成唯一任務總數。
+
+最新B25金融全表仍有4849項原始工作：2146項HTTP200待內容／範圍核定、2608項尚未嘗試、90項下載或非200覆核、5項截斷內容覆核。HTTP200不是實體驗證或完整收錄。B24的2828項未嘗試數已被B25取代，僅留作歷史。工商6項仍為PENDING_ENTITY_EXTRACT；378條分頁缺口保持待範圍覆核。B23工作簿衍生CSV及SQLite的發布保留未解除，不以B24候選值未匹配當作全面安全證明。
+
+全球歷史政治實體、上市公司、券商、貨幣及科技完整性仍未驗收；不得因單批通過就結案。SDG業務分析仍凍結。93份表的外部來源沒有全部重新訪問，本輪新鮮度欄明确標記NOT_REVALIDATED_THIS_BATCH；未重新核官方來源的任務只更新本地狀態，尚未繼續採集。
+
+## HTML與附件待辦
+
+核查152個追蹤HTML的同名QMD，其中151個已有QMD；剩餘 `reports/2026-10-07/listed_universe_b04/raw/asx_directory.html` 是ASX下載原件，不是本項目報告成品。保留原始資料，沒有把下載頁偽稱作者源稿。同名QMD存在只證實路徑存在，本輪未重測151件渲染的逐字或位元組等價。B34指明的授權CSV未找到仍待獨立重建；已內嵌的附錄正文保留。
+
+## 已核最新證據後接續的工作
+
+重新下載 [NOAA GSOD官方說明](https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt)，SHA256及完整位元組與B31來源一致，才將既有12欄單位／哨兵值規則套用B33的11163站日。新長表133956行，26966項來源缺值留空，解析／非有限數覆核0項；另有125筆MXSPD=999.9與官方說明缺值999不一致，列為DOCUMENTATION_SOURCE_SENTINEL_CONFLICT_REVIEW，保留原值、標準化值留空，尚未裁定為缺值或有效量測。34站逐日位置及溫度極值窗口核查觸發0日；這僅表示未觸發本輪規則，不是資料真值或全球模型能力證明。
+
+4676站日具有來源D／F／G降水報告窗口，其他記錄維持窗口未建立／不完整／缺值狀態；24小時窗口不保證本地午夜日。位置1公里是工程覆核參數，非NOAA認證標準。單位轉換保留原值及屬性，不提升量測精度。B33的1281個未觀測站日不補零、不覆寫原檔。
+
+亦重新閱讀 [The Weather Company官方定價頁](https://www.weathercompany.com/weather-data-apis/weather-data-apis-packages-pricing/)，核對Standard公開價及年約額度、試用限制、Enterprise客製與大型航空公司方案規則。這支持公開報價，不是成交價、已開通API或249地區實測覆蓋；其餘所有權、客戶、模型、授權與產業主張未在本輪一律核實，不改寫原文。
+
+[125筆風速缺值衝突台帳](tables/59_pending_recheck_b35_20261009/registry_mxspd_sentinel_conflicts.csv)須在後續模型輸入前單獨裁定；不沿用舊六站沒有該值而未觸發的情況。
+
+## 可對賬交付
+
+[93份清單再核對](tables/59_pending_recheck_b35_20261009/registry_all_queue_file_rechecks.csv)、[最新版待辦對照](tables/59_pending_recheck_b35_20261009/registry_current_unfinished_task_reconciliation.csv)、[行動清單歷史](tables/59_pending_recheck_b35_20261009/registry_actionplan_source_inventory.csv)、[HTML源檔核對](tables/59_pending_recheck_b35_20261009/registry_all_tracked_html_source_recheck.csv)、[新站變數長表](tables/59_pending_recheck_b35_20261009/registry_new_station_normalized_values.csv)、[逐日品質](tables/59_pending_recheck_b35_20261009/registry_new_station_daily_quality.csv)、[34站摘要](tables/59_pending_recheck_b35_20261009/registry_new_station_quality_summary.csv)、[供應商主張核對](tables/59_pending_recheck_b35_20261009/registry_weathercompany_claim_recheck.csv)、[SQLite](tables/59_pending_recheck_b35_20261009/pending_recheck_b35.sqlite)。
+
+SQLite逐表行數、完整性、原始34檔來源雜湊、12欄乘積及所有既有QMD／MD指紋驗收通過。下一步先更新來源授權和模型評估的金標條件，再做持出年份／地區驗證；觀測資料不可當作歷史預報。金融與工商續作前仍須各自重新核對來源當期狀態。

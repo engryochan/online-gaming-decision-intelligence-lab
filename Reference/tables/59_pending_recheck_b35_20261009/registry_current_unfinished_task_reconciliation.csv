@@ -1,0 +1,10 @@
+﻿task,count,state,evidence,next_step,external_current
+GLOBAL_FINANCIAL_ORIGINAL_WORK,4849,"{""status"": {""OBSERVED_LINK_REQUIRES_CONTENT_VALIDATION"": 4849}, ""last_http_status"": {""200"": 2151, ""403"": 14, ""307"": 1, """": 2653, ""429"": 15, ""404"": 7, ""418"": 3, ""202"": 4, ""401"": 1}, ""acquisition_status"": {""HTTP200_CONTENT_AND_UNIVERSE_SCOPE_REVIEW"": 2146, ""FETCH_ERROR_OR_NON200_REVIEW"": 90, ""NOT_YET_ATTEMPTED"": 2608, ""HTTP200_BODY_TRUNCATED_REVIEW"": 5}}",B25 registry_all_4849_work_progress.csv,Only latest work states guide next fetch; old B24 2828 pending count superseded,NOT_RECHECKED
+LOCAL_CORPORATE_EXTRACT,6,"{""PENDING_ENTITY_EXTRACT"": 6}",B28 registry_local_registry_workqueue.csv,Recheck official registry availability then obtain entity-specific extracts,NOT_RECHECKED
+PAGINATION_GAPS,378,PRESERVED_PENDING_SOURCE_SCOPE_REVIEW,B25 prior_b23_registry_pagination_gaps.csv,Reconcile preview with subsequent manifests before fetching,NOT_RECHECKED
+HELD_WORKBOOK_DERIVATIVES,2,RELEASE_HELD_NOT_CLEARED_BY_B24_LINEAGE_CHECK,B23 workbook CSV and SQLite local publication hold,Keep hold until candidate and complete derivative lineage resolved,NOT_APPLICABLE
+MISSING_REFERENCED_LICENSE_CSV,1,NOT_FOUND_IN_B34_READABLE_INVENTORY,B34 validation receipt,Create independently sourced license ledger; do not invent 34 source entries,NOT_RECHECKED
+GLOBAL_HISTORY_CURRENCIES_BROKERS_ISSUERS_TECHNOLOGY,,OPEN_NO_GLOBAL_COMPLETENESS_ACCEPTANCE,Historical and current queues retained,"Verify entity type, time, country identifiers and source-specific coverage",NOT_RECHECKED
+SDG_BUSINESS_ANALYSIS,,FROZEN_BY_USER_HANDOFF,v2.3.0 handoff,Do not resume,NOT_APPLICABLE
+UNTITLED,0,NO_RECOVERY_REQUIRED_USER_CONFIRMED,Latest user instruction,Do not restore,NOT_APPLICABLE
+HTML_SOURCE_RECOVERY,1,SIBLING_ABSENCE_CANDIDATES_NOT_ALL_REPORTS,B35 all tracked HTML sibling checks,Classify remaining assets/source pages/reports before byte-exact recovery,NOT_APPLICABLE
