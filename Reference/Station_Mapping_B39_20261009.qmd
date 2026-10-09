@@ -1,0 +1,26 @@
+---
+title: "B39：官方GHCNh全站表與40站映射候選覆核"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 完整來源與候選規則
+
+保存官方GHCNh站表全部38,870行及所有原始欄位，來源行號可追溯；重新下載官方版本1.1.0說明。40個既有GSOD站依非空ICAO精確對照，取得23條候選，其中17站只有一個1公里內候選。1公里是工程診斷參數，不是NOAA認證門檻。
+
+官方文件說明GHCN識別碼含來源國碼與網絡碼，國碼前綴不直接等於ISO；站表ISO_CODE另欄保留，不機械從站號取ISO。US W網絡與WBAN、I網絡與ICAO的編碼規則也不能替代所有站點的歷史連續性證據。ICAO與坐標對照只支持候選，不證明搬遷、合併或重編前後完全同一物理站。
+
+## 同年候選管線測試
+
+從唯一近距離候選按來源ISO_CODE分散選3站，嘗試取得2024 SSOD原檔，保存1,098行。只比較來源日期集合，不比較氣象量或推導模型誤差；尚無已接受的歷史crosswalk。
+
+此採樣不是全球或三國氣候代表性測試；31欄schema與站號／年份檢查只是管線驗收。新版疑似缺值及125筆舊風速衝突維持扣留。HOMR歷史識別碼、搬遷及當期時段仍待正式核對。
+
+## 可追溯交付
+
+[全站表](tables/63_station_mapping_b39_20261009/registry_full_ghcnh_station_list.csv)、[40站摘要](tables/63_station_mapping_b39_20261009/registry_40_station_candidate_summary.csv)、[全部ICAO候選](tables/63_station_mapping_b39_20261009/registry_all_exact_icao_candidates.csv)、[同年日期對照](tables/63_station_mapping_b39_20261009/registry_candidate_year_date_comparison.csv)、[原欄位日摘要](tables/63_station_mapping_b39_20261009/registry_candidate_ssod_2024_daily_rows.csv)、[來源收據](tables/63_station_mapping_b39_20261009/registry_source_receipts.csv)、[SQLite](tables/63_station_mapping_b39_20261009/station_mapping_b39.sqlite)。
+
+[官方站表](https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh-station-list.csv)與[站表格式](https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh_DOCUMENTATION.pdf)分別保存指紋；完整站表不等於全部站點均有2024觀測。下一步核HOMR歷史識別碼與候選冲突，再決定接受哪些crosswalk。其他全球、金融、授權與歷史未完成清單保留，SDG业务分析凍結，Untitled不恢復；舊報告及資料不覆寫。
