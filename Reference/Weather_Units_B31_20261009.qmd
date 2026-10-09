@@ -1,0 +1,22 @@
+---
+title: "B31：NOAA日摘要單位、缺值與品質標準化"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 實測结果
+
+B30的 2125 個站日，逐12變數展開為 25500 條長表；標記 4975 個官方缺值、0 個解析待核、986 條H/I降水品質限制。原值與屬性完整保留，缺值標準化為空／SQL文字空值，不填0；另有missing_state明示，未冒充SQL NULL。
+
+## 官方證據與规则
+
+[NOAA官方GSOD格式文件](https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt)本輪成功下載；文件與HTTP收據及SHA256保存。12欄逐欄缺值，華氏轉攝氏、節轉米每秒、英里轉米、英寸轉毫米，毫巴數值等同hPa。轉換值保留6小數是運算格式，不代表來源精度提高。MXSPD依本版文件用999，未自行假定其他缺值變體。
+
+原始日摘要以GMT為基础；極值與降水彙整窗口可能不同。H/I降水記錄維持不完整／未報告類別；零降水可包括微量，事件0含未報告。空值與品質限制不能當零降水或確定沒有事件，不計年度降水或災害率。
+
+## 對賬交付與限制
+
+[單位字典](tables/56_weather_units_b31_20261009/registry_variable_units.csv)、[標準化長表](tables/56_weather_units_b31_20261009/registry_normalized_weather_values.csv)、[逐日品質上下文](tables/56_weather_units_b31_20261009/registry_daily_quality_context.csv)、[逐變數摘要](tables/56_weather_units_b31_20261009/registry_variable_quality_summary.csv)、[SQLite](tables/56_weather_units_b31_20261009/weather_units_b31.sqlite)。全部行數、完整性及保護文件雜湊通過；原始B30與B29不覆寫。六站僅管線測試，非全球氣候樣本或預報能力核實。原金融、法人、歷史與分頁待辦保留，SDG業務分析保持凍結，沒有商業收益證據。
