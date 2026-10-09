@@ -1,0 +1,22 @@
+---
+title: "B32：站史／觀測位置與時間窗口核查"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 實測範圍
+
+完整核查六站 2125 個站日，0 日有覆核旗標；沒有刪除或自動拒收。另以全部站史有效坐標建立36個30度緯度×60度經度網格，展開 34 個下一輪站點預覽，未新增下載觀測。
+
+## 品質窗口與參數
+
+位置使用球面距離，半徑6371.0088km，1km是工程覆核參數而非NOAA品質標準。精度、站点搬遷或不同時點的原件可能導致差異；不同名稱不直接視為不同站。TEMP數值與源觀測次數≥4分開記錄，不能推定全天均匀報告；降水D/F/G屬24h或合計24h報告窗口，不保證本地午夜日完整，其他旗標維持待核。平均值與極值不一致可能涉及窗口，不直接判錯。
+
+[官方GSOD格式文件](https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt)的原件已在B31保存，本輪只讀沿用。規則網格不是等面積／隨機抽樣；metadata站史數不代表可用觀測、ISO地區或全球氣候覆蓋。未產生氣候指標、災害評分或預報技能。
+
+## 對賬交付
+
+[逐日核查](tables/57_weather_quality_b32_20261009/registry_daily_window_location_review.csv)、[六站摘要](tables/57_weather_quality_b32_20261009/registry_station_window_quality_summary.csv)、[全球metadata分層](tables/57_weather_quality_b32_20261009/registry_global_metadata_spatial_strata.csv)、[下一輪預覽](tables/57_weather_quality_b32_20261009/registry_next_spatial_sample_preview.csv)、[SQLite](tables/57_weather_quality_b32_20261009/weather_quality_b32.sqlite)。行數及SQLite完整性、保護文件雜湊通過。使用者正在修改的Inteligent文件與Untitled.qmd均保留，排除本輪提交。金融2608項、法人六項、歷史與分頁待辦保留；SDG業務分析維持凍結，全球完整性UNKNOWN。
