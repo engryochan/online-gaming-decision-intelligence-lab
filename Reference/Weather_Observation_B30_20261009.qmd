@@ -1,0 +1,22 @@
+---
+title: "B30：全球站史FIPS字典對照與2024觀測管線測試"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 實測範圍
+
+完整保存官方字典 293 行、292 個不同FIPS代碼；全量對照B29的 29661 條站史，狀態 `{"EMPTY_SOURCE_CODE": 894, "MATCHED_SOURCE_DICTIONARY": 28662, "UNRESOLVED_SOURCE_CODE": 105}`。六個來源地區各取一個符合條件的站，取得 6 份2024觀測檔、2125 條日摘要行；0 個下載失敗保留收據。
+
+## 官方證據與邊界
+
+[NOAA站史欄位說明](https://www.ncei.noaa.gov/pub/data/noaa/isd-history.txt)確認CTRY為FIPS；[官方國码字典](https://www.ncei.noaa.gov/pub/data/noaa/country-list.txt)含歷史與非主權地區，重複碼保留來源行。這不是ISO對照表。全站史列出有碼未解與空碼，不自動推定國家。
+
+觀測檔逐URL、SHA256保存。六站依有效坐標、ICAO、涵蓋2024的站史區間，按站號排序取首站；並非代表氣候的隨機或分層樣本。原始日摘要欄位完整保存，尚未核定單位、哨兵值和摘要定義，未把缺值轉零、未生成温度／降水指標。站號和日期檢查不驗證氣象量本身。
+
+## 可對賬交付
+
+[官方字典](tables/55_weather_observation_b30_20261009/registry_noaa_country_dictionary.csv)、[全站史字典對照](tables/55_weather_observation_b30_20261009/registry_all_station_country_dictionary_join.csv)、[站點選取](tables/55_weather_observation_b30_20261009/registry_observation_test_stations.csv)、[逐檔收據](tables/55_weather_observation_b30_20261009/observation_fetch_manifest.csv)、[日摘要行](tables/55_weather_observation_b30_20261009/registry_daily_observation_rows.csv)、[站號／日期檢查](tables/55_weather_observation_b30_20261009/registry_observation_join_checks.csv)、[SQLite](tables/55_weather_observation_b30_20261009/weather_observation_b30.sqlite)。讀取行數與SQL對賬通過；舊站史、交接與主報告保留。金融2608項、工商六項、歷史與分頁缺口沒有結案。SDG業務分析不恢復，全球覆蓋與商業收益仍UNKNOWN。
