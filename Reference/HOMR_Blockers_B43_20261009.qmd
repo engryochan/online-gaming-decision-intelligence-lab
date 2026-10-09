@@ -24,6 +24,6 @@ format:
 
 [候選明細](tables/67_homr_blockers_b43_20261009/registry_candidate_blocker_details.csv)、[50份來源譜系](tables/67_homr_blockers_b43_20261009/registry_verified_source_lineage.csv)、[查詢結果](tables/67_homr_blockers_b43_20261009/registry_query_outcomes.csv)、[最新40站判定](tables/67_homr_blockers_b43_20261009/registry_latest_40_station_adjudication.csv)、[SQLite](tables/67_homr_blockers_b43_20261009/homr_blockers_b43.sqlite)。來源API規則參見[官方HOMR文件](https://www.ncei.noaa.gov/access/homr/api)；本輪分類是本地證據分析。
 
-新提交工具以每個子程序的非零退出碼立即中止，驗收未通過不得提交或推送；使用注入驗收失敗測試確認後續命令不執行。B42的失敗回執與原基線保留，不改寫過往驗收結果。本輪基線記錄開始時Inteligent文件已有的工作區修改，該文件不列入本輪提交。
+新提交工具以每個子程序的非零退出碼立即中止，驗收未通過不得提交或推送；使用注入驗收失敗測試確認後續命令不執行。B42的失敗回執與原基線保留，不改寫過往驗收結果。本輪開始檢查時Inteligent文件有工作區修改；在建立本輪基線前，該修改已由提交 `d95428f` 保存。基線採用其現行內容，本輪不覆寫該文件，亦不把該文件列入交付暫存範圍。
 
 下一步續查新版量測缺值規則，以及日期Unknown、識別碼不符與位置差異的正式證據。125筆舊風速衝突及全球金融、工商、歷史政治實體清單保持開放，不宣稱全球收齊。所有既有報告保留，Untitled不恢復。
