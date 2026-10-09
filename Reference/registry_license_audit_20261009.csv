@@ -1,0 +1,35 @@
+source_id,source_name,used_in_registry,license,commercial_use,redistribute_raw,redistribute_derived,attribution_required,contagious,blocker_risk,action_required,evidence_level,as_of,note
+LIC-001,ISO 3166-1 official maintenance table,registry_country_area_iso3166_m49_e164,ISO proprietary (paid),LICENSE_REQUIRED,NO,CONDITIONAL,YES,NO,MEDIUM,"Codes as facts are not copyrightable; ISO's compiled arrangement and official name list are. Confirm whether current table was derived from ISO publication or from free secondary sources",INFERRED,2026-10-09,Must document derivation path before selling
+LIC-002,UN M49 Standard Country or Area Codes,registry_country_area_iso3166_m49_e164,UN open,YES,YES,YES,YES,NO,LOW,Add source citation line to data dictionary,P0,2026-10-09,Cleanest single source in the registry
+LIC-003,UN SALB (Second Administrative Level Boundaries),registry_admin_units_iso3166_2,CC BY 3.0 IGO,YES,YES,YES,YES,NO,LOW,Add mandatory attribution string to every delivered file and API response,P0,2026-10-09,Attribution is a licence condition not a courtesy
+LIC-004,ITU E.164 numbering plan,registry_country_area_iso3166_m49_e164,ITU published,YES,YES,YES,YES,NO,LOW,Track ITU bulletin cadence; stamp as_of per record,P0,2026-10-09,Changes frequently; staleness is the main risk not licence
+LIC-005,GeoNames,registry_admin_units_iso3166_2,CC BY 4.0,YES,YES,YES,YES,NO,LOW,Attribution,P1,2026-10-09,
+LIC-006,OpenStreetMap,UNKNOWN - must verify,ODbL,YES,YES,CONDITIONAL,YES,YES,CRITICAL,"AUDIT FIRST: if any admin-unit geometry or name was sourced from OSM the derived database becomes subject to ODbL share-alike. Must confirm zero OSM lineage in both registry CSVs before any proprietary sale",P0,2026-10-09,Single highest legal risk in the stack
+LIC-007,OSM public tile service,not used,service ToU,NO,n/a,n/a,YES,NO,LOW,Never route commercial traffic through tile.openstreetmap.org; self-host tiles if WebGIS is delivered,P0,2026-10-09,Data licence and tile service ToU are separate questions
+LIC-008,Copernicus Sentinel,candidate for ChangeWatch product,free full and open,YES,YES,YES,YES,NO,LOW,Attribution; portal content other than the data has separate terms,P0,2026-10-09,
+LIC-009,Landsat / USGS,candidate for ChangeWatch product,public domain,YES,YES,YES,RECOMMENDED,NO,LOW,Cite source for scientific lineage,P0,2026-10-09,USGS states no restriction on use or redistribution
+LIC-010,ECMWF Open Data,candidate for weather product,CC BY 4.0 + ECMWF terms,YES,CONDITIONAL,YES,YES,NO,MEDIUM,Read ECMWF additional terms before API resale,P1,2026-10-09,
+LIC-011,Open-Meteo free API,candidate for weather product,free tier non-commercial,NO,NO,NO,YES,NO,HIGH,"Free API is non-commercial only. Commercial use requires paid API subscription. Do not build a paid product on the free endpoint",P1,2026-10-09,Correction against earlier drafts that treated it as freely commercial
+LIC-012,GDELT,candidate for conflict index,open,YES,CONDITIONAL,YES,YES,NO,MEDIUM,Build cleaning layer; noise is a product-quality risk not a licence risk,P1,2026-10-09,
+LIC-013,ACLED,candidate for conflict index,tiered,CONDITIONAL,NO,CONDITIONAL,YES,NO,HIGH,"Academic use free; commercial use requires paid licence. Obtain written commercial terms before any paid deliverable cites ACLED",P1,2026-10-09,
+LIC-014,Space-Track TLE,candidate for launch/orbit dataset,US government ToU,CONDITIONAL,NO,CONDITIONAL,YES,NO,HIGH,Redistribution restricted. Use CelesTrak or a commercial provider for any subscription product,P1,2026-10-09,
+LIC-015,CelesTrak,candidate for launch/orbit dataset,see site terms,YES,CONDITIONAL,YES,YES,NO,MEDIUM,Read current terms before redistribution,INFERRED,2026-10-09,Preferred substitute for Space-Track in commercial context
+LIC-016,AIS raw feeds (MarineTraffic / AISHub / Spire),candidate for shadow-fleet product,vendor specific,CONDITIONAL,NO,CONDITIONAL,YES,NO,HIGH,Each vendor has distinct resale terms; raw AIS generally may not be resold. Budget for a commercial AIS contract,P1,2026-10-09,
+LIC-017,UN sanctions lists,candidate for shadow-fleet product,UN open,YES,YES,YES,YES,NO,LOW,Attribution,P0,2026-10-09,
+LIC-018,OpenCorporates,candidate for shell-company graph,tiered,CONDITIONAL,NO,CONDITIONAL,YES,NO,MEDIUM,Check current API and bulk-data terms,INFERRED,2026-10-09,
+LIC-019,UN Comtrade,candidate for supply-chain index,UN terms,CONDITIONAL,CONDITIONAL,YES,YES,NO,MEDIUM,Check bulk download and redistribution terms,INFERRED,2026-10-09,
+LIC-020,USGS mineral commodity data,candidate for supply-chain index,public domain,YES,YES,YES,RECOMMENDED,NO,LOW,,P1,2026-10-09,
+LIC-021,QGIS,consulting/implementation stack,GPL v2,YES,n/a,n/a,YES,CONDITIONAL,LOW,"Paid services training deployment are fine; GPL obligations attach only if you distribute modified binaries",P0,2026-10-09,Official QGIS site lists commercial support providers
+LIC-022,GeoServer,consulting/implementation stack,GPL v2+ with exceptions,YES,n/a,n/a,YES,CONDITIONAL,LOW,Same as QGIS,P0,2026-10-09,
+LIC-023,GDAL / OGR,consulting/implementation stack,MIT (core),YES,n/a,n/a,YES,NO,LOW,Inventory dependency licences before shipping binaries,P0,2026-10-09,
+LIC-024,PROJ,consulting/implementation stack,MIT,YES,n/a,n/a,YES,NO,LOW,Retain licence notice,P0,2026-10-09,
+LIC-025,PostGIS,consulting/implementation stack,GPL v2,YES,n/a,n/a,YES,CONDITIONAL,LOW,SaaS use does not trigger distribution,P0,2026-10-09,
+LIC-026,Grafana,dashboard delivery,AGPL,CONDITIONAL,n/a,n/a,YES,YES,HIGH,"AGPL network clause reaches SaaS. Either isolate buy a commercial licence or substitute",P1,2026-10-09,
+LIC-027,NASA cFS,training/prototype offering,Apache-2.0 (open release),YES,YES,YES,YES,NO,MEDIUM,"Open-source release and NASA government release under Software User Agreement are different artefacts; some components may be EAR-controlled - check per item",P0,2026-10-09,
+LIC-028,NASA GMAT,training/prototype offering,Apache-2.0 family,YES,YES,YES,YES,NO,MEDIUM,EAR check per component,P0,2026-10-09,
+LIC-029,Orekit,training/prototype offering,Apache-2.0,YES,YES,YES,YES,NO,LOW,Clean,P0,2026-10-09,
+LIC-030,Basilisk,training/prototype offering,ISC,YES,YES,YES,YES,NO,LOW,Clean,P0,2026-10-09,
+LIC-031,NAIF SPICE,training/prototype offering,public domain,YES,YES,YES,RECOMMENDED,NO,LOW,Clean,P0,2026-10-09,
+LIC-032,OpenC3 COSMOS,training/prototype offering,see project licence,CONDITIONAL,n/a,n/a,YES,CONDITIONAL,MEDIUM,Verify current edition licence split before commercial delivery,INFERRED,2026-10-09,
+LIC-033,STAC specification,data engineering offering,OGC community standard (CC BY 4.0 for spec),YES,n/a,n/a,YES,NO,LOW,Spec licence is not a data licence,P0,2026-10-09,
+LIC-034,ITAR / EAR controlled items,OUT OF SCOPE,US export control,NO,NO,NO,n/a,n/a,PROHIBITED,"Hard red line for non-US persons and non-US entities. Not a risk to manage - a boundary not to cross",P0,2026-10-09,
