@@ -1,0 +1,7 @@
+﻿issue,evidence,state
+DOCUMENT_EXAMPLE_URL,Original lowercase sample path HTTP404; listed /csv/SSOD_ path retrieved,ACCESS_PATH_CORRECTED_BY_OBJECT_LISTING
+SENTINEL,Observed -9999.9 in sample; PDF missing-value definition not explicit,OPEN_NUMERIC_HOLD
+DEFINITION_TEXT,Several pressure/visibility/wind entries reuse dew-point wording; min-temperature entry lacks explicit unit,OPEN_SOURCE_TEXT_REVIEW
+PRECIPITATION_ATTRIBUTE,New numeric n represents count of hourly totals; letter flags also supported,SCHEMA_RULE_REQUIRED_NOT_REUSE_GSOD_ONLY_LETTERS
+STATION_ID,GHCN identifier replaces legacy USAF/WBAN concatenation,40_MAPPINGS_PENDING
+MEAN_COUNT,"Means require report in each six-hour period, not only total>=4",REVIEW_SAMPLING_WINDOW_RULE

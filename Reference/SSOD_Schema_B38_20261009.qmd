@@ -1,0 +1,24 @@
+---
+title: "B38：SSODv2格式核對、示例採集與40站映射待辦"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 官方格式與實測
+
+讀取SSOD 2.0.0官方PDF全部7頁，視覺核對第6頁降水標記表，確認新版使用GHCN站號、SI量測單位及UTC日；均值需四個6小時時段各有報告，不能只用總次數≥4替代。降水屬性新增小時報告數n，並保留字母標记。文件若干欄位說明有重複文字，最低溫欄位未明寫單位，均列待核。
+
+官方PDF示例網址實測404；公開物件清單確認需csv子目錄及大寫SSOD_檔名。取得USW00003812（ASHEVILLE AP）2023完整來源檔，這是官方具名示例測試，非先前40站的新舊匹配，也非全球代表性樣本。
+
+樣本365條日記錄、31欄全部與PDF欄位名對照；日期／站號旗標0行。出現514個-9999.9值，文件未明示其缺值規則，本輪保留原值并暫停數值分析，不把觀察到的格式慣例當作正式定義。
+
+## 可追溯交付
+
+[來源收據](tables/62_ssod_schema_b38_20261009/registry_source_receipts.csv)、[31欄字典](tables/62_ssod_schema_b38_20261009/registry_ssodv2_31_column_schema.csv)、[完整樣本行](tables/62_ssod_schema_b38_20261009/registry_ssodv2_sample_daily_rows.csv)、[待核缺值](tables/62_ssod_schema_b38_20261009/registry_ssodv2_suspect_missing_values.csv)、[40站映射清單](tables/62_ssod_schema_b38_20261009/registry_legacy_40_station_mapping_workqueue.csv)、[格式問題](tables/62_ssod_schema_b38_20261009/registry_document_and_schema_issues.csv)、[SQLite](tables/62_ssod_schema_b38_20261009/ssod_schema_b38.sqlite)。
+
+[官方PDF](../reports/2026-10-09/ssod_schema_b38/raw/ssodv2_DOCUMENTATION.pdf)及[實取CSV](../reports/2026-10-09/ssod_schema_b38/raw/SSOD_USW00003812_2023.csv)保留來源位元組；物件目錄是有限prefix查詢，不宣稱全目錄下載。31欄存在不是每個值正確的證明。
+
+本輪完成格式閱讀和獨立示例管線，40站身分映射、同年新舊比較、明確缺值裁定及SSOD引用／授權仍未竣工。125筆舊GSOD風速衝突继续扣留，舊批次和使用者正文均保留。下一步核官方站號crosswalk，匹配後才取2024對照樣本；金融及其他待辦不結案，SDG業務分析仍凍結，Untitled不恢復。
