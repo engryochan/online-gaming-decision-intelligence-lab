@@ -1,0 +1,28 @@
+---
+title: "B29：NOAA全球氣象站歷史名錄全量核查"
+date: 2026-10-09
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 定位與實測
+
+依最新提交交接書，優先氣象／災害韌性公開資料，不恢復SDG分析。取得一個明確schema的公開站史資料集，沒有採集軍事目標、即時軍事動態或受限系統。
+
+完整讀取 29661 條站史來源行，保留全部11個原始欄位、前導零和來源行號；解析 29661 條，拒收或丟棄0條。實測 29661 個不同USAF/WBAN對、284 個非空來源國碼。這些是站史記錄與來源代碼，不是已核實唯一實體站、ISO地區覆蓋或活躍站數。
+
+## 品質與時間
+
+品質信號分職保留，見逐行旗標與彙總。空坐標不填0；零零坐標不自動改為空；重複ID對不機械合併。BEGIN/END解碼為日期，區間檢查不能當成連續氣象觀測。來源CTRY未核定ISO映射，不以同字母自動連結249母表；母表與歷史政治實體原資料均保留。
+
+## 官方來源与範圍
+
+[NOAA ISD官方說明](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database)說明全球地面觀測及時間／空間覆蓋差異；[站史CSV](https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv)本輪全部取得。站史名錄不是溫度、降水或衛星影像；本輪未下載氣象觀測，也未建立預報精度或災害模型。原始SHA256證明保存版本，不是內容真實性的独立認證。實際產品及衍生使用仍按來源條款逐項核定。
+
+## 交付與下一步
+
+[全站史核查](tables/54_weather_station_b29_20261009/registry_station_history.csv)、[品質摘要](tables/54_weather_station_b29_20261009/registry_station_quality_summary.csv)、[來源國碼](tables/54_weather_station_b29_20261009/registry_source_country_counts.csv)、[年代區間檢查](tables/54_weather_station_b29_20261009/registry_history_interval_checks.csv)、[SQLite](tables/54_weather_station_b29_20261009/weather_station_b29.sqlite)。全量來源行數、CSV/SQL、完整性及保護文件雜湊核對通過，七向文件已更新。下一步先核對國碼與站史欄位定义，再取得代表站歷史觀測，對照官方金標，不能用名錄行數替代模型效果。
+
+原金融清單2608項未嘗試、六個工商查詢、歷史封存與分頁缺口均未結案。全球完整收錄及商業收益仍UNKNOWN。交接書和兩份主報告未覆寫。
