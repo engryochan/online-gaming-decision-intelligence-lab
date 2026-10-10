@@ -1,0 +1,34 @@
+---
+title: "B47：續作前全項目變更與新增研究套件覆核"
+date: 2026-10-10
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 最新提交與原文保留
+
+工作區開始檢查時乾淨，並不代表內容未變。以最後已知B44提交cc9526a對比現行HEAD，逐路徑記錄狀態及SHA256。新增B45交付、地緣研究套件、氣象／全球勢力報告、isd-history及授權表；Inteligent QMD與HTML亦有已提交更新。本輪沒有覆寫任何原文。
+
+兩份宇航／地緣主報告與v2.3.0交接書相對比較基點未變，既定用途與凍結範圍保持適用。Untitled不恢復。
+
+## 新增研究套件的實質覆核
+
+v3清單的9個文件SHA256與位元組長度全部吻合，v2是v3的完整位元組前綴。CSV有48個單一情境、12個複合情境；情境引用均存在，85個提問標記對應88次原請求。Python僅靜態語法解析，不執行新增脚本。這些結果證明本地結構與保留情況，不證明外部主張或商業情境已通過；48項測試仍為NOT_RUN。
+
+30項實體、9項API來源及6項買家方案是登記資料，不等於已驗證部署、付費需求或收益。先前未找到的34行授權表與提問附錄現在已出現，不能再沿用「文件缺失」的舊狀態；34項條款仍須官方來源與適用範圍逐項重核，既有P0等標記不自動升格為本輪外部核證。
+
+新增Weather-Com報告含全球249映射、用戶／客戶／航班規模等主張；本輪記錄其存在與用途，未逐句外部核證，不將其摘要「全部核實」直接作驗收結果。
+
+## 續作定位
+
+B45已由後續提交收錄，其原publication_hold與基線保持歷史記錄，不改寫成原驗收曾通過。B46目前只有生成器，沒有baseline與validation_receipt，先前命令因自動審核額度限制未執行，不能宣稱已查詢166項。現行續作以新提交內容為準；先保留本次覆核，之後再按166集合／498項清單取得可追溯證據。
+
+核查統計：`{"base": "cc9526a", "head": "4065292200722250b2221872d6bc14b7c2af56ce", "committed_changed_paths": 57, "change_states": {"M": 3, "A": 54}, "bundle_manifest_entries_verified": 9, "v2_exact_prefix_preserved": true, "single_scenarios": 48, "compound_scenarios": 12, "prompt_unique": 85, "prompt_instances": 88, "scenario_test_states": {"NOT_RUN": 48}, "license_rows_newly_present": 34, "license_terms_external_revalidation": false, "protected_target_changes_absent": {"Reference/Aerospace_Ecosystem_Report.qmd": true, "Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd": true, "Reference/geo_defense_space_handoff_v2_3_0.md": true}, "b46_execution_started": false, "global_complete": false}`。
+
+全項目SHA256快照由原掃描器另行生成；它不是逐文件內容真偽審定。
+
+## 檢查覆蓋邊界
+
+本輪已完成57項Git變更路徑及新增套件的上述內容／結構覆核。全項目掃描器仍未返回完整快照，不能宣稱已核實所有忽略文件或全部正文；本輪提交不包含尚未完成的掃描回執。未見掃描完成前不啟動B46網路採集。憑證掃描限本輪交付，不追認其他已提交文件無憑證。
