@@ -1,0 +1,49 @@
+scenario_id,domain,scenario,trigger,detection,mitigation,severity,gate,test_protocol,review_status,test_status,evidence_ref,reviewer,reviewed_at,mapped_prompt_tags
+SC-001,權源合規,免費API限制商用,免費試用 API 接入客戶產品,致函供應商並核對條款、用途、再分發限制,禁止收費交付直到取得明確商用權利,CRITICAL,G0,contract_review,SPECIFIED,NOT_RUN,,,,
+SC-002,權源合規,再分發權與使用權混同,商用可使用但禁止再提供原始資料,逐資料集核對再分發與衍生品條款,交付聚合成果並限制原始資料導出,CRITICAL,G0,license_audit,SPECIFIED,NOT_RUN,,,,
+SC-003,權源合規,資料授權過期,供應商更新 EULA 或合約到期,以有效期間與哈希追蹤版本,過期自動停用並通知客戶,HIGH,G0,contract_review,SPECIFIED,NOT_RUN,,,,
+SC-004,權源合規,公共資料中的敏感位置,公開地圖包含受保護關鍵設施細節,敏感性分類與空間概化覆核,省略敏感定位與操作性弱點,CRITICAL,G0,human_review,SPECIFIED,NOT_RUN,,,,
+SC-005,來源及實體,新聞重複轉載造成假互證,多個網頁實際引用同一新聞,建立原始來源樹與引用指紋,獨立來源不足時調低證據等級,HIGH,G1,provenance_audit,SPECIFIED,NOT_RUN,,,,literature_review/;systematic_review/;source_check/;provenance/;research/
+SC-006,來源及實體,同名企業錯配,兩公司中英文名稱相似,用法定名稱、統一編號、司法管轄區區分,待證不建立控股關係,HIGH,G1,entity_resolution,SPECIFIED,NOT_RUN,,,,
+SC-007,來源及實體,宣布合併當作完成交割,報導只有協議、沒有完成公告,設 announced/signed/closed 分離狀態,時間索引前後分別繪圖,HIGH,G1,timeline_test,SPECIFIED,NOT_RUN,,,,
+SC-008,來源及實體,廠商聲稱變成實測結果,官方廣告用於量化成果表,核對分母樣本、對照及測量方法,標示 vendor_claim 不計已證效益,HIGH,G1,claim_review,SPECIFIED,NOT_RUN,,,,evidence_grade/;verify/;factcheck/
+SC-009,地理與遙感,座標系統不一致,WGS84 與當地投影被直接混合,進行 CRSs、距離單位及幾何一致性檢查,先重投影再度量,HIGH,G2,synthetic_test,SPECIFIED,NOT_RUN,,,,
+SC-010,地理與遙感,雲量與季節造成土地變化偽警報,雨季與旱季不同月份作差異,云遮罩、季節對齊與地面抽樣核驗,未確認時呈現疑似而非已確認,HIGH,G2,remote_sensing_qa,SPECIFIED,NOT_RUN,,,,data_quality/
+SC-011,地理與遙感,像元尺度不足,小建物只有數個像元,解析度與最小檢測面積門檻,縮小宣稱精度或使用合法更高分辨率資料,MEDIUM,G2,resolution_test,SPECIFIED,NOT_RUN,,,,
+SC-012,地理與遙感,邊界及地名爭議,政治疆界資料不同版本,按 UN M49/ISO 與來源註記,並列不一致來源，不自行裁斷主權,HIGH,G2,mapping_review,SPECIFIED,NOT_RUN,,,,
+SC-013,模型及統計,時間洩漏提高回測成績,未來修訂資料出現在過去訓練,as-of 時點資料快照及 walk-forward,無法重現即禁止上架,CRITICAL,G3,leakage_test,SPECIFIED,NOT_RUN,,,,cross_validation/;eda/;feature_engineering/;walk_forward/;backtest/
+SC-014,模型及統計,極少正例被高準確率掩蓋,稀有事件的準確率虛高,基率、PR-AUC、精確率與召回率,以業務成本函數和置信區間報告,HIGH,G3,model_evaluation,SPECIFIED,NOT_RUN,,,,anomaly_detection/;ml/;model_card/;model/
+SC-015,模型及統計,概率輸出不校準,70% 風險的事件未達該頻率,可靠度圖、Brier、時間外檢查,只提供分類或較低確定性描述,HIGH,G3,calibration_test,SPECIFIED,NOT_RUN,,,,calibration/
+SC-016,模型及統計,Transformer/RL 無增益仍加碼,先進模型對比規則基線無改善,消融、資源成本、時間外基準,不達可證明增量即回退簡單模型,HIGH,G3,ablation_test,SPECIFIED,NOT_RUN,,,,bayesian/;deep_learning/;transformer/;ablation/
+SC-017,推論與因果,相關當因果,預測指標與結果共同受景氣影響,因果圖、負向對照、混雜變數辨認,沒有設計不聲稱處置效果,HIGH,G3,causal_review,SPECIFIED,NOT_RUN,,,,causal/;counterfactual/
+SC-018,推論與因果,小樣本的統計顯著性,多產業樣本數小但顯示大收益,功效檢驗、區間、bootstrap 適切分組,不給出過度精確結論,HIGH,G3,power_analysis,SPECIFIED,NOT_RUN,,,,meta_analysis/;bootstrap/
+SC-019,推論與因果,多重檢驗造成假陽性,大量切分後挑最好結果,預先註冊估計量與多重比較修正,限制事後選擇性呈現,HIGH,G3,hypothesis_review,SPECIFIED,NOT_RUN,,,,hypothesis_test/;assumptions/
+SC-020,推論與因果,非平穩分布未在模型中反映,法規或地緣事件改變分布,漂移監控、分段回測、敏感性分析,超界停用與人工重估,HIGH,G3,drift_test,SPECIFIED,NOT_RUN,,,,sensitivity/;forecast/;analyze/
+SC-021,安全與隱私,API 密鑰進入 Git,憑證被加入程式與版本庫,靜態 secrets 掃描、權限稽核,撤銷金鑰、輪換、記錄事故,CRITICAL,G0,secret_scan,SPECIFIED,NOT_RUN,,,,incident_response/
+SC-022,安全與隱私,跨客戶資料讀取,租戶 A 看見租戶 B 的資料,最小權限與租戶隔離測試,拒絕交付直到測試 PASS,CRITICAL,G0,access_test,SPECIFIED,NOT_RUN,,,,zero_trust/;access_control/
+SC-023,安全與隱私,文件或網頁提示注入,外部文件企圖修改 AI 任務指令,將資料與控制指令隔離、引入測試注入樣例,拒絕高風險指令與記錄觸發,CRITICAL,G0,prompt_injection_test,SPECIFIED,NOT_RUN,,,,security/;threatmodel/
+SC-024,安全與隱私,公開資料再識別,少量公開字段能識別自然人,k-匿名/差分隱私適用性評估及保留期,優先聚合、匿名化及刪除不必要資料,HIGH,G0,privacy_review,SPECIFIED,NOT_RUN,,,,privacy/
+SC-025,本地工程及營運,WSL2 磁碟耗盡,大影像快取超過可用空間,監控磁碟及快取大小、保留空間,停機清理受控快取並恢復備份,HIGH,G2,disk_limit_test,SPECIFIED,NOT_RUN,,,,unit_test/;profiling/
+SC-026,本地工程及營運,上游 API 429 配額,多客戶同時更新,令牌桶/重試退避/快取與用量預估,降級為上次成功快照並標註時點,HIGH,G2,rate_limit_test,SPECIFIED,NOT_RUN,,,,debug/
+SC-027,本地工程及營運,資料源故障導致輸出過期,第三方 API 持續 5xx,失效閾值、來源備援與通知,顯示資料延遲，停用新預測,HIGH,G2,outage_test,SPECIFIED,NOT_RUN,,,,
+SC-028,本地工程及營運,批次重跑導致重複告警,排程中斷後重試同一事件,冪等鍵、事件版本與重播測試,合併重複警報及審計,MEDIUM,G2,idempotency_test,SPECIFIED,NOT_RUN,,,,decision_matrix/
+SC-029,市場與收款,無實際付費需求,十次訪談均只口頭稱讚,記錄決策人、預算、付費試點與付款,30日無進展改投資料清洗服務,CRITICAL,G4,customer_interview,SPECIFIED,NOT_RUN,,,,first_principles/;steelman/;killcritic/;strategy/
+SC-030,市場與收款,售價無法覆蓋成本,人力加 API 成本大於收款,全成本會計、單客戶貢獻毛利,停止虧損型功能或調整範圍,HIGH,G4,unit_economics,SPECIFIED,NOT_RUN,,,,cost_benefit/;optimize/;actionplan/
+SC-031,市場與收款,客戶要求未授權保證,客戶要保證預測災害或軍事情勢,合同限定可驗收功能和不確定性,不提供不可能履行的擔保,HIGH,G4,contract_review,SPECIFIED,NOT_RUN,,,,
+SC-032,市場與收款,單一客戶流失,首批營收高度集中,前五大客戶收入占比與現金緩衝,建立備用項目及現金風險門檻,HIGH,G4,stress_test,SPECIFIED,NOT_RUN,,,,socratic/;survival/;portfolio/;stress_test/;roadmap/
+SC-033,地緣與時效,地理與政策資料不同步,貿易數據季度更新、新聞即時,發布日與事件日分離標記,同圖分離時間頻率，不輸出假即時,HIGH,G1,temporal_join_test,SPECIFIED,NOT_RUN,,,,
+SC-034,地緣與時效,罕見事件超出歷史分布,重大突發使歷史模型失效,情境壓力測試及 OOD 檢測,明示未知、人工確認、降低自動化,HIGH,G3,ood_test,SPECIFIED,NOT_RUN,,,,risk_management/;simulate/
+SC-035,地緣與時效,非法或敏感操作性要求,客戶要求識別可被攻擊薄弱點,需求和用途審核,改作非操作性供應鏈韌性研究,CRITICAL,G0,use_case_review,SPECIFIED,NOT_RUN,,,,
+SC-036,地緣與時效,不確定消息被當成真實事件,社交訊息與官方資料矛盾,按已證實/待證/爭議三軌追蹤,待證事件不得產生確定性策略建議,HIGH,G1,rumor_review,SPECIFIED,NOT_RUN,,,,uncertainty/;falsification/
+SC-037,供應鏈及關係,供應商宣稱即企業控股,共同投資或合作誤當子公司,法人登記、持股比例、時間效期,合作、供應、併購、控股分欄,HIGH,G1,relationship_review,SPECIFIED,NOT_RUN,,,,due_diligence/;deepdive/
+SC-038,供應鏈及關係,關鍵上游只有一家,氣象或衛星資料源單點依賴,供應商清單、替換成本、資料兼容性,規劃備援、降級及通知,HIGH,G2,dependency_test,SPECIFIED,NOT_RUN,,,,architecture_review/;compare/;architect/
+SC-039,供應鏈及關係,供應商定價突然上調,按次 API 費飆升,成本上限、通知阈值、轉換試算,不得在無成本上限下自動耗費,HIGH,G4,pricing_stress,SPECIFIED,NOT_RUN,,,,changelog/
+SC-040,供應鏈及關係,重大版本變更破壞接口,API 回傳 schema 更動,合約測試、版本釘選、偵測異動,停止寫入且保留原始回應快照,HIGH,G2,schema_contract_test,SPECIFIED,NOT_RUN,,,,code_review/
+SC-041,模型人員治理,把人當戰鬥力總分,僅憑公開照片或媒體推斷忠誠,任務導向測評、來源與知情授權檢驗,不輸出私人心理及忠誠確定分數,CRITICAL,G0,ethical_review,SPECIFIED,NOT_RUN,,,,
+SC-042,模型人員治理,高影響決策完全自動化,對資源或人員產生實際損害,人工覆核與可申訴途徑,阻止未授權自動決定,HIGH,G0,human_oversight,SPECIFIED,NOT_RUN,,,,
+SC-043,模型人員治理,模擬器獎勵函數錯誤,RL 只獎勵流量造成破壞性最適化,約束、對抗測試與離線反事實評估,關閉策略更新，恢復穩定基線,CRITICAL,G3,reward_audit,SPECIFIED,NOT_RUN,,,,reinforcement_learning/
+SC-044,模型人員治理,多智能體互相引用幻覺,多代理把同一錯誤視為多方共識,按來源獨立性而非代理數計票,追溯原始證據、人工核實,HIGH,G1,multi_agent_review,SPECIFIED,NOT_RUN,,,,multi_agent/
+SC-045,交付與品質,提案華麗而不可運行,只交高層願景圖無可執行成果,離線 demo、重跑腳本、SHA-256,未通過測試不聲稱可交付,HIGH,G5,acceptance_test,SPECIFIED,NOT_RUN,,,,acceptance_test/;code/;blueprint/;checklist/
+SC-046,交付與品質,報告缺乏時間與資料說明,客戶無法再現圖表,版本、來源、時間戳與假設清單,缺必要元資料則不對外交付,HIGH,G5,reproducibility_test,SPECIFIED,NOT_RUN,,,,executive_summary/;reproducibility/;cheatsheet/;audit/;report/;summary/
+SC-047,交付與品質,高分指標掩蓋業務零改善,AUC 上升但沒有客戶節約,客戶成本改善與對照組、售後復核,停止用模型分數冒充商務收益,HIGH,G4,roi_validation,SPECIFIED,NOT_RUN,,,,gap_analysis/;benchmark/
+SC-048,交付與品質,聲稱全面覆蓋一切可能,已列情境中無高風險但仍有未知,殘餘風險、開放世界假設、持續更新,只能說覆蓋已註冊範圍，定期紅隊擴展,HIGH,G5,open_world_review,SPECIFIED,NOT_RUN,,,,integration_test/;technical_spec/;redteam/;critic/;blindspot/;scenario/

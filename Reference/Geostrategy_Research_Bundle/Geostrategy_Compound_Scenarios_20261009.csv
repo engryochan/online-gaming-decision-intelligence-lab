@@ -1,0 +1,13 @@
+compound_id,scenario_a,scenario_b,compound_name,cascade,control,test_protocol,severity,test_status,evidence_ref,reviewer,reviewed_at
+CP-01,SC-026,SC-027,API配額耗盡與服務故障,備援讀取過期快照卻仍標成即時資料,過期閾值警告、停止標即時、最後成功時間戳,outage+quota synthetic,CRITICAL,NOT_RUN,,,
+CP-02,SC-005,SC-044,轉載新聞與多智能體共識幻覺,數個智能體重複引用同一錯誤來源，誤以為多來源證實,原始來源 ID 去重、核對相依來源樹,provenance graph test,HIGH,NOT_RUN,,,
+CP-03,SC-010,SC-036,遙感雲遮與未核消息,衛星影像雲層噪音引起變化，社交消息聲稱工程開工,雲遮罩、季節對照、人工地面佐證,cloud+rumor fixture,HIGH,NOT_RUN,,,
+CP-04,SC-013,SC-020,未來資訊洩漏與概念漂移,測試集混入回修資料，模型又未偵測新制度變動,按 as-of 重放與滾動分段重評,lookahead+drift fixture,CRITICAL,NOT_RUN,,,
+CP-05,SC-021,SC-022,密鑰外洩與跨租戶權限錯置,攻擊者以外洩服務金鑰讀取其他租戶資料,密鑰輪換、最小權限、跨租戶拒絕測試,synthetic key + ACL test,CRITICAL,NOT_RUN,,,
+CP-06,SC-030,SC-039,負毛利與 API 漲價,客戶試點本已虧損、上游價格上調造成現金流壓力,成本上限、每單貢獻毛利、應急降級,unit cost stress,HIGH,NOT_RUN,,,
+CP-07,SC-029,SC-032,無付費需求與收入集中,唯一客戶取消後無合約或新訂單,現金流壓力測試、試點定價和續購驗證,customer funnel stress,HIGH,NOT_RUN,,,
+CP-08,SC-033,SC-014,時效錯置與類別失衡,低頻貿易資料被當成每日風險輸入、稀有事故被漏報,特徵可用時間與基率分層標註,temporal imbalance fixture,HIGH,NOT_RUN,,,
+CP-09,SC-045,SC-046,示例不可用與資料不可追溯,展示系統報錯，數據快照亦無版本指紋,部署煙霧測試、SHA-256、回退包,offline deployment smoke,HIGH,NOT_RUN,,,
+CP-10,SC-042,SC-043,錯誤獎勵函數與缺乏人工監督,模型追求點擊／效率而忽略安全約束,可拒絕行動、人工覆核、禁用策略開關,safe-reward sandbox,CRITICAL,NOT_RUN,,,
+CP-11,SC-024,SC-041,再識別與能力總分誤用,公開片段被拼接為可識別個人的偽能力排名,聚合、資料極小化與知情同意,privacy+scoring review,CRITICAL,NOT_RUN,,,
+CP-12,SC-001,SC-002,商用授權與原資料再分發衝突,授權容許內部分析但客戶付費下載原始數據,用途、衍生作品與再分發逐條契約審查,license conflict review,CRITICAL,NOT_RUN,,,

@@ -1,0 +1,19 @@
+Geostrategy 2026-10-09 continuation v2 / offline review
+Previous audited QMD prefix preserved byte for byte.
+85 unique prompts mapped/88 input tags, 48 single scenarios, 12 compound scenarios.
+All 60 scenarios remain NOT_RUN; only registry self tests executed and passed.
+No external production access or user Windows WSL2 install.
+
+SHA-256 and sizes:
+Geostrategy_Defense_AI_Ecosystem_Audited_20261009_v2.qmd  485581 bytes  SHA-256 aec4cb82148524c2beb49da44c2285c6c003ba754584487979de63cabdd1b8c7
+Geostrategy_Scenario_Risk_Registry_20261009.csv  11508 bytes  SHA-256 7a6de02c2b1ecdd9b67bca841c7eac9f568ba280e8598dfbcbff181eb425549c
+Geostrategy_Compound_Scenarios_20261009.csv  2554 bytes  SHA-256 a468c0a700bec244cd7b239e8b93f9f71c0aca6a74b2a652249950fe512a28c9
+Geostrategy_Prompt_Traceability_20261009.csv  5366 bytes  SHA-256 3248a1328dd39a2678b2f4f04bbcaa5c6aed9c1519706ce3ef538a8775c51a16
+geostrategy_scenario_audit.py  9101 bytes  SHA-256 9cd5b019e7233839aeb563fb8f4ba123a60db2d7e75f763c21909085317437ec
+Geostrategy_Scenario_Validation_20261009.json  841 bytes  SHA-256 57e4f66f82213dd8be53f4655c8d50b203f785f5a1132278581786a994355adc
+
+WSL2 Ubuntu: python3 geostrategy_scenario_audit.py --self-test
+Optional stricter gate: python3 geostrategy_scenario_audit.py --strict (exit 2 until high-priority reviews complete).
+Sources: https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook
+https://csrc.nist.gov/pubs/sp/800/30/r1/final
+https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/
