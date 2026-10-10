@@ -2179,7 +2179,7 @@ vertical-align: -.125em;
   <li><a href="#最新提交與原文保留" id="toc-最新提交與原文保留" class="nav-link active" data-scroll-target="#最新提交與原文保留">最新提交與原文保留</a></li>
   <li><a href="#新增研究套件的實質覆核" id="toc-新增研究套件的實質覆核" class="nav-link" data-scroll-target="#新增研究套件的實質覆核">新增研究套件的實質覆核</a></li>
   <li><a href="#續作定位" id="toc-續作定位" class="nav-link" data-scroll-target="#續作定位">續作定位</a></li>
-  <li><a href="#檢查覆蓋邊界" id="toc-檢查覆蓋邊界" class="nav-link" data-scroll-target="#檢查覆蓋邊界">檢查覆蓋邊界</a></li>
+  <li><a href="#全項目快照與檢查覆蓋邊界" id="toc-全項目快照與檢查覆蓋邊界" class="nav-link" data-scroll-target="#全項目快照與檢查覆蓋邊界">全項目快照與檢查覆蓋邊界</a></li>
   </ul>
 </nav>
 </div>
@@ -2225,11 +2225,13 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="續作定位">續作定位</h2>
 <p>B45已由後續提交收錄，其原publication_hold與基線保持歷史記錄，不改寫成原驗收曾通過。B46目前只有生成器，沒有baseline與validation_receipt，先前命令因自動審核額度限制未執行，不能宣稱已查詢166項。現行續作以新提交內容為準；先保留本次覆核，之後再按166集合／498項清單取得可追溯證據。</p>
 <p>核查統計：<code>{&quot;base&quot;: &quot;cc9526a&quot;, &quot;head&quot;: &quot;4065292200722250b2221872d6bc14b7c2af56ce&quot;, &quot;committed_changed_paths&quot;: 57, &quot;change_states&quot;: {&quot;M&quot;: 3, &quot;A&quot;: 54}, &quot;bundle_manifest_entries_verified&quot;: 9, &quot;v2_exact_prefix_preserved&quot;: true, &quot;single_scenarios&quot;: 48, &quot;compound_scenarios&quot;: 12, &quot;prompt_unique&quot;: 85, &quot;prompt_instances&quot;: 88, &quot;scenario_test_states&quot;: {&quot;NOT_RUN&quot;: 48}, &quot;license_rows_newly_present&quot;: 34, &quot;license_terms_external_revalidation&quot;: false, &quot;protected_target_changes_absent&quot;: {&quot;Reference/Aerospace_Ecosystem_Report.qmd&quot;: true, &quot;Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd&quot;: true, &quot;Reference/geo_defense_space_handoff_v2_3_0.md&quot;: true}, &quot;b46_execution_started&quot;: false, &quot;global_complete&quot;: false}</code>。</p>
-<p>全項目SHA256快照由原掃描器另行生成；它不是逐文件內容真偽審定。</p>
+<p>全項目SHA256快照已由原掃描器完成；它不是逐文件內容真偽審定。</p>
 </section>
-<section id="檢查覆蓋邊界" class="level2">
-<h2 class="anchored" data-anchor-id="檢查覆蓋邊界">檢查覆蓋邊界</h2>
-<p>本輪已完成57項Git變更路徑及新增套件的上述內容／結構覆核。全項目掃描器仍未返回完整快照，不能宣稱已核實所有忽略文件或全部正文；本輪提交不包含尚未完成的掃描回執。未見掃描完成前不啟動B46網路採集。憑證掃描限本輪交付，不追認其他已提交文件無憑證。</p>
+<section id="全項目快照與檢查覆蓋邊界" class="level2">
+<h2 class="anchored" data-anchor-id="全項目快照與檢查覆蓋邊界">全項目快照與檢查覆蓋邊界</h2>
+<p>掃描已完成8,444個一般文件，其中8,065個受Git追蹤，共4,360,253,977位元組。未記錄跳過項、符號連結或掃描期间不穩定文件；.git內部及掃描器自引用回執按原規則排除。每個文件的穩定檢查不是整個工作區的原子交易快照。</p>
+<p><a href="../reports/2026-10-10/workspace_review_b47/workspace_scan_files.csv">全文件清單</a>、<a href="../reports/2026-10-10/workspace_review_b47/workspace_scan_summary.json">掃描摘要</a>、<a href="../reports/2026-10-10/workspace_review_b47/committed_changes.csv">提交變更</a>、<a href="../reports/2026-10-10/workspace_review_b47/bundle_manifest_recheck.csv">套件指紋覆核</a>、<a href="../reports/2026-10-10/workspace_review_b47/license_evidence_recheck_queue.csv">34項授權再核清單</a>。</p>
+<p>本輪完成57項Git變更路徑、新增套件的上述內容／結構覆核及全項目檔案指紋清單，沒有宣稱全部正文已外部核證。掃描摘要的changed_since_before是相對較早before_files快照，不能混用為相對B44的57項提交變更。憑證掃描限本輪交付，不追認其他已提交文件無憑證。完成此次審閱後，B46才可按現行內容另建新批次基線與執行；未在本輪代稱其已有166項查詢結果。</p>
 </section>
 
 </main>

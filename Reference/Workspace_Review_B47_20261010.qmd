@@ -27,8 +27,12 @@ B45已由後續提交收錄，其原publication_hold與基線保持歷史記錄�
 
 核查統計：`{"base": "cc9526a", "head": "4065292200722250b2221872d6bc14b7c2af56ce", "committed_changed_paths": 57, "change_states": {"M": 3, "A": 54}, "bundle_manifest_entries_verified": 9, "v2_exact_prefix_preserved": true, "single_scenarios": 48, "compound_scenarios": 12, "prompt_unique": 85, "prompt_instances": 88, "scenario_test_states": {"NOT_RUN": 48}, "license_rows_newly_present": 34, "license_terms_external_revalidation": false, "protected_target_changes_absent": {"Reference/Aerospace_Ecosystem_Report.qmd": true, "Reference/Geostrategy_Defense_Industry_Aerospace_and_Artificial_Interlligence_Ecosystem_Report.qmd": true, "Reference/geo_defense_space_handoff_v2_3_0.md": true}, "b46_execution_started": false, "global_complete": false}`。
 
-全項目SHA256快照由原掃描器另行生成；它不是逐文件內容真偽審定。
+全項目SHA256快照已由原掃描器完成；它不是逐文件內容真偽審定。
 
-## 檢查覆蓋邊界
+## 全項目快照與檢查覆蓋邊界
 
-本輪已完成57項Git變更路徑及新增套件的上述內容／結構覆核。全項目掃描器仍未返回完整快照，不能宣稱已核實所有忽略文件或全部正文；本輪提交不包含尚未完成的掃描回執。未見掃描完成前不啟動B46網路採集。憑證掃描限本輪交付，不追認其他已提交文件無憑證。
+掃描已完成8,444個一般文件，其中8,065個受Git追蹤，共4,360,253,977位元組。未記錄跳過項、符號連結或掃描期间不穩定文件；.git內部及掃描器自引用回執按原規則排除。每個文件的穩定檢查不是整個工作區的原子交易快照。
+
+[全文件清單](../reports/2026-10-10/workspace_review_b47/workspace_scan_files.csv)、[掃描摘要](../reports/2026-10-10/workspace_review_b47/workspace_scan_summary.json)、[提交變更](../reports/2026-10-10/workspace_review_b47/committed_changes.csv)、[套件指紋覆核](../reports/2026-10-10/workspace_review_b47/bundle_manifest_recheck.csv)、[34項授權再核清單](../reports/2026-10-10/workspace_review_b47/license_evidence_recheck_queue.csv)。
+
+本輪完成57項Git變更路徑、新增套件的上述內容／結構覆核及全項目檔案指紋清單，沒有宣稱全部正文已外部核證。掃描摘要的changed_since_before是相對較早before_files快照，不能混用為相對B44的57項提交變更。憑證掃描限本輪交付，不追認其他已提交文件無憑證。完成此次審閱後，B46才可按現行內容另建新批次基線與執行；未在本輪代稱其已有166項查詢結果。
