@@ -97,7 +97,7 @@ stats=dict(collections=166,granule_probe_states=dict(collections.Counter(r['resu
 (O/'validation_receipt.json').write_text(json.dumps(stats,indent=2)+'\n',encoding='utf-8')
 report='''---
 title: "B46：全部166集合的公開影像目錄計數與逐集合授權證據"
-date: 2026-10-09
+date: 2026-10-10
 format:
   html:
     toc: true

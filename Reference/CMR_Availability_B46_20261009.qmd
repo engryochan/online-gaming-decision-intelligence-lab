@@ -1,0 +1,35 @@
+---
+title: "B46：全部166集合的公開影像目錄計數與逐集合授權證據"
+date: 2026-10-10
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 全集合查詢與業務意義
+
+對B45全部166個ASF集合逐一執行官方CMR公開granule目錄計數，使用page_size=0不下載影像或granule清單。保存回應原始字節、HTTP標頭、CMR-Hits與時間。零筆、HTTP錯誤、schema不符分開，失敗保留未知而不填0。集合修訂為B45時點，granule計數為各次請求時點，不假稱同時或原子快照。
+
+目錄筆數有助於資料選型與後續採樣預算，但不是實際成功下載數、獨立觀測數、影像品質或逐國覆蓋。未加時空篩選，因此不能回答指定設施／年代是否有影像。不同集合可能含版本或加工變體，不能加總作全球獨立影像總數。
+
+## 166項授權欄位與來源
+
+完整解析全部集合的UseConstraints、AccessConstraints、內嵌LicenseText、LicenseURL及EULAIdentifiers。91項來源標示FreeAndOpenData=true、2項false、73項未填該標記，保留原值；true不自动等於CC0或商用清關。所有唯一非空授權網址都嘗試下載，重定向及失敗如實記錄。
+
+授權文本保留供逐產品核閱，本輪未作完整法律語意清關，沒有任何集合被自動准許商用。68項缺少LicenseURL亦不能被說成完全沒有授權資訊，因其他欄位可能存在條款。SSODv2的CC0不擴及本批產品。
+
+## 清單進度与版本保留
+
+統計：`{"collections": 166, "granule_probe_states": {"PUBLIC_CMR_GRANULE_METADATA_COUNT_OBSERVED": 158, "ZERO_PUBLIC_MATCHING_METADATA_NOT_PROOF_NO_IMAGERY": 8}, "unique_license_urls": 6, "license_fetch_successes": 5, "source_requests": 172, "rights_states": {"LICENSE_REFERENCE_FETCHED_NEEDS_SEMANTIC_REVIEW": 97, "NO_LICENSE_URL_OR_TEXT_NOT_PROOF_NO_RIGHTS": 54, "INLINE_LICENSE_TEXT_REQUIRES_PRODUCT_SPECIFIC_REVIEW": 12, "SOURCE_EXPLICIT_NOT_FREE_AND_OPEN_REQUIRES_TERMS_REVIEW": 2, "LICENSE_REFERENCE_FETCH_FAILED_RETAIN_UNKNOWN": 1}, "all_498_tasks_retained": true, "tasks_closed": 0, "imagery_downloaded": false, "commercial_use_approved": false, "old_documents_preserved": true, "b45_delivery_preserved": true, "b45_original_baseline_refreshed": false, "sqlite_counts": {"registry_all_166_granule_count_probes": 166, "registry_all_166_rights_evidence": 166, "registry_all_498_work_progress": 498, "registry_source_receipts": 172}, "global_complete": false}`。
+
+
+[全部166項目錄查詢](tables/70_cmr_availability_b46_20261009/registry_all_166_granule_count_probes.csv)、[全部166項授權證據](tables/70_cmr_availability_b46_20261009/registry_all_166_rights_evidence.csv)、[來源收據](tables/70_cmr_availability_b46_20261009/registry_source_receipts.csv)、[全部498項進度](tables/70_cmr_availability_b46_20261009/registry_all_498_work_progress.csv)、[SQLite](tables/70_cmr_availability_b46_20261009/cmr_availability_b46.sqlite)。查詢方式依[官方CMR文件](https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html)。
+
+B45原有文件、基線和publication_hold回執完整保留，本輪另記其交付雜湊以獨立覆核，沒有把舊失敗改寫為通過。開始時已有的Inteligent工作區修改不納入交付，提交前若再變動仍須中止。498項工作全部保留，不因目錄计數成功就結案。
+
+下一步逐產品核正式條款，再對限定地區年代核granule清單與品質；測站25項未結、SSOD缺值、GSOD125筆風速衝突以及全球金融、工商、歷史政治實體待辦仍保持開放。SDG業務分析凍結，Untitled不恢復。
+
+## 執行時間與檢查邊界
+
+本批次保留已登記的20261009檔名，實際採集與報告日期為2026-10-10，逐請求UTC時間在收據中。166項計數沒有HTTP或schema失敗，亦未見CMR-Timed-Out部分結果標記。1項授權下載失敗詳見來源收據；未把失敗填為無條款，也未對成功取得的文本冒稱完成商用審定。
