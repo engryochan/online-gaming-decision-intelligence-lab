@@ -1,0 +1,28 @@
+---
+title: "B49：歷史衛星產品檔案元資料樣本"
+date: 2026-10-11
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 影像與元資料的區別
+
+此處影像指地球觀測產品。ASF集合包含雷達產品及ALOS AVNIR光學產品；雷達產品可能保存不同處理層級的觀測資料，不能一律當作一般照片。本批取得的是檔案目錄元資料，沒有下載影像像素，也沒有核實畫面、解析度、相位保留或實際測量品質。
+
+## 有界歷史樣本
+
+依[NASA CMR API](https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html)，對B48的14個集合查詢每集合最多一筆：ALOS取2009年、ALOS2取2016年、ERS及JERS取1998年，依開始時間排序。不加地區條件，這是格式與結構樣本，不是指定地區的完整影像清單。查詢針對當次公開索引，並非固定B45集合revision下的歷史granule索引快照；各次請求也不是同時快照。查無選定年份不等於集合從未存在資料。
+
+保存完整UMM item、granule修訂、時間、空間、DataGranule、相關URL、平台及附加屬性；缺欄位保持null，沒有從產品名稱猜格式或補零。DataGranule中的格式與容量僅為來源宣告，沒有實測下載大小。原始回應、查詢時間、篩選條件與SHA256均留存。相關下載URL僅登記，未訪問或接受下載條款。
+
+## 交付與未結清範圍
+
+14項查詢成功；8項取得樣本，ERS／JERS的6項在1998年篩選下未取得記錄。8個樣本均有觀測時間，7個未明列ArchiveAndDistributionInformation的Format；不可依名稱補成GeoTIFF。ALOS2樣本宣告ZIP及61,318,447,696 bytes（約61.3 GB），另附來源MD5欄位；尚未下載核實大小或校驗值。容量與格式缺口會影響下載、儲存及解析成本，應在採用前核對。
+
+{"queries": 14, "samples": 8, "failures": 0, "empty_selected_year": 6, "collections_retained": 166, "work_items_retained": 498, "tasks_closed": 0, "imagery_downloaded": false, "pixel_quality_verified": false, "sqlite_counts": {"registry_all_166_product_status": 166, "registry_all_498_work_progress": 498, "registry_historical_granule_samples": 8, "registry_source_receipts": 14}}。
+
+[樣本表](tables/72_granule_metadata_b49_20261011/registry_historical_granule_samples.csv)、[14項查詢收據](tables/72_granule_metadata_b49_20261011/registry_source_receipts.csv)、[166項完整狀態](tables/72_granule_metadata_b49_20261011/registry_all_166_product_status.csv)、[498項待辦](tables/72_granule_metadata_b49_20261011/registry_all_498_work_progress.csv)、[SQLite](tables/72_granule_metadata_b49_20261011/granule_metadata_b49.sqlite)。
+
+B48產品特定權利限制全部保留，尤其JERS非開放旗標不因公開元資料可取得而解除。本批沒有結清任何工作，也不宣稱全球覆蓋、商業重分發許可或全球企業清單完成。下一步按實際用途選歷史地區、核當期條款與品質文檔，再評估適當產品及處理成本。全球金融、歷史政治實體與氣象待辦持續保留；SDG業務分析仍凍結，Untitled不恢復。
