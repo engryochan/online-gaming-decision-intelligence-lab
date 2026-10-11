@@ -1,0 +1,458 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 4,
+ "name": "IOOS Region Boundary Names",
+ "type": "Annotation Layer",
+ "description": "",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": null,
+ "subLayers": [
+  {
+   "id": 5,
+   "name": "Region Boundary Name"
+  }
+ ],
+ "minScale": 2311162.217155,
+ "maxScale": 577790.554289,
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -1.4130735293E7,
+  "ymin": 2831673.9376000017,
+  "xmax": -7568008.4079,
+  "ymax": 5163018.560400002,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeNone",
+ "displayField": "TextString",
+ "typeIdField": "AnnotationClassID",
+ "subtypeFieldName": "AnnotationClassID",
+ "subtypeField": "AnnotationClassID",
+ "defaultSubtypeCode": 0,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "FeatureID",
+   "type": "esriFieldTypeInteger",
+   "alias": "Feature ID",
+   "domain": null
+  },
+  {
+   "name": "ZOrder",
+   "type": "esriFieldTypeInteger",
+   "alias": "Z Order",
+   "domain": null
+  },
+  {
+   "name": "AnnotationClassID",
+   "type": "esriFieldTypeInteger",
+   "alias": "Annotation Class ID",
+   "domain": null
+  },
+  {
+   "name": "Element",
+   "type": "esriFieldTypeBlob",
+   "alias": "Element",
+   "domain": null
+  },
+  {
+   "name": "SymbolID",
+   "type": "esriFieldTypeInteger",
+   "alias": "Symbol ID",
+   "domain": null
+  },
+  {
+   "name": "Status",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Status",
+   "domain": {
+    "type": "codedValue",
+    "name": "AnnotationStatus",
+    "description": "Valid annotation state values.",
+    "codedValues": [
+     {
+      "name": "Placed",
+      "code": 0
+     },
+     {
+      "name": "Unplaced",
+      "code": 1
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   }
+  },
+  {
+   "name": "TextString",
+   "type": "esriFieldTypeString",
+   "alias": "Text String",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "FontName",
+   "type": "esriFieldTypeString",
+   "alias": "Font Name",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "FontStyle",
+   "type": "esriFieldTypeString",
+   "alias": "Font Style",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "FontSize",
+   "type": "esriFieldTypeDouble",
+   "alias": "Font Size",
+   "domain": null
+  },
+  {
+   "name": "Underline",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Underline",
+   "domain": {
+    "type": "codedValue",
+    "name": "BooleanSymbolValue",
+    "description": "Valid values are Yes and No.",
+    "codedValues": [
+     {
+      "name": "Yes",
+      "code": 1
+     },
+     {
+      "name": "No",
+      "code": 0
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   }
+  },
+  {
+   "name": "VerticalAlignment",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Vertical Alignment",
+   "domain": {
+    "type": "codedValue",
+    "name": "VerticalAlignment",
+    "description": "Valid symbol vertical alignment values.",
+    "codedValues": [
+     {
+      "name": "Top",
+      "code": 0
+     },
+     {
+      "name": "Center",
+      "code": 1
+     },
+     {
+      "name": "Baseline",
+      "code": 2
+     },
+     {
+      "name": "Bottom",
+      "code": 3
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   }
+  },
+  {
+   "name": "HorizontalAlignment",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Horizontal Alignment",
+   "domain": {
+    "type": "codedValue",
+    "name": "HorizontalAlignment",
+    "description": "Valid horizontal symbol alignment values.",
+    "codedValues": [
+     {
+      "name": "Left",
+      "code": 0
+     },
+     {
+      "name": "Center",
+      "code": 1
+     },
+     {
+      "name": "Right",
+      "code": 2
+     },
+     {
+      "name": "Full",
+      "code": 3
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   }
+  },
+  {
+   "name": "XOffset",
+   "type": "esriFieldTypeDouble",
+   "alias": "X Offset",
+   "domain": null
+  },
+  {
+   "name": "YOffset",
+   "type": "esriFieldTypeDouble",
+   "alias": "Y Offset",
+   "domain": null
+  },
+  {
+   "name": "Angle",
+   "type": "esriFieldTypeDouble",
+   "alias": "Angle",
+   "domain": null
+  },
+  {
+   "name": "FontLeading",
+   "type": "esriFieldTypeDouble",
+   "alias": "Font Leading",
+   "domain": null
+  },
+  {
+   "name": "WordSpacing",
+   "type": "esriFieldTypeDouble",
+   "alias": "Word Spacing",
+   "domain": null
+  },
+  {
+   "name": "CharacterWidth",
+   "type": "esriFieldTypeDouble",
+   "alias": "Character Width",
+   "domain": null
+  },
+  {
+   "name": "CharacterSpacing",
+   "type": "esriFieldTypeDouble",
+   "alias": "Character Spacing",
+   "domain": null
+  },
+  {
+   "name": "FlipAngle",
+   "type": "esriFieldTypeDouble",
+   "alias": "Flip Angle",
+   "domain": null
+  },
+  {
+   "name": "Override",
+   "type": "esriFieldTypeInteger",
+   "alias": "Override",
+   "domain": null
+  },
+  {
+   "name": "SHAPE",
+   "type": "esriFieldTypeGeometry",
+   "alias": "SHAPE",
+   "domain": null
+  },
+  {
+   "name": "SHAPE.STArea()",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE.STArea()",
+   "domain": null
+  },
+  {
+   "name": "SHAPE.STLength()",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE.STLength()",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "SHAPE",
+  "type": "esriFieldTypeGeometry",
+  "alias": "SHAPE"
+ },
+ "indexes": [
+  {
+   "name": "R828_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "S803_idx",
+   "fields": "SHAPE",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "types": [
+  {
+   "domains": {
+    "Status": {"type": "inherited"},
+    "Underline": {"type": "inherited"},
+    "VerticalAlignment": {"type": "inherited"},
+    "HorizontalAlignment": {"type": "inherited"}
+   },
+   "id": 0,
+   "name": "Class 1"
+  }
+ ],
+ "subtypes": [
+  {
+   "domains": {
+    "Status": {"type": "inherited"},
+    "Underline": {"type": "inherited"},
+    "VerticalAlignment": {"type": "inherited"},
+    "HorizontalAlignment": {"type": "inherited"}
+   },
+   "defaultValues": {
+    "FeatureID": null,
+    "ZOrder": null,
+    "AnnotationClassID": null,
+    "Element": null,
+    "SymbolID": null,
+    "Status": null,
+    "TextString": null,
+    "FontName": null,
+    "FontStyle": null,
+    "FontSize": null,
+    "Underline": null,
+    "VerticalAlignment": null,
+    "HorizontalAlignment": null,
+    "XOffset": null,
+    "YOffset": null,
+    "Angle": null,
+    "FontLeading": null,
+    "WordSpacing": null,
+    "CharacterWidth": null,
+    "CharacterSpacing": null,
+    "FlipAngle": null,
+    "Override": null
+   },
+   "code": 0,
+   "name": "Class 1"
+  }
+ ],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "SHAPE.STArea()",
+  "shapeLengthFieldName": "SHAPE.STLength()",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": false,
+ "serviceItemId": "ca7c34902223487cadc192f9fa9c76f3"
+}

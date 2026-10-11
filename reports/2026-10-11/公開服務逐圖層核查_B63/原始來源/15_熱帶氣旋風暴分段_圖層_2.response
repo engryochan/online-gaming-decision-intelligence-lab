@@ -1,0 +1,745 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 2,
+ "name": "Eastern Pacific Storm Segments",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPolyline",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 9244648.868618,
+ "maxScale": 72223.819286,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "stormSegmentCategory",
+   "uniqueValueGroups": [
+    {
+     "heading": "Storm Category",
+     "classes": [
+      {
+       "label": "Category 5",
+       "description": "Category 5",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         189,
+         0,
+         255,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "C5"
+        ]
+       ]
+      },
+      {
+       "label": "Category 4",
+       "description": "Category 4",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         232,
+         12,
+         174,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "C4"
+        ]
+       ]
+      },
+      {
+       "label": "Category 3",
+       "description": "Category 3",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         232,
+         59,
+         12,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "C3"
+        ]
+       ]
+      },
+      {
+       "label": "Category 2",
+       "description": "Category 2",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         114,
+         9,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "C2"
+        ]
+       ]
+      },
+      {
+       "label": "Category 1",
+       "description": "Category 1",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         255,
+         195,
+         9,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "C1"
+        ]
+       ]
+      },
+      {
+       "label": "Tropical Cyclone",
+       "description": "Tropical Cyclone",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         108,
+         195,
+         67,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "TS"
+        ]
+       ]
+      },
+      {
+       "label": "Subtropical Storm",
+       "description": "Subtropical Storm",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         28,
+         84,
+         255,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "S"
+        ]
+       ]
+      },
+      {
+       "label": "Extratropical Storm",
+       "description": "Extratropical Storm",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         170,
+         170,
+         170,
+         255
+        ],
+        "width": 8
+       },
+       "values": [
+        [
+         "E"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "uniqueValueInfos": [
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       189,
+       0,
+       255,
+       255
+      ],
+      "width": 8
+     },
+     "value": "C5",
+     "label": "Category 5"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       232,
+       12,
+       174,
+       255
+      ],
+      "width": 8
+     },
+     "value": "C4",
+     "label": "Category 4"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       232,
+       59,
+       12,
+       255
+      ],
+      "width": 8
+     },
+     "value": "C3",
+     "label": "Category 3"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       255,
+       114,
+       9,
+       255
+      ],
+      "width": 8
+     },
+     "value": "C2",
+     "label": "Category 2"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       255,
+       195,
+       9,
+       255
+      ],
+      "width": 8
+     },
+     "value": "C1",
+     "label": "Category 1"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       108,
+       195,
+       67,
+       255
+      ],
+      "width": 8
+     },
+     "value": "TS",
+     "label": "Tropical Cyclone"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       28,
+       84,
+       255,
+       255
+      ],
+      "width": 8
+     },
+     "value": "S",
+     "label": "Subtropical Storm"
+    },
+    {
+     "symbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+       170,
+       170,
+       170,
+       255
+      ],
+      "width": 8
+     },
+     "value": "E",
+     "label": "Extratropical Storm"
+    }
+   ],
+   "fieldDelimiter": ",",
+   "authoringInfo": {
+    "colorRamp": {
+     "type": "multipart",
+     "colorRamps": [
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        237,
+        81,
+        81,
+        255
+       ],
+       "toColor": [
+        237,
+        81,
+        81,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        21,
+        160,
+        207,
+        255
+       ],
+       "toColor": [
+        21,
+        160,
+        207,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        167,
+        199,
+        54,
+        255
+       ],
+       "toColor": [
+        167,
+        199,
+        54,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        158,
+        85,
+        156,
+        255
+       ],
+       "toColor": [
+        158,
+        85,
+        156,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        145,
+        30,
+        255
+       ],
+       "toColor": [
+        252,
+        145,
+        30,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        255,
+        223,
+        61,
+        255
+       ],
+       "toColor": [
+        255,
+        223,
+        61,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        247,
+        136,
+        216,
+        255
+       ],
+       "toColor": [
+        247,
+        136,
+        216,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        184,
+        129,
+        73,
+        255
+       ],
+       "toColor": [
+        184,
+        129,
+        73,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        60,
+        176,
+        155,
+        255
+       ],
+       "toColor": [
+        60,
+        176,
+        155,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        107,
+        107,
+        214,
+        255
+       ],
+       "toColor": [
+        107,
+        107,
+        214,
+        255
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [
+   {
+    "labelExpressionInfo": {
+     "expression": "$feature.stormName",
+     "title": "Custom"
+    },
+    "lineOrientation": "unconstrained",
+    "labelPlacement": "esriServerLinePlacementAboveAlong",
+    "textLayout": "followFeature",
+    "deconflictionStrategy": "dynamic",
+    "allowOverrun": true,
+    "repeatLabel": false,
+    "lineConnection": "minimizeLabels",
+    "useClippedGeometry": true,
+    "allowOverlapOfFeatureInterior": "avoid",
+    "stackLabel": true,
+    "stackAlignment": "dynamic",
+    "removeDuplicates": "none",
+    "stackRowLength": 24,
+    "stackSeparators": [
+     {"separator": " "}
+    ],
+    "useCodedValues": true,
+    "maxScale": 9027.977411,
+    "minScale": 2311162.217155,
+    "name": "Class 1",
+    "priority": -1,
+    "symbol": {
+     "type": "esriTS",
+     "color": [
+      52,
+      52,
+      52,
+      255
+     ],
+     "backgroundColor": null,
+     "borderLineColor": null,
+     "borderLineSize": null,
+     "verticalAlignment": "bottom",
+     "horizontalAlignment": "left",
+     "rightToLeft": false,
+     "angle": 0,
+     "xoffset": 0,
+     "yoffset": 0,
+     "kerning": true,
+     "haloColor": null,
+     "haloSize": null,
+     "font": {
+      "family": "Verdana",
+      "size": 7,
+      "style": "normal",
+      "weight": "normal",
+      "decoration": "none"
+     }
+    }
+   }
+  ]
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -1.99285787316E7,
+  "ymin": 446156.6424999982,
+  "xmax": -1.14059235371E7,
+  "ymax": 4741585.526799999,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "stormName",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "stormName",
+   "type": "esriFieldTypeString",
+   "alias": "Storm Name",
+   "length": 24,
+   "domain": null
+  },
+  {
+   "name": "stormSegmentYear",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Storm Segment Year",
+   "domain": null
+  },
+  {
+   "name": "stormSegmentMonth",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Storm Segment Month",
+   "domain": null
+  },
+  {
+   "name": "stormSegmentDay",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Storm Segment Day",
+   "domain": null
+  },
+  {
+   "name": "stormSegmentHour",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Storm Segment Hour",
+   "domain": null
+  },
+  {
+   "name": "stormSegmentCategory",
+   "type": "esriFieldTypeString",
+   "alias": "Storm Segment Category",
+   "length": 2,
+   "domain": null
+  },
+  {
+   "name": "stormSegmentMaxWind",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Storm Segment Maximum Winds (knots)",
+   "domain": null
+  },
+  {
+   "name": "stormSerialNumber",
+   "type": "esriFieldTypeString",
+   "alias": "Storm Serial Number",
+   "length": 8,
+   "domain": null
+  },
+  {
+   "name": "spatial",
+   "type": "esriFieldTypeGeometry",
+   "alias": "spatial",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "spatial",
+  "type": "esriFieldTypeGeometry",
+  "alias": "spatial"
+ },
+ "indexes": [
+  {
+   "name": "S819_idx",
+   "fields": "spatial",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": true,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeLengthFieldName": "spatial.STLength()",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true,
+ "serviceItemId": "f1a1f0f9a6c54790b2b9c5d131d14e31"
+}

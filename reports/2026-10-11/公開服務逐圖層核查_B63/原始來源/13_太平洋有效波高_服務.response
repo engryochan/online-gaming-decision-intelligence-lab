@@ -1,0 +1,341 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "serviceDescription": "These data depict a wave energy resource characterization for the US Exclusive Economic Zone. This climatology is based on a multi-resolution 32 year hindcast that used the  WaveWatchIII and Simulating WAve Nearshore (SWAN) wave models. A collection of five variables are reported at the annual and monthly intervals. Statistics for each variable are provided as point and hexagon features.",
+ "mapName": "Public",
+ "description": "These data depict a wave energy resource characterization for the US Exclusive Economic Zone. This climatology is based on a multi-resolution 32 year hindcast that used the  WaveWatchIII and Simulating WAve Nearshore (SWAN) wave models. A collection of five variables are reported at the annual and monthly intervals. Statistics for each variable are provided as point and hexagon features.",
+ "copyrightText": "",
+ "supportsDynamicLayers": false,
+ "layers": [
+  {
+   "id": 0,
+   "name": "Pacific Significant Wave Height",
+   "parentLayerId": -1,
+   "defaultVisibility": true,
+   "subLayerIds": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "minScale": 7.3957190948944E7,
+   "maxScale": 9027.977411,
+   "type": "Group Layer",
+   "supportsDynamicLegends": false
+  },
+  {
+   "id": 1,
+   "name": "Pacific Wave Climate",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 36111.909643,
+   "maxScale": 9027.977411,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPoint",
+   "supportsDynamicLegends": true
+  },
+  {
+   "id": 2,
+   "name": "Pacific Wave Height 1 sqkm",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 72223.819286,
+   "maxScale": 36111.909643,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": false
+  },
+  {
+   "id": 3,
+   "name": "Pacific Wave Height 10 sqkm",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 577790.554289,
+   "maxScale": 144447.638572,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": false
+  },
+  {
+   "id": 4,
+   "name": "Pacific Wave Height 100 sqkm",
+   "parentLayerId": 0,
+   "defaultVisibility": true,
+   "subLayerIds": null,
+   "minScale": 2311162.217155,
+   "maxScale": 1155581.108577,
+   "type": "Feature Layer",
+   "geometryType": "esriGeometryPolygon",
+   "supportsDynamicLegends": false
+  }
+ ],
+ "tables": [],
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "singleFusedMapCache": true,
+ "tileInfo": {
+  "rows": 256,
+  "cols": 256,
+  "dpi": 96,
+  "format": "PNG",
+  "compressionQuality": 0,
+  "origin": {
+   "x": -2.0037508342787E7,
+   "y": 2.0037508342787E7
+  },
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 1.4892314192838538E8,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  },
+  "lods": [
+   {
+    "level": 0,
+    "resolution": 156543.033928,
+    "scale": 5.91657527591555E8
+   },
+   {
+    "level": 1,
+    "resolution": 78271.5169639999,
+    "scale": 2.95828763795777E8
+   },
+   {
+    "level": 2,
+    "resolution": 39135.7584820001,
+    "scale": 1.47914381897889E8
+   },
+   {
+    "level": 3,
+    "resolution": 19567.8792409999,
+    "scale": 7.3957190948944E7
+   },
+   {
+    "level": 4,
+    "resolution": 9783.93962049996,
+    "scale": 3.6978595474472E7
+   },
+   {
+    "level": 5,
+    "resolution": 4891.96981024998,
+    "scale": 1.8489297737236E7
+   },
+   {
+    "level": 6,
+    "resolution": 2445.98490512499,
+    "scale": 9244648.868618
+   },
+   {
+    "level": 7,
+    "resolution": 1222.99245256249,
+    "scale": 4622324.434309
+   },
+   {
+    "level": 8,
+    "resolution": 611.49622628138,
+    "scale": 2311162.217155
+   },
+   {
+    "level": 9,
+    "resolution": 305.748113140558,
+    "scale": 1155581.108577
+   },
+   {
+    "level": 10,
+    "resolution": 152.874056570411,
+    "scale": 577790.554289
+   },
+   {
+    "level": 11,
+    "resolution": 76.4370282850732,
+    "scale": 288895.277144
+   },
+   {
+    "level": 12,
+    "resolution": 38.2185141425366,
+    "scale": 144447.638572
+   },
+   {
+    "level": 13,
+    "resolution": 19.1092570712683,
+    "scale": 72223.819286
+   },
+   {
+    "level": 14,
+    "resolution": 9.55462853563415,
+    "scale": 36111.909643
+   },
+   {
+    "level": 15,
+    "resolution": 4.77731426794937,
+    "scale": 18055.954822
+   },
+   {
+    "level": 16,
+    "resolution": 2.38865713397468,
+    "scale": 9027.977411
+   },
+   {
+    "level": 17,
+    "resolution": 1.19432856685505,
+    "scale": 4513.988705
+   },
+   {
+    "level": 18,
+    "resolution": 0.597164283559817,
+    "scale": 2256.994353
+   },
+   {
+    "level": 19,
+    "resolution": 0.298582141647617,
+    "scale": 1128.497176
+   },
+   {
+    "level": 20,
+    "resolution": 0.14929107082380833,
+    "scale": 564.248588
+   },
+   {
+    "level": 21,
+    "resolution": 0.07464553541190416,
+    "scale": 282.124294
+   },
+   {
+    "level": 22,
+    "resolution": 0.03732276770595208,
+    "scale": 141.062147
+   },
+   {
+    "level": 23,
+    "resolution": 0.01866138385297604,
+    "scale": 70.5310735
+   }
+  ]
+ },
+ "storageInfo": {
+  "storageFormat": "esriMapCacheStorageModeCompactV2",
+  "packetSize": 128
+ },
+ "initialExtent": {
+  "xmin": -1.6312655118181238E7,
+  "ymin": 3078917.763415196,
+  "xmax": -1.117608681741876E7,
+  "ymax": 6691637.468284807,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "fullExtent": {
+  "xmin": -1.44857528389E7,
+  "ymin": 3509828.103100002,
+  "xmax": -1.30029890967E7,
+  "ymax": 6260727.128600001,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "datesInUnknownTimezone": false,
+ "minScale": 7.3957190948944E7,
+ "maxScale": 9027.977411,
+ "units": "esriMeters",
+ "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+ "documentInfo": {
+  "Title": "C:\\Users\\Daniel.Martin\\Documents\\ArcGIS\\Projects\\PUBLIC\\PUBLIC.aprx",
+  "Author": "",
+  "Comments": "",
+  "Subject": "",
+  "Category": "",
+  "Version": "2.9.0",
+  "AntialiasingMode": "Fast",
+  "TextAntialiasingMode": "Force",
+  "Keywords": "coastal,ocean,planning"
+ },
+ "supportsQueryDomains": true,
+ "capabilities": "Map,Query,Data",
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "exportTilesAllowed": false,
+ "referenceScale": 0.0,
+ "datumTransformations": [
+  {
+   "geoTransforms": [
+    {
+     "wkid": 108190,
+     "latestWkid": 108190,
+     "transformForward": false,
+     "name": "WGS_1984_(ITRF00)_To_NAD_1983"
+    }
+   ]
+  },
+  {
+   "geoTransforms": [
+    {
+     "wkid": 108190,
+     "latestWkid": 108190,
+     "transformForward": true,
+     "name": "WGS_1984_(ITRF00)_To_NAD_1983"
+    }
+   ]
+  }
+ ],
+ "supportsDatumTransformation": true,
+ "floorAwareMapProperties": {
+  "defaultFloorFilterSettings": {"isEnabled": true}
+ },
+ "archivingInfo": {"supportsHistoricMoment": false},
+ "supportsClipping": true,
+ "supportsSpatialFilter": true,
+ "supportsTimeRelation": true,
+ "supportsQueryDataElements": true,
+ "mapUnits": {"uwkid": 9001},
+ "maxSelectionCount": 2000,
+ "maxRecordCount": 2000,
+ "maxImageHeight": 4096,
+ "maxImageWidth": 4096,
+ "supportedExtensions": "",
+ "serviceItemId": "f9bcfaf88cc84e01a6974714306bc5e6"
+}

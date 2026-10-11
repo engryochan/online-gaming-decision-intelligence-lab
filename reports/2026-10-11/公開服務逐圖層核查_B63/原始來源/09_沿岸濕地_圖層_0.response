@@ -1,0 +1,896 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 0,
+ "name": "Coastal Wetlands",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 577790.554289,
+ "maxScale": 9027.977411,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "NWIClass",
+   "uniqueValueGroups": [
+    {
+     "heading": "NWI Class",
+     "classes": [
+      {
+       "label": "Aquatic Bed",
+       "description": "Aquatic Bed",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         244,
+         241,
+         154,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Aquatic Bed"
+        ]
+       ]
+      },
+      {
+       "label": "Emergent",
+       "description": "Emergent",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         198,
+         226,
+         178,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Emergent"
+        ]
+       ]
+      },
+      {
+       "label": "Forested",
+       "description": "Forested",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         215,
+         194,
+         158,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Forested"
+        ]
+       ]
+      },
+      {
+       "label": "Reef",
+       "description": "Reef",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         230,
+         152,
+         0,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Reef"
+        ]
+       ]
+      },
+      {
+       "label": "Rocky Shore",
+       "description": "Rocky Shore",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         190,
+         232,
+         255,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Rocky Shore"
+        ]
+       ]
+      },
+      {
+       "label": "Scrub-Shrub",
+       "description": "Scrub-Shrub",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         240,
+         204,
+         230,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Scrub-Shrub"
+        ]
+       ]
+      },
+      {
+       "label": "Streambed",
+       "description": "Streambed",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         115,
+         178,
+         255,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Streambed"
+        ]
+       ]
+      },
+      {
+       "label": "Unconsolidated Shore",
+       "description": "Unconsolidated Shore",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         235,
+         175,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Unconsolidated Shore"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "uniqueValueInfos": [
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       244,
+       241,
+       154,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Aquatic Bed",
+     "label": "Aquatic Bed"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       198,
+       226,
+       178,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Emergent",
+     "label": "Emergent"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       215,
+       194,
+       158,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Forested",
+     "label": "Forested"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       230,
+       152,
+       0,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Reef",
+     "label": "Reef"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       190,
+       232,
+       255,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Rocky Shore",
+     "label": "Rocky Shore"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       240,
+       204,
+       230,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Scrub-Shrub",
+     "label": "Scrub-Shrub"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       115,
+       178,
+       255,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Streambed",
+     "label": "Streambed"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       235,
+       175,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Unconsolidated Shore",
+     "label": "Unconsolidated Shore"
+    }
+   ],
+   "fieldDelimiter": ",",
+   "authoringInfo": {
+    "colorRamp": {
+     "type": "multipart",
+     "colorRamps": [
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        246,
+        212,
+        255
+       ],
+       "toColor": [
+        252,
+        246,
+        212,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        213,
+        179,
+        252,
+        255
+       ],
+       "toColor": [
+        213,
+        179,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        187,
+        233,
+        252,
+        255
+       ],
+       "toColor": [
+        187,
+        233,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        179,
+        182,
+        255
+       ],
+       "toColor": [
+        252,
+        179,
+        182,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        187,
+        252,
+        189,
+        255
+       ],
+       "toColor": [
+        187,
+        252,
+        189,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        212,
+        249,
+        255
+       ],
+       "toColor": [
+        252,
+        212,
+        249,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        179,
+        252,
+        239,
+        255
+       ],
+       "toColor": [
+        179,
+        252,
+        239,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        239,
+        252,
+        179,
+        255
+       ],
+       "toColor": [
+        239,
+        252,
+        179,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        212,
+        216,
+        255
+       ],
+       "toColor": [
+        252,
+        212,
+        216,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        189,
+        204,
+        252,
+        255
+       ],
+       "toColor": [
+        189,
+        204,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        182,
+        249,
+        255
+       ],
+       "toColor": [
+        252,
+        182,
+        249,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        179,
+        211,
+        255
+       ],
+       "toColor": [
+        252,
+        179,
+        211,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        207,
+        252,
+        215,
+        255
+       ],
+       "toColor": [
+        207,
+        252,
+        215,
+        255
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -1.90186082586E7,
+  "ymin": -1617127.521400001,
+  "xmax": 1.6233806849100001E7,
+  "ymax": 1.1537280945600003E7,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "NWIClass",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "aquaticSetting",
+   "type": "esriFieldTypeString",
+   "alias": "Aquatic Setting",
+   "length": 24,
+   "domain": null
+  },
+  {
+   "name": "NWIClass",
+   "type": "esriFieldTypeString",
+   "alias": "NWI Class",
+   "length": 24,
+   "domain": null
+  },
+  {
+   "name": "NWIWaterRegime",
+   "type": "esriFieldTypeString",
+   "alias": "NWI Water Regime",
+   "length": 24,
+   "domain": null
+  },
+  {
+   "name": "salinityRegime",
+   "type": "esriFieldTypeString",
+   "alias": "Salinity Regime",
+   "length": 48,
+   "domain": null
+  },
+  {
+   "name": "biotic",
+   "type": "esriFieldTypeString",
+   "alias": "Biotic",
+   "length": 72,
+   "domain": null
+  },
+  {
+   "name": "substrate",
+   "type": "esriFieldTypeString",
+   "alias": "Substrate",
+   "length": 48,
+   "domain": null
+  },
+  {
+   "name": "spatial",
+   "type": "esriFieldTypeGeometry",
+   "alias": "spatial",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "spatial",
+  "type": "esriFieldTypeGeometry",
+  "alias": "spatial"
+ },
+ "indexes": [
+  {
+   "name": "R825_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "S800_idx",
+   "fields": "spatial",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "spatial.STArea()",
+  "shapeLengthFieldName": "spatial.STLength()",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true,
+ "serviceItemId": "d724678a104e48578af1f91f9ff55507"
+}

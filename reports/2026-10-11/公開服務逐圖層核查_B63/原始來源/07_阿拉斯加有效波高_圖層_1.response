@@ -1,0 +1,328 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 1,
+ "name": "Alaska Wave Climate",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPoint",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 0,
+  "name": "Alaska Significant Wave Height"
+ },
+ "subLayers": [],
+ "minScale": 36111.909643,
+ "maxScale": 18055.954822,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "classBreaks",
+   "authoringInfo": {
+    "type": "classedSize",
+    "classificationMethod": "esriClassifyManual"
+   },
+   "field": "significantWaveHeight",
+   "classificationMethod": "esriClassifyManual",
+   "minValue": 0.3100000023841858,
+   "classBreakInfos": [
+    {
+     "symbol": {
+      "type": "esriPMS",
+      "url": "26cbb38c23cf19f6cade88cdccc9bed0",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAT0lEQVQYlY3PsQ1AUBgE4C/yapUtiBkMYUxjmEDoXi9GoKFRyR9511zx5YpLfpJKsceCDusXGwyoouWBDW2EF2qcEWaMmCK8sb8dXpmLfz7egQvueVQBqgAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 5,
+      "height": 7,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0
+     },
+     "classMaxValue": 1,
+     "label": "<= 1.0"
+    },
+    {
+     "symbol": {
+      "type": "esriPMS",
+      "url": "0760e6684f6d4bdfee17c35254d5c7e9",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAOCAYAAAASVl2WAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAg0lEQVQYlY3QOwoCMRQF0COMIDhiYe8CbNyBnQuatVlqZWllpdgIipY2goX4QQYiqJjM3C5wkrz7MhXJ6oIeutiGcxt9rN/gjAIHXNDB6hPcMMcMOYZY/JvhGV5r4foLduHffazFBmM8cIzVbGCAaQyUt5upRS0xSoETJilQ5l4FvvIC6jQYESfSYa8AAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 6,
+      "height": 10,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0
+     },
+     "classMaxValue": 1.5,
+     "label": "1.01-1.50 | 3.2-4.9"
+    },
+    {
+     "symbol": {
+      "type": "esriPMS",
+      "url": "f8722c2bbfe8e1b31d3395fa14183d90",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAAsAAAATCAYAAABGKffQAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA0ElEQVQokZ3QsUpCYRQH8B+lixA9QG8hSIM0hPgCLj1A0t4T+AiNgbg2tDToJpLS0BAEEY21N0oEIiHKlTNcrle59t/O9/0+vnNOyR4p/ReX8bfFHWKRxnd4wD2WcVZHBy38pvEEU/TwiDO8YZDAbBtf+EQbDVxjHvVGz0+4iEejOKvhNQ/PUMkMVkU3D4ttrCdfVxykht3ALzjFM47wk77M4ndcBT7HeBdextdJTtDfhcWuj+UkD49xiY8i+BtN3BbBSW5i74XwsGjPW7MXXgGVXCg8bIqS6gAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 8,
+      "height": 14,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0
+     },
+     "classMaxValue": 2,
+     "label": "1.51-2.00 | 4.9-6.6"
+    },
+    {
+     "symbol": {
+      "type": "esriPMS",
+      "url": "a53a2cc55fdc53ccec1743484494d3ed",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAA4AAAAWCAYAAADwza0nAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA/UlEQVQ4ja3SsStFURwH8I88ZbCYbCwGuywmRb2/gDJbbZKZ3WS2vEFZTCZ6Sk9JFmUgGbBIKAN5hejUebrd7nXfvfnW6XTO+X06nc6vpmJq/wEH4/rxj/pRXKfhO66wiXW8Js4msYoW1tKwjQZOsYNdHGEF99jCRd4bn3CCOuaxgGXcxRsbebCJGWzHG8LopBdfefAccxEmM4ybou/oydirY68IXmIszp2M4LYI7mM2AcPbPtNFWfABQ4n1RPyiQhjygb44T2GjW3gcu+UQA3jrFrawhDO8ZBXkwTb6MY2DMjDkOcJFJWET4/guC0P7/TZ1GRgSmqESzE1l+APHVDSqz+szOQAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 10,
+      "height": 16,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0
+     },
+     "classMaxValue": 2.5,
+     "label": "2.01-2.50 | 6.6=8.2"
+    },
+    {
+     "symbol": {
+      "type": "esriPMS",
+      "url": "99bfdff2826d8791bc3980cbe636bb09",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAaCAYAAABozQZiAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQklEQVQ4ja3UvytvcRzH8Uf6yq8sVpNFBpNJBou+DIrBpFtGEQYZlTu5Rcp6lVFS/gNS3EUsJEkGNtPFHfwM0anPcDqdc+736+u1fM75vN/Pd6/3+bw/p6ACFb4LbsBDCUwNXpLwLOowj78pUBVG8APFJLyHMexiA8sxJ4P4iROcp9n+gwEMYxKHWEM/rjCE9qyen4LtZyxhFaPBzWnImcJcGixYagvrPywm4o24z4K30RvvK6YWXGbZjnSMCenqw1Ye/IE3VOM1EevASh4caR9d4ejiee+heC4c9T2egDtxkExMg6/RnNiLPuLvUuBIN2jCbXhvDkVLgnfQg81QJG3WZcHRqC4EuBiKlQw/oj48d2Om3J/BBVpRG+a9LDg6smmcZSUUcuCjcEX7vgJ/YD12HZUDR/qVF/wffFcJnKuK4E+9rz/MU7ZkAwAAAABJRU5ErkJggg==",
+      "contentType": "image/png",
+      "width": 11,
+      "height": 19,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0
+     },
+     "classMaxValue": 3,
+     "label": "2.51-3.00 | 8.2-9.8"
+    },
+    {
+     "symbol": {
+      "type": "esriPMS",
+      "url": "dee5fa9608f132b5a01ad6080675fc92",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAYAAACU9ioYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABvklEQVRIie3VTYtPYRjH8Y86ESNlIQtewEyKZGFDbLCRxayYwgtgY6E8ZIE8rXgFFizkBYya82cxsRNjIQslKYWGrEyN1OiuS06nc87//j8sLFx16nS6zve+nn7XXRizFf+Be/BswDJsxjq8b6rhRazGOTzvA9qAsziDbW1N6eEYnmAuDnhb81mDU7iAd/iID23AErtxGJfwCvdxGV9wPN6/4yR+YLoKqANfYxKLOI3buBpRfsIqnMcDrOB6ZNIKTLaAXVHDlNIMdsZzD78qvvtxrR8wpX2g1pSFeKq2CUuRdicwNeZhpNNl6dDH9Y9NwMWYq4n66TU7hDs5wGTzUZ/ZDuCOmIIsYKrjkQ7g9piIlVxgkt8t7XYwDpULXI5abg0lNAFPDLoPe/Hj3dr3taHjz4MCy9ByHbgPT9t+KjqAqehTIbdq8VPUj4YBirFIknvpr+0NPQ8FLCOiP8At+BpNGwrYi81ys6KOxnHJBabRWR9SXIpor4x6jc5HZ+diV74ZFVjGBv+GF/2ciwxgkuGNAJbjAC5HZ2diZEYGikV6NKIcC7DExhzHIhOYZPhznEANF36jFTlOg9i/D/wNW0JfXnaqxEwAAAAASUVORK5CYII=",
+      "contentType": "image/png",
+      "width": 15,
+      "height": 26,
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0
+     },
+     "classMaxValue": 3.559999942779541,
+     "label": "3.01-3.56 | 9.8-11.68"
+    }
+   ],
+   "legendOptions": {"order": "ascendingValues"},
+   "visualVariables": [
+    {
+     "type": "rotationInfo",
+     "valueExpressionTitle": "Custom",
+     "valueExpression": "$feature.waveDirection",
+     "rotationType": "geographic"
+    }
+   ]
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -2.00374994373E7,
+  "ymin": 6010940.067400001,
+  "xmax": 2.0037506116400003E7,
+  "ymax": 8740361.7857,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "significantWaveHeight",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "pointId",
+   "type": "esriFieldTypeInteger",
+   "alias": "Point Identifier",
+   "domain": null
+  },
+  {
+   "name": "waveDirection",
+   "type": "esriFieldTypeSingle",
+   "alias": "Wave Direction",
+   "domain": null
+  },
+  {
+   "name": "waveAbsolutePeriod",
+   "type": "esriFieldTypeSingle",
+   "alias": "Wave Absolute Period",
+   "domain": null
+  },
+  {
+   "name": "significantWaveHeight",
+   "type": "esriFieldTypeSingle",
+   "alias": "Significant Wave Height",
+   "domain": null
+  },
+  {
+   "name": "wavePeakPeriod",
+   "type": "esriFieldTypeSingle",
+   "alias": "Wave Peak Period",
+   "domain": null
+  },
+  {
+   "name": "maximumEnergyDirection",
+   "type": "esriFieldTypeSingle",
+   "alias": "Maximum Energy Direction",
+   "domain": null
+  },
+  {
+   "name": "spatial",
+   "type": "esriFieldTypeGeometry",
+   "alias": "spatial",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "spatial",
+  "type": "esriFieldTypeGeometry",
+  "alias": "spatial"
+ },
+ "indexes": [
+  {
+   "name": "R836_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "S811_idx",
+   "fields": "spatial",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true,
+ "serviceItemId": "b1a4f19f60bf45f487f88a2c98dcb4ad"
+}

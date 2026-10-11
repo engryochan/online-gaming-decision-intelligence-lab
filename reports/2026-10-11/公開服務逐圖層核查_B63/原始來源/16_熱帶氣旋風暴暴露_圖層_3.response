@@ -1,0 +1,322 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 3,
+ "name": "Western Pacific 34-knot Occurrence",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 1.8489297737236E7,
+ "maxScale": 72223.819286,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "authoringInfo": {
+    "visualVariables": [
+     {
+      "type": "colorInfo",
+      "minSliderValue": 1,
+      "maxSliderValue": 71
+     }
+    ]
+   },
+   "type": "classBreaks",
+   "field": "occurrence34kt",
+   "minValue": -9223372036854775808,
+   "classBreakInfos": [
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       130,
+       130,
+       130,
+       0
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        130,
+        130,
+        130,
+        255
+       ],
+       "width": 0.1
+      }
+     },
+     "classMaxValue": 9223372036854775807
+    }
+   ],
+   "legendOptions": {"order": "descendingValues"},
+   "visualVariables": [
+    {
+     "type": "colorInfo",
+     "valueExpressionTitle": "Custom",
+     "valueExpression": "$feature.occurrence34kt",
+     "stops": [
+      {
+       "value": 1,
+       "color": [
+        0,
+        132,
+        255,
+        255
+       ],
+       "label": "1"
+      },
+      {
+       "value": 18.5,
+       "color": [
+        0,
+        255,
+        0,
+        255
+       ]
+      },
+      {
+       "value": 36,
+       "color": [
+        255,
+        255,
+        0,
+        255
+       ]
+      },
+      {
+       "value": 53.5,
+       "color": [
+        255,
+        130,
+        130,
+        255
+       ]
+      },
+      {
+       "value": 71,
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "label": "71"
+      }
+     ],
+     "legendOptions": {
+      "title": "",
+      "showLegend": true,
+      "order": "descendingValues"
+     }
+    }
+   ]
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": 1.5031304307599999E7,
+  "ymin": 501014.0601999983,
+  "xmax": 1.9929387882700004E7,
+  "ymax": 5282850.256899998,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "occurrence34kt",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "occurrence34kt",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "34-knot Wind Occurrence",
+   "domain": null
+  },
+  {
+   "name": "occurrence50kt",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "50-knot Wind Occurrence",
+   "domain": null
+  },
+  {
+   "name": "occurrence64kt",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "64-knot Wind Occurrence",
+   "domain": null
+  },
+  {
+   "name": "stormSegmentCount",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Intersecting Storm Segments",
+   "domain": null
+  },
+  {
+   "name": "returnInterval34kt",
+   "type": "esriFieldTypeSingle",
+   "alias": "34-knot Wind Return Interval",
+   "domain": null
+  },
+  {
+   "name": "returnInterval50kt",
+   "type": "esriFieldTypeSingle",
+   "alias": "50-knot Wind Return Interval",
+   "domain": null
+  },
+  {
+   "name": "returnInterval64kt",
+   "type": "esriFieldTypeSingle",
+   "alias": "64-knot Wind Return Interval",
+   "domain": null
+  },
+  {
+   "name": "spatial",
+   "type": "esriFieldTypeGeometry",
+   "alias": "spatial",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "spatial",
+  "type": "esriFieldTypeGeometry",
+  "alias": "spatial"
+ },
+ "indexes": [
+  {
+   "name": "S824_idx",
+   "fields": "spatial",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "spatial.STArea()",
+  "shapeLengthFieldName": "spatial.STLength()",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": false,
+ "serviceItemId": "27022b72406043e3801553c044bea18f"
+}

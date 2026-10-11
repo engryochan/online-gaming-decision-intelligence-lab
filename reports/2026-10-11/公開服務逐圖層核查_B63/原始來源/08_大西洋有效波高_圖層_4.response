@@ -1,0 +1,349 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 4,
+ "name": "Atlantic Wave Height 100 sqkm",
+ "type": "Feature Layer",
+ "description": "These data depict a wave energy resource characterization for the US Exclusive Economic Zone. This climatology is based on a multi-resolution 32 year hindcast that used the  WaveWatchIII and Simulating WAve Nearshore (SWAN) wave models. A collection of five variables are reported at the annual and monthly intervals. Statistics for each variable are provided as point and hexagon features.",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 0,
+  "name": "Atlantic Significant Wave Height"
+ },
+ "subLayers": [],
+ "minScale": 2311162.217155,
+ "maxScale": 1155581.108577,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "authoringInfo": {
+    "visualVariables": [
+     {
+      "type": "colorInfo",
+      "minSliderValue": 0,
+      "maxSliderValue": 2.4600000381469727
+     }
+    ]
+   },
+   "type": "classBreaks",
+   "field": "significantWaveHeight",
+   "defaultSymbol": {
+    "type": "esriSFS",
+    "style": "esriSFSSolid",
+    "color": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "outline": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      110,
+      110,
+      110,
+      255
+     ],
+     "width": 0.7
+    }
+   },
+   "defaultLabel": "<null>",
+   "minValue": -9223372036854775808,
+   "classBreakInfos": [
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       130,
+       130,
+       130,
+       0
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        130,
+        130,
+        130,
+        255
+       ],
+       "width": 0.7
+      }
+     },
+     "classMaxValue": 9223372036854775807
+    }
+   ],
+   "legendOptions": {"order": "ascendingValues"},
+   "visualVariables": [
+    {
+     "type": "colorInfo",
+     "valueExpressionTitle": "Custom",
+     "valueExpression": "$feature.significantWaveHeight",
+     "stops": [
+      {
+       "value": 0,
+       "color": [
+        0,
+        132,
+        255,
+        255
+       ],
+       "label": "0.0"
+      },
+      {
+       "value": 0.6150000095367432,
+       "color": [
+        0,
+        255,
+        0,
+        255
+       ]
+      },
+      {
+       "value": 1.2300000190734863,
+       "color": [
+        255,
+        255,
+        0,
+        255
+       ]
+      },
+      {
+       "value": 1.8450000286102295,
+       "color": [
+        255,
+        130,
+        130,
+        255
+       ]
+      },
+      {
+       "value": 2.4600000381469727,
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "label": "2.5  |  8.2"
+      }
+     ],
+     "legendOptions": {
+      "title": "",
+      "showLegend": true,
+      "order": "ascendingValues"
+     }
+    }
+   ]
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -9084531.1456,
+  "ymin": 2794653.193,
+  "xmax": -7313279.8971,
+  "ymax": 5604653.564800002,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "significantWaveHeight",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "hexagonIdentifier",
+   "type": "esriFieldTypeString",
+   "alias": "Hexagon Identifier",
+   "length": 12,
+   "domain": null
+  },
+  {
+   "name": "waveDirection",
+   "type": "esriFieldTypeSingle",
+   "alias": "Wave Direction",
+   "domain": null
+  },
+  {
+   "name": "waveAbsolutePeriod",
+   "type": "esriFieldTypeSingle",
+   "alias": "Wave Absolute Period",
+   "domain": null
+  },
+  {
+   "name": "significantWaveHeight",
+   "type": "esriFieldTypeSingle",
+   "alias": "Significant Wave Height",
+   "domain": null
+  },
+  {
+   "name": "Shape.STLength()",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape_Length",
+   "domain": null
+  },
+  {
+   "name": "Shape.STArea()",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape_Area",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "R797_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "S773_idx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "Shape.STArea()",
+  "shapeLengthFieldName": "Shape.STLength()",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": false,
+ "serviceItemId": "abddcf5c4aa648a3a4be58b17aeaee57"
+}

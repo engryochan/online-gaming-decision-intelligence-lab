@@ -1,0 +1,1070 @@
+{
+ "currentVersion": 11.5,
+ "cimVersion": "3.5.0",
+ "id": 3,
+ "name": "Gulf of Maine 2021 Geoform",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 0,
+  "name": "Gulf of Maine 2021 Benthic Habitat"
+ },
+ "subLayers": [],
+ "minScale": 2311162.217155,
+ "maxScale": 9027.977411,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "uniqueValue",
+   "field1": "geoform_category_one",
+   "uniqueValueGroups": [
+    {
+     "heading": "Geoform",
+     "classes": [
+      {
+       "label": "Crest",
+       "description": "Crest",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         127,
+         127,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          255,
+          0,
+          0,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Crest"
+        ]
+       ]
+      },
+      {
+       "label": "Bank",
+       "description": "Bank",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         240,
+         199,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          0,
+          0,
+          0,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Bank"
+        ]
+       ]
+      },
+      {
+       "label": "Rise",
+       "description": "Rise",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         230,
+         204,
+         153,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          78,
+          78,
+          78,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Rise"
+        ]
+       ]
+      },
+      {
+       "label": "Slope",
+       "description": "Slope",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         255,
+         60,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Slope"
+        ]
+       ]
+      },
+      {
+       "label": "Sediment Wave Field",
+       "description": "Sediment Wave Field",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         230,
+         172,
+         0,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          78,
+          78,
+          78,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Sediment Wave Field"
+        ]
+       ]
+      },
+      {
+       "label": "Shelf Sediment Shoal",
+       "description": "Shelf Sediment Shoal",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         255,
+         211,
+         127,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Shelf Sediment Shoal"
+        ]
+       ]
+      },
+      {
+       "label": "Rocky Zone",
+       "description": "Rocky Zone",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         250,
+         250,
+         250,
+         191
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          0,
+          0,
+          0,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Rocky Zone"
+        ]
+       ]
+      },
+      {
+       "label": "Flat",
+       "description": "Flat",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         190,
+         232,
+         255,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Flat"
+        ]
+       ]
+      },
+      {
+       "label": "Scar",
+       "description": "Scar",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         205,
+         205,
+         205,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Scar"
+        ]
+       ]
+      },
+      {
+       "label": "Depression",
+       "description": "Depression",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         0,
+         197,
+         255,
+         178
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Depression"
+        ]
+       ]
+      },
+      {
+       "label": "Pockmark",
+       "description": "Pockmark",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         115,
+         178,
+         255,
+         178
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          110,
+          110,
+          110,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "Pockmark"
+        ]
+       ]
+      },
+      {
+       "label": "No data",
+       "description": "No data",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         250,
+         250,
+         250,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSNull",
+         "color": [
+          0,
+          0,
+          0,
+          255
+         ],
+         "width": 0
+        }
+       },
+       "values": [
+        [
+         "No data"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "uniqueValueInfos": [
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       127,
+       127,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Crest",
+     "label": "Crest"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       240,
+       199,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Bank",
+     "label": "Bank"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       230,
+       204,
+       153,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        78,
+        78,
+        78,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Rise",
+     "label": "Rise"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       255,
+       60,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Slope",
+     "label": "Slope"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       230,
+       172,
+       0,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        78,
+        78,
+        78,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Sediment Wave Field",
+     "label": "Sediment Wave Field"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       211,
+       127,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Shelf Sediment Shoal",
+     "label": "Shelf Sediment Shoal"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       250,
+       250,
+       250,
+       191
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Rocky Zone",
+     "label": "Rocky Zone"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       190,
+       232,
+       255,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Flat",
+     "label": "Flat"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       205,
+       205,
+       205,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Scar",
+     "label": "Scar"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       0,
+       197,
+       255,
+       178
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Depression",
+     "label": "Depression"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       115,
+       178,
+       255,
+       178
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "Pockmark",
+     "label": "Pockmark"
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       250,
+       250,
+       250,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSNull",
+       "color": [
+        0,
+        0,
+        0,
+        255
+       ],
+       "width": 0
+      }
+     },
+     "value": "No data",
+     "label": "No data"
+    }
+   ],
+   "fieldDelimiter": ",",
+   "authoringInfo": {
+    "colorRamp": {
+     "type": "multipart",
+     "colorRamps": [
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        218,
+        197,
+        255
+       ],
+       "toColor": [
+        252,
+        218,
+        197,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        187,
+        187,
+        252,
+        255
+       ],
+       "toColor": [
+        187,
+        187,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        179,
+        252,
+        180,
+        255
+       ],
+       "toColor": [
+        179,
+        252,
+        180,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        194,
+        250,
+        252,
+        255
+       ],
+       "toColor": [
+        194,
+        250,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        184,
+        227,
+        255
+       ],
+       "toColor": [
+        252,
+        184,
+        227,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        250,
+        182,
+        255
+       ],
+       "toColor": [
+        252,
+        250,
+        182,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        202,
+        219,
+        252,
+        255
+       ],
+       "toColor": [
+        202,
+        219,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        220,
+        252,
+        210,
+        255
+       ],
+       "toColor": [
+        220,
+        252,
+        210,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        187,
+        192,
+        255
+       ],
+       "toColor": [
+        252,
+        187,
+        192,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        179,
+        252,
+        255
+       ],
+       "toColor": [
+        252,
+        179,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        234,
+        207,
+        252,
+        255
+       ],
+       "toColor": [
+        234,
+        207,
+        252,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        182,
+        252,
+        231,
+        255
+       ],
+       "toColor": [
+        182,
+        252,
+        231,
+        255
+       ]
+      },
+      {
+       "type": "algorithmic",
+       "algorithm": "esriCIELabAlgorithm",
+       "fromColor": [
+        252,
+        215,
+        228,
+        255
+       ],
+       "toColor": [
+        252,
+        215,
+        228,
+        255
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -7919552.738,
+  "ymin": 4988575.365199998,
+  "xmax": -7445650.340299999,
+  "ymax": 5636299.4683,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "geoform_category_one",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "geometry",
+   "type": "esriFieldTypeGeometry",
+   "alias": "geometry",
+   "domain": null
+  },
+  {
+   "name": "geoform_category_one",
+   "type": "esriFieldTypeString",
+   "alias": "Geoform Category One",
+   "length": 48,
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "geometry",
+  "type": "esriFieldTypeGeometry",
+  "alias": "geometry"
+ },
+ "indexes": [
+  {
+   "name": "FDO_geometry",
+   "fields": "geometry",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": false,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Query,Map",
+ "maxRecordCount": 2000,
+ "maxSelectionCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": false,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": false,
+  "supportsCurrentUserQueries": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "geometry_Area",
+  "shapeLengthFieldName": "geometry_Length",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true,
+ "serviceItemId": "a6086aa7980143448981ad4f662a3fe7"
+}
