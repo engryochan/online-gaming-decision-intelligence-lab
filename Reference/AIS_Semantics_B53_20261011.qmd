@@ -1,0 +1,37 @@
+---
+title: "B53：AIS年代化欄位字典、品質與用途核對"
+date: 2026-10-11
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 2019欄位與新版本隔離
+
+取得[官方字典](https://coast.noaa.gov/data/marinecadastre/ais/data-dictionary.pdf)，明列2018–2024與2025起兩套17欄結構。2019部分檔表頭與舊期欄名及順序完全一致；只核schema，不是全檔驗證。MMSI以文字識別，UTC時間保留、座標十進位度、SOG為節、COG及Heading為度，尺寸為米。字典declared type、size與domain保留原欄，不能把展示精度當作實際量測精度。
+
+跨期欄位有改名、座標順序改變、Heading／Cargo／尺寸型別及文字長度變動，逐欄映射保存；新期有效範圍及null要求不套2019，不能自動轉型、截字或補零。抽取器替代字元保留原文與PDF，規範化欄位另行核；來源PDF仍是覆核依據。
+
+## 品質與使用邊界
+
+[官方FAQ](https://coast.noaa.gov/data/marinecadastre/ais/faq.pdf)為地面接收與歷史規劃資料，覆蓋、取整分鐘、AVIS校訂與使用條件分列於規則表。它不是全球衛星AIS。COG／SOG缺值標記及Heading的年代適用性保留待樣本核對；當期文件未找到舊搜索摘要的負值加常數规则，不自动修正。公共领域与Level C條件不能簡化為任意原始資料收費轉售。
+
+## 年度規模與公開服務實測
+
+[官方年度摘要](https://coast.noaa.gov/data/marinecadastre/ais/point-data-summary.pdf)列2019有365檔、約27億記錄、壓縮99.1 GB、解壓估283 GB。這些是來源宣告，不是本項目全量實測。其他年份与Total行一并保留，空白記錄數保持空值，不補零。2025摘要是不完整年度，不能當全年資料量。
+
+另讀[2019 InPort元資料](https://www.fisheries.noaa.gov/inport/item/62733)保存版本證據。NOAA托管的2019 Transit Counts圖層端點本次也回應HTTP200內含499 Token Required；沒有取得schema，不能因域名屬NOAA就假定服務無帳戶限制。原CSV公開目錄與圖層服務繼續分開。
+
+## 驗收與交付
+
+{"dictionary_pages": 2, "dictionary_updated": "July 31, 2026", "versioned_field_rows": 34, "field_mappings": 17, "previous_2019_header_exact_match": true, "faq_pages": 11, "summary_pages": 1, "annual_summary_rows": 18, "quality_and_use_rules": 9, "source_receipts": 5, "http_errors": 0, "public_layer_api_error": 499, "full_data_rows_validated": 0, "automatic_corrections_applied": 0, "sqlite_counts": {"preserved_registry_gap_resolution": 4, "preserved_registry_noaa_2019_csv_header": 17, "preserved_registry_noaa_2019_daily_objects": 365, "registry_official_annual_summary": 18, "registry_public_layer_access": 1, "registry_quality_and_use_rules": 9, "registry_schema_migration_comparison": 17, "registry_source_receipts": 5, "registry_versioned_field_dictionary": 34}, "global_complete": false}。
+
+[34筆年代化字典](tables/76_ais_semantics_b53_20261011/registry_versioned_field_dictionary.csv)、[17項跨期比較](tables/76_ais_semantics_b53_20261011/registry_schema_migration_comparison.csv)、[年度摘要](tables/76_ais_semantics_b53_20261011/registry_official_annual_summary.csv)、[品質與用途規則](tables/76_ais_semantics_b53_20261011/registry_quality_and_use_rules.csv)、[來源收據](tables/76_ais_semantics_b53_20261011/registry_source_receipts.csv)、[SQLite](tables/76_ais_semantics_b53_20261011/ais_semantics_b53.sqlite)。
+
+## 接續施工與成本控制
+
+先核逐用途權利；再選有界歷史時段與一般商船彙總樣本，串流讀取而非一次載入全年度。原字串、UTC、來源版本與缺值原因保留；合成測試與來源樣本驗證分開。以整檔CRC／雜湊、日期分區完整性、欄位數、時空及單位檢查、重複与空值率驗收，不用船名單獨認定法人或持有人。資料不可因記錄缺少而判定無船舶活動。
+
+既有星盾、Grok／xAI、Meteomatics、ArcGIS與全部全球清單保留，未新增即時追蹤、武器目標或私有連線。本輪未驗證全量記錄品質、商用清關或全球覆蓋；SDG分析凍結，Untitled不恢復。
