@@ -1,0 +1,33 @@
+---
+title: "B52：星盾頁面取用、Esri條款與歷史公開替代來源"
+date: 2026-10-11
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 星盾讀取缺口補核
+
+透過瀏覽器載入[SpaceX原官方Starshield頁](https://www.spacex.com/starshield)，由初始僅頁首狀態轉為完整可見產品段落，核對地球觀測、通信與搭載酬載三類說明。保留瀏覽器觀察回執與來源網址，沒有把它冒充原始HTTP回應或官方簽章。B51替代域名522原證據保留；本次關閉的是公開頁面文字取用缺口，不是性能、部署、機密資料或公共影像API核實。
+
+## Esri使用摘要與仍需授權的服務
+
+取得[Esri官方一頁FAQ](https://goto.arcgis.com/termsofuse/viewsummary)，文件日期2025-04-21，完整閱讀後分列訂閱、署名、離線底圖、下載／重分發／自架與商業Living Atlas用途條件。摘要對Esri自有內容有使用限制，不能由public item或不消耗credits推論自由商業轉售。其適用範圍不擴成所有第三方ArcGIS hosted資料；仍要核對[完整Master Agreement及產品特定條款](https://www.esri.com/en-us/legal/terms/master-agreement)、訂單與逐item內容。沒有建立帳戶或接受條款。
+
+B51的20項Token Required維持限制，原始20項499回應及全部68項item資料原樣保留，沒有將公開替代來源寫成原服務已取得。
+
+## 回到歷史AIS原始公開來源
+
+Esri有界清單包含US Vessel Traffic 2019產品。另核對[NOAA原始2019 AIS目錄](https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2019/)，登記365個逐日ZIP連結，逐日日期及唯一檔名對賬。頁面宣告全量約99.1G；本輪沒有下載全量。原始AIS點位CSV與Esri加工Feature Service在處理、幾何、欄位與授權層次不同，只登記為替代研究來源，不宣稱內容等價。
+
+對2019-01-01公開ZIP僅作HTTP Range前65536 bytes取用，驗證206及Content-Range，解壓首個CSV的有界前綴取得表頭。保存原始部分位元與來源指紋，沒有完整ZIP中央目錄／CRC驗證、沒有全檔／記錄數核實，也沒有分析船舶軌跡。欄名不等於業務語意核實；下一步需官方字典及合法指定用途的歷史資料品質核對。
+
+## 統計與交付
+
+{"starshield_visible_page_observed": true, "esri_faq_pages": 1, "esri_faq_source_date": "2025-04-21", "noaa_2019_objects": 365, "partial_csv_columns": 17, "source_receipts": 5, "fetch_errors": 0, "token_restrictions_retained": 20, "full_ais_files_downloaded": 0, "sqlite_counts": {"preserved_preserved_registry_commercial_products": 27, "preserved_preserved_registry_preserved_498_asf_work": 498, "preserved_preserved_registry_product_workqueue": 108, "preserved_registry_esri_catalog": 68, "preserved_registry_esri_item_terms": 68, "preserved_registry_esri_service_schema": 20, "registry_esri_obligations": 6, "registry_gap_resolution": 4, "registry_noaa_2019_csv_header": 17, "registry_noaa_2019_daily_objects": 365, "registry_source_receipts": 5}, "global_complete": false}。
+
+[缺口狀態](tables/75_access_resolution_b52_20261011/registry_gap_resolution.csv)、[Esri義務](tables/75_access_resolution_b52_20261011/registry_esri_obligations.csv)、[365逐日目錄](tables/75_access_resolution_b52_20261011/registry_noaa_2019_daily_objects.csv)、[部分ZIP表頭](tables/75_access_resolution_b52_20261011/registry_noaa_2019_csv_header.csv)、[來源收據](tables/75_access_resolution_b52_20261011/registry_source_receipts.csv)、[SQLite](tables/75_access_resolution_b52_20261011/access_resolution_b52.sqlite)。
+
+前輪68個ArcGIS item、20個服務錯誤、27個產品群、108項商業工作及498項ASF工作均保留。Grok／xAI與Meteomatics版本、參數及保留值成果保留；影像品質、具體用途授權、全球覆蓋及部署仍未全面核實。全球金融、歷史與神經科技待辦未結清；SDG分析保持凍結，Untitled不恢復。
