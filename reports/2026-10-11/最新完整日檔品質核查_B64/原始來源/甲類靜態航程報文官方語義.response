@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://www.navcen.uscg.gov/ais-class-a-static-voyage-message-5" />
+<link rel="shortlink" href="https://www.navcen.uscg.gov/node/85" />
+
+    <title>AIS Class A Ship Static and Voyage Related Data (Message 5) | Navigation Center</title>
+    <link rel="stylesheet" media="all" href="/core/assets/vendor/normalize-css/normalize.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/action-links.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/breadcrumb.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/container-inline.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/details.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/exposed-filters.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/field.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/form.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/icons.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/inline-form.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/item-list.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/links.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/menu.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/more-link.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/pager.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/tabledrag.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/tableselect.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/tablesort.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/textarea.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/ui-dialog.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/messages.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/components/node.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/style.css?tl3rsq" />
+<link rel="stylesheet" media="all" href="/themes/bootstrap4/css/custom.css?tl3rsq" />
+
+    
+  </head>
+  <body class="path-node page-node-type-page   d-flex flex-column h-100">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas d-flex flex-column h-100" data-off-canvas-main-canvas>
+    
+
+<header>
+    <div class="region region-header">
+    <div id="block-govwsblock" class="block block-block-content block-block-content2271e655-c301-4a8d-b4b0-23cc4975c385">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div id="govWebsiteBanner" style="background-color:#15263b;width:100%;">
+	<img src="/sites/default/files/images/us_flag.png" style="margin: 0 10px;">
+	<div class="text-white" style="display: inline-block;font-size:0.8rem;">An official website of the United States government</div>
+</div></div>
+      
+  </div>
+
+  </div>
+  
+
+  
+</header>
+
+<main role="main">
+  <a id="main-content" tabindex="-1"></a>
+    
+    
+  
+
+  <div class="container-fluid m-0 p-0">
+            <div class="region region-breadcrumb">
+    <div id="block-siteheader-3" class="block block-block-content block-block-content096c52f0-f922-481b-80c8-8e450a429715">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style>
+html, body {
+	overflow-x: hidden;
+}
+main div div.row.no-gutters {
+     max-width: 1140px;
+     margin: 0 auto;
+}
+#mainHeader {
+	background: linear-gradient(to right, #003e67, #001d3f) !important;
+	padding: 5px 0;
+}
+.homepageHeaderText1 {
+	color: white;
+	font-size: min(5vw, 2rem) !important;
+	font-weight: bold;
+}
+.homepageHeaderText2 {
+	color: white;
+	font-size: min(3vw, 1rem) !important;
+}
+.homepageHeaderText3 {
+	color: white;
+	font-size: min(3vw, 1rem) !important;
+}
+#navcenLogo img, #dhsLogo img{
+	/*max-width: 125px !important;*/
+}
+body {
+	overflow-x: hidden
+}
+#block-breadcrumbs {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+#main_menu_pancake {
+	display: block !important;
+	color: white;
+	padding-right: 10%;
+	float: left;
+	cursor: pointer;
+}
+#block-navcenmainmenu-3 {
+	display: block !important;
+}
+#headerTools {
+	padding: 1% 0;
+}
+</style>
+<div class="container-fluid">
+	<div class="row" id="mainHeader">
+		<div class="d-block col-lg-2 col-1"> </div>
+		<div class="d-none d-lg-block col-lg-1"> 
+			<div id="navcenLogo">
+				<a href="/" rel="home" title="Home">
+				<img class="img-fluid" src="/sites/default/files/images/navcen_logo7.png" alt="Home"></a>
+			</div>
+		</div>
+		<div class="d-block col-lg-5 col-md-5 col-10">
+			<div id="homepageHeaderText">
+				<div class="homepageHeaderText1">Navigation Center</div>
+				<div class="homepageHeaderText2">United States Coast Guard</div>
+				<div class="homepageHeaderText3">U.S. Department of Homeland Security</div>
+			</div>
+		</div>
+		<div class="d-block col-lg-1 col-md-1 col-1" id="headerTools"> 
+			<div data-target="#main_menu_modal" data-toggle="modal" id="main_menu_pancake">☰</div>
+			<div id="searchIconNew">
+				<a href="/search/website">
+				<!-- License: CC Attribution. Made by geakstr: https://github.com/geakstr/entypo-icons -->
+				<svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z"/></svg>
+				</a>
+			</div>
+		</div>
+		<div class="d-none d-lg-block col-lg-1"> 
+			<div id="dhsLogo">
+				<img class="img-fluid" src="/sites/default/files/images/dhs_logo.png" alt="DHS">
+			</div>
+		</div>
+		<div class="d-none d-lg-block d-md-block col-lg-2 col-md-1"> </div>
+	</div>
+</div></div>
+      
+  </div>
+<div id="block-breadcrumbs" class="block block-block-content block-block-content4a4429dd-59e9-49c9-9459-1a835b415207">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="row mb-2">
+<div class="col-11">
+<div id="breadcrumbs">
+<ul class="custom_breadcrumbs">
+	<li><a href="/">Home</a></li>
+</ul>
+</div>
+</div>
+
+<div class="col-1"><button class="btn btn-outline-info btn-sm p-0 pl-1 pr-1 float-right" id="printer_friendly_button" type="button">Print</button></div>
+</div>
+</div>
+      
+  </div>
+
+  </div>
+
+        <div class="row no-gutters">
+              <div class="order-2 order-lg-1 col-12 col-lg-3">
+            <div class="region region-sidebar-first">
+    <nav role="navigation" aria-labelledby="block-navcenmainmenu-menu" id="block-navcenmainmenu" class="block block-menu navigation menu--navcen-main-menu">
+            
+  <h5 class="visually-hidden" id="block-navcenmainmenu-menu">NAVCEN Main Menu - desktop</h5>
+  
+
+        
+              <ul class="nav navbar-nav">
+              
+            
+      <li class="nav-item">
+        <a href="/" class="nav-link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/search/website" class="nav-link" data-drupal-link-system-path="search/website">Search</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/resources" class="nav-link" data-drupal-link-system-path="node/656">Resources</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/maritime-safety-information" class="nav-link" data-drupal-link-system-path="node/611">Maritime Safety Information</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/navigation-systems-and-services" class="nav-link" data-drupal-link-system-path="node/600">Nav Systems and Services</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/waterways" class="nav-link" data-drupal-link-system-path="node/23380">Waterways</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/coast-guard-navcen-services" class="nav-link" data-drupal-link-system-path="node/625">Coast Guard / NAVCEN Services</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/sarsat" class="nav-link" data-drupal-link-system-path="node/72038">SARSAT - Home</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-navcenmainmenu-3-menu" id="block-navcenmainmenu-3" class="block block-menu navigation menu--navcen-main-menu">
+            
+  <h5 class="visually-hidden" id="block-navcenmainmenu-3-menu">NAVCEN Main Menu - mobile</h5>
+  
+
+        
+              <ul class="nav navbar-nav">
+              
+            
+      <li class="nav-item">
+        <a href="/" class="nav-link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/search/website" class="nav-link" data-drupal-link-system-path="search/website">Search</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/resources" class="nav-link" data-drupal-link-system-path="node/656">Resources</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/maritime-safety-information" class="nav-link" data-drupal-link-system-path="node/611">Maritime Safety Information</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/navigation-systems-and-services" class="nav-link" data-drupal-link-system-path="node/600">Nav Systems and Services</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/waterways" class="nav-link" data-drupal-link-system-path="node/23380">Waterways</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/coast-guard-navcen-services" class="nav-link" data-drupal-link-system-path="node/625">Coast Guard / NAVCEN Services</a>
+              </li>
+          
+            
+      <li class="nav-item">
+        <a href="/sarsat" class="nav-link" data-drupal-link-system-path="node/72038">SARSAT - Home</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+            <div class="order-1 order-lg-2 col-12 col-lg-9">
+          <div class="region region-content">
+    
+<div id="block-bootstrap4-content" class="block block-system block-system-main-block">
+  
+      <h2><span class="field field--name-title field--type-string field--label-hidden">AIS Class A Ship Static and Voyage Related Data (Message 5)</span>
+</h2>
+    
+      
+<article data-history-node-id="85" class="node node--type-page node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In addition, the Class A AIS unit broadcasts the following information every 6 minutes. Should only be used by Class A shipborne and SAR aircraft AIS stations when reporting static or voyage related data:</p><table class="table" border="1" cellpadding="0" cellspacing="0"><thead><tr><th style="vertical-align:top;width:113px;" scope="col"><p class="text-align-center">Parameter</p></th><th style="vertical-align:top;width:95px;" scope="col"><p class="text-align-center">Bits</p></th><th style="vertical-align:top;width:435px;" scope="col"><p class="text-align-center">Description</p></th></tr></thead><tbody><tr><td style="vertical-align:top;width:113px;">Message ID</td><td style="vertical-align:top;width:95px;"><p class="text-align-center">6</p></td><td style="vertical-align:top;width:435px;"><p align="left">Identifier for this Message</p></td></tr><tr><td style="vertical-align:top;width:113px;"><span>Repeat</span> <span>indicator</span></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">2</p></td><td style="vertical-align:top;width:435px;"><p align="left">Used by the repeater to indicate how many times a message has been repeated. Refer to §?4.6.1, Annex 2; 0-3; 0 = default; 3 = do not repeat any more</p></td></tr><tr><td style="vertical-align:top;width:113px;">User ID</td><td style="vertical-align:top;width:95px;"><p class="text-align-center">30</p></td><td style="vertical-align:top;width:435px;"><p align="left">MMSI number</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">AIS version indicator</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">2</p></td><td style="vertical-align:top;width:435px;"><p align="left">0 = station compliant with Recommendation ITU-R M.1371-1<br>1 = station compliant with Recommendation ITU-R M.1371-3 (or later)<br>2 = station compliant with Recommendation ITU-R M.1371-5 (or later)<br>3 = station compliant with future editions</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">IMO number</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">30</p></td><td style="vertical-align:top;width:435px;"><p align="left">0 = not available = default – Not applicable to SAR aircraft<br>0000000001-0000999999 not used<br>0001000000-0009999999 = valid IMO number;<br>0010000000-1073741823 = official flag state number.</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">Call sign</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">42</p></td><td style="vertical-align:top;width:435px;"><p align="left">7?=?6 bit ASCII characters, @@@@@@@ = not available = default<br>Craft associated with a parent vessel, should use “A” followed by the last<br>6 digits of the MMSI of the parent vessel. Examples of these craft include<br>towed vessels, rescue boats, tenders, lifeboats and liferafts.</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">Name</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">120</p></td><td style="vertical-align:top;width:435px;"><p align="left">Maximum 20 characters 6 bit ASCII "@@@@@@@@@@@@@@@@@@@@" = not available = default<br>The Name should be as shown on the station radio license. For SAR aircraft,<br>it should be set to “SAR AIRCRAFT NNNNNNN” where NNNNNNN<br>equals the aircraft registration number.</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left"><a href="#TypeOfShip">Type of ship and cargo type</a></p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">8</p></td><td style="vertical-align:top;width:435px;"><p align="left">0 = not available or no ship = default<br>1-99 = as defined below<br>100-199 = reserved, for regional use<br>200-255 = reserved, for future use<br>Not applicable to SAR aircraft</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left"><a href="#_Reference_point_for">Overall dimension/</a><br><a href="#_Reference_point_for">reference for position</a></p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">30</p></td><td style="vertical-align:top;width:435px;"><p align="left">Reference point for reported position.<br>Also indicates the dimension of ship (m) <a href="#_Reference_point_for">(see below)</a><br>For SAR aircraft, the use of this field may be decided by the responsible<br>administration. If used it should indicate the maximum dimensions of the<br>craft. As default should A = B = C = D be set to “0”</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left"><a href="#EPFS">Type of electronic position fixing device</a></p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">4</p></td><td style="vertical-align:top;width:435px;"><p align="left">0 = undefined (default)<br>1 = GPS<br>2 = GLONASS<br>3 = combined GPS/GLONASS<br>4 = Loran-C<br>5 = Chayka<br>6 = integrated navigation system<br>7 = surveyed<br>8 = Galileo,<br>9-14 = not used<br>15 = internal GNSS</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">ETA</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">20</p></td><td style="vertical-align:top;width:435px;"><p align="left">Estimated time of arrival; MMDDHHMM UTC<br>Bits 19-16: month; 1-12; 0 = not available = default<br>Bits 15-11: day; 1-31; 0 = not available = default<br>Bits 10-6: hour; 0-23; 24 = not available = default<br>Bits 5-0: minute; 0-59; 60 = not available = default<br>For SAR aircraft, the use of this field may be decided by the responsible administration</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">Maximum <span>present</span> <span>static</span> <span>draught</span></p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">8</p></td><td style="vertical-align:top;width:435px;"><p align="left">In 1/10 m, 255 = draught 25.5 m or greater, 0 = not available = default; in accordance with IMO Resolution A.851<br>Not applicable to SAR aircraft, should be set to 0</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">Destination</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">120</p></td><td style="vertical-align:top;width:435px;"><p align="left">Maximum 20 characters using 6-bit ASCII;<br>@@@@@@@@@@@@@@@@@@@@ = not available<br>For SAR aircraft, the use of this field may be decided by the responsible administration</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left">DTE</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">1</p></td><td style="vertical-align:top;width:435px;"><p align="left">Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left"><span>Spare</span></p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">1</p></td><td style="vertical-align:top;width:435px;"><p align="left">Spare. Not used. Should be set to zero. <span>Reserved</span> for future use.</p></td></tr><tr><td style="vertical-align:top;width:113px;"><p align="left"><span>Number</span> of bits</p></td><td style="vertical-align:top;width:95px;"><p class="text-align-center">424</p></td><td style="vertical-align:top;width:435px;"><p align="left"><span>Occupies</span> 2 slots</p></td></tr></tbody></table><h4>&nbsp;</h4><h6><a name="TypeOfShip">Type of ship</a></h6><div>*** (Vessels operating in U.S. waters should encode their ship type as<br>denoted in the <a href="/sites/default/files/pdf/AIS/USCG_Encoding_Guide.pdf">USCG AIS Encoding Guide</a>) ***<br>&nbsp;</div><table class="table" border="1" cellpadding="0" cellspacing="0"><thead><tr><th style="vertical-align:top;width:643px;" colspan="2"><p class="text-align-center" be by identifiers p report ships their to used><strong>Identifiers To Be Used By Ships To Report Their Type</strong></p></th></tr><tr><th style="vertical-align:top;width:106px;" scope="col"><p class="text-align-center">Identifier No.</p></th><th style="vertical-align:top;width:537px;" scope="col"><p class="text-align-center"><span>Special</span> <span>craft</span></p></th></tr></thead><tbody><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">50</p></td><td style="vertical-align:top;width:537px;">Pilot <span>vessel</span></td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">51</p></td><td style="vertical-align:top;width:537px;"><span>Search</span> and <span>rescue</span> <span>vessels</span></td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">52</p></td><td style="vertical-align:top;width:537px;"><span>Tugs</span></td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">53</p></td><td style="vertical-align:top;width:537px;">Port tenders</td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">54</p></td><td style="vertical-align:top;width:537px;">Vessels with anti-pollution facilities or equipment</td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">55</p></td><td style="vertical-align:top;width:537px;">Law enforcement vessels</td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">56</p></td><td style="vertical-align:top;width:537px;">Spare - for assignments to local vessels</td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">57</p></td><td style="vertical-align:top;width:537px;">Spare - for assignments to local vessels</td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">58</p></td><td style="vertical-align:top;width:537px;"><p align="left">Medical transports (as defined in the 1949 Geneva Conventions and Additional Protocols)</p></td></tr><tr><td style="vertical-align:top;width:106px;"><p class="text-align-center">59</p></td><td style="vertical-align:top;width:537px;">Ships and aircraft of States not parties to an armed conflict</td></tr></tbody></table><p>&nbsp;</p><table class="table" border="1" cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align:top;width:643px;" colspan="4"><p class="text-align-center"><strong>Identifiers to be used by ships to report their type</strong></p></td></tr><tr><td style="vertical-align:top;width:643px;" colspan="4"><h5><span>Other ships</span></h5></td></tr><tr><td style="vertical-align:top;width:180px;" scope="col"><p class="text-align-center">First digit<font size="1">(1)</font></p></td><td style="vertical-align:top;width:180px;" scope="col"><p class="text-align-center">Second digit<font size="1">(1)</font></p></td><td style="vertical-align:top;width:104px;" scope="col"><p class="text-align-center">First digit<font size="1">(1)</font></p></td><td style="vertical-align:top;width:180px;" scope="col"><p class="text-align-center">Second digit<font size="1">(1)</font></p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">1 - <span>Reserved</span> for future use</p></td><td style="vertical-align:top;width:180px;"><p align="left">0 - All ships of this type</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">0 - Fishing</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">2 - WIG</p></td><td style="vertical-align:top;width:180px;"><p align="left">1 - Carrying DG, HS, or MP, IMO hazard or pollutant category X</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">1 - Towing</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">3 - See right column</p></td><td style="vertical-align:top;width:180px;"><p align="left">2 - Carrying DG, HS, or MP, IMO hazard or pollutant category Y</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">3 - Vessel</p></td><td style="vertical-align:top;width:180px;"><p align="left">2 - Towing and length of the tow exceeds 200 m or breadth exceeds 25 m</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">4 - HSC</p></td><td style="vertical-align:top;width:180px;"><p align="left">3 - Carrying DG, HS, or MP, IMO hazard or pollutant category Z</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">3 - Engaged in dredging or underwater operations</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">5 - <span>See</span> <span>above</span></p></td><td style="vertical-align:top;width:180px;"><table class="table" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>4 - Carrying DG, HS, or MP, IMO hazard or pollutant category OS</td></tr></tbody></table><div>&nbsp;</div></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">4 - Engaged in diving operations</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">&nbsp;</p></td><td style="vertical-align:top;width:180px;"><p align="left">5 - <span>Reserved</span> for future use</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">5 - Engaged in military operations</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">6 - <span>Passenger</span> <span>ships</span></p></td><td style="vertical-align:top;width:180px;"><p align="left">6 - <span>Reserved</span> for future use</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">6 - <span>Sailing</span></p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">7 - Cargo <span>ships</span></p></td><td style="vertical-align:top;width:180px;"><p align="left">7 - <span>Reserved</span> for future use</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">7 - <span>Pleasure</span> <span>craft</span></p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">8 - Tanker(s)</p></td><td style="vertical-align:top;width:180px;"><p align="left">8 - <span>Reserved</span> for future use</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">8 - <span>Reserved</span> for future use</p></td></tr><tr><td style="vertical-align:top;width:180px;"><p align="left">9 - <span>Other</span> types of <span>ship</span></p></td><td style="vertical-align:top;width:180px;"><p align="left">9 - No <span>additional</span> information</p></td><td style="vertical-align:top;width:104px;"><p class="text-align-center">-</p></td><td style="vertical-align:top;width:180px;"><p align="left">9 - <span>Reserved for future use</span></p></td></tr></tbody></table><div><br>(1) The identifier should be constructed by selecting the appropriate first and second digits.</div><p>The second digits 1, 2, 3 and 4 reflecting categories X, Y, Z and OS formerly were categories A, B, C and D.</p><p><strong>Reference point for reported position and overall dimensions of ship</strong></p><p class="text-align-center"><img src="/sites/default/files/images/ship_dimen.gif" alt="reported position and overall dimensions of ship" width="514" height="384" border="0" loading="lazy"></p><p><em>(Source: International Telecommunications Union Recommendation </em><a href="http://www.itu.int/rec/R-REC-M/e"><em>ITU-R M.1371-5</em></a><em>)</em></p><p><span><strong>External Position Fixing System (EPFS)</strong></span></p><p>An EPFS can be any navigation system, receiver or integrated navigation system (INS), having an IEC 61162 interface. On a Safety of Life at Sea (SOLAS) Convention ship the navigation system must meet IMO performance standards and be certified. In practice, most EPFS systems are currently GPS, and some GPS devices provide a dead reckoning (estimated position) mode. The type of EPFS used is derived from IEC 61162-1 sentence GLL, VTG, GDT, and ROT from the sensor input and is transmitted by the four bit Class A Message 5 or Class B Message 19. It is understood that the overwhelming majority of EPFS sensors interfaced with AIS are GPS. If an EPFS device is not connected to the AIS, the internal AIS GPS is used to provide position. The table describes fallback conditions and priority for how these positions sensors are used by AIS.</p><p class="text-align-center"><img src="/sites/default/files/images/position_sensor_fallback.gif" alt="Position sensor fallback conditions" width="600" height="412" border="0" loading="lazy"></p><p><em>(Source </em><a href="http://www.iec.ch/"><em>International Electrotechnical Commission IEC 61993-2)</em></a></p></div>
+      
+  </div>
+
+</article>
+
+  </div>
+<div id="block-mainmenumodal" class="block block-block-content block-block-contenta21c6ca1-2e7f-44bc-afcd-1dae35f1312d">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div aria-hidden="true" aria-labelledby="ModalLabel" class="modal fade" id="main_menu_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button></div>
+
+<div class="modal-body" id="main_menu_modal_body">&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+      
+  </div>
+
+  </div>
+
+      </div>
+          </div>
+  </div>
+
+</main>
+
+<footer class="mt-auto   footer-dark text-light bg-secondary">
+  <div class="container-fluid m-0 p-0">
+      <div class="region region-footer">
+    <div id="block-googleanalytics" class="block block-block-content block-block-contentb5b8ab30-b855-4914-a9ec-f249ede359ad">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style type="text/css">
+	footer {display: none;}
+</style>
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1N0LDYLV91"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){
+		dataLayer.push(arguments);
+		dataLayer.push({
+			event: "hdr_request_created",
+			hdr_request_number: "HDR-12345"
+		});
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-1N0LDYLV91');
+</script>
+<!-- DAP Analytics -->
+<script async="" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DHS" id="_fed_an_ua_tag"></script>
+<!-- Google Tag Manager -->
+<script>
+var googleTMInsert1 = document.createElement('script');
+googleTMInsert1.textContent = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M5F3FWR');";
+document.head.appendChild(googleTMInsert1);
+
+var googleTMInsert2 = document.createElement('noscript');
+var googleTMInsert3 = document.createElement('iframe');
+googleTMInsert3.src = "https://www.googletagmanager.com/ns.html?id=GTM-M5F3FWR";
+googleTMInsert3.style.display = "none";
+googleTMInsert3.style.visibility = "hidden";
+googleTMInsert3.style.height = 0;
+googleTMInsert3.style.width = 0;
+googleTMInsert2.appendChild(googleTMInsert3);
+document.body.prepend(googleTMInsert2);
+</script></div>
+      
+  </div>
+
+  </div>
+
+  </div>
+</footer>
+
+  </div>
+
+    
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/themes/bootstrap4/dist/bootstrap/4.6.2/dist/js/bootstrap.bundle.min.js?v=4.6.2.1"></script>
+<script src="/themes/bootstrap4/js/custom.js?tl3rsq"></script>
+<script src="/themes/bootstrap4/js/flatpickr.js?tl3rsq"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1535 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44FQGBN8G1"></script>
+  <script>
+    globalThis.dataLayer = globalThis.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44FQGBN8G1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Identification System (AIS) | InPort</title>
+  <meta name="description" content="InPort Catalog Item (ID: 55360): Automatic Identification System (AIS)">
+  
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/inport/images/inport-icon-32.png">
+  <link href="/inport/css/inport-rd.css?v=6.0.9"
+        rel="stylesheet">
+
+  
+  
+    
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+        integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  
+
+  
+  
+    
+  
+
+  
+    <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pua=UA-23806328-1&yt=true&exts=aac,arc,arj,asf,asx,bin,flv,gif,gzip,hqx,jar,mp2,msp,phps,qt,qutm,mxd,ram,sea,sit,tar,torrent,tsv,wav,wpd,xml,z"></script>
+  
+</head>
+<body>
+
+<header>
+  <div class="system-notices">
+    <div class="fixed-page-fit">
+      
+      
+    </div>
+  </div>
+
+  <div class="fixed-page-fit fixed-header-style cf">
+    <div class="logo-bar">
+      <div class="left">
+        <a href="/inport/"><img
+            class="logo" src="/inport/images/inport-logo.png"
+            width="126" height="64" alt="InPort"
+            title="InPort - NMFS Enterprise Data Management Program"></a>
+      </div>
+      <div class="right">
+
+        <div class="mobile-header-icons">
+          
+          <a href="/inport/search"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-search.png" width="60" height="60" alt="Search"></a>
+          <a href="/inport/help"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-help.png" width="60" height="60" alt="Help"></a>
+          <span id="mobileNavToggle"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-hamburger.png" width="60" height="60" alt="Show/Hide Menu"></span>
+        </div>
+
+        <form class="header-search-form"
+              method="get" action="/inport/q">
+          <input type="text" class="field header-search-field"
+                 aria-label="Search the InPort Catalog"
+                 name="keywords" id="quickKeywords" placeholder="Enter Keywords / Cat ID...">
+          <input type="submit" class="button small-button" value="Search">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <nav class="fixed-page-fit fixed-header-style">
+    <div id="mobileNav" style="display: none;">
+      <ul>
+        
+        <li><a
+            href="/inport/login">Login</a></li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/nmfs">NMFS</a>
+        </li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/nos">NOS</a>
+        </li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/partners">Partners</a>
+        </li>
+
+        <li><a href="/inport/stats">Stats</a></li>
+        
+        
+        
+        <li><a
+            href="/inport/about">About InPort</a></li>
+        <li><a href="/inport/contact">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="nav" class="header-bar cf">
+      <ul class="sf-menu left">
+        
+        <li>
+          <a href="/inport/login">Login</a>
+        </li>
+        <li><span>Catalog</span>
+          <ul class="submenu">
+            
+            <li>
+              <a href="/inport/organizations/nmfs">NMFS</a>
+            </li>
+            
+            <li>
+              <a href="/inport/organizations/nos">NOS</a>
+            </li>
+            
+            <li>
+              <a href="/inport/organizations/partners">Partners</a>
+            </li>
+            <li><a href="/inport/organizations">All Organizations</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/inport/search">Search</a></li>
+        <li><a href="/inport/stats">Stats</a></li>
+
+        
+
+        <li><a href="/inport/help">Help</a>
+          <ul class="submenu">
+            <li><a href="/inport/about">About InPort</a></li>
+            <li><a href="/inport/contact">Contact / Support / Training</a></li>
+            <li><a href="/inport/help">Help Guides</a></li>
+            <li><a href="/inport/help/xml-loader">InPort XML Loader</a></li>
+            <li><a href="/inport/help/components">Components</a></li>
+          </ul>
+        </li>
+
+        
+      </ul>
+
+      <div class="user-display right">
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="fixed-page-fit fixed-page-main">
+
+    
+  <header class="page-header">
+    
+
+    <div class="breadcrumbs">
+      
+        
+          <a href="/inport/item/37112"
+             class="icon icon-mprj">OCM Metadata Library</a> &gt;
+        
+          <a href="/inport/item/37232"
+             class="icon icon-prj">MarineCadastre</a> &gt;
+        
+      
+      
+    </div>
+
+    <h1 class="force-break" style="margin-top: 2px;">Automatic Identification System (AIS)</h1>
+    <strong><span class="icon icon-prj">
+          <span>Project</span>
+          (<span>PRJ</span>)</span></strong>&nbsp;
+    |&nbsp; <strong><span>Office for Coastal Management</span>
+    (<span>OCM</span>)</strong><br>
+    <span title="The Globally Unique IDentifier (GUID) uniquely identifies InPort records in external systems. It is derived from the InPort namespace and the Catalog Item ID.">GUID: <span>gov.noaa.nmfs.inport:55360</span></span>&nbsp;
+    |&nbsp; Updated: <span>March 27, 2026</span>&nbsp;
+    
+    |&nbsp; <span>Published / External</span>&nbsp;
+    
+
+  </header>
+
+
+    
+  <div class="page-header-bar cf">
+    <ul class="page-header-options left">
+      
+      <li>
+        <span id="viewAsButton"><span class="icon icon-menu-arrow">View As</span></span>
+        <ul class="options-menu" id="viewAsMenu" style="display: none;">
+          <li>
+            <a href="/inport/item/55360/full-list" title="View Catalog Item in Full List format"><span class="icon icon-full-list">Full List View</span></a>
+          </li>
+          
+          
+          <li><span class="menu-item"><strong>EXPORTS</strong></span></li>
+          <li><a href="/inport/item/55360/inport-xml" title="View the InPort XML format"><span class="icon icon-xml">InPort XML</span></a></li>
+          
+          
+          
+        </ul>
+      </li>
+      
+    
+    <li>
+      <a href="/inport/hierarchy?select=55360"><span class="icon icon-tree" title="View this Catalog Item within the Catalog Hierarchy">View in Hierarchy</span></a>
+    </li>
+    
+  
+    </ul>
+  </div>
+
+
+    <div class="col-1">
+
+      
+  
+
+
+      
+
+      <div class="tabbed-header">
+        <div id="summaryTab" class="tabbed-header-tab">Summary</div>
+        <div id="itemIdentificationTab" class="tabbed-header-tab">Item Identification</div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div id="childItemsTab"
+             class="tabbed-header-tab">Child Items</div>
+        
+        <div id="catalogDetailsTab" class="tabbed-header-tab">Catalog Details</div>
+      </div>
+
+      
+
+      <!-- Item Summary -->
+      <div id="summary" class="section metadataSection">
+
+        
+
+        <div class="section__header sh">
+          <h2 class="sh__main">Summary</h2>
+        </div>
+        <div class="section__content">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <div class="cf"></div><!-- needed to clear browse image float -->
+
+          <div class="inner-col-2">
+            <div class="inner-col-2__main">
+
+              <!-- Entity Information -->
+              
+
+              <!-- Project Information -->
+              
+
+              <!-- Document Information -->
+              
+
+              <!-- Procedure Information -->
+              
+
+              <!-- Publication Information -->
+              
+
+              <!-- Data Access & Downloads -->
+              
+
+              <!-- Controlled Theme Keywords -->
+              
+
+              <!-- Tags -->
+              
+
+              <!-- URLs -->
+              
+
+              <!-- Child Items -->
+              
+                <div class="inner-col-section">
+                  <div class="inner-col-section__header inner-col-sh">
+                    <h3 class="inner-col-sh__main">Child Items</h3>
+                  </div>
+                  
+                    <table class="header-table" aria-label="Child Items">
+                      <thead>
+                      <tr>
+                        <th scope="col" style="width: 9rem;">Type</th>
+                        <th scope="col">Title</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/55361">2015 Vessel Transit Counts by Type</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/55362">2016 Vessel Transit Counts by Type</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/55363">2017 Vessel Transit Counts by Type</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/73206">AIS Base Stations</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48931">AIS Vessel Density 2011</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48932">AIS Vessel Density 2013</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/54117">AIS Vessel Tracks 2015</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/54204">AIS Vessel Tracks 2016</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/54207">AIS Vessel Tracks 2017</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/59569">AIS Vessel Tracks 2018</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/59927">AIS Vessel Tracks 2019</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/64830">AIS Vessel Tracks 2020</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/67049">AIS Vessel Tracks 2021</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/69515">AIS Vessel Tracks 2022</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/72958">AIS Vessel Tracks 2023</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/75937">AIS Vessel Tracks 2024</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/79504">AIS Vessel Tracks 2025</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/80415">AIS Vessel Tracks 2026</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/54958">AIS Vessel Transit Counts 2015</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/54957">AIS Vessel Transit Counts 2016</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/55365">AIS Vessel Transit Counts 2017</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/60419">AIS Vessel Transit Counts 2018</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/61037">AIS Vessel Transit Counts 2019</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/64828">AIS Vessel Transit Counts 2020</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/67463">AIS Vessel Transit Counts 2021</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/69555">AIS Vessel Transit Counts 2022</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/73063">AIS Vessel Transit Counts 2023</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/75938">AIS Vessel Transit Counts 2024</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/79556">AIS Vessel Transit Counts 2025</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48840">Nationwide Automatic Identification System 2009</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48841">Nationwide Automatic Identification System 2010</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48842">Nationwide Automatic Identification System 2011</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48843">Nationwide Automatic Identification System 2012</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48844">Nationwide Automatic Identification System 2013</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/48845">Nationwide Automatic Identification System 2014</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/52805">Nationwide Automatic Identification System 2015</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/52963">Nationwide Automatic Identification System 2016</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/53161">Nationwide Automatic Identification System 2017</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/62732">Nationwide Automatic Identification System 2018</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/62733">Nationwide Automatic Identification System 2019</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/63229">Nationwide Automatic Identification System 2020</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/65082">Nationwide Automatic Identification System 2021</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/67336">Nationwide Automatic Identification System 2022</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/70162">Nationwide Automatic Identification System 2023</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/73064">Nationwide Automatic Identification System 2024</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/77594">Nationwide Automatic Identification System 2025</a></strong></td>
+                      </tr>
+                      <tr class="ellipsisize">
+                        <td><span class="icon icon-ds">Data Set</span></td>
+                        <td><strong><a href="/inport/item/80362">Nationwide Automatic Identification System 2026</a></strong></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  
+                  
+                </div>
+              
+
+            </div><!-- inner-col-2__main -->
+
+            <div class="inner-col-2__sidebar">
+
+              <!-- Contact Information -->
+              <div class="inner-col-section">
+                <div class="inner-col-section__header inner-col-sh">
+                  <h3 class="inner-col-sh__main">Contact Information</h3>
+                </div>
+                <div class="inner-col-section__content force-break">
+                  
+                    <p>No contact information is available for this record.</p>
+                    <p>
+                      Please contact the
+                      <a href="/inport/organization/OCM">owner
+                        organization (<span>OCM</span>)</a> for inquiries
+                      on this record.
+                    </p>
+                  
+                  
+                </div>
+              </div>
+
+              <!-- Extents -->
+              
+
+            </div><!-- inner-col-2__sidebar -->
+          </div><!-- inner-col-2 -->
+
+        </div><!-- section__content -->
+      </div><!-- .section: Summary -->
+
+      
+  <!-- Section: Item Identification -->
+  <div id="itemIdentification" class="section metadataSection">
+    <div class="section__header sh">
+  <h2 class="sh__main" id="headerItemIdentification">Item Identification</h2>
+  
+  
+  
+  
+  
+
+</div>
+    <div class="section__content">
+      
+  
+
+      <table class="name-value-table" aria-labelledby="headerItemIdentification">
+        <tr>
+  <th scope="col">
+    Title:
+  </th>
+  <td class="ellipsisize">Automatic Identification System (AIS)</td>
+</tr>
+        
+        
+        
+        
+          
+        
+        
+        
+          
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </table>
+    </div>
+  </div><!-- .section Item Identification -->
+
+
+
+      <!-- Section: Keywords -->
+      
+
+      <!-- Section: Physical Location -->
+      
+
+      <!-- Section: Data Set -->
+      
+
+      <!-- Section: Document -->
+      
+
+      <!-- Section: Entity -->
+      
+
+      <!-- Section: Data Attributes -->
+      
+
+      <!-- Section: Procedure -->
+      
+
+      <!-- Section: Project -->
+      
+
+      <!-- Section: Publication Info -->
+      
+
+      <!-- Section: Support Roles -->
+      
+
+      <!-- Section: Extents -->
+      
+
+      <!-- Section: Spatial Info -->
+      
+
+      <!-- Section: Access Info -->
+      
+
+      <!-- Section: Distribution Info -->
+      
+
+      <!-- Section: Archive Info -->
+      
+
+      <!-- Section: URLs -->
+      
+
+      <!-- Section: Activity Log -->
+      
+
+      <!-- Section: Issues -->
+      
+
+      <!-- Section: Technical Environment -->
+      
+
+      <!-- Section: Data Quality -->
+      
+
+      <!-- Section: Data Management -->
+      
+
+      <!-- Section: Lineage -->
+      
+
+      <!-- Section: Acquisition Info -->
+      
+
+      <!-- Section: Acronyms -->
+      
+
+      <!-- Section: Glossary -->
+      
+
+      <!-- Section: FAQs -->
+      
+
+      <!-- Section: Child Items -->
+      
+        <div id="childItems" class="section metadataSection">
+          <div class="section__header sh">
+            <h2 id="headerChildItems" class="sh__main">Child Items</h2>
+          </div>
+          <div class="section__content">
+            <p class="xx-small subdued add-left-grid-margin">Rubric scores updated every 15m</p>
+            
+  <table class="header-table" aria-labelledby="headerChildItems">
+    <thead>
+    <tr>
+      <th class="hide-bp-narrow" title="Rubric Score" style="width: 5rem;" scope="col">
+        <img class="centered-block" src="/inport/images/icons/icon-score.png" alt="Rubric Score">
+      </th>
+      <th style="width: 9rem;" scope="col">Type</th>
+      <th scope="col">Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/55361/score">77</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/55361">2015 Vessel Transit Counts by Type</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/55362/score">77</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/55362">2016 Vessel Transit Counts by Type</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/55363/score">77</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/55363">2017 Vessel Transit Counts by Type</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/73206/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/73206">AIS Base Stations</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48931/score">77</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48931">AIS Vessel Density 2011</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48932/score">76</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48932">AIS Vessel Density 2013</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/54117/score">87</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/54117">AIS Vessel Tracks 2015</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/54204/score">87</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/54204">AIS Vessel Tracks 2016</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/54207/score">87</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/54207">AIS Vessel Tracks 2017</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/59569/score">84</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/59569">AIS Vessel Tracks 2018</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/59927/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/59927">AIS Vessel Tracks 2019</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/64830/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/64830">AIS Vessel Tracks 2020</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/67049/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/67049">AIS Vessel Tracks 2021</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/69515/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/69515">AIS Vessel Tracks 2022</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/72958/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/72958">AIS Vessel Tracks 2023</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/75937/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/75937">AIS Vessel Tracks 2024</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/79504/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/79504">AIS Vessel Tracks 2025</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/80415/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/80415">AIS Vessel Tracks 2026</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/54958/score">76</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/54958">AIS Vessel Transit Counts 2015</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/54957/score">70</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/54957">AIS Vessel Transit Counts 2016</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/55365/score">76</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/55365">AIS Vessel Transit Counts 2017</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/60419/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/60419">AIS Vessel Transit Counts 2018</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/61037/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/61037">AIS Vessel Transit Counts 2019</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/64828/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/64828">AIS Vessel Transit Counts 2020</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/67463/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/67463">AIS Vessel Transit Counts 2021</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/69555/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/69555">AIS Vessel Transit Counts 2022</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/73063/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/73063">AIS Vessel Transit Counts 2023</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/75938/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/75938">AIS Vessel Transit Counts 2024</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/79556/score">67</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/79556">AIS Vessel Transit Counts 2025</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48840/score">84</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48840">Nationwide Automatic Identification System 2009</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48841/score">84</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48841">Nationwide Automatic Identification System 2010</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48842/score">84</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48842">Nationwide Automatic Identification System 2011</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48843/score">84</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48843">Nationwide Automatic Identification System 2012</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48844/score">84</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48844">Nationwide Automatic Identification System 2013</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/48845/score">78</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/48845">Nationwide Automatic Identification System 2014</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-high">
+            <a href="/inport/item/52805/score">78</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/52805">Nationwide Automatic Identification System 2015</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/52963/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/52963">Nationwide Automatic Identification System 2016</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/53161/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/53161">Nationwide Automatic Identification System 2017</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/62732/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/62732">Nationwide Automatic Identification System 2018</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/62733/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/62733">Nationwide Automatic Identification System 2019</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/63229/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/63229">Nationwide Automatic Identification System 2020</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/65082/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/65082">Nationwide Automatic Identification System 2021</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/67336/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/67336">Nationwide Automatic Identification System 2022</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/70162/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/70162">Nationwide Automatic Identification System 2023</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/73064/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/73064">Nationwide Automatic Identification System 2024</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/77594/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/77594">Nationwide Automatic Identification System 2025</a></strong></td>
+    </tr>
+    <tr class="ellipsisize">
+      <td class="hide-bp-narrow">
+        
+          <div class="scorecard scorecard-average">
+            <a href="/inport/item/80362/score">66</a>
+          </div>
+        
+      </td>
+      <td><span class="icon icon-ds">Data Set</span></td>
+      <td><strong><a href="/inport/item/80362">Nationwide Automatic Identification System 2026</a></strong></td>
+    </tr>
+    </tbody>
+  </table>
+
+          </div>
+        </div><!-- .section Child Items -->
+      
+
+      <!-- Section: Related Items -->
+      
+
+      <!-- Section: Catalog Details -->
+      <div id="catalogDetails" class="section metadataSection">
+        <div class="section__header sh">
+  <h2 class="sh__main" id="headerCatalogDetails">Catalog Details</h2>
+  
+  
+  
+  
+  
+
+</div>
+        <div class="section__content">
+          
+  
+
+          
+  <table class="name-value-table" aria-labelledby="headerCatalogDetails">
+    <tr>
+  <th scope="col">
+    Catalog Item ID:
+  </th>
+  <td class="ellipsisize">55360</td>
+</tr>
+    <tr>
+  <th scope="col">
+    <span title="The Globally Unique IDentifier (GUID) uniquely identifies InPort records in external systems. It is derived from the InPort namespace and the Catalog Item ID.">GUID:</span>
+  </th>
+  <td class="ellipsisize">gov.noaa.nmfs.inport:55360</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Created By:
+  </th>
+  <td class="ellipsisize">Anna Verrill</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Created:
+  </th>
+  <td class="ellipsisize">2019-01-22 17:03+0000</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Last Modified By:
+  </th>
+  <td class="ellipsisize">Jesse Brass</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Last Modified:
+  </th>
+  <td class="ellipsisize">2026-03-27 13:45+0000</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Published:
+  </th>
+  <td class="ellipsisize">2019-01-24</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Owner Org:
+  </th>
+  <td class="ellipsisize">OCM</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Publication Status:
+  </th>
+  <td class="ellipsisize">Published Externally</td>
+</tr>
+    
+    <tr>
+  <th scope="col">
+    Do Not Publish?:
+  </th>
+  <td class="ellipsisize">N</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Last Review Date:
+  </th>
+  <td class="ellipsisize">2019-01-24</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Review Frequency:
+  </th>
+  <td class="ellipsisize">1 Year</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Next Review Date:
+  </th>
+  <td class="ellipsisize">2020-01-24</td>
+</tr>
+  </table>
+  
+
+        </div>
+      </div><!-- .section Catalog Details -->
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+    <div class="fixed-page-fit">
+      <nav>
+        <a href="/inport/about">About InPort</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/contact">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/release-notes">Release Notes</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/system-availability">System Availability</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/privacy">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/security">Security</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/pra">Paperwork Reduction Act</a>
+      </nav>
+      <div class="cf">
+        <div class="org-seals">
+          <ul>
+            <li><a href="https://www.fisheries.noaa.gov/national/commercial-fishing/fisheries-information-system-program" title="Fisheries Information System"
+                   rel="noopener" target="_blank"><img
+                src="/inport/images/fis-seal.png" width="52" height="53" alt="FIS"/></a></li>
+            <li><a href="https://www.fisheries.noaa.gov/" title="NOAA Fisheries"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/noaa-fisheries-seal.png"
+                width="52" height="53" alt="NOAA Fisheries"/></a></li>
+            <li><a href="https://www.noaa.gov/" title="National Oceanic &amp; Atmospheric Administration"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/noaa-seal.png"
+                width="52" height="53" alt="NOAA"/></a></li>
+            <li><a href="https://www.commerce.gov/" title="U.S. Department of Commerce"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/doc-seal.png"
+                width="52" height="53" alt="Department of Commerce"/></a></li>
+          </ul>
+        </div>
+        <div class="app-info">
+          <img src="/inport/images/inport-logo-footer.png" width="94" height="48" alt="InPort Logo">
+          <div class="release-info">
+            <strong class="x-small">Release 6.0.9</strong><br>
+            <span class="xx-small">Build FINAL (2026-08-19 18:52 UTC)</span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .fixed-page-fit -->
+  </footer>
+
+  <!-- Script Includes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+          integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <script src="/inport/js/inport.js?v=6.0.9"></script>
+
+
+
+  <script>
+  const viewAsMenu = $('#viewAsMenu').hide();
+   const itemMenu = $('#itemMenu').hide(); 
+   const rolesMenu = $('#rolesMenu').hide(); 
+
+  $(function() {
+    $('#viewAsButton').on('click', function() {
+       itemMenu.hide(); 
+      viewAsMenu.toggle();
+       rolesMenu.hide(); 
+      $(document).one('click', function() {
+        viewAsMenu.hide();
+      });
+      return false;
+    });
+
+    
+    $('#itemButton').on('click', function() {
+      itemMenu.toggle();
+      viewAsMenu.hide();
+       rolesMenu.hide(); 
+      $(document).one('click', function() {
+        itemMenu.hide();
+      });
+      return false;
+    });
+    
+
+    
+    $('#rolesButton').on('click', function() {
+       itemMenu.hide(); 
+      rolesMenu.toggle();
+      viewAsMenu.hide();
+      $(document).one('click', function() {
+        rolesMenu.hide();
+      });
+      return false;
+    });
+    
+  });
+</script>
+
+
+<script>
+  $(function() {
+    registerTab('summary');
+    
+    
+      registerTab('itemIdentification');
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+       registerTab('childItems'); 
+    
+    
+    registerTab('catalogDetails');
+
+    function registerTab(sectionId) {
+      $('#' + sectionId + 'Tab').on('click', function() {
+        activateTab(sectionId);
+        return false;
+      });
+    }
+
+    function activateTab(sectionId) {
+      hideAllElementsWithClass('metadataSection');
+      removeClassFromAllElements('tabbed-header-tab', 'selected');
+      document.getElementById(sectionId).style.display = 'block';
+      document.getElementById(sectionId + 'Tab').classList.add('selected');
+    }
+
+    const anchoredSection = globalThis.location.hash.substring(1);
+    // verify that the hash corresponds to an actual section in the page
+    if (document.getElementById(anchoredSection) == null) {
+      // Have the Summary tab selected by default
+      activateTab("summary");
+    } else {
+      activateTab(anchoredSection);
+    }
+  });
+</script>
+
+
+
+<script>
+  $(function() {
+    // CRS expand links
+    $(document).on('click', '.crs-more-link', function() {
+      const $link = $(this);
+      $($link.data('contentId')).show();
+      $($link.data('moreRowId')).hide();
+      return false;
+    });
+  });
+</script>
+
+<script src="/inport/js/species.js?v=6.0.9"></script>
+
+</body>
+</html>
