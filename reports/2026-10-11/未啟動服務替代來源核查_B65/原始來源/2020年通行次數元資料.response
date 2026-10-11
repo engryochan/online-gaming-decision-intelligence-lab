@@ -1,0 +1,2313 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44FQGBN8G1"></script>
+  <script>
+    globalThis.dataLayer = globalThis.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44FQGBN8G1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIS Vessel Transit Counts 2020 | InPort</title>
+  <meta name="description" content="Automatic Identification Systems (AIS) are a navigation safety device that transmits and monitors the location and characteristics of many vessels in U.S. an...">
+  
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/inport/images/inport-icon-32.png">
+  <link href="/inport/css/inport-rd.css?v=6.0.9"
+        rel="stylesheet">
+
+  
+  
+    
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+        integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  
+
+  
+  
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org/",
+      "@type" : "Dataset",
+      "name" : "AIS Vessel Transit Counts 2020",
+      "description" : "Automatic Identification Systems (AIS) are a navigation safety device that transmits and monitors the location and characteristics of many vessels in U.S. and international waters in real-time. In the U.S. the Coast Guard and industry collect AIS data, which can also be used for a variety of coastal planning purposes. NOAA and BOEM have worked jointly to re-task and make available some of the m...",
+      "url" : "https://www.fisheries.noaa.gov/inport/item/64828",
+      
+        "keywords" : [
+          
+            "oceans",
+            "planningCadastre",
+            "transportation",
+            "coastal",
+            "planning",
+            "renewable energy"
+          
+        ],
+      
+      
+      
+      
+      "datePublished" : "2021-09-28",
+      
+      
+      "identifier" : [
+        {
+          "@type" : "PropertyValue",
+          "value" : "64828",
+          "propertyID" : "InPort Catalog ID"
+        }
+        
+      ],
+      
+        "temporalCoverage" : [
+          
+            "2020-01-01/2020-12-31"
+          
+        ],
+      
+      
+        "spatialCoverage" : [
+          
+            
+            
+              {
+                "@type" : "Place",
+                "geo" : {
+                  
+                  
+                    "@type" : "GeoShape",
+                    "box" : "15 -168 50 -60"
+                  
+                }
+              }
+            
+            ,
+            
+              "CONTINENT > NORTH AMERICA > UNITED STATES OF AMERICA"
+            
+            
+            ,
+            
+              "Exclusive Economic Zone"
+            
+            
+            ,
+            
+              "Outer Continental Shelf"
+            
+            
+            ,
+            
+              "Territorial Sea"
+            
+            
+            
+          
+        ],
+      
+      
+        "distribution" : [
+          
+            {
+              "@type" : "DataDownload",
+              
+              
+              
+              
+              "contentUrl" : "https://ocmgeodatastor1.blob.core.windows.net/marinecadastre/ais/aistransit/ais-transit-count-2020.tif"
+            },
+            {
+              "@type" : "DataDownload",
+              
+              "description" : "Marine Cadastre Data Registry",
+              
+              
+              "contentUrl" : "https://marinecadastre.gov/data"
+            }
+          
+        ],
+      
+      "sourceOrganization" : {
+        "@type" : "Organization",
+        "name" : "Office for Coastal Management"
+      },
+      
+      "includedInDataCatalog" : {
+        "@type" : "DataCatalog",
+        "name" : "InPort",
+        "url" : "https://www.fisheries.noaa.gov/inport"
+      }
+    }
+  </script>
+  
+
+  
+    <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pua=UA-23806328-1&yt=true&exts=aac,arc,arj,asf,asx,bin,flv,gif,gzip,hqx,jar,mp2,msp,phps,qt,qutm,mxd,ram,sea,sit,tar,torrent,tsv,wav,wpd,xml,z"></script>
+  
+</head>
+<body>
+
+<header>
+  <div class="system-notices">
+    <div class="fixed-page-fit">
+      
+      
+    </div>
+  </div>
+
+  <div class="fixed-page-fit fixed-header-style cf">
+    <div class="logo-bar">
+      <div class="left">
+        <a href="/inport/"><img
+            class="logo" src="/inport/images/inport-logo.png"
+            width="126" height="64" alt="InPort"
+            title="InPort - NMFS Enterprise Data Management Program"></a>
+      </div>
+      <div class="right">
+
+        <div class="mobile-header-icons">
+          
+          <a href="/inport/search"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-search.png" width="60" height="60" alt="Search"></a>
+          <a href="/inport/help"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-help.png" width="60" height="60" alt="Help"></a>
+          <span id="mobileNavToggle"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-hamburger.png" width="60" height="60" alt="Show/Hide Menu"></span>
+        </div>
+
+        <form class="header-search-form"
+              method="get" action="/inport/q">
+          <input type="text" class="field header-search-field"
+                 aria-label="Search the InPort Catalog"
+                 name="keywords" id="quickKeywords" placeholder="Enter Keywords / Cat ID...">
+          <input type="submit" class="button small-button" value="Search">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <nav class="fixed-page-fit fixed-header-style">
+    <div id="mobileNav" style="display: none;">
+      <ul>
+        
+        <li><a
+            href="/inport/login">Login</a></li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/nmfs">NMFS</a>
+        </li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/nos">NOS</a>
+        </li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/partners">Partners</a>
+        </li>
+
+        <li><a href="/inport/stats">Stats</a></li>
+        
+        
+        
+        <li><a
+            href="/inport/about">About InPort</a></li>
+        <li><a href="/inport/contact">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="nav" class="header-bar cf">
+      <ul class="sf-menu left">
+        
+        <li>
+          <a href="/inport/login">Login</a>
+        </li>
+        <li><span>Catalog</span>
+          <ul class="submenu">
+            
+            <li>
+              <a href="/inport/organizations/nmfs">NMFS</a>
+            </li>
+            
+            <li>
+              <a href="/inport/organizations/nos">NOS</a>
+            </li>
+            
+            <li>
+              <a href="/inport/organizations/partners">Partners</a>
+            </li>
+            <li><a href="/inport/organizations">All Organizations</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/inport/search">Search</a></li>
+        <li><a href="/inport/stats">Stats</a></li>
+
+        
+
+        <li><a href="/inport/help">Help</a>
+          <ul class="submenu">
+            <li><a href="/inport/about">About InPort</a></li>
+            <li><a href="/inport/contact">Contact / Support / Training</a></li>
+            <li><a href="/inport/help">Help Guides</a></li>
+            <li><a href="/inport/help/xml-loader">InPort XML Loader</a></li>
+            <li><a href="/inport/help/components">Components</a></li>
+          </ul>
+        </li>
+
+        
+      </ul>
+
+      <div class="user-display right">
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="fixed-page-fit fixed-page-main">
+
+    
+  <header class="page-header">
+    
+      <div class="stat right" style="margin-left: 0.625rem; clear: right;">
+        
+          
+  <div class="stat-label">Completion Rubric</div>
+  <div class="stat-main">
+    
+    
+      <a href="/inport/item/64828/rubric/data-set-completion"
+         title="View the full Data Set Completion Rubric for this item"><span>67</span>%</a>
+    
+  </div>
+  <div class="stat-secondary">
+    <span>23.5</span> / <span>35</span>
+  </div>
+  
+  <div class="stat-secondary">
+    <a href="/inport/item/64828/rubric/data-set-completion" class="icon icon-score">View Report</a>
+  </div>
+
+        
+        
+      </div>
+    
+
+    <div class="breadcrumbs">
+      
+        
+          <a href="/inport/item/37112"
+             class="icon icon-mprj">OCM Metadata Library</a> &gt;
+        
+          <a href="/inport/item/37232"
+             class="icon icon-prj">MarineCadastre</a> &gt;
+        
+          <a href="/inport/item/55360"
+             class="icon icon-prj">Automatic Identification System (AIS)</a> &gt;
+        
+      
+      
+    </div>
+
+    <h1 class="force-break" style="margin-top: 2px;">AIS Vessel Transit Counts 2020</h1>
+    <strong><span class="icon icon-ds">
+          <span>Data Set</span>
+          (<span>DS</span>)</span></strong>&nbsp;
+    |&nbsp; <strong><span>Office for Coastal Management</span>
+    (<span>OCM</span>)</strong><br>
+    <span title="The Globally Unique IDentifier (GUID) uniquely identifies InPort records in external systems. It is derived from the InPort namespace and the Catalog Item ID.">GUID: <span>gov.noaa.nmfs.inport:64828</span></span>&nbsp;
+    |&nbsp; Updated: <span>July 23, 2026</span>&nbsp;
+    
+    |&nbsp; <span>Published / External</span>&nbsp;
+    
+
+  </header>
+
+
+    
+  <div class="page-header-bar cf">
+    <ul class="page-header-options left">
+      
+      <li>
+        <span id="viewAsButton"><span class="icon icon-menu-arrow">View As</span></span>
+        <ul class="options-menu" id="viewAsMenu" style="display: none;">
+          <li>
+            <a href="/inport/item/64828/full-list" title="View Catalog Item in Full List format"><span class="icon icon-full-list">Full List View</span></a>
+          </li>
+          
+          
+          <li><span class="menu-item"><strong>EXPORTS</strong></span></li>
+          <li><a href="/inport/item/64828/inport-xml" title="View the InPort XML format"><span class="icon icon-xml">InPort XML</span></a></li>
+          <li>
+            <a href="/inport/item/64828/iso19115" title="View in ISO 19115 format"><span class="icon icon-xml">ISO 19115</span></a>
+          </li>
+          
+          
+            
+            <li>
+              <a href="/inport/item/64828/waf" title="View the WAF files for this catalog item"><span class="icon icon-waf">WAF Files</span></a>
+            </li>
+          
+        </ul>
+      </li>
+      
+    
+    <li>
+      <a href="/inport/hierarchy?select=64828"><span class="icon icon-tree" title="View this Catalog Item within the Catalog Hierarchy">View in Hierarchy</span></a>
+    </li>
+    
+  
+    </ul>
+  </div>
+
+
+    <div class="col-1">
+
+      
+  
+
+
+      
+
+      <div class="tabbed-header">
+        <div id="summaryTab" class="tabbed-header-tab">Summary</div>
+        <div id="itemIdentificationTab" class="tabbed-header-tab">Item Identification</div>
+        <div id="keywordsSectionTab"
+             class="tabbed-header-tab">Keywords</div>
+        <div id="physicalLocationTab"
+             class="tabbed-header-tab">Physical Location</div>
+        <div id="dataSetTab"
+             class="tabbed-header-tab">Data Set Info</div>
+        
+        
+        
+        
+        
+        
+        <div id="supportRolesTab"
+             class="tabbed-header-tab">Support Roles</div>
+        <div id="extentsTab"
+             class="tabbed-header-tab">Extents</div>
+        <div id="spatialInfoTab"
+             class="tabbed-header-tab">Spatial Info</div>
+        <div id="accessInfoTab"
+             class="tabbed-header-tab">Access Info</div>
+        <div id="distributionInfoTab"
+             class="tabbed-header-tab">Distribution Info</div>
+        
+        
+        
+        
+        <div id="technicalEnvironmentTab"
+             class="tabbed-header-tab">Tech Environment</div>
+        <div id="dataQualityTab"
+             class="tabbed-header-tab">Data Quality</div>
+        
+        <div id="lineageTab"
+             class="tabbed-header-tab">Lineage</div>
+        
+        
+        
+        
+        
+        
+        <div id="catalogDetailsTab" class="tabbed-header-tab">Catalog Details</div>
+      </div>
+
+      
+
+      <!-- Item Summary -->
+      <div id="summary" class="section metadataSection">
+
+        
+
+        <div class="section__header sh">
+          <h2 class="sh__main">Summary</h2>
+        </div>
+        <div class="section__content">
+          
+
+          
+            <p class="small">
+              <strong>Short Citation</strong><br>
+              <span>Office for Coastal Management, 2026: AIS Vessel Transit Counts 2020, https://www.fisheries.noaa.gov/inport/item/64828.</span><br>
+              <a href="/inport/item/64828/citation">Full Citation Examples</a>
+            </p>
+          
+
+          
+
+          
+            
+              <strong>Abstract</strong><br>
+            
+            
+            <div class="small">
+              
+  <p>Automatic Identification Systems (AIS) are a navigation safety device that transmits and monitors the location and characteristics of many vessels in U.S. and international waters in real-time. In the U.S. the Coast Guard and industry collect AIS data, which can also be used for a variety of coastal planning purposes. NOAA and BOEM have worked jointly to re-task and make available some of the most important records from the U.S. Coast Guard&#39;s national network of AIS receivers. This dataset represents annual vessel transit counts summarized at a 100 m by 100 m geographic area. A single transit is counted each time a vessel track passes through, starts, or stops within a 100 m grid cell.</p>
+
+            </div>
+          
+
+          
+            <strong>Purpose</strong><br>
+            <div class="small">
+              
+  <p>To support ocean planning activities pursuant to the Executive Order Regarding the Ocean Policy to Advance the Economic, Security, and Environmental Interests of the United States, the Energy Policy Act, the Rivers and Harbors Act, and the Coastal Zone Management Act.</p>
+
+            </div>
+          
+
+          
+
+          <div class="cf"></div><!-- needed to clear browse image float -->
+
+          <div class="inner-col-2">
+            <div class="inner-col-2__main">
+
+              <!-- Entity Information -->
+              
+
+              <!-- Project Information -->
+              
+
+              <!-- Document Information -->
+              
+
+              <!-- Procedure Information -->
+              
+
+              <!-- Publication Information -->
+              
+
+              <!-- Data Access & Downloads -->
+              
+                <div class="inner-col-section">
+                  <div class="inner-col-section__header inner-col-sh">
+                    <h3 class="inner-col-sh__main">Data Access &amp; Downloads</h3>
+                  </div>
+                  <div class="inner-col-section__content">
+                    
+                      <ul class="content-list">
+                        <li>
+                          <div class="force-break">
+                            
+                              <a href="https://ocmgeodatastor1.blob.core.windows.net/marinecadastre/ais/aistransit/ais-transit-count-2020.tif" rel="noopener" target="_blank">https://ocmgeodatastor1.blob.core.windows.net/marinecadastre/ais/aistransit/ais-transit-count-2020.tif</a>
+                            
+                            
+                          </div>
+                          
+                          
+                        </li>
+                        <li>
+                          <div class="force-break">
+                            
+                              <a href="https://marinecadastre.gov/data" rel="noopener" target="_blank">https://marinecadastre.gov/data</a>
+                            
+                            
+                          </div>
+                          
+                          
+                            <div class="small">
+                              
+  <p>Marine Cadastre Data Registry</p>
+
+                            </div>
+                          
+                        </li>
+                      </ul>
+                    
+                    
+                    
+                    
+                      <strong>Use Constraints:</strong>
+                      <div class="small">
+                        
+  <p>For coastal and ocean planning</p>
+
+                      </div>
+                    
+                  </div>
+                </div>
+              
+
+              <!-- Controlled Theme Keywords -->
+              
+                <div class="inner-col-section">
+                  <div class="inner-col-section__header inner-col-sh">
+                    <h3 class="inner-col-sh__main">Controlled Theme Keywords</h3>
+                  </div>
+                  <div class="inner-col-section__content">
+                    <p>
+                      
+                        <span>oceans</span>, 
+                      
+                        <span>planningCadastre</span>, 
+                      
+                        <span>transportation</span>
+                      
+                    </p>
+                  </div>
+                </div>
+              
+
+              <!-- Tags -->
+              
+
+              <!-- URLs -->
+              
+
+              <!-- Child Items -->
+              
+                <div class="inner-col-section">
+                  <div class="inner-col-section__header inner-col-sh">
+                    <h3 class="inner-col-sh__main">Child Items</h3>
+                  </div>
+                  
+                  
+                    <p>No Child Items for this record.</p>
+                  
+                </div>
+              
+
+            </div><!-- inner-col-2__main -->
+
+            <div class="inner-col-2__sidebar">
+
+              <!-- Contact Information -->
+              <div class="inner-col-section">
+                <div class="inner-col-section__header inner-col-sh">
+                  <h3 class="inner-col-sh__main">Contact Information</h3>
+                </div>
+                <div class="inner-col-section__content force-break">
+                  
+                  
+                    
+                      <p>
+                        <strong>Point of Contact</strong><br>
+                        <span>NOAA Office for Coastal Management (NOAA/OCM)</span><br>
+                        
+  
+  
+  
+    <span>coastal.info@noaa.gov</span><br>
+  
+  
+    <span>(843) 740-1202</span><br>
+  
+  
+  <a href="https://coast.noaa.gov"
+     rel="noopener" target="_blank">https://coast.noaa.gov</a>
+
+
+                      </p>
+                    
+                  
+                </div>
+              </div>
+
+              <!-- Extents -->
+              
+                <div class="inner-col-section">
+                  <div class="inner-col-section__header inner-col-sh">
+                    <h3 class="inner-col-sh__main">Extents</h3>
+                  </div>
+                  <div class="inner-col-section__content">
+                    
+                      
+                        <div class="add-bottom-grid-margin">
+                          <strong>Geographic Area <span>1</span></strong><br>
+                          
+                            <div id="summaryGeoBoundsMap1071428"
+                                 class="geo-bounds-display geo-bounds-small-display"></div>
+                            <p>
+                              <span>-168</span>&deg; W,
+                              <span>-60</span>&deg; E,
+                              <span>50</span>&deg; N,
+                              <span>15</span>&deg; S<br>
+                            </p>
+                          
+                          
+                        </div>
+                      
+                    
+                    
+                      <div class="add-bottom-pad">
+                        <strong>Time Frame <span>1</span></strong><br>
+                        <span>2020-01-01 - 2020-12-31</span><br>
+                        <div class="small">
+                          
+  
+
+                        </div>
+                      </div>
+                    
+                  </div>
+                </div>
+              
+
+            </div><!-- inner-col-2__sidebar -->
+          </div><!-- inner-col-2 -->
+
+        </div><!-- section__content -->
+      </div><!-- .section: Summary -->
+
+      
+  <!-- Section: Item Identification -->
+  <div id="itemIdentification" class="section metadataSection">
+    <div class="section__header sh">
+  <h2 class="sh__main" id="headerItemIdentification">Item Identification</h2>
+  
+  
+  
+  
+  
+
+</div>
+    <div class="section__content">
+      
+  
+
+      <table class="name-value-table" aria-labelledby="headerItemIdentification">
+        <tr>
+  <th scope="col">
+    Title:
+  </th>
+  <td class="ellipsisize">AIS Vessel Transit Counts 2020</td>
+</tr>
+        
+        <tr>
+  <th scope="col">
+    Status:
+  </th>
+  <td class="ellipsisize">Completed</td>
+</tr>
+        
+        
+          
+        
+        
+        
+          
+        
+        
+        
+          <tr>
+  <th scope="col">
+    Publication Date:
+  </th>
+  <td class="ellipsisize">2021-09-28</td>
+</tr>
+        
+        <tr>
+  <th scope="col">
+    Abstract:
+  </th>
+  <td class="small">
+    
+  <p>Automatic Identification Systems (AIS) are a navigation safety device that transmits and monitors the location and characteristics of many vessels in U.S. and international waters in real-time. In the U.S. the Coast Guard and industry collect AIS data, which can also be used for a variety of coastal planning purposes. NOAA and BOEM have worked jointly to re-task and make available some of the most important records from the U.S. Coast Guard&#39;s national network of AIS receivers. This dataset represents annual vessel transit counts summarized at a 100 m by 100 m geographic area. A single transit is counted each time a vessel track passes through, starts, or stops within a 100 m grid cell.</p>
+
+  </td>
+</tr>
+        <tr>
+  <th scope="col">
+    Purpose:
+  </th>
+  <td class="small">
+    
+  <p>To support ocean planning activities pursuant to the Executive Order Regarding the Ocean Policy to Advance the Economic, Security, and Environmental Interests of the United States, the Energy Policy Act, the Rivers and Harbors Act, and the Coastal Zone Management Act.</p>
+
+  </td>
+</tr>
+        
+        
+        <tr>
+  <th scope="col">
+    Supplemental Information:
+  </th>
+  <td class="small">
+    
+  <p>Bureau Code: 006:48, Program Code: 006:055</p>
+
+  </td>
+</tr>
+        
+        
+        
+      </table>
+    </div>
+  </div><!-- .section Item Identification -->
+
+
+
+      <!-- Section: Keywords -->
+      
+        <div id="keywordsSection" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerKeywords">Keywords</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+  
+
+            
+            
+  
+  <h3 class="record-block-section-header"><span>Theme</span> Keywords</h3>
+  <div class="record-block">
+    <table class="header-table">
+      <caption class="visually-hidden"><span>Theme</span> Keywords</caption>
+      <tr>
+        <th scope="col">Thesaurus</th>
+        <th scope="col">Keyword</th>
+      </tr>
+      <tr>
+        <td>ISO 19115 Topic Category</td>
+        <td class="force-break">
+          <div>
+  <span>oceans</span>
+  
+  
+</div>
+        </td>
+      </tr>
+      <tr>
+        <td>ISO 19115 Topic Category</td>
+        <td class="force-break">
+          <div>
+  <span>planningCadastre</span>
+  
+  
+</div>
+        </td>
+      </tr>
+      <tr>
+        <td>ISO 19115 Topic Category</td>
+        <td class="force-break">
+          <div>
+  <span>transportation</span>
+  
+  
+</div>
+        </td>
+      </tr>
+      
+        <tr class="secondary-header">
+          <th colspan="2" class="small" scope="col"><strong>UNCONTROLLED</strong></th>
+        </tr>
+        <tr>
+          
+          <td class="subdued">None</td>
+          <td class="force-break">coastal</td>
+        </tr>
+        <tr>
+          
+          <td class="subdued">None</td>
+          <td class="force-break">planning</td>
+        </tr>
+        <tr>
+          
+          <td class="subdued">None</td>
+          <td class="force-break">renewable energy</td>
+        </tr>
+      
+    </table>
+  </div>
+
+  
+  
+  <h3 class="record-block-section-header"><span>Spatial</span> Keywords</h3>
+  <div class="record-block">
+    <table class="header-table">
+      <caption class="visually-hidden"><span>Spatial</span> Keywords</caption>
+      <tr>
+        <th scope="col">Thesaurus</th>
+        <th scope="col">Keyword</th>
+      </tr>
+      <tr>
+        <td>Global Change Master Directory (GCMD) Location Keywords</td>
+        <td class="force-break">
+          <div>
+  <span>CONTINENT &gt; NORTH AMERICA &gt; UNITED STATES OF AMERICA</span>
+  
+  
+</div>
+        </td>
+      </tr>
+      
+        <tr class="secondary-header">
+          <th colspan="2" class="small" scope="col"><strong>UNCONTROLLED</strong></th>
+        </tr>
+        <tr>
+          
+          <td class="subdued">None</td>
+          <td class="force-break">Exclusive Economic Zone</td>
+        </tr>
+        <tr>
+          
+          <td class="subdued">None</td>
+          <td class="force-break">Outer Continental Shelf</td>
+        </tr>
+        <tr>
+          
+          <td class="subdued">None</td>
+          <td class="force-break">Territorial Sea</td>
+        </tr>
+      
+    </table>
+  </div>
+
+  
+  
+  
+
+          </div>
+        </div><!-- .section Keywords -->
+      
+
+      <!-- Section: Physical Location -->
+      
+        <div id="physicalLocation" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerPhysicalLocation">Physical Location</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+  
+
+            
+            
+  <table class="name-value-table" aria-labelledby="headerPhysicalLocation">
+    <tr>
+  <th scope="col">
+    Organization:
+  </th>
+  <td class="ellipsisize">Office for Coastal Management</td>
+</tr>
+    
+      <tr>
+  <th scope="col">
+    City:
+  </th>
+  <td class="ellipsisize">Charleston</td>
+</tr>
+      <tr>
+  <th scope="col">
+    State/Province:
+  </th>
+  <td class="ellipsisize">SC</td>
+</tr>
+      
+    
+    
+  </table>
+
+          </div>
+        </div><!-- .section Physical Location -->
+      
+
+      <!-- Section: Data Set -->
+      
+        <div id="dataSet" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerDataSetInformation">Data Set Information</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+            
+              
+  
+
+              <table class="name-value-table" aria-labelledby="headerDataSetInformation">
+                
+  <tr>
+  <th scope="col">
+    Data Set Scope Code:
+  </th>
+  <td class="ellipsisize">Data Set</td>
+</tr>
+  
+  <tr>
+  <th scope="col">
+    Maintenance Frequency:
+  </th>
+  <td class="ellipsisize">None Planned</td>
+</tr>
+  
+  <tr>
+  <th scope="col">
+    Data Presentation Form:
+  </th>
+  <td class="ellipsisize">Map (digital)</td>
+</tr>
+  
+  
+  
+  <tr>
+  <th scope="col">
+    Distribution Liability:
+  </th>
+  <td class="small">
+    
+  <p>https://www.marinecadastre.gov/about/disclaimer.html</p>
+
+  </td>
+</tr>
+  <tr>
+  <th scope="col">
+    Data Set Credit:
+  </th>
+  <td class="ellipsisize">U.S. Coast Guard Navigation Center, NOAA Office for Coastal Management, Bureau of Ocean Energy Management</td>
+</tr>
+
+              </table>
+            
+          </div>
+        </div><!-- .section Data Set -->
+      
+
+      <!-- Section: Document -->
+      
+
+      <!-- Section: Entity -->
+      
+
+      <!-- Section: Data Attributes -->
+      
+
+      <!-- Section: Procedure -->
+      
+
+      <!-- Section: Project -->
+      
+
+      <!-- Section: Publication Info -->
+      
+
+      <!-- Section: Support Roles -->
+      
+        <div id="supportRoles" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerSupportRoles">Support Roles</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+            
+  
+  
+    
+      <div class="record-block">
+        <div class="record-block-header cf">
+          <h3 class="left">Point of Contact</h3>
+          <div class="x-small right">CC ID: <span>1071415</span></div>
+        </div>
+        
+  <table class="name-value-table" aria-label="Point of Contact">
+    <tr>
+  <th scope="col">
+    Date Effective From:
+  </th>
+  <td class="ellipsisize">2021-09-28</td>
+</tr>
+    <tr>
+      <th scope="row">Date Effective To:</th>
+      <td>
+              <span></span>
+        
+      </td>
+    </tr>
+    <tr>
+  <th scope="col">
+    Contact (Organization):
+  </th>
+  <td class="ellipsisize">NOAA Office for Coastal Management (NOAA/OCM)</td>
+</tr>
+    <tr>
+  <th scope="col">Address:</th>
+  <td>
+    
+      2234 South Hobson Ave<br>
+    
+    
+      Charleston, SC 29405-2413<br>
+    
+    
+  </td>
+</tr>
+    
+    
+    <tr>
+  <th scope="col">
+    Email Address:
+  </th>
+  <td class="ellipsisize">coastal.info@noaa.gov</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Phone:
+  </th>
+  <td class="ellipsisize">(843) 740-1202</td>
+</tr>
+    
+    
+    <tr class="ellipsisize">
+  <th scope="col">
+    URL:
+  </th>
+  <td>
+    <a href="https://coast.noaa.gov" rel="noopener" target="_blank">https://coast.noaa.gov</a>
+  </td>
+</tr>
+    
+    
+  </table>
+
+      </div><!-- .record-block -->
+    
+  
+  
+
+          </div>
+        </div><!-- .section Support Roles -->
+      
+
+      <!-- Section: Extents -->
+      
+        <div id="extents" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerExtents">Extents</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+  
+
+            
+            
+  <table class="name-value-table" aria-labelledby="headerExtents">
+    <tr>
+  <th scope="col">
+    Currentness Reference:
+  </th>
+  <td class="ellipsisize">Publication Date</td>
+</tr>
+  </table>
+  
+    
+    <h3 class="record-block-section-header">Extent Group <span>1</span></h3>
+
+    
+    
+
+      
+
+      <!-- Geographic Areas -->
+      
+        
+        <div class="record-block">
+          <div class="record-block-header cf">
+            <h3 class="left">Extent Group <span>1</span> / Geographic Area <span>1</span></h3>
+            <div class="x-small right">CC ID: <span>1071428</span></div>
+          </div>
+          <table class="name-value-table" aria-label="Extent Group 1 / Geographic Area 1">
+            
+              <tr class="extra-cols">
+                <th scope="row"><strong>W&deg; Bound:</strong></th>
+                <td>-168</td>
+                <td class="geo-bounds-cell" rowspan="4">
+                  <div id="geoBoundsMap1071428" class="geo-bounds-display geo-bounds-full-display"></div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><strong>E&deg; Bound:</strong></th>
+                <td>-60</td>
+              </tr>
+              <tr>
+                <th scope="row"><strong>N&deg; Bound:</strong></th>
+                <td>50</td>
+              </tr>
+              <tr>
+                <th scope="row"><strong>S&deg; Bound:</strong></th>
+                <td>15</td>
+              </tr>
+            
+            
+          </table>
+        </div><!-- .record-block -->
+      
+
+      <!-- Vertical Extents -->
+      
+
+      <!-- Time Frames -->
+      
+        <div class="record-block">
+          <div class="record-block-header cf">
+            <h3 class="left">Extent Group <span>1</span> / Time Frame <span>1</span></h3>
+            <div class="x-small right">CC ID: <span>1071427</span></div>
+          </div>
+          <table class="name-value-table" aria-label="Extent Group 1 / Time Frame 1">
+            
+            <tr>
+  <th scope="col">
+    Time Frame Type:
+  </th>
+  <td class="ellipsisize">Range</td>
+</tr>
+            <tr>
+  <th scope="col">
+    Start:
+  </th>
+  <td class="ellipsisize">2020-01-01</td>
+</tr>
+            <tr>
+  <th scope="col">
+    End:
+  </th>
+  <td class="ellipsisize">2020-12-31</td>
+</tr>
+            
+            
+            
+          </table>
+        </div><!-- .record-block -->
+      
+
+    
+  
+
+          </div>
+        </div><!-- .section Extents -->
+      
+
+      <!-- Section: Spatial Info -->
+      
+        <div id="spatialInfo" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerSpatialInformation">Spatial Information</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+
+            
+              
+  <!-- Subsection: Spatial Resolution Info -->
+  
+
+  <!-- Subsection: Spatial Representation -->
+  
+    <h3 class="record-block-section-header">Spatial Representation</h3>
+
+    <!-- Sub-Subsection: Spatial Representation Info -->
+    
+      <div class="record-block">
+        <div class="record-block-header cf">
+          <h3 class="left">Representations Used</h3>
+        </div>
+        <table class="name-value-table" aria-label="Representations Used">
+          <tr>
+  <th scope="col">
+    Grid:
+  </th>
+  <td>
+    Yes
+    
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    Vector:
+  </th>
+  <td>
+    
+    No
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    Text / Table:
+  </th>
+  <td>
+    
+    No
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    TIN:
+  </th>
+  <td>
+    
+    No
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    Stereo Model:
+  </th>
+  <td>
+    
+    No
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    Video:
+  </th>
+  <td>
+    
+    No
+  </td>
+</tr>
+        </table>
+      </div>
+    
+
+    <!-- Sub-Subsection: Grid Representations -->
+    
+
+    <!-- Sub-Subsection: Vector Representations -->
+    
+  <!-- end Spatial Representation -->
+
+  <!-- Subsection: Reference Systems -->
+  
+    <h3 class="record-block-section-header">Reference Systems</h3>
+    
+      <div class="record-block">
+        <div class="record-block-header cf">
+          <h3 class="left">Reference System <span>1</span></h3>
+          <div class="x-small right">CC ID: <span>1071423</span></div>
+        </div>
+        <table class="name-value-table" aria-label="Reference System 1">
+          <tr class="subtable-header">
+  <td colspan="2"><h4>Coordinate Reference System</h4></td>
+</tr>
+          <tr>
+            <td colspan="2">
+              <table class="name-value-subtable" aria-label="Coordinate Reference System 1">
+                <tbody>
+                <tr>
+  <th scope="col">
+    CRS Type:
+  </th>
+  <td class="ellipsisize">Geographic 2D</td>
+</tr>
+                <tr>
+  <th scope="col">
+    EPSG Code:
+  </th>
+  <td class="ellipsisize">EPSG:4269</td>
+</tr>
+                <tr>
+  <th scope="col">
+    EPSG Name:
+  </th>
+  <td class="ellipsisize">NAD83</td>
+</tr>
+                <tr id="rsCrs1MoreRow">
+                  <td colspan="2">
+                    &#x25BE; <a href="#"
+                                class="crs-more-link"
+                                id="rsCrs1More"
+                                data-content-id="#rsCrs1Content"
+                                data-more-row-id="#rsCrs1MoreRow">See Full Coordinate Reference System Information</a>
+                  </td>
+                </tr>
+                </tbody>
+                <tbody id="rsCrs1Content" style="display: none;">
+                  
+  <tr>
+  <th scope="col">
+    Datum Name:
+  </th>
+  <td class="ellipsisize">North American Datum 1983</td>
+</tr>
+  <tr>
+  <th scope="col">
+    Ellipsoid:
+  </th>
+  <td class="ellipsisize">GRS 1980</td>
+</tr>
+  <tr>
+  <th scope="col">
+    Semimajor Axis:
+  </th>
+  <td class="ellipsisize">6378137.0</td>
+</tr>
+  <tr>
+  <th scope="col">
+    Flattening Ratio:
+  </th>
+  <td class="ellipsisize">298.257222101</td>
+</tr>
+  
+  
+  
+  
+  
+    <tr class="subtable-header">
+  <td colspan="2"><h4>Axis: Geodetic Latitude</h4></td>
+</tr>
+    <tr>
+      <td colspan="2">
+        <table class="name-value-subtable" aria-label="Axis: Geodetic Latitude">
+          <tr>
+  <th scope="col">
+    Order:
+  </th>
+  <td class="ellipsisize">1</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Abbreviation:
+  </th>
+  <td class="ellipsisize">Lat</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Units:
+  </th>
+  <td class="ellipsisize">degree</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Orientation:
+  </th>
+  <td class="ellipsisize">north</td>
+</tr>
+        </table>
+      </td>
+    </tr>
+  
+    <tr class="subtable-header">
+  <td colspan="2"><h4>Axis: Geodetic Latitude</h4></td>
+</tr>
+    <tr>
+      <td colspan="2">
+        <table class="name-value-subtable" aria-label="Axis: Geodetic Latitude">
+          <tr>
+  <th scope="col">
+    Order:
+  </th>
+  <td class="ellipsisize">1</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Abbreviation:
+  </th>
+  <td class="ellipsisize">Lat</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Units:
+  </th>
+  <td class="ellipsisize">degree</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Orientation:
+  </th>
+  <td class="ellipsisize">north</td>
+</tr>
+        </table>
+      </td>
+    </tr>
+  
+    <tr class="subtable-header">
+  <td colspan="2"><h4>Axis: Geodetic Longitude</h4></td>
+</tr>
+    <tr>
+      <td colspan="2">
+        <table class="name-value-subtable" aria-label="Axis: Geodetic Longitude">
+          <tr>
+  <th scope="col">
+    Order:
+  </th>
+  <td class="ellipsisize">2</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Abbreviation:
+  </th>
+  <td class="ellipsisize">Lon</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Units:
+  </th>
+  <td class="ellipsisize">degree</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Orientation:
+  </th>
+  <td class="ellipsisize">east</td>
+</tr>
+        </table>
+      </td>
+    </tr>
+  
+    <tr class="subtable-header">
+  <td colspan="2"><h4>Axis: Geodetic Longitude</h4></td>
+</tr>
+    <tr>
+      <td colspan="2">
+        <table class="name-value-subtable" aria-label="Axis: Geodetic Longitude">
+          <tr>
+  <th scope="col">
+    Order:
+  </th>
+  <td class="ellipsisize">2</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Abbreviation:
+  </th>
+  <td class="ellipsisize">Lon</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Units:
+  </th>
+  <td class="ellipsisize">degree</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Orientation:
+  </th>
+  <td class="ellipsisize">east</td>
+</tr>
+        </table>
+      </td>
+    </tr>
+  
+
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          
+          
+        </table>
+      </div>
+    
+  <!-- end Reference Systems -->
+
+
+            <!-- end spatialInfo != null -->
+          </div><!-- .section__content -->
+        </div><!-- .section Spatial Info -->
+      
+
+      <!-- Section: Access Info -->
+      
+        <div id="accessInfo" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerAccessInformation">Access Information</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+  
+
+            
+            
+              
+  <table class="name-value-table" aria-labelledby="headerAccessInformation">
+    
+      
+      
+        
+        
+        
+      
+    
+    <tr>
+  <th scope="col">
+    Security Class:
+  </th>
+  <td class="ellipsisize">Unclassified</td>
+</tr>
+    
+    
+    
+    
+    
+    <tr>
+  <th scope="col">
+    Data Use Constraints:
+  </th>
+  <td class="small">
+    
+  <p>For coastal and ocean planning</p>
+
+  </td>
+</tr>
+    
+    
+  </table>
+
+            
+          </div>
+        </div><!-- .section Access Info -->
+      
+
+      <!-- Section: Distribution Info -->
+      
+        <div id="distributionInfo" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerDistributionInformation">Distribution Information</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+            
+  
+    <div class="record-block">
+      <div class="record-block-header cf">
+        <h3 class="left">Distribution <span>1</span></h3>
+        <div class="x-small right">CC ID: <span>1071416</span></div>
+      </div>
+      <table class="name-value-table" aria-label="Distribution 1">
+        <tr class="ellipsisize">
+  <th scope="col">
+    Download URL:
+  </th>
+  <td><a href="https://ocmgeodatastor1.blob.core.windows.net/marinecadastre/ais/aistransit/ais-transit-count-2020.tif" rel="noopener" target="_blank">https://ocmgeodatastor1.blob.core.windows.net/marinecadastre/ais/aistransit/ais-transit-count-2020.tif</a></td>
+</tr>
+        <tr>
+  <th scope="col">
+    Distributor:
+  </th>
+  <td class="ellipsisize"></td>
+</tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </table>
+    </div>
+  
+    <div class="record-block">
+      <div class="record-block-header cf">
+        <h3 class="left">Distribution <span>2</span></h3>
+        <div class="x-small right">CC ID: <span>1121572</span></div>
+      </div>
+      <table class="name-value-table" aria-label="Distribution 2">
+        <tr class="ellipsisize">
+  <th scope="col">
+    Download URL:
+  </th>
+  <td><a href="https://marinecadastre.gov/data" rel="noopener" target="_blank">https://marinecadastre.gov/data</a></td>
+</tr>
+        <tr>
+  <th scope="col">
+    Distributor:
+  </th>
+  <td class="ellipsisize"></td>
+</tr>
+        
+        <tr>
+  <th scope="col">
+    Description:
+  </th>
+  <td class="small">
+    
+  <p>Marine Cadastre Data Registry</p>
+
+  </td>
+</tr>
+        
+        
+        
+        
+        
+        
+        
+      </table>
+    </div>
+  
+
+          </div>
+        </div><!-- .section Distribution Info -->
+      
+
+      <!-- Section: Archive Info -->
+      
+
+      <!-- Section: URLs -->
+      
+
+      <!-- Section: Activity Log -->
+      
+
+      <!-- Section: Issues -->
+      
+
+      <!-- Section: Technical Environment -->
+      
+        <div id="technicalEnvironment" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerTechnicalEnvironment">Technical Environment</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+  
+
+            
+            
+            
+            <table class="name-value-table" aria-labelledby="headerTechnicalEnvironment">
+              <tr>
+  <th scope="col">
+    Description:
+  </th>
+  <td class="small">
+    
+  <p>Microsoft Windows, ArcGIS Pro, Azure SQL</p>
+
+  </td>
+</tr>
+            </table>
+            
+          </div>
+        </div><!-- .section Technical Environment -->
+      
+
+      <!-- Section: Data Quality -->
+      
+        <div id="dataQuality" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerDataQuality">Data Quality</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+  
+
+            
+            
+              
+  <table class="name-value-table" aria-labelledby="headerDataQuality">
+    
+    <tr>
+  <th scope="col">
+    Accuracy:
+  </th>
+  <td class="small">
+    
+  <p>Untested</p>
+
+  </td>
+</tr>
+    
+    <tr>
+  <th scope="col">
+    Horizontal Positional Accuracy:
+  </th>
+  <td class="small">
+    
+  <p>Compiled to meet 10 meters horizontal accuracy at 95% confidence level</p>
+
+  </td>
+</tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+  <th scope="col">
+    Completeness Report:
+  </th>
+  <td class="small">
+    
+  <p>a) The geographic extent of these data include the conterminous United States, Hawaii, U.S. Virgin Islands and Puerto Rico.</p>
+  <p>b) Presence, absence, and contiguity of a track is dependent on the distance and temporal filters applied in the track building algorithm. Parameters for these data were one nautical mile and 30 minutes.</p>
+  <p>c) This is an aggregate data product derived from input files that were segmented generally by ocean basin. A gap can be seen along the seam line of the input files. The gap distance should never exceed the distance a vessel has traveled between two consecutive position records.</p>
+
+  </td>
+</tr>
+    <tr>
+  <th scope="col">
+    Conceptual Consistency:
+  </th>
+  <td class="small">
+    
+  <p>These data are logically consistent</p>
+
+  </td>
+</tr>
+    
+  </table>
+
+            
+          </div>
+        </div><!-- .section Data Quality -->
+      
+
+      <!-- Section: Data Management -->
+      
+
+      <!-- Section: Lineage -->
+      
+        <div id="lineage" class="section metadataSection">
+          <div class="section__header sh">
+  <h2 class="sh__main" id="headerLineage">Lineage</h2>
+  
+  
+  
+  
+  
+
+</div>
+          <div class="section__content">
+            
+            
+  <table class="name-value-table" aria-labelledby="headerLineage">
+    
+  </table>
+
+  
+    <h3 class="record-block-section-header">Sources</h3>
+    
+      <div class="record-block">
+        <div class="record-block-header cf">
+          <h3 class="left force-break">AIS Vessel Tracks 2020</h3>
+          <div class="x-small right">CC ID: <span>1071424</span></div>
+        </div>
+        <table class="name-value-table" aria-label="AIS Vessel Tracks 2020">
+          <tr>
+  <th scope="col">
+    Contact Role Type:
+  </th>
+  <td class="ellipsisize">Originator</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Contact Type:
+  </th>
+  <td class="ellipsisize">Organization</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Contact Name:
+  </th>
+  <td class="ellipsisize">NOAA Office for Coastal Management</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Publish Date:
+  </th>
+  <td class="ellipsisize">2020-12-31</td>
+</tr>
+          
+          
+          
+          
+          <tr class="ellipsisize">
+  <th scope="col">
+    Citation URL:
+  </th>
+  <td><a href="https://marinecadastre.gov/data/" rel="noopener" target="_blank">https://marinecadastre.gov/data/</a></td>
+</tr>
+          <tr>
+  <th scope="col">
+    Citation URL Name:
+  </th>
+  <td class="ellipsisize">Source Online Linkage</td>
+</tr>
+          <tr>
+  <th scope="col">
+    Citation URL Description:
+  </th>
+  <td class="small">
+    
+  <p>URL where the source data were originally accessed.</p>
+
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    Source Contribution:
+  </th>
+  <td class="small">
+    
+  <p>Annual vessel tracks built using the Track Builder Pro 1.0 tool with time and distance parameters of 30 minutes and 1 nm. Vessel type definitions derived from the original NMEA record and the Authoritative Vessel Identification Service (AVIS) Vessel Catalog </p>
+
+  </td>
+</tr>
+        </table>
+      </div>
+    
+  
+
+  
+    <h3 class="record-block-section-header">Process Steps</h3>
+    
+      <div class="record-block">
+        <div class="record-block-header cf">
+          <h3 class="left">Process Step <span>1</span></h3>
+          <div class="x-small right">CC ID: <span>1071425</span></div>
+        </div>
+        <table class="name-value-table" aria-label="Process Step 1">
+          <tr>
+  <th scope="col">
+    Description:
+  </th>
+  <td class="small">
+    
+  <p>1.	Select tracks for each vessel type from the 2020 AIS Vessel Tracks geodatabase by groups as defined in the AIS Vessel Type and Group Codes, Marine Cadastre</p>
+  <p>2.	Calculate transit count grids using the MarineCadastre.gov AIS Vessel Transit Counter tool for each month of tracks and for each ocean basin</p>
+  <p>3.	Merge monthly transit count grids into an annual transit count grid</p>
+  <p>4.	Merge all 4 ocean basin/regional rasters into one raster using the mosaic to new raster tool</p>
+
+  </td>
+</tr>
+          <tr>
+  <th scope="col">
+    Process Date/Time:
+  </th>
+  <td class="ellipsisize">2021-06-01 00:00:00</td>
+</tr>
+          
+          
+          
+          
+          
+          <tr>
+  <th scope="col">
+    Source:
+  </th>
+  <td class="ellipsisize">AIS Vessel Tracks 2020</td>
+</tr>
+        </table>
+      </div>
+    
+  
+
+          </div>
+        </div><!-- .section Lineage -->
+      
+
+      <!-- Section: Acquisition Info -->
+      
+
+      <!-- Section: Acronyms -->
+      
+
+      <!-- Section: Glossary -->
+      
+
+      <!-- Section: FAQs -->
+      
+
+      <!-- Section: Child Items -->
+      
+
+      <!-- Section: Related Items -->
+      
+
+      <!-- Section: Catalog Details -->
+      <div id="catalogDetails" class="section metadataSection">
+        <div class="section__header sh">
+  <h2 class="sh__main" id="headerCatalogDetails">Catalog Details</h2>
+  
+  
+  
+  
+  
+
+</div>
+        <div class="section__content">
+          
+  
+
+          
+  <table class="name-value-table" aria-labelledby="headerCatalogDetails">
+    <tr>
+  <th scope="col">
+    Catalog Item ID:
+  </th>
+  <td class="ellipsisize">64828</td>
+</tr>
+    <tr>
+  <th scope="col">
+    <span title="The Globally Unique IDentifier (GUID) uniquely identifies InPort records in external systems. It is derived from the InPort namespace and the Catalog Item ID.">GUID:</span>
+  </th>
+  <td class="ellipsisize">gov.noaa.nmfs.inport:64828</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Created By:
+  </th>
+  <td class="ellipsisize">Jesse Brass</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Created:
+  </th>
+  <td class="ellipsisize">2021-06-30 12:44+0000</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Last Modified By:
+  </th>
+  <td class="ellipsisize">Jesse Brass</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Last Modified:
+  </th>
+  <td class="ellipsisize">2026-07-23 18:22+0000</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Published:
+  </th>
+  <td class="ellipsisize">2021-09-28</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Owner Org:
+  </th>
+  <td class="ellipsisize">OCM</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Publication Status:
+  </th>
+  <td class="ellipsisize">Published Externally</td>
+</tr>
+    
+    <tr>
+  <th scope="col">
+    Do Not Publish?:
+  </th>
+  <td class="ellipsisize">N</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Last Review Date:
+  </th>
+  <td class="ellipsisize">2021-09-28</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Review Frequency:
+  </th>
+  <td class="ellipsisize">1 Year</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Next Review Date:
+  </th>
+  <td class="ellipsisize">2022-09-28</td>
+</tr>
+  </table>
+  
+
+        </div>
+      </div><!-- .section Catalog Details -->
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+    <div class="fixed-page-fit">
+      <nav>
+        <a href="/inport/about">About InPort</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/contact">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/release-notes">Release Notes</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/system-availability">System Availability</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/privacy">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/security">Security</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/pra">Paperwork Reduction Act</a>
+      </nav>
+      <div class="cf">
+        <div class="org-seals">
+          <ul>
+            <li><a href="https://www.fisheries.noaa.gov/national/commercial-fishing/fisheries-information-system-program" title="Fisheries Information System"
+                   rel="noopener" target="_blank"><img
+                src="/inport/images/fis-seal.png" width="52" height="53" alt="FIS"/></a></li>
+            <li><a href="https://www.fisheries.noaa.gov/" title="NOAA Fisheries"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/noaa-fisheries-seal.png"
+                width="52" height="53" alt="NOAA Fisheries"/></a></li>
+            <li><a href="https://www.noaa.gov/" title="National Oceanic &amp; Atmospheric Administration"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/noaa-seal.png"
+                width="52" height="53" alt="NOAA"/></a></li>
+            <li><a href="https://www.commerce.gov/" title="U.S. Department of Commerce"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/doc-seal.png"
+                width="52" height="53" alt="Department of Commerce"/></a></li>
+          </ul>
+        </div>
+        <div class="app-info">
+          <img src="/inport/images/inport-logo-footer.png" width="94" height="48" alt="InPort Logo">
+          <div class="release-info">
+            <strong class="x-small">Release 6.0.9</strong><br>
+            <span class="xx-small">Build FINAL (2026-08-19 18:52 UTC)</span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .fixed-page-fit -->
+  </footer>
+
+  <!-- Script Includes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+          integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <script src="/inport/js/inport.js?v=6.0.9"></script>
+
+
+
+  <script>
+  const viewAsMenu = $('#viewAsMenu').hide();
+   const itemMenu = $('#itemMenu').hide(); 
+   const rolesMenu = $('#rolesMenu').hide(); 
+
+  $(function() {
+    $('#viewAsButton').on('click', function() {
+       itemMenu.hide(); 
+      viewAsMenu.toggle();
+       rolesMenu.hide(); 
+      $(document).one('click', function() {
+        viewAsMenu.hide();
+      });
+      return false;
+    });
+
+    
+    $('#itemButton').on('click', function() {
+      itemMenu.toggle();
+      viewAsMenu.hide();
+       rolesMenu.hide(); 
+      $(document).one('click', function() {
+        itemMenu.hide();
+      });
+      return false;
+    });
+    
+
+    
+    $('#rolesButton').on('click', function() {
+       itemMenu.hide(); 
+      rolesMenu.toggle();
+      viewAsMenu.hide();
+      $(document).one('click', function() {
+        rolesMenu.hide();
+      });
+      return false;
+    });
+    
+  });
+</script>
+
+
+<script>
+  $(function() {
+    registerTab('summary');
+    
+    
+      registerTab('itemIdentification');
+       registerTab('keywordsSection'); 
+       registerTab('physicalLocation'); 
+       registerTab('dataSet'); 
+      
+      
+      
+      
+      
+      
+       registerTab('supportRoles'); 
+       registerTab('extents'); 
+       registerTab('spatialInfo'); 
+       registerTab('accessInfo'); 
+       registerTab('distributionInfo'); 
+      
+      
+      
+      
+       registerTab('technicalEnvironment'); 
+       registerTab('dataQuality'); 
+      
+       registerTab('lineage'); 
+      
+      
+      
+      
+      
+    
+    
+    registerTab('catalogDetails');
+
+    function registerTab(sectionId) {
+      $('#' + sectionId + 'Tab').on('click', function() {
+        activateTab(sectionId);
+        return false;
+      });
+    }
+
+    function activateTab(sectionId) {
+      hideAllElementsWithClass('metadataSection');
+      removeClassFromAllElements('tabbed-header-tab', 'selected');
+      document.getElementById(sectionId).style.display = 'block';
+      document.getElementById(sectionId + 'Tab').classList.add('selected');
+    }
+
+    const anchoredSection = globalThis.location.hash.substring(1);
+    // verify that the hash corresponds to an actual section in the page
+    if (document.getElementById(anchoredSection) == null) {
+      // Have the Summary tab selected by default
+      activateTab("summary");
+    } else {
+      activateTab(anchoredSection);
+    }
+  });
+</script>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
+          integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+
+  <script src="/inport/js/geobounds.js?v=6.0.9"></script>
+
+  <script>
+    
+      
+        
+          loadGeoBoundsMap(summaryGeoBoundsMap1071428,
+              15,
+              -168,
+              50,
+              -60);
+        
+      
+
+      
+        
+          
+            loadGeoBoundsMap(geoBoundsMap1071428,
+                15,
+                -168,
+                50,
+                -60);
+          
+        
+      
+    
+  </script>
+
+
+<script>
+  $(function() {
+    // CRS expand links
+    $(document).on('click', '.crs-more-link', function() {
+      const $link = $(this);
+      $($link.data('contentId')).show();
+      $($link.data('moreRowId')).hide();
+      return false;
+    });
+  });
+</script>
+
+<script src="/inport/js/species.js?v=6.0.9"></script>
+
+</body>
+</html>
