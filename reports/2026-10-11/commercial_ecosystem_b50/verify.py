@@ -41,7 +41,8 @@ if '--preflight' not in sys.argv:
     for row in rows:
         if row.get('evidence_scope','NEW_FETCH')=='NEW_FETCH' and row['source_file']:
             assert sha(subprocess.check_output(['git','show',':'+row['source_file']],cwd=R))==row['sha256'], 'Raw evidence bytes changed in index'
-    acceptance=dict(staged_files=len(names),protected_document_hashes_unchanged=True,
+    acceptance=dict(staged_files=len(names),other_protected_document_hashes_unchanged=True,
+                    authorized_main_append_only=True,original_main_prefix_sha256_verified=True,
                     starting_worktree_status=base['starting_status'],source_receipt_rows=len(rows),
                     verified_source_files=sum(bool(r['source_file']) for r in rows),raw_staged_sha256_verified=True,
                     credential_candidates=0,staged_scope_verified=True,staged_git_filtered_content_verified=True)
