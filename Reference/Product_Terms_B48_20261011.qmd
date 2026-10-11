@@ -1,0 +1,27 @@
+---
+title: "B48：產品特定條款義務與166集合最新狀態"
+date: 2026-10-11
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 來源時態與範圍
+
+針對12項有內嵌條款及2項明示非開放集合，依[CMR指定修訂端點](https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html)重取B45所登記revision的完整UMM，核對ShortName、條款與開放標記；原始JSON、時間及SHA256保留。這是固定修訂版本覆核，不是宣稱最新法律條款或同時重新掃描全部166集合。其餘152項清楚標為沿用B46未重新下載。
+
+## 三類產品條款分列
+
+ALOS RTC的條款描述允許具名RTC產品使用，同时要求保留版權與NASA／JAXA／METI通知，不能把這段具名產品許可套用到所有原始數據。JAXA ALOS內嵌條款保留原數據權利，區分不可逆高階處理的增值產品及發布署名；本文不把未明定用途自行補成自由原始資料轉售。ESA ERS條款保留ESA所有權，要求重製時明顯標示數據信用／影像版權。三類文本均有免責條件，義務明細逐集合記錄；讀取元資料沒有接受下載EULA。
+
+2項JERS集合的FreeAndOpenData=false原值保持，沒有因其公開目錄筆數非零而解除限制。缺少內嵌文本也不是無權利或無條款的證明。對各類商用、原始／增值重分發仍保留具體用途待核，不發出跨集合授權清關結論。
+
+## 完整清單與交付
+
+統計：`{"collections_retained": 166, "pinned_revision_queries": 14, "fetch_errors": 0, "inline_families": {"NO_INLINE_TERMS_REVIEWED": 154, "RTC": 2, "JAXA": 6, "ERS": 4}, "obligation_rows": 70, "explicit_nonopen_held": 2, "prior_other_collections_not_refetched": 152, "all_498_work_retained": true, "tasks_closed": 0, "raw_redistribution_approved": false, "imagery_downloaded": false, "eula_accepted": false, "sqlite_counts": {"registry_all_166_product_terms_status": 166, "registry_all_498_work_progress": 498, "registry_inline_product_obligations": 70, "registry_source_receipts": 14}, "old_documents_preserved": true, "global_complete": false}`。
+
+
+[全部166項狀態](tables/71_product_terms_b48_20261011/registry_all_166_product_terms_status.csv)、[逐產品義務](tables/71_product_terms_b48_20261011/registry_inline_product_obligations.csv)、[14項來源收據](tables/71_product_terms_b48_20261011/registry_source_receipts.csv)、[全部498項進度](tables/71_product_terms_b48_20261011/registry_all_498_work_progress.csv)、[SQLite](tables/71_product_terms_b48_20261011/product_terms_b48.sqlite)。原始文本在狀態表與來源記錄保留，不覆寫B45／B46表或用户報告。
+
+下一步為具體產品／用途核完整當期條款，再在指定地區及歷史時段查granule與品質。本輪沒有下載影像、核准原始資料商業轉售或結清498項工作；氣象身份／缺值與全球金融、工商、歷史政治實體清單繼續保留。SDG業務分析凍結，Untitled不恢復。
