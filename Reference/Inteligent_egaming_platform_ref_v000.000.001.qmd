@@ -55497,11 +55497,220 @@ governance:
 
 ## 提問
 
+請查證星盾與帕蘭提爾使用什麼操作系統或二度開發呢？
 
 ## 解答
 
 ### Claude
 
+#### 星盾 Starshield × 帕蘭提爾 Palantir：底層作業系統與二次開發技術查證
+
+查證日期：2026年10月10日｜證據來源：SpaceX 官方技術職缺、Palantir 官方架構及開發文件
+
+已查證：星盾與帕蘭提爾都大量採用 Linux 及開源基礎技術，但不是單純安裝 Linux 就形成了國防或宇航策略平台。兩家公司均在基礎平台之上自行研發關鍵軟件，尤其重視安全、可靠性、分散式運算及持續部署。
+
+其中，SpaceX 星盾確實明確披露了對 Linux、Buildroot、U-Boot 的內部修改與維護；Palantir 則正式公開了以 Linux、Kubernetes 為基礎的 Rubix 平台。
+
+[image](https://www.google.com/s2/favicons?domain=https://job-boards.greenhouse.io\&sz=32) *job-boards.greenhouse.io +1*
+
+##### 一、核心技術比較
+
+| 技術層次            | SpaceX Starshield（星盾）      | Palantir（帕蘭提爾）                     |
+| --------------- | -------------------------- | ---------------------------------- |
+| 核心任務            | 衛星運作、安全通訊、感測及地面控制          | 情報、資料整合、決策、企業運作及 AI                |
+| 底層作業系統          | Linux 已確認                  | Linux 已確認                          |
+| 系統客製化           | 維護 Linux 等開源軟件內部分支         | 在 Linux 與 Kubernetes 上建立專有平台       |
+| 開源基礎組件          | Linux、Buildroot、U-Boot     | Linux、Kubernetes、Spark、Flink 等     |
+| 主要自行開發          | 航天器韌體、飛行軟件、衛星網絡與地面控制       | Gotham、Foundry、Apollo、AIP、Rubix    |
+| 程式語言證據          | C、C++、Rust、Python 等職缺要求    | Python、Java、TypeScript、SQL 等官方開發工具 |
+| 容器與部署           | 地面系統職缺提及 Docker、Kubernetes | Rubix 基於 Kubernetes，Apollo 負責持續部署  |
+| 私有設施運行          | 官方確認自建衛星及地面系統軟件            | 支援客戶自有機房、商業雲和隔離網絡                  |
+| 原始碼取得           | 星盾關鍵應用並非全面開源               | Gotham、Foundry、AIP 並非整套開源          |
+| 精確 Linux 發行版與版本 | 未公開完整清單                    | 視部署環境而異，沒有單一通用發行版                  |
+
+請特別注意：表中「已確認使用 Linux」，並不等於所有衛星處理器、每台地面電腦、全部客戶系統都使用同一款 Linux。
+
+##### 二、SpaceX 星盾：有直接證據證明二次開發 Linux
+
+[马斯克公布“星链”军用版 “星盾”究竟是干什么的？\_凤凰网资讯_凤凰网](https://images.openai.com/static-rsc-4/pFdP31UhYOwxEZ9d1gENvp4vMcBOzV_4aAJbsyFRe_NsZAvQWtJTxwk23l3JdTgypfGbK0W9xjF-RzptfJ1MvWFyeF6MBP1XIgIgOZnTiodvoFOsnij2GdQPtjm75y0lkKgdVwv5Buzuv1PQ3eKVpHTFGE_hFCSekIN6q3xg65I?purpose=inline)
+
+**Starshield**
+
+SpaceX 明確表示，星盾借鑑 Starlink 技術，專為政府提供地球觀測、安全通訊及衛星託管載荷服務。
+
+[image](https://www.google.com/s2/favicons?domain=https://new.spacex.com\&sz=32) *Starshield*
+
+我找到最有說服力的第一手證據，是 SpaceX 的官方招聘資料：
+
+[Embedded Software Engineer, Platform (Starshield)](https://job-boards.greenhouse.io/spacex/jobs/8880385002?gh_jid=888038500)
+
+該職缺明確要求工程師維護 Linux、Buildroot、U-Boot 等開源軟件的公司內部分支（In-house Branches），並負責開機程式、核心、驅動程式及硬體韌體。
+
+[image](https://www.google.com/s2/favicons?domain=https://job-boards.greenhouse.io\&sz=32) *job-boards.greenhouse.io*
+
+這表示星盾不只是使用 Linux，還涉及真正的底層系統二次開發。
+
+| 軟件              | 原本負責甚麼      | 星盾公開披露的研發方向   |
+|:-----------------:|:-----------------:|:-------------:|
+| Linux Kernel      | 作業系統核心、程序與硬體資源管理  | 核心維護、硬體相容、安全性 |
+| Buildroot         | 建構精簡的嵌入式 Linux 系統 | 維護內部版本及系統建構   |
+| U-Boot            | 嵌入式設備開機載入         | 開機鏈及平台整合      |
+| C++               | 高效能系統及應用程式       | 衛星軟件與地面控制     |
+| Python            | 自動化、分析及開發工具     | 職缺要求相關能力      |
+| Docker／Kubernetes | 容器化與工作負載管理      | 地面平台職缺列為相關技術  |
+
+尤其重要的是另一項官方職缺：
+
+[Software Engineer, Satellite Systems (Starshield)](https://job-boards.greenhouse.io/spacex/jobs/8621508002)。
+
+其內容明示星盾工程師會設計安全衛星指揮控制、跨網絡軟件更新、監控工具，以及負責控制星盾網絡的資料中心軟硬體。
+
+[image](https://www.google.com/s2/favicons?domain=https://job-boards.greenhouse.io\&sz=32) *job-boards.greenhouse.io*
+
+因此可以作出較強的結論：
+
+星盾的核心軟件不是購買一套通用 Linux 後就直接使用，而是在 Linux 與其他開源元件上建立具有自主知識產權的航天器及地面系統。
+
+不過，SpaceX 並未公開完整飛行軟件原始碼、所有版本配置或機密載荷系統的具體運行環境，所以不應聲稱已掌握整個 Starshield 技術堆疊。
+
+##### 三、Palantir：並非自行發明一套 Linux，而是建立更高層的企業運作平台
+
+[Rubix Technical Specifications](https://images.openai.com/static-rsc-4/PJkDBaLw_64iSwy_n2K8cLwDQ7fYOtzyhuxWNcwRiqyRStmubgvLyZtFfBdNEjwUaDI28S-9DvbrzJFIBw94KaiYLh_3E_mnzMqXaJHgWclPeNBbrV_z86hP9aONQUQCd47jSfIhDxi3iPKRLJuJkeIbUKwghaZ3Ve5Nm7t2-VQ?purpose=inline)
+
+**Palantir Technologies**
+
+官方對 Rubix 的說明十分明確：它不是重新發明的專有 Linux 或 Kubernetes 發行版，而是使用開源或商業現成版本，再進行高度安全化配置與平台整合。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.palantir.com\&sz=32) *Rubix*
+
+這是本次查證最值得先生留意的發現。
+
+Palantir 自行開發的主要是以下幾層：
+```
+Gotham／Foundry／AIP
+
+情報決策、數據本體、業務流程、AI 智能體與分析應用
+
+Apollo
+
+軟件發佈、更新、部署、版本管理及回滾
+
+Rubix — Palantir 強化型 Kubernetes 平台
+
+容器調度、安全隔離、自動擴縮與基礎設施管理
+
+Linux ＋ Kubernetes ＋ 開源運算引擎
+
+Spark、Flink、Polars、DuckDB、DataFusion 等
+
+實體或虛擬伺服器
+
+AWS／Azure／Google Cloud／Oracle Cloud／自有資料中心
+
+依官方架構整理的邏輯分層示意；實際部署並非所有組件都必然依同一順序獨立運行。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.palantir.com\&sz=32) Palantir +2
+```
+
+### Palantir 的底層 Linux 有多明確？
+
+官方技術規格直接要求 Rubix 應用以 Linux amd64 執行，並以 Kubernetes 及 Helm Chart 進行封裝部署。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.palantir.com\&sz=32) *palantir.com*
+
+而 Foundry 資料連接代理程式的官方文件，推薦 RHEL 8 以上或 Ubuntu 22.04 以上，且可部署於 AWS、Azure、Google Cloud 或客戶自有伺服器。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.palantir.com\&sz=32) *Palantir*
+
+但務必區分：
+
+- RHEL 與 Ubuntu 是官方建議的代理程式環境。
+- Linux amd64 是Rubix 應用部署要求。
+- 這些證據不能證明每套 Gotham、Foundry 或 Palantir 國防系統都使用 Ubuntu 22.04。
+
+### Palantir 是否允許客戶進行二次開發？
+
+允許，而且這是其重要商業模式之一。
+
+Palantir 官方提供本體軟件開發工具包（Ontology SDK, OSDK），支援 Python、TypeScript、Java 及 OpenAPI。使用者可以在授權的平台內建立業務物件、資料流程、應用程式和操作功能。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.palantir.com\&sz=32)
+
+Palantir
+
++1
+
+
+
+其中還包括 SQL 轉換、Python 資料處理、分散式 Spark 運算及多種模型部署方式。
+
+不過，使用 SDK 開發應用不等於取得 Palantir 核心原始碼的修改權或再分發權。
+
+## 四、兩種「二次開發」究竟有甚麼不同？
+
+| 比較               | Starshield         | Palantir           |
+| ---------------- | ------------------ | ------------------ |
+| 修改 Linux 核心及開機鏈  | 有公開直接證據            | 不以此作主要產品賣點         |
+| 建立專有系統軟件         | 是                  | 是                  |
+| 修改及強化 Kubernetes | 地面系統使用相關技術，但具體修改未知 | 是，Rubix 為明確實例      |
+| 開發任務專用應用         | 航天器、通訊、地面控制        | 情報、商業、金融、醫療、製造     |
+| 客戶可自行擴展          | 視政府任務及合同而定         | 提供正式 API、SDK 及開發工具 |
+| 可否直接下載完整平台自行部署   | 沒有公開的完整星盾開源發行版     | 專有平台須依授權與商業條件取得    |
+
+我對兩者的研發路線作以下概括：
+
+SpaceX 星盾：
+
+`開源嵌入式 Linux → 底層硬體／韌體客製化 → 衛星軟件 → 網絡與地面控制`
+
+Palantir：
+
+`Linux → Kubernetes → Rubix → Apollo → Foundry／AIP／Gotham → 專業決策應用`
+
+兩者均包含大量自研技術，但投入的主要研發層次不同。
+
+## 五、先生的 WSL2 禮逆襲應借鑑哪一條路線？
+
+若要建立地緣戰略、宇航與軍工產業鏈的公開資料決策平台，我建議先借鑑 Palantir 的資料本體及工作流程架構，而不必先改寫 Linux Kernel。
+
+| 功能需求       | 可採用的開源技術                         |
+| ---------- | -------------------------------- |
+| Linux 開發環境 | Ubuntu／WSL2                      |
+| 資料處理       | Python、Polars、DuckDB、R           |
+| 地理空間分析     | PostGIS、QGIS、GeoPandas           |
+| 資料與實體關係    | PostgreSQL、Apache AGE 或 Neo4j    |
+| 衛星影像分析     | Rasterio、GDAL、STAC               |
+| 企業與產業決策    | FastAPI、Shiny、Streamlit          |
+| 容器化部署      | Docker、Kubernetes（後期）            |
+| 任務排程       | Prefect 或其他經驗收的調度工具              |
+| 監控及審計      | Prometheus、Grafana、OpenTelemetry |
+
+這是可用開源元件自行研發的功能對照方案，不是 Palantir 核心軟件的開源複製品。
+
+尤其初期以單機 WSL2 運行時，不必先建立大型 Kubernetes 叢集。應先用公開、合法授權的衛星、氣象、貿易及企業資料，建立真正可以交付給客戶的分析成果。
+
+至於 Starshield 路線，可在後期研究 Linux 嵌入式系統、Buildroot、U-Boot、ROS 2 與航天軟件測試，但沒有必要在產品尚未取得收入時，就投入整套衛星飛行軟件研發。
+
+## 六、最終查證裁定
+
+| 命題                                        | 結論            | 證據強度                       |
+| ----------------------------------------- | ------------- | -------------------------- |
+| Starshield 使用 Linux                       | 成立            | 官方技術職缺直接證實                 |
+| Starshield 對 Linux、Buildroot、U-Boot 作二次開發 | 成立            | 官方明確披露內部分支維護               |
+| Starshield 的所有設備採用同一 Linux 版本             | 未證實           | 無完整公開版本名冊                  |
+| Palantir 採用 Linux 與 Kubernetes            | 成立            | 官方 Rubix 技術文件              |
+| Palantir 自行研發 Rubix、Apollo、Foundry 等      | 成立            | 官方架構與 SEC 年報               |
+| Palantir 自行發明全新 Linux 發行版                 | 不成立           | 官方明確說 Rubix 並非專有 Linux 發行版 |
+| Palantir 可在 AWS／Azure／Google Cloud／本地部署   | 成立，具體產品與環境需核對 | 官方部署文件                     |
+| WSL2 能直接安裝完整 Palantir／Starshield 軍工系統     | 未證實，且不能如此推定   | 缺乏對應授權及公開完整發行版             |
+
+### 原始官方技術資料
+
+可直接研讀 [SpaceX 星盾嵌入式平台研發要求](https://job-boards.greenhouse.io/spacex/jobs/8880385002)、[Palantir Rubix 架構](https://www.palantir.com/docs/foundry/architecture-center/rubix)、[Rubix 技術部署規格](https://www.palantir.com/rubix-specs) 及 [Ontology SDK 開發文件](https://www.palantir.com/docs/foundry/ontology-sdk)。
+
+我的建議是：先學 Palantir 如何把真實世界的企業、設施、事件、數據及決策變成一套可運作的本體系統；再學 SpaceX 如何將 Linux 深度客製化，實現高可靠度的設備控制。
+
+兩條技術路線並行研究很有價值，但以先生目前「先求生、再圖強」的目標，優先建立能取得付費客戶的開源決策平台，會比立刻自行開發一套全新 Linux 作業系統更有實際效益。
 
 ### ChatGPT
 
