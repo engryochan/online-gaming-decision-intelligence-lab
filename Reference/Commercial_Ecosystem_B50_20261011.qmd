@@ -1,0 +1,44 @@
+---
+title: "B50：商業宇航、GIS、資料平台與氣象生態增補"
+date: 2026-10-11
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 分層登記與證據
+
+以公開宇航與國防工業產業研究、地理資料及災害韌性為用途。產品、資料集、法人、部署與性能分別核實。展示名稱與共同創辦人不能證明同一法人、控股或資料授權。網站HTTP成功甚至關鍵字出現只證明當次入口文字；不把它升格為能力VERIFIED。網站需JavaScript或取用受阻時保留具體狀態。每頁只保留15詞以內核查片段、時間與全文回應指紋，網頁全文未納入發布；ArcGIS公開目錄JSON另保留原始位元。
+
+## 指定供應商與產業鏈
+
+|層次|本輪登記|資料與用途邊界|
+|---|---|---|
+|發射、集成與宇航系統|SpaceX、Rideshare、Starshield、Rocket Lab、Airbus|產品入口與供應鏈角色；發射詢價不等於合同，政府方案不等於公開影像庫|
+|衛星通信|Starlink航空、海事、Direct to Cell／Mobile|通信服務不是地球觀測影像供應；各國頻譜、營運商與服務資格逐項核|
+|資料整合、AI及部署|Palantir Foundry、AIP、Apollo、Gotham、Warp Speed|[官方架構文件](https://www.palantir.com/docs/foundry/architecture-center/platforms)區分治理、Ontology、AI與部署；客戶租戶資料不因此開放|
+|GIS平台與資料目錄|Esri ArcGIS、Living Atlas、Feature Service|[Query文件](https://developers.arcgis.com/rest/services-reference/enterprise/query-feature-service-layer/)供查詢設計；圖層權利、分頁與服務上限另核|
+|氣象資料、模型及互通|Meteomatics Weather API、Mix／EURO1k／US1k、連接器|[入門文件](https://www.meteomatics.com/en/api/getting-started/)說明歷史、觀測、預報及WMS/WFS，API需登入；此輪未取得付費氣象樣本|
+|商業地球觀測|Planet、ICEYE、BlackSky|入口與產品候選；樣本品質、授權、歷史區域與價格另核|
+|太空資料服務|Spire|資料產品與角色候選；時空覆蓋及用途需授權實測|
+|能源、AI、基建、神經技術延伸|Tesla Megapack、x.ai／Grok、Boring Company、Neuralink|分開法人、品牌、產品與實測；不自動歸為軍工或同一集團；Neuralink不證明遠程心靈相通|
+
+x.ai本次[官方首頁](https://x.ai/)與[API文件](https://docs.x.ai/overview)顯示SpaceXSI／SpaceXAI相關品牌文字。僅登記網站當期文字；法人關係、持股、併購時間仍未完成法律文件核實，不能用舊稱或品牌自行補成控股結論。自稱世界最快、最高解析度或高回報等仍屬供應商主張。
+
+## 實際目錄資料與缺口
+
+ArcGIS此次只查owner:esri、type:Feature Service、按修改時間倒序第一頁最多20項；不是全部Esri資料，也不能宣稱全部Living Atlas。保存item ID、owner、標題、時間、URL、extent及完整該頁item。total、nextStart記錄於回執，未翻頁部分仍未收錄；未取feature內容、單item詳細條款或service schema。目錄修改時間不等於觀測時間。依[Esri訂戶內容說明](https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/mapping/living-atlas-subscriber-content-public-apps)，使用可能涉及帳戶與credits；逐圖層權利不得從公開可见性推論。
+
+{"product_groups": 27, "official_entry_queries": 28, "fetch_errors": 2, "visible_keyword_observed": 20, "esri_items": 20, "esri_query": {"total": 68, "start": 1, "num": 20, "nextStart": 21}, "new_open_tasks": 108, "prior_asf_work_retained": 498, "sqlite_counts": {"registry_business_definitions": 10, "registry_commercial_products": 27, "registry_esri_catalog_sample": 20, "registry_preserved_498_asf_work": 498, "registry_product_workqueue": 108, "registry_source_receipts": 28}, "global_complete": false, "private_or_paid_data_downloaded": false}。
+
+[產品群登記](tables/73_commercial_ecosystem_b50_20261011/registry_commercial_products.csv)、[來源收據](tables/73_commercial_ecosystem_b50_20261011/registry_source_receipts.csv)、[新待辦](tables/73_commercial_ecosystem_b50_20261011/registry_product_workqueue.csv)、[欄位業務定義](tables/73_commercial_ecosystem_b50_20261011/registry_business_definitions.csv)、[SQLite](tables/73_commercial_ecosystem_b50_20261011/commercial_ecosystem_b50.sqlite)。ArcGIS樣本表存在時位於同目錄registry_esri_catalog_sample.csv。
+
+## 下一步驗收
+
+本輪新增27個產品群、108項未結清工作；28項官方入口／目錄取用中，Esri訂戶說明頁與Tesla Megapack由本地取用實測HTTP 403。Starshield、Starlink三項及Warp Speed雖回應200，未讀到指定可見字詞，保留內容待核；其餘20項入口讀到字詞也只證明公開文字存在。ArcGIS查詢當次total=68、nextStart=21，已收錄20項、剩餘48項未翻頁；68只適用此查詢，不是Esri或全球圖層總量。
+
+先逐item取得ArcGIS詳細元資料與terms，再查服務schema、分頁限制及歷史小樣本；Meteomatics先核模型、參數、單位、保留值與用途條款，再做授權歷史持出比較。SpaceX／Starlink以官方技術與逐國監管文件核服務範圍；Palantir以公開架構與公司披露核產品、合法實體及商業部署，沒有存取私人租戶。任何供應鏈買賣、母子公司、訂戶或收入都需實體及時態證據。
+
+本批保留此前全部498項ASF工作，沒有結清全球企業、券商、上市公司、貨幣、歷史政治實體及神經科技缺口。ISO母表、舊196項、原宇航報告與使用者版本均保留；SDG分析保持凍結，Untitled不恢復。
