@@ -1,0 +1,166 @@
+---
+title: "B54：歷史AIS有界樣本品質與逐用途核對"
+date: 2026-10-11
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 本輪實測範圍
+
+重用已封存的2019年1月1日公開壓縮檔前65536位元組，先核原始SHA256，然後有界解壓；僅納入最後完整換行之前的CSV行。未增加網絡下載，也未產生逐船軌跡、所有權或國籍推斷。這是檔案起始連續行，沒有隨機抽樣，不能用其品質比例估計全年或全球。
+
+實際統計如下；未完整解壓及未核完整ZIP校驗碼的狀態明確保留。
+
+{"sample_complete_rows": 1683, "compressed_prefix_bytes": 65536, "decompressed_prefix_bytes": 176848, "discarded_incomplete_tail_bytes": 72, "deflate_stream_complete": false, "zip_crc_verified": false, "full_files_verified": 0, "checks": 41, "use_reviews": 6, "global_complete": false, "automatic_repairs": 0}
+
+## 品質檢查與數據保留
+
+逐欄記錄空字串、有限數值解析、寬鬆物理及編碼檢查、日期與識別字串格式，另核完全相同行重複。各項分母保留，來源原值不補零、不截斷、不套用2025年型別及有效範圍。COG、SOG及Heading保留標記只登記觀測次数；尤其Heading 511的2019年代適用性尚未判定，不自行改成空值。數據庫僅保存彙總檢查表，原始已封存前綴保留在前輪位置。
+
+[品質檢查表](tables/77_ais_quality_b54_20261011/registry_prefix_quality.csv)提供逐項實測計數；零失敗只表示此前綴通過該項，不表示精度、覆蓋、接收中斷或完整年度通過。
+
+## 實測發現與待核異常
+
+樣本中吃水欄位空字串1,196行、IMO空字串981行；Heading為511共872行、COG為360共123行、SOG為102.3共4行。另有3行MMSI未符合九位數字格式、2行吃水值小於零。這些均保留為異常或缺值觀測，不以猜測補全。空字串造成的數值解析失敗與空值統計有所重疊，不能相加當成不同異常記錄數。本文只提供彙總，不刊出逐船身份、位置或軌跡。
+
+## 逐用途核對
+
+依[NOAA官方常見問題](https://coast.noaa.gov/data/marinecadastre/ais/faq.pdf)，建立六項用途審核。歷史規劃研究及公開彙總成果仍須確認具體條件與署名；不推定原始資料收費轉售許可。全球覆蓋與訂閱圖層再發布仍無充分證據或適用授權。
+
+[用途審核表](tables/77_ais_quality_b54_20261011/registry_use_review.csv)是文件條件核對，並非已獲准授權。來源為地面接收資料，缺少記錄不能視為沒有船舶活動。
+
+## 接續清單
+
+完整檔校驗碼、完整日期分區、全量缺值及重複率仍待施工。先確定歷史交通彙總用途與資料量預算，再取得有界完整檔，驗中央目錄、CRC與串流行數；擴大時段後再核跨日重複及接收缺口。全球來源、星盾、Grok、xAI、Meteomatics及ArcGIS等既有清單保持待核，不能用本樣本代替全球驗收。
+
+[來源收據](tables/77_ais_quality_b54_20261011/registry_source_receipts.csv)、[整合數據庫](tables/77_ais_quality_b54_20261011/ais_quality_b54.sqlite)。既有365逐日目錄、17欄表頭與4项取用缺口逐行保留。本輪中文敘述與欄位解釋優先使用中文；技術標識與來源原字串保留，避免破壞可重現性。
+
+
+## 中文檔名與外語雙顯對照
+
+本中文檔名版本保留來源報告全文位元組作為前綴，另附中文說明；沒有刪減來源資訊或修改歷史數據。原檔名：AIS_Quality_B54_20261011（歷史自動識別系統樣本品質核對）；中文檔名：歷史自動識別系統樣本品質核對_B54_20261011。三個版本的來源、年代與驗收限制仍按原文保留。
+
+| 原名或原鍵 | 中文對照 |
+|---|---|
+| SpaceX | 太空探索技術公司 |
+| Starshield | 星盾 |
+| Esri | 環境系統研究所公司 |
+| ArcGIS | 阿克地理資訊系統（平臺譯稱） |
+| Living Atlas | 全球即時地圖集（產品譯稱） |
+| Grok | 格羅克（產品譯稱） |
+| xAI | 艾克斯人工智能公司（譯稱） |
+| Meteomatics | 米特奧氣象資料公司（譯稱） |
+| AIS | 自動識別系統 |
+| NOAA | 美國國家海洋暨大氣總署 |
+| FAQ | 常見問題 |
+| HTTP | 超文本傳輸協議 |
+| API | 應用程式介面 |
+| Token Required | 需要身份憑證 |
+| Range | 範圍請求 |
+| Content-Range | 回應位元組範圍 |
+| bytes | 位元組 |
+| ZIP | 壓縮封裝格式 |
+| CSV | 逗號分隔數據表 |
+| QMD | 可渲染源文件 |
+| HTML | 網頁標記格式 |
+| PDF | 可攜式文件格式 |
+| SQLite | 嵌入式數據庫 |
+| SHA256 | 安全雜湊演算法256位元 |
+| CRC | 循環冗餘校驗 |
+| MMSI | 海上移動通信業務識別碼 |
+| IMO | 國際海事組織（欄位為其船舶識別編號） |
+| UTC | 協調世界時 |
+| LAT | 緯度 |
+| LON | 經度 |
+| SOG | 對地航速 |
+| COG | 對地航向 |
+| Heading | 真航向 |
+| Draft | 吃水 |
+| AVIS | 權威船舶識別服務 |
+| AVID | 自動識別系統船舶識別資料庫 |
+| schema | 資料結構 |
+| declared type | 來源宣告型別 |
+| size | 來源宣告大小 |
+| domain | 有效值域 |
+| null | 空值 |
+| Level C | 丙類歷史資料分享分類 |
+| Total | 合計 |
+| GB | 十億位元組 |
+| InPort | 海洋暨大氣總署元資料入口 |
+| Transit Counts | 通行次數彙總 |
+| SDG | 永續發展目標 |
+| Untitled | 未命名文件（依使用者要求不恢復） |
+| Master Agreement | 主協議 |
+| public item | 公開項目 |
+| credits | 服務點數 |
+| hosted | 託管 |
+| item | 項目 |
+| Feature Service | 地理要素服務 |
+| sentinel | 缺值或保留標記 |
+| true | 真／是 |
+| false | 假／否 |
+| sample_complete_rows | 樣本完整資料行 |
+| compressed_prefix_bytes | 壓縮前綴位元組 |
+| decompressed_prefix_bytes | 解壓前綴位元組 |
+| discarded_incomplete_tail_bytes | 排除的不完整尾端位元組 |
+| deflate_stream_complete | 壓縮流是否完整 |
+| zip_crc_verified | 完整壓縮封裝校驗是否通過 |
+| full_files_verified | 完整檔案驗證數 |
+| checks | 檢查項數 |
+| use_reviews | 用途核對項數 |
+| global_complete | 全球是否完成 |
+| automatic_repairs | 自動修正數 |
+| dictionary_pages | 字典頁數 |
+| dictionary_updated | 字典更新日期 |
+| versioned_field_rows | 年代化欄位行數 |
+| field_mappings | 欄位映射數 |
+| previous_2019_header_exact_match | 2019年原表頭是否完全匹配 |
+| faq_pages | 常見問題頁數 |
+| summary_pages | 摘要頁數 |
+| annual_summary_rows | 年度摘要行數 |
+| quality_and_use_rules | 品質與用途規則數 |
+| source_receipts | 來源收據數 |
+| http_errors | 超文本傳輸協議錯誤數 |
+| public_layer_api_error | 公開圖層介面錯誤碼 |
+| full_data_rows_validated | 全量已驗證資料行數 |
+| automatic_corrections_applied | 已套用自動修正數 |
+| sqlite_counts | 嵌入式數據庫各表行數 |
+| starshield_visible_page_observed | 是否觀測星盾可見頁面 |
+| esri_faq_pages | 環境系統研究所公司常見問題頁數 |
+| esri_faq_source_date | 環境系統研究所公司常見問題來源日期 |
+| noaa_2019_objects | 海洋暨大氣總署2019年檔案物件數 |
+| partial_csv_columns | 部分數據表欄數 |
+| fetch_errors | 取得錯誤數 |
+| token_restrictions_retained | 保留的身份憑證限制數 |
+| full_ais_files_downloaded | 已完整下載自動識別系統檔案數 |
+
+
+原文中的機器鍵、原網址及產品標識保留，上表提供中文解釋。產品譯稱不冒充已核官方中文商標；原統計代碼中的批次與日期屬標識。完整檔案品質、根因、用途授權與全球覆蓋仍按接續清單核實。
+
+
+## 原統計中的數據表名稱中譯
+
+| 原數據表名稱 | 中文對照 |
+|---|---|
+| preserved_preserved_registry_commercial_products | 保留的商業產品登記表 |
+| preserved_preserved_registry_preserved_498_asf_work | 保留的498項阿拉斯加衛星設施工作表 |
+| preserved_preserved_registry_product_workqueue | 保留的產品工作佇列表 |
+| preserved_registry_esri_catalog | 保留的環境系統研究所公司項目目錄 |
+| preserved_registry_esri_item_terms | 保留的環境系統研究所公司逐項條款 |
+| preserved_registry_esri_service_schema | 保留的環境系統研究所公司服務結構 |
+| registry_esri_obligations | 環境系統研究所公司使用義務登記表 |
+| registry_gap_resolution | 取用缺口核解登記表 |
+| registry_noaa_2019_csv_header | 海洋暨大氣總署2019年數據表表頭登記 |
+| registry_noaa_2019_daily_objects | 海洋暨大氣總署2019年逐日檔案登記 |
+| registry_source_receipts | 來源收據登記表 |
+| preserved_registry_gap_resolution | 保留的取用缺口核解登記表 |
+| preserved_registry_noaa_2019_csv_header | 保留的海洋暨大氣總署2019年數據表表頭 |
+| preserved_registry_noaa_2019_daily_objects | 保留的海洋暨大氣總署2019年逐日檔案 |
+| registry_official_annual_summary | 官方年度摘要登記表 |
+| registry_public_layer_access | 公開圖層取用登記表 |
+| registry_quality_and_use_rules | 品質及用途規則登記表 |
+| registry_schema_migration_comparison | 結構遷移對照登記表 |
+| registry_versioned_field_dictionary | 年代化欄位字典登記表 |

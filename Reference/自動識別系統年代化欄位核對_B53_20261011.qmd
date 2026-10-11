@@ -1,0 +1,164 @@
+---
+title: "B53：AIS年代化欄位字典、品質與用途核對"
+date: 2026-10-11
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 2019欄位與新版本隔離
+
+取得[官方字典](https://coast.noaa.gov/data/marinecadastre/ais/data-dictionary.pdf)，明列2018–2024與2025起兩套17欄結構。2019部分檔表頭與舊期欄名及順序完全一致；只核schema，不是全檔驗證。MMSI以文字識別，UTC時間保留、座標十進位度、SOG為節、COG及Heading為度，尺寸為米。字典declared type、size與domain保留原欄，不能把展示精度當作實際量測精度。
+
+跨期欄位有改名、座標順序改變、Heading／Cargo／尺寸型別及文字長度變動，逐欄映射保存；新期有效範圍及null要求不套2019，不能自動轉型、截字或補零。抽取器替代字元保留原文與PDF，規範化欄位另行核；來源PDF仍是覆核依據。
+
+## 品質與使用邊界
+
+[官方FAQ](https://coast.noaa.gov/data/marinecadastre/ais/faq.pdf)為地面接收與歷史規劃資料，覆蓋、取整分鐘、AVIS校訂與使用條件分列於規則表。它不是全球衛星AIS。COG／SOG缺值標記及Heading的年代適用性保留待樣本核對；當期文件未找到舊搜索摘要的負值加常數规则，不自动修正。公共领域与Level C條件不能簡化為任意原始資料收費轉售。
+
+## 年度規模與公開服務實測
+
+[官方年度摘要](https://coast.noaa.gov/data/marinecadastre/ais/point-data-summary.pdf)列2019有365檔、約27億記錄、壓縮99.1 GB、解壓估283 GB。這些是來源宣告，不是本項目全量實測。其他年份与Total行一并保留，空白記錄數保持空值，不補零。2025摘要是不完整年度，不能當全年資料量。
+
+另讀[2019 InPort元資料](https://www.fisheries.noaa.gov/inport/item/62733)保存版本證據。NOAA托管的2019 Transit Counts圖層端點本次也回應HTTP200內含499 Token Required；沒有取得schema，不能因域名屬NOAA就假定服務無帳戶限制。原CSV公開目錄與圖層服務繼續分開。
+
+## 驗收與交付
+
+{"dictionary_pages": 2, "dictionary_updated": "July 31, 2026", "versioned_field_rows": 34, "field_mappings": 17, "previous_2019_header_exact_match": true, "faq_pages": 11, "summary_pages": 1, "annual_summary_rows": 18, "quality_and_use_rules": 9, "source_receipts": 5, "http_errors": 0, "public_layer_api_error": 499, "full_data_rows_validated": 0, "automatic_corrections_applied": 0, "sqlite_counts": {"preserved_registry_gap_resolution": 4, "preserved_registry_noaa_2019_csv_header": 17, "preserved_registry_noaa_2019_daily_objects": 365, "registry_official_annual_summary": 18, "registry_public_layer_access": 1, "registry_quality_and_use_rules": 9, "registry_schema_migration_comparison": 17, "registry_source_receipts": 5, "registry_versioned_field_dictionary": 34}, "global_complete": false}。
+
+[34筆年代化字典](tables/76_ais_semantics_b53_20261011/registry_versioned_field_dictionary.csv)、[17項跨期比較](tables/76_ais_semantics_b53_20261011/registry_schema_migration_comparison.csv)、[年度摘要](tables/76_ais_semantics_b53_20261011/registry_official_annual_summary.csv)、[品質與用途規則](tables/76_ais_semantics_b53_20261011/registry_quality_and_use_rules.csv)、[來源收據](tables/76_ais_semantics_b53_20261011/registry_source_receipts.csv)、[SQLite](tables/76_ais_semantics_b53_20261011/ais_semantics_b53.sqlite)。
+
+## 接續施工與成本控制
+
+先核逐用途權利；再選有界歷史時段與一般商船彙總樣本，串流讀取而非一次載入全年度。原字串、UTC、來源版本與缺值原因保留；合成測試與來源樣本驗證分開。以整檔CRC／雜湊、日期分區完整性、欄位數、時空及單位檢查、重複与空值率驗收，不用船名單獨認定法人或持有人。資料不可因記錄缺少而判定無船舶活動。
+
+既有星盾、Grok／xAI、Meteomatics、ArcGIS與全部全球清單保留，未新增即時追蹤、武器目標或私有連線。本輪未驗證全量記錄品質、商用清關或全球覆蓋；SDG分析凍結，Untitled不恢復。
+
+
+## 中文檔名與外語雙顯對照
+
+本中文檔名版本保留來源報告全文位元組作為前綴，另附中文說明；沒有刪減來源資訊或修改歷史數據。原檔名：AIS_Semantics_B53_20261011（自動識別系統年代化欄位核對）；中文檔名：自動識別系統年代化欄位核對_B53_20261011。三個版本的來源、年代與驗收限制仍按原文保留。
+
+| 原名或原鍵 | 中文對照 |
+|---|---|
+| SpaceX | 太空探索技術公司 |
+| Starshield | 星盾 |
+| Esri | 環境系統研究所公司 |
+| ArcGIS | 阿克地理資訊系統（平臺譯稱） |
+| Living Atlas | 全球即時地圖集（產品譯稱） |
+| Grok | 格羅克（產品譯稱） |
+| xAI | 艾克斯人工智能公司（譯稱） |
+| Meteomatics | 米特奧氣象資料公司（譯稱） |
+| AIS | 自動識別系統 |
+| NOAA | 美國國家海洋暨大氣總署 |
+| FAQ | 常見問題 |
+| HTTP | 超文本傳輸協議 |
+| API | 應用程式介面 |
+| Token Required | 需要身份憑證 |
+| Range | 範圍請求 |
+| Content-Range | 回應位元組範圍 |
+| bytes | 位元組 |
+| ZIP | 壓縮封裝格式 |
+| CSV | 逗號分隔數據表 |
+| QMD | 可渲染源文件 |
+| HTML | 網頁標記格式 |
+| PDF | 可攜式文件格式 |
+| SQLite | 嵌入式數據庫 |
+| SHA256 | 安全雜湊演算法256位元 |
+| CRC | 循環冗餘校驗 |
+| MMSI | 海上移動通信業務識別碼 |
+| IMO | 國際海事組織（欄位為其船舶識別編號） |
+| UTC | 協調世界時 |
+| LAT | 緯度 |
+| LON | 經度 |
+| SOG | 對地航速 |
+| COG | 對地航向 |
+| Heading | 真航向 |
+| Draft | 吃水 |
+| AVIS | 權威船舶識別服務 |
+| AVID | 自動識別系統船舶識別資料庫 |
+| schema | 資料結構 |
+| declared type | 來源宣告型別 |
+| size | 來源宣告大小 |
+| domain | 有效值域 |
+| null | 空值 |
+| Level C | 丙類歷史資料分享分類 |
+| Total | 合計 |
+| GB | 十億位元組 |
+| InPort | 海洋暨大氣總署元資料入口 |
+| Transit Counts | 通行次數彙總 |
+| SDG | 永續發展目標 |
+| Untitled | 未命名文件（依使用者要求不恢復） |
+| Master Agreement | 主協議 |
+| public item | 公開項目 |
+| credits | 服務點數 |
+| hosted | 託管 |
+| item | 項目 |
+| Feature Service | 地理要素服務 |
+| sentinel | 缺值或保留標記 |
+| true | 真／是 |
+| false | 假／否 |
+| sample_complete_rows | 樣本完整資料行 |
+| compressed_prefix_bytes | 壓縮前綴位元組 |
+| decompressed_prefix_bytes | 解壓前綴位元組 |
+| discarded_incomplete_tail_bytes | 排除的不完整尾端位元組 |
+| deflate_stream_complete | 壓縮流是否完整 |
+| zip_crc_verified | 完整壓縮封裝校驗是否通過 |
+| full_files_verified | 完整檔案驗證數 |
+| checks | 檢查項數 |
+| use_reviews | 用途核對項數 |
+| global_complete | 全球是否完成 |
+| automatic_repairs | 自動修正數 |
+| dictionary_pages | 字典頁數 |
+| dictionary_updated | 字典更新日期 |
+| versioned_field_rows | 年代化欄位行數 |
+| field_mappings | 欄位映射數 |
+| previous_2019_header_exact_match | 2019年原表頭是否完全匹配 |
+| faq_pages | 常見問題頁數 |
+| summary_pages | 摘要頁數 |
+| annual_summary_rows | 年度摘要行數 |
+| quality_and_use_rules | 品質與用途規則數 |
+| source_receipts | 來源收據數 |
+| http_errors | 超文本傳輸協議錯誤數 |
+| public_layer_api_error | 公開圖層介面錯誤碼 |
+| full_data_rows_validated | 全量已驗證資料行數 |
+| automatic_corrections_applied | 已套用自動修正數 |
+| sqlite_counts | 嵌入式數據庫各表行數 |
+| starshield_visible_page_observed | 是否觀測星盾可見頁面 |
+| esri_faq_pages | 環境系統研究所公司常見問題頁數 |
+| esri_faq_source_date | 環境系統研究所公司常見問題來源日期 |
+| noaa_2019_objects | 海洋暨大氣總署2019年檔案物件數 |
+| partial_csv_columns | 部分數據表欄數 |
+| fetch_errors | 取得錯誤數 |
+| token_restrictions_retained | 保留的身份憑證限制數 |
+| full_ais_files_downloaded | 已完整下載自動識別系統檔案數 |
+
+
+原文中的機器鍵、原網址及產品標識保留，上表提供中文解釋。產品譯稱不冒充已核官方中文商標；原統計代碼中的批次與日期屬標識。完整檔案品質、根因、用途授權與全球覆蓋仍按接續清單核實。
+
+
+## 原統計中的數據表名稱中譯
+
+| 原數據表名稱 | 中文對照 |
+|---|---|
+| preserved_preserved_registry_commercial_products | 保留的商業產品登記表 |
+| preserved_preserved_registry_preserved_498_asf_work | 保留的498項阿拉斯加衛星設施工作表 |
+| preserved_preserved_registry_product_workqueue | 保留的產品工作佇列表 |
+| preserved_registry_esri_catalog | 保留的環境系統研究所公司項目目錄 |
+| preserved_registry_esri_item_terms | 保留的環境系統研究所公司逐項條款 |
+| preserved_registry_esri_service_schema | 保留的環境系統研究所公司服務結構 |
+| registry_esri_obligations | 環境系統研究所公司使用義務登記表 |
+| registry_gap_resolution | 取用缺口核解登記表 |
+| registry_noaa_2019_csv_header | 海洋暨大氣總署2019年數據表表頭登記 |
+| registry_noaa_2019_daily_objects | 海洋暨大氣總署2019年逐日檔案登記 |
+| registry_source_receipts | 來源收據登記表 |
+| preserved_registry_gap_resolution | 保留的取用缺口核解登記表 |
+| preserved_registry_noaa_2019_csv_header | 保留的海洋暨大氣總署2019年數據表表頭 |
+| preserved_registry_noaa_2019_daily_objects | 保留的海洋暨大氣總署2019年逐日檔案 |
+| registry_official_annual_summary | 官方年度摘要登記表 |
+| registry_public_layer_access | 公開圖層取用登記表 |
+| registry_quality_and_use_rules | 品質及用途規則登記表 |
+| registry_schema_migration_comparison | 結構遷移對照登記表 |
+| registry_versioned_field_dictionary | 年代化欄位字典登記表 |
