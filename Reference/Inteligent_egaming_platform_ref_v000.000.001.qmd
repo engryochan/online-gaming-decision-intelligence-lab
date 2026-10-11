@@ -54402,10 +54402,10 @@ changelog/
 版本變更紀錄
 
 ##### 參、ChatGPT 官方產品功能，與自訂 Prompt 有何不同？
+
 根據 OpenAI 官方幫助中心，ChatGPT 提供搜尋、深入研究、檔案處理、圖片、專案及部分排程功能；可使用的功能視帳戶及產品環境而定。
 
-OpenAI Help Center
-+1
+OpenAI Help Center +1
 
 功能
 
@@ -54469,10 +54469,9 @@ redteam/、blueprint/
 
 OpenAI 官方同樣建議：清楚指定任務、背景、限制及輸出格式，通常比堆疊大量口號或模糊標籤更有效。
 
-OpenAI Help Center
-+2
+OpenAI Help Center +2
 
-肆、適用於高階量化與產業研究的總控 Prompt
+##### 肆、適用於高階量化與產業研究的總控 Prompt
 這份範本可直接複製，以後只需更改研究主題即可。
 
 高階研究與量化決策總控提示指令
@@ -54482,7 +54481,8 @@ OpenAI Help Center
 指令組合
 research/ + verify/ + factcheck/ + deepdive/ + compare/ + redteam/ + critic/ + killcritic/ + blindspot/ + assumptions/ + falsification/ + benchmark/ + blueprint/ + cheatsheet/ + actionplan/ + audit/
 
-一、語言與文化
+#### 一、語言與文化
+
 全文以繁體中文為主。
 
 專業術語首次出現採用「中文（English，縮寫）」雙顯。
@@ -54491,7 +54491,7 @@ research/ + verify/ + factcheck/ + deepdive/ + compare/ + redteam/ + critic/ + k
 
 區分古籍原文、史實、後世演義、現代推論。
 
-二、研究與查證
+#### 二、研究與查證
 查證截至研究當日的最新公開資料。
 
 優先採用官方文件、法定申報、標準、同行評審論文。
@@ -54502,7 +54502,7 @@ research/ + verify/ + factcheck/ + deepdive/ + compare/ + redteam/ + critic/ + k
 
 不得把未知、缺失與實測零混為一談。
 
-三、證據分級
+#### 三、證據分級
 P0：法律、監管、法定申報等權威資料。
 
 P1：官方產品文件、年報及一手資料。
@@ -54513,7 +54513,7 @@ P3：證據不足、尚未證實。
 
 對爭議及無法查證的事項明確標註。
 
-四、科學與數據分析
+#### 四、科學與數據分析
 定義研究問題、觀察單位、目標變數及估計量。
 
 說明模型假設、樣本偏差、資料洩漏及混雜因素。
@@ -54526,7 +54526,7 @@ P3：證據不足、尚未證實。
 
 提供信賴區間或適當的不確定性度量。
 
-五、對抗性審查
+#### 五、對抗性審查
 Red Team：尋找安全、邏輯、數據及商業風險。
 
 Critic：批判方法、假設及證據。
@@ -54537,7 +54537,7 @@ Blindspot：搜尋重大遺漏及隱藏依賴。
 
 Falsification：列出可推翻主張的觀測或實驗。
 
-六、架構與工程
+#### 六、架構與工程
 優先考慮可靠性、兼容性、可維護性與實際性能。
 
 必須有基準比較、版本管理、測試和回滾方案。
@@ -54548,7 +54548,7 @@ Falsification：列出可推翻主張的觀測或實驗。
 
 未經明確授權，不連接正式生產系統、不存取機密資料。
 
-七、最終交付
+#### 七、最終交付
 依序提供：
 
 核心結論與證據等級。
@@ -54583,6 +54583,914 @@ ChatGPT 提示詞工程最佳實務
 若先生所說的「所有 Prompt 指令」專指 redteam/ + critic/ + killcritic/ + blindspot/ 這種可組合的研究指令語法，上述兩表與總控範本就是一套可直接擴充和實用的指令體系。
 
 转换为 PDF
+
+> 請先生務必查證類似果敢有否任何地緣學生態產業鏈等等業務、電信與信息學生態產業鏈等等業務、軍工與國防生態產業鏈等等業務、人工智能生態產業鏈等等業務、科技操作系統與服務器生態產業鏈等等業務、宇航生態產業鏈等等業務呢？
+
+#### 果敢地區六大生態產業鏈查證報告
+
+GDS-249-20261008-v2.3.0 · 地緣經濟／電信資訊／國防經濟／人工智能／科技系統／宇航 · 截至2026年10月8日
+
+**初步查證結論：緬甸果敢確實存在地緣經濟、跨境貿易、能源礦業、通信資訊及武裝組織相關的產業活動，但目前沒有足夠可信的公開證據，證明果敢已建立完整的自主人工智能、操作系統、半導體、軍工製造或宇航產業體系。**
+
+最值得注意的是，一篇2026年9月發表的研究指出：緬甸民族民主同盟軍（Myanmar National Democratic Alliance Army, MNDAA）於2024年重新控制果敢後，當地新行政體系提出以能源、礦業、邊境貿易及旅遊為優先發展方向，同時明確禁止電信詐騙。這是判斷現有產業政策的重要公開證據，但政策優先事項不等於產業項目已落地。 tandfonline.com
+
+##### 一、六大生態產業鏈的證據矩陣
+
+| 研究領域           | 已發現的公開證據  | 初步裁定  |
+|:------------------:|:-----------------:|:---------:|
+| 地緣經濟與產業鏈   | 邊境貿易、能源、礦業、旅遊發展方向 | 有據可查 |
+| 電信與資訊產業鏈   | 既有通信及網絡使用需求；曾有大規模電信詐騙網絡 | 須區分合法與非法 |
+| 軍工與國防經濟     | MNDAA武裝組織、地方安全治理與相關供應需求 | 軍工製造待證 |
+| 人工智能產業鏈     | 東南亞犯罪網絡已有AI濫用案例，但不足以證實果敢本地AI產業 | 未證實完整產業 |
+| 科技操作系統與服務器 | 有資訊基礎設施需求，缺乏可獨立核驗的本地大型數據中心或自研OS證據	待證 |
+| 宇航與衛星產業鏈     | 可研究衛星通信、導航、氣象及遙感的應用可能性 | 本地自主產業未證實 |
+
+以上的「待證」並非斷言不存在，而是說現有可核驗材料不足以將其列作已建成或已商業化產業。
+
+另一個不能忽視的現實是：聯合國毒品和犯罪問題辦公室（UNODC）及聯合國人權機制均記錄過果敢境內的詐騙園區、人口販運與強迫犯罪問題。因此，當地通信、網絡、園區和跨境商業的投資分析，需要比一般地區更嚴格的合作方盡職調查與人權風險審核。 spcommreports.ohchr.org +2
+
+##### 二、果敢的地緣經濟及產業結構
+
+果敢老街（Laukkai），主要城市及區域商業中心
+
+中緬邊境清水河—清水河口岸貿易走廊
+
+**1. 已存在的產業與經濟活動**
+
+2026年的學術文獻與區域研究表明，果敢的經濟經歷了從農業、小規模貿易，擴展至製造、旅遊及博彩的歷史過程。清水河口岸等中緬通道則是其地緣經濟的重要基礎。 Yaolong Xian, 2026
+
+| 產業鏈     | 已有依據	                    | 可以進一步調查的合法商業領域 |
+|:----------:|:----------------------------:|:----------------------------:|
+| 跨境商貿   | 口岸、物流走廊、邊境商品流通 | 報關數據、貿易研究、倉儲物流 |
+| 礦業與資源 | 礦業政策優先項、戰略礦產相關報道 | 礦業環境審計、合法資源統計 |
+| 能源與電力 | 能源被列入地方優先發展政策 | 配電、能源效率、微電網可行性 |
+| 農業與食品 | 歷史農業基礎，另有高科技農業政策構想 | 農產品供應鏈、冷鏈、農業氣象 |
+| 製造與裝配 | 歷史製造業及勞動密集型產業 | 合規加工、品質管理、工業培訓 |
+| 旅遊及住宿 | 地方政策列入旅遊發展 | 合法住宿、文化旅遊、環境承載研究 |
+| 金融及支付 | 跨境交易帶來結算需求 | 合規支付、反洗錢、企業盡調 |
+
+《The Irrawaddy》在2025年的分析中亦提到高科技農業、勞動密集型製造、電動車裝配等發展方向，但這些內容目前應記作政策意向或投資構想，不能直接視為工廠已經量產。 irrawaddy.com
+
+**2. 地緣政治與商業控制權**
+
+2026年5月，緬甸研究機構 ISP-Myanmar 發表專題指出，MNDAA掌握了中緬邊境多條重要貿易道路、關口及經濟節點。這意味著研究果敢營商環境時，不能只查名義上的法律制度，還須查實際行政管理、通行安排及不同權力機構之間的關係。 ISP-Myanmar
+
+2026年1月，地方控制方亦宣布行政區劃重組。相關安排的合法性存在爭議，因此不能把事實控制、地方許可與獲國際承認的司法主權混為一談。 Eleven Media Group Co., Ltd
+
+##### 三、電信與信息學生態產業鏈
+
+此處最重要的是區分電信營運商、網絡基礎設施、通信軟件、資訊安全與利用通信設備從事犯罪的團體。
+
+**1. 緬甸全國的合法電信業者**
+
+緬甸目前可識別的主要移動通信品牌有：
+MPT
+緬甸郵電通信品牌，移動與寬頻服務
+
+- Mytel：軍方關聯電信體系，需加強制裁及所有權盡調
+- ATOM：原 Telenor Myanmar 業務，2022年改名
+- U9：原 Ooredoo Myanmar 品牌，2025年更名
+
+以上品牌更名及全國通信業者資訊可由2026年8月電信資費調查交叉核對。但全國存在某家電信公司，不等於已證實其在果敢每個城鎮都有合法可用的4G／5G基地台或寬頻覆蓋。 en.myanmartechpress.com +1
+
+具體到果敢，仍需核查營運執照、基地台實際覆蓋、跨境光纖、國際網關、網絡自主系統編號（Autonomous System Number, ASN）、斷網紀錄與資料保護制度。
+
+**2. AI與電信犯罪必須嚴格區分**
+
+中國官方在2025年披露了果敢大型犯罪集團的電信詐騙、非法拘禁及其他案件；聯合國亦記錄過當地強迫犯罪問題。這些證據可以確認當地曾存在複雜的通信犯罪網絡，但不能推導為果敢具有成熟、合法且可投資的電信科技產業。 english.scio.gov.cn +1
+
+##### 四、軍工與國防經濟產業鏈
+
+這一領域應嚴格分為三個層級：
+
+| 層級              | 查證結果                           | 商業判定   |
+|:-----------------:|:----------------------------------:|:----------:|
+| 地方武裝與安全治理 | MNDAA的組織與地方控制已有公開報道  | 已確認存在 |
+| 果敢本地軍工廠、裝備自主生產 | 暫無充分的獨立來源證明具體量產規模	待證 |
+| 緬甸全國軍工製造 | 有獨立調查記錄國防工業總局（DDI）及KaPaSa軍工廠體系 | 已確認存在，但不等於設於果敢 |
+
+國際調查組織 Special Advisory Council for Myanmar 在2023年公開報告中指出，緬甸軍方具有本國武器生產能力，並研究了其全球設備及技術供應網絡。然而，該報告主要涉及緬甸軍方DDI體系，不能將之直接歸屬於MNDAA或果敢地方產業。 Special Advisory Council for Myanmar +1
+
+適合納入非作戰研究的，是軍費及其財政機會成本、戰亂對民生與貿易的影響、國防產業的制裁風險、戰後民用基礎設施恢復，而非武器採購、軍事能力強化或作戰支援。
+
+##### 五、人工智能、操作系統與服務器產業鏈
+
+這裡需要作出關鍵區分：有電腦、有服務器、有AI軟件使用者，與擁有自主科技產業鏈，是三種完全不同的成熟度。
+
+以目前的查證結果，尚無法確認果敢擁有可獨立驗證的大型人工智能訓練集群、自研操作系統公司、先進半導體製造廠或商業超算中心。
+
+不過，在緬甸全國及周邊市場，以下民用技術確有研究與服務價值：
+
+| 技術生態 | 應調查的實際業務 | 果敢現況 |
+|:---------:|:------------------:|:------:|
+| 作業系統（Operating System, OS） | Windows、Linux、伺服器維護	本地供應商待查 |
+| 雲端運算（Cloud Computing） | 合法企業託管、備份、容災 | 大型本地雲業者待查 |
+| 數據工程（Data Engineering） | Python、R、SQL、DuckDB、PostgreSQL | 專業服務商待查 |
+| 人工智能（AI） | 農業預測、多語翻譯、行政文件分析 | 本地商業產品待查 |
+| 資訊安全（Cybersecurity） | 合規安全審計、反詐欺、資料保護 | 有現實需求，市場規模未核 |
+| 工業物聯網（Industrial IoT） | 民用供電、水利、農業設備監測 | 實際部署規模待查 |
+
+**具體商業機會**
+
+對於量化與數據科學企業，較可行的切入點不是立刻興建昂貴的AI數據中心，而是提供合法的農業與供應鏈數據服務、企業資訊安全、能源效率研究及財務風險分析。
+
+原因在於，緬甸整體投資環境仍受到內戰、電力不足、外匯管理及制裁風險制約。日本貿易振興機構（JETRO）2026年的緬甸投資資料顯示，2025／26財年全國外商直接投資批准額約為4.726億美元，同比減少31.5%。這是全國數值，不能當成果敢的投資額。 ジェトロ
+
+##### 六、宇航、衛星與氣象生態產業鏈
+
+這部分有一項重要新發現：緬甸全國確實有宇航科研機構，而且2026年已有具體活動紀錄。
+
+**Myanmar Space Agency（緬甸太空局）**
+
+2026年官方網站記載衛星科技研討會、太空科學研究，以及與俄羅斯國家航天集團 Roscosmos 的合作活動。
+緬甸太空局2026年活動紀錄
+
+2026年7月，緬甸官方亦報道了地球遙感應用平台、衛星控制設施及人工智能相關科研展示。然而，報道同時包含月球與火星方面的規劃或試驗，因此須逐項區分已運行系統、實驗原型及遠期構想。 Myanmar Space Agency +1
+
+**至於果敢本地，暫無足夠證據證明存在衛星製造廠、火箭研製機構、發射場或獨立宇航企業。**
+
+**民用宇航業務值得重點研究**
+
+**衛星氣象及災害預警**：使用合法公開的日本向日葵氣象衛星資料，研究季風、強降雨、洪水與農業氣象風險。世界氣象組織（WMO）列有向日葵8號、9號的正式衛星資料。 space.oscar.wmo.int +1
+
+**地球觀測與農業遙感**：以公開遙感資料分析作物生長、土地覆蓋、水土流失及環境變遷。這屬於可以建立跨地區產品的民用數據分析服務，而非已證實的果敢本地產業。
+
+**衛星數據工程與科研服務**：公開衛星數據的清理、時空索引、品質控制、地理資訊系統（GIS）整合及民用災害風險模型，均可使用R／Python建立可重複驗證的工作流程。
+
+緬甸氣象與水文部門亦有向日葵衛星影像的公開頁面，可作為國家級民用氣象服務確實存在的證據。 Department of Meteorology and Hydrology
+
+##### 七、RedTeam／Critic／Blindspot：商業風險與核驗閘門
+
+| 風險                 | 為何重要  | 必要控制   |
+|:--------------------:|:---------:|:----------:|
+| 法域與行政控制變更   | 地方批准未必等於全面合法營業權 | 雙重法律盡調及外部律師意見 |
+| 制裁及最終受益人風險 | 交易可能涉及受限制的企業或個人 | 制裁名單、股權穿透、資金來源審查 |
+| 科技與犯罪用途混淆   | AI、電信設備可能被犯罪集團濫用 | 客戶盡調、用途限制、人權保障 |
+| 電力與網絡不穩定     | 直接影響數據中心可用性	現地電力、網絡及備援實測 |
+| 產業宣傳高於實績     | 規劃中的工業園不等於已投產 | 查公司、執照、財報、驗收紀錄 |
+| 宇航與軍事雙重用途   | 民用科技可能涉及出口管制 | 以和平民用為限，嚴格出口合規 |
+
+尤其是緬甸軍工供應鏈，公開調查已指出國際企業可能通過中間商與前台公司間接涉及受制裁的武器製造體系。因此不能將「軍工市場龐大」直接解讀成安全的商機。 Special Advisory Council for Myanmar
+
+##### 八、GDS-249的建議入庫方式
+
+建議將果敢作為緬甸之下的地區研究單元，而非新增第250個主權國家或獨立 ISO 3166-1 國別實體。
+
+*示意：證據與時態登記結構*
+
+```
+registry_id: GDS-MM-KOKANG
+parent_iso3166_1: MM
+research_area: Kokang
+area_type: subnational_disputed_governance
+as_of: "2026-10-08"
+domains:
+  - geo_economy
+  - telecom_information
+  - defense_economics
+  - artificial_intelligence
+  - computing_infrastructure
+  - aerospace_meteorology
+evidence:
+  source_uri: null
+  published_at: null
+  retrieved_at: null
+  valid_from: null
+  valid_to: null
+  sha256: null
+  verification_status: PENDING
+scope: public_legal_non_operational
+revenue_status: NOT_ESTABLISHED
+```
+
+此結構目前是建議模式，不是已完成的249地區數據庫審計。來源SHA-256需要在取得並保存原始檔案後對實際位元組計算，不能用網址或文章標題冒充檔案雜湊。
+
+##### 九、產業投資研究的優先順序
+
+以下按公開證據的成熟度與民用研究可行性作出判斷，不是已證實的收益排名。
+
+| 優先順序     | 研究方向               | 下一個必須查證的環節           |
+|:------------:|:----------------------:|:------------------------------:|
+| 1	           | 跨境貿易、物流與能源   | 實際貨流、合法關務、穩定供電   |
+| 2	           | 農業、氣象與衛星遙感   | 公開資料覆蓋率及客戶需求       |
+| 3	           | 企業資訊安全與數據治理 | 合法客戶、個資法、合規需求     |
+| 4	           | 民用AI與服務器維護     | 網絡、供電、技能人才、付款能力 |
+| 5	           | 宇航科研與技術合作     | 實際項目、授權、科研合作條件   |
+| 不列投資候選 | 武器與實戰軍事支援     | 僅研究宏觀經濟、人權及制裁風險 |
+
+**最終裁定**
+
+果敢值得研究的核心不是它是否已經成為高科技強區，而是其跨境經濟基礎能否在合法、和平、穩定的制度條件下，逐漸形成可持續的民用科技服務市場。
+
+目前可確認其擁有歷史商貿與農業基礎、能源礦業政策方向及重要跨境經濟地位；但AI、服務器、操作系統與宇航等較高技術領域的本地完整產業鏈仍缺乏證據。
+
+這亦符合您要求的 GDS-249 原則：先核實一項業務確實存在，再核實合法性與技術實績，最後才計算營收、成本、風險調整後收益及投資回報率（ROI）。
+
+下一階段最有價值的工作，是把果敢與緬甸佤邦、勐拉、克欽及中國雲南沿邊地區建立同口徑的民用產業比較，避免以果敢一地的資訊直接推斷整個中緬邊境的產業實力。
+
+> 請先生將此對話從一開始至今的所有内容一字不漏核實、校對、查證后梳理一下，只能優化與强化並禁止退化的條件下繼續對話。
+> 
+> 請先生務必查證類似果敢有否任何地緣學生態產業鏈等等業務、電信與信息學生態產業鏈等等業務、軍工與國防生態產業鏈等等業務、神經網絡生態產業鏈、人工智能生態產業鏈等等業務、科技操作系統與服務器生態產業鏈等等業務、宇航生態產業鏈等等業務呢？需具體將那些公司、集團、組織、團體、研究所、教育機構、政府單位等等一一列出，缺一不可。
+
+#### 果敢及緬甸關聯七大科技與地緣產業生態：具名機構查證總錄
+
+*GDS-249-20261008-v2.3.0 · 2026年10月8日 · 合法公開情報 · 非作戰 · 證據先行*
+
+本輪承接對話最初確立的「地球全域249、SDG凍結、地緣、國防經濟、宇航、氣象、來源與SHA-256、時態管理」框架，並把新增的神經網絡生態產業鏈獨立成門，不再僅附屬於人工智能。
+
+首先訂正一項重要範圍問題：**果敢（Kokang）、緬甸全國及跨境合作機構，必須建立三個不同的實體登記層，不能把緬甸全國企業直接列作果敢企業。**
+
+##### 一、先核對原有研究基線
+
+在先前上載的《真實版人物分析與治國策略服務 v2.3》中，已確立地球—軌道—地月—月球—火星—太陽系的空間研究架構，以及公開宏觀軍工、民生、百業、地緣與宇航的研究邊界。其核心原則是：證據不充分時保留未知，不以企業宣傳取代已驗收的產業能力。 *真实版人物分析与治国策略服务_名录与九十日行令_v2_3_全球全域百业集团生态增强版_20261003.md*
+
+本輪研究對象因此分為：
+- **A層：果敢本地。** 老街及果敢自治區的實際機構、地方行政、企業和產業活動。
+- **B層：緬甸全國。** 可以核實存在的電信公司、科技企業、研究所、大學、政府部門及宇航機構，但不假定其在果敢設點。
+- **C層：境外關聯。** 與緬甸有具體貿易、科研、投資或技術合作記錄的境外主體，不將一般國際大公司無條件列入。
+
+下文提供目前能具名及附來源的機構名錄，**不是宣稱已窮盡所有企業、團體與個人。**尤其果敢的商業登記透明度不足，不能以外部搜索得到的名單冒稱完整法人總冊。
+
+##### 二、地緣與國防經濟：果敢本地有哪些實體？
+
+**果敢（Kokang）**
+
+以老街（Laukkai）為主要城市，與中國雲南邊境有密切經貿關係。2024年控制權發生重大變化，2026年又出現新的地方行政重組。
+
+
+2026年9月刊出的學術研究指出，果敢新地方行政體系重視能源、礦業、邊境貿易與旅遊；2026年1月新聞則記錄MNDAA宣布重整其控制區。這些是目前最明確的產業政策與治理證據，但並非所有項目已經商業化的證明。 *tandfonline.com +1*
+
+| 具名機構／主體 | 類別 | 與果敢關係 | 查證裁定 |
+|:--------------:|:----:|:----------:|:--------:|
+| 緬甸民族民主同盟軍（MNDAA） | 地方武裝及事實治理主體 | 果敢直接關聯	有公開證據 |
+| MNDAA控制區地方行政體系	地方行政 | 果敢直接關聯 | 已公布重組，法理地位存在爭議 |
+| 緬甸中央政府相關行政部門 | 國家行政體系 | 名義法域與國家規管 | 管轄與實際控制須分開 |
+| 果敢當地中資及其他私人企業 | 商貿、投資、礦業 | 存在企業活動的學術證據 | 個別法人名錄不完整 |
+| 中緬邊境口岸及海關相關機構 | 跨境貿易治理 | 口岸經濟關聯 | 應按具體口岸及管理時點核實 |
+
+此處不把MNDAA等同於所有在果敢經營的企業，也不將地方實際控制等同於獲國際承認的主權。
+
+##### 三、電信與資訊學生態：具名公司
+
+這一門已有相當多可以核實的緬甸全國業者。下表的「公司存在」或「網絡註冊」並不代表2026年10月在果敢現場可以使用其服務。
+
+| 公司／組織   | 主要業務或性質 | 地理範圍及證據 |
+|:------------:|:-----
+| MPT（Myanma Posts and Telecommunications） | 移動、固定通信及企業通信 | 緬甸全國；2026年7月官方披露新增及升級網絡站點 *MPT* |
+| Mytel | 移動通信、數據、光纖 | 緬甸全國，軍方關聯及制裁風險須核 |
+| ATOM Myanmar | 4G、語音及數據 | 原Telenor Myanmar，2022年品牌更名 |
+| U9 Myanmar | 移動通信及數據 | 原Ooredoo Myanmar，2025年品牌更名 |
+| Yatanarpon Teleport | 光纖、企業專網、數據中心設施 | 公司官方列明相關服務 |
+| Frontiir Co., Ltd. | 網絡技術及互聯網接入 | 緬甸ASN登記可核 |
+| Myanmar Net | 固定互聯網服務品牌 | 緬甸全國相關市場 |
+| Global Technology Co., Ltd. | 通信、網絡服務 | 緬甸ASN資料可核 |
+| 5BB Broadband | 家用及企業寬頻 | 全國業者，果敢據點未確認 |
+| Myanmar Unilink Communication | 網絡接入與通信 | ASN資料可核 |
+| Fortune Telecom | 電信／互聯網相關業務 | 緬甸網絡登記紀錄 |
+| Myanmar Information Highway | 電信網絡相關業務 | 歷史ASN紀錄 |
+| WELINK | 網絡服務品牌 | 緬甸網絡登記資料 |
+| Campana MYTHIC | 國際網絡相關服務 | 緬甸網絡資料可核 |
+
+2026年8月的通信市場資料證實MPT、Mytel、ATOM及U9四個主要移動通信品牌；Yatanarpon的官方企業介紹則明確提及光纖、IP-VPN及數據中心設施。其他公司可先由ASN資料建立候選名錄，再核其現行執照與法人狀態。 *en.myanmartechpress.com +2*
+
+需要強化的一項核查：緬甸民間組織Athan的通信中斷監測資料，截至2026年9月30日記錄了大量地區斷網與通信受阻，但其已確認狀態的樣本覆蓋不足以推出每個城鎮的完整網絡現況。 *athanmyanmar.org*
+
+##### 四、神經網絡與人工智能生態：大學、研究所及企業
+
+神經網絡（Neural Networks, NN）是人工智能的重要技術家族，研究範圍包括深度神經網絡（DNN）、卷積神經網絡（CNN）、循環神經網絡（RNN）、圖神經網絡（GNN）及Transformer架構。它與生物神經科學、腦機介面（BCI）並不相同，三者不可混為一個產業。
+
+**查證後可以確認緬甸有計算機教育、AI教學、研究社群與科技服務業；但目前無法證明果敢本地已有自主開發的大型神經網絡模型、GPU訓練集群或AI基礎模型企業。**
+
+**緬甸人工智能與資訊科研名錄**
+
+| 機構／公司   | 類型                | 已核實的關聯  |
+|:------------:|:-------------------:|:-------------:|
+| Myanmar Computer Federation（MCF） | 資訊科技聯合會 | 科技產業、專業人才與資訊教育組織 |
+| Myanmar Computer Professionals Association（MCPA） | 電腦專業人員協會 | MCF旗下專業組織 |
+| Myanmar Computer Industry Association（MCIA） | 電腦產業協會 | 資訊產業組織 |
+| Myanmar Computer Enthusiasts Association（MCEA） | 電腦愛好者組織 | MCF列示的成員體系 |
+| Myanmar Computer Science Development Council | 電腦科學發展機構 | 緬甸電腦科技制度體系 |
+| University of Computer Studies, Yangon（UCSY） | 仰光計算機大學 | 計算機應用與研究，舉辦IEEE-ICCA學術會議 |
+| University of Yangon 計算機研究系 | 大學科研 | 官方列出AI、資料庫、平行運算、網絡等教學方向 |
+| University of Information Technology（UIT） | 資訊科技大學 | 計算機人才與研究 |
+| Yangon Technological University（YTU） | 工程科技大學	科技工程教育 |
+| Mandalay Technological University（MTU） | 工程科技大學 | 工程、遙感及相關科研 |
+| Myanmar Aerospace Engineering University（MAEU） | 宇航工程大學	太空系統、電腦科學及工程研究 |
+| Myanmar World AI Solutions & Services | 商業科技機構 | 出現在UCSY於2026年的業界活動資料，產品及營業規模待核 |
+| Ultimate Solutions Co., Ltd. | 科技服務企業	出現在同一大學業界活動紀錄
+| STI Myanmar College	私立教育機構 | 同一公開活動具名機構，具體AI教學能力待核 |
+
+來源包括MCF官方組織介紹、緬甸政府資訊門戶、UCSY公開活動紀錄及仰光大學計算機研究系資料。 *Myanmar Computer Federation +4*
+
+從「有AI教學」到「有AI產業」，還欠哪些證據？
+1. 具有研究機構或企業身份的公開註冊紀錄。
+2. 可核對的論文、模型卡、開源程式碼或已交付產品。
+3. 可重複的訓練、推論及測試成績，附資料集與計算資源口徑。
+4. 實際付費客戶、商業合同或已審計收入。
+5. 個資、出口管制、網絡安全及人權合規。
+
+換言之，目前能證實「機構存在」及部分「課程與研究方向」，不能從中直接推出自研Transformer、GNN或大型語言模型已達產業化規模。
+
+##### 五、科技操作系統、伺服器及數據中心
+
+本門區分：作業系統開發商、網絡基礎設施商、數據中心營運商、軟件服務商及資訊產業組織。
+
+緬甸的Yatanarpon Teleport官方明確列出數據中心設施、企業專網及FTTx服務，這至少證明全國存在相關商業服務供給，而不只是一般家用網絡。 *Yatanarpon Teleport*
+
+| 主體                | 已知能力類別 | 果敢本地驗證  |
+|:-------------------:|:------------:|:-------------:|
+| Yatanarpon Teleport | 光纖、企業IP-VPN、數據中心設施 | 未確認據點 |
+| MPT                 | 電信與企業通信基礎設施 | 逐城鎮覆蓋待核 |
+| Frontiir            | 互聯網與網絡技術 | 未確認據點 |
+| Global Technology   | 電信與網絡服務 | 未確認據點 |
+| Myanmar Net         | 寬頻服務 | 未確認據點 |
+| 5BB Broadband       | 寬頻網絡 | 未確認據點 |
+| Myanmar Computer Federation | 產業組織與人才生態 | 非服務器營運商 |
+| UCSY／UIT／YTU      | 工程教育、軟件及計算研究 | 非商業數據中心證據 |
+
+目前沒有查得足夠的一手證據，能確認果敢本地擁有自主開發的Windows／Linux同類作業系統，或達到國際大型雲服務商規模的超大規模數據中心（Hyperscale Data Center）。
+
+但研究時也不能把全球軟件生態完全排除。Linux、PostgreSQL、Kubernetes、R、Python、PyTorch、TensorFlow等可作合法民用技術候選；這些是可採用的國際科技產品，不代表開發商在果敢設有分公司或承接當地項目。
+
+##### 六、軍工與國防經濟：組織、科研及生產體系
+
+此門最容易誤把「地方武裝存在」「軍工廠存在」「科研院校存在」三項互不相同的事實合併。
+
+**1. 具名機構**
+
+| 機構／體系  | 性質          | 可查證事實   |
+|:-----------:|:-------------:|:------------:|
+| 緬甸民族民主同盟軍（MNDAA） | 果敢地方武裝 |	果敢地區直接關聯；不能由其存在推導本地具完整軍工體系 |
+| 緬甸國防部（Ministry of Defence） | 國家軍事部門	緬甸全國體系 |
+| 緬甸國防工業總局（Directorate of Defence Industries, DDI） | 國防工業機構 | 有本國軍工生產能力的調查證據 |
+| KaPaSa／Defence Industry工廠體系 | 國防工業生產體系 | 第三方調查記錄多處工廠，主要集中於緬甸其他地區 |
+| Defence Services Science and Technological Research Centre（DSSTRC） | 國防科技研究機構 | 獨立調查曾提及其與DDI相關人員的任職經歷 |
+| Myanmar Aerospace Engineering University | 工程教育 | 存在太空系統、航電及相關工程科系；不是武器量產證據 |
+
+2023年Special Advisory Council for Myanmar的調查確認，DDI及KaPaSa體系屬緬甸軍方主導的武器製造系統，並指出其與國際供應鏈的關聯。這份證據不能用來證明KaPaSa工廠設於果敢，也不能把2023年狀態直接當作2026年營運現況。 *Special Advisory Council for Myanmar +1*
+
+2025年的後續調查還提出若干中國企業與緬甸軍方軍工生產存在供應關聯的指控。這類名冊應保留「調查方指控／尚待法院或其他獨立裁定」的標籤，不得把具名企業一律視作已被司法認定違法。 *Special Advisory Council for Myanmar*
+
+*本研究僅將這些組織登記作國防經濟、制裁、企業盡職調查與人權風險研究對象，不提供軍工採購或作戰能力強化建議。*
+
+##### 七、宇航、衛星、氣象及遙感：具名機構總表
+
+這是本輪取得較強一手證據增量的領域：緬甸不僅有太空局，還有專門的宇航工程大學、太空系統學系、衛星遙感研究人員及國家氣象機構。
+
+緬甸航空航天工程大學*設有太空系統工程等學系*
+
+緬甸氣象及水文部門*提供官方氣象、洪水及衛星資訊*
+
+| 機構／單位     | 類型 | 核實業務或職責
+|:--------------:|:--------
+| Myanmar Space Agency（MSA）	國家宇航機構	宇航科技、衛星合作及相關科研
+| Myanmar Aerospace Engineering University（MAEU）	宇航工程大學	航空、宇航、電子及系統工程教育
+| MAEU Department of Space Systems Engineering	大學學系	衛星、遙感、通信及導航課程
+| MAEU Department of Avionics Engineering	大學學系	航空電子工程教育
+| MAEU Department of Computer Science	大學學系	計算機科學教育
+| MAEU Department of Aerospace Materials Technology	大學學系	宇航材料工程
+| MAEU Department of Electrical Systems and Instrumentation	大學學系	電子、電力及儀器工程
+| MAEU Department of Propulsion and Flight Vehicles Engineering	大學學系	航空航天工程課程
+| MAEU Department of UAV Research	大學研究部門	官方列有該部門，公開研究活動仍須核實
+| Yangon Technological University	工程大學	工程及科研教育
+| Mandalay Technological University	工程大學	存在地球遙感相關科研人員
+| West Yangon Technological University	工程大學	參與2026年太空科技研討會
+| Department of Meteorology and Hydrology（DMH）	國家氣象與水文部門	天氣、降雨、洪水、地震及氣象資訊
+| Ministry of Science and Technology	政府部門	科技研究與工程教育管理
+| Roscosmos	境外宇航合作機構	緬甸太空局官方記錄的2026年合作洽談對象
+
+緬甸宇航工程大學官網確認太空系統工程系成立於2005—2006學年，設學士及碩士課程；其部門總表還列出航空電子、宇航材料、電腦科學等學系。 *Myanmar Aerospace Engineering University +1*
+
+2026年5月4日，緬甸太空局官網記錄了一場太空科學與衛星技術研討會，列出了上述多所工程大學及研究人員。2026年4月的官方新聞則記錄與俄羅斯方面就地球遙感、衛星通訊及人才培訓展開商談。參與研討會或商談並不等於完成衛星製造、技術轉移或商業部署。 *NodePress CMS +1*
+
+緬甸氣象及水文部門官方網站截至2026年10月8日仍提供天氣、農業氣象、降雨、洪水、地震及衛星資訊。 *Department of Meteorology and Hydrology*
+
+##### 八、果敢本地與緬甸全國的證據差距
+
+*證據成熟度矩陣｜不是產業實力評分*
+
+| 產業             | 果敢本地  | 緬甸全國 |
+|:----------------:|:---------:|:--------:|
+| 地緣經濟         | 較明確    | 較明確   |
+| 電信資訊         | 有限      | 較明確   |
+| 國防經濟         | 部分      | 較明確   |
+| 神經網絡         | 待證      | 部分     |
+| 人工智能         | 待證      | 部分     |
+| 作業系統／伺服器 | 待證      | 部分     |
+| 宇航與氣象       | 待證      | 較明確   |
+
+示意性證據評級：0＝尚無足夠具體證據；1＝有限線索；2＝有相關機構但部分能力未核；3＝存在可核實的一手或多方公開證據。不是統計量或量化產業指數。
+
+這個矩陣反映一項核心事實：**緬甸已存在的科技能力，不可以直接等同於果敢已部署的科技能力。**
+
+尤其對神經網絡、AI與宇航三門，下一步最需要的是果敢本地法人、研究機構、業務合同、科研成果或產品交付證據，而非再重複列舉國際大型科技企業。
+
+##### 九、來源、SHA-256與時態：證據入庫規範
+
+為延續GDS-249的原有規範，以下是本輪適合優先登記的主要來源。
+
+| 證據來源               | 用途                       | 來源等級   |
+|:----------------------:|:--------------------------:|:----------:|
+| 2026年北緬私人企業研究 | 果敢治理與產業優先事項     | 學術研究   |
+| 緬甸太空局官方網站     | 宇航機構、科研與官方活動   | 官方一手   |
+| 緬甸宇航工程大學       | 學系、課程、學術機構       | 官方一手   |
+| 緬甸氣象水文部門       | 氣象、水文、衛星資訊       | 官方一手   |
+| 緬甸電腦聯合會         | 資訊產業團體名錄           | 官方一手   |
+| 緬甸軍工獨立調查       | 國防工業、人權與供應鏈風險 | 第三方調查 |
+| Athan通信中斷監測      | 通信可用性與斷網情況       | 民間監測   |
+
+每一項原始證據都應有三重時間：published_at（來源發布）、retrieved_at（取得時間）、valid_at（事實生效或適用時間）。其中 SHA256 必須根據實際保存的來源檔案計算。
+
+**本輪已取得及核閱網頁內容，但尚未對每一份來源建立原始快照與逐檔SHA-256實測清單，因此不得標示為完整加密驗證通過。**
+
+##### 十、RedTeam／Critic／KillCritic／Blindspot：七門審閱
+
+| 審閱門          | 本輪裁定 |
+|:---------------:|:--------:|
+| RedTeam 紅隊    | 防止將地方武裝控制、軍工供應鏈與合法科技企業混成一份投資推薦表 |
+| Critic 批判     | 企業存在、網站存在、產業成熟、持續營運、具體盈利是五種不同命題 |
+| KillCritic 反證 | 果敢本地尚未證實大型AI或宇航產業，不代表它永遠不能發展相關民用業務 |
+| Blindspot 盲區  | 實際控制權、戰事、通訊中斷、企業登記不完整、資金來源及制裁問題可能改變商業結論 |
+| Cheatsheet 速查 | 先核法人與法域，再核產品、工程實績、客戶、成本、收入 |
+| Blueprint 藍圖  | 果敢本地登記表＋緬甸全國登記表＋境外合作登記表＋來源證據表 |
+| ActionPlan 行令 | 以合法民用農業、氣象、環境、教育、數據工程及企業安全為優先研究對象 |
+
+##### 十一、與既有對話及v2.3的非退化合併裁定
+
+本輪應保留的既有結論包括：果敢的跨境商貿及能源礦業政策方向、四家主要全國移動通信品牌、緬甸軍工體系、國家太空局，以及「人工智能與服務器本地規模未證實」等判斷。
+
+新增的強化內容有三項：一是把**神經網絡獨立成門**；二是具名列出資訊學會、大學、研究學系及企業；三是把各主體明確分為果敢、緬甸全國和境外關聯，防止地理歸屬錯誤。
+
+至於您要求的「從對話一開始至今一字不漏核實」，需要區分兩個層次：目前已依本對話可見內容與相關附件恢復研究脈絡、校對主要命題並查證新增來源；但**尚未完成整份歷史對話的逐字比對、所有網站逐頁審核、所有法人完全去重，以及全量SHA-256存證**。因此本輪名錄應標為「持續查證的增量研究」，不能冒充全量終審定稿。
+
+**最終研究判斷**
+
+以2026年10月8日的公開證據衡量：
+
+**果敢有地緣經濟、邊境貿易及地方安全治理等具體研究對象；緬甸全國則另有可證實的電信、資訊教育、神經網絡相關學術基礎、國防工業、宇航及氣象機構。**
+
+然而，果敢本地的神經網絡、人工智能、作業系統、超大型服務器與宇航完整產業鏈，目前仍不能認定已成熟，更不能在缺乏合法性、成本及收益數據下聲稱具有投資回報。
+
+我建議將這一版定位為 **GDS-249果敢專章的「已查證具名實體與證據缺口基線」**，在保留舊有資料與歷史更正紀錄的同時，繼續以官方法人登記、科研實績、產業合同及可審計經濟數據提升證據等級。
+
+> 請先生先梳理一下，切勿遺漏任何信息之下。務必查證並核實果敢軍、哈瑪斯等等那些武裝部隊、解放軍或軍方如何獲得收入、補給、有沒有類似類似palantir與arcGIS與meteomatics的集地緣學兼軍事國防宇航策略平臺呢？
+> 
+> 請中譯 Omniverse，然後在下欲研發《大秦賦算籌》類似綜合palantir系列與meteomatics系列與arcGIS系列等等目前全天下最前沿兼頂尖且高端的策略服務平臺兼地緣學與國防軍工宇航生態產業鏈，需要此Omniverse與谷歌地球、谷歌地圖相關軟硬兼、人工智能計數尤物、組件等等。請問先生有何高見與良策呢？
+
+#### 《大秦賦算籌》全球地緣·國防經濟·宇航·氣象·人工智能決策平台
+
+GDS-249-20261008-v2.3.0｜2026年10月8日｜查證與系統架構增補研究
+
+> 古以《管子》理財賦，以《墨子》論工程，以《周禮》明職守，以《孫子》重情報之真偽。今以統計、地理資訊、數位孿生與人工智能為器；先考證據，次定法度，再論收益。
+
+我建議將《大秦賦算籌》定位為**全球地緣政治、國防經濟、產業生態、公共政策、宇航氣象及民用基礎設施的時空決策智能平台**，而不只是模仿《三國志》或單獨購置地圖軟件。
+
+本輪研究分成四部分：既有對話與文件基線、武裝組織的宏觀財政制度、全球領先技術平台，以及可自主研發的系統藍圖。
+
+##### 一、先訂正 Omniverse 的中文名稱
+
+[Cesium for Omniverse – Cesium](https://images.openai.com/static-rsc-4/wmWS089pgG5JN6r0aHeUizIYk7-gPZkQgJ8RL-TztbOoRqPm_FyAhe1wJlOJ1hIJEYDiWZK5iSmD1WKkqkClJHF3DmZA5EqU-Fq9by9K0IK1-S8XME1Caf5XraxE4xOclR2VXxZ-eaf95O6m520V-IjSXEHTKa41H3TokkPLsvo?purpose=inline)
+
+**NVIDIA Omniverse**
+
+建議中文：英偉達全宇宙平台
+
+普通英文 Omniverse 可譯作「全宇宙」或「萬有宇宙」；若指 NVIDIA 的專有產品，應保留 Omniverse 英文商標。
+
+**Omniverse ≠ Metaverse（元宇宙）≠ Universe（宇宙）。**
+
+Omniverse 作為 NVIDIA 產品，其核心不是宣稱收錄全宇宙所有資料，而是建構以開放通用場景描述（OpenUSD）為基礎、可交換三維資料、進行模擬與製作數位孿生（Digital Twin）的開發平台。
+
+NVIDIA 官方現行架構包括 OpenUSD 資料交換、應用及服務開發、部署三個主要部分，並提供軟件開發套件（SDK）、應用程式介面（API）及函式庫。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.omniverse.nvidia.com\&sz=32) *Omniverse Developer Overview +1*
+
+一項重要的2026年新變化是：\*\*自2026年5月1日起，Omniverse已可免費用於開發、生產及再分發，基本使用不再需要 NVIDIA AI Enterprise 訂閱；企業級技術支援則另需付費授權。\*\*這不表示GPU、雲端主機、第三方地圖資料或其他軟件都免費。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.omniverse.nvidia.com\&sz=32) *Omniverse Developer Overview +1*
+
+因此，《大秦賦算籌》可以採用 Omniverse，但不應把它當作唯一的地理資料庫、世界情報資料來源或人工智能預測引擎。
+
+##### 二、武裝組織收入研究的第一項原則
+
+果敢軍、哈瑪斯及各國正規軍都需要資金、人員、能源、糧食、醫療、設備維護等資源，但其收入制度、合法性、透明度及問責體系相差極大。
+
+以下研究只比較已公開的歷史及宏觀財政證據，不涉及秘密資金轉移、現行補給路線、武器供應商接洽或規避制裁的方法。
+
+截至2026年10月，哈瑪斯的融資網絡仍是國際制裁與刑事執法的現實議題。美國財政部在2026年10月2日的新制裁公告中，指稱一個多年運作的網絡利用虛假慈善機構及加密資產管道向哈瑪斯轉移超過200萬美元。這是官方執法機構的具體主張，不應誤寫為全部哈瑪斯財政收入。
+
+[image](https://www.google.com/s2/favicons?domain=https://content.govdelivery.com\&sz=32) *content.govdelivery.com*
+
+對《大秦賦算籌》而言，正確方向是建立公共財政與武裝衝突經濟研究模組，把正式國防預算、非國家武裝的歷史經濟活動、人道援助、違法經濟、制裁及民生代價分開建帳，而非將各類資金統一稱為「軍餉收入」。
+
+##### 三、果敢軍、哈瑪斯、解放軍及正規軍如何獲得收入？
+
+###### 1. 四種組織的財政制度比較
+
+| 組織          | 主要公開財源類型                                  | 後勤制度的宏觀特徵                    | 財務透明程度      |
+| ----------- | ----------------------------------------- | ---------------------------- | ----------- |
+| 果敢軍 MNDAA   | 控制地區的商貿經濟、可能的地方稅費和相關收入；具體收入結構未經獨立審計       | 非國家武裝結合事實地方行政的資源管理           | 低           |
+| 哈瑪斯 Hamas   | 歷史上包括境外資助、投資資產、地方商業徵收；2026年仍有受制裁融資網絡的執法紀錄 | 政治、社會服務與武裝派別的財務關係複雜，戰爭造成重大中斷 | 極低          |
+| 中國人民解放軍 PLA | 中國政府正式批准的國防財政撥款                           | 國家預算、軍事機構管理、正式採購及後勤制度        | 國防總額公開，細項有限 |
+| 其他國家正規軍     | 一般由國家稅收、其他公共收入及依法舉債形成的預算供款                | 國防部、軍種、採購、維修、醫療及公共審計制度       | 因國家而異       |
+
+以上不是四支軍隊實際收入額、軍力或效率的比較。 特別是非國家武裝，控制一條貿易走廊不能證明獲得其全部貿易額；地方財政收入也不等於武裝部隊可支配收入。
+
+###### 2. 果敢軍 MNDAA：可證實與不可證實的部分
+
+資料來源：ISP-Myanmar，2026年4月29日及5月10日
+
+緬甸獨立研究機構 ISP-Myanmar 在2026年4月至5月兩份研究中指出，MNDAA控制了中緬邊境多處重要貿易口岸、道路及經濟節點，使其成為緬甸北部衝突經濟的重要參與者。研究並記錄2026年3月不同武裝組織間的控制權變化。
+
+[image](https://www.google.com/s2/favicons?domain=https://ispmyanmar.com\&sz=32) *ISP-Myanmar +1*
+
+由此可作出三層區分：
+
+- 已證實： MNDAA對部分地方行政與邊境經濟具有實際控制或影響。
+- 合理研究假設： 地方稅費、商業活動及資源產業可能構成其行政財政的一部分。
+- 尚未證實： 2026年度實際軍事預算、各項稅費徵收總額、軍餉支出、補給支出、庫存及資產負債表。
+
+另一項關鍵的歷史訂正是：國際危機組織（International Crisis Group）記錄，2023年前果敢大量詐騙園區與當時的親軍政府邊防武裝及地方犯罪集團存在聯繫；MNDAA重新控制果敢後，當地權力結構發生變化。不能把舊控制方歷史上的犯罪收入全部直接歸到現今MNDAA帳上。
+
+[image](https://www.google.com/s2/favicons?domain=https://crisisgroup-staging.sbx.so\&sz=32) *International Crisis Group*
+
+因此，《大秦賦算籌》只能建立按時間分期的果敢宏觀公共財政研究，而不能憑政治立場或新聞片段填造軍隊收入數字。
+
+###### 3. 哈瑪斯：公開財政證據
+
+美國財政部的《2026年全國恐怖主義融資風險評估》記錄了以下歷史財源：伊朗國家支持、境外籌款、濫用慈善名義籌資，以及過去持有的國際投資組合。報告同時指出，自2023年10月7日戰爭爆發以來，多項財源受到重大干擾。
+
+[image](https://www.google.com/s2/favicons?domain=https://home.treasury.gov\&sz=32) *home.treasury.gov*
+
+| 收入類型         | 來源證據及時態          | 審計注意  |
+|:----------------:|:-----------------------:|:---------:|
+| 境外國家支持     | 美國財政部2026年評估提及伊朗        | 來源國主張及數字須獨立交叉核實       |
+| 國際投資及資產   | 2023年前曾是重要資金來源          | 不能假定過往資產在2026年仍完整     |
+| 加沙地方商業收入 | 美國財政部2023年歷史說明          | 戰時行政控制和經濟活動已變化        |
+| 境外非法籌資網絡 | 美國財政部2026年1月、3月及10月制裁公告 | 制裁指控與司法裁判須分別記錄        |
+| 人道援助     | 必須另外建帳                  | 不能將合法援助巴勒斯坦平民等同於哈瑪斯收入 |
+
+這裡尤其要保留人道援助與軍事融資的區別。援助平民、合法慈善活動，以及遭制裁的非法融資行為，不能因發生在同一地區就混為一談。
+
+[image](https://www.google.com/s2/favicons?domain=https://home.treasury.gov\&sz=32) *U.S. Department of the Treasury +2*
+
+###### 4. 中國人民解放軍：具有正式預算制度的參考實例
+
+中國國防部2026年公開說明：2026年全國一般公共預算安排國防支出約人民幣1.94萬億元，其中中央本級約1.91萬億元，整體較上年執行數增長6.9%。數據屬官方預算安排，不是年終實際決算。
+
+[image](https://www.google.com/s2/favicons?domain=https://eng.mod.gov.cn\&sz=32) *Ministry of National Defense*
+
+因此，研究國家正規軍時，可使用：
+
+國家財政收入 → 經立法或法定程序批准之國防預算 → 按公開財政分類分配 → 政府審計與支出結果。
+
+美國則有預算請求、國會撥款及不同性質的國防資金，三者口徑並不完全相同。例如2026財年國防部預算請求與國會委員會建議數字不同，不能直接混成一個單一「軍費」。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.defense.gov\&sz=32) *defense.gov +1*
+
+###### 5. 全球可比較的國防經濟資料
+
+全球軍事開支，2025年
+
+2026年4月發布
+
+#### 2.887 萬億美元
+
+斯德哥爾摩國際和平研究所（SIPRI）估計，全球2025年軍事開支按不變價格較2024年增長2.9%。
+
+[SIPRI軍費長期資料庫](https://www.sipri.org/databases/milex) · [SIPRI國際主要常規武器轉移資料庫](https://www.sipri.org/databases/armstransfers)
+
+軍費是資源投入的量度，不代表武裝部隊戰鬥能力，更不是戰爭勝率。SIPRI資料商業用途另有授權規定。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.sipri.org\&sz=32) *SIPRI +2*
+
+對補給的研究建議：平台僅顯示國防預算中可公開核對的人員、公共設施、醫療、維修、採購和長期產業支出類別，以及其財政與民生效果，不追蹤交戰組織的即時物資位置、補給通道或可供攻擊利用的後勤弱點。
+
+##### 四、目前有哪些真正接近《大秦賦算籌》構想的全球領先平台？
+
+這裡有一項重要判斷：Palantir、ArcGIS、Meteomatics、Google Earth Engine與NVIDIA Omniverse並不是同類競爭產品。它們分別擅長決策本體、地理資訊、氣象數據、地球觀測分析及三維數位孿生。
+
+因此，適合採用的是可組合架構，而不是強行挑選其中一家公司取代全部功能。
+
+| 平台／產品                   | 核心能力                  | 可移植至《大秦賦算籌》的部分     |
+|:-----------------------:|:---------------------:|:------------------:|
+| Palantir Foundry        | 企業資料、本體、實體關係與工作流程     | 人—企業—政府—產業—事件關係圖譜  |
+| Palantir AIP            | 人工智能決策應用及模型治理         | 有來源的研究助理、情景解釋、人工審批 |
+| Palantir Gotham         | 安全及情報領域資料融合           | 只參考公開資料融合、證據鏈與權限架構 |
+| Palantir Apollo         | 軟件部署、持續交付及更新管理        | 高可靠部署、版本控制與回滾      |
+| Esri ArcGIS             | GIS、空間分析與地圖服務         | 全域行政地理、人口、產業及自然風險  |
+| ArcGIS Urban            | 城市數位孿生及規劃情景           | 城市、農業區、文化城及產業園區規劃  |
+| ArcGIS Reality          | 遙感及攝影測量三維重建           | 民用城市、土地、環境三維模型     |
+| Meteomatics Weather API | 全球歷史、觀測、預報、氣候模型整合     | 氣象、水文、農業、能源及災害風險   |
+| Google Earth Engine     | 地球觀測資料集與雲端空間計算        | 土地覆蓋、植被、洪水、環境變遷    |
+| Google Maps Platform    | 地圖、地點資訊與三維地圖API       | 民用地理搜尋、地圖顯示及互動體驗   |
+| NVIDIA Omniverse        | OpenUSD、RTX渲染、模擬及數位孿生 | 城市、工業、科研與公共設施三維沙盤  |
+| CesiumJS／Cesium ion     | 三維地球及3D Tiles         | 自主地球儀與衛星資料呈現       |
+| QGIS                    | 開源GIS及空間資料處理          | 低成本研發、空間分析、成果核驗    |
+
+Palantir的官方架構將Foundry、AIP及Apollo定位為相互協作的企業操作系統；其中Ontology（本體）明確包括物件、關係與行動三類核心表達。這值得借鑑，但其商業產品並非免費開源程式碼，不能直接複製。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.palantir.com\&sz=32) *palantir.com +1*
+
+Esri官方則確認ArcGIS用於國防與情報領域，也確認ArcGIS Urban可以評估土地利用及城市發展情景。因此我們可以借鑑其資料融合、GIS和規劃方法，但將自研平台的研究與服務嚴格限定於非作戰用途。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.esri.com\&sz=32) *esri.com +2*
+
+###### 五大核心技術如何分工？
+
+[Navigating the Future of Data: A User’s Perspective on Palantir’s AI-Enhanced Foundry Platform | by Bogoodski | Medium](https://images.openai.com/static-rsc-4/N0xMF2p97ovY4h1wIk9zFvo1xlSDHtPg3vVs_U01aRgcQRcAhYM8b69STA8qMYfLX6U9PxopfcHIZQMYKYvlzYwLLOJAna1THYe64LXDfogDNhGoQl5eBYoUTlqzu053HlI2p58dLNQaoCYLq15b17RgGFcNk-32dZKfqZUmR8I?purpose=inline)
+
+**Palantir式本體圖譜**
+
+研究誰、何物、何事與何種關係
+
+[Digital Future: Building Consensus through Scenario Planning in Boulder, Colorado](https://images.openai.com/static-rsc-4/cSaTZZpicx8yLtyzrDyZt3cYf2ExfRn65paETT2P_ge6t6D6idcDH49Bd37x-ham3PhTpyUt0QirT82b4jyrRlOW5I8mvta5aSzogOhXsTbx8eU3GJJhU0anaL3rw0c6wYQ4MsA9sNONQKOxsGhB2j3PuYJ7HtnL-O8X6evvb_M?purpose=inline)
+**ArcGIS式時空分析**
+
+研究在哪裏、土地如何變化
+
+[MetX Example Dashboard - Weather overview](https://images.openai.com/static-rsc-4/UNAgVATGx11tNlUVPdn2e_CdwZjN9u7CkJX6fN8G_OsI9SJWrKxl1iDLMONF9Q9v-J9Y3qpzGtjkW56Pi_cyG0cwX0J7syTopKeBMu1kZHqpSuA2H1bWEuJ9w_cc0cQnqIgV80vNrToOpoPPrzR7G1mWEmpCGB_GjL4cLDk1nb0?purpose=inline)
+
+**Meteomatics式氣象引擎**
+
+研究天氣、氣候及自然災害
+
+**Omniverse＋Cesium數位孿生**
+
+將有授權的三維地理資料整合成模擬場景
+
+###### 2026年技術更新：三項不應沿用舊版假設
+
+第一，ArcGIS GeoEvent Server 已於2026年4月被Esri正式列為將淘汰的產品。新架構宜優先評估 ArcGIS Velocity for ArcGIS Enterprise，而不是再把GeoEvent設為長期新系統的核心。
+
+[image](https://www.google.com/s2/favicons?domain=https://support.esri.com\&sz=32) *support.esri.com*
+
+第二，Meteomatics官方列示超過1,800個氣象參數、110多種模型與資料來源，並提供90米地形降尺度輸出。須注意：90米降尺度不等於全球原生90米物理預報解析度；其原生1公里EURO1k及US1k模型分別面向歐洲、美國。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.meteomatics.com\&sz=32) *Meteomatics +1*
+
+第三，2026年7月的Cesium官方版本公告已確認 Cesium for Omniverse 0.29.0要求Omniverse Kit 110.0或更新版本。不能再以舊版USD Composer教學直接認定最新版兼容。
+
+[image](https://www.google.com/s2/favicons?domain=https://cesium.com\&sz=32) *Cesium*
+
+##### 五、Google Earth、Google Maps與Omniverse能否真正整合？
+
+可以整合適當的服務，但不能把Google Earth畫面任意下載、剝離或重建成自家可永久儲存的地形資產。
+
+Google的不同產品應分開：
+
+| Google產品                     | 正確定位      | 整合方式   |
+|:------------------------------:|:-------------:|:----------:|
+| Google Earth                   | 全球地球視覺探索工具    | 人工研究、獲准的展示與使用方式 |
+| Google Maps Platform           | 地圖及地點資訊API    | API金鑰、用量計費及署名 |
+| Google Photorealistic 3D Tiles | 寫實三維地理視覺資料    | 使用支援3D Tiles的合法渲染器 |
+| Google Earth Engine            | 遙感計算及地球科學資料分析 | Python／JavaScript API、Google Cloud專案 |
+| Google Cloud                   | 雲端運算與資料服務     | 商業帳戶、權限及使用量管理 |
+
+Google官方明確支援以CesiumJS、Cesium for Unreal等渲染器顯示Photorealistic 3D Tiles。使用時須顯示Google與相關第三方資料的署名。
+
+[image](https://www.google.com/s2/favicons?domain=https://developers.google.cn\&sz=32) *developers.google.cn +1*
+
+更重要的是，Map Tiles API政策禁止未經授權的預抓取、長期快取、離線擷取，以及將其資料用於非視覺化的影像分析、機器辨識或地理資料抽取。若要訓練自己的神經網絡，應另取具適當許可的資料，而不是直接抓取Google地圖影像。
+
+[image](https://www.google.com/s2/favicons?domain=https://developers.google.com\&sz=32) *developers.google.com*
+
+Google Earth Engine也有獨立商業授權要求。2026年4月27日起，其非商業計算資源採用新的月度配額分級；私人企業的商業用途原則上需配置付費專案。
+
+[image](https://www.google.com/s2/favicons?domain=https://developers.google.com\&sz=32) *developers.google.com +1*
+
+最合適的整合方式：
+
+\#chatgpt-mermaid-\_r_sn\_{font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";font-size:16px;fill:rgb(13, 13, 13);}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#chatgpt-mermaid-\_r_sn\_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#chatgpt-mermaid-\_r_sn\_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#chatgpt-mermaid-\_r_sn\_ .error-icon{fill:rgb(243, 243, 243);}#chatgpt-mermaid-\_r_sn\_ .error-text{fill:rgb(13, 13, 13);stroke:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ .edge-thickness-normal{stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .edge-thickness-thick{stroke-width:3.5px;}#chatgpt-mermaid-\_r_sn\_ .edge-pattern-solid{stroke-dasharray:0;}#chatgpt-mermaid-\_r_sn\_ .edge-thickness-invisible{stroke-width:0;fill:none;}#chatgpt-mermaid-\_r_sn\_ .edge-pattern-dashed{stroke-dasharray:3;}#chatgpt-mermaid-\_r_sn\_ .edge-pattern-dotted{stroke-dasharray:2;}#chatgpt-mermaid-\_r_sn\_ .marker{fill:rgb(143, 143, 143);stroke:rgb(143, 143, 143);}#chatgpt-mermaid-\_r_sn\_ .marker.cross{stroke:rgb(143, 143, 143);}#chatgpt-mermaid-\_r_sn\_ svg{font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";font-size:16px;}#chatgpt-mermaid-\_r_sn\_ p{margin:0;}#chatgpt-mermaid-\_r_sn\_ .label{font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";color:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ .cluster-label text{fill:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ .cluster-label span{color:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ .cluster-label span p{background-color:transparent;}#chatgpt-mermaid-\_r_sn\_ .label text,#chatgpt-mermaid-\_r_sn\_ span{fill:rgb(13, 13, 13);color:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ .node rect,#chatgpt-mermaid-\_r_sn\_ .node circle,#chatgpt-mermaid-\_r_sn\_ .node ellipse,#chatgpt-mermaid-\_r_sn\_ .node polygon,#chatgpt-mermaid-\_r_sn\_ .node path{fill:rgb(222, 234, 251);stroke:rgb(83, 154, 248);stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .rough-node .label text,#chatgpt-mermaid-\_r_sn\_ .node .label text,#chatgpt-mermaid-\_r_sn\_ .image-shape .label,#chatgpt-mermaid-\_r_sn\_ .icon-shape .label{text-anchor:middle;}#chatgpt-mermaid-\_r_sn\_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .rough-node .label,#chatgpt-mermaid-\_r_sn\_ .node .label,#chatgpt-mermaid-\_r_sn\_ .image-shape .label,#chatgpt-mermaid-\_r_sn\_ .icon-shape .label{text-align:center;}#chatgpt-mermaid-\_r_sn\_ .node.clickable{cursor:pointer;}#chatgpt-mermaid-\_r_sn\_ .root .anchor path{fill:rgb(143, 143, 143)!important;stroke-width:0;stroke:rgb(143, 143, 143);}#chatgpt-mermaid-\_r_sn\_ .arrowheadPath{fill:rgb(143, 143, 143);}#chatgpt-mermaid-\_r_sn\_ .edgePath .path{stroke:rgb(143, 143, 143);stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .flowchart-link{stroke:rgb(143, 143, 143);fill:none;}#chatgpt-mermaid-\_r_sn\_ .edgeLabel{background-color:rgb(252, 252, 252);text-align:center;}#chatgpt-mermaid-\_r_sn\_ .edgeLabel p{background-color:rgb(252, 252, 252);}#chatgpt-mermaid-\_r_sn\_ .edgeLabel rect{opacity:0.5;background-color:rgb(252, 252, 252);fill:rgb(252, 252, 252);}#chatgpt-mermaid-\_r_sn\_ .labelBkg{background-color:rgba(252, 252, 252, 0.5);}#chatgpt-mermaid-\_r_sn\_ .cluster rect{fill:rgb(243, 243, 243);stroke:rgba(0, 0, 0, 0.1);stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .cluster text{fill:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ .cluster span{color:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";font-size:12px;background:rgb(243, 243, 243);border:1px solid rgba(0, 0, 0, 0.1);border-radius:2px;pointer-events:none;z-index:100;}#chatgpt-mermaid-\_r_sn\_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:rgb(13, 13, 13);}#chatgpt-mermaid-\_r_sn\_ rect.text{fill:none;stroke-width:0;}#chatgpt-mermaid-\_r_sn\_ .icon-shape,#chatgpt-mermaid-\_r_sn\_ .image-shape{background-color:rgb(252, 252, 252);text-align:center;}#chatgpt-mermaid-\_r_sn\_ .icon-shape p,#chatgpt-mermaid-\_r_sn\_ .image-shape p{background-color:rgb(252, 252, 252);padding:2px;}#chatgpt-mermaid-\_r_sn\_ .icon-shape .label rect,#chatgpt-mermaid-\_r_sn\_ .image-shape .label rect{opacity:0.5;background-color:rgb(252, 252, 252);fill:rgb(252, 252, 252);}#chatgpt-mermaid-\_r_sn\_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#chatgpt-mermaid-\_r_sn\_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#chatgpt-mermaid-\_r_sn\_ .node .neo-node{stroke:rgb(83, 154, 248);}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node rect,#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].cluster rect,#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node polygon{stroke:url(#chatgpt-mermaid-\_r_sn\_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].swimlane.cluster rect{filter:none;}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node path{stroke:url(#chatgpt-mermaid-\_r_sn\_-gradient);stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node .neo-line path{stroke:rgb(83, 154, 248);filter:none;}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node circle{stroke:url(#chatgpt-mermaid-\_r_sn\_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].node circle .state-start{fill:#000000;}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].icon-shape .icon{fill:url(#chatgpt-mermaid-\_r_sn\_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-\_r_sn\_ [data-look="neo"].icon-shape .icon-neo path{stroke:url(#chatgpt-mermaid-\_r_sn\_-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#chatgpt-mermaid-\_r_sn\_ .node text{font-size:14px;font-weight:600;letter-spacing:normal;fill:rgb(0, 79, 153);}#chatgpt-mermaid-\_r_sn\_ .edgeLabels text{font-size:13px;font-weight:600;letter-spacing:-0.08px;fill:rgb(0, 79, 153);}#chatgpt-mermaid-\_r_sn\_ .node tspan[font-weight="normal"],#chatgpt-mermaid-\_r_sn\_ .edgeLabels tspan[font-weight="normal"]{font-weight:600;}#chatgpt-mermaid-\_r_sn\_ .edgeLabel .label rect{opacity:1;rx:13px;ry:13px;fill:rgb(245, 250, 255);stroke:rgb(206, 219, 229);stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .node rect,#chatgpt-mermaid-\_r_sn\_ .node circle,#chatgpt-mermaid-\_r_sn\_ .node ellipse,#chatgpt-mermaid-\_r_sn\_ .node polygon,#chatgpt-mermaid-\_r_sn\_ .node path{fill:rgb(229, 243, 255);stroke:rgba(0, 0, 0, 0.1);stroke-width:1px;}#chatgpt-mermaid-\_r_sn\_ .node rect{rx:16px;ry:16px;}#chatgpt-mermaid-\_r_sn\_ .node.mermaid-decision .label-container{fill:rgb(245, 250, 255);stroke:rgb(206, 219, 229);stroke-dasharray:2,2;}#chatgpt-mermaid-\_r_sn\_ .edgePaths .flowchart-link{stroke:rgb(143, 143, 143);stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;}#chatgpt-mermaid-\_r_sn\_ .marker{fill:rgb(143, 143, 143);stroke:rgb(143, 143, 143);}#chatgpt-mermaid-\_r_sn\_ :root{--mermaid-font-family:-apple-system-body,ui-sans-serif,-apple-system,system-ui,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";}合法公開資料與獲授權API來源、時態、許可、SHA-256驗證地理資料／企業本體／時間序列Python、R、統計與AI研究可解釋情景及風險評估決策看板及人工複核CesiumJS全球三維地球Omniverse／OpenUSD數位孿生Google Maps授權圖層Meteomatics及開放氣象資料公共財政與SIPRI宏觀數據審計與非作戰管制
+
+這種架構既能呈現地球三維圖形，也能保留數據科學所需的時間、來源、誤差、版本及可解釋性。
+
+##### 六、《大秦賦算籌》應採用的十層科技母架構
+
+我建議不直接將Palantir、Google、Esri與NVIDIA四套平台硬接成單一巨型軟件，而是以自主資料本體與開放標準為核心，商業軟件作可替換的專業組件。
+
+| 層級 | 中文架構名稱      | 優先技術與組件                                               |
+|:--:| ----------- | ----------------------------------------------------- |
+| L0 | 天下戶籍與地理基準   | UN M49、ISO 3166-1、EPSG、GeoNames、OSM                   |
+| L1 | 百業組織與實體關係   | PostgreSQL、PostGIS、Apache AGE／Neo4j、GLEIF             |
+| L2 | 來源證據與時態     | SHA-256、資料來源登記、雙時態資料庫、不可變日誌                           |
+| L3 | 地緣經濟與公共財政   | 世界銀行、IMF、UNCTAD、SIPRI、OECD                            |
+| L4 | 氣象、水文與環境    | Meteomatics、ECMWF、ERA5、NOAA、NASA、Copernicus           |
+| L5 | 地理資訊與遙感     | QGIS、GDAL、Rasterio、xarray、GeoPandas、ArcGIS            |
+| L6 | 神經網絡與量化研究   | R、Python、PyTorch、scikit-learn、XGBoost、Transformer、GNN |
+| L7 | 全球三維地球與數位孿生 | CesiumJS、3D Tiles、OpenUSD、NVIDIA Omniverse            |
+| L8 | 決策本體與情景推演   | NetworkX、AnyLogic、Mesa、IFs、穩健決策模型                     |
+| L9 | 保密治理與商業交付   | Keycloak、Open Policy Agent、OpenTelemetry、Quarto、Shiny |
+
+此表為推薦技術架構，並非宣稱各產品已在單一系統內完成互操作驗收；個別商業授權及接口兼容仍須逐項確認。
+
+###### 需要具體列入的宇航及國際研究機構
+
+為避免把「宇航」縮成衛星圖片，我建議同步建立以下機構及資料體系名冊：
+
+| 機構／體系                       | 對應研究模組          |
+| --------------------------- | --------------- |
+| NASA（美國國家航空暨太空總署）／Earthdata | 地球觀測、氣候、衛星科研    |
+| ESA（歐洲太空總署）／Copernicus      | 地球觀測、衛星數據及空間環境  |
+| UNOOSA（聯合國外太空事務廳）           | 外空法律、登記與國際治理    |
+| ECMWF（歐洲中期天氣預報中心）           | 數值氣象與再分析        |
+| NOAA（美國國家海洋暨大氣總署）           | 海洋、氣象、太空天氣      |
+| WMO（世界氣象組織）                 | 全球氣象協作及標準       |
+| SIPRI（斯德哥爾摩國際和平研究所）         | 國防經濟及軍工產業宏觀研究   |
+| UNSD（聯合國統計司）                | 國家／地區統計標準       |
+| World Bank（世界銀行）            | 人口、經濟、治理與公共基礎設施 |
+
+對其中的Copernicus Sentinel衛星資料，歐洲資料空間官方確認採自由、全面、開放取得原則；但其網站其他文字、圖像及資料並不全部具有相同的商業再利用權限。這個差別要寫入授權登記。
+
+[image](https://www.google.com/s2/favicons?domain=https://dataspace.copernicus.eu\&sz=32)
+
+Copernicus Data Space Ecosystem
+
+
+
+##### 七、硬件、操作系統與伺服器應如何配置？
+
+考慮Windows 11、R、Python與高效能數據科學研發需求，不宜一開始就採購大型GPU集群。
+
+第一階段：現有電腦研究版
+
+優先實施
+
+Windows 11＋Python／R＋DuckDB＋QGIS＋CesiumJS。以公開資料或模擬資料建立地球儀、國別檔案、企業關係與氣象看板。
+
+不必先有NVIDIA RTX顯示卡才能進行資料科學或基本網頁地球視覺化。
+
+第二階段：獨立測試伺服器
+
+建議作為規劃起點：16核心級CPU、64–128GB RAM、2TB以上NVMe，Linux或WSL2研發環境，PostGIS／Parquet／DuckDB及容器化工作流程。實際規格須經負載測試決定。
+
+第三階段：Omniverse三維工作站
+
+NVIDIA現行技術要求列示Kit基本應用配置可由Windows 11、16GB RAM、RTX 3070及約250GB儲存起步；高負載工作站建議配置則可達128–256GB RAM及專業RTX顯示卡。這是不同負載等級，不代表每種功能都必須買最高規格。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.omniverse.nvidia.com\&sz=32)
+
+Kit App Streaming
+
+
+
+軟件版本方面，宜採\*\*生產穩定分支（Production Branch）\*\*而非每天追逐新版本。NVIDIA於2026年5月發布的Omniverse PB 26h1，官方列出API一致性及支援生命週期，可作為當前技術選型的核對基準。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.omniverse.nvidia.com\&sz=32)
+
+Omniverse Developer Overview
+
+
+
+###### 一項關鍵的技術兼容建議
+
+NVIDIA的OpenUSD Exchange SDK官方文件列明其Python wheel支援範圍為 `>=3.10,<3.14`。因此使用Python 3.13分支可以作為候選，但仍須逐項檢查作業系統、套件版本、GPU驅動與其他依賴，而非只看Python版本。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.omniverse.nvidia.com\&sz=32)
+
+OpenUSD Exchange SDK
+
+
+
+##### 八、最具特色的產品功能：把《三國志》的表達方式轉化為現代科學
+
+這裡的創新不應是把現實人物評作「智力98、忠誠75」，而是利用古典文化設計介面，背後採用可驗證的現代指標。
+
+| 華夏模組名稱 | 現代科學功能              | 可交付產品           |
+| ------ | ------------------- | --------------- |
+| 天下輿圖   | 全球地緣GIS與數位地球        | 249主登記項及多層次地理看板 |
+| 萬國志    | 國家、地區、制度及經濟檔案       | 國別及地區研究報告       |
+| 列國財賦   | 財政、產業、國防經濟比較        | 公共預算與產業報告       |
+| 百業貨殖   | 企業與產業生態知識圖譜         | 法人及產業鏈盡職調查      |
+| 欽天監    | 氣象、氣候、農業及自然災害       | 氣候風險及預警研究       |
+| 天工開物   | 科技、能源、工程與基礎設施       | 技術成熟度及可行性評估     |
+| 星河寰宇   | 衛星科學、空間環境、太空法       | 宇航產業與科研生態研究     |
+| 軍資度支   | 公開國防預算及財政機會成本       | 宏觀國防經濟研究        |
+| 廟算沙盤   | 多情景模擬、敏感性分析、穩健決策    | 民用公共政策與投資情景比較   |
+| 史官實錄   | 來源、SHA-256、時態、修訂、反證 | 可審計的研究檔案        |
+
+《大秦賦算籌》的真正核心優勢，可以是「每一個場景、數字、政策推演與投資建議都有證據帳」。 三維圖像只負責讓資料容易理解，不替代證據或科學驗證。
+
+##### 九、資料血統與合規：每個判斷必須帶有證據
+
+建議建立以下統一證據登記結構，先讓每個來源可回溯，再容許模型引用：
+
+```
+
+project: GDS-249
+research_product: 大秦賦算籌
+as_of: "2026-10-08"
+
+geography:
+  parent_iso3166_1: null
+  m49_code: null
+  subnational_id: null
+  coordinate_reference_system: EPSG:4326
+
+claim:
+  claim_id: null
+  statement: null
+  entity_id: null
+  evidence_status: UNKNOWN
+  confidence_method: null
+
+source:
+  source_uri: null
+  source_publisher: null
+  published_at: null
+  retrieved_at: null
+  content_sha256: null
+  license_id: null
+  permitted_use: null
+
+temporal:
+  valid_from: null
+  valid_to: null
+  recorded_at: null
+  superseded_by: null
+
+governance:
+  security_scope: PUBLIC_NON_OPERATIONAL
+  human_review_required: true
+  legal_review_status: PENDING
+  revenue_status: NOT_ESTABLISHED
+  sdg_baseline: FROZEN_PENDING_SPECIFICATION
+
+```
+
+其中 `content_sha256` 只在實際保存原始內容後計算。不可將不同時間下載的網頁，或不同授權的Google圖層，冒稱為同一份已經驗證的永久資料。
+
+「SDG凍結」則應進一步指定凍結的是哪一版可持續發展目標指標定義、映射或基準快照；未裁定前不要擅自改動既有基線。
+
+##### 十、九十日研發行令
+
+###### 1–30
+
+日
+
+奠基：萬國志、天下輿圖、史官實錄
+
+建立249主登記空間、果敢等次級地區檔案、公開來源索引與PostGIS；先做CesiumJS地球儀及R／Python資料品質測試。
+
+驗收：國別鍵唯一、來源可追溯、時態不混淆。
+
+###### 31–60
+
+日
+
+擴充：百業貨殖、欽天監、軍資度支
+
+接入獲授權的公開統計、環境、氣象及SIPRI資料；建立國別和產業關係、宏觀軍費與氣象時序看板。
+
+驗收：時間序列無未來資料洩漏，資料來源獨立性可檢驗。
+
+###### 61–90
+
+日
+
+試驗：星河寰宇、廟算沙盤、數位孿生
+
+以合法的城市、農業、水文及公共設施資料進行非作戰情景研究；在具備合適GPU及授權後，再加入Omniverse／OpenUSD高精度場景。
+
+驗收：情景有基準、敏感性、模型限制、人工複核及回滾能力。
+
+三個階段的收益認定均應後置。可先計量資料處理時間、人工研究成本、來源核對率、預測誤差及客戶實際可支付的服務價值，再估算投資回報，避免以漂亮的三維場景冒充商業成功。
+
+##### 十一、紅隊與批判：防止平台規模化後反而退化
+
+這一輪必須特別守住六項原則：
+
+1. 不可把249國家／地區登記數，理解成249個獨立主權國家。 果敢等次級行政或爭議治理地區另設分層登記。聯合國M49本身亦不對邊界及主權爭議作出裁決。
+
+   [image](https://www.google.com/s2/favicons?domain=https://unstats.un.org\&sz=32)
+
+   Methodology
+
+2. 不可用公開軍費、地方財政或衛星圖片，自動推斷武裝部隊的即時戰力、補給庫存或作戰弱點。
+
+3. 不可將NVIDIA、Google、Esri等供應商的市場宣傳，直接升格為《大秦賦算籌》的實測能力。
+
+4. 不可讓AI輸出未經核實的企業控制權、人物忠誠、犯罪定性或未來政治事件的確定性結論。
+
+5. 不可讓商業收益抵銷人權、資料保護、國際制裁、出口管制及民用科技雙重用途的硬性限制。
+
+6. 不得接入先前禁止使用的生產環境。 Superset、StarRocks、DolphinScheduler、博彩站點及公司原始資料仍維持禁止連接與實測；本方案只使用公開、合規及模擬資料進行設計。
+
+##### 最終裁定：何者宜自研，何者宜借力？
+
+應自主研發的核心
+
+全球組織本體、地緣與產業知識圖譜、來源證據帳、雙時態資料庫、量化模型、情景驗證、中文研究介面、成果審計及客戶專屬報告。
+
+應優先採用成熟技術的部分
+
+以CesiumJS／QGIS作首期地理核心；Meteomatics及開放氣象資料作氣象層；Google Maps Platform作獲准的地圖視覺資料服務；OpenUSD／Omniverse作後期三維數位孿生引擎。Palantir則作決策本體、資料治理與操作流程的架構標杆，是否採購另作成本效益評估。
+
+我認為最值得堅持的，是《大秦賦算籌》必須成為一套「先有可證明的事實，再有可重現的模型，最後才有可審計的策略」的自主決策服務。
+
+這樣既能保留《大周列國志》《三國志》《太閣立志傳》的華夏歷史文化表達，也能結合現代地球科學、人工智能、公共財政、產業經濟與宇航科技，而不落入將地圖視覺化誤當作現實情報、將模型推演誤當作已然事實的陷阱。
+
+尚未完成的部分，包括全部歷史對話逐字審計、各產品實際整合測試、授權簽核、來源檔案SHA-256實測及全域商業成本核算；因此此份為查證及設計基線，不是已部署系統的驗收證書。
 
 ### Kimi（君）
 
