@@ -1,0 +1,39 @@
+---
+title: "B51：星盾、Grok／xAI及ArcGIS、Meteomatics資料定義"
+date: 2026-10-11
+lang: zh-TW
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## 星盾與Grok／xAI增補
+
+使用者已確認「星頓」所指為星盾Starshield；不新增錯誤同名法人。[SpaceX官方Starshield入口](https://new.spacex.com/starshield)的搜尋索引列示地球觀測、通信與搭載酬載產品主張。實際頁面取用若失敗或不可讀，收據與定義表清楚標記缺口，不能升格為已核實部署、性能、公共API或全球覆蓋。以公開政府宇航產品與工業供應鏈研究為用途，未取得政府或機密資料。
+
+[Grok官方模型文件](https://docs.x.ai/developers/models)列示當期模型與不同文字、影像、語音產品，並說明即時資料需要搜尋工具，別名可能更動。新增模型時態、搜尋工具及版本重現要求；不把生成文字當作地緣事实證據。xAI、SpaceXSI品牌、Grok產品與法律實體繼續分欄；本批沒有核定持股或併購結論。[API治理文件](https://docs.x.ai/developers/faq/security)保留官方入口與取用證據，不外推至消費者產品條款。本批未呼叫付費API或建立帳戶。
+
+## ArcGIS逐item條款及服務結構
+
+重新執行B50的owner:esri AND type:Feature Service有界查詢，依nextStart翻至-1並對賬total及唯一item ID；不是全部Esri或全球GIS清單。全部該查詢item嘗試詳細元資料，保留licenseInfo、accessInformation、typeKeywords及完整JSON，缺少條款保持null，不補作無限制授權。B50最初20個item另嘗試公開服務根結構，記錄maxRecordCount、capabilities、layers與API錯誤；HTTP 200帶token錯誤不算取得schema。未取feature內容，不重試身份驗證。服務根layers名錄不是逐layer fields、幾何或完整資料驗收。
+
+每頁請求不是原子快照；total稳定与ID對賬只證明這次查詢觀測的完整性，不能證明全部資料永久不變。B50第一頁歷史證據保留，前20項身份比較另表登記。
+
+## Meteomatics語意校對
+
+依[保留值文件](https://www.meteomatics.com/en/api/response/reserved-values/)，-999表示不可取得、-666表示情境不適用，-888及-777須按參數定義解釋；全部保留原值及原因，不能補零或當作真實氣象數值。[模型來源文件](https://www.meteomatics.com/en/api/request/optional-parameters/data-source/)區分mix混合與指定來源。[風參數](https://www.meteomatics.com/en/api/available-parameters/weather-parameter/standard-weather-parameters-wind/)及[請求文件](https://www.meteomatics.com/en/api/request/)要求保留高度、單位與區間，避免把不同物理量合併。這是官方文件語意登記，尚未取得付費時序樣本、驗證誤差或核完商業再分發條款。
+
+## 本輪實測與交付
+
+{"esri_query_total": 68, "catalog_pages": 4, "item_terms_success": 68, "item_terms_failures": 0, "service_queries": 20, "service_metadata_success": 0, "source_receipts": 99, "document_fetch_gaps": ["B51STARSHIELD"], "http_failures": 1, "api_errors": 20, "definitions": 15, "previous_20_ids_preserved": true, "sqlite_counts": {"preserved_registry_commercial_products": 27, "preserved_registry_preserved_498_asf_work": 498, "preserved_registry_product_workqueue": 108, "registry_b50_identity_comparison": 20, "registry_esri_catalog": 68, "registry_esri_item_terms": 68, "registry_esri_service_schema": 20, "registry_page_reconciliation": 4, "registry_product_definitions": 15, "registry_source_receipts": 99}, "features_downloaded": false, "paid_or_private_api_called": false, "global_complete": false}。
+
+[完整有界ArcGIS目錄](tables/74_platform_details_b51_20261011/registry_esri_catalog.csv)、[逐item條款](tables/74_platform_details_b51_20261011/registry_esri_item_terms.csv)、[服務結構](tables/74_platform_details_b51_20261011/registry_esri_service_schema.csv)、[產品與參數定義](tables/74_platform_details_b51_20261011/registry_product_definitions.csv)、[來源收據](tables/74_platform_details_b51_20261011/registry_source_receipts.csv)、[SQLite](tables/74_platform_details_b51_20261011/platform_details_b51.sqlite)。
+
+前輪27產品群、108待辦與498項ASF工作完整保留，沒有用本批部分元資料結清全球企業、歷史、金融或神經技術缺口。下一步按逐item具體權利條款決定歷史小樣本，再取公開layer fields、空間參考、時間欄位及缺值規則。影像品質、全球覆蓋、使用授權與部署性能依然待核。原宇航報告及使用者版本保留；SDG分析凍結，Untitled不恢復。
+
+## 條款與存取實測補核
+
+68項詳細元資料均為public可見，其中66項有內嵌條款；另2項沒有內嵌文字，不能視作自由授權。逐item文本標記見[條款複核表](tables/74_platform_details_b51_20261011/registry_esri_terms_review.csv)。部分條款提及Master License Agreement、組織訂閱／developer帳戶及不消耗credits；不消耗credits不等於免費帳戶、無限制商用或可重分發。服務實測20項均為HTTP 200內含499 Token Required，故可取得服務schema為0；保留API錯誤原文，未登入或繞過。星盾替代官網入口本地HTTP 522，保留官方搜尋索引產品主張及直接取用缺口，未宣稱完成頁面全文核驗。
+
+更新統計：{"esri_query_total": 68, "catalog_pages": 4, "item_terms_success": 68, "item_terms_failures": 0, "service_queries": 20, "service_metadata_success": 0, "source_receipts": 99, "document_fetch_gaps": ["B51STARSHIELD"], "http_failures": 1, "api_errors": 20, "definitions": 15, "previous_20_ids_preserved": true, "sqlite_counts": {"preserved_registry_commercial_products": 27, "preserved_registry_preserved_498_asf_work": 498, "preserved_registry_product_workqueue": 108, "registry_b50_identity_comparison": 20, "registry_esri_catalog": 68, "registry_esri_item_terms": 68, "registry_esri_service_schema": 20, "registry_page_reconciliation": 4, "registry_product_definitions": 15, "registry_source_receipts": 99, "registry_esri_terms_review": 68}, "features_downloaded": false, "paid_or_private_api_called": false, "global_complete": false, "inline_terms_present": 66, "subscription_text_mentions": 66, "no_credits_phrase_mentions": 66}。
