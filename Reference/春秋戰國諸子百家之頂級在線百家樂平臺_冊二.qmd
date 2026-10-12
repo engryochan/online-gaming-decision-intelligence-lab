@@ -1770,6 +1770,173 @@ QGIS
 
 ### Meta AI
 
+在下明白，《大秦賦算籌》要的是太閣立志傳式的戰略沙盤，從天庭俯瞰到街亭巷戰都能無縫縮放。谷歌那套做不到開源可控，必須自建。
+
+#### 一、谷歌地球/地圖到底有沒有開源？
+
+**沒有。** 谷歌地圖、地球的影像和街景數據全是私有產權。
+
+谷歌只開源了一個殼：
+
+> `Earth Enterprise is the open source release of Google Earth Enterprise, a geospatial application which provides the ability to build and host custom 3D globes and 2D maps.`
+> 但同時官方明確說 `Earth Enterprise does not provide a private version of Google imagery that's currently available in Google Maps or Earth.`
+
+這個開源版叫 **Open GEE**，價值是讓政府/軍工在內網、斷網、低帶寬環境 `behind the firewall, in an offline/disconnected environment` 自建地球，數據要你自己填。
+
+所以你要的是 **Open GEE 的架構 + 開源數據**，不是谷歌的數據。
+
+#### 二、可從外太空放大到街景的開源全家桶
+
+在下按你需要的「天-地-街」三層拆解：
+
+##### 1. 3D地球引擎 - 負責太空到城市
+
+**a. CesiumJS - 現代首選**
+* 定位就是 `a modern open-source alternative to Google Earth`，社群都稱它 `a google earth like, open source, mapping engine`
+* 原生支援 Google Photorealistic 3D Tiles + `Street View Coverage Overlay — Blue coverage layer draped on 3D tiles`
+* 授權 Apache 2.0，純WebGL，可嵌入任何系統的瀏覽器或 Electron
+* 《大秦賦》推薦用它當主渲染器
+
+**b. NASA WorldWind - 軍工正統**
+* NASA官方定義：`a 3D desk globe which allows any user to zoom from outer space into any place on Earth`
+* `an open source API for visualizing and hosting geospatial data`，讓開發者 `quickly and easily create interactive visualizations of 3D globe`
+* 授權 `NASA Open Source Agreement v1.3`，有Java、Android、Web三版，完全跨平台
+
+**c. Marble - KDE輕量版**
+* `The open source and cross-platform Marble, for instance, can't compete with the photos and the imagery of Google Earth, but is still extremely powerful`
+* `It opens Google Earth-style, with a view of the planet from space`，操作也像谷歌地球
+
+##### 2. 2D向量地圖 - 負責城市到街道
+
+**MapLibre GL JS**
+* `is an open-source library for rendering interactive vector maps, forked from Mapbox GL JS in late 2020 after Mapbox moved to a proprietary license`
+* 授權 BSD-3-Clause，GPU加速，可完全自託管瓦片
+
+##### 3. 街景層 - 負責街景
+
+谷歌街景沒有開源平替，但有眾包平替：
+
+* **Mapillary** - `The Mapillary project collects crowdsourced images from its users, which are licensed under a CC BY-SA license`，公認是 `a free open-source alternative to Google Street View`
+* **KartaView / Panoramax** - `KartaView (formerly OpenStreetCam) was created by TeleNav and is very similar to Mapillary`，`Panoramax, an open-source street view software that can federate between different instances`，法國OpenStreetMap基金會已自建實例，去中心化，最適合軍工
+
+**數據層**：OpenStreetMap + Esri World Imagery免費 + NASA Blue Marble + SRTM高程，全部可離線。
+
+#### 三、操作系統兼容清單 - 你點名的都要能嵌
+
+| 操作系統 | 出身 | 軍工定位 | 能跑的地球方案 | 備註 |
+| :--- | :--- | :--- | :--- | :--- |
+| **NixOS** | 德國/全球 | 可重現構建，最適合做《大秦賦》發行版 | CesiumJS, WorldWind Web, Marble, MapLibre全支援，nixpkgs已有封裝 | 用 `nix-shell` 一鍵鎖死GDAL、Cesium版本 |
+| **Ubuntu 優奔兔** | 英國 Canonical | 民用基準 | 全部支援 | |
+| **Kubuntu 忽奔兔** | Ubuntu + KDE | 同上，KDE原生跑Marble更順 | 同上 | |
+| **Red Hawk Linux 紅鷹禮逆襲** | 美國 Concurrent Real-Time | 美軍正統 | **核心** | `U.S. Navy has selected RedHawk Linux as its Open Architecture Operating System for BMD (Aegis Ballistic Missile Defense)`，`Lockheed Martin selected RedHawk for the THAAD program due to the precision and guaranteed response time`，`well positioned for embedded applications in aerospace, defense`。它是硬實時Linux，用來跑雷達和飛控，你的沙盤若要接真實硬體，必須兼容它 |
+| **銀河麒麟 KylinOS** | 中國 國防科大/麒麟軟件 | 信創頭部，連續15年市場第一 | 支援，官方三維沙盤已有 `支持国产操作系统：银河麒麟、中标麒麟、统信UOS` | 閉源商業版，需適配飛騰/鯤鵬/龍芯 |
+| **統信UOS / Deepin** | 中國 武漢深之度 | `based on Linux, supports X86, ARM64, MIPS64, SW64` | 完全支援，DDE桌面跑Cesium Electron最佳 | |
+| **openEuler / Anolis** | 中國 華為/阿里 | 伺服器根社區 | 支援無頭瓦片服務器 | 用來跑Open GEE瓦片集群 |
+| **Astra Linux** | 俄羅斯 | 俄軍用 | 支援WorldWind | |
+| **其他** | 美國 RHEL, SUSE, Debian | 北約通用 | 全支援 | |
+
+
+> **結論：只要用Web技術棧 CesiumJS + MapLibre + Mapillary，就與操作系統無關。** 瀏覽器在哪，地球就在哪。Red Hawk和麒麟這類硬實時/信創系統，跑一個Chromium內核就能嵌入。
+
+#### 四、給《大秦賦算籌》第一步的推薦架構
+
+你要的不是一個軟件，是 **一個可內嵌到操作系統的發行版**：
+
+```
+[NixOS 定制 ISO - 贏家黃氏江夏堂版]
+  ├─ 底層：Linux 6.6 + PREEMPT_RT (對齊Red Hawk)
+  ├─ 3D地球：CesiumJS 1.120 + Cesium for Unreal (可選)
+  │ └─ 數據：Open GEE自託管 + OSM + SRTM + 自採街景(Panoramax)
+  ├─ 2D戰略地圖：MapLibre GL JS + QGIS Server
+  ├─ 街景：Panoramax實例 + Mapillary API聚合
+  └─ 算籌邏輯：你原有的太閣/三國志式回合/內政模組，用Tauri嵌入
+```
+
+* **NixOS做母盤**，因為它能 `nix build` 出同時兼容Ubuntu、Kylin、Red Hawk的不可變鏡像，一個 `flake.nix` 鎖死所有依賴，完全符合你堂號需要英國、祖國是中國的跨域需求。
+* 在英國註冊 **Eng Clan Jiangxia Ancestral Hall Ltd** 持有NixOS發行版的商標和Panoramax實例，數據主權在UK，代碼主權用Nix可重現，符合你說的「中國是祖國而堂號需要英國很重要」。
+* 第一版先不要自己拍街景，直接聚合Panoramax + Mapillary，太空到街景的鏈路立刻就能跑通。
+
+需要，在下可為你直接生成一個 NixOS + Cesium + MapLibre + Panoramax 的可啟動ISO骨架，包含從外太空縮放到倫敦唐人街街景的Demo。
+
+要做《大秦賦算籌》第一步，谷歌地球是不能用的 - 它是閉源商業產品，沒有開源數據。但**從外太空放大到街景的整套開源替代，已經完整存在**，而且全部可以內嵌到你說的操作系統。
+
+#### 一、谷歌地球/地圖可有開源？
+
+**沒有。** Google Earth / Maps 核心引擎、影像、街景全是私有。但谷歌自己也承認需要被替代：
+
+* `Cesium offers an alternative to the, now deprecated, Google Earth JavaScript API`
+* 目前業界標準替代是完全開源的。
+
+#### 二、可達到谷歌水平的開源全棧 - 從太空到街景
+
+你要的不是一個軟件，是 **4層堆疊**：
+
+##### 1. 3D地球引擎層 - 替代 Google Earth
+| 項目 | 開源協議 | 能力 | 來源 |
+| --- | --- | --- | --- |
+| **CesiumJS / Cesium Native** | Apache 2.0 `Open source - Apache 2.0 license` | WebGL虛擬地球引擎，支援太空到地面無縫縮放，3D Tiles | `A WebGL virtual globe and map engine` |
+| **NASA WorldWind** | NOSA + Apache 2.0 `open-source (released under the NOSA license and the Apache 2.0 license) virtual globe` | NASA官方SDK，Java / Android / Web | |
+| **KDE Marble** | LGPL | `opens Google Earth-style, with a view of the planet from space` | |
+| **QGIS + QGlobe** | GPL | 桌面GIS最強，可疊加地形、衛星 | |
+
+
+> 注意：WorldWind在2019年已宣佈暫停，影像伺服器已撤下，現在新專案首選 **Cesium**。
+
+Cesium官方範例 `FOSS Earth - Free and open-source 3D globe viewer built with Cesium.js` 就是直接的Google Earth克隆。
+
+##### 2. 2D向量地圖渲染層 - 替代 Google Maps
+* **MapLibre GL JS**：`MapLibre is a free, open-source map renderer that draws tiles from a provider you choose`，是Mapbox閉源後的社群分支，原生支援 `Linux, Windows and macOS`
+* **OpenLayers / Leaflet**：純BSD開源，OSGeo基金會核心
+* 底圖數據：**OpenStreetMap**，全球開放授權
+
+##### 3. 街景層 - 替代 Google Street View
+這是過去的短板，現在已補齊：
+
+* **Panoramax**：`As a free and open source alternative to Google Street View, all components of the Panoramax infrastructure are openly licensed`。法國國家地理院主導，支援聯邦式部署，你可以自己架一個大秦街景。
+* **Mapillary**：`crowdsourced street-level imagery; covers many locations not covered by Google Street View`，被Meta收購，CC BY-SA授權
+* **KartaView (原OpenStreetCam)**：`project to collect crowdsourced street-level photographs for improving OpenStreetMap`
+
+三者都可用作Cesium的貼圖層，實現太空 -> 地圖 -> 街景的連續縮放。
+
+##### 4. 影像與地形數據源 - 開放
+* NASA GIBS, ESA Sentinel-2, USGS Landsat - 免費
+* OpenDEM, Mapzen Terrain - 免費地形
+
+#### 三、各國操作系統兼容性評估
+
+##### 你指定的
+* **NixOS**：函數式，`nixpkgs`已有 `qgis, marble, cesium`打包，透過 `nix-shell -p nodejs` 直接跑CesiumJS，內嵌用Electron最穩。
+* **優奔兔 Ubuntu / 忽奔兔 Kubuntu**：Debian系，兼容性最好。Marble是KDE專案，Kubuntu原生集成。`apt install marble qgis`即可。
+* **紅鷹禮逆襲 Red Hawk Linux**：不是發行版玩具，是美國軍工實時系統。`RedHawk Linux is a real-time operating system software designed for applications that require deterministic responsiveness`，`a real-time variant of the standard Linux operating system`，`real-time Linux operating system for both x86 and ARM64 systems`，且 `Fully compatible with Red Hat Enterprise Linux`。美海軍神盾系統即用它。**可以內嵌**，但要用Qt WebEngine載Cesium，或用Cesium Native C++直接跑在其實時核上，保證30微秒響應。
+
+##### 中國及他國操作系統
+根據目前信創名單：
+* 中國：**Kylin OS 銀河麒麟, UnionTech OS 統信UOS, openKylin, Deepin 深度, openEuler, NeoKylin 中標麒麟, Zhongke Fangde 中科方德**。全部基於Debian/Ubuntu，QGIS/Marble/Cesium可直接移植，統信UOS已預裝QGIS。
+* 俄羅斯：Astra Linux, ALT Linux, ROSA - 軍工認證，兼容MapLibre Native Qt。
+* 其他：美國 Red Hawk, Wind River VxWorks(可跑WorldWind Java)
+
+> **核心結論：全部兼容**。因為CesiumJS/MapLibre是WebGL，只要系統能跑Chromium/Firefox就能跑；要更深內嵌，就用 **MapLibre Native Qt + Cesium Native + QGIS C++庫**，這三個在所有Linux發行版都能編譯。
+
+#### 四、給《大秦賦算籌》的第一步最小可行架構
+
+這是太閣立志傳式的算籌，你需要的是 **可離線、可內嵌、可主權控制**：
+
+```
+[底層OS] NixOS / Ubuntu / Kylin / Red Hawk (都可)
+  └─ [渲染引擎] CesiumJS 1.120 (Apache 2.0) + MapLibre GL 4.x
+       ├─ 底圖：OpenStreetMap + 自建瓦片伺服器
+       ├─ 地形：Cesium World Terrain 開源版 / OpenDEM
+       ├─ 衛星：NASA GIBS + Sentinel-2 自託管
+       └─ 街景：Panoramax 自建實例 (完全開源) + Mapillary/KartaView 匯入
+  └─ [桌面內嵌] Qt 6 WebEngine 或 Electron 打包成.deb/.rpm/.AppImage
+  └─ [數據庫] PostGIS + QGIS 處理封邑、郡縣
+```
+
+這樣你就實現了 **太空 -> 行星 -> 郡縣 -> 里閈 -> 街景** 的無縫縮放，完全不依賴谷歌，且原始碼全在你手裡。
+
+堂號 **Eng clan Jiangxia** 要英國，建議註冊 `eng-jx.uk` 域名，把Panoramax聯邦節點設在倫敦，這樣既滿足英國堂號，又符合中國祖國的數據主權 - 雙活架構。
+
+需要我幫你寫一個在 NixOS 上 `nix develop` 一鍵跑起 Cesium + Panoramax + MapLibre 的範本嗎？
 
 ## 結論
 
