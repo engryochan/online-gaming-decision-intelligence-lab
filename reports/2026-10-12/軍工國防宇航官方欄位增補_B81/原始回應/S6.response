@@ -1,0 +1,1109 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<script src="/assets/js/util/mobile-detect.min.js"></script>
+<script>
+	const md = new MobileDetect(window.navigator.userAgent)
+	const isMobile = md.mobile()
+	const isDesktop	= !isMobile;
+</script>
+<script>
+	let	host	= location.host,
+		sub		= host.replace(/\..+/gi, "");
+
+	let	isPSite	= false,
+		isMSite = false;
+
+	switch(sub) {
+		case "hdm"  :	isPSite = false;	isMSite = !isPSite;		host = host.replace(/^hdm\./i   , "hdw\.");	    break;
+		case "m"    :	isPSite = false;	isMSite = !isPSite;		host = host.replace(/^m\./i     , "www\.");     break;
+		case "hdw"  :	isPSite = true;		isMSite = !isPSite;		host = host.replace(/^hdw\./i   , "hdm\.");	    break;
+		case "www"  :	isPSite = true;		isMSite = !isPSite;		host = host.replace(/^www\./i   , "m\.");	    break;
+	}
+	let	goToWeb	= isMSite && !isMobile,		    
+		goToMob = isPSite && isMobile,			
+		http	= location.protocol,
+		path	= location.pathname,
+		param	= location.search;
+	if( goToWeb || goToMob ) top.location.href = http + "//" + host + path + param;
+</script>
+
+  
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+<title>Stock Information  | Hanwha Aerospace</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+
+<meta name="keywords" content="Hanhwa Aerospace, Hanwha Defense, Hanhwa, Nuri, Naro, space launch vehicle, satellite service, defense company, weapons system, defense robot, k9, redback, IR of Hanwha Aerospace, stock information of Hanwha Aerospace">
+<meta name="description" content="Introducing Hanwha Aerospace's stock information.">
+
+
+<!-- facebook -->
+<meta property="og:title" content="Stock Information  | Hanwha Aerospace">
+<meta property="og:description" content="Introducing Hanwha Aerospace's stock information.">
+<!-- 2023.09.08 뉴스룸 각 게시글 별 다른 공유 이미지 보여주기 -->
+
+
+
+	
+	
+		<meta property="og:image" content="https://www.hanwhaaerospace.com/assets/content/share.jpg">
+	
+
+<meta property="og:type" content="website">
+
+<!-- naver -->
+<meta name="naver-site-verification" content="12f412ec27846b462535d4eb69fd33e973dd7514"/>
+  
+  <link rel="shortcut icon" href="/assets/content/favicon.ico" />
+
+  <!-- [TODO ] webfont : 추후 라이브에서 사용가능한지 체크 필요 -->
+  <link rel="stylesheet" href="https://use.typekit.net/blh6uew.css">
+  
+    
+      <link href="/assets/bundle/css/ir.css?v=1.3" rel="stylesheet"/>
+    
+    
+  
+
+  <script>
+    if( /MSIE \d|Trident.*rv:/.test(navigator.userAgent) ) {
+      window.location = 'microsoft-edge:'+window.location;
+      setTimeout( function() {
+          window.location = 'https://support.microsoft.com/ko-kr/topic/이-웹-사이트는-microsoft-edge에서-더-잘-작동합니다-160fa918-d581-4932-9e4e-1075c4713595?ui=ko-kr&rs=ko-kr&ad=kr';
+      }, 0 );
+    }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MSTRN6RY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N5MSTRN6RY');
+  </script>
+  <!-- // Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    let lang = 'eng';
+    function setTagging(eventName, param ) {
+      const eName = lang === 'eng' ? eventName + '_eng' : eventName
+      gtag('event', eName)
+    }
+  </script>
+  <script src="/assets/js/translate/common.js?v=1.3"></script>
+</head>
+<body>
+  <header class="header light init" id="header">
+    <div class="header-inner">
+      <a onclick="setTagging('gnb_home')" href="/eng/index.do" class="home">
+        <span class="a11y">한화 로고</span>
+      </a>
+
+      <div class="gnb-wrap">
+        <span class="gnb-bar"></span>
+        <ul class="gnb">
+          <li class="d1 btn3-en">
+            <a class="d1-link" onclick="setTagging('gnb_whoweare')" href="/eng/whoweare/about.do">Who We Are</a>
+            <div class="d2-wrap btn3-en">
+              <ul class="d2-list">
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_about')" href="/eng/whoweare/about.do" class="d2-link btn1-kr" target-page="about"><span data-trn-key="common-02">기업 소개</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_history')" href="/eng/whoweare/history.do" class="d2-link btn1-kr" target-page="history"><span data-trn-key="common-03">연혁</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_location')" href="/eng/whoweare/location/domestic.do" class="d2-link btn1-kr" target-page="location"><span data-trn-key="common-04">사업장 소개</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d1 btn3-en no-submenu">
+            <a class="d1-link" onclick="setTagging('gnb_whyweexist')" href="/eng/whyweexist.do">Why We Exist</a>
+            </li>
+          <li class="d1 btn3-en">
+            <a class="d1-link" onclick="setTagging('gnb_whatwedo')" href="/eng/whatwedo/sustainable-tech.do">What We Do</a>
+            <div class="d2-wrap btn3-en">
+              <ul class="d2-list">
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_showroom')" href="/eng/showroom.do" class="d2-link btn1-en" ><span>Virtual Showroom</span></a></li> <!-- TEMP LINKS -->
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_sustainablet')" href="/eng/whatwedo/sustainable-tech.do" class="d2-link btn1-en" ><span>Sustainable Technologies</span></a></li> <!-- TEMP LINKS -->
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_product')" href="/eng/whatwedo/product/space.do" class="d2-link btn1-en"><span>Products & Services</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_discover')" href="/eng/whatwedo/discover.do" class="d2-link btn1-en"><span>Discover</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_protect')" href="/eng/whatwedo/protect.do" class="d2-link btn1-en"><span>Protect</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d1 btn3-en">
+            <a class="d1-link" onclick="setTagging('gnb_ir')" href="/eng/ir/earning-release.do">IR</a>
+            <div class="d2-wrap btn3-en">
+              <ul class="d2-list">
+                
+                
+                  <li class="d2-item btn1-en"><a onclick="setTagging('gnb_earning-release')" href="/eng/ir/earning-release.do" class="d2-link btn1-kr"><span >Earning Release</span></a></li>
+                  <li class="d2-item btn1-en"><a onclick="setTagging('gnb_ir-event')" href="/eng/ir/ir-event.do" class="d2-link btn1-kr"><span >IR Events</span></a></li>
+                  <li class="d2-item btn1-en"><a onclick="setTagging('gnb_financial-info')" href="/eng/ir/financial-info/finance01.do" class="d2-link btn1-kr"><span >Financial Information</span></a></li>
+                  <li class="d2-item btn1-en"><a onclick="setTagging('gnb_stock-info')" href="/eng/ir/stock-info.do" class="d2-link btn1-kr"><span >Stock Information</span></a></li>
+                  <li class="d2-item btn1-en"><a onclick="setTagging('gnb_finance')" href="/eng/ir/finance/business-report.do" class="d2-link btn1-kr"><span >Reports</span></a></li>
+                  <li class="d2-item btn1-en"><a onclick="setTagging('gnb_contact')" href="/eng/ir/finance/contact.do" class="d2-link btn1-kr"><span >Contact</span></a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="d1 btn3-en">
+            <a class="d1-link" onclick="setTagging('gnb_media')" href="/eng/media/newsroom/list.do">Media</a>
+            <div class="d2-wrap btn3-en">
+              <ul class="d2-list">
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_newsroom')" href="/eng/media/newsroom/list.do" class="d2-link btn1-kr" target-page="newsroom"><span data-trn-key="common-16">뉴스룸</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_library')" href="/eng/media/library/list.do" class="d2-link btn1-kr" target-page="library"><span data-trn-key="common-17">라이브러리</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_notice')" href="/eng/media/notice/list.do" class="d2-link btn1-kr" target-page="notice"><span data-trn-key="common-18">공지사항</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d1 btn3-en">
+            <a class="d1-link" onclick="setTagging('gnb_esg')" href="/eng/esg/sustain-business.do">ESG</a>
+            <div class="d2-wrap btn3-en">
+              <ul class="d2-list">
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_sustain-business')" href="/eng/esg/sustain-business.do" class="d2-link btn1-kr"><span data-trn-key="common-19">지속가능경영</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_compliance')" href="/eng/esg/compliance/introduce.do" class="d2-link btn1-kr"><span data-trn-key="common-20">윤리준법경영</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_ehs')" href="/eng/esg/ehs/introduce.do" class="d2-link btn1-kr"><span data-trn-key="common-23">환경안전보건경영</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_winwin')" href="/eng/esg/winwin.do" class="d2-link btn1-kr"><span data-trn-key="common-26">상생경영</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_social-contribution')" href="/eng/esg/social-contribution.do" class="d2-link btn1-kr"><span data-trn-key="common-27">사회공헌</span></a></li>
+
+                <!-- [24.01.30] IR -> ESG로 위치 변경  -->
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_association')" href="/eng/esg/association/governance.do" class="d2-link btn1-kr"><span data-trn-key="common-41">기업지배구조</span></a></li>
+
+                <!-- [24.01.30] 주요실적 페이지 주석처리 -->
+
+
+
+              </ul>
+            </div>
+          </li>
+          <li class="d1 btn3-en">
+            <a class="d1-link" onclick="setTagging('gnb_careers')" href="/eng/careers/talent.do">Careers</a>
+            <div class="d2-wrap btn3-en">
+              <ul class="d2-list">
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_talent')" href="/eng/careers/talent.do" class="d2-link btn1-kr" target-page="talent"><span data-trn-key="common-28">인재상</span></a></li>
+                <li class="d2-item btn1-en"><a onclick="setTagging('gnb_recruit')" href="/eng/careers/recruit.do" class="d2-link btn1-kr" target-page="recruit"><span data-trn-key="common-30">채용안내</span></a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu menu-utilities btn4-en">
+        <a href="#" class="menu__region u-link" onclick="setTagging('gnb_language')"><span class="a11y">언어변경</span></a>
+        <!-- <a href="javascript:void(0);" class="menu__contact btn4-kr u-link">고객문의</a> -->
+        <a href="https://vist.hanwhaaerospace.co.kr/index.html" target="_blank" class="menu__contact u-link btn4-kr upper" data-trn-key="common-36">방문신청</a>
+        <a href="#" class="menu__hamburger u-link init" onclick="setTagging('gnb_allmenu')">
+          <span class="a11y">메뉴</span>
+
+
+          <div class="icon">
+            <svg id="menu-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+              <g transform="translate(-989 -89)">
+                <g transform="translate(989 89)">
+                  <rect data-name="rect" opacity="0"/>
+                  <g data-name="menu" transform="translate(-379.5 -33.25)">
+                    <path data-name="menu-top" d="M20,.75H0V-.75H20Z" fill="#fff" transform="translate(380.5 44.25)"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <svg id="menu-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+              <g transform="translate(-989 -89)">
+                <g transform="translate(989 89)">
+                  <rect data-name="rect" opacity="0"/>
+                  <g data-name="menu" transform="translate(-379.5 -33.25)">
+                    <path data-name="menu-mid" d="M20,.75H0V-.75H20Z" fill="#fff" transform="translate(380.5 44.25)"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <svg id="menu-bot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+              <g transform="translate(-989 -89)">
+                <g transform="translate(989 89)">
+                  <rect data-name="rect" opacity="0"/>
+                  <g data-name="menu" transform="translate(-379.5 -33.25)">
+                    <path data-name="menu-bot" d="M20,.75H0V-.75H20Z" fill="#fff" transform="translate(380.5 44.25)"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="dropdown closed lang">
+    <ul class="dropdown__list">
+      <li><button type="button" class="btn-entry-point dropdown__a">KOR</button></li>
+      <li><button type="button" class="btn-entry-point dropdown__a is-active">ENG</button></li>
+    </ul>
+  </div>
+
+    <div class="nav-map pb-b2">
+      <div class="nav-map__inner">
+
+        <ul class="nm">
+          <li class="nm__menu">
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_whoweare')" href="/eng/whoweare/about.do"><span>Who We Are</span></a>
+            <ul class="nm__list">
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_whoweare_about')" href="/eng/whoweare/about.do"><span data-trn-key="common-02">기업 소개</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_whoweare_history')" href="/eng/whoweare/history.do"><span data-trn-key="common-03">연혁</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_whoweare_location')" href="/eng/whoweare/location/domestic.do"><span data-trn-key="common-04">사업장 소개</span></a>
+                <ul class="nm__sub">
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_location_domestic')" href="/eng/whoweare/location/domestic.do" data-sub="0" data-trn-key="common-05">국내사업장</a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_location_overseas')" href="/eng/whoweare/location/overseas.do" data-sub="1"  data-trn-key="common-06">해외사업장</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nm__menu">
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_whyweexist')" href="/eng/whyweexist.do"><span>Why We Exist</span></a>
+          </li>
+          <li class="nm__menu">
+            <!-- TEMP LINKS -->
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_whatwedo')" href="/eng/whatwedo/sustainable-tech.do"><span>What We Do</span></a>
+            <ul class="nm__list">
+              <li class="nm__item">
+                <a class="nm__link nm__link btn2-en" onclick="setTagging('menuon_whatwedo_showroom')" href="/eng/showroom.do"><span>Virtual Showroom</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link nm__link btn2-en" onclick="setTagging('menuon_whatwedo_sustainable-tech')" href="/eng/whatwedo/sustainable-tech.do"><span>Sustainable Technologies</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-en" onclick="setTagging('menuon_whatwedo_product')" href="/eng/whatwedo/product/space.do"><span>Products &amp;<br/> Services</span></a>
+                <ul class="nm__sub">
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-en" onclick="setTagging('menuon_product_space')" href="/eng/whatwedo/product/space.do"><span>Space</span></a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-en" onclick="setTagging('menuon_product_air')" href="/eng/whatwedo/product/air.do"><span>Air</span></a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-en" onclick="setTagging('menuon_product_land')" href="/eng/whatwedo/product/land.do"><span>Land</span></a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-en" onclick="setTagging('menuon_product_sea')" href="/eng/whatwedo/product/sea.do"><span>Sea</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link nm__link btn2-en" onclick="setTagging('menuon_whatwedo_discover')" href="/eng/whatwedo/discover.do"><span>Discover</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link nm__link btn2-en" onclick="setTagging('menuon_whatwedo_protect')" href="/eng/whatwedo/protect.do"><span>Protect</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nm__menu">
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_ir')" href="/eng/ir/earning-release.do"><span>IR</span></a>
+            
+            
+              <ul class="nm__list">
+                <li class="nm__item">
+                  <a class="nm__link nm__link btn2-kr" onclick="setTagging('menuon_ir_earning-release')" href="/eng/ir/earning-release.do"><span>Earnings Release</span></a>
+                </li>
+                <li class="nm__item">
+                  <a class="nm__link nm__link btn2-kr" onclick="setTagging('menuon_ir_event')" href="/eng/ir/ir-event.do"><span>IR Events</span></a>
+                </li>
+                <li class="nm__item">
+                  <a class="nm__link btn2-kr" onclick="setTagging('menuon_ir_financial-info')" href="/eng/ir/financial-info/finance01.do"><span>Financial Information</span></a>
+                  <ul class="nm__sub">
+                    <li class="nm__sub-item">
+                      <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_financial-info_finance01')" href="/eng/ir/financial-info/finance01.do">Consolidated</a>
+                    </li>
+                    <li class="nm__sub-item">
+                      <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_financial-info_finance02')" href="/eng/ir/financial-info/finance02.do">Standalone</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nm__item">
+                  <a class="nm__link nm__link btn2-kr" onclick="setTagging('menuon_ir_stock-info')" href="/eng/ir/stock-info.do"><span>Stock Information</span></a>
+                </li>
+                <li class="nm__item">
+                  <a class="nm__link btn2-kr" onclick="setTagging('menuon_ir_finance')" href="/eng/ir/finance/business-report.do"><span>Reports</span></a>
+                  <ul class="nm__sub">
+                    <li class="nm__sub-item">
+                      <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_finance_business-report')" href="/eng/ir/finance/business-report.do">Business Report</a>
+                    </li>
+                    <li class="nm__sub-item">
+                      <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_finance_audit-report')" href="/eng/ir/finance/audit-report.do">Audit Report</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nm__item">
+                  <a class="nm__link nm__link btn2-kr" onclick="setTagging('menuon_ir_contact')" href="/eng/ir/finance/contact.do"><span>Contact</span></a>
+                </li>
+              </ul>
+            
+          </li>
+          <li class="nm__menu">
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_media')" href="/eng/media/newsroom/list.do"><span>News &amp; Media</span></a>
+            <ul class="nm__list">
+              <li class="nm__item">
+                <a class="nm__link btn2-kr " onclick="setTagging('menuon_media_newsroom')" href="/eng/media/newsroom/list.do" target-page="newsroom"><span data-trn-key="common-16">뉴스룸</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr " onclick="setTagging('menuon_media_library')" href="/eng/media/library/list.do" target-page="library"><span data-trn-key="common-17">라이브러리</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr " onclick="setTagging('menuon_media_notice')" href="/eng/media/notice/list.do" target-page="notice"><span data-trn-key="common-18">공지사항</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nm__menu">
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_esg')" href="/eng/esg/sustain-business.do"><span>ESG</span></a>
+            <ul class="nm__list">
+              <li class="nm__item">
+                <a class="nm__link btn2-kr " onclick="setTagging('menuon_esg_sustain-business')" href="/eng/esg/sustain-business.do"><span data-trn-key="common-19">지속가능경영</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_esg_compliance')" href="/eng/esg/compliance/introduce.do"><span data-trn-key="common-20">윤리준법경영</span></a>
+                <ul class="nm__sub">
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_compliance_introduce')" href="/eng/esg/compliance/introduce.do" data-trn-key="common-21">윤리준법경영 소개</a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_compliance_program')" href="/eng/esg/compliance/program.do" data-trn-key="common-22">주요 프로그램</a>
+                  </li>
+                  
+                </ul>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_esg_ehs')" href="/eng/esg/ehs/introduce.do" ><span data-trn-key="common-23">환경안전보건경영</span></a>
+                <ul class="nm__sub">
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_ehs_introduce')" href="/eng/esg/ehs/introduce.do" data-sub="0" data-trn-key="common-24">환경안전보건경영 소개</a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_ehs_program')" href="/eng/esg/ehs/program.do" data-sub="1" data-trn-key="common-25">주요 프로그램</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_esg_winwin')" href="/eng/esg/winwin.do" target-page="winwin"><span data-trn-key="common-26">상생경영</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_esg_social-contribution')" href="/eng/esg/social-contribution.do" target-page="social-contribution"><span data-trn-key="common-27">사회공헌</span></a>
+              </li>
+
+               <!-- [24.01.30] IR -> ESG로 위치 변경  -->
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('menuon_ir_association')" href="/eng/esg/association/governance.do"><span data-trn-key="common-41">기업지배구조</span></a>
+                <ul class="nm__sub">
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_association_governance')" href="/eng/esg/association/governance.do" data-trn-key="common-41">기업지배구조</a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_association_directors')" href="/eng/esg/association/directors.do" data-trn-key="common-411">이사회</a>
+                  </li>
+                  <li class="nm__sub-item">
+                    <a class="nm__sub-link btn4-kr" onclick="setTagging('menuon_association_regulations')" href="/eng/esg/association/regulations.do" data-trn-key="common-412">정관 및 기타규정</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- [24.01.30] 주요실적 페이지 주석처리 -->
+              
+            </ul>
+          </li>
+          <li class="nm__menu">
+            <a class="nm__d1-link btn1-en" onclick="setTagging('menuon_careers')" href="/eng/careers/recruit.do"><span>Careers</span></a>
+            <ul class="nm__list">
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('Sitemap_careers_talent')" href="/eng/careers/talent.do" target-page="talent"><span data-trn-key="common-28">인재상</span></a>
+              </li>
+              <li class="nm__item">
+                <a class="nm__link btn2-kr" onclick="setTagging('Sitemap_careers_recruit')" href="/eng/careers/recruit.do" target-page="recruit"><span data-trn-key="common-30">채용안내</span></a>
+              </li>
+              <li class="nm__item"></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- [TODO] 커서 상태 -->
+
+  <!-- <div class="cursor-container" id="cursor-container">
+    <div class="ball" id="ball"></div>
+    <div class="ring" id="ring"></div>
+  </div>
+
+  <div class="cursor-follower" id="cursor-follower">
+    <img class="arrow" src="/assets/content/common/d-ico-cursor-arrow.svg" alt=">
+    <img class="play" src="/assets/content/common/triangle.svg" alt=">
+  </div> -->
+
+
+<div id="scroll-wrapper" data-scroll-container page-name="stock-info">
+
+    <main class="main sub">
+
+        <div class="ir stock-info">
+            <section class="section" id="tit-motion">
+                <div class="keytitle container">
+                    <div class="row">
+                        <div class="col-10 col-offset-2">
+                            <h1 class="headline-2-kr title" data-trn-key="stock-1-1">주식정보</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="table-motion">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 col-offset-2">
+                            <h2 class="title2 stock-info-padding" data-trn-key="stock-1-2">
+                                주식 발행 내역
+                            </h2>
+                            <div class="table-wrap caption1-en">
+                                <table class="caption1-kr">
+                                    <colgroup>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th class="text-left" data-trn-key="stock-1-3">주식의 종류</th>
+                                        <th class="text-center" data-trn-key="stock-1-4">발행주식수</th>
+                                        <th class="text-center" data-trn-key="stock-1-5">자본금</th>
+                                        <th class="text-center" data-trn-key="stock-1-6">비고</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="gray2 text-left" data-trn-key="stock-1-7">보통주</td>
+                                        <td class="gray2 text-center gibson-font">51,563,401</td>
+                                        <td class="gray2 text-center gibson-font">270,317</td>
+                                        <td class="gray2 text-center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" data-trn-key="stock-1-8">우선주</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                    </tr>
+                                    <tr class="bg-lightgray">
+                                        <td class="text-left" data-trn-key="stock-1-9">합계</td>
+                                        <td class="text-center gibson-font">51,563,401</td>
+                                        <td class="text-center gibson-font">270,317</td>
+                                        <td class="text-center">-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="annex">
+                                <span class="body4" data-trn-key="stock-1-10">1주의 액면금액: 5,000원</span>
+                                <span class="body4" data-trn-key="stock-1-21">단위: 1주 백만원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stack-xs"></div>
+                    <div class="row" motion-target>
+                        <div class="col-10 col-offset-2">
+                            <div class="shareholder-chart-header">
+                                <h2 class="title2-kr" data-trn-key="stock-1-11">주주구성</h2>
+                            </div>
+                            <div class="shareholder-chart-wrap">
+                                <div class="shareholder-chart__left">
+                                    <div class="major-group">
+                                        <p class="major-name" data-trn-key="stock-1-40">한화</p>
+                                        <p class="major-percent"><span class="gibson-font">35.5</span>%</p>
+                                    </div>
+                                    <ul class="major-sub-list">
+                                        <li>
+                                            <span data-trn-key="stock-1-41">(주)한화</span>
+                                            <span class="gibson-font">32.2%</span>
+                                        </li>
+                                        <li>
+                                            <span data-trn-key="stock-1-42">한화에너지등</span>
+                                            <span class="gibson-font">3.3%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="shareholder-chart__center">
+                                    <div class="chart-canvas-wrap">
+                                        <div class="chart-canvas-inner">
+                                            <div class="pie pie--major">
+                                                <canvas id="shareholderChartMain"></canvas>
+                                            </div>
+                                            <div class="pie pie--minor">
+                                                <canvas id="shareholderChartSub"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="chart-logo">
+                                            <img src="/assets/content/common/d-logo-black.svg" alt="한화에어로스페이스">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shareholder-chart__right">
+                                    <ul class="minor-legend-list">
+                                        <li data-chart-index="0">
+                                            <span class="dot dot--foreign"></span>
+                                            <span class="name" data-trn-key="stock-1-14">외국인</span>
+                                            <span class="percent gibson-font">40.7%</span>
+                                        </li>
+                                        <li data-chart-index="1">
+                                            <span class="dot dot--institution"></span>
+                                            <span class="name" data-trn-key="stock-1-13">기관</span>
+                                            <span class="percent gibson-font">13.3%</span>
+                                        </li>
+                                        <li data-chart-index="2">
+                                            <span class="dot dot--individual"></span>
+                                            <span class="name" data-trn-key="stock-1-12">개인 및 기타</span>
+                                            <span class="percent gibson-font">9.2%</span>
+                                        </li>
+                                        <li data-chart-index="3">
+                                            <span class="dot dot--treasury"></span>
+                                            <span class="name" data-trn-key="stock-1-43">우리사주</span>
+                                            <span class="percent gibson-font">1.3%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="body4 chart_standard" data-trn-key="stock-1-16">2025년 12월 31일 현재</span>
+                        </div>
+                    </div>
+                    <div class="stack-xs"></div>
+                    <div class="row" motion-target>
+                        <div class="col-10 col-offset-2">
+                            <div class="situation">
+                                <img src="/assets/content/ir/financial-info/logo.png" alt="">
+                                <div class="situation-txt">
+                                    <h2 class="title2" data-trn-key="stock-1-17">주주환원 현황</h2>
+                                    <p class="body3" data-trn-key="stock-1-18"><span class="hanwha-font">한화에어로스페이스</span>는 주주가치 제고를 위해 자사주 매입/소각, 현금배당 등 주주환원정책을 지속 시행하고 있으며 향후에도
+                                        회사의 경영실적과 재무상황 등을 전반적으로 고려하고 시장과 동종업계 주주환원 규모를 고려하여 탄력적으로 주주환원정책을 추진해 나갈 것입니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stack-xs"></div>
+                    <div class="row" motion-target>
+                        <div class="col-10 col-offset-2">
+                            <h2 class="title2-kr stock-info-padding" data-trn-key="stock-1-19">
+                                배당에 관한 사항(최근 5년)
+                            </h2>
+                            <div class="table-wrap caption1-en column-8">
+                                <table class="caption1-kr">
+                                    <colgroup>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                        <col/>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th class="text-left" data-trn-key="stock-1-20">구분</th>
+                                        <th class="text-center"></th>
+                                        <th class="text-center" data-trn-key="stock-1-22">단위</th>
+                                        
+                                        
+                                            <th class="text-center">49th</th>
+                                            <th class="text-center">48th</th>
+                                            <th class="text-center">47th</th>
+                                            <th class="text-center">46th</th>
+                                            <th class="text-center">45th</th>
+                                            <!-- <th class="text-center">44th</th> -->
+                                            <!-- <th class="text-center">42nd</th> -->
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="gray2 text-left" colspan="2" data-trn-key="stock-1-23">주당액면가액</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center gibson-font">5,000</td>
+                                        <td class="gray2 text-center gibson-font">5,000</td>
+                                        <td class="gray2 text-center gibson-font">5,000</td>
+                                        <td class="gray2 text-center gibson-font">5,000</td>
+                                        <td class="gray2 text-center gibson-font">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" colspan="2" data-trn-key="stock-1-24">(연결)당기순이익</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-32">백만원</td>
+                                        <td class="gray2 text-center gibson-font">1,404,962</td>
+                                        <td class="gray2 text-center gibson-font">2,298,945</td>
+                                        <td class="gray2 text-center gibson-font">817,510</td>
+                                        <td class="gray2 text-center gibson-font">169,444</td>
+                                        <td class="gray2 text-center gibson-font">252,581</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" colspan="2" data-trn-key="stock-1-25">(별도)당기순이익</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-32">백만원</td>
+                                        <td class="gray2 text-center gibson-font">1,467,505</td>
+                                        <td class="gray2 text-center gibson-font">1,038,040</td>
+                                        <td class="gray2 text-center gibson-font">648,960</td>
+                                        <td class="gray2 text-center gibson-font">306,700</td>
+                                        <td class="gray2 text-center gibson-font">119,344</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" colspan="2" data-trn-key="stock-1-26">(연결)주당순이익</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center gibson-font">28,530</td>
+                                        <td class="gray2 text-center gibson-font">45,935</td>
+                                        <td class="gray2 text-center gibson-font">14,563</td>
+                                        <td class="gray2 text-center gibson-font">3,344</td>
+                                        <td class="gray2 text-center gibson-font">4,989</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" colspan="2" data-trn-key="stock-1-27">현금배당총액</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-32">백만원</td>
+                                        <td class="gray2 text-center gibson-font">360,142</td>
+                                        <td class="gray2 text-center gibson-font">159,133</td>
+                                        <td class="gray2 text-center gibson-font">91,025</td>
+                                        <td class="gray2 text-center gibson-font">50,569</td>
+                                        <td class="gray2 text-center gibson-font">35,399</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" colspan="2" data-trn-key="stock-1-28">(연결)현금배당성향</td>
+                                        <td class="gray2 text-center">%</td>
+                                        <td class="gray2 text-center gibson-font">25.63</td>
+                                        <td class="gray2 text-center gibson-font">6.92</td>
+                                        <td class="gray2 text-center gibson-font">11.13</td>
+                                        <td class="gray2 text-center gibson-font">29.84</td>
+                                        <td class="gray2 text-center gibson-font">14.01</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left br-1" rowspan="2" data-trn-key="stock-1-29">현금배당수익률</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-7">보통주</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center gibson-font">0.70</td>
+                                        <td class="gray2 text-center gibson-font">1.10</td>
+                                        <td class="gray2 text-center gibson-font">1.40</td>
+                                        <td class="gray2 text-center gibson-font">1.40</td>
+                                        <td class="gray2 text-center gibson-font">1.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-8">우선주</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left br-1" rowspan="2" data-trn-key="stock-1-30">주당 현금배당금</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-7">보통주</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center gibson-font">7,000</td>
+                                        <td class="gray2 text-center gibson-font">3,500</td>
+                                        <td class="gray2 text-center gibson-font">1,800</td>
+                                        <td class="gray2 text-center gibson-font">1,000</td>
+                                        <td class="gray2 text-center gibson-font">700</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-8">우선주</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left br-1" data-trn-key="stock-1-44">
+                                            2025 기업가치 제고계획 주당 현금배당 목표
+                                        </td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-7">보통주</td>
+                                        <td class="gray2 text-center" data-trn-key="stock-1-31">원</td>
+                                        <td class="gray2 text-center"><span class="gibson-font">3,500</span> ↑</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="gray2 text-left" data-trn-key="stock-1-45">이행률</td>
+                                        <td class="gray2 text-center"></td>
+                                        <td class="gray2 text-center">%</td>
+                                        <td class="gray2 text-center gibson-font">200</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                        <td class="gray2 text-center">-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+              <div class="stack-xs"></div>
+              <div class="row">
+                <div class="col-10 col-offset-2" motion-target>
+                  <h2 class="title2-kr stock-info-padding" data-trn-key="stock-1-33">
+                    주식 소각에 관한 사항(최근 5년)
+                  </h2>
+                  <div class="table-wrap caption1-en column-8">
+                    <table class="caption1-kr">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-left" data-trn-key="stock-1-34">내용</th>
+                          <th class="text-center"></th>
+                          <th class="text-center" data-trn-key="stock-1-20">구분</th>
+                          
+                          
+                            <th class="text-center">2023</th>
+                            <th class="text-center">2022</th>
+                            <th class="text-center">2021</th>
+                            <th class="text-center">2020</th>
+                            <th class="text-center">2019</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="gray2 text-left br-1" rowspan="2" colspan="2" data-trn-key="stock-1-35">주식소각 (단위: 주)</td>
+                          <td class="gray2 text-center" data-trn-key="stock-1-7">보통주</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">930,000</td>
+                          <td class="gray2 text-center">480,000</td>
+                        </tr>
+                        <tr>
+                          <td class="gray2 text-center" data-trn-key="stock-1-8">우선주</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">-</td>
+                          <td class="gray2 text-center">-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="annex">
+                    <div class="body4">
+                      <span  data-trn-key="stock-1-37">IR 부서 전화번호 : 02-729-5200</span><br>
+                      <span  data-trn-key="stock-1-38">이메일 : aeroir@hanwha.com </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              -->
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    
+
+
+
+
+    
+    
+    
+        <footer class="footer">
+    
+
+
+<div class="pt-b3">
+    <div class="func">
+        
+            
+
+            
+                <a href="#" class="bttn bttn-scroll" color="black" dir="top"><span class="icon"></span></a>
+            
+        
+
+    </div>
+    <div class="footer-inner">
+
+        <div class="footer-wrap">
+            <div class="container footer__top">
+                <div class="row">
+                    <div class="col-10">
+                        <ul class="fd-list btn1-en">
+                            <li class="fd-item">
+                                <a onclick="setTagging('footer_whoweare')" href="/eng/whoweare/about.do" class="fd-link btn3-en" data-cursor="click">Who We Are</a>
+                                <div class="fd2-wrap">
+                                    <ul class="fd2-list">
+                                        <li class="fd2-item"><a onclick="setTagging('footer_whyweexist')" href="/eng/whyweexist.do" class="fd2-link btn4-en"
+                                                                data-cursor="click" target-page="about">Why We Exist</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_about')" href="/eng/whoweare/about.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="about" data-trn-key="common-02">기업 소개</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_history')" href="/eng/whoweare/history.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="history" data-trn-key="common-03">연혁</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_location')" href="/eng/whoweare/location/domestic.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="location" data-trn-key="common-04">사업장 소개</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="fd-item">
+                                <a onclick="setTagging('footer_whatwedo')" href="/eng/whatwedo/sustainable-tech.do" class="fd-link btn3-en" data-cursor="click">What We Do</a>
+                                <div class="fd2-wrap">
+                                    <ul class="fd2-list">
+                                        <li class="fd2-item"><a onclick="setTagging('footer_showroom')" href="/eng/showroom.do" class="fd2-link btn4-en" data-cursor="click">Virtual<br/>Showroom</a>
+                                        </li> <!-- TEMP LINKS -->
+                                        <li class="fd2-item"><a onclick="setTagging('footer_sustainablet')" href="/eng/whatwedo/sustainable-tech.do" class="fd2-link btn4-en"
+                                                                data-cursor="click">Sustainable<br>Technologies</a></li> <!-- TEMP LINKS -->
+                                        <li class="fd2-item"><a onclick="setTagging('footer_product')" href="/eng/whatwedo/product/space.do" class="fd2-link btn4-en"
+                                                                data-cursor="click">Products & Services</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_discover')" href="/eng/whatwedo/discover.do" class="fd2-link btn4-en"
+                                                                data-cursor="click">Discover</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_protect')" href="/eng/whatwedo/protect.do" class="fd2-link btn4-en"
+                                                                data-cursor="click">Protect</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="fd-item">
+                                <a onclick="setTagging('footer_ir')" href="/eng/ir/earning-release.do" class="fd-link btn3-en" data-cursor="click">IR</a>
+                                <div class="fd2-wrap">
+                                    <ul class="fd2-list">
+                                        <li class="fd2-item"><a onclick="setTagging('footer_earning-release')" href="/eng/ir/earning-release.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-37">실적발표</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_ir-event')" href="/eng/ir/ir-event.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-38">IR 일정</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_financial-info')" href="/eng/ir/financial-info/finance01.do"
+                                                                class="fd2-link btn4-kr" data-cursor="click" data-trn-key="common-39">재무정보</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_stock-info')" href="/eng/ir/stock-info.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-40">주식정보</a></li>
+                                        
+                                        <li class="fd2-item"><a onclick="setTagging('footer_finance')" href="/eng/ir/finance/business-report.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-42">전자공고</a></li>
+                                        
+                                            <li class="fd2-item"><a onclick="setTagging('footer_contact')" href="/eng/ir/finance/contact.do" class="fd2-link btn4-kr"
+                                                                    data-cursor="click">Contact</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="fd-item">
+                                <a onclick="setTagging('footer_media')" href="/eng/media/newsroom/list.do" class="fd-link btn3-en" data-cursor="click">Media</a>
+                                <div class="fd2-wrap">
+                                    <ul class="fd2-list">
+                                        <li class="fd2-item"><a onclick="setTagging('footer_newsroom')" href="/eng/media/newsroom/list.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="newsroom" data-trn-key="common-16">뉴스룸</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_library')" href="/eng/media/library/list.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="library" data-trn-key="common-17">라이브러리</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_notice')" href="/eng/media/notice/list.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="notice" data-trn-key="common-18">공지사항</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="fd-item">
+                                <a onclick="setTagging('footer_esg')" href="/eng/esg/sustain-business.do" class="fd-link btn3-en" data-cursor="click">ESG</a>
+                                <div class="fd2-wrap">
+                                    <ul class="fd2-list">
+                                        <li class="fd2-item"><a onclick="setTagging('footer_sustain-business')" href="/eng/esg/sustain-business.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-19">지속가능경영</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_compliance')" href="/eng/esg/compliance/introduce.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-20">윤리준법경영</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_ehs')" href="/eng/esg/ehs/introduce.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-23">환경안전보건경영</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_winwin')" href="/eng/esg/winwin.do" class="fd2-link btn4-kr" data-cursor="click"
+                                                                data-trn-key="common-26">상생경영</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_social-contribution')" href="/eng/esg/social-contribution.do"
+                                                                class="fd2-link btn4-kr" data-cursor="click" data-trn-key="common-27">사회공헌</a></li>
+
+                                        <!-- [24.01.30] IR -> ESG로 위치 변경  -->
+                                        <li class="fd2-item"><a onclick="setTagging('footer_association')" href="/eng/esg/association/governance.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" data-trn-key="common-41">기업지배구조</a></li>
+
+                                        <!-- [24.01.30] 주요실적 페이지 주석처리 -->
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="fd-item">
+                                <a onclick="setTagging('footer_careers')" href="/eng/careers/talent.do" class="fd-link btn3-en" data-cursor="click">Careers</a>
+                                <div class="fd2-wrap">
+                                    <ul class="fd2-list">
+                                        <li class="fd2-item"><a onclick="setTagging('footer_talent')" href="/eng/careers/talent.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="talent" data-trn-key="common-28">인재상</a></li>
+                                        <li class="fd2-item"><a onclick="setTagging('footer_recruit')" href="/eng/careers/recruit.do" class="fd2-link btn4-kr"
+                                                                data-cursor="click" target-page="recruit" data-trn-key="common-30">채용안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-3 col-offset-1">
+                        <div class="select-wrap">
+
+                            
+
+                                
+                                
+                                    
+                                    <div class="selectbox" type="footer">
+                                        
+                                        
+                                        <button type="button" class="selectbox__selection btn4-kr" data-cursor="click" data-trn-key="common-35">계열사 전체보기</button>
+                                        <div class="selectbox__dropdown btn4-kr">
+                                            <a onclick="setTagging('footer_goto_hanwhagroup')" href="https://www.hanwha.co.kr" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-00">한화그룹</a>
+
+                                            <span class="selectbox__category" data-trn-key="common-351">우주항공 · 방산​</span>
+                                            <a onclick="setTagging('footer_goto_hanwhacorp')" href="https://www.hanwhacorp.co.kr/index.jsp" target="_blank"
+                                               class="selectbox__option" data-cursor="click" data-trn-key="common-35-01">(주)한화</a>
+                                            <a onclick="setTagging('footer_goto_system')" href="https://www.hanwhasystems.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-03">한화시스템</a>
+
+                                            <span class="selectbox__category" data-trn-key="common-352">에너지 · 해양 · 소재​</span>
+                                            <a onclick="setTagging('footer_goto_solution')" href="https://www.hanwhasolutions.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-07">한화솔루션</a>
+                                            <a onclick="setTagging('footer_goto_ocean')" href="https://www.hanwhaocean.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-02">한화오션</a>
+                                            <a onclick="setTagging('footer_goto_energy')" href="https://www.hanwha-energy.com/ko" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-11">한화에너지</a>
+                                            <a onclick="setTagging('footer_goto_impact')" href="https://www.hanwhaimpact.com/kr/index" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-08">한화임팩트</a>
+                                            <a onclick="setTagging('footer_goto_powersystem')" href="https://www.hanwhapower.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-06">한화파워</a>
+                                            <a onclick="setTagging('footer_goto_totalenergy')" href="https://www.htpchem.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-09">한화토탈에너지스</a>
+                                            <a onclick="setTagging('footer_goto_engine')" href="https://www.hanwha-engine.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-23">한화엔진</a>
+                                            <a onclick="setTagging('footer_goto_hwam')" href="https://www.hwam.co.kr/" target="_blank" class="selectbox__option" data-cursor="click"
+                                               data-trn-key="common-35-12">한화첨단소재</a>
+                                            <a onclick="setTagging('footer_goto_yncc')" href="https://www.yncc.co.kr/ko/index.do" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-10">여천NCC</a>
+
+                                            <span class="selectbox__category" data-trn-key="common-353">금융</span>
+                                            <a onclick="setTagging('footer_goto_life')" href="https://www.hanwhalife.com/index.jsp" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-13">한화생명</a>
+                                            <a onclick="setTagging('footer_goto_hwgeneralins')" href="https://www.hwgeneralins.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-14">한화손보</a>
+                                            <a onclick="setTagging('footer_goto_fund')" href="https://www.hanwhafund.co.kr/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-16">한화자산운용</a>
+                                            <a onclick="setTagging('footer_goto_wm')" href="https://www.hanwhawm.com/" target="_blank" class="selectbox__option" data-cursor="click"
+                                               data-trn-key="common-35-15">한화투자증권</a>
+                                            <a onclick="setTagging('footer_goto_bank')" href="https://www.hanwhasbank.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-17">한화저축은행</a>
+                                            <a onclick="setTagging('footer_goto_lifefs')" href="https://www.hanwhalifefs.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-20">한화생명금융서비스</a>
+                                            <!-- [251017] 캐롯손해보험 숨김 요청 -->
+                                            <!-- <a onclick="setTagging('footer_goto_carrotins')" href="https://www.carrotins.com/" target="_blank" class="selectbox__option" data-cursor="click" data-trn-key="common-35-21">캐롯손해보험</a> -->
+
+                                            <span class="selectbox__category" data-trn-key="common-354">테크 · 라이프</span>
+                                            <a onclick="setTagging('footer_goto_vision')" href="https://www.hanwhavision.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-04">한화비전</a>
+                                            <a onclick="setTagging('footer_goto_pm')" href="https://www.hanwhasemitech.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-05">한화세미텍</a>
+                                            <a onclick="setTagging('footer_goto_momentum')" href="https://www.hanwhamomentum.com/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-24">한화모멘텀</a>
+                                            <a onclick="setTagging('footer_goto_Robotics')" href="https://hanwharobotics.co.kr/?lang=ko" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-25">한화로보틱스</a>
+                                            <a onclick="setTagging('footer_goto_hwrc')" href="https://www.hwrc.co.kr/hwrc/index.do" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-18">한화호텔앤드리조트</a>
+                                            <a onclick="setTagging('footer_goto_galleria')" href="https://www.hanwhagalleria.co.kr/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-22">한화갤러리아</a>
+                                            <a onclick="setTagging('footer_goto_connect')" href="https://www.hanwhaconnect.co.kr/" target="_blank" class="selectbox__option"
+                                               data-cursor="click" data-trn-key="common-35-19">한화커넥트</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bot util container">
+                        <div class="">
+                            <ul class="fd-list--util">
+                                <li class="fd-item">
+                                    <a onclick="setTagging('footer_policy')" href="/eng/privacy-policy.do" class="fd-link btn4-kr" data-cursor="click"
+                                       data-trn-key="common-33" style="color:#f37321; font-weight: 600;">개인정보 처리방침</a>
+                                </li>
+                                <li class="fd-item">
+                                    <a onclick="setTagging('footer_tos')" href="/eng/terms-of-service.do" class="fd-link btn4-kr" data-cursor="click"
+                                       data-trn-key="common-32">이용약관</a>
+                                </li>
+                                <li class="fd-item">
+                                    <a onclick="setTagging('footer_sitemap')" href="/eng/sitemap.do" class="fd-link btn4-kr" data-cursor="click"
+                                       data-trn-key="common-34">사이트맵</a>
+                                </li>
+                                <li class="fd-item">
+                                    <a onclick="setTagging('footer_goto_visit')" href="https://vist.hanwhaaerospace.co.kr/index.html" class="fd-link btn4-kr" target="_blank" data-cursor="click" data-trn-key="common-36">방문신청</a>
+                                </li>
+                                
+                                
+                                
+                            </ul>
+                            <p class="c1 copyright">86, Cheonggyecheon-ro, Jung-gu, Seoul Copyright © 2023 <span class="cp-name">Hanwha Aerospace</span> All Rights Reserved.</p>
+                        </div>
+                        <ul class="social">
+                            <!-- <li class="social__item"><a onclick="setTagging('footer_goto_blog')" class="social__link social__link--blog" href="https://blog.naver.com/haspr" target="_blank" data-cursor="click"><span class="a11y">페이스북 링크</span></a></li> -->
+                            <li class="social__item"><a onclick="setTagging('footer_goto_facebook')" class="social__link social__link--facebook"
+                                                        href="https://www.facebook.com/Hanwhaaerospace" target="_blank" data-cursor="click"><span class="a11y">페이스북 링크</span></a>
+                            </li>
+                            <li class="social__item"><a onclick="setTagging('footer_goto_youtube')" class="social__link social__link--youtube"
+                                                        href="https://www.youtube.com/@hanwhaaerospaceofficial" target="_blank" data-cursor="click"><span class="a11y">유튜브 링크</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script src="/assets/bundle/js/vendors.js"></script>
+<script src="/assets/bundle/js/ir.js"></script>
+<script src="/assets/js/translate/ir/stock-info.js"></script>
+
+<!-- [TODO] 개발 모드에서만 로드 -->
+
+</body>
+
+</html>
