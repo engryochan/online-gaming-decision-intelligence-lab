@@ -1,0 +1,20 @@
+﻿Gate,主題,驗收手段,不變量／失敗原則,本輪狀態
+G00,原文位元組前綴,SHA256及 startswith(raw_source),四份新檔保留原始位元組,FAIL if modified
+G01,版本與來源,元資料/主張/來源日分開登記,版本不自動等於真實,FAIL if no provenance
+G02,宇宙→地球,地球/星空視角可操作,以WebGL實機驗收,NOT_TESTED
+G03,全球→城市,瓦片與地形順暢載入,需指定GPU/瀏覽器/資料覆蓋,NOT_TESTED
+G04,城市→真街景,座標查圖+全景+相鄰全景,無照片須顯示缺圖，不得生成假證據,NOT_TESTED
+G05,街景來源/日期,原始provider/time/license,不得丟失拍攝日,NOT_TESTED
+G06,開源與商用,逐SKU/圖磚/衍生物權利,缺授權不得商業對外供應,NOT_TESTED
+G07,史境時間,valid_from/to 及 uncertain_dates,同一地點不同年代可分辨,NOT_TESTED
+G08,國界爭議,來源及争议／未定標記,不預設單一現代邊界為歷史真相,NOT_TESTED
+G09,人物資料保護,consent/source/privacy tier,私人個資不可任意公開,NOT_TESTED
+G10,策略模擬隔離,現實事件與虛構推演分表,模擬不得當實際預測真值,NOT_TESTED
+G11,座標/時間,CRS/日期/UTC轉換,不同系統點位準確匹配,NOT_TESTED
+G12,服務安全,OIDC+RBAC+ABAC+audit,權限、導出、追蹤正確,NOT_TESTED
+G13,可重現性,鎖版、hash、測試數據、環境,其他乾淨環境重跑相同成果,NOT_TESTED
+G14,跨系統桌面,Windows11+WSL2／Kubuntu VM,不得把WSL2當獨立Linux登入,NOT_TESTED
+G15,API成本,免費額度、請求SKU、預算上限,最壞流量成本可控,NOT_TESTED
+G16,失效降級,衛星缺圖＋API宕機等組合,錯誤不被當作真實資料,NOT_TESTED
+G17,客戶價值,訪談、付費試點、實付發票,合成測試不代表有市場,NOT_TESTED
+G18,國防用途邊界,公開供應鏈／防災／民用物流,不觸碰未授權機密作戰資料,NOT_TESTED

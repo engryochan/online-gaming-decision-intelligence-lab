@@ -1,0 +1,23 @@
+﻿介面ID,領域,協定／口徑,連接用途,最低驗收注意,範圍
+I01,座標,WGS84/EPSG:4326,全球經緯度,經緯度順序／投影／高程基準／誤差,GIS
+I02,座標,EPSG:3857,Web墨卡托展示,緯度極區失真／不可用於面積精算,GIS
+I03,座標,ITRF/時變參考框架,GNSS精密定位／宇航轉換,座標曆元和板塊位移,SPACE
+I04,時間,ISO 8601 UTC,事實記錄／API,時區、閏秒、日界、夏令時,ALL
+I05,時間,valid_from/valid_to與observed_at,史地疆域與來源事件,勿以錄入日期取代事件有效期,HISTORY
+I06,資料,GeoJSON RFC 7946,地理要素傳輸,geometry／properties／CRS約定,MAP
+I07,圖層,MapLibre Style Spec／XYZ／TMS,向量與影像圖磚,圖磚供應商限速、授權、Cache,MAP
+I08,地形,COG/GeoTIFF／DEM,高程與遙感,像素大小、無資料值、投影,MAP
+I09,地球三維,OGC 3D Tiles／glTF,城市建築與三維瓦片,資料授權與署名,MAP
+I10,地球觀測,STAC Item／Collection／API,搜尋與版本化衛星影像,時間／雲量／光譜／處理級別,EO
+I11,GIS服務,OGC API Features／WMS／WFS／WMTS,政區、道路、城邑查詢,版本、查詢速率、地名衝突,GIS
+I12,街景,Panoramax／Mapillary provider adapter,地點到全景照片,覆蓋缺口／照片來源／拍攝時間／授權,STREET
+I13,天文,JPL Horizons ephemeris,行星／小天體曆算,時間尺度與座標參考框架,SPACE
+I14,星圖,OpenSpace asset／scene,宇宙視覺化,異源天體資料與虛構物分離,SPACE
+I15,表格,Parquet／Arrow,大量時空與歷史數據,資料分區、時區、空值,DATA
+I16,事件,CloudEvents／MQTT／NATS／Kafka,更新／地圖同步,事件次序、冪等性與去重,DATA
+I17,實體,Ontology entity_id／relation_id,人物、法人、城邑、事件網絡,人名同名、法人變動、主張來源,ENTITY
+I18,身份,OIDC／OAuth 2.0／RBAC／ABAC,玩家登入與資料訪問,最小授權、合規審計,SECURITY
+I19,軟件供應鏈,SBOM／SLSA／簽名構建,依賴與部署重現,簽章驗證／依賴鎖定,OPS
+I20,證據,P×M×LO + provenance_uri + sha256,來源權威／成熟度／本機驗收,模型答覆不代替外部事實,AUDIT
+I21,API商用,provider_id＋license_id＋redistribution_scope,跨商用圖層與資料服務,商用使用／下載／衍生品／再分發分離,LEGAL
+I22,定價,unit_sku＋metering_event＋budget_ceiling,付費圖資與街景API,按請求/會話/圖磚等不同單位結算,BUSINESS
