@@ -1,0 +1,40 @@
+from pathlib import Path
+from urllib.request import Request,urlopen
+from datetime import datetime,timezone
+from collections import Counter
+import json,hashlib,csv,io,sys,tempfile,subprocess
+工作=Path(__file__).resolve().parent;根=工作.parents[2];H=lambda b:hashlib.sha256(b).hexdigest()
+原=工作/'原始來源';原.mkdir(exist_ok=True)
+assert not (工作/'基線.json').exists(),'不得刷新基線'
+paths=subprocess.check_output(['git','ls-files','-z'],cwd=根).decode().split('\0')
+(工作/'基線.json').write_text(json.dumps({'提交':subprocess.check_output(['git','rev-parse','HEAD'],cwd=根).decode().strip(),'既有正文':{p:H((根/p).read_bytes()) for p in paths if p.endswith(('.md','.qmd')) and (根/p).is_file()}},ensure_ascii=False,indent=2),encoding='utf-8')
+收=[]
+def 取(名,url):
+    with urlopen(Request(url,headers={'User-Agent':'Public-source-rule-audit/1.0'}),timeout=60) as r:
+        b=r.read(5*1024*1024+1);assert len(b)<=5*1024*1024
+        p=原/名;p.write_bytes(b)
+        收.append({'中文來源':名,'網址':url,'觀測UTC':datetime.now(timezone.utc).isoformat(),'狀態碼':r.status,'回應標頭':dict(r.headers),'原始檔':p.relative_to(根).as_posix(),'來源雜湊':H(b),'實得位元組':len(b)})
+    return b
+取('2026年官方常見問題.pdf','https://coast.noaa.gov/data/marinecadastre/ais/faq.pdf')
+取('2026年官方元資料.html','https://www.fisheries.noaa.gov/inport/item/80362')
+commit=json.loads(取('官方倉庫版本.json','https://api.github.com/repos/ocm-marinecadastre/ais-vessel-traffic/commits/main'))['sha']
+取('官方倉庫固定版本說明.md','https://raw.githubusercontent.com/ocm-marinecadastre/ais-vessel-traffic/'+commit+'/README.md')
+(工作/'來源收據.json').write_text(json.dumps(收,ensure_ascii=False,indent=2),encoding='utf-8')
+old=json.loads((根/'reports/2026-10-11/最新完整日檔品質核查_B64/取得收據.json').read_text(encoding='utf-8'));p=Path(old['本機原始檔']);h=hashlib.sha256()
+with p.open('rb') as f:
+    for b in iter(lambda:f.read(4*1024*1024),b''):h.update(b)
+assert h.hexdigest()==old['来源雜湊']
+sys.path.insert(0,str(Path.home()/'AppData/Local/Temp/科研壓縮驗收依賴_B64'));import zstandard
+秒=Counter();微秒=Counter();日期=Counter();n=0
+with p.open('rb') as f,zstandard.ZstdDecompressor().stream_reader(f) as zr,io.TextIOWrapper(zr,encoding='utf-8-sig',newline='') as t:
+    reader=csv.reader(t);header=next(reader);assert len(header)==17;i=header.index('base_date_time')
+    for row in reader:
+        assert len(row)==17
+        d=datetime.fromisoformat(row[i]);秒[d.second]+=1;微秒[d.microsecond]+=1;日期[d.date().isoformat()]+=1;n+=1
+        if n%2000000==0:print('已核時間資料行',n,flush=True)
+assert n==10622482 and dict(日期)=={'2026-06-30':n}
+表=根/'Reference/tables/92_官方處理規則與時間精度核查_B70_20261012';表.mkdir(parents=True,exist_ok=True)
+with (表/'全量時間秒數分布.csv').open('w',encoding='utf-8-sig',newline='') as f:
+    w=csv.DictWriter(f,fieldnames=['秒數','資料行']);w.writeheader();w.writerows({'秒數':i,'資料行':秒[i]} for i in range(60))
+結={'核查UTC':datetime.now(timezone.utc).isoformat(),'資料行':n,'觀測日期分布':dict(日期),'秒數為零行':秒[0],'秒數非零行':n-秒[0],'微秒非零行':sum(v for k,v in 微秒.items() if k!=0),'來源SHA256':h.hexdigest(),'官方文件回應數':len(收),'官方倉庫固定提交':commit,'同鍵合併規則已核':False,'全年品質已核':False,'全球覆蓋已核':False}
+(工作/'核查結果.json').write_text(json.dumps(結,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(結,ensure_ascii=False),flush=True)

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "ais-time-precision",
+      "title": "一分鐘採樣與輸出時間精度的界線",
+      "queries": [
+        {
+          "id": "full-day-seconds",
+          "source": {
+            "label": "官方日檔與2026年官方處理描述",
+            "links": [
+              {
+                "label": "官方日檔",
+                "href": "https://noaaocm.blob.core.windows.net/ais/csv2/csv2026/ais-2026-06-30.csv.zst"
+              },
+              {
+                "label": "官方常見問題",
+                "href": "https://coast.noaa.gov/data/marinecadastre/ais/faq.pdf"
+              },
+              {
+                "label": "2026年元資料",
+                "href": "https://www.fisheries.noaa.gov/inport/item/80362"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "非零秒數資料行",
+                "definition": "解析基準日期時間後，秒數不等於零的資料行；不把這項結果直接判定為錯誤。"
+              }
+            ],
+            "caveats": [
+              "本輪重用先前完整下載的2026年6月30日日檔，不代表即時、全年或全球資料。",
+              "官方採樣描述沒有使本輪取得可重現的同鍵合併算法；不能推定秒數非零的根因。"
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "全量時間精度對賬",
+                "detail": "完整10,622,482行等於166,476行秒數為零加10,456,006行秒數非零，微秒非零0行；來源SHA256與第六十四批一致。"
+              }
+            ]
+          },
+          "reportingPeriod": "2026年6月30日",
+          "capturedAt": "2026-10-12T03:29:46.362778+00:00",
+          "columns": [
+            "資料行",
+            "秒數為零行",
+            "秒數非零行",
+            "微秒非零行"
+          ],
+          "rows": [
+            {
+              "資料行": 10622482,
+              "秒數為零行": 166476,
+              "秒數非零行": 10456006,
+              "微秒非零行": 0
+            }
+          ],
+          "preview": {
+            "kind": "aggregate",
+            "note": "完整日檔彙總，不含船舶原始記錄。"
+          },
+          "methods": [
+            {
+              "language": "python",
+              "code": "from pathlib import Path\nfrom urllib.request import Request,urlopen\nfrom datetime import datetime,timezone\nfrom collections import Counter\nimport json,hashlib,csv,io,sys,tempfile,subprocess\n工作=Path(__file__).resolve().parent;根=工作.parents[2];H=lambda b:hashlib.sha256(b).hexdigest()\n原=工作/'原始來源';原.mkdir(exist_ok=True)\nassert not (工作/'基線.json').exists(),'不得刷新基線'\npaths=subprocess.check_output(['git','ls-files','-z'],cwd=根).decode().split('\\0')\n(工作/'基線.json').write_text(json.dumps({'提交':subprocess.check_output(['git','rev-parse','HEAD'],cwd=根).decode().strip(),'既有正文':{p:H((根/p).read_bytes()) for p in paths if p.endswith(('.md','.qmd')) and (根/p).is_file()}},ensure_ascii=False,indent=2),encoding='utf-8')\n收=[]\ndef 取(名,url):\n    with urlopen(Request(url,headers={'User-Agent':'Public-source-rule-audit/1.0'}),timeout=60) as r:\n        b=r.read(5*1024*1024+1);assert len(b)<=5*1024*1024\n        p=原/名;p.write_bytes(b)\n        收.append({'中文來源':名,'網址':url,'觀測UTC':datetime.now(timezone.utc).isoformat(),'狀態碼':r.status,'回應標頭':dict(r.headers),'原始檔':p.relative_to(根).as_posix(),'來源雜湊':H(b),'實得位元組':len(b)})\n    return b\n取('2026年官方常見問題.pdf','https://coast.noaa.gov/data/marinecadastre/ais/faq.pdf')\n取('2026年官方元資料.html','https://www.fisheries.noaa.gov/inport/item/80362')\ncommit=json.loads(取('官方倉庫版本.json','https://api.github.com/repos/ocm-marinecadastre/ais-vessel-traffic/commits/main'))['sha']\n取('官方倉庫固定版本說明.md','https://raw.githubusercontent.com/ocm-marinecadastre/ais-vessel-traffic/'+commit+'/README.md')\n(工作/'來源收據.json').write_text(json.dumps(收,ensure_ascii=False,indent=2),encoding='utf-8')\nold=json.loads((根/'reports/2026-10-11/最新完整日檔品質核查_B64/取得收據.json').read_text(encoding='utf-8'));p=Path(old['本機原始檔']);h=hashlib.sha256()\nwith p.open('rb') as f:\n    for b in iter(lambda:f.read(4*1024*1024),b''):h.update(b)\nassert h.hexdigest()==old['来源雜湊']\nsys.path.insert(0,str(Path.home()/'AppData/Local/Temp/科研壓縮驗收依賴_B64'));import zstandard\n秒=Counter();微秒=Counter();日期=Counter();n=0\nwith p.open('rb') as f,zstandard.ZstdDecompressor().stream_reader(f) as zr,io.TextIOWrapper(zr,encoding='utf-8-sig',newline='') as t:\n    reader=csv.reader(t);header=next(reader);assert len(header)==17;i=header.index('base_date_time')\n    for row in reader:\n        assert len(row)==17\n        d=datetime.fromisoformat(row[i]);秒[d.second]+=1;微秒[d.microsecond]+=1;日期[d.date().isoformat()]+=1;n+=1\n        if n%2000000==0:print('已核時間資料行',n,flush=True)\nassert n==10622482 and dict(日期)=={'2026-06-30':n}\n表=根/'Reference/tables/92_官方處理規則與時間精度核查_B70_20261012';表.mkdir(parents=True,exist_ok=True)\nwith (表/'全量時間秒數分布.csv').open('w',encoding='utf-8-sig',newline='') as f:\n    w=csv.DictWriter(f,fieldnames=['秒數','資料行']);w.writeheader();w.writerows({'秒數':i,'資料行':秒[i]} for i in range(60))\n結={'核查UTC':datetime.now(timezone.utc).isoformat(),'資料行':n,'觀測日期分布':dict(日期),'秒數為零行':秒[0],'秒數非零行':n-秒[0],'微秒非零行':sum(v for k,v in 微秒.items() if k!=0),'來源SHA256':h.hexdigest(),'官方文件回應數':len(收),'官方倉庫固定提交':commit,'同鍵合併規則已核':False,'全年品質已核':False,'全球覆蓋已核':False}\n(工作/'核查結果.json').write_text(json.dumps(結,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(結,ensure_ascii=False),flush=True)\n"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
