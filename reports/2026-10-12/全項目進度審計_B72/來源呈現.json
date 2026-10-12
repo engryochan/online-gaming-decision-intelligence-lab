@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "global-progress-audit",
+      "title": "實質進度與交付的界線",
+      "queries": [
+        {
+          "id": "existing-workqueue-audit",
+          "source": {
+            "label": "項目現行金融與科技工作快照",
+            "files": [
+              {
+                "label": "registry_all_4849_work_progress.csv（4849項金融工作快照）"
+              },
+              {
+                "label": "registry_country_technology_coverage.csv（逐國科技覆蓋）"
+              },
+              {
+                "label": "registry_neurotechnology_global.csv（神經科技登記）"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "已嘗試金融來源工作",
+                "definition": "既有來源工作快照中，取得嘗試次數大於零的項目；不是完整名冊驗收數。"
+              }
+            ],
+            "caveats": [
+              "金融來源快照日期為2026年10月8日，本輪核查保存內容，不是重取所有網站。",
+              "全球可信總分母未核定，不能計算整體完成率。",
+              "12項神經科技已核實只限公開描述；N等級、帶寬及臨床階段仍未知。"
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "進度與實體分流對賬",
+                "detail": "金融4849項工作完整性全部UNKNOWN；249國別公司／券商完整性未知。42條貨幣来源記錄按35個名稱全量分流，不改未知關聯。"
+              }
+            ]
+          },
+          "capturedAt": "2026-10-12T03:52:19.107098+00:00",
+          "columns": [
+            "工作總項",
+            "曾嘗試",
+            "末次HTTP200",
+            "名冊完整性未知項"
+          ],
+          "rows": [
+            {
+              "工作總項": 4849,
+              "曾嘗試": 2241,
+              "末次HTTP200": 2151,
+              "名冊完整性未知項": 4849
+            }
+          ],
+          "preview": {
+            "kind": "aggregate",
+            "note": "完整工作快照彙總，並非公司／券商總數或整體竣工比例。"
+          },
+          "methods": [
+            {
+              "language": "python",
+              "code": "from pathlib import Path\nfrom collections import Counter\nfrom datetime import datetime,timezone\nimport csv,json,hashlib,os,subprocess,sqlite3\n工作=Path(__file__).resolve().parent;根=工作.parents[2];H=lambda b:hashlib.sha256(b).hexdigest()\n表=根/'Reference/tables/94_全項目進度審計_B72_20261012';表.mkdir(parents=True,exist_ok=True)\ndef git(*a):return subprocess.check_output(['git',*a],cwd=根)\ndef 讀(p):\n    with (根/p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))\ndef 寫(n,rows,fields=None):\n    with (表/n).open('w',encoding='utf-8-sig',newline='') as f:\n        w=csv.DictWriter(f,fieldnames=fields or list(rows[0]));w.writeheader();w.writerows(rows)\nassert not (工作/'基線.json').exists(),'不得刷新基線'\ntracked={p for p in git('ls-files','-z').decode().split('\\0') if p}\n基={'提交':git('rev-parse','HEAD').decode().strip(),'上游提交':git('rev-parse','@{u}').decode().strip(),'初始工作區狀態':git('status','--porcelain').decode(),'既有正文':{p:H((根/p).read_bytes()) for p in tracked if p.endswith(('.md','.qmd')) and (根/p).is_file()}}\n(工作/'基線.json').write_text(json.dumps(基,ensure_ascii=False,indent=2),encoding='utf-8')\n文件=[];跳=[]\nfor directory,dirs,files in os.walk(根,followlinks=False):\n    dirs[:]=[d for d in dirs if d!='.git' and not (Path(directory)/d).is_symlink()]\n    for name in files:\n        p=Path(directory)/name\n        if p.is_symlink():跳.append({'路徑':p.relative_to(根).as_posix(),'原因':'符號連結不追蹤'});continue\n        rel=p.relative_to(根).as_posix()\n        if p.is_relative_to(工作) or p.is_relative_to(表):continue\n        try:\n            before=p.stat();h=hashlib.sha256()\n            with p.open('rb') as f:\n                for b in iter(lambda:f.read(4*1024*1024),b''):h.update(b)\n            after=p.stat()\n            文件.append({'路徑':rel,'位元組':before.st_size,'SHA256':h.hexdigest(),'Git已追蹤':rel in tracked,'掃描期間穩定':(before.st_size,before.st_mtime_ns)==(after.st_size,after.st_mtime_ns)})\n        except OSError as e:跳.append({'路徑':rel,'原因':type(e).__name__})\n寫('全項目文件雜湊快照.csv',文件);寫('跳過與讀取失敗.csv',跳,['路徑','原因'])\nprint('完成文件快照',len(文件),flush=True)\n金融=讀('Reference/tables/50_global_directory_content_b25_20261008/registry_all_4849_work_progress.csv')\n逐國=讀('Reference/tables/50_global_directory_content_b25_20261008/registry_all_country_cumulative_source_progress.csv')\n科技=讀('Reference/tables/07_global_technology_iso249_20261006/registry_country_technology_coverage.csv')\n神經=讀('Reference/tables/07_global_technology_iso249_20261006/registry_neurotechnology_global.csv')\ncounts={'金融工作總項':len(金融),'金融已嘗試工作':sum(int(r['attempt_observations'] or 0)>0 for r in 金融),'金融末次HTTP200工作':sum(r['last_http_status']=='200' for r in 金融),'金融完整性狀態':dict(Counter(r['directory_completeness'] for r in 金融)),'金融逐國母表行':len(逐國),'金融上市公司完整性狀態':dict(Counter(r['listed_company_completeness'] for r in 逐國)),'金融券商完整性狀態':dict(Counter(r['broker_completeness'] for r in 逐國)),'科技逐國母表行':len(科技),'科技N0至N7狀態':dict(Counter(r['N0_N7_level'] for r in 科技)),'科技研究完成狀態':dict(Counter(r['research_completion_state'] for r in 科技)),'神經科技登記行':len(神經),'神經科技證據狀態':dict(Counter(r['evidence_state'] for r in 神經))}\nhtml=[]\nfor r in 文件:\n    p=根/r['路徑']\n    if p.suffix.lower()=='.html' and '_files' not in '/'.join(p.parts) and (p.parent==根 or p.is_relative_to(根/'Reference')) and not p.with_suffix('.qmd').is_file():\n        html.append({'HTML路徑':r['路徑'],'SHA256':r['SHA256'],'處置':'成品候選待人工分類；不直接認定來源遺失','同名QMD存在':False})\n寫('無同名源文件的成品候選.csv',html,['HTML路徑','SHA256','處置','同名QMD存在'])\n舊=json.loads((根/'reports/2026-10-07/git_publish_and_html_recovery/recovery_manifest.json').read_text(encoding='utf-8'))['records'];恢=[]\nfor r in 舊:\n    p=根/r['html'];q=根/r['qmd']\n    恢.append({'HTML路徑':r['html'],'QMD路徑':r['qmd'],'HTML存在':p.is_file(),'QMD存在':q.is_file(),'HTML與當時快照雜湊一致':p.is_file() and H(p.read_bytes())==r['sha256'],'核查邊界':'本輪檢查存在與快照；未重新渲染字節一致性'})\n寫('歷史源文件重建成果現況.csv',恢)\n近期=[]\nfor d in sorted((根/'reports').glob('2026-*/*')):\n    if any(d.name.endswith('_B'+str(i)) for i in range(64,72)):\n        p=d/'交付驗收.json'\n        if p.exists():近期.append({'批次目錄':d.relative_to(根).as_posix(),'交付回執存在':True,'回執SHA256':H(p.read_bytes()),'核查結果存在':(d/'核查結果.json').exists(),'狀態':'回執存在不是全項目完成證明'})\n寫('近期交付回執核對.csv',近期)\ndb=根/'Reference/tables/50_global_directory_content_b25_20261008/global_directory_content_b25.sqlite'\nwith sqlite3.connect(db.as_uri()+'?mode=ro',uri=True) as con:完整=con.execute('PRAGMA quick_check').fetchall()\ncounts.update({'文件快照行':len(文件),'文件快照不穩定數':sum(not r['掃描期間穩定'] for r in 文件),'文件跳過或失敗數':len(跳),'無同名QMD成品候選':len(html),'歷史重建清單行':len(恢),'歷史重建QMD缺失數':sum(not r['QMD存在'] for r in 恢),'歷史重建HTML較當時快照不同數':sum(not r['HTML與當時快照雜湊一致'] for r in 恢),'近期回執數':len(近期),'金融資料庫快速檢查':完整,'審計UTC':datetime.now(timezone.utc).isoformat(),'整體完成率可計算':False,'理由':'全球所有歷史政治實體、上市公司、券商、貨幣與科技項目的可信總分母尚未核定；不能用批次或來源行數當完成率'})\n(工作/'審計結果.json').write_text(json.dumps(counts,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(counts,ensure_ascii=False),flush=True)\n"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
