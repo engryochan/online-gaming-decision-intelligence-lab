@@ -1,0 +1,400 @@
+
+<html lang="en">
+    
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="The official website of the Cayman Islands Stock Exchange." />
+        <title>Announcements | Cayman Islands Stock Exchange</title>
+        <!-- Bootstrap -->
+        <link href="/Content/bootstrap.min.css" rel="stylesheet">
+		<link href="/Content/bootstrap-datepicker3.min.css" rel="stylesheet">
+        <link href="/Content/style.css" rel="stylesheet" />
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Scripts go here -->
+        <script src="/scripts/TickerTape3.js?v101" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/Scripts/html5shiv.min.js"></script>
+      <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+    <body>
+        <div id="not-home-page-wrapper" class="not-home-page-wrapper">
+            <div id="main-body" class="not-home-page container">
+                
+                
+				<div id="branding" class="row">
+                    <div class="col-xs-5">
+                        <a href="https://www.csx.ky"><img id="csx-logo" class="pull-left" src="/images/csx-logo-gold250.png"  title="Home"/></a>
+                    </div>
+                    <div class="col-7 brand-right" style="vertical-align: text-top;">
+                        <div class="col-xs-4 abouttime smallcaper pull-right reverse-gold">
+                            Cayman Time | 04:14 - 
+                            GMT Time | 09:14
+                            <!-- /input-group -->
+                            <form id="main-search" action="/companies/search.asp" method="post" role="form">
+                                <div class="form-group fadeaway">
+                                    <div class="input-group pull-right">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default fadeaway" type="submit">Search</button>
+                                        </span>
+                                        <input type="text" name="SearchText" class="form-control fadeaway">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="col-xs-4 top-links col-xs-offset-3">
+                            <a class="color-red" href="#">CUSIP/ISINs and LEI Services</a>
+                        </div> -->
+                    </div>
+<!--					
+                    <div class="row" >
+                        <div class="col-xs-10" style="margin-top: 20px;">
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick">
+                                    <script type="text/javascript">var ticker2 = new TickerTape('/_data/TickerDataMF.asp', 'HTickerTape', true, 100, 20);</script>
+                                </div>
+                            </div>
+							
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick" style="padding-top:5px;">
+                                    <script type="text/javascript">var ticker3 = new TickerTape('/_data/TickerDataAN.asp', 'HTickerTape', true, 100, 40);</script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+-->
+                </div><nav id="main-nav" class="navbar navbar-default navbar-static-top smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+                            <li class="dropdown"><a href="/" class="nav-level-1">Home</a></li>
+							
+                            <li class="dropdown nav-level-1">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; About Us &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/aboutus/overview.asp">Overview</a></li>
+									<li><a href="/aboutus/benefits.asp">Benefits</a></li>
+                                    <li><a href="/aboutus/news.asp">News and Events</a></li>
+                                    <li><a href="/aboutus/affiliations.asp">Affiliations</a></li>
+									 <li><a href="/aboutus/recognitions.asp">Recognitions</a></li>
+                                    <!--<li><a href="/aboutus/csx-on-xetra.asp">CSX on XETRA</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Exchange Holidays</a></li>
+									<!--<li><a href="/aboutus/contact-us.asp">Contact Us</a></li>-->
+									<li><a href="/aboutus/applicationform.asp">Employment Application Form</a></li>
+<!--                                    <li><a href="/aboutus/faqs.asp">FAQs</a></li>
+-->
+                                </ul>
+                            </li>
+ 
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Companies &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/companies/announcements.asp">Announcements</a></li>
+                                    <li><a href="/companies/investment-funds.asp">Investment Funds</a></li>
+                                    <li><a href="/companies/specialist-debts.asp">Specialist Debt</a></li>
+                                    <li><a href="/companies/corporate-debts.asp">Corporate Debt</a></li>
+                                    <li><a href="/companies/ils-cat-bonds.asp">ILS / CAT Bonds</a></li>
+									<li><a href="/companies/retail-debts.asp">Retail Debt</a></li>
+                                    <li><a href="/companies/equities.asp">Equity</a></li>
+                                    <li><a href="/companies/daily-official-list.asp">Official List</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Listing &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/listing/listing-on-csx.asp">Listing on CSX</a></li>
+                                    <li><a href="/listing/product-guides.asp">Product Guides</a></li>
+									<li><a href="/listing/listing-rules-and-forms.asp">Listing Rules and Forms</a></li>
+                                    <li><a href="/listing/listing-checklists.asp">Listing Checklists</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+<!-- 									<li><a href="/listing/fact-sheets.asp">Fact Sheets</a></li>
+-->
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Trading &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/trading/trading-on-csx.asp">Trading on CSX</a></li>
+                                    <li><a href="/trading/daily-trading-summary.asp">Daily Trading Summary</a></li>
+                                    <!-- <li><a href="/trading/trading-procedures.asp">Trading Procedures</a></li>
+                                    <li><a href="/trading/settlement-procedures.asp">Settlement Procedures</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Trading Calendar</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+                                </ul>
+                            </li>
+<!--
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">CSX FundStream <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/fundstream/csx-fundstream.asp">CSX FundStream</a></li>
+                                </ul>
+                            </li>
+-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; ISIN &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/isin/isin-cusip.asp">ISIN-CUSIP Services</a></li>
+                                    <li><a href="/isin/apply-for-isin.asp">Apply for ISIN</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Agents &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/listing-agent/listing-agents.asp">Listing Agents</a></li>
+                                    <li><a href="/listing-agent/listing-agent-guide.asp">Listing Agent Guide</a></li>
+									<li><a href="/listing-agent/listing-agent-benefits.asp">Listing Agent Benefits</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Members &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-members.asp">Broker Members</a></li>
+                                    <li><a href="/broker/broker-membership-rules-forms.asp">Broker Membership Rules and Forms</a></li>
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Fees &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+							
+							<li class="dropdown">
+							  <a href="#" class="esg" data-toggle="dropdown">&nbsp; ESG &nbsp;<b class="caret"></b></a>
+							     <ul class="dropdown-menu">
+                                    <li><a href="/companies/esg.asp">CSX ESG Market</a></li>
+								 </ul>
+                            </li>
+							
+							<!-- <li class="dropdown"><a href="/Documents/Covid-19 Business Continuity Messsage.docx" class="nav-level-1">Covid-19 Business Continuity</a></li>-->
+							<li class="dropdown"><a href="/aboutus/contact-us.asp" class="nav-level-1">&nbsp;Contact Us &nbsp;</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+				<nav id="sub-nav" class="navbar navbar-default smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+
+							<li class="dropdown"><a class="current-page" href="announcements.asp">Announcements</a></li>
+
+							<li class="dropdown"><a href="investment-funds.asp">Investment Funds</a></li>
+
+							<li class="dropdown"><a href="specialist-debts.asp">Specialist Debt</a></li>
+
+							<li class="dropdown"><a href="corporate-debts.asp">Corporate Debt</a></li>
+
+							<li class="dropdown"><a href="ils-cat-bonds.asp">ILS / CAT Bonds</a></li>
+
+							<li class="dropdown"><a href="retail-debts.asp">Retail Debt</a></li>
+
+							<li class="dropdown"><a href="equities.asp">Equity</a></li>
+
+							<li class="dropdown"><a href="daily-official-list.asp">Official List</a></li>
+
+						</ul>
+					</div>
+				</nav>
+
+<ol class="breadcrumb">			
+<li><a href="/">Home</a></li><li>Companies</li>
+
+<li class="active">Announcements</li>
+
+</ol>
+
+
+				<div id="content" class="row addtop">
+                    <div class="col-xs-12 main-content">
+                        <h2>Announcements</h2>
+                        <div class="panel panel-default">
+                            <div class="panel-body" style="text-align:right;" >
+                                <p style="text-align:left;">This page comprises recent news releases issued by the Exchange on behalf of or concerning listed issuers.
+Please click on the article below to access the complete news release.</p>
+                                <form id="announcements-search" class="form-inline" action="#" method="post" role="form">
+                                    <div class="form-group">
+
+                                        <div class="input-group pull-right">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type='submit' id="ansearch">Announcement Search</button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Search for..." id="SearchText">
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">Recent</a></li>
+                            <li><a href="#tab2" data-toggle="tab">Archived</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab1">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='currentannouncements'>
+<!--
+                                        <tr>
+                                            <td>09 May 2014</td>
+                                            <td><a href="announcement.asp?Id=4681" target="_self">VBT Holdings Ltd. Announces Share Buyback Monthly Report</a></td>
+                                        </tr>
+                                    </tbody>
+-->
+                                </table>
+                            </div>
+                            
+                            <div class="tab-pane fade" id="tab2">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title" style="color:#fff;">Please select Announcements for the Year: </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p></p>
+                                        <p class="text-right">
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2026');">2026</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2025');">2025</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2024');">2024</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2023');">2023</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2022');">2022</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2021');">2021</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2020');">2020</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2019');">2019</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2018');">2018</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2017');">2017</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2016');">2016</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2015');">2015</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2014');">2014</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2013');">2013</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2012');">2012</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2011');">2011</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2010');">2010</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2009');">2009</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2008');">2008</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2007');">2007</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2006');">2006</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2005');">2005</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2004');">2004</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2003');">2003</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2002');">2002</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2001');">2001</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('2000');">2000</a>
+									
+                                        <a class="btn btn-primary btn-xs" role="button" onclick="selectyear('1999');">1999</a>
+									
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title" style="color:#fff;">Announcements for the Year: <span ID="SelectedYear" class="label label-success larger-label-1">2014</span></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id=yearlyannouncements>
+                                        <tr>
+                                            <td>Soon come</td>
+                                            <td>Loading announcements ...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+
+
+                    </div> <!-- main content -->
+                    
+                </div>
+
+                
+
+
+<div id="footer" class="row addtop smallcaper reverse-gold">
+	<p class="reverse-gold"><a class="reverse-gold" href="/aboutus/contact-us.asp">Contact us</a> | 
+<!--	<a class="reverse-gold" href="/aboutus/faqs.asp">FAQs</a> | -->
+	<a class="reverse-gold" href="/disclaimer.asp">Disclaimer</a> |
+	<a class="reverse-gold" href="/terms-of-use.asp">Terms of use</a> |
+	<a class="reverse-gold" target="_blank" href="/Documents/CSX_Privacy_Notice.pdf">Privacy Notice</a>
+	 </p>
+    <p class="reverse-gold">Copyright &copy; 2026 Cayman Islands Stock Exchange Ltd. All rights reserved.</p>
+</div>
+
+                                
+            </div>
+        </div>
+    
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/Scripts/jquery-1.9.0.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/Scripts/bootstrap.min.js"></script>
+		<script src="/Scripts/csxAnnRequest.js"></script>
+        <!-- custom js code -->
+       
+    </body>
+</html>
