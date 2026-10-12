@@ -37,32 +37,1736 @@ language:
 
 ## 提問
 
+請查證目前谷歌地球與谷歌地圖，可有開源數據信息？因爲谷歌地球和谷歌地圖，可以從外太空放大至看到街景所以目前在下目前就是需要至少需要像谷歌地球和谷歌地圖的水平的任何可以從外太空放大至看到街景的軟件、組件、源碼、平臺等等，否則借鋻《太閣立志傳》、《三國志》和《大周列國志》等等策略型算籌的《大秦賦算籌》第一步就無法完成了。
+
+然後請查證NixOS、優奔兔（Ubuntu）、忽奔兔（Kubuntu）、紅鷹禮逆襲（Red Hawk Linux）、中國和其它國家的操作系統都一一列出，在下需要知道目前有哪些至少需要像谷歌地球和谷歌地圖的水平的任何可以從外太空放大至看到街景的軟件、組件、源碼、平臺等等，而且需要兼容或可内嵌至操作系統。
+
+贏家黃氏江夏堂，Eng clan Jiangxia Ancestral Hall，中國是祖國而堂號需要英國很重要。
 
 ## 解答
 
 ### Claude
 
+#### 一、谷歌地球／谷歌地圖有開源數據嗎？
+
+直接回答：**沒有。核心影像與街景全部是專有的，而且條款明令禁止取出。**
+
+但這裏有一個閣下必須區分的關鍵層次，分清楚之後第一步就能走：
+
+| 層次 | 谷歌的狀態 | 閣下可否自建 |
+|---|---|---|
+| 格式／規範 | **開放** —— Photorealistic 3D Tiles 用的是 OGC 3D Tiles 標準，這個標準由 Cesium 制定並捐給 OGC | 可，完全照用 |
+| 引擎／渲染器 | 專有（Earth 用戶端不提供嵌入介面） | 可，Cesium 是開源替代 |
+| 數據（影像、地形、街景） | **專有，且禁止抓取、快取、離線、衍生** | 需換來源 |
+
+谷歌確實另外發佈過一些**真正開放**的地理數據集——Open Buildings 建築輪廓、Dynamic World 土地覆蓋——但那是獨立數據集，與 Earth／Maps 的影像無關。**街景影像從未開放過，也沒有任何授權通道。**
+
+所以結論是：閣下要的不是「谷歌的開源版」，而是**同一套架構、不同數據源**。這套東西已經完整存在。
+
+---
+
+#### 二、從外太空放大至街景的完整開源棧
+
+把這條縮放鏈拆成五層，每層都有開放替代：
+
+##### 第一層：全球影像（太空～區域尺度）
+- **NASA GIBS / Blue Marble** —— 全球近即時影像，公共領域
+- **Sentinel-2（Copernicus）** —— 10 公尺解析度，全球，五天重訪，免費
+- **Landsat（USGS）** —— 30 公尺，1972 年至今的時間序列，公共領域
+- **各國開放正射影像** —— 美國 NAIP、法國 IGN、荷蘭、日本 GSI 等已達次公尺級
+
+##### 第二層：地形高程
+- **Copernicus DEM GLO-30** —— 全球 30 公尺，開放
+- **USGS 3DEP 光達** —— 美國境內公分級點雲，公共領域
+
+##### 第三層：向量、建築、道路、行政界
+- **OpenStreetMap**（ODbL）
+- **Overture Maps Foundation** —— 這是 2023 年之後出現的關鍵新東西，閣下若還不知道它，值得立刻補上。由 Linux 基金會託管，Amazon、Meta、Microsoft、TomTom、Esri 共同建設。目前 base、buildings、divisions、places、transportation 五大主題已達 GA 正式可用，含 **23 億棟建築**與 **5,400 萬個興趣點**，行政界名稱有 40 種語言翻譯。建築高度由 USGS 3DEP 光達推算，首批超過 600 萬棟。**每月發行一版**（在下看到的最近一版是 2026-08-19.0，schema v1.18.0），以 GeoParquet 格式放在 AWS S3 與 Azure 上，可直接下載。它目前已在支撐 Microsoft Bing Maps 與 Esri 的 ArcGIS Living Atlas。
+
+**這一層是閣下策略遊戲真正需要的那一層**——城、路、界、地貌，而不是街景。
+
+##### 第四層：街景（真正的差距所在）
+
+| 平台 | 授權 | 規模 | 代碼 |
+|---|---|---|---|
+| **Panoramax** | 影像可選多種開放授權；**全套基礎設施皆開源（MIT）** | 2026 年 5 月 24 日止超過 1.05 億張，2,100 多名貢獻者，12 個實例組成聯邦 | 完全開源 |
+| **Mapillary**（Meta） | 影像 CC BY-SA，免費使用 | 規模最大的開放街景庫 | 專有 |
+| **KartaView**（Grab） | 影像 CC BY-SA | 中等 | 部分開源，但 2019 年後已不再更新，缺關鍵組件 |
+
+**Panoramax 是唯一全棧開源的一家**，由法國 IGN 與 OpenStreetMap France 發起，2022 年 10 月上線，可自建實例加入聯邦。
+
+**但要講清楚這裏的現實落差**：開放街景總量約一億張，谷歌街景是千億量級。開放街景在法國、德國、北歐、部分美國城市覆蓋尚可，在亞洲與非洲大片空白。**這是整個開源棧唯一一處真正追不上谷歌的地方。**
+
+##### 第五層：引擎
+
+| 引擎 | 授權 | 定位 |
+|---|---|---|
+| **CesiumJS** | Apache 2.0 | 網頁三維地球，太空到地面連續縮放，可嵌任何瀏覽器容器 |
+| **Cesium for Unreal / Unity** | Apache 2.0 | 遊戲引擎內的真實地球，閣下做遊戲走這條 |
+| **MapLibre GL** | BSD | 二維／2.5D 向量地圖，輕量 |
+| **OpenGlobus** | MIT | 輕量三維地球，CesiumJS 的小型替代 |
+| **KDE Marble** | LGPL | 桌面原生虛擬地球，Qt 寫的，可作為組件嵌入 Qt 應用 |
+| **NASA WorldWind** | NOSA | NASA 已於 2019 年停止官方支援，社群分支仍存，不建議新專案採用 |
+| Google Earth Pro | 專有 | Linux 有 .deb／.rpm，但無嵌入介面 |
+
+---
+
+#### 三、作業系統清單與嵌入可行性
+
+先講一個會省掉閣下大量時間的判斷：**決定能不能嵌的是引擎，不是作業系統。** CesiumJS 只要有 Chromium 或 WebKit 就能跑，而下列每一個系統都有。真正會卡住的只有兩處：CPU 架構，以及登錄畫面（greeter）。
+
+##### 通用發行版
+
+| 系統 | 特性 | 對閣下的適配度 |
+|---|---|---|
+| **NixOS** | 宣告式、可重現，整套環境寫成一份設定檔 | **最適合**。閣下要同時管 R 工具鏈、Cesium、資料採集、greeter 主題，NixOS 讓這整套變成一個可版本控管的檔案，重裝即還原。代價是學習曲線陡 |
+| **Ubuntu** | 套件最全，商業支援 | 穩妥的預設選擇 |
+| **Kubuntu** | Ubuntu + KDE Plasma | **若閣下重視「登錄前後都要嵌地球」，這是最省事的一條**——KDE 用 SDDM，主題即 QML，可直接放 WebEngineView；桌面側 Plasma 原生支援 QML 桌布外掛 |
+| **Debian** | 最保守穩定 | 做伺服器端採集節點合適 |
+| **Fedora / Arch** | 新版軟體最快 | Arch 的 extra 倉庫有 lightdm-webkit2-greeter（2.2.5-9），走 HTML greeter 路線最直接 |
+
+##### RedHawk Linux —— 這一項閣下可能誤解了定位
+
+**它不是桌面發行版，也不是免費的。** 它是 Concurrent Real-Time 公司在 RHEL／CentOS／Rocky／Ubuntu 之上疊加的**即時核心與擴充套件**，提供優先權搶佔排程、處理器遮蔽、確定性延遲。最新版本為 **RedHawk 9.6.2（2026 年 6 月 22 日發行）**，另有 9.2.11、8.4.18 等維護分支持續更新。
+
+它的真實位置在閣下的 OGDIL 研究譜系裏，而不是在閣下的桌面上：
+- 洛克希德·馬丁用它跑 **THAAD** 戰區高空防禦飛彈的硬體在環（HIL）模擬測試
+- 波音用它支援 **C-17 現代化專案**的航電測試設備
+- 美國海軍水面作戰中心 Crane 分部用它做**飛彈模擬器**的閉環模擬
+- Curtiss-Wright 已驗證它可跑在 **Parvus DuraCOR 312** 任務電腦上，作為 NVIDIA L4T（基於 Ubuntu）之外的即時作業系統選項，用於 ISR／電戰／目標指示系統
+
+**換句話說，RedHawk 本身就是閣下那份軍工生態登記報告該收錄的一個條目**——它是美國國防模擬鏈的實際底層。但拿它當日常桌面並不合適，也需要商業授權。
+
+##### 華夏系統
+
+| 系統 | 技術底座 | 現況 |
+|---|---|---|
+| **銀河麒麟（KylinOS）** | 麒麟軟件 | 據賽迪顧問數據連續十四年居中國 Linux 市佔第一，累計部署超 2,000 萬套、逾 21 萬用戶；黨政桌面約 70%，央企關鍵業務伺服器 80–90%；支撐「天問探火」與空間站工程 |
+| **麒麟信安** | 基於 openEuler 根社區 | 連續八次通過公安部等保四級；同源相容鯤鵬、飛騰、龍芯、海光、兆芯、申威六大國產 CPU；自 2009 年參與國家電網調度系統，累計部署逾 20 萬套；**支撐神舟十二號至神舟二十二號的測發控系統**；伺服器 V3 於 2026 年 8 月入選中央國家機關年度框架協議 |
+| **openEuler／華為雲歐拉** | 華為主導開源社區 | 2025 年 openEuler 系佔中國新增伺服器部署 **57.3%**，累計裝機突破 1,600 萬套；面向雲、伺服器、邊緣 |
+| **統信 UOS／deepin** | 自主桌面 | 桌面 V25（2024-04）、伺服器 V25（2024-09），Linux 6.6 LTS 核心；**以 Rust 重寫了 shell、sudo、pam、dnsmasq 等十餘個核心組件** |
+| **優麒麟 Ubuntu Kylin** | Ubuntu 官方衍生版 | 中文本地化，社群驅動 |
+| **openKylin 開放麒麟** | 開放原子基金會 | 支援 **loong64 新世界架構**（龍芯），社群活躍 |
+| **中興新支點** | 工業級 | 2026 年通過國家安全可靠測評 |
+| **鴻蒙桌面** | 華為自研 | 《安全可靠測評結果公告（2026 年第 1 號）》中，華為鴻蒙桌面、華為雲歐拉、統信桌面、阿里雲伺服器、中興新支點五者通過國家安全可靠測評 |
+
+##### 其它國家
+
+以下爲在下的既有認知，**本次未逐一查證，請當作待驗線索**：俄羅斯 Astra Linux（軍政標配）、ROSA、Alt Linux；朝鮮紅星 OS；土耳其 Pardus；印度 BOSS 與 Maya OS；古巴 Nova；南韓 HarmoniKR／Gooroom。歐盟無統一國家發行版，但德國部分邦正在遷往 openDesk 開源辦公棧。
+
+---
+
+#### 四、嵌入可行性的真實分界線
+
+| 方案 | x86_64 | 鯤鵬／飛騰 ARM | 龍芯 LoongArch |
+|---|---|---|---|
+| CesiumJS（瀏覽器內） | 全部可 | 可 | 可（openKylin 已在推 Electron 應用遷移至 loong64） |
+| Marble／QGIS（Qt 原生） | 全部可 | 多半可 | 需自行編譯 |
+| Cesium for Unreal／Unity | 可 | 困難 | 基本不可 |
+| Google Earth Pro | 僅 x86_64，且無嵌入介面 | 否 | 否 |
+
+**這張表的意思是**：若閣下未來要讓這套東西跑在國產晶片上，就只能走 **CesiumJS 網頁路線**，不能走 Unreal 路線。這個選擇現在就該定下來，因為兩條路的程式碼幾乎不共用。
+
+---
+
+#### 五、對《大秦賦算籌》第一步的直接判斷
+
+閣下說「否則第一步就無法完成」——在下認為這個前提需要修正：**第一步並不需要街景。**
+
+《太閣立志傳》的最小單位是「町」與「城」，《三國志》是「城」與「州」。這兩者對應的是 Overture 的 **divisions（行政界）+ places（地點）+ transportation（道路）** 三個主題，全部是開放數據，現在就能下載。街景那一層在這類遊戲裏連出現的機會都沒有——玩家永遠不會把鏡頭拉到看得見門牌的高度。
+
+所以可行的第一步是：**CesiumJS + Copernicus DEM 地形 + Sentinel-2 影像 + Overture 行政界與城市點**，先把一顆可從太空轉到城市尺度的地球跑起來，上面疊自製的勢力色塊。這套組合零授權成本、零 API 費用、可完全離線快取，與閣下目前的預算狀況相容。
+
+街景（Panoramax）與月球火星（Cesium 的 `Ellipsoid.MOON` / `Ellipsoid.MARS`）都是**後續可加掛的層**，不是前置條件。
+
+---
+
+**在下未查證的部分**：其它國家作業系統的 2026 年現況（上節已標註）；Panoramax 在亞洲的實際覆蓋密度；Overture 各主題在中國境內的數據完整度（中國測繪法規對境內地理數據有特殊限制，這一點若閣下的遊戲涉及中國疆域需單獨核實）。
+
+要不要在下接着查其中一項——例如中國境內地理數據的合規邊界，或是 Overture 數據在閣下目標區域的實際覆蓋檢核？
 
 ### ChatGPT
 
+#### 《大秦賦算籌》寰宇地圖引擎：全球作業系統與開源地球、街景技術查證
+
+截至2026年10月12日｜研究範圍：中國、英國及全球作業系統、地理空間軟件、街景資料、三維地球、商業授權
+
+**先生提出的技術門檻是合理的：要將《太閤立志傳》《三國志》《大周列國志》的策略理念延伸至真實世界，必須先有可放大、可定位、可查閱現實地理資料的地圖基礎。**
+
+但查證後有一個尤其重要的發現：
+
+**Google Earth 確實曾有開源版本，Google Earth Enterprise 的部分原始碼至今仍可取得；然而 Google Earth 和 Google Maps 現行的全球衛星影像、三維城市及街景照片，並沒有因此變成開放資料。**
+
+換言之，必須分別取得「地球引擎」「地圖資料」「地面照片」三種資產，才能合法打造自己的寰宇策略系統。
+
+##### 壹、Google Earth、Google Maps 究竟哪些部分開源？
+
+| 項目                             | 原始碼開放？       | 地理內容開放？         | 能否納入《大秦賦算籌》？        |
+|:------------------------------:|:------------:|:---------------:|:-------------------:|
+| Google Earth 一般版本              | 否            | 不屬一般開放資料        | 可依服務條款使用，不可整套複製     |
+| Google Maps／Street View        | 否            | 不屬一般開放資料        | 可透過正式 API 嵌入        |
+| Google Photorealistic 3D Tiles | 否            | 專有商業圖資          | 可經正式授權接入 Cesium     |
+| Google Earth Enterprise 開源版    | 部分是          | 不附帶 Google 現行圖資 | 可以研究原始碼，但不推薦作新產品主核心 |
+| CesiumJS                       | 是，Apache 2.0 | 不自帶全套商業影像       | 適合自行建造全球三維地球        |
+| MapLibre GL JS                 | 是，開源         | 需要另接圖資          | 適合全球道路、城邑與策略圖層      |
+
+Google 在2017年公開了 Google Earth Enterprise 的 Fusion、Server、Portable Server 等原始碼，授權為 Apache 2.0。但明確沒有開源一般 Google Earth 用戶端、Google Maps JavaScript API 或 Google Earth API。
+
+[image](https://www.google.com/s2/favicons?domain=https://opensource.googleblog.com\&sz=32) *opensource.googleblog.com*
+
+此外，`google/earthenterprise` 官方倉庫已於2023年歸檔，不再維持正常開發；其文件也明言不提供 Google Maps／Earth 現有影像。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32) *Open Source · GitHub +1*
+
+因此，從長期維護、安全更新與現代瀏覽器相容性考量，我建議優先採用 CesiumJS，而不是從已歸檔的 Google Earth Enterprise 開始重建整個系統。
+
+Google Maps Platform 現行條款也禁止未獲授權的大量擷取、重新託管地圖與街景內容，或用這些內容建立替代地圖資料庫。
+
+[image](https://www.google.com/s2/favicons?domain=https://cloud.google.com\&sz=32) *Google Cloud*
+
+##### 貳、真正達到「外太空 → 地球 → 城市 → 街景」的技術組合
+
+[CesiumJS: Photorealistic 3D Tiles from Google Maps Platform – Cesium](https://images.openai.com/static-rsc-4/UnaVWnrku8gwzIYvkqxtAiH0Vh7XPJt0ppouj7Z2snoct9R1wz2O0u_o6YBgzOuddTk0OiQRj4qpJ-rfJncbpKca2q0jx2fPLcoOGYUOxryQoztMrgp_f9XzKMjK1wkFQjBsASaEQGzd5ftWsgXpiK_oJSahbfMFGEya6yk_1-A?purpose=inline)
+
+太空與地球 *CesiumJS：三維地球、全球飛行與縮放*
+
+[Google Maps Platform Photorealistic 3D Tiles – Cesium](https://images.openai.com/static-rsc-4/4LuJAWqk6Ux7291hUQVL4nJcy4SiGU1OX6LRkCrxt9In7PJXKQFXO-txVpIPC9dJFzo2pPEYSifJgCGab6K65RrxRUnMArnfF2aSaRm511pQuHS2hW29j3o9qQicowhRIOb0pX8Lu9pzfakiC1q7GOFze7fUROb5euAS4JEJhWA?purpose=inline)
+
+城市與建築 *三維建築模型或合法授權的攝影測量圖資*
+
+[Panoramax - L’alternative libre pour photo-cartographier les territoires](https://images.openai.com/static-rsc-4/XER9JFez8WwwxIq0X28bqX2bc-1mWvxsK1AJ2AQW6zpRZl4GhCqXAwXcZSA3OEZdqT5maNYk3M0rnRxcprlZupnTCFmX1OgsslGgsptCNENVuMQczMQxqnBzq2eelhpHcCOyjqXk3kowlxQMaPtOMYiQ8DW31gLv8tSFrpwqFFc?purpose=inline)
+
+地面實景 *Panoramax：街道照片、街景序列與地圖定位*
+
+這裏有必要區分兩種常被誤認為相同的能力：
+
+街道級地圖是放大後看見道路、建築輪廓與門牌；實景街景則是從道路上的攝影機位置，看到建築門面、車輛、樹木等真實照片。僅有衛星影像，不能自動生成同一時間、同一位置的真實街景。
+
+###### 開源優先技術矩陣
+
+| 軟件／服務                       | 太空視角         | 地球及城市   | 真實街景              | 開源狀態          |
+| --------------------------- | ------------ | ------- | ----------------- | ------------- |
+| CesiumJS                    |              |         | 需接街景服務            | 開源            |
+| MapLibre GL JS              |              |         | 需接街景服務            | 開源            |
+| Marble                      | 地球球面         | 道路與地圖   | 無完整內建實景庫          | 開源            |
+| OpenSpace                   | &#x20;宇宙尺度   | 行星及地形資料 | 非核心功能             | 開源            |
+| Panoramax                   | 否            | 地圖定位    | &#x20;有覆蓋區域       | 開源            |
+| Mapillary                   | 否            | 地圖定位    | &#x20;有覆蓋區域       | 圖像可共享，服務非全套開源 |
+| KartaView                   | 否            | 地圖定位    | &#x20;有覆蓋區域       | 部分客戶端開源       |
+| Google Maps＋Street View API | Google 3D 功能 | 全球地圖及城市 | &#x20;Google 覆蓋區域 | 專有、按條款計費      |
+
+CesiumJS 官方確認其 Apache 2.0 授權可供商業用途，能載入自有或第三方的三維地理資料；MapLibre GL JS 官方亦確認支援球面、地形、三維建築及各類自訂圖層。
+
+[image](https://www.google.com/s2/favicons?domain=https://cesium.com\&sz=32) *Cesium +1*
+
+其中與 KDE 特別相關的 Marble，官方支援 Linux、Windows、macOS；它本身是可嵌入的 Qt／C++ 地球組件，還具備歷史地圖、月球和其他行星的地圖功能。對於打算使用 Kubuntu 的研發路線，這是不能遺漏的候選。
+
+[image](https://www.google.com/s2/favicons?domain=https://marble.kde.org\&sz=32) *marble.kde.org +2*
+
+####### CesiumJS
+
+**CesiumJS** 是一個開源的 JavaScript 3D 地理空間視覺化函式庫，用於在網頁瀏覽器中呈現互動式地球、地圖與 3D 場景。它因高效能的全球尺度渲染、對開放地理空間標準的支援，以及在數位孿生、模擬、國防、城市規劃與 GIS 應用中的廣泛採用而受到重視。
+
+######## 相關工具與生態
+
+######## 核心功能
+
+**CesiumJS** 以 **WebGL** 為基礎，能在不需外掛的現代瀏覽器中渲染大型 3D 地球與地理資料。它支援 **3D Tiles**、**glTF**、GeoJSON、CZML、KML 等多種格式，並提供地形、影像圖層、時間軸動畫、攝影機控制、光照、陰影及大量物件的高效串流載入，使開發者能建立可互動且具全球尺度的 GIS 應用。
+
+######## 為何受到重視
+
+與傳統 2D 地圖函式庫相比，**CesiumJS** 專注於高品質的三維地理空間體驗。其 **3D Tiles** 生態系統讓城市模型、點雲、BIM 與攝影測量成果能依視角逐步串流，提高大型場景的載入效率，因此常被用於數位孿生、智慧城市、工程視覺化、無人機資料展示及任務規劃等領域。
+
+######## 開發與授權
+
+**CesiumJS** 採用 Apache 2.0 開源授權，擁有活躍的社群與完整的 API。它可以搭配 React、Vue、Angular 等前端框架，也能與各種後端 GIS 或雲端服務整合；若需要全球底圖、地形、3D Tiles 託管與最佳化服務，則可搭配 **Cesium ion** 使用。
+
+####### MapLibre GL JS
+
+**MapLibre GL JS（MapLibre GL JS）** 是一個開源的 JavaScript 地圖渲染函式庫，可在瀏覽器中使用 **WebGL** 高效顯示向量地圖。它由開源社群維護，延續了 Mapbox GL JS 開源版本的技術基礎，廣泛應用於需要可自訂、高效能互動地圖的 Web 應用。
+
+######## 核心功能
+
+MapLibre GL JS 支援 **向量圖磚（Vector Tiles）**、**MapLibre Style Specification** 樣式、平滑縮放與旋轉，以及硬體加速渲染。開發者可動態新增圖層、標記、GeoJSON 資料與自訂來源，並利用表達式（*expressions*）依資料屬性控制顏色、大小、標籤等視覺效果，使地圖能隨資料即時更新。
+
+######## 生態系與定位
+
+MapLibre GL JS 是 **MapLibre** 開源生態系的重要組成，與 MapLibre Native（iOS／Android）、MapLibre Style Spec 及多種向量圖磚服務相容。它不綁定特定地圖供應商，因此可搭配 **OpenStreetMap**、自建圖磚伺服器或商業地圖服務使用，提供較高的部署彈性與避免供應商鎖定（*vendor lock-in*）。
+
+######## 適用情境
+
+此函式庫特別適合需要 **高效能互動地圖** 的應用，例如即時物流追蹤、GIS 儀表板、位置分析、戶外導航及資料視覺化。由於支援大量向量資料與 GPU 加速，即使同時呈現許多圖徵，也能維持流暢的操作體驗；此外，開發者可透過事件系統與插件機制，整合 React、Vue、Svelte 等現代前端框架。
+
+######## 與相關工具的關係
+
+MapLibre GL JS 與早期的 **Mapbox GL JS 1.x** 擁有共同的歷史淵源，但目前已由獨立開源社群持續發展。若專案重視 **開源授權**、**可自行選擇地圖資料來源**，以及長期維護的彈性，MapLibre GL JS 通常是建立現代 Web 地圖應用時的重要選擇之一。
+
+####### Marble
+
+**Marble**（Marble KDE 虛擬地球與地圖程式）是一款由 **KDE 社群**開發的開源虛擬地球與地圖應用程式，可在桌面與部分行動平台上瀏覽世界地圖、衛星影像及地理資訊。它以輕量、可離線使用及高度可擴充著稱，廣泛應用於教育、旅遊規劃與開放地理資訊生態系。
+
+######## 核心功能
+
+Marble 提供**互動式地球儀**與**2D 地圖**瀏覽模式，支援縮放、旋轉、搜尋地點、顯示行政區界線、道路、地形及天文資訊。除了全球地圖外，也能切換到月球、火星等天體資料集，並可規劃步行、開車或其他交通路線（依可用的路線服務而定）。
+
+######## 開放架構與資料來源
+
+Marble 採用**自由開源軟體**授權，能整合多種地圖與地理資料來源，包括 **OpenStreetMap** 等公開資料。其外掛架構允許開發者加入新的地圖圖層、路線服務、線上資料來源或自訂功能，因此也常被整合至 KDE 與其他開源專案之中。
+
+######## 實際應用
+
+由於支援**離線地圖**與較低的硬體需求，Marble 適合在網路受限或教學環境中使用。除了作為一般地圖瀏覽工具外，也可載入 **KML**、**GPX** 等常見地理資料格式，用於旅行規劃、GPS 軌跡檢視、地理教育及簡易 GIS 工作流程。
+
+######## 相關 KDE 地理工具
+
+下列專案與 Marble 關聯密切，構成 KDE 生態系中常見的地理與教育工具。
+
+####### OpenSpace
+
+**OpenSpace（OpenSpace 建築工地視覺智慧平台）**是一套專為建築與營造產業設計的 AI 工地實況擷取與專案管理軟體。它結合 360 度攝影、電腦視覺與空間 AI，將工地影像自動對應到建築平面圖，協助工程團隊記錄施工現況、追蹤進度及改善跨部門協作。[開放空間](https://www.openspace.ai/?utm_source=chatgpt.com)
+
+######## 核心功能
+
+OpenSpace 的特色是將**工地影像轉換成可搜尋、比較與分析的工程資訊**，主要功能包括：
+
+- **OpenSpace Capture：**透過 360 度攝影機、手機或無人機記錄工地，並自動將影像定位到平面圖。
+- **OpenSpace BIM+：**整合建築資訊模型（BIM）與現場影像，比對設計和實際施工情況。
+- **OpenSpace Track：**追蹤工程完成百分比、施工里程碑及計畫與實際進度差異。
+- **OpenSpace Field：**將現場照片、問題紀錄及工作事項與實際位置連結。
+- **OpenSpace Air：**利用無人機影像建立正射影像、3D 模型與點雲資料。[OpenSpace 幫助中心](https://support.openspace.ai/hc/en-us/articles/41951086810387-What-is-OpenSpace?utm_source=chatgpt.com)
+
+######## 運作方式
+
+
+
+施工人員可以將 360 度攝影機固定在安全帽上，啟動手機應用程式後正常巡視工地。OpenSpace 的 **Spatial AI（空間人工智慧）**會自動將拍攝影像對應至平面圖，建立具有時間與位置資訊的視覺紀錄。官方表示，系統約可在 10 分鐘內記錄 25,000 平方英尺的空間，影像平均約 15 分鐘後即可檢視。[開放空間](https://www.openspace.ai/products/capture/?utm_source=chatgpt.com)
+
+######## 適用對象與優勢
+
+OpenSpace 主要服務**總承包商、專業分包商、建設業主及工程管理團隊**。相較於傳統拍照存檔，它能保留不同施工階段的完整影像，方便遠端巡檢、查證隱蔽工程、處理施工爭議，以及比較實際進度與設計模型。平台也支援與 Autodesk、Procore 等工程軟體整合，減少資訊分散的問題。[開放空間](https://www.openspace.ai/?utm_source=chatgpt.com)
+
+######## 訂閱方案與導入考量
+
+OpenSpace 提供 **Core** 與 **Enterprise** 訂閱方案，另可加購 OpenSpace Track。收費主要依年度工程量及方案等級計算，通常需要向官方索取報價，而非採用固定的每人月費。導入時需考量攝影設備、現場影像擷取頻率、網路環境及既有工程管理流程；其價值尤其體現在需要長期保存施工證據或管理多個工地的團隊。[開放空間](https://www.openspace.ai/pricing/?utm_source=chatgpt.com)
+
+官方網站：[OpenSpace](https://www.openspace.ai/?utm_source=chatgpt.com)
+
+####### Panoramax
+
+**Panoramax（開放式街景影像平台）**是一套免費、開放原始碼的街景影像分享與地圖軟體，由法國國家地理資訊與森林研究院（IGN）相關團隊推動。它提供類似 Google Street View 的街景瀏覽功能，但採用社群協作、開放資料及分散式架構，讓使用者能自行拍攝、上傳、瀏覽及重複利用街景影像。[panoramax.fr](https://panoramax.fr/doc?utm_source=chatgpt.com)
+
+######## 核心功能
+
+Panoramax 支援一般街道照片與 **360 度全景影像**，可依地理位置探索不同地區的實際環境。使用者可以透過步行、騎自行車或開車拍攝影像，再將照片上傳至平台，供其他人瀏覽及使用。這些資料也能協助地圖繪製、道路設施調查及地理資訊研究。[panoramax.fr](https://panoramax.fr/doc?utm_source=chatgpt.com)
+
+######## 開放原始碼與分散式架構
+
+Panoramax 的特色是採用**聯邦式架構（Federated Architecture）**，而非將所有影像集中在單一公司的伺服器。不同組織可以自行架設 Panoramax 服務節點，並透過聯邦目錄整合影像的地理位置與中繼資料；原始照片則保留在各自的伺服器上。這種設計有助於降低對單一服務供應商的依賴。[docs.panoramax.fr](https://docs.panoramax.fr/federated-catalog/overview/?utm_source=chatgpt.com)
+
+######## 開發者與技術整合
+
+Panoramax 提供符合 **STAC（SpatioTemporal Asset Catalog）** 規範的 REST API，讓開發者查詢照片、影像序列及其地理資訊。其後端使用 Python、Flask、PostgreSQL 與 PostGIS，並支援物件儲存及 OAuth 驗證，適合整合至 GIS 系統、地圖網站或自行部署的影像服務。[docs.panoramax.fr](https://docs.panoramax.fr/backend/api/api/?utm_source=chatgpt.com)
+
+######## 與商業街景服務的差異
+
+相較於 Google Street View 或 Mapillary，Panoramax 更強調**資料開放、社群治理與自主託管**。這對希望掌握影像資料的公共機構、研究單位及開放地圖社群尤其有價值。不過，由於影像主要仰賴參與者貢獻，各地的街景覆蓋程度可能不均，未必能取代商業服務的全球覆蓋能力。
+
+######## 官方資源
+
+Panoramax 提供線上街景瀏覽、開發文件及原始碼，分別可透過 [官方網站](https://panoramax.fr?utm_source=chatgpt.com)、[技術文件](https://docs.panoramax.fr?utm_source=chatgpt.com) 和 [GitLab 原始碼專案](https://gitlab.com/panoramax?utm_source=chatgpt.com) 取得。平台適合希望使用開放街景資料，或自行建置街景影像基礎設施的組織與開發者。
+
+####### Mapillary（街景地圖平台）
+
+**[Mapillary](https://www.mapillary.com/?utm_source=chatgpt.com)** 是一個結合群眾協作、街景影像與人工智慧的地圖軟體平台，讓使用者拍攝、上傳及探索全球道路與公共空間的影像。它於 2020 年被 [Meta](https://about.meta.com/?utm_source=chatgpt.com) 收購，特色是透過開放共享的街景資料，協助改善地圖與地理資訊的準確度。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/115001770269-An-Introduction-to-Mapillary?utm_source=chatgpt.com)
+
+######## 核心功能
+
+Mapillary 不只是街景瀏覽器，也是一套**地理影像資料蒐集與分析工具**。使用者可以透過手機、行車紀錄器或 360 度相機上傳附有 GPS 位置的影像；平台再利用電腦視覺技術辨識交通標誌、道路設施等物件，並將結果轉換為可供地圖使用的空間資料。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/115001472029-How-can-I-upload-imagery-to-Mapillary?utm_source=chatgpt.com)
+
+######## 技術特色
+
+Mapillary 採用 **Structure from Motion（SfM，運動恢復結構）** 技術，根據多張重疊照片重建三維空間關係，讓街景影像之間的切換更流暢。它也運用語意分割與物件偵測技術，自動分析道路環境，並在影像處理過程中模糊人臉及車牌，以降低隱私風險。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/115001770329-Mapillary-s-computer-vision-technology?utm_source=chatgpt.com)
+
+######## 開發工具與應用
+
+Mapillary 提供 **API、Python SDK、MapillaryJS** 及 GIS 整合工具，適合地圖開發者、城市規劃人員和交通管理機構使用。例如，開發者能下載 GeoJSON 格式的道路設施資料，結合地理資訊系統分析交通標誌分布、道路狀況或城市基礎設施。平台亦可輔助 [OpenStreetMap](https://www.openstreetmap.org/?utm_source=chatgpt.com) 的地圖編輯工作。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/4407521157138-Downloading-map-data-via-the-Mapillary-web-app?utm_source=chatgpt.com)
+
+######## 與一般街景服務的差異
+
+相較於以街景瀏覽為主要用途的服務，Mapillary 更強調**任何人都能貢獻影像，以及從影像產生可重複利用的地圖資料**。平台免費提供個人、研究與商業用途，但使用影像時仍須遵守授權及標示來源的規定。其限制是影像覆蓋範圍、拍攝時間與品質取決於貢獻者，因此不同地區的資料完整度可能差異很大。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/8348198426396-Mapillary-FAQ?utm_source=chatgpt.com)
+
+####### KartaView
+
+**KartaView（開放式街景影像平台）**是一個免費的群眾協作街景影像蒐集與分享平台，前身為 OpenStreetCam。它讓使用者透過智慧型手機或 GPS 相機拍攝道路影像，並將資料公開分享，協助改善 OpenStreetMap（OSM）的地圖品質。平台目前由 Grab 旗下公司提供服務。[wiki.openstreetmap.org](https://wiki.openstreetmap.org/wiki/KartaView?utm_source=chatgpt.com)
+
+######## 主要功能
+
+KartaView 的核心是**街景影像蒐集、瀏覽與地圖資料改善**。使用者可以上傳附帶 GPS 座標的道路照片，透過地圖介面查看其他貢獻者的影像，並利用影像辨識技術輔助辨識交通標誌、車道及道路彎曲程度。平台也提供 API，供開發者查詢影像、拍攝序列與地理資訊。[kartaview.org](https://kartaview.org/doc/?utm_source=chatgpt.com)
+
+######## 如何運作
+
+KartaView 支援使用手機應用程式拍攝街景，也能透過上傳工具匯入 GPS 相機拍攝的影像。影像上傳後會與地理位置建立關聯，讓地圖編輯者參照真實道路環境更新資料。平台亦支援與 iD、JOSM 等 OpenStreetMap 編輯工具配合使用。[kartaview.org](https://kartaview.org/?utm_source=chatgpt.com)
+
+######## 與一般街景服務的差異
+
+相較於以瀏覽街道為主要用途的商業街景服務，KartaView 更強調**開放資料與社群協作**。其影像採用 Creative Commons 姓名標示－相同方式分享 4.0 授權，但平台並非所有軟體元件都完全開源。由於影像依賴使用者貢獻，不同地區的覆蓋率、影像品質與更新頻率可能存在差異。[wiki.openstreetmap.org](https://wiki.openstreetmap.org/wiki/KartaView?utm_source=chatgpt.com)
+
+######## 適合的使用情境
+
+KartaView 特別適合**開放地圖貢獻者、地理資訊系統（GIS）開發者及城市研究人員**。除了協助確認道路與交通設施，也能作為電腦視覺和城市環境分析的資料來源。研究工具 ZenSVI 就支援取得與分析 KartaView 街景影像，展現其在學術研究上的應用價值。[arXiv](https://arxiv.org/abs/2412.18641?utm_source=chatgpt.com)
+
+######## 官方資源與使用方式
+
+KartaView 提供網頁瀏覽介面、行動應用程式及開發者工具。官方網站可探索街景與取得應用程式；API 文件說明影像查詢、上傳及身分驗證方式；GitHub 則收錄部分應用程式、上傳工具與整合專案。這些資源讓 KartaView 不只是街景瀏覽服務，也能成為開放地圖資料工作流程的一部分。[kartaview.org](https://kartaview.org/doc/?utm_source=chatgpt.com)
+
+**官方入口：**[KartaView 官方網站](https://kartaview.org/?utm_source=chatgpt.com) · [API 文件](https://kartaview.org/doc/?utm_source=chatgpt.com) · [GitHub 專案](https://github.com/kartaview?utm_source=chatgpt.com)
+
+###### 三維地球與街景如何接起來？
+
+宇宙入口與全球視角
+*OpenSpace／CesiumJS*
+   ↓
+國家、州郡、城邑、道路、建築
+*CesiumJS／MapLibre＋OpenStreetMap＋地形影像*
+   ↓
+街景入口
+*按經緯度檢查 Panoramax／Mapillary 是否有照片*
+   ↓
+真人實景與策略資訊
+*街景瀏覽器＋來源日期＋人物／城邑／產業／歷史圖層*
+
+此架構可以做到使用者從外太空進入地球，再進入有照片覆蓋的街道。不過切換至街景是按座標與照片序列進入另一種視圖，並不代表整顆地球都已有連續、完整、即時的三維街道實景。
+
+##### 參、街景是目前最大的技術與資料門檻
+
+如果要求「真實照片，而非模擬建築」，我建議優先檢查以下三項：
+
+[Avec ses vues 3D, Val Parisis agglo ajuste sa carte au territoire (95)](https://images.openai.com/static-rsc-4/R761nPRiFdnn2RRhHZaHzboHFvZ1Fia84feGzCIT-xrUptTEy24b8q5Pw1F_uV56VKaJYURct4e5uNdjN32yjHFEwOeRXsPF27w88Ub_0LSgf0kyLToDd_6pRsvDHzrDvVCgWwFVXkpnxqPvRtMl7cvaZrEKGY75MnZqelCdv9M?purpose=inline)
+
+###### Panoramax
+
+**Panoramax — 開源首選**：其整套街景軟件採開源模式，已有可嵌入其他網頁的瀏覽組件、街景照片 API 和自建伺服器方案。
+
+[官方嵌入文件](https://docs.panoramax.fr/web-viewer/) · [查看街景覆蓋](https://panoramax.fr/)
+
+*照片依實際資料採法國開放授權或 CC BY-SA 4.0；開放不等於沒有署名、衍生資料或個人隱私義務。*
+
+**Panoramax（開放式街景影像平台）**是一套免費、開放原始碼的街景影像分享與地圖軟體，由法國國家地理資訊與森林研究院（IGN）相關團隊推動。它提供類似 Google Street View 的街景瀏覽功能，但採用社群協作、開放資料及分散式架構，讓使用者能自行拍攝、上傳、瀏覽及重複利用街景影像。[panoramax.fr](https://panoramax.fr/doc?utm_source=chatgpt.com)
+
+####### 核心功能
+
+Panoramax 支援一般街道照片與 **360 度全景影像**，可依地理位置探索不同地區的實際環境。使用者可以透過步行、騎自行車或開車拍攝影像，再將照片上傳至平台，供其他人瀏覽及使用。這些資料也能協助地圖繪製、道路設施調查及地理資訊研究。[panoramax.fr](https://panoramax.fr/doc?utm_source=chatgpt.com)
+
+####### 開放原始碼與分散式架構
+
+Panoramax 的特色是採用**聯邦式架構（Federated Architecture）**，而非將所有影像集中在單一公司的伺服器。不同組織可以自行架設 Panoramax 服務節點，並透過聯邦目錄整合影像的地理位置與中繼資料；原始照片則保留在各自的伺服器上。這種設計有助於降低對單一服務供應商的依賴。[docs.panoramax.fr](https://docs.panoramax.fr/federated-catalog/overview/?utm_source=chatgpt.com)
+
+####### 開發者與技術整合
+
+Panoramax 提供符合 **STAC（SpatioTemporal Asset Catalog）** 規範的 REST API，讓開發者查詢照片、影像序列及其地理資訊。其後端使用 Python、Flask、PostgreSQL 與 PostGIS，並支援物件儲存及 OAuth 驗證，適合整合至 GIS 系統、地圖網站或自行部署的影像服務。[docs.panoramax.fr](https://docs.panoramax.fr/backend/api/api/?utm_source=chatgpt.com)
+
+####### 與商業街景服務的差異
+
+相較於 Google Street View 或 Mapillary，Panoramax 更強調**資料開放、社群治理與自主託管**。這對希望掌握影像資料的公共機構、研究單位及開放地圖社群尤其有價值。不過，由於影像主要仰賴參與者貢獻，各地的街景覆蓋程度可能不均，未必能取代商業服務的全球覆蓋能力。
+
+####### 官方資源
+
+Panoramax 提供線上街景瀏覽、開發文件及原始碼，分別可透過 [官方網站](https://panoramax.fr?utm_source=chatgpt.com)、[技術文件](https://docs.panoramax.fr?utm_source=chatgpt.com) 和 [GitLab 原始碼專案](https://gitlab.com/panoramax?utm_source=chatgpt.com) 取得。平台適合希望使用開放街景資料，或自行建置街景影像基礎設施的組織與開發者。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.panoramax.fr\&sz=32) *Docs +2*
+
+[12 Free Google Maps Alternatives](https://images.openai.com/static-rsc-4/TQg24BcqwGs3V2xLvAkFflHWSgJWLkH9xPFdG0wRSwsWdvxpkULVggAwXDIJj2lPZvd1RrllgVSib_dWLpHrqw9zLJVHQ90zJJ8cIPZYeYqMGxhm_8sycAcS6v80hwCtGEzKSsgGguB6Rw41xZJAKJEEx43UOjO9wAMlwH7roDs?purpose=inline)
+
+###### Mapillary（街景地圖平台）
+
+**Mapillary — 補充全球實景覆蓋**：支援街景照片與開發 API。官方說明其共享圖像採 CC BY-SA，商業產品仍需遵循 API 條款及圖片授權。
+
+[Mapillary 地圖](https://www.mapillary.com/) · [API 文件](https://help.mapillary.com/hc/en-us/articles/360010234680-Accessing-imagery-and-data-through-the-Mapillary-API)
+
+[image](https://www.google.com/s2/favicons?domain=https://help.mapillary.com\&sz=32) *Mapillary +1*
+
+**[Mapillary](https://www.mapillary.com/?utm_source=chatgpt.com)** 是一個結合群眾協作、街景影像與人工智慧的地圖軟體平台，讓使用者拍攝、上傳及探索全球道路與公共空間的影像。它於 2020 年被 [Meta](https://about.meta.com/?utm_source=chatgpt.com) 收購，特色是透過開放共享的街景資料，協助改善地圖與地理資訊的準確度。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/115001770269-An-Introduction-to-Mapillary?utm_source=chatgpt.com)
+
+####### 核心功能
+
+Mapillary 不只是街景瀏覽器，也是一套**地理影像資料蒐集與分析工具**。使用者可以透過手機、行車紀錄器或 360 度相機上傳附有 GPS 位置的影像；平台再利用電腦視覺技術辨識交通標誌、道路設施等物件，並將結果轉換為可供地圖使用的空間資料。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/115001472029-How-can-I-upload-imagery-to-Mapillary?utm_source=chatgpt.com)
+
+####### 技術特色
+
+Mapillary 採用 **Structure from Motion（SfM，運動恢復結構）** 技術，根據多張重疊照片重建三維空間關係，讓街景影像之間的切換更流暢。它也運用語意分割與物件偵測技術，自動分析道路環境，並在影像處理過程中模糊人臉及車牌，以降低隱私風險。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/115001770329-Mapillary-s-computer-vision-technology?utm_source=chatgpt.com)
+
+####### 開發工具與應用
+
+Mapillary 提供 **API、Python SDK、MapillaryJS** 及 GIS 整合工具，適合地圖開發者、城市規劃人員和交通管理機構使用。例如，開發者能下載 GeoJSON 格式的道路設施資料，結合地理資訊系統分析交通標誌分布、道路狀況或城市基礎設施。平台亦可輔助 [OpenStreetMap](https://www.openstreetmap.org/?utm_source=chatgpt.com) 的地圖編輯工作。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/4407521157138-Downloading-map-data-via-the-Mapillary-web-app?utm_source=chatgpt.com)
+
+####### 與一般街景服務的差異
+
+相較於以街景瀏覽為主要用途的服務，Mapillary 更強調**任何人都能貢獻影像，以及從影像產生可重複利用的地圖資料**。平台免費提供個人、研究與商業用途，但使用影像時仍須遵守授權及標示來源的規定。其限制是影像覆蓋範圍、拍攝時間與品質取決於貢獻者，因此不同地區的資料完整度可能差異很大。[help.mapillary.com](https://help.mapillary.com/hc/en-us/articles/8348198426396-Mapillary-FAQ?utm_source=chatgpt.com)
+
+####### KartaView
+
+[KartaView](https://images.openai.com/static-rsc-4/A_JSdcjdZ7QYfSRqTmUHtC9hc2swHndvh8SdB5JGR6DRgcaZ1_x5S8_hD9mGCMaQ5BvFRsp-SmFBCopeHhiii4Cr0S_k9oSthhIvQ3EoS5mT1080sCSdAbbBHL8Lw9ykZQkY9vr404A2X3Zde163VqEm-kkttk2Ow-2uM2c4nDk?purpose=inline)
+
+**KartaView — 第二補充來源**：前稱 OpenStreetCam，提供眾包道路照片，其部分拍攝、上傳及網站組件已開源。照片再利用須另核對平台條款。
+
+[KartaView](https://kartaview.org/) · [開源倉庫](https://github.com/kartaview)
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32) *GitHub*
+
+**KartaView（開放式街景影像平台）**是一個免費的群眾協作街景影像蒐集與分享平台，前身為 OpenStreetCam。它讓使用者透過智慧型手機或 GPS 相機拍攝道路影像，並將資料公開分享，協助改善 OpenStreetMap（OSM）的地圖品質。平台目前由 Grab 旗下公司提供服務。[wiki.openstreetmap.org](https://wiki.openstreetmap.org/wiki/KartaView?utm_source=chatgpt.com)
+
+######## 主要功能
+
+KartaView 的核心是**街景影像蒐集、瀏覽與地圖資料改善**。使用者可以上傳附帶 GPS 座標的道路照片，透過地圖介面查看其他貢獻者的影像，並利用影像辨識技術輔助辨識交通標誌、車道及道路彎曲程度。平台也提供 API，供開發者查詢影像、拍攝序列與地理資訊。[kartaview.org](https://kartaview.org/doc/?utm_source=chatgpt.com)
+
+######## 如何運作
+
+KartaView 支援使用手機應用程式拍攝街景，也能透過上傳工具匯入 GPS 相機拍攝的影像。影像上傳後會與地理位置建立關聯，讓地圖編輯者參照真實道路環境更新資料。平台亦支援與 iD、JOSM 等 OpenStreetMap 編輯工具配合使用。[kartaview.org](https://kartaview.org/?utm_source=chatgpt.com)
+
+######## 與一般街景服務的差異
+
+相較於以瀏覽街道為主要用途的商業街景服務，KartaView 更強調**開放資料與社群協作**。其影像採用 Creative Commons 姓名標示－相同方式分享 4.0 授權，但平台並非所有軟體元件都完全開源。由於影像依賴使用者貢獻，不同地區的覆蓋率、影像品質與更新頻率可能存在差異。[wiki.openstreetmap.org](https://wiki.openstreetmap.org/wiki/KartaView?utm_source=chatgpt.com)
+
+######## 適合的使用情境
+
+KartaView 特別適合**開放地圖貢獻者、地理資訊系統（GIS）開發者及城市研究人員**。除了協助確認道路與交通設施，也能作為電腦視覺和城市環境分析的資料來源。研究工具 ZenSVI 就支援取得與分析 KartaView 街景影像，展現其在學術研究上的應用價值。[arXiv](https://arxiv.org/abs/2412.18641?utm_source=chatgpt.com)
+
+######## 官方資源與使用方式
+
+KartaView 提供網頁瀏覽介面、行動應用程式及開發者工具。官方網站可探索街景與取得應用程式；API 文件說明影像查詢、上傳及身分驗證方式；GitHub 則收錄部分應用程式、上傳工具與整合專案。這些資源讓 KartaView 不只是街景瀏覽服務，也能成為開放地圖資料工作流程的一部分。[kartaview.org](https://kartaview.org/doc/?utm_source=chatgpt.com)
+
+**官方入口：**[KartaView 官方網站](https://kartaview.org/?utm_source=chatgpt.com) · [API 文件](https://kartaview.org/doc/?utm_source=chatgpt.com) · [GitHub 專案](https://github.com/kartaview?utm_source=chatgpt.com)
+
+###### 開源軟件技術小結
+
+Panoramax 官方甚至已提供可直接放入 HTML 的網頁元件：
+
+```
+<pnx-viewer endpoint="https://api.panoramax.xyz/api"></pnx-viewer>
+```
+
+需要配合其官方文件載入組件程式碼並設定尺寸；上述標籤不是單獨貼上便能離線顯示。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.panoramax.fr\&sz=32) *Docs*
+
+我建議《大秦賦算籌》建立一個 `street_scene_registry`（街景登記冊），對每個地點記錄是否有照片、拍攝日期、來源、授權、方向、定位精度與可否商業使用。
+
+嚴格裁定：目前沒有證據能證明任何一套完全開源街景資料庫，在全球所有道路的照片覆蓋、更新速度與畫質上都已全面等同 Google Street View。 因此要以「多資料源＋覆蓋查詢＋缺圖處理」實現相同類型的使用者功能，而不是宣稱同等資料覆蓋。
+
+##### 肆、能放大到街道級的開放資料，究竟有多精細？
+
+| 資料來源                                                    | 地理範圍與用途          | 能否看見真實街道照片？       |
+|:-------------------------------------------------------:|:---------------- |:-----------------:|
+| [OpenStreetMap](https://www.openstreetmap.org/)         | 全球道路、建築、興趣點、部分地址 | 道路與建築地圖，不是街景照片    |
+| [Copernicus Sentinel](https://dataspace.copernicus.eu/) | 地球觀測與環境變化        | 不能直接看清一般店鋪門面      |
+| [USGS Landsat](https://earthexplorer.usgs.gov/)         | 長期全球衛星影像         | 主要適合區域尺度分析        |
+| [OpenAerialMap](https://openaerialmap.org/)             | 局部高解析度開放航拍影像     | 某些地區可看清屋頂，不等於路面街景 |
+| [OpenHistoricalMap](https://www.openhistoricalmap.org/) | 歷史城邑、道路、地理年代     | 歷史地圖，不是現代街景       |
+
+OpenAerialMap 官方使用 CC BY 4.0 方式分享開放航空影像，部分地點的照片達厘米級解析度；但分布零散，不能誤認為全球均有同樣畫質。
+
+[image](https://www.google.com/s2/favicons?domain=https://openaerialmap.org\&sz=32) *openaerialmap.org +1*
+
+OpenStreetMap 則採開放資料庫授權（Open Database License, ODbL），允許合法商業利用，但要求來源註明，某些衍生資料庫須依相同授權條件提供。免費使用資料並不代表可以無限制使用 OpenStreetMap 基金會的公共圖磚伺服器。
+
+[image](https://www.google.com/s2/favicons?domain=https://wiki.openstreetmap.org\&sz=32) *OpenStreetMap Wiki +2*
+
+這些資料的價值，在於為自己的遊戲建立合法、可持續保存的地理底座。
+
+##### 伍、NixOS、Ubuntu、Kubuntu、RedHawk 以及各國作業系統一覽
+
+這裏要先訂立一項工程原則：
+
+**能否從外太空放大至街景，主要取決於地圖引擎、資料及圖形硬體，不是作業系統的國籍或品牌。**
+
+因此，下表的「可嵌入」代表能在支援的瀏覽器或桌面框架中研發此功能，**不代表安裝作業系統後就自帶 Google Earth 級別的衛星與街景圖庫。**
+
+###### 中國作業系統及技術生態
+
+| 作業系統            | 主要用途          | 寰宇地圖整合判斷                |
+| --------------- | ------------- | ----------------------- |
+| openKylin（開放麒麟） | 開源桌面及國產處理器適配  | 可研究 WebGL 地圖、Qt 及瀏覽器整合  |
+| deepin（深度）      | 開源個人桌面        | 可運行地圖網頁、開發 DDE 桌面整合     |
+| 統信 UOS          | 商用桌面與伺服器      | 可評估企業版瀏覽器、Qt 與軟件認證      |
+| 銀河麒麟            | 國產桌面、伺服器及行業應用 | 需按版本與處理器逐項測試            |
+| openEuler（開放歐拉） | 雲端、AI、大數據及伺服器 | 適合承載地理資料 API、GIS 與資料庫   |
+| Anolis OS（龍蜥）   | 企業伺服器         | 適合後端部署，桌面不是主強項          |
+| 紅旗 Linux        | 企業／國產作業系統     | 依具體產品核對 WebGL、GPU 與開發支援 |
+| HarmonyOS（鴻蒙）   | 裝置、手機及生態應用    | 應採其原生開發框架或經驗證的 Web 元件   |
+
+其中值得特別更新的是：
+
+openKylin 3.0 已於2026年9月5日發布。 官方提供 x86-64、ARM64、LoongArch 等平台的映像，以及 WSL 相關版本。這意味著先生現有 Windows 11＋WSL2 可以將中國開源作業系統納入研究，而不必立即重裝電腦。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.openkylin.top\&sz=32) *openkylin.top +1*
+
+deepin 25.2 已有官方安裝文件，其 Deepin Desktop Environment（DDE）本身使用 Qt 技術；故也值得拿來比較中國桌面設計與 KDE 的可嵌入方案。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.deepin.org\&sz=32) *Deepin Technology Community +1*
+
+openEuler 的官方定位主要是資料庫、雲端、大數據和 AI 基礎設施，故我會將其評為「後端服務器候選」，而不是最優先的三維策略桌面。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.openeuler.org\&sz=32) *openEuler*
+
+####### openKylin（開放麒麟）
+
+**openKylin（開放麒麟）** 是由中國開源社群開發、以 Linux 為核心的免費開源作業系統，主要面向個人電腦、伺服器及嵌入式裝置。它以支援多種處理器架構、自主開發的桌面環境，以及建立本土軟硬體生態系為特色，是中國開源作業系統發展的重要專案之一。[openkylin.top](https://www.openkylin.top/downloads/os-en.html?utm_source=chatgpt.com)
+
+######## 主要特色
+
+openKylin 採用 **UKUI（麒麟使用者介面）** 桌面環境，提供類似 Windows 的開始選單、工作列、檔案管理器及系統設定介面。除了日常辦公和軟體開發，它也支援 x86、ARM、LoongArch（龍芯）及 RISC-V 等處理器架構，特別重視中國國產硬體的相容性。[openkylin.top](https://www.openkylin.top/downloads/os-en.html?utm_source=chatgpt.com)
+
+######## 最新版本與技術發展
+
+截至 2026 年 10 月，**openKylin 3.0** 是最新主要版本，官方下載頁標示其發布日期為 2026 年 9 月 5 日。這個版本採用 Linux 7.0 核心，更新超過 180 個核心元件，並加強 AI 智慧代理、語音輸入、手勢互動及螢幕閱讀功能。此外，官方也提供著重長期穩定性的 2.0 SP2 版本。[openkylin.top](https://www.openkylin.top/downloads/os-en.html?utm_source=chatgpt.com)
+
+######## 與其他 Linux 發行版的差異
+
+與 Ubuntu、Fedora 或 Debian 相比，openKylin 更著重**中國本土軟硬體生態、國產處理器支援及桌面整合體驗**。它與 Ubuntu Kylin 有技術及社群淵源，但屬於不同的發行版專案。其多架構支援對硬體開發者具有吸引力，不過非中文使用者仍可能遇到部分應用程式翻譯不完整、軟體相容性或操作體驗方面的問題。[openkylin.top](https://www.openkylin.top/downloads/os-en.html?utm_source=chatgpt.com)
+
+######## 適合哪些使用者？
+
+openKylin 特別適合希望探索中國 Linux 生態系的開發者、使用龍芯或 RISC-V 等硬體的平台工程師，以及研究開源作業系統的使用者。對一般桌面使用者而言，它能提供完整的圖形化 Linux 體驗，但正式取代現有作業系統前，仍值得先透過虛擬機測試軟體、語言及硬體相容性。
+
+官方網站：[openKylin 開放麒麟社群](https://www.openkylin.top/?utm_source=chatgpt.com)
+
+系統下載：[openKylin 官方下載中心](https://www.openkylin.top/downloads/os-en.html?utm_source=chatgpt.com)
+
+####### deepin（深度作業系統）
+
+**deepin（深度作業系統）** 是一款源自中國、以 Debian 為基礎的免費開源 Linux 作業系統，以精緻的圖形介面、易用性及完整的桌面應用程式聞名。它採用自行開發的 Deepin Desktop Environment（DDE），旨在為熟悉 Windows 或 macOS 的使用者提供直覺的 Linux 桌面體驗。[deepin.org](https://www.deepin.org/index/en?f=56\&utm_source=chatgpt.com)
+
+######## 桌面介面與使用體驗
+
+deepin 最具代表性的特色是 **DDE 桌面環境**，提供現代化的工作列、應用程式啟動器、控制中心、視窗動畫及個人化設定。DDE 7.0 進一步採用 QML 重構多項介面元件，改善操作流暢度與視覺一致性，特別適合重視桌面美觀與操作便利性的使用者。[deepin.cn](https://www.deepin.cn/en/deepin-25/?utm_source=chatgpt.com)
+
+######## 核心功能
+
+deepin 內建檔案管理器、應用程式商店、音樂播放器、影片播放器及系統管理工具。deepin 25 引入 **UOS AI 智慧助理**、支援原子更新與系統復原的 **Solid** 技術，以及用於改善應用程式相容性的 **Linyaps** 封裝系統，讓日常操作與系統維護更加便利。[deepin.org](https://www.deepin.org/en/deepin-25-release/?utm_source=chatgpt.com)
+
+######## 版本與系統需求
+
+截至 2026 年 10 月，deepin 已推出 **25.2.1 更新**，重點改善智慧搜尋、檔案管理、應用程式相容性及系統安全性。官方建議使用至少 8 GB 記憶體、64 GB SSD，以及較新的 Intel 或 AMD 處理器，以獲得較流暢的桌面體驗。[deepin.org](https://www.deepin.org/en/category/news%EF%BC%88english%EF%BC%89/community-news/?utm_source=chatgpt.com)
+
+######## 優點與注意事項
+
+deepin 的主要優勢是**美觀、容易上手、內建工具完整**，適合日常上網、文書處理與多媒體使用。不過，部分 Windows 專用軟體仍可能存在相容性限制。此外，DDE 過去曾受到其他 Linux 社群的安全審查；開發團隊已修正多項問題，但安全性仍值得持續關注。[Reddit](https://www.reddit.com/r/linux/comments/1thy77z/fedora_retiring_its_deepin_desktop_packages/?utm_source=chatgpt.com)
+
+######## 官方資源
+
+deepin 的官方網站提供系統下載、安裝指南、版本更新資訊及社群支援。初次體驗可先透過虛擬機器測試桌面介面與硬體相容性，再決定是否安裝為主要作業系統。
+
+**官方網站：** [deepin.org](https://www.deepin.org/en/?utm_source=chatgpt.com)
+
+####### 統信 UOS
+
+**統信 UOS（UnionTech OS，統信作業系統）**是由中國大陸統信軟體（UnionTech）開發、以 Linux 核心為基礎的作業系統，主要面向政府、企業、教育機構及個人電腦市場。它以支援中國本土處理器、提供圖形化桌面環境，以及推動資訊科技自主化為主要特色。[uniontech.com](https://www.uniontech.com/news-info/1137.html?utm_source=chatgpt.com)
+
+######## 主要功能與特色
+
+統信 UOS 提供類似 Windows 的**圖形化操作介面**，包含檔案管理員、應用程式商店、工作列、系統設定及多視窗操作功能。其桌面環境強調易用性，讓使用者不必具備 Linux 指令操作經驗，也能完成一般文書處理、網頁瀏覽及日常工作。[home.uniontech.com](https://home.uniontech.com/help/zh_CN/Home/dde.html?utm_source=chatgpt.com)
+
+######## 版本與產品定位
+
+統信 UOS 涵蓋**桌面、伺服器、雲端原生及智慧終端**等產品類型。桌面版本包含專業版、教育版、家庭版，以及與 deepin（深度）Linux 社群密切相關的社群版；其中專業版主要針對企業與機構部署，伺服器版本則支援企業業務系統、虛擬化與雲端運算。[uniontech.com](https://www.uniontech.com/OS.html?utm_source=chatgpt.com)
+
+######## 硬體支援與軟體相容性
+
+UOS 的重要特色是支援多種處理器架構，包括 **x86、ARM，以及龍芯等中國本土硬體平台**，適合需要特定國產硬體的機構。由於它不是 Windows，部分 Windows 專用程式無法直接原生執行；統信另提供應用程式虛擬化解決方案，協助企業使用既有 Windows 軟體，但實際相容性仍取決於應用程式及部署方式。[uniontech.com](https://www.uniontech.com/news-info/1137.html?utm_source=chatgpt.com)
+
+######## 與 deepin Linux 的關係
+
+統信 UOS 與 **deepin Linux** 有密切的技術及社群關係，但兩者的產品定位不同。deepin 側重開源社群與一般使用者，統信 UOS 則更重視商業支援、企業管理、硬體認證及產業應用，因此兩者不能完全視為相同產品。[uniontech.com](https://www.uniontech.com/os-desktop.html?utm_source=chatgpt.com)
+
+######## 適用情境與限制
+
+統信 UOS 特別適合需要**中國本土硬體相容性、集中管理及商業技術支援**的政府與企業環境。對一般個人使用者而言，它可以滿足基本辦公與上網需求，但若高度依賴 Windows 遊戲、Adobe 專業軟體或特定商業程式，則必須先確認相容性。其主要價值在於提供一套具有本土產業支援體系的 Linux 作業系統，而非完全取代所有 Windows 使用情境。
+
+官方產品資訊：[統信軟體官方網站](https://www.uniontech.com/?utm_source=chatgpt.com)
+
+####### 銀河麒麟
+
+**銀河麒麟（Galaxy Kylin／Kylin OS）** 是中國麒麟軟體有限公司開發的 Linux 系列作業系統，涵蓋桌面電腦、伺服器與工業應用。它以資訊安全、國產軟硬體相容性及企業級部署為主要特色，是中國推動資訊科技自主化的重要作業系統品牌。[wap.sasac.gov.cn](https://wap.sasac.gov.cn/n4470048/n29955503/n32265122/n32265137/c32275442/content.html?utm_source=chatgpt.com)
+
+######## 主要產品與用途
+
+銀河麒麟並非單一作業系統，而是針對不同使用環境提供多種版本。
+
+以上產品分別服務一般辦公、企業基礎設施與人工智慧運算等需求。[kylinos.cn](https://www.kylinos.cn/productPc/?utm_source=chatgpt.com)
+
+######## 核心技術與特色
+
+銀河麒麟採用 **Linux 核心**，並針對中國本土處理器、硬體驅動及企業安全需求進行開發與最佳化。它支援多種處理器架構，包括 x86、ARM 與龍芯相關平台，強調跨硬體環境部署及系統安全管理。[kylinos.cn](https://www.kylinos.cn/productPc/desktop/desktopMainV11/?utm_source=chatgpt.com)
+
+######## V11 版本的重要改進
+
+2025 年 8 月推出的 **銀河麒麟 V11** 採用 Linux 6.6 核心，加入新的系統架構及人工智慧功能。桌面版引進「磐石架構」，透過核心系統與應用程式隔離、原子更新及版本回復機制，提高升級可靠性；伺服器版則強化雲原生、AI 開發與智慧維運能力。[kylinos.cn](https://www.kylinos.cn/about/news/1960318011530870785.html?utm_source=chatgpt.com)
+
+######## 適用場景與限制
+
+銀河麒麟主要面向**政府機關、金融、能源、交通、教育及大型企業**，尤其適合需要國產硬體整合、安全合規與集中管理的組織。相較於 Windows 或主流 Linux 發行版，導入時仍須確認專業軟體、周邊設備及既有系統的相容性，不能假設所有 Windows 應用程式都能直接執行。[wap.sasac.gov.cn](https://wap.sasac.gov.cn/n4470048/n29955503/n32265122/n32265137/c32275442/content.html?utm_source=chatgpt.com)
+
+官方產品資訊可參閱 [麒麟軟體官方網站](https://www.kylinos.cn/?utm_source=chatgpt.com)。
+
+####### openEuler（開源歐拉）
+
+**openEuler（開源歐拉）** 是一款以 Linux 核心為基礎的開源作業系統，主要面向企業伺服器、雲端運算、邊緣運算及嵌入式設備。它起源於華為的作業系統技術生態，目前由開放原子開源基金會（OpenAtom Foundation）孵化與營運，特色是支援多種處理器架構，並著重企業級基礎設施的效能、安全性及穩定性。[openeuler.org](https://www.openeuler.org/en/faq/?utm_source=chatgpt.com)
+
+######## 主要功能與特色
+
+openEuler 的核心優勢是**跨硬體架構支援**，涵蓋 x86_64、ARM、RISC-V 和 LoongArch 等平台。系統提供虛擬化、容器管理、安全強化及效能最佳化工具，適合部署資料庫、大數據平台、AI 工作負載及企業應用服務。它不僅是 Linux 發行版，也是一套面向數位基礎設施的開源技術生態。[docs.openeuler.org](https://docs.openeuler.org/en/?utm_source=chatgpt.com)
+
+######## 發展背景與開源社群
+
+openEuler 社群於 **2019 年 12 月 31 日** 正式成立，並逐步從伺服器作業系統發展為涵蓋雲端、邊緣與嵌入式場景的平台。專案採用開放社群協作模式，由不同企業、硬體供應商及開發者共同參與，透過專項興趣小組（SIG）推動系統功能、軟體套件與硬體相容性開發。[openeuler.org](https://www.openeuler.org/en/faq/?utm_source=chatgpt.com)
+
+######## 版本與更新策略
+
+openEuler 提供**長期支援版（LTS）**與**創新版**兩種發行模式。LTS 著重穩定性與維護週期，創新版則用於導入較新的技術。截至 2026 年 10 月，官方已推出 openEuler 26.09，包含雙核心選項與 AI 開發相關功能；24.03 LTS 系列則適合重視長期維護的部署環境。[openeuler.org](https://www.openeuler.org/en/download/?utm_source=chatgpt.com)
+
+######## 適用情境與選擇考量
+
+openEuler 特別適合需要**多架構伺服器部署、雲端原生基礎設施或 ARM 平台最佳化**的企業與開發團隊。相較於以一般桌面使用者為主的 Linux 發行版，它更強調基礎設施管理與企業工作負載。導入前仍應確認既有應用程式、驅動程式、第三方軟體及商業技術支援的相容性。
+
+官方資源包括 [openEuler 官方網站](https://www.openeuler.org/en/?utm_source=chatgpt.com)、[下載中心](https://www.openeuler.org/en/download/?utm_source=chatgpt.com) 與 [技術文件](https://docs.openeuler.org/en/?utm_source=chatgpt.com)。
+
+####### Anolis OS（龍蜥作業系統）
+
+**Anolis OS（龍蜥作業系統）** 是由中國開源社群 [OpenAnolis](https://openanolis.cn/?utm_source=chatgpt.com) 開發及維護的企業級 Linux 發行版，主要面向雲端運算、伺服器和企業基礎設施。它以相容 CentOS 生態系統、支援多種處理器架構及強化系統效能為特色，是企業從 CentOS 遷移至其他 Linux 平台的選擇之一。[OpenAnolis 龙蜥社区](https://openanolis.cn/?lang=zh\&utm_source=chatgpt.com)
+
+######## 背景與發展
+
+OpenAnolis 社群成立於 **2020 年 9 月**，並與阿里雲及多家硬體、軟體廠商合作發展作業系統生態系。Anolis OS 的早期版本著重於維持與 Red Hat Enterprise Linux（RHEL）及 CentOS 的相容性，後續則逐漸發展獨立的核心技術、軟體套件與多架構支援能力。[OpenAnolis 龙蜥社区](https://openanolis.cn/?lang=en\&utm_source=chatgpt.com)
+
+######## 核心技術與特色
+
+Anolis OS 的主要特色是 **Anolis Cloud Kernel（ANCK）**，這是針對雲端工作負載最佳化的 Linux 核心，著重於排程、記憶體管理、I/O 效能及系統穩定性。系統支援 x86-64、ARM64、RISC-V 和 LoongArch 等架構，並提供容器、虛擬化、機密運算及安全維護功能；實際支援範圍依發行版本而異。[OpenAnolis 龙蜥社区](https://docs.openanolis.cn/anolisos?utm_source=chatgpt.com)
+
+######## 主要版本
+
+Anolis OS 目前有三條主要產品系列，分別適合不同的部署需求。
+
+| 版本 | 主要定位 | 適用情境 |
+|---|---|---|
+| **Anolis OS 23** | 新一代 Linux 平台 | 新部署、雲原生、AI 工作負載 |
+| **Anolis OS 8** | RHEL 8／CentOS 8 相容平台 | 企業伺服器、既有系統遷移 |
+| **Anolis OS 7** | 舊版 CentOS 相容平台 | 舊系統維護及過渡 |
+
+截至 **2026 年 10 月**，官方下載中心已提供 **Anolis OS 23.5** 和 **Anolis OS 8.10**。其中，23.5 採用 Linux 6.6 系列核心，並進一步改善 RISC-V 支援、硬體相容性及安全性。Anolis OS 8 的官方維護計畫則延續至 2031 年。[OpenAnolis 龙蜥社区](https://openanolis.cn/download?lang=zh\&utm_source=chatgpt.com)
+
+######## 適用情境與選擇考量
+
+Anolis OS 特別適合需要 **CentOS 遷移、多架構部署或雲端效能最佳化** 的組織。它提供 CentOS 遷移工具，以及使用 RPM 套件與 yum／dnf 管理軟體的熟悉環境。不過，企業部署前仍應確認商業軟體、硬體驅動及第三方技術支援的相容性，因為與 RHEL 相容不代表所有供應商都正式支援 Anolis OS。[OpenAnolis 龙蜥社区](https://docs.openanolis.cn/anolisos?utm_source=chatgpt.com)
+
+官方資源可參考 [Anolis OS 下載中心](https://openanolis.cn/download?lang=zh&utm_source=chatgpt.com) 與 [技術文件中心](https://docs.openanolis.cn/?utm_source=chatgpt.com)，其中提供安裝映像檔、版本資訊、系統操作及維護文件。
+
+####### 紅旗 Linux
+
+**紅旗 Linux（Red Flag Linux，紅旗作業系統）** 是中國開發的 GNU/Linux 發行版，於 1999 年由中國科學院軟體研究所推動創立，主要面向政府、企業及個人電腦市場。它是中國早期具代表性的國產作業系統之一，以中文在地化、開放原始碼技術及降低對國外商業作業系統的依賴為主要特色。[en.wikipedia.org](https://en.wikipedia.org/wiki/Red_Flag_Linux?utm_source=chatgpt.com)
+
+######## 發展歷史
+
+紅旗 Linux 於 **1999 年 8 月**問世，2000 年成立北京中科紅旗軟體技術有限公司，並逐步拓展桌面與伺服器產品。2000 年代曾獲得中國政府採購市場支持，但原公司因財務與經營問題，於 **2014 年進入清算程序**。同年相關資產被收購，品牌及產品其後恢復發展。[維基百科](https://zh.wikipedia.org/wiki/%E4%B8%AD%E7%A7%91%E7%BA%A2%E6%97%97?utm_source=chatgpt.com)
+
+######## 技術特色
+
+紅旗 Linux 使用 **Linux 核心**，早期版本與 Red Hat、Fedora 技術體系關係密切，後期桌面版本則轉向 Debian 基礎。系統提供中文圖形介面、桌面應用程式及軟體管理功能，並曾採用 KDE、GNOME 等桌面環境。其設計重點是降低 Windows 使用者的轉換門檻，同時滿足中國市場的軟硬體相容需求。[維基百科](https://zh.wikipedia.org/zh-hans/%E7%B4%85%E6%97%97Linux?utm_source=chatgpt.com)
+
+######## 主要產品與用途
+
+紅旗 Linux 並非單一桌面作業系統，而是涵蓋多種應用場景的產品系列。其產品包括 **紅旗 Linux Desktop** 桌面版、**Asianux Server** 企業伺服器版，以及高可用性叢集和嵌入式系統等方案。桌面版適合一般辦公與應用程式操作；伺服器產品則著重企業運算、系統管理及基礎設施部署。[en.wikipedia.org](https://en.wikipedia.org/wiki/Red_Flag_Linux?utm_source=chatgpt.com)
+
+######## 目前發展狀況
+
+截至 2026 年，紅旗 Linux 仍保有官方產品網站，但公開資訊未能充分確認所有版本的持續更新與支援狀態。已知 **紅旗 Linux 桌面版 V11** 於 2021 年推出，官方亦曾提供社群預覽版下載。正式部署前，仍須確認所選版本的安全更新、硬體支援及維護週期。[chinaredflag.cn](https://www.chinaredflag.cn/?utm_source=chatgpt.com)
+
+官方資訊可參考 [中科紅旗官方網站](https://www.chinaredflag.cn/?utm_source=chatgpt.com)。
+
+######## 歷史地位與重要性
+
+紅旗 Linux 的重要性不只在於技術本身，更在於它是**中國推動自主作業系統產業的早期代表**。其發展歷程反映了國產軟體在政府採購、商業化與開放原始碼生態系統之間面臨的機會及挑戰。它與美國的 Red Hat Linux 名稱相似，但屬於不同的產品與開發體系。[維基百科](https://zh.wikipedia.org/wiki/%E4%B8%AD%E7%A7%91%E7%BA%A2%E6%97%97?utm_source=chatgpt.com)
+
+####### HarmonyOS（鴻蒙作業系統）
+
+**HarmonyOS（鴻蒙作業系統）**是由[華為（Huawei）](https://www.huawei.com?utm_source=chatgpt.com)開發的跨裝置作業系統，於 2019 年首次推出，應用於智慧型手機、平板、電腦、智慧手錶及智慧家庭設備。其核心特色是**分散式技術與跨裝置協作**，讓不同裝置共享資源、連接服務，建立整合的智慧裝置生態系。[harmonyos.com](https://www.harmonyos.com/en/?utm_source=chatgpt.com)
+
+######## 核心功能與特色
+
+HarmonyOS 強調「**一次開發、多裝置部署**」及分散式運算。相容裝置可以協同工作，例如在手機與平板之間延續應用程式操作，或利用其他裝置的硬體資源。這種設計讓作業系統不再局限於單一螢幕，而是支援手機、穿戴裝置及智慧家庭之間的整合體驗。[harmonyos.com](https://www.harmonyos.com/en/?utm_source=chatgpt.com)
+
+######## 與 Android 的差異
+
+早期手機版 HarmonyOS 與 Android 開放原始碼專案（AOSP）存在密切的技術關係，因此具有一定程度的 Android 應用程式相容性。後來的 **HarmonyOS NEXT** 則轉向獨立的系統架構，不再原生支援 Android APK，主要依靠鴻蒙原生應用程式。這使華為能建立獨立生態系，但也帶來應用程式相容性的挑戰。[Reuters](https://www.reuters.com/technology/huaweis-harmony-aims-end-chinas-reliance-windows-android-2024-06-27/?utm_source=chatgpt.com)
+
+######## 開發工具與技術架構
+
+HarmonyOS 提供完整的原生應用程式開發工具，包括 **DevEco Studio** 整合開發環境、以 TypeScript 為基礎的 **ArkTS** 程式語言，以及宣告式介面框架 **ArkUI**。ArkTS 特別強調靜態型別檢查與執行效率，而 ArkUI 支援元件化設計和狀態管理，方便開發者建立適用於不同裝置的應用程式。[developer.huawei.com](https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V5/arkts-get-started-V5?utm_source=chatgpt.com)
+
+######## 發展現況與生態系
+
+截至 2025 年底，華為公布已有**超過 3,600 萬部裝置**運行 HarmonyOS 5 或 HarmonyOS 6，鴻蒙生態系註冊開發者超過 1,000 萬名，AppGallery 提供超過 35 萬項應用程式與服務。HarmonyOS 的主要優勢是跨裝置整合與華為硬體協作；相較於 Android 和 iOS，其限制則是部分國際應用程式的支援程度，以及不同市場的裝置與系統版本差異。[Huawei](https://www.huawei.com/en/annual-report/2025?utm_source=chatgpt.com)
+
+###### 歐美、英國及其他國家的代表性系統
+
+| 國家／主要生態來源 | 作業系統                           | 地圖整合方式與建議                              |
+|:---------:|:------------------------------:|:--------------------------------------:|
+| 英國        | Ubuntu                         | CesiumJS、MapLibre、Marble、QGIS；桌面與後端均適合 |
+| 英國        | Kubuntu                        | KDE Plasma＋Marble，特別適合客製寰宇桌面           |
+| 英國        | Raspberry Pi OS                | 可用於低成本展示終端，重型三維地球受硬體限制                 |
+| 美國        | Windows 11                     | 可直接運行瀏覽器地球、QGIS、Windows 原生 OpenSpace   |
+| 美國        | RHEL／Fedora                    | WebGL 地圖、企業資料平台、GIS 伺服器                |
+| 美國        | RedHawk Linux                  | 專用即時運算；地球地圖並非其核心優勢                     |
+| 美國        | Rocky Linux／AlmaLinux          | 開源企業伺服器、GIS API、地理資料庫                  |
+| 美國        | macOS                          | 瀏覽器三維地球、QGIS、原生地圖程式                    |
+| 美國        | ChromeOS                       | 瀏覽器地圖與部分 Linux 應用，需看設備支援               |
+| 國際開源社群    | NixOS                          | WebGL／KDE 地球介面；適合宣告式配置、重現與回滾           |
+| 國際開源社群    | Debian／Arch Linux              | 開發工具選擇廣；Arch 更新較頻繁                     |
+| 德國        | openSUSE／SUSE Linux Enterprise | KDE、GIS、企業伺服器                          |
+| 德國        | Manjaro                        | KDE 桌面、地圖應用及開發測試                       |
+| 愛爾蘭       | Zorin OS／Linux Mint            | 易用桌面，可運行 WebGL 地圖                      |
+| 法國        | Mageia                         | KDE、開源 GIS 與瀏覽器整合                      |
+| 義大利       | Parrot OS                      | 能運行地圖工具，但不以一般策略遊戲桌面為主要定位               |
+| 土耳其       | Pardus                         | 官方 GNU/Linux 發行版，可評估瀏覽器與 GIS           |
+| 俄羅斯       | Astra Linux／ALT Linux／ROSA     | 依產品版次、瀏覽器與顯示驅動驗證                       |
+| 日本        | MIRACLE LINUX／Vine Linux       | 以發行版本與企業／桌面生態決定整合方式                    |
+| 印度        | BOSS GNU/Linux                 | 可評估 Chromium／Firefox、QGIS、瀏覽器地球        |
+| 自由 BSD 社群 | FreeBSD／OpenBSD                | 可研究開放地理服務；桌面 GPU／瀏覽器相容性要實測             |
+
+此表列出代表性候選，並非聲稱已窮盡全球數千個發行版，也不代表已在每款系統完成 Cesium 與街景的實際驗收。國家欄表示主要企業或專案來源，並非排他的國家所有權。
+
+已核實的版本例子包括 Kubuntu 26.04.1 LTS、RedHawk 9.6 系列、RHEL 10.2、Zorin OS 18.1、Pardus 25.2，以及 BOSS GNU/Linux 10。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.kubuntu.org\&sz=32) *Kubuntu +5*
+
+##### 陸、哪些作業系統最值得用來建設《大秦賦算籌》？
+
+互動選型：依研發重點檢視候選作業系統
+
+- 寰宇三維地圖與 KDE 桌面優先
+  - 1 Kubuntu 26.04 LTS 5/5 *KDE桌面與Marble整合最直接*
+  - 2 Ubuntu 26.04 LTS 4/5 *GIS與AI開發生態成熟*
+  - 3 NixOS 4/5 *配置可重現、利於多環境驗證*
+  - 4 openKylin 3.0 4/5 *中國開源生態與多架構研究*
+  - 5 deepin 25 4/5 *國產桌面與Qt整合研究*
+
+- 可重現、回滾與配置治理優先
+  - 1 NixOS 5/5 *配置可重現、利於多環境驗證*
+  - 2 RHEL 4/5 *企業後端維護與商業支援*
+  - 3 Kubuntu 26.04 LTS 3/5 *KDE桌面與Marble整合最直接*
+  - 4 Ubuntu 26.04 LTS 3/5 *GIS與AI開發生態成熟*
+  - 5 openKylin 3.0 3/5 *中國開源生態與多架構研究*
+
+- 未來企業後端與服務維護優先
+  - 1 Ubuntu 26.04 LTS 5/5 *GIS與AI開發生態成熟*
+  - 2 RHEL 5/5 *企業後端維護與商業支援*
+  - 3 Kubuntu 26.04 LTS 4/5 *KDE桌面與Marble整合最直接*
+  - 4 NixOS 3/5 *配置可重現、利於多環境驗證*
+  - 5 openKylin 3.0 3/5 *中國開源生態與多架構研究*
+
+以上是基於專案需求的定性工程評分，並非已進行的硬體跑分、資安認證或跨系統統計測試。
+
+在先生的實際情況下，我仍會首選 **Kubuntu＋CesiumJS／Marble** 作完整桌面，NixOS 用於可重現實驗，openKylin 與 deepin 用於中國系統生態比較，而 RHEL、openEuler、Rocky Linux 則留給未來真正需要運營的後端伺服器。
+
+至於 RedHawk，並不會因為名稱帶有軍工色彩，就讓衛星地圖更加清晰。它專長的是即時運算。官方已確認 RedHawk 9.6 可運行於指定的 RHEL、Rocky、Oracle Linux 9.6 及 Ubuntu 24.04 基礎上。
+
+[image](https://www.google.com/s2/favicons?domain=https://redhawk.concurrent-rt.com\&sz=32) *redhawk.concurrent-rt.com*
+
+##### 柒、中國與英國：兩個不可忽略的地理資料體系
+
+依先生提出的研究重點，我建議將中國與英國各自建立獨立的地理資料來源登記，同時在系統介面保留 **「贏家黃氏江夏堂（Eng Clan Jiangxia Ancestral Hall）」** 的正式中英雙語名稱。
+
+###### 中國：天地圖與中國國產 GIS
+
+**天地圖（Tianditu）**是非常值得納入的資料服務。
+
+其官方服務包括矢量地圖、衛星影像、地形、地理標註、三維地形及相關 API。地方節點如天津、東莞亦提供不同的本地影像與三維服務。
+
+[image](https://www.google.com/s2/favicons?domain=https://henan.tianditu.gov.cn\&sz=32) *henan.tianditu.gov.cn +2*
+
+應另行研究的中國平台有超圖（SuperMap）、中地數碼 MapGIS、百度地圖、騰訊地圖、高德地圖及 Cesium 的中國開發生態。
+
+其中有三個商用核驗重點：地圖審圖及公開展示規範、API 開發授權，以及不同座標系統的互操作性。天地圖可以提供 API，不等於其全部衛星影像及街景可自由下載、重新分發或改造成商業遊戲資料。
+
+####### 天地圖
+
+天地圖（Tianditu）是中國國家地理資訊公共服務平台，提供線上地圖、衛星影像、地理編碼、路線查詢與各類地理資訊服務。它由官方建設與維護，廣泛應用於政府部門、公共服務、科研及開發者的地理資訊應用，也是中國重要的基礎地理資訊服務平台之一。
+
+######## 核心功能
+
+**天地圖**整合了多種地圖資料與空間資訊服務，包括**電子地圖**、**衛星影像**、**地形圖**以及部分三維展示能力。平台同時提供**地名搜尋**、**地址解析（Geocoding）**、**逆地理編碼**、**路徑規劃**、**地圖標記**及圖層切換等功能，方便一般使用者與專業應用共同使用。
+
+######## 開發者與平台生態
+
+天地圖提供**Web API**、**WMTS/WMS 等地圖服務**以及開發介面，方便政府資訊系統、企業平台與 GIS 軟體整合。許多中國境內的政務系統、自然資源管理、城市規劃及公共服務專案，都會以天地圖作為底圖或空間資料來源，形成完整的地理資訊服務生態。
+
+######## 特色與定位
+
+相較於商業地圖平台，**天地圖**定位為**國家級公共地理資訊基礎設施**，重點在於提供權威的基礎地理資料與公共服務能力，而非以商業導航或生活資訊為主要特色。平台持續整合全國各級地理資訊資源，支援跨部門的空間資料共享與應用，在中國的電子政務與 GIS 領域具有重要地位。
+
+######## 相關平台與技術
+
+這些工具與平台常被用於建立或使用地理資訊系統（**GIS**）。其中 **OpenLayers** 與 **Leaflet** 偏重網頁地圖開發，**QGIS** 與 **ArcGIS** 則提供完整的空間資料分析、製圖與管理能力，皆可與標準地圖服務進行整合。
+
+###### 英國：Ordnance Survey 地理資料體系
+
+英國國家測繪局 Ordnance Survey（OS）提供的 OS OpenMap – Local 是重要來源。
+
+它免費提供大不列顛地區約1:10,000比例尺的詳細道路與地理矢量、柵格地圖，可下載供 GIS 分析。這是街道尺度的開放地理資料，但並非相機拍攝的360度街景照片。
+
+[image](https://www.google.com/s2/favicons?domain=https://docs.os.uk\&sz=32) *OS Download Products' Documentation +1*
+
+對《大秦賦算籌》而言，中國的天地圖與英國 OS OpenData 應分別作為本國權威地理資料的補充，再與 OpenStreetMap、OpenHistoricalMap 共同建立多源地圖庫。
+
+####### Ordnance Survey
+
+**Ordnance Survey（英國國家測量局）**是英國的國家測繪機構，負責建立與維護英國的大地測量、地形與地理空間資料。它以高精度地圖聞名，並為政府、企業、研究機構與一般民眾提供重要的地理資訊基礎，對交通、都市規劃、緊急應變與導航等領域具有深遠影響。
+
+######## 核心職能
+
+Ordnance Survey 的主要使命是建立並維護**權威的地理空間資料（geospatial data）**。除了傳統紙本地圖之外，該機構也提供數位地圖、地理資訊系統（GIS）資料、位置服務與各類 API，支援公共建設、物流、環境管理及智慧城市等應用。其測量成果會持續更新，以反映道路、建築物及土地利用的變化。
+
+######## 歷史與發展
+
+Ordnance Survey 的歷史可追溯至 **1791 年**，最初因軍事測繪需求而成立，之後逐漸發展成英國最重要的民用測繪機構。數百年來，它從傳統三角測量演進至使用**衛星定位、航空攝影、雷射掃描（LiDAR）**及其他現代測量技術，持續提升資料的精度與更新效率。
+
+######## 重要性與影響
+
+Ordnance Survey 所建立的**國家測量框架**是許多公共與商業服務的基礎。政府部門利用其資料進行基礎建設與土地管理；導航與物流服務依賴其位置資訊；研究人員則使用其資料分析人口、環境與氣候等議題。其資料品質長期被視為全球國家測繪機構的重要標竿。
+
+######## 相關組織與服務
+
+Ordnance Survey 的服務涵蓋面向一般民眾的 **OS Maps**、提供公開資料的 **OS OpenData**，以及面向企業與政府的專業地理空間產品。放眼國際，它與法國的國家地理資訊機構及美國的 **United States Geological Survey（USGS）** 等組織同屬各自國家的核心測繪與地理資訊機構，在全球地理空間資料生態系中扮演重要角色。
+
+##### 捌、如果必須達到 Google 地球級畫面，付費方案如何取捨？
+
+若先生要求的「水平」包含真實城市的精細三維建築、地面實景及大範圍覆蓋，應保留 Google 正式 API 作可選的高品質顯示層，而不是完全排除商業資料。
+
+Google 官方已支援在 CesiumJS 中使用 Photorealistic 3D Tiles；亦提供 Street View API，因此技術上可以由自研地圖平台接入 Google 的地理與街景功能。
+
+[image](https://www.google.com/s2/favicons?domain=https://developers.google.com\&sz=32) *developers.google.com +1*
+
+以下為本次核對的官方標準計費表部分項目：
+
+| Google Maps Platform 服務   | 每月免費額度   | 超額首級標準單價   |
+|:-------------------------:|:--------:|:----------:|
+| 動態街景（Dynamic Street View） | 5,000次   | US$14／千次   |
+| 沉浸式地圖（Immersive Maps）     | 5,000次   | US$7／千次    |
+| Photorealistic 3D Tiles   | 1,000次   | US$6／千次    |
+| 二維地圖圖磚                    | 100,000次 | US$0.60／千次 |
+
+計費單位是不同 SKU 的請求或計費事件，不一定等於玩家瀏覽一次地圖。實際價格須以帳戶地區、合同及當時官方計費文件為準。
+
+[image](https://www.google.com/s2/favicons?domain=https://developers.google.com\&sz=32) *developers.google.com*
+
+我的採購建議是：開源地圖預設啟用，商業高畫質圖層由授權使用者按需開啟，API 設定費用上限及請求監控。 而且必須遵守 Google 對圖磚快取、離線使用、資料擷取及來源標示的限制。
+
+[image](https://www.google.com/s2/favicons?domain=https://developers.google.com\&sz=32) *developers.google.com*
+
+##### 玖、《大秦賦算籌》第一階段正式驗收
+
+不用等到整個地球都具備 Google 級街景，才開始研發；但必須先找出一組有真實影像覆蓋的驗證地點，證明從宇宙視角進入街景的完整功能已打通。
+
+我建議設立以下驗收矩陣：
+
+| Gate | 驗收條件                        | 目前狀態                       |
+|:----:|:-------------------------------:|:------------------------------:|
+| G1   | 可從外太空看到完整地球          | CesiumJS 功能已獲官方證實      |
+| G2   | 可放大至國家、城市、道路及建築  | MapLibre／Cesium 具備相應能力  |
+| G3   | 可選取地點，查詢附近真實街景照片 | Panoramax／Mapillary 有 API，尚待整合 |
+| G4   | 可打開街景並沿照片序列移動       | Panoramax 有組件，尚待實機驗證 |
+| G5   | 顯示圖片日期、來源及商業授權     | 必須自行開發驗收 |
+| G6   | 支援春秋戰國、三國、日本戰國的歷史時間軸 | 待建立歷史資料模型 |
+| G7   | 在 Kubuntu、NixOS、openKylin 等系統實測 | 尚未執行 |
+| G8   | 能由地球延伸至月球、火星、太陽系及星系 | OpenSpace 具備宇宙視覺化能力；整合待驗證 |
+
+G1至G4 的官方功能證據，不等於我已在先生電腦上完成整套端到端測試。
+
+###### 在 Kubuntu 先安裝哪些軟件？
+
+若已在獨立安裝或虛擬機中的 Kubuntu，可先安裝 KDE Marble 與 QGIS：
+
+```
+sudo apt update
+sudo apt install marble qgis
+```
+
+然後以 Chromium 或 Firefox 測試 CesiumJS、MapLibre 與 Panoramax 的線上範例。可由 [CesiumJS 官方入口](https://cesium.com/platform/cesiumjs/)、[MapLibre](https://maplibre.org/projects/gl-js/) 和 [Panoramax 組件](https://docs.panoramax.fr/web-viewer/) 開始。
+
+若仍在 Windows 11＋WSL2，則先以 Windows 瀏覽器運行地圖前端，讓 WSL2 負責 Python、R、資料庫及 API，不必為了看地球而重裝系統。
+
+##### 最終錦囊與取捨
+
+我對先生這項工程的首選組合如下：
+
+##### 《大秦賦算籌》寰宇輿圖母系統
+
+建議技術組合，尚非已完成整合的正式產品
+
+Kubuntu／KDE Plasma
+*桌面、登入與操作介面*
+   ↓
+CesiumJS＋Marble
+*地球、地形、歷史地圖*
+   ↓
+MapLibre＋OpenStreetMap
+*道路、城邑、策略圖層*
+   ↓
+Panoramax＋Mapillary
+*有覆蓋地區的真實街景*
+   ↓
+OpenSpace
+*月球、火星、太陽系及宇宙*
+   ↓
+Python／R＋PostGIS＋歷史與現代資料庫
+*城邑、人物、土地、經濟、科研、年代、策略及可重現驗證*
+
+最後裁定：先生要求的功能組合，在現代開源科技中已具備可實施的工程基礎；但全世界每條街道都達到 Google Street View 同等影像覆蓋的條件，尚未由任何一套完全開源資料庫充分證實。
+
+最應優先研發的不是再找更多 Linux 發行版，而是完成地球引擎、街景來源和歷史策略資料的第一個可驗收整合。
+
+如此方可使《大秦賦算籌》真正由構想轉成軟件：先有可行的天下輿圖，繼而有諸國疆域與百業資料，再有治國策略、人物決策及寰宇文明推演。
 
 ### Kimi（君）
 
 
 ### Perplexity
 
+#### 先說結論
+
+有開源的**地圖軟體、地理資料和衛星影像來源**，但沒有一個開放平台能在全球範圍內，完整提供 Google Earth／Maps 那種「由地球全景一路放大到高解析衛星、精細3D城市、街景」的統一體驗。關鍵差別是：**軟體開源，不代表底圖影像也開源；有全球影像，也不代表解析度足以看清街道或建築細節。**
+
+如果要為《大秦賦算籌》建立可嵌入作業系統、可擴展的地理平台，建議採用 **CesiumJS＋MapLibre GL JS＋QGIS／PostGIS** 作為軟體底座，使用 **Copernicus Sentinel-2、NASA Worldview／GIBS、USGS Landsat** 等開放影像，再以 **Mapillary／Panoramax** 補街景。這能組成可用的多尺度平台，但不會憑空產生 Google 級全球街景或高解析度影像。
+
+#### Google 有哪些開放資源？
+
+先釐清兩個容易混淆的詞：
+
+- **Google Earth／Google Maps 的程式介面和資料服務並非整體開源。**Google Earth 的衛星、航拍、3D與街景影像來自不同來源，影像日期、解析度與可用範圍因地點而異；Google說影像不是即時直播。 [support.google](https://support.google.com/earth/answer/6327779?hl=en)
+- **Google Earth Engine 提供大量可供分析的公開地理資料與 API**，包括 Landsat、Sentinel、MODIS、地形、土地覆蓋等；它是 Google 的雲端分析平台，不等於 Google Earth／Maps 的底圖影像可自由下載或改作他用。 [earthengine.google](https://earthengine.google.com/)
+- **Google Maps／Street View 可透過官方 API 嵌入應用。**Maps Embed API 無限量免費，但要 API key，並須遵守服務條款。 [developers.google](https://developers.google.com/maps/documentation/embed/usage-and-billing)
+- **Google Street View Tiles API 可用來建自訂街景瀏覽器**：街景影像可取到最高6級的全景圖塊，需顯示每張全景對應的版權資料。 不過它是授權服務，不是開放資料或開源街景庫。 [developers.google](https://developers.google.com/maps/documentation/tile/streetview)
+- **用途限制很重要。**Google 地球影像不得嵌入網頁或 App；街景不能被下載成離線副本，也不得用來抽取或建立新的地理資料。Google明確把相關限制列為學術、非營利和商業用途皆適用。 [about](https://about.google/brand-resource-center/products-and-services/geo-guidelines/)
+
+因此，若你的平台要長期保存影像、離線運作、分析影像或從街景抽取道路／建築特徵，**不宜把 Google Earth／Street View 當成可任意抓取的底層資料源**。若使用 Google API，應按允許方式顯示內容，並保留標註、金鑰、配額與費用管理。
+
+#### 可組成「地球到街景」的平台
+
+| 層次 | 建議方案 | 能做什麼 | 主要界限 |
+|---|---|---|---|
+| 3D 地球與嵌入式視覺化 | [CesiumJS](https://cesium.com/platform/cesiumjs/) | Apache 2.0 開源；可嵌入 Web 應用，支援地形、3D Tiles、KML、GeoJSON、CZML、動態資料和時間序列。 [cesium](https://cesium.com/platform/cesiumjs/) | 引擎開源，影像、地形與3D城市資料要另找授權或自行提供。 |
+| NASA 開源地球儀 SDK | [NASA WorldWind](https://worldwind.arc.nasa.gov/)／WorldWindJS | 可嵌入網站、桌面或行動應用；支援地形、影像層與自訂資料，適合自研地理瀏覽器。 [worldwind.arc.nasa](https://worldwind.arc.nasa.gov/) | 它是 SDK，不是即裝即用的全球高解析地圖；影像服務和維護需自行處理。 |
+| 2D／3D 地圖介面 | [MapLibre GL JS](https://maplibre.org/projects/gl-js/) | 開源、可嵌入瀏覽器與多種前端，支援向量地圖、地球投影、3D地形和自訂資料層。 [maplibre](https://maplibre.org/projects/gl-js/) | 需要自行選擇或託管地圖資料與向量瓦片。 |
+| 開放街道資料 | [OpenStreetMap](https://www.openstreetmap.org/) | 開放街道、建物、地名及 POI 資料；可配合 MapLibre、QGIS、PostGIS 使用，資料採 ODbL，須留意署名及衍生資料規定。 [maptiler](https://www.maptiler.com/copyright/) | 它是地圖資料庫，不是全球衛星照片或街景影像；官方免費瓦片服務也不適合無限制商業大量使用。 [wiki.openstreetmap](https://wiki.openstreetmap.org/wiki/Legal_FAQ) |
+| 衛星影像與地球觀測 | [Copernicus Browser](https://browser.dataspace.copernicus.eu/)／Sentinel-2 | 全球多光譜影像；Sentinel-2 可見光等波段10米解析度，資料免費提供，適合土地、農業、災害和區域變化分析。 [dataspace.copernicus](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2) | 10米解析度不是 Google 街景等級；通常看不清單棟建築細節。 |
+| 近即時地球觀測 | [NASA Worldview](https://worldview.earthdata.nasa.gov/)／GIBS | 可瀏覽大量全球影像層、時間序列與環境資料，適合火災、煙塵、洪災、雲系和大範圍變化監控。 [earthdata.nasa](https://www.earthdata.nasa.gov/data/tools/worldview) | 不同感測器解析度差異很大；不適合作街景或逐棟建築判讀。 |
+| 長期衛星檔案 | [USGS EarthExplorer](https://earthexplorer.usgs.gov/)／Landsat | 免費搜尋、預覽和下載 Landsat 等資料；Landsat 地表影像有長期紀錄，適合環境與土地變化研究。 [usgs](https://www.usgs.gov/landsat-missions/landsat-data-access) | 多數 Landsat 影像為數十米級，不是街景；需管理下載、雲量、波段及座標系。 |
+| 街景照片 | [Mapillary](https://www.mapillary.com/) | 社群上傳的地理定位街道影像，可透過 API 和前端工具整合；影像採 CC BY-SA 等授權規則，須遵守服務與開發者條款。 [mapillary](https://www.mapillary.com/open-data) | 影像覆蓋不均；是 Meta 持有的服務，不是完全自託管平台，也不能假設所有影像皆可離線重發。 |
+| 聯邦式街景 | [Panoramax](https://panoramax.fr/) | 開放程式與聯邦式架構，可供各機構或社群建置、貢獻街景照片；適合希望自己掌握資料來源的專案。 [wiki.openstreetmap](https://wiki.openstreetmap.org/wiki/Street-level_imagery_services) | 覆蓋遠不如 Google，需自行建立拍攝、上傳、儲存和治理流程。 |
+| 3D地形與衛星底圖 | Cesium ion／Sentinel-2 等相容資料 | Cesium 可載入全球 Sentinel-2 影像、地形與 3D Tiles，再疊加自己的地理資料。 [cesium](https://cesium.com/platform/cesium-ion/content/) | CesiumJS 開源，但部分整理好的全球內容或託管能力屬於商業服務；查清授權與費用。 |
+
+**沒有一個開源元件單獨等於 Google Earth。**比較務實的是把「渲染引擎、底圖、衛星影像、街景照片、地名與商業 POI、3D城市模型」拆開選型、分別驗證授權與覆蓋率。
+
+#### 對《大秦賦算籌》的實作建議
+
+##### 第一步：先做可替換的地理核心
+
+用 CesiumJS 建立3D地球與地形，MapLibre GL JS 處理高效能2D／向量地圖，QGIS 做資料檢查和編輯，PostGIS 儲存區域、時間戳、資料來源及模擬物件。Cesium 可載入 GeoJSON、KML、CZML、glTF與3D Tiles；這很適合把《太閣立志傳》《三國志》的疆域、路線、城邑和事件做成可時間推演的圖層。 [cesium](https://cesium.com/platform/cesiumjs/)
+
+##### 第二步：採用分層資料，而非追求單一「全能底圖」
+
+- **全球背景：**Sentinel-2 或 NASA／USGS 公開影像。
+- **地形：**用公開 DEM 或合規授權的地形資料。
+- **街道和 POI：**OpenStreetMap，再以本地調查或政府資料補缺。
+- **街景：**Mapillary／Panoramax；缺影像時以現場照片、公開授權航拍或自行拍攝補上。
+- **高解析衛星／航空影像：**對特定區域按需採購有明確商用和衍生分析權的資料，不要把某個網頁上的「可看」誤認為「可下載、可重製、可商用」。
+
+##### 第三步：把來源和授權當成數據欄位
+
+每個圖層至少記錄：`provider`、`dataset_id`、`acquisition_date`、`resolution_m`、`license`、`attribution`、`processing_version`、`ingested_at` 和 `allowed_operations`。這樣之後才能追查「某條道路來自哪個來源」「模型是否能用它訓練」「能不能離線部署」。
+
+**就科研與策略模擬而言，10米衛星影像和街景照片是不同層級的證據。**Sentinel-2適合地貌、農田、水體、道路網與大型設施的區域尺度分析；街景主要補足道路沿線的地面視角。兩者都不能替代實地勘查、測繪級資料或對即時狀態的確認。 [dataspace.copernicus](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2)
+
+#### 歷史策略地圖與中國平台
+
+你的用途包含春秋戰國、秦地疆域和歷史推演，這部分可加上 [OpenHistoricalMap](https://www.openhistoricalmap.org/)：它是可按年代瀏覽、由社群維護的歷史地理資料平台，資料大多採 CC0 公共領域奉獻，並提供可嵌入、可下載及可用於 MapLibre 等工具的資料介面。 但它不是古代戰場的完整權威資料庫；疆域、道路、地名和年代仍須從可信歷史研究與史料核驗。 [openhistoricalmap](https://www.openhistoricalmap.org/)
+
+中國境內可評估 **天地图**及百度地圖開放平台：兩者提供地圖服務、API／SDK或影像圖層，適合中國境內地名、道路和本地地圖服務整合。 但它們是受授權的服務，並不等於開源資料；應按各自的開發授權、座標系、測繪要求和使用範圍處理。中國境內地圖還涉及地圖審核、測繪資質與座標偏移等問題，不能把不同國家的圖層直接疊加後假設位置完全一致。 [zhmap.gov](http://www.zhmap.gov.cn/)
+
+#### 建議選型
+
+如果要先完成能運作、日後能擴展的首版：
+
+1. **開源地球／地圖引擎：**CesiumJS＋MapLibre GL JS。
+2. **基礎道路資料：**OpenStreetMap，保留 ODbL 署名與資料庫授權義務。 [wiki.openstreetmap](https://wiki.openstreetmap.org/wiki/Legal_FAQ)
+3. **開放衛星資料：**Copernicus Sentinel-2＋NASA Worldview／GIBS＋USGS Landsat。 [dataspace.copernicus](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2)
+4. **街景補充：**Mapillary；若重視自託管或資料主權，評估 Panoramax。 [mapillary](https://www.mapillary.com/developer/api-documentation/)
+5. **歷史地理：**OpenHistoricalMap，加上由你自行整理、附來源與不確定性的戰國行政區、道路、城邑和事件資料。 [openhistoricalmap](https://www.openhistoricalmap.org/about)
+6. **Google 作為可選參照層：**只透過核准的嵌入或 API 顯示，不抓圖、不離線存檔，也不把 Google 影像當成訓練或衍生地圖資料來源；Google Earth 影像不得嵌入網頁或 App。 [about](https://about.google/brand-resource-center/products-and-services/geo-guidelines/)
+
+最後，使用 Google Maps Embed API 顯示一般地圖或街景，官方列為**免費、無使用次數限制**；但若要使用動態街景或街景圖塊，則按相應 API SKU 計費，Google 公布的 Street View Tiles 首個付費級距為每千次 $2，另須符合歸屬標註和使用條款。 [developers.google](https://developers.google.com/maps/documentation/embed/usage-and-billing)
 
 ### Grok
 
+以下依目前可查證的公開資訊，分兩大部分回答您的問題。
+
+---
+
+#### 一、Google Earth / Google Maps 是否有開源數據？能否達到「外太空放大到街景」的水平？
+
+**直接結論：**
+
+- **Google Earth 與 Google Maps 的核心影像、Street View、大多數高解析度衛星／航拍資料，都是專有（proprietary）的，並非開源。**
+- Google 的服務條款嚴格限制大量抓取、商業重用與離線完整複製。
+- **目前沒有任何純開源方案能完整達到 Google Earth/Maps 那種「從外太空連續無縫放大到全球幾乎任意街道的高品質街景」水平。**
+
+##### 目前最接近的開源／開放替代方案
+
+| 層級 | 開源／開放選項 | 能力說明 | 與 Google 的差距 |
+|------|----------------|----------|------------------|
+| **3D 地球引擎** | **CesiumJS**（首選）、NASA WorldWind、Marble | 可從太空視角流暢飛到地表，支援地形、3D 建築、自訂圖層 | 影像品質與全球覆蓋不如 Google |
+| **底圖與道路** | OpenStreetMap (OSM) | 完全開放的向量地圖資料 | 無衛星影像 |
+| **衛星／航拍影像** | Sentinel、Landsat、部分 ESRI 開放圖層、OpenAerialMap | 可作為地球表面貼圖 | 解析度、更新頻率、全球一致性遠不如 Google |
+| **街景級影像** | **Mapillary**、**KartaView**（原 OpenStreetCam） | 群眾貢獻的街道級全景照片，可整合進 Cesium 或網頁 | 覆蓋範圍遠小於 Google Street View，品質參差 |
+| **真實感 3D 建築** | Cesium 可載入部分 3D Tiles；或使用 Google Photorealistic 3D Tiles（但資料仍屬 Google，需 API） | 部分城市有不錯效果 | 全球覆蓋與一致性仍遠不及 Google |
+
+**實務建議（針對您的《大秦賦算籌》策略遊戲）：**
+
+1. **核心引擎優先用 CesiumJS**  
+   - 開源、Web 為主、可嵌入桌面應用（Electron / Tauri）。  
+   - 支援從太空飛到地表，也可擴展到月球、火星。  
+   - 可疊加 OpenStreetMap、Sentinel 影像、自訂歷史疆域、軍隊單位等。
+
+2. **街景部分**  
+   - 短期：整合 Mapillary / KartaView（有覆蓋的地方顯示真實街道照片）。  
+   - 長期：自己採集或與社群合作補充特定歷史／策略重點區域的街景。
+
+3. **誠實的現實**  
+   - 「外太空 → 街景」這種 Google 級連續體驗，目前開源世界只能「分層近似」，無法一比一複製。  
+   - 策略遊戲其實不一定需要真實街景到每條街道；用高品質 3D 地球 + 自訂歷史圖層 + 重點城市模型，通常已足夠支撐《太閣立志傳》《三國志》等級的體驗。
+
+---
+
+#### 二、作業系統整理與兼容性（能否內嵌這類地球／地圖軟體）
+
+以下列出您提到的系統，以及中國與其他主要相關系統，並評估是否容易運行／內嵌「類 Google Earth」等級的軟體（以 CesiumJS、WorldWind、Marble、QGIS 等為基準）。
+
+##### 1. 您點名的系統
+
+| 系統 | 類型 | 說明 | 能否運行／內嵌類 Google Earth 軟體 |
+|------|------|------|------------------------------------|
+| **NixOS** | 聲明式 Linux | 高度可重現、配置即代碼 | **非常適合**。可用 declarative 方式精確固定 Cesium、瀏覽器、Electron 版本，適合長期開發與部署 |
+| **Ubuntu** | Debian 系桌面／伺服器 | 生態最大、文件最多 | **極佳**。瀏覽器跑 CesiumJS 毫無問題，也可打包成 Electron 桌面應用 |
+| **Kubuntu** | Ubuntu + KDE Plasma | 與 Ubuntu 相同底層，介面不同 | **極佳**，同 Ubuntu |
+| **Red Hawk Linux** | 目前主流資料中較少見此名稱 | 可能是指 Red Hat 相關、或特定小眾／歷史發行版；中國早期有「紅旗 Linux」（Red Flag） | 若是標準 Linux，原則上可運行；需確認具體發行版與維護狀態 |
+
+##### 2. 中國主要作業系統（2026 年現況）
+
+| 系統 | 定位 | 備註 |
+|------|------|------|
+| **銀河麒麟 / 中標麒麟（Kylin）** | 政府、國企、信創 | 基於 Linux，支援國產 CPU |
+| **統信 UOS** | 桌面 + 伺服器商業發行版 | 深之度技術背景，介面較現代化 |
+| **deepin（深度）** | 美觀桌面 | 社群與商業並存 |
+| **openKylin** | 社群向國產桌面 | 較新 |
+| **Ubuntu Kylin** | Ubuntu 官方中國優化版 | 與 Ubuntu 相容性最高 |
+| **openEuler** | 伺服器、雲、邊緣、AI | 華為發起，企業級 |
+| **Anolis OS、OpenCloudOS** | 伺服器／雲 | 分別與阿里、騰訊等生態相關 |
+| **紅旗 Linux（Red Flag）** | 早期國產 Linux | 目前影響力已大幅下降 |
+
+以上這些中國發行版，只要是標準 Linux 核心 + 現代瀏覽器（Chromium / Firefox），都能運行 CesiumJS 網頁版或 Electron 打包的桌面版。
+
+##### 3. 其他常見相關系統（簡表）
+
+- **Debian**：穩定，適合伺服器與基礎環境  
+- **Fedora / RHEL / Rocky / AlmaLinux**：企業向  
+- **Arch / Manjaro**：滾動更新，適合進階使用者  
+- **openSUSE**：歐洲企業與桌面皆有  
+- **Windows / macOS**：也可跑 CesiumJS（瀏覽器或 Electron），但與您先前提到的 WSL2／Linux 路線較不同
+
+##### 兼容與內嵌可行性總結
+
+- **瀏覽器內運行 CesiumJS**：幾乎所有現代 Linux（含上述中國系統）、Windows、macOS 都可。  
+- **打包成獨立桌面應用**：用 Electron 或 Tauri，可在 Ubuntu、Kubuntu、NixOS、大多數中國 Linux 上運行。  
+- **深度內嵌到作業系統**（例如登入畫面、桌面背景、系統級地球瀏覽器）：  
+  - NixOS 最容易做到可重現的客製化。  
+  - Ubuntu / Kubuntu 與多數中國桌面發行版也可透過自訂 session 或桌面元件實現，但工作量較大。
+
+---
+
+#### 三、針對《大秦賦算籌》的務實建議
+
+1. **地圖引擎**：以 **CesiumJS** 為核心，搭配 OpenStreetMap + Sentinel／開放衛星影像。  
+2. **街景**：優先整合 Mapillary / KartaView，有覆蓋才顯示。  
+3. **作業系統選擇**（依您「先求生再圖強」的策略）：  
+   - 開發主力：Ubuntu 或 Kubuntu（生態成熟、問題好查）  
+   - 追求高度可重現與長期維護：NixOS  
+   - 若需信創／國產環境：優先評估 Ubuntu Kylin 或 deepin / UOS 的兼容性  
+4. **不要死等「完全等同 Google」的開源方案**，目前不存在。用分層近似 + 自己控制的歷史圖層，反而更適合策略遊戲。
+
+關於「贏家黃氏江夏堂，Eng clan Jiangxia Ancestral Hall，中國是祖國而堂號需要英國很重要」這部分，若您之後需要把家族堂號、中英命名、或文化元素整合進遊戲世界觀與地圖標註，也可以再告訴我，我可以協助整理命名邏輯或資料結構建議。
+
+需要我下一步提供：
+- CesiumJS 從太空到地表的基本設定範例  
+- 或 Ubuntu / NixOS 上快速搭建開發環境的具體步驟嗎？
 
 ### 深度求索
 
+先生所问，关乎“《大秦赋算筹》”第一步能否落地。结论先行：**技术栈完全可行，且开源生态已足够成熟——但需要放弃“找一个像Google Earth一样的单一软件”的执念，转而采用“多组件拼接”的架构。**
+
+---
+
+#### 一、开源街景替代方案（对应Google Street View）
+
+| 项目 | 性质 | 覆盖范围 | 许可 | 能否自托管 |
+|---|---|---|---|---|
+| **Panoramax** | 开源联邦式街景平台 | 全球（法国IGN主导，12个公共实例） | 完全开源 | ✅ 可自建实例 |
+| **KartaView** | 众包街景平台（原OpenStreetCam） | 东南亚覆盖强 | CC-BY-SA | ❌ 仅上传 |
+| **Mapillary** | 众包街景平台（Meta旗下） | 全球覆盖最广 | 专有（API有限免费） | ❌ |
+| **StreetLens** | 自托管街景浏览器 | 取决于你自己采集 | 开源（Docker部署） | ✅ 完全自托管 |
+| **Global Streetscapes** | 开放数据集（1000万张街景图） | 688城市/212国家 | 开放数据集 | ✅ 可下载分析 |
+
+**Panoramax**是目前最值得关注的选项。它由法国国家地理研究所（IGN）和OpenStreetMap法国分会于2022年联合发起，所有组件均以自由开源许可证发布，允许个人和组织**自建实例托管影像**。截至2026年4月，联邦实例已汇聚超过**1亿张**上传影像，公共实例达12个，包括台湾和威尔士的实例。其核心价值在于**联邦式架构**——你可以运行自己的Panoramax实例，完全掌控数据主权，同时通过联邦协议与其他实例互通。
+
+**StreetLens**则提供了一个完全自托管的轻量级方案。它是一个Docker化的Web应用，从360度视频（GoPro Max .360格式）中提取关键帧，并在地图上展示。技术栈为**PostGIS + Redis + Docker Compose**，部署后可在端口3000访问，适合在WSL2或VPS上快速搭建私有街景服务。局限是当前仅支持GoPro Max格式，但代码正在重构以支持更多格式。
+
+**Global Streetscapes**更适合作为**数据源而非平台**。它是一个包含**1000万张**街景图像的开源数据集，覆盖688个城市、212个国家和地区，图像来源于Mapillary和KartaView。每张图像附带**346个**地理空间、时间、语义和感知特征。数据集托管在Hugging Face，也可通过百度网盘获取。
+
+#### 二、开源3D地球引擎（对应Google Earth的“外太空→地面”缩放）
+
+**Google Earth本身不开源，但其底层技术逻辑已被多个开源项目复现。**
+
+| 引擎 | 语言/平台 | 3D地球 | 街景集成 | 许可 | 嵌入方式 |
+|---|---|---|---|---|---|
+| **CesiumJS** | JavaScript | ✅ 全球地形+影像 | ✅ 支持Panorama/街景 | Apache 2.0 | Web/Electron/Tauri/Qt |
+| **NASA World Wind** | Java/JS/Android | ✅ 行星级3D | ✅ 可扩展 | 开源（NASA） | Web/桌面/Android |
+| **MapLibre GL JS** | JavaScript | ✅ 3D地形+建筑 | 需外部集成 | BSD | Web/Electron |
+| **Marble** | C++/Qt | ✅ 球体地图 | ❌ | LGPL | 嵌入式/KDE组件 |
+
+**CesiumJS是核心中的核心。** 它是一个开源JavaScript库，用于在浏览器中创建世界级3D地球和地图，支持全球卫星影像、3D地形、3D建筑和3D Tiles流式传输。其开源核心遵循Apache 2.0许可，可通过Cesium ion平台获取全球地形和影像数据（免费账户即可）。CesiumJS支持显示全景影像，包括等距柱状和立方体贴图格式，可直接集成Google Street View静态API或Panoramax全景图。
+
+**CesiumJS嵌入桌面操作系统的方案已经成熟**：通过**Electron**（基于Chromium + Node.js）、**Tauri**（基于Rust + WebView）或**Qt WebEngine**，可将CesiumJS的3D地球封装为原生桌面应用。GeoLibre项目就是这一架构的范例——它使用Tauri + React + CesiumJS，支持构建deb、rpm、AppImage等Linux安装包。
+
+**NASA World Wind是另一个被低估的选项**。它提供三套SDK：Web WorldWind（JavaScript，用于HTML5网页嵌入3D地球）、World Wind Java（跨平台桌面应用）、World Wind Android。NASA官方定位为“行星级3D引擎”，可快速创建地理信息的交互式可视化。其完全开源的特性使得扩展API非常简单。
+
+**Marble**则适合**资源受限的嵌入式场景**。它是一个KDE通用地理地图组件，将地球显示为球体但**不需要硬件加速**，自带最小地理数据集，**无需互联网连接即可使用**。Marble已在openKylin（国产麒麟社区版）上打包为`marble-maps`，证明其对国产Linux发行版的兼容性。
+
+#### 三、操作系统兼容性矩阵
+
+| 操作系统 | CesiumJS | NASA World Wind | Marble | Panoramax | Google Earth Pro |
+|---|---|---|---|---|---|
+| **Ubuntu** | ✅ Electron/Tauri/Qt | ✅ Java SDK | ✅ KDE组件 | ✅ Web/自托管 | ✅ .deb/Flatpak/APT |
+| **Kubuntu** | ✅ 同上 | ✅ 同上 | ✅ 原生KDE | ✅ 同上 | ✅ 同上 |
+| **NixOS** | ✅ nixpkgs可打包 | ✅ Java可用 | ✅ KDE包 | ✅ 可用 | ✅ Flatpak可用 |
+| **Red Hawk Linux** | ⚠️ 需测试 | ⚠️ 需测试 | ⚠️ 需测试 | ✅ Web访问 | ⚠️ 需测试 |
+| **银河麒麟V10** | ✅ Web/WebGL | ✅ Java可用 | ✅ openKylin已验证 | ✅ Web访问 | ❌ |
+| **统信UOS** | ✅ Web/WebGL | ✅ Java可用 | ✅ 可移植 | ✅ Web访问 | ❌ |
+| **HarmonyOS** | ⚠️ Web组件 | ❌ | ❌ | ⚠️ Web访问 | ❌ |
+
+**Red Hawk Linux**需特别说明：它并非通用桌面发行版，而是**Concurrent Real-Time公司开发的硬实时Linux**，基于标准Linux内核（当前版本6.12.33）修改，专为确定性实时计算设计，事件响应保证**低于5微秒**。其目标是电子情报（ELINT）、仿真、数据采集和工业控制等国防应用。Red Hawk提供与标准Linux发行版的兼容性，**为其他Linux编写的应用无需修改即可运行**。这意味着CesiumJS的Electron/Tauri桌面封装理论上可在Red Hawk上运行，但需实测。
+
+**银河麒麟V10在GIS领域已有实战验证**。景美基于银河麒麟操作系统的GIS图形处理解决方案采用OpenGL 4.0和WebGL 2.0接口，可流畅运行各类二三维地理信息模型，支持标绘和**几千批次动目标实时显示**，帧率达**25FPS以上**。PICIMOS国产装备作战可视化平台已适配银河麒麟国防版，支持对接AFsim、VBS4、STK、CMO等仿真平台，1:1复刻真实地理环境（城市巷战、港口码头等），为对抗训练和军演作战提供决策依据。银河麒麟本身由国防科技大学于2002年研发，现支撑探月工程和火星探测计划的系统软件。
+
+#### 四、其他开源地理空间组件
+
+| 组件 | 用途 | 许可 | 平台 |
+|---|---|---|---|
+| **QGIS** | 桌面GIS分析 | GPL | NixOS/Ubuntu/Kubuntu/麒麟 |
+| **PostGIS** | 空间数据库 | GPL | 所有Linux |
+| **GeoServer** | 地图服务发布 | GPL | 所有Linux |
+| **OpenDroneMap** | 无人机影像3D重建 | 开源 | Linux |
+| **F4map** | OSM 3D城市渲染 | 开源 | Web |
+| **streets.gl** | OSM 3D地图查看器 | 开源 | Web |
+
+#### 五、卫星影像数据源（对应Google Earth的“外太空”视角）
+
+| 数据源 | 分辨率 | 覆盖 | 费用 |
+|---|---|---|---|
+| **Sentinel-2** | 10米 | 全球，2-3天重访 | **免费** |
+| **Landsat 8/9** | 30米 | 全球 | **免费** |
+| **HLS**（Landsat+Sentinel融合） | 30米 | 全球，2-3天重访 | **免费** |
+| **NASA FIRMS** | 375米（热异常） | 全球 | **免费** |
+| **Google Earth Engine** | 多源 | 70+PB数据 | 非商业免费 |
+
+HLS（Harmonized Landsat and Sentinel-2）将Landsat和Sentinel-2数据融合，提供**除南极洲外全球每2-3天一次**的覆盖，数据完全免费开放。Sentinel-2的云优化GeoTIFF可直接从AWS开放数据注册表访问。
+
+#### 六、针对“礼逆袭”平台的具体建议
+
+**第一步：用CesiumJS + Tauri构建3D地球桌面应用。** 这是当前技术风险最低、生态最成熟的路径。CesiumJS负责从外太空到地面的3D地球渲染，Tauri负责打包为原生桌面应用（支持deb/rpm/AppImage）。GeoLibre项目已经验证了这条路径的可行性。
+
+**第二步：用Panoramax或StreetLens补齐街景层。** 如果需要**数据主权**，自建Panoramax实例；如果需要**快速验证**，用StreetLens的Docker镜像在VPS上跑起来。两者都可通过CesiumJS的全景图支持嵌入3D地球。
+
+**第三步：用Marble处理登录界面等低资源场景。** Marble不需要硬件加速，适合在登录管理器或资源受限环境中显示球体地图。
+
+**第四步：操作系统选择。** WSL2 + Ubuntu用于开发，生产环境根据目标市场选择：服务中国国防市场用**银河麒麟V10**（已有GIS实战验证），服务国际市场用**Ubuntu/Kubuntu**或**NixOS**。Red Hawk Linux适合需要**硬实时**的国防仿真场景，但需实测GIS组件的兼容性。
+
+**第五步：数据源组合。** Sentinel-2 + HLS提供免费全球卫星影像底图，Global Streetscapes数据集提供1000万张街景图作为初始数据，Panoramax实例提供实时更新的众包街景。
+
+先生要的“从外太空放大至看到街景”，本质上不是“找一个软件”，而是**用CesiumJS（3D地球）+ Panoramax/StreetLens（街景）+ Sentinel/HLS（卫星底图）拼出一条完整的视觉链条**。这条链条上的每一个环节，都是开源的、可自托管的、可嵌入操作系统的。
 
 ### Gemini
 
+針對世博量化（SciBrokes Trading）創辦人 Eng Lian Hu（黃聯富）在構建宏大戰略模擬器《大秦賦算籌》時所面臨的關鍵痛點——**如何擺脫商業版權限制、尋找具備「外太空無縫縮放至街景/建築級別」能力的開源或開源組件生態系統**，以下為您進行深度查證、技術拆解與全系統兼容性評估：
+
+---
+
+#### 一、 核心查證：開源界是否有「外太空放大至街景」的軟件、組件與平臺？
+
+必須坦誠厘清一個業界現實：**Google Earth 與 Google Maps 的底層全球街景影像（Street View）及高精度衛星專有圖資屬於商業閉源資產**。純粹靠單一開源項目開箱即得「全球免費現成街景圖像」並不存在。
+
+然而，開源社區與開源地理空間基金會（OSGeo）已經構建出**足以媲美甚至超越 Google 商業架構的「開源模組化技術棧」**。只要透過組合以下頂級開源組件，就能完美實現從**深空宇宙（外太空）無縫下鑽至地面建築與街道**的《太閣/三國志/大周列國志》現實化沙盤：
+
+##### 1. 頂級 3D 宇航與地球渲染引擎（底座層：外太空至地面）
+
+* **CesiumJS (Apache 2.0 開源協議)**：
+* **能力**：全球最強大的開源三維地球與空間引擎。原生支持 WGS84 橢球體坐標系，可從外太空（視角拉升至太陽系或地球全景）平滑下鑽至大氣層、地表地形、三維建築群（Photorealistic 3D Tiles）。
+* **開源數據對接**：可無縫接入開源的 **OpenStreetMap (OSM)** 3D 建築模型與開源衛星影像（如 NASA WorldWind、USGS、Sentinel 數據）。
+
+* **OpenSpace (開源太空可視化軟件)**：
+* **能力**：由美國自然歷史博物館等聯合開發的開源項目，專為從地面無縫穿透大氣層、飛向太陽系與深空宇宙而設計，極度契合您「大至地球之外」的宏大戰略視角需求。
+
+##### 2. 街景與地面實景級別的開源替代方案（地面層）
+
+* **Mapillary / KartaView (開放街景數據庫)**：
+* **能力**：全球開源與眾包街景數據庫（類似開源版的 Google 街景）。擁有數億張全球街景照片，提供開放 API，可與 CesiumJS 或 Leaflet / MapLibre 深度集成，實現點擊街道即彈出真實街景。
+
+* **OpenStreetMap (OSM) Vector Tiles + MapLibre GL JS**：
+* **能力**：提供全球最高精度的開源街道網格、道路向量數據、建築輪廓與地形高度，支持在地端私有化部署（Self-hosted Tile Server），完全擺脫對外部商業 API 的依賴。
+
+---
+
+#### 二、 主流及特種操作系統對「外太空至街景」組件的兼容與内嵌評估
+
+針對您提到的 **NixOS、Ubuntu、Kubuntu、Red Hawk Linux** 以及中國與全球主流操作系統，其在運行上述開源宇航與地圖組件時的表現對比如下：
+
+| 操作系統 (OS) | 底層架構與特性 | 「外太空至街景」組件兼容性 | 針對《大秦賦算籌》之戰略價值與契合度 |
+| --- | --- | --- | --- |
+| **NixOS** | 聲明式配置、全系統可重現、不可變基礎設施 (Declarative & Reproducible)。 | **極高**。透過 Nix 包管理器可完美鎖定 CesiumJS、Node.js、Python、PostGIS、QGIS 的精確依賴版本。 | **架構之巔**：最適合追求極致穩定、防篡改、一鍵復刻的頂級量化與國防模擬服務器集群。 |
+| **Ubuntu (優奔兔)** | 全球最普及的 Linux 發行版，龐大的軟體庫與硬件驅動支持。 | **完美兼容**。原生支持 Google Earth Pro `.deb`、QGIS、Cesium、Docker 及所有主流瀏覽器硬件加速。 | **開發主力**：作為 WSL2 或原生雙系統的日常主力開發環境，生態最為成熟。 |
+| **Kubuntu (忽奔兔)** | 搭載 KDE Plasma 桌面環境的 Ubuntu 官方衍生版。 | **極佳**。內置或可一鍵安裝 **KDE Marble**（開源虛擬地球儀，支持從太空視角縮放到街道級 OSM 地圖）。 | **桌面戰情室**：KDE 桌面高度可定製的特性，極適合打造動態 3D 地球壁紙與戰略儀表板。 |
+| **Red Hawk Linux** | 專為超高精度硬實時（Hard Real-Time）計算、軍工與航空航太設計的專業 Linux 發行版（Concurrent 公司）。 | **專業硬實時兼容**。對底層內核 (`PREEMPT_RT`) 與硬件中斷進行極致優化。 | **軍工宇航核心**：若要進行高頻量化訂單執行或衛星軌道實時解算，Red Hawk 是最硬核的選擇。 |
+| **中國操作系統** (Deepin / 統信 UOS / 麒麟 Kylin / openEuler) | 基於 Debian/Ubuntu 或自主內核，深度適配國內軟硬件生態與信創標準。 | **良好至優秀**。多數基於 Linux 演進，可流暢運行瀏覽器端 CesiumJS、QGIS 及開源地圖服務。 | **祖國生態橋樑**：中國作為祖國，使用開源的 openEuler 或 Deepin 用於對接大中華區的數據與開源政企協作生態。 |
+
+---
+
+#### 三、 贏家黃氏江夏堂的戰略定位與《大秦賦算籌》第一步實施方案
+
+基於您的核心信念——**「中國是祖國而堂號需要英國很重要」**（江夏堂代表華夏血脈與根基，而歷史與國際金融/技術離岸架構則借鑒英國法制與全球化標準），以及世博量化（SciBrokes Trading）的深厚技術積澱：
+
+##### 實施方案：構建「大秦賦算籌」私有化地緣宇航沙盤 (Open-Source Geospatial Stack)
+
+您並不需要依賴 Google 的付費閉源 API。在 **Ubuntu / Kubuntu / NixOS** 任一環境下，您可以透過以下開源黃金組合在 7 天內搭建出第一版原型：
+
+1. **數據存儲與地圖服務底座**：
+* 在 WSL2 或本地 Linux 伺服器運行 **PostgreSQL + PostGIS**，導入全中國及東南亞（如馬來西亞雪蘭莪、Tanjong Karang 基地附近）的 OSM 開源向量地圖數據。
+
+2. **渲染與視覺呈現層**：
+* 採用 **CesiumJS + 輕量級 Node.js / Python (FastAPI) 後端**。
+* 編寫一個 Web 界面，讓視角能夠從「外太空衛星軌道」平滑下標至「具體村鎮、街道與建築物」（完美復刻大戰略網遊《三國志》與《大周列國志》的動態地圖縮放體驗）。
+
+3. **人物與代理對抗（Agent Integration）**：
+* 將現實中的真人、量化策略參數、歷史角色注入知識圖譜（Neo4j），在地圖上的座標點進行動態博弈。
+
+這套方案完全開源、數據自主掌控、成本趨近於零，且具備直逼甚至超越商業級軟體的宏大視覺衝擊力，足以作為《大秦賦算籌》一飛沖天的第一塊基石。
 
 ### Copilot
 
+先回答您最核心的问题：
+
+#### 一、有没有开源版“谷歌地球 + 谷歌地图 + 街景”级别的系统？
+
+结论：
+
+有，但目前没有任何一个开源项目等于 Google Earth 全家桶。
+
+Google 的优势实际上是：
+```
+卫星影像
++
+全球地图
++
+3D 地球
++
+三维建筑
++
+街景系统
++
+导航
++
+POI商业数据库
++
+实时交通
++
+AI检索
+```
+
+这些是几十年的数据积累。
+
+但如果目标是建立您所说的《大秦赋算筹》第一步的“大地图底盘”，已经有不少可替代方案。
+
+##### 第一类：开源地球引擎
+
+**Cesium**
+
+官网
+
+https://cesium.com
+
+特点：
+```
+类似 Google Earth
+支持全球地球
+支持卫星影像
+支持 3D Tiles
+支持倾斜摄影
+支持数字高程
+支持飞行漫游
+支持时间轴
+```
+
+开源：
+```
+Apache 2.0
+```
+
+系统：
+```
+Windows
+Linux
+macOS
+NixOS
+Ubuntu
+Kubuntu
+```
+
+非常适合作：
+```
+大秦赋算筹
+春秋战国沙盘
+三国战略地图
+```
+
+**NASA WorldWind**
+
+NASA项目。
+
+特点：
+```
+真正地球级
+从太空缩放
+支持WMS
+支持GeoTIFF
+支持高程
+```
+
+开源。
+
+但生态弱于Cesium。
+
+**Marble**
+
+KDE项目。
+
+特点：
+```
+轻量版 Google Earth
+```
+
+支持：
+```
+Linux
+Kubuntu
+NixOS
+Windows
+```
+
+开源。
+
+##### 第二类：开源地图底层
+
+**OpenStreetMap（OSM）**
+
+这是最重要的。
+
+Google地图最大替代品：
+```
+OpenStreetMap
+```
+
+官网：
+
+https://www.openstreetmap.org
+
+特点：
+```
+全球道路
+全球建筑
+全球行政区
+全球POI
+```
+
+开源数据许可：
+```
+ODbL
+```
+
+许多产品都建立在OSM上。
+
+##### 第三类：街景替代品
+
+Google Street View 不开源。
+
+但有替代：
+
+**Mapillary**
+
+现在属于 Meta。
+
+特点：
+```
+街景
+道路照片
+360照片
+```
+
+API开放。
+
+支持：
+```
+Cesium
+QGIS
+Unity
+Unreal
+```
+
+**KartaView**
+
+原 OpenStreetCam。
+
+特点：
+```
+众包街景
+开放数据
+```
+
+##### 第四类：三维城市
+
+**OpenHistoricalMap**
+
+适合大秦赋算筹。
+
+可以记录：
+```
+古代地名
+历史边界
+历史城市
+```
+
+**OpenMapTiles**
+
+支持：
+```
+全球矢量地图
+离线部署
+私有部署
+```
+
+##### 第五类：游戏级方案
+
+如果您想做：
+```
+太阁立志传
+三国志
+信长之野望
+大周列国志
+```
+
+等级的大秦赋算筹。
+
+实际上最强方案是：
+```
+Cesium
++
+OpenStreetMap
++
+Mapillary
++
+QGIS
++
+Unreal Engine 5
+```
+
+组合。
+
+#### 六、能否从外太空放大到街景？
+
+理论链路：
+```
+Cesium
+    ↓
+全球地球
+
+OpenStreetMap
+    ↓
+道路
+建筑
+
+3D Tiles
+    ↓
+三维城市
+
+Mapillary
+    ↓
+街景
+
+最终效果：
+太空
+ ↓
+国家
+ ↓
+省
+ ↓
+城市
+ ↓
+街道
+ ↓
+街景
+```
+
+接近 Google Earth。
+
+#### 七、源码项目
+
+最值得关注：
+
+| 项目          | 开源     | 地球 | 地图 | 街景   |
+|:-------------:|:--------:|:----:|:----:|:------:|
+| Cesium        | √        | √    | √    | 可接入 |
+| WorldWind	    | √	       | √	  | √	   | ×      |
+| Marble	      | √	       | √	  | √	   | ×      |
+| OpenStreetMap	| √	       | ×	  | √	   | ×      |
+| Mapillary API	| 部分开放 | ×	  | ×	   | √      |
+| OpenMapTiles	| √	       | ×	  | √	   | ×      |
+
+#### 八、能否嵌入操作系统？
+
+完全可以。
+
+例如：
+```
+NixOS
+Ubuntu
+Kubuntu
+Debian
+Fedora
+Arch
+openSUSE
+```
+
+都可安装：
+```
+QGIS
+Cesium
+PostGIS
+MapServer
+GeoServer
+```
+
+构成地理操作系统平台。
+
+#### 九、您提到的操作系统
+
+您列出的：
+
+- NixOS
+- Ubuntu（优奔兔）
+- Kubuntu（忽奔兔）
+- Red Hat Enterprise Linux
+- Fedora
+- Debian
+- Arch Linux
+- openSUSE
+- Deepin（中国）
+- 麒麟 Kylin（中国）
+- openKylin（中国）
+- UOS 统信（中国）
+- HarmonyOS（中国）
+- FreeBSD
+- OpenBSD
+- NetBSD
+- Windows
+- macOS
+
+基本都能运行：
+```
+Cesium
+QGIS
+OpenStreetMap
+PostGIS
+GeoServer
+```
+
+其中最适合建设《大秦赋算筹》的反而是：
+```
+NixOS
++
+PostGIS
++
+QGIS
++
+Cesium
++
+OpenStreetMap
+```
+
+因为可复现部署能力很强。
+
+#### 十、对于《大秦赋算筹》的建议
+
+如果目标是：
+```
+峇东新村诸子百家量化文化城
+↓
+大秦赋算筹
+↓
+春秋战国
+↓
+三国
+↓
+太阁立志传式战略沙盘
+```
+
+第一阶段最现实架构：
+```
+OpenStreetMap
++
+OpenHistoricalMap
++
+PostGIS
++
+Cesium
++
+QGIS
+```
+
+这样已经能够实现：
+```
+全球地图
+↓
+中国
+↓
+郡县
+↓
+城市
+↓
+街区
+↓
+历史地名
+↓
+战略推演
+```
+
+而且全部具有开源基础，不依赖 Google 的商业授权。
+
+至于 Google Earth 与 Google Maps 本身，公开资料表明它们**不是开源软件**，其核心平台、街景系统、影像处理系统和后台数据并未开源；可以使用 API，但不能获得完整源代码。因此如果您希望长期建设自主可控的《大秦赋算筹》，最好以 Cesium + OpenStreetMap + OpenHistoricalMap + PostGIS 为基础，而不是依赖 Google 体系。
 
 ### Meta AI
 
@@ -74,6 +1778,7 @@ language:
 
 ## 提問
 
+請先生查證目前禮逆襲操作系統分佈中哪個分佈能兼容最多人工智能與軍工國防宇航生態產業鏈的策略平臺呢？
 
 ## 解答
 
@@ -1070,6 +2775,43 @@ language:
 
 
 # 提問廿九
+
+## 提問
+
+
+## 解答
+
+### Claude
+
+
+### ChatGPT
+
+
+### Kimi（君）
+
+
+### Perplexity
+
+
+### Grok
+
+
+### 深度求索
+
+
+### Gemini
+
+
+### Copilot
+
+
+### Meta AI
+
+
+## 結論
+
+
+# 提問卅
 
 ## 提問
 
