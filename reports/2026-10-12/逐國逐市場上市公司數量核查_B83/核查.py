@@ -16,10 +16,10 @@ write('官方統計取得收據.csv',receipts)
 cpath=R/'Reference/tables/01_country_area/registry_country_area_iso3166_20261004_enhanced.csv';mpath=R/'Reference/tables/93_全球貨幣與市場代碼全量續核_B71_20261012/全量市場識別碼.csv';countries=read(cpath);markets=read(mpath);iso={x['iso_alpha3']:x for x in countries};codes={x['iso_alpha2'] for x in countries}
 wb=data.get('上市本地公司最近非空值',[{},[]]);meta=wb[0];records=wb[1] if len(wb)>1 and isinstance(wb[1],list) else []
 assert not records or meta['pages']==1 and len(records)==meta['total']
-economies={x['id']:x for x in data.get('世界銀行經濟體',[{},[]])[1]};values={};extras=[];aggregates=[]
+economies={k:x for x in data.get('世界銀行經濟體',[{},[]])[1] for k in [x['id'],x['iso2Code']]};values={};extras=[];aggregates=[]
 for x in records:
  code=x['countryiso3code'];row=dict(經濟體代碼=code,名稱原文=x['country']['value'],數值=x['value'] if x['value'] is not None else 'UNKNOWN（未知）',統計年份=x['date'],指標='CM.MKT.LDOM.NO（上市本地公司數）',口徑='年末本地上市公司，含僅在該市場上市的外國公司例外；非逐交易所總公司數')
- if economies.get(code,{}).get('region',{}).get('id')=='NA':aggregates.append(row);continue
+ if economies.get(code or x['country']['id'],{}).get('region',{}).get('id')=='NA':aggregates.append(row);continue
  if code in iso:values[code]=row
  else:extras.append(dict(row,ISO母表關聯='未以本資料代碼直接匹配，須逐項核；不推定獨立國家'))
 write('非ISO直接匹配統計經濟體.csv',extras or [dict(經濟體代碼='無',名稱原文='',數值='',統計年份='',說明='零筆')]);write('統計聚合體另存.csv',aggregates)
