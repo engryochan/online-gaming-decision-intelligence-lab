@@ -1,0 +1,307 @@
+
+<html lang="en">
+
+    
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="The official website of the Cayman Islands Stock Exchange." />
+        <title>ESG Initiative | Cayman Islands Stock Exchange</title>
+        <!-- Bootstrap -->
+        <link href="/Content/bootstrap.min.css" rel="stylesheet">
+		<link href="/Content/bootstrap-datepicker3.min.css" rel="stylesheet">
+        <link href="/Content/style.css" rel="stylesheet" />
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Scripts go here -->
+        <script src="/scripts/TickerTape3.js?v101" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/Scripts/html5shiv.min.js"></script>
+      <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+    <body>
+        <div id="not-home-page-wrapper" class="not-home-page-wrapper">
+            <div id="main-body" class="not-home-page container">
+                
+                
+				<div id="branding" class="row">
+                    <div class="col-xs-5">
+                        <a href="https://www.csx.ky"><img id="csx-logo" class="pull-left" src="/images/csx-logo-gold250.png"  title="Home"/></a>
+                    </div>
+                    <div class="col-7 brand-right" style="vertical-align: text-top;">
+                        <div class="col-xs-4 abouttime smallcaper pull-right reverse-gold">
+                            Cayman Time | 04:35 - 
+                            GMT Time | 09:35
+                            <!-- /input-group -->
+                            <form id="main-search" action="/companies/search.asp" method="post" role="form">
+                                <div class="form-group fadeaway">
+                                    <div class="input-group pull-right">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default fadeaway" type="submit">Search</button>
+                                        </span>
+                                        <input type="text" name="SearchText" class="form-control fadeaway">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="col-xs-4 top-links col-xs-offset-3">
+                            <a class="color-red" href="#">CUSIP/ISINs and LEI Services</a>
+                        </div> -->
+                    </div>
+<!--					
+                    <div class="row" >
+                        <div class="col-xs-10" style="margin-top: 20px;">
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick">
+                                    <script type="text/javascript">var ticker2 = new TickerTape('/_data/TickerDataMF.asp', 'HTickerTape', true, 100, 20);</script>
+                                </div>
+                            </div>
+							
+                            <div class="row">
+                                <div class="col-xs-12 tick-tick" style="padding-top:5px;">
+                                    <script type="text/javascript">var ticker3 = new TickerTape('/_data/TickerDataAN.asp', 'HTickerTape', true, 100, 40);</script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+-->
+                </div><nav id="main-nav" class="navbar navbar-default navbar-static-top smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+                            <li class="dropdown"><a href="/" class="nav-level-1">Home</a></li>
+							
+                            <li class="dropdown nav-level-1">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; About Us &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/aboutus/overview.asp">Overview</a></li>
+									<li><a href="/aboutus/benefits.asp">Benefits</a></li>
+                                    <li><a href="/aboutus/news.asp">News and Events</a></li>
+                                    <li><a href="/aboutus/affiliations.asp">Affiliations</a></li>
+									 <li><a href="/aboutus/recognitions.asp">Recognitions</a></li>
+                                    <!--<li><a href="/aboutus/csx-on-xetra.asp">CSX on XETRA</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Exchange Holidays</a></li>
+									<!--<li><a href="/aboutus/contact-us.asp">Contact Us</a></li>-->
+									<li><a href="/aboutus/applicationform.asp">Employment Application Form</a></li>
+<!--                                    <li><a href="/aboutus/faqs.asp">FAQs</a></li>
+-->
+                                </ul>
+                            </li>
+ 
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Companies &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/companies/announcements.asp">Announcements</a></li>
+                                    <li><a href="/companies/investment-funds.asp">Investment Funds</a></li>
+                                    <li><a href="/companies/specialist-debts.asp">Specialist Debt</a></li>
+                                    <li><a href="/companies/corporate-debts.asp">Corporate Debt</a></li>
+                                    <li><a href="/companies/ils-cat-bonds.asp">ILS / CAT Bonds</a></li>
+									<li><a href="/companies/retail-debts.asp">Retail Debt</a></li>
+                                    <li><a href="/companies/equities.asp">Equity</a></li>
+                                    <li><a href="/companies/daily-official-list.asp">Official List</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Listing &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+									<li><a href="/listing/listing-on-csx.asp">Listing on CSX</a></li>
+                                    <li><a href="/listing/product-guides.asp">Product Guides</a></li>
+									<li><a href="/listing/listing-rules-and-forms.asp">Listing Rules and Forms</a></li>
+                                    <li><a href="/listing/listing-checklists.asp">Listing Checklists</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+<!-- 									<li><a href="/listing/fact-sheets.asp">Fact Sheets</a></li>
+-->
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Trading &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/trading/trading-on-csx.asp">Trading on CSX</a></li>
+                                    <li><a href="/trading/daily-trading-summary.asp">Daily Trading Summary</a></li>
+                                    <!-- <li><a href="/trading/trading-procedures.asp">Trading Procedures</a></li>
+                                    <li><a href="/trading/settlement-procedures.asp">Settlement Procedures</a></li>-->
+                                    <li><a href="/aboutus/holidays.asp">Trading Calendar</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+                                </ul>
+                            </li>
+<!--
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">CSX FundStream <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/fundstream/csx-fundstream.asp">CSX FundStream</a></li>
+                                </ul>
+                            </li>
+-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; ISIN &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/isin/isin-cusip.asp">ISIN-CUSIP Services</a></li>
+                                    <li><a href="/isin/apply-for-isin.asp">Apply for ISIN</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Agents &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/listing-agent/listing-agents.asp">Listing Agents</a></li>
+                                    <li><a href="/listing-agent/listing-agent-guide.asp">Listing Agent Guide</a></li>
+									<li><a href="/listing-agent/listing-agent-benefits.asp">Listing Agent Benefits</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Members &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-members.asp">Broker Members</a></li>
+                                    <li><a href="/broker/broker-membership-rules-forms.asp">Broker Membership Rules and Forms</a></li>
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle nav-level-1" data-toggle="dropdown">&nbsp; Fees &nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/broker/broker-fees.asp">Broker Member Fees</a></li>
+                                    <li><a href="/listing-agent/listing-agent-fees.asp">Listing Agent Fees</a></li>
+                                    <li><a href="/listing/listing-fees.asp">Listing Fees</a></li>
+									<li><a href="/trading/trading-fees.asp">Trading Fees</a></li>
+									<li><a href="/isin/isin-fees.asp">ISIN Fees</a></li>
+                                </ul>
+                            </li>
+							
+							<li class="dropdown">
+							  <a href="#" class="esg" data-toggle="dropdown">&nbsp; ESG &nbsp;<b class="caret"></b></a>
+							     <ul class="dropdown-menu">
+                                    <li><a href="/companies/esg.asp">CSX ESG Market</a></li>
+								 </ul>
+                            </li>
+							
+							<!-- <li class="dropdown"><a href="/Documents/Covid-19 Business Continuity Messsage.docx" class="nav-level-1">Covid-19 Business Continuity</a></li>-->
+							<li class="dropdown"><a href="/aboutus/contact-us.asp" class="nav-level-1">&nbsp;Contact Us &nbsp;</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+				<nav id="sub-nav" class="navbar navbar-default smallcaper" role="navigation">
+                    <div class="navcontainer"> 
+                        <ul class="nav navbar-nav">
+							
+
+							<li class="dropdown"><a class="current-page" href="/companies/esg.asp">CSX ESG Market</a></li>
+
+						</ul>
+					</div>
+				</nav>
+
+<ol class="breadcrumb">			
+<li><a href="/">Home</a></li><li>ESG</li>
+<li class="active">CSX ESG Market</li>
+</ol>
+
+                <div id="content" class="row addtop">
+                    <div class="col-xs-12 main-content">
+                        <h2>Introduction</h2>
+                        <p>Environmental, social and corporate governance <b>(“ESG”)</b> and sustainability-linked bonds <b>(“SLBs”)</b> are at the forefront of global investors’ minds and an important part of our listing platform offering.</p>
+						<p>The Cayman Islands Stock Exchange <b>("CSX")</b> provides a platform for the listing and trading of shares, specialist and corporate debt securities and other instruments issued by trading companies, investment funds and other investment vehicles. Based in George Town, Grand Cayman, the CSX began trading in 1996 and since its inception it has approved securities for admission for a total market capitalisation of over US$800 billion.</p>
+						<p>CSX continues to receive enquiries on an ever-increasing number of ESG-focused and sustainable financing transactions in both securitisations and wider finance space. </p>
+						<p>CSX has established a separate market segment for ESG investments, <b>CSX ESG Market</b> which offers a comprehensive and flexible platform. </p>
+						<p>The CSX has devised specialist listing rules for Clean Technology Companies back in 2013 and now our expanded segment offers the comprehensive platform for sustainable debt financing, as the need for investors and companies to manage climate risks and create impact becomes ever more important.</p>
+						<p><b>CSX ESG Market</b> is designed to help issuers to meet investor demands for greater and more consistent disclosures and enhance visibility to bonds, funds and trading companies which are verified as making a positive environmental impact and/or are classified as sustainable securities. <b>CSX ESG Market</b> can enable those seeking investment into environmentally beneficial initiatives to highlight their credentials while, at the same time, providing easier access for investors who are looking to see a positive impact from investments they have made alongside traditional financial return.</p>
+						<p>A listing on the <b>CSX ESG Market</b> ESG can assist with the marketing as well as enabling access to certain institutional investors, including pension funds as well as providing a withholding tax exemption for certain issuers. CSX is a “Recognised Stock Exchange” by UK HM Revenue & Customs, making debt securities eligible for the Quoted Eurobond Exemption.</p>
+						<p>The <b>CSX ESG Market</b> offers an environment where issuers of ESG and sustainable securities can market their securities and publish any material information and reports. </p>
+						
+						<h2>Benefits</h2>
+						<p>Whilst offering a “recognized stock exchange” by, amongst others, HMRC, the CSX offers a personalised approach to listing applications within a highly regulated and innovative marketplace. </p>
+						<p>The CSX offers the following advantages:</p>
+						
+						<div class="row">
+                            <div class="col-xs-0"></div>
+							<div class="col-xs-12">
+								<p><ul>
+									<li>Breadth of offering, the <b>CSX ESG Market</b> covers a full suite of asset classes and instrument types, ranging from plain vanilla bonds to more complex instruments such as asset-backed securities. It helps deliver broad sustainable finance platform to issuers and investors.</li>
+									<li><b>CSX ESG Market</b> is open to issuers from any jurisdiction</li>
+									<li>Enhanced visibility and international standards, securities admitted to <b>CSX ESG Market</b> are subject to international standards in order to enhance investor confidence in the level of disclosure related to their sustainability frameworks and reporting.</li>
+									<li><b>CSX ESG Market</b> offers issuers the opportunity to display key documents such as external reviews, sustainability frameworks and annual sustainability reports on their dedicated profiles.</li>
+									<li>Fast and efficient listing services from an experienced and highly qualified team.</li>
+									<li>No additional charges for admission to, or an ongoing presence on, <b>CSX ESG Market</b>.</li>
+									<li>Responsive and approachable Listing Committee which meets daily to consider approving securities for admission to the Official List of the CSX.</li>
+									<li>"Recognised Stock Exchange" status from the HM Revenue & Customs (designated as such under section 1005 Income Tax Act 2007 (UK) making debt securities eligible for the Quoted Eurobond Exemption).</li>
+									<li>Existing documentation (for example, prospectus, offer memorandum, scheme particulars, pricing supplements) may be utilised to form the listing document, furthering the potential to save on costs.</li>
+									<li>An issuer may not be required to appoint a listing agent depending on the type of listing (applicable to specialist and corporate debt securities).</li>
+									<li>The Cayman Islands is a leading international financial centre and continues to demonstrate their commitment to the highest of regulatory standards</li>
+									<li>The CSX operates outside the European Union (EU) and EU Directives do not apply, therefore the regulatory burden is less onerous than listing on other major exchanges domiciled in the EU.</li>
+								</ul></p>
+							</div>
+						</div>
+						
+						<h2>Initial Requirements</h2>
+						<p>The process for listing ESG securities follows the standard 2 step listing process with the additional benefit of enhancing the profile of the securities through the admission to the <b>CSX ESG Market</b>.</p>
+						<p>Eligibility for securities to <b>CSX ESG Market</b> is conditional on the following:</p>
+						
+						<div class="row">
+                            <div class="col-xs-0"></div>
+							<div class="col-xs-12">
+								<p><ul>
+									<li>Listing on the Official List of the CSX</li>
+									<li>Submission of completed <b>CSX ESG Market</b>
+									Declaration Form <a target="_blank" href="/Documents/Rules/CSX_ESG_Market_Declaration_Form.docx">
+								<img src="/images/icons/word_small.png" /></a> which includes: 
+										<p><ul>
+											<li>description of the classification of the securities being admitted;</li>
+											<li>use of proceeds certified (green, social or sustainability) or issuer-level classified (green revenues or sustainability-linked bonds); and </li>
+											<li>disclosure of mandatory sustainability related documents as applicable, such as an Independent External Review; and acknowledgement and commitment to ongoing post-issuance reporting obligations.</li>
+										</ul></p>
+									</li>
+									<li>Independent External Review </li>
+								</ul></p>
+								
+								<p>Independent third party external review should be submitted at the time of application before any green, social or sustainable securities can be displayed on <b>CSX ESG Market</b>.</p>
+								<p>The proposed issuer must provide verification of the ESG investment’s credentials by an appropriate third party. The third party conducting the review must be:</p>
+								<p><ul>
+											<li>independent of the entity issuing the securities;</li>
+											<li>remunerated in a way that prevents any conflicts of interests arising; and</li>
+											<li>specialised entity in assessing the framework of bonds’ environmental or social objectives and providing an assessment of the use of proceeds.</li>
+								</ul></p>
+								<p>There is no preference as to which framework will be used but note that CSX accepts external reviews consistent with  <a href="https://www.icmagroup.org/sustainable-finance/external-reviews/">ICMA Guidelines for External Reviews</a></p>
+							</div>
+						</div>
+											
+                    </div> <!-- main content -->
+                    
+                </div>
+
+                
+
+
+<div id="footer" class="row addtop smallcaper reverse-gold">
+	<p class="reverse-gold"><a class="reverse-gold" href="/aboutus/contact-us.asp">Contact us</a> | 
+<!--	<a class="reverse-gold" href="/aboutus/faqs.asp">FAQs</a> | -->
+	<a class="reverse-gold" href="/disclaimer.asp">Disclaimer</a> |
+	<a class="reverse-gold" href="/terms-of-use.asp">Terms of use</a> |
+	<a class="reverse-gold" target="_blank" href="/Documents/CSX_Privacy_Notice.pdf">Privacy Notice</a>
+	 </p>
+    <p class="reverse-gold">Copyright &copy; 2026 Cayman Islands Stock Exchange Ltd. All rights reserved.</p>
+</div>
+
+                                
+            </div>
+        </div>
+    
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/Scripts/jquery-1.9.0.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/Scripts/bootstrap.min.js"></script>
+    
+    </body>
+</html>
+
+

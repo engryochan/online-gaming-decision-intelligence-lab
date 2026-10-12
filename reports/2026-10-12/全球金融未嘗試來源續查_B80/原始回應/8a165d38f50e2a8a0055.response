@@ -1,0 +1,1343 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=11" /><meta name="viewport" content="width=1080" /><meta name="Author" content="Denis Petrescu, Cosmin Alexe, Florin Duminica" /><title>
+	Bursa de Valori Bucuresti Sistem de brokeraj – Platforma Arena XT
+</title>
+        <script src="/bundles/modernizr?v="></script>
+
+    <link href="/Content/css?v=5KyQCvvRIVHICHP_qkqatsa-hLElHMKVYdERMm68Pgk1" rel="stylesheet"/>
+<link href="/bundles/cssbndl?v=GUM1I1AKMzSy5Cm2S8PG1Rrd1htqPVGDV_DbBMoQp3g1" rel="stylesheet"/>
+<meta name="description" content="Arena XT Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB pentru intermediari. Platforma dispune de toate functiile necesare unei firme de brokeraj pentru operare pe piata de capital" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="./ArenaXTPlatform" id="aspnetForm" autocomplete="off">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="HSGOQDnh2iQoFpungUAH94Ev6Io5e/xoIuiCV2hqm6iva2qPDPxvBwWk3DeTTkHTdgq2TFqvouowIX8ECWxuypamMuBi9fxATohWPRfGPoJAq5+W9Elk+ndq+MOPVJxBLHT74ChjJ7kWBwHkMgCtD9CCIC9WvlSZ5w2WnGgVlUSCbbJZge7Lox6LVwsyffiE+UV8ARoWd832G4hYkKz7l1f8iDt96zBRI3xpfmONP9w=" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"ro-RO","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"lei","NaNSymbol":"NaN (nu este un număr)","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-Infinit","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"Infinit","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"a.m.","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402293599999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":".","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy H:mm:ss","LongDatePattern":"d MMMM yyyy","LongTimePattern":"H:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"p.m.","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd.MM.yyyy","ShortTimePattern":"H:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["D","L","Ma","Mi","J","V","S"],"ShortestDayNames":["D","L","Ma","Mi","J","V","S"],"DayNames":["duminică","luni","marți","miercuri","joi","vineri","sâmbătă"],"AbbreviatedMonthNames":["ian.","feb.","mar.","apr.","mai.","iun.","iul.","aug.","sep.","oct.","nov.","dec.",""],"MonthNames":["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie",""],"IsReadOnly":false,"NativeCalendarName":"Calendar gregorian","AbbreviatedMonthGenitiveNames":["ian.","feb.","mar.","apr.","mai.","iun.","iul.","aug.","sep.","oct.","nov.","dec.",""],"MonthGenitiveNames":["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yKn6S0XO-cOQfsHPT7Sa_hkgjtNFZpdQWSe4PtHVkaFqY2LFF8sZmlOjsgrlCRB-3dYAZgA_w3tBaxb0CZ5U7sWxY7fsu0q2a33yyp4oXPoKlg3R7hlgVLezSwFVNZwk7TLTut_kZTZjhFU2_bYwfkw1&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4292BB90" />
+       
+        
+          <script type="text/javascript"> var sk = ''; </script>
+        <header class="content">
+            
+            <script src="/bundles/mainscripts?v=auziiMPxLwKLqPjtTi8U-XiYZ9zjuopqF6dAl2c6bsw1"></script>
+
+            <script type="text/javascript">
+                var currentCulture = 'ro-RO';
+                var lengthMenu = "Afiseaza _MENU_ inregistrari";
+                var decimalLang = ",";
+                var thousandsLang = ".";
+                var searchLang = "Cauta";
+                var noData = "Nu exista date.";
+                var infoLang = "Afisare _START_ - _END_ din _TOTAL_ inregistrari";
+                var paginateFirst = "Inceput";
+                var paginateLast = "Sfarsit";
+                var paginateNext = "Inainte";
+                var paginatePrevious = "Inapoi";
+                var zeroRecordsLang = "Nicio inregistrare gasita";
+                var infoEmptyLang = "Afisare 0 - 0 din 0 inregistrari";
+                var infoFilteredLang = "(selectate din _MAX_ inregistrari)";
+                Globalize.culture(currentCulture);
+                moment.locale(currentCulture);
+            </script>                
+  
+            <script src="/Scripts/cookie-bar-master/cookiebar-latest.min.js?forceLang=ro&noGeoIp=1&remember=364" type="text/javascript"></script>
+            
+            <script src="/bundles/bdltvcha?v=gBptZXijeZq8jJ9EeLZuFEOoSjkUDC9hvdjiXYD7QeA1"></script>
+
+
+            <div class="container top-content header-banner">
+                <div class="header-bvb">
+                    <div class="headerLogo">
+                        <a href="/">
+                            <img id="LogBVB" src="/Intro/img/BVB_Logo_white_RO.png" style="width: 1px; height: 1px;" />
+                        </a>
+                    </div>
+                    <div class="p-0 mTop5">
+                        
+
+<div class="black">
+    <div class="mTop5 d-flex">
+        <div class="col-lg-1 mTop3 hidden-xs">
+
+<div class="clock">
+  <div class="clock__second"></div>
+  <div class="clock__minute"></div>
+    <div class="clock__hour"></div>
+  <div class="clock__axis"></div>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+    <section class="clock__indicator"></section>
+</div>
+
+<style>
+
+
+ .clock {
+	 height: 30px;
+	 width: 30px;
+	 border-radius: 0px;
+	 display: flex;
+	 justify-content: center;
+	 position: relative;
+     font-family: sans-serif;
+}
+ .clock__second, .clock__minute, .clock__hour, .clock__indicator {
+	 position: absolute;
+	 /*left: calc(50% - 10px);*/
+     left:0px;
+	 width: 1.5px;
+	 background: #004762;
+	 transform-origin: bottom center;
+	 z-index: 2;
+	 border-radius: 1px;
+}
+ /*.clock__second {
+height: 15px;
+    margin-top: 4.5px;
+    background: #3e3e3e;
+    animation: time 60s infinite steps(60);
+    z-index: 3;
+    opacity: 0.3;
+    left: 7.5px;
+}*/
+ .clock__minute {
+    height: 14px;
+    margin-top: 6px;
+    opacity: 0.75;
+    animation: time 3600s linear infinite;
+    left: 7px;
+}
+ .clock__hour {
+    height: 10.5px;
+    margin-top: 10px;
+    animation: time 43200s linear infinite;
+    left: 7px;
+}
+ .clock__indicator {
+    height: 20px;
+    width: 15px;
+    border-top: 1px solid #004762;
+	 background: none;
+     opacity: 0.75;
+
+}
+ /*.clock__indicator:nth-of-type(5n) {
+	 height: 0px;
+	 border-top: none;
+}*/
+ .clock__axis {
+	 background: #004762;
+	 width: 5px;
+	 height: 5px;
+	 border-radius: 3px;
+	 position: absolute;
+	 z-index: 4;
+    top: 17.5px;
+    left: calc(50% - 10px);
+}
+ section.clock__indicator:nth-of-type(1) {
+	 transform: rotateZ(calc(6deg * 1));
+}
+ section.clock__indicator:nth-of-type(2) {
+	 transform: rotateZ(calc(6deg * 2));
+     
+}
+ section.clock__indicator:nth-of-type(3) {
+	 transform: rotateZ(calc(6deg * 3));
+}
+ section.clock__indicator:nth-of-type(4) {
+	 transform: rotateZ(calc(6deg * 4));
+}
+ section.clock__indicator:nth-of-type(5) {
+	 transform: rotateZ(calc(6deg * 5));
+}
+ section.clock__indicator:nth-of-type(6) {
+	 transform: rotateZ(calc(6deg * 6));
+}
+ section.clock__indicator:nth-of-type(7) {
+	 transform: rotateZ(calc(6deg * 7));
+}
+ section.clock__indicator:nth-of-type(8) {
+	 transform: rotateZ(calc(6deg * 8));
+}
+ section.clock__indicator:nth-of-type(9) {
+	 transform: rotateZ(calc(6deg * 9));
+}
+ section.clock__indicator:nth-of-type(10) {
+	 transform: rotateZ(calc(6deg * 10));
+}
+ section.clock__indicator:nth-of-type(11) {
+	 transform: rotateZ(calc(6deg * 11));
+}
+ section.clock__indicator:nth-of-type(12) {
+	 transform: rotateZ(calc(6deg * 12));
+}
+ section.clock__indicator:nth-of-type(13) {
+	 transform: rotateZ(calc(6deg * 13));
+}
+ section.clock__indicator:nth-of-type(14) {
+	 transform: rotateZ(calc(6deg * 14));
+}
+ section.clock__indicator:nth-of-type(15) {
+	 transform: rotateZ(calc(6deg * 15));
+}
+ section.clock__indicator:nth-of-type(16) {
+	 transform: rotateZ(calc(6deg * 16));
+}
+ section.clock__indicator:nth-of-type(17) {
+	 transform: rotateZ(calc(6deg * 17));
+}
+ section.clock__indicator:nth-of-type(18) {
+	 transform: rotateZ(calc(6deg * 18));
+}
+ section.clock__indicator:nth-of-type(19) {
+	 transform: rotateZ(calc(6deg * 19));
+}
+ section.clock__indicator:nth-of-type(20) {
+	 transform: rotateZ(calc(6deg * 20));
+}
+ section.clock__indicator:nth-of-type(21) {
+	 transform: rotateZ(calc(6deg * 21));
+}
+ section.clock__indicator:nth-of-type(22) {
+	 transform: rotateZ(calc(6deg * 22));
+}
+ section.clock__indicator:nth-of-type(23) {
+	 transform: rotateZ(calc(6deg * 23));
+}
+ section.clock__indicator:nth-of-type(24) {
+	 transform: rotateZ(calc(6deg * 24));
+}
+ section.clock__indicator:nth-of-type(25) {
+	 transform: rotateZ(calc(6deg * 25));
+}
+ section.clock__indicator:nth-of-type(26) {
+	 transform: rotateZ(calc(6deg * 26));
+}
+ section.clock__indicator:nth-of-type(27) {
+	 transform: rotateZ(calc(6deg * 27));
+}
+ section.clock__indicator:nth-of-type(28) {
+	 transform: rotateZ(calc(6deg * 28));
+}
+ section.clock__indicator:nth-of-type(29) {
+	 transform: rotateZ(calc(6deg * 29));
+}
+ section.clock__indicator:nth-of-type(30) {
+	 transform: rotateZ(calc(6deg * 30));
+}
+ section.clock__indicator:nth-of-type(31) {
+	 transform: rotateZ(calc(6deg * 31));
+}
+ section.clock__indicator:nth-of-type(32) {
+	 transform: rotateZ(calc(6deg * 32));
+}
+ section.clock__indicator:nth-of-type(33) {
+	 transform: rotateZ(calc(6deg * 33));
+}
+ section.clock__indicator:nth-of-type(34) {
+	 transform: rotateZ(calc(6deg * 34));
+}
+ section.clock__indicator:nth-of-type(35) {
+	 transform: rotateZ(calc(6deg * 35));
+}
+ section.clock__indicator:nth-of-type(36) {
+	 transform: rotateZ(calc(6deg * 36));
+}
+ section.clock__indicator:nth-of-type(37) {
+	 transform: rotateZ(calc(6deg * 37));
+}
+ section.clock__indicator:nth-of-type(38) {
+	 transform: rotateZ(calc(6deg * 38));
+}
+ section.clock__indicator:nth-of-type(39) {
+	 transform: rotateZ(calc(6deg * 39));
+}
+ section.clock__indicator:nth-of-type(40) {
+	 transform: rotateZ(calc(6deg * 40));
+}
+ section.clock__indicator:nth-of-type(41) {
+	 transform: rotateZ(calc(6deg * 41));
+}
+ section.clock__indicator:nth-of-type(42) {
+	 transform: rotateZ(calc(6deg * 42));
+}
+ section.clock__indicator:nth-of-type(43) {
+	 transform: rotateZ(calc(6deg * 43));
+}
+ section.clock__indicator:nth-of-type(44) {
+	 transform: rotateZ(calc(6deg * 44));
+}
+ section.clock__indicator:nth-of-type(45) {
+	 transform: rotateZ(calc(6deg * 45));
+}
+ section.clock__indicator:nth-of-type(46) {
+	 transform: rotateZ(calc(6deg * 46));
+}
+ section.clock__indicator:nth-of-type(47) {
+	 transform: rotateZ(calc(6deg * 47));
+}
+ section.clock__indicator:nth-of-type(48) {
+	 transform: rotateZ(calc(6deg * 48));
+}
+ section.clock__indicator:nth-of-type(49) {
+	 transform: rotateZ(calc(6deg * 49));
+}
+ section.clock__indicator:nth-of-type(50) {
+	 transform: rotateZ(calc(6deg * 50));
+}
+ section.clock__indicator:nth-of-type(51) {
+	 transform: rotateZ(calc(6deg * 51));
+}
+ section.clock__indicator:nth-of-type(52) {
+	 transform: rotateZ(calc(6deg * 52));
+}
+ section.clock__indicator:nth-of-type(53) {
+	 transform: rotateZ(calc(6deg * 53));
+}
+ section.clock__indicator:nth-of-type(54) {
+	 transform: rotateZ(calc(6deg * 54));
+}
+ section.clock__indicator:nth-of-type(55) {
+	 transform: rotateZ(calc(6deg * 55));
+}
+ section.clock__indicator:nth-of-type(56) {
+	 transform: rotateZ(calc(6deg * 56));
+}
+ section.clock__indicator:nth-of-type(57) {
+	 transform: rotateZ(calc(6deg * 57));
+}
+ section.clock__indicator:nth-of-type(58) {
+	 transform: rotateZ(calc(6deg * 58));
+}
+ section.clock__indicator:nth-of-type(59) {
+	 transform: rotateZ(calc(6deg * 59));
+}
+ section.clock__indicator:nth-of-type(60) {
+	 transform: rotateZ(calc(6deg * 60));
+}
+ @keyframes time {
+	 to {
+		 transform: rotateZ(360deg);
+	}
+}
+ 
+</style>
+<script>
+
+var currentSec = getSecondsToday();
+
+//var seconds = (currentSec / 60) % 1;
+var minutes = (currentSec / 3600) % 1;
+var hours = (currentSec / 43200) % 1;
+
+//setTime(60 * seconds , "second");
+setTime(3600 * minutes, "minute");
+setTime(43200 * hours, "hour");
+
+
+function setTime(left, hand) {
+  $(".clock__" + hand).css("animation-delay", "" + left * -1 + "s");
+}
+
+function getSecondsToday() {
+  var now = new Date();
+
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  var diff = now - today; 
+  return Math.round(diff / 1000);
+}
+</script></div>        
+        <div class="col-lg-10 pLeft10 d-grid" style="line-height:22px;">
+            <div id="data">
+                <b>luni</b> |
+            12 octombrie, 2026 | 
+            <span id="current-time" class="bold"></span>
+            </div>
+            <div id="status">
+                Starea pietei: 
+            <span id="statusMarket">DESCHISA</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        <div class="mTop10">
+                            <a href="/AboutUs/Overview" class="whiteLink">Despre noi si Guvernanta</a> <span class="mLeft5 mRight5 white">|</span>
+                            <a href="/InvestorRelations/Overview" class="whiteLink">Relatia cu Investitorii</a><span class="mLeft5 mRight5 white">|</span>
+                            <a href="/AboutUs/Contact" class="whiteLink">Contact</a>
+                        </div>
+                    </div>
+                    <div class="float-right text-right mTop10">
+                        <div class="pull-right d-grid-4cols">
+                            <div class="d-flex d-2">
+                                <a id="ctl00_ctl00_userRedir" class="black pRight5 text-uppercase" href="https://www.bvb.ro/LoginPage" target="_parent" style="vertical-align: middle; font-size: 12px;">Login</a>
+                                <a href="/UsersAd/NewAccount" id="ctl00_ctl00_NewAcc" class="black pRight5 text-uppercase" style="vertical-align: middle; font-size: 12px;">Inregistrare</a>
+                            </div>
+                            
+  
+
+
+                            <div class="d-grid-5cols mRight10">
+                                <a href="https://www.facebook.com/bursadevaloribucuresti?fref=ts">
+                                    <i class="fa fa-facebook fa-headerBVB"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/bucharest-stock-exchange?trk=company_logo">
+                                    <i class="fa fa-linkedin fa-headerBVB"></i>
+                                </a>
+                                <a href="https://www.instagram.com/bursadevaloribucuresti">
+                                    <i class="fa fa-instagram fa-headerBVB"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UC51OrBw6_8mww15TYXpT2ug">
+                                    <i class="fa fa-youtube-play fa-headerBVB"></i>
+                                </a>
+                                <a href="https://twitter.com/BVB_Ro">
+                                    <i class="fa fa-twitter fa-headerBVB"></i>
+                                </a>
+                            </div>
+                            <input type="checkbox" id="lang-checkbox"  data-on-text="RO" data-off-text="EN" />
+                        </div>
+                        <div class="col-lg-12 col-xs-12 p-0 text-right float-right mTop15">
+                            
+
+<div class="search pull-right">
+    <input type="text" class="search-field form-control input-styled searchWidth" id="autocomplete-form" placeholder="Nume, simbol sau ISIN" />
+    <button type="button" class="search-button">
+        <div class="fi-btn-search" style="line-height: 33px;"></div>
+    </button>
+    <a href="/FinancialInstruments/Markets/AdvancedSearch" class="whiteLink text-uppercase mLeft5">Cautare avansata</a>
+</div>
+
+
+
+<script>
+    $(function () {
+        $.extend($.ui.autocomplete.prototype, {
+            _renderItem: function (ul, item) {
+                var term = this.element.val(),
+                    html = item.label.replace(term, "<strong>$&</strong>");
+                return $("<li></li>")
+                    .data("item.autocomplete", item)
+                    .append($("<a></a>").html(html))
+                    .appendTo(ul);
+            }
+        });
+        $('#autocomplete-form').autocomplete({
+            source: function (request, response) {
+                fetch("/proxyshld.aspx/GetInstrumentsList",
+                    {
+                        method: "POST",
+                        headers: { 'Content-Type': 'application/json'},
+                        body: "{'searchtext':'" + request.term + "'}"
+                    }
+                ).then(response => response.json())
+                    .then(data => response($.map(data.d, function (item) {
+                        return { label: item, value: item.Symbol };
+                    })));
+                    //.then(error => console.log(error));
+            },
+            select: function(event, ui){
+                window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + ui.item.label.Symbol;
+            },
+            minLength: 1,
+            autoFocus: true,
+        }).data("ui-autocomplete")._renderItem = function (ul, item) {           
+          
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                .append("<a href='/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=" + item.label.Symbol + "'>" + item.label.Symbol + " / " + item.label.Name + " / " + item.label.Isin  + "</a>")
+               //  .append("<a href='/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=" + item.label.Symbol + "'>" + item.label.Symbol + " / " + item.label.Status + "</a>")
+                .addClass(item.label.Status == 'D' ? 'delisted' : '')
+                .appendTo(ul);
+        };
+    });
+    
+    $(".search-button").on("click", function () {
+        window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + $("#autocomplete-form").val();
+    });
+
+    $("#autocomplete-form").keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            console.log(window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + $(this).val())
+            window.location.href = '/FinancialInstruments/Details/FinancialInstrumentsDetails.aspx?s=' + $(this).val();
+        }
+    });
+</script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container top-content">
+                
+
+
+
+<nav class="navbar yamm navbar-default pLeft0 pRight0 navbarRO" role="navigation" style="display: flex; align-items: center; justify-content: center; background: #000000 !important">
+    <div id="ctl00_ctl00_MegaMenuControl_menuPanel" class="w100">
+	<ul class="nav navbar-nav nav-d" style="grid-template-columns: auto auto auto auto auto auto ;"><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/ForCompanies">Pentru Companii</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-3 list-unstyled"><li><a href="/ForCompanies/WhyBvb/Overview#" class="root-submenu">De ce Bursa de Valori Bucuresti?</a><ul class="fa-ul sublist"><li><a href="/ForCompanies/WhyBvb/Overview" class="submenu-item">Prezentare generala</a></li><li><a href="/ForCompanies/WhyBvb/FinancingInstruments" class="submenu-item">Instrumente pentru finantare</a></li><li><a href="/ForCompanies/WhyBvb/ListingBenefits" class="submenu-item">Beneficiile listarii</a></li><li><a href="/ForCompanies/WhyBvb/Infographics" class="submenu-item">Infografice</a></li></ul></li></ul><ul class="fa-ul col-xs-2 list-unstyled"><li><a href="/ForCompanies/MainMarket/IssuingShares#" class="root-submenu">Piata Principala</a><ul class="fa-ul sublist"><li><a href="/ForCompanies/MainMarket/IssuingShares" class="submenu-item">Actiuni</a></li><li><a href="/ForCompanies/MainMarket/IssuingBonds" class="submenu-item">Obligatiuni</a></li><li><a href="/ForCompanies/MainMarket/Intermediaries" class="submenu-item">Intermediari</a></li><li><a href="/ForCompanies/MainMarket/Faq" class="submenu-item">Intrebari frecvente</a></li></ul></li></ul><ul class="fa-ul col-xs-2 list-unstyled"><li><a href="/ForCompanies/AeroMarket/IssuingShares#" class="root-submenu">Piata AeRO</a><ul class="fa-ul sublist"><li><a href="/ForCompanies/AeroMarket/IssuingShares" class="submenu-item">Actiuni</a></li><li><a href="/ForCompanies/AeroMarket/IssuingBonds" class="submenu-item">Obligatiuni</a></li><li><a href="/ForCompanies/AeroMarket/AuthorizedAdvisors" class="submenu-item">Consultanti Autorizati</a></li><li><a href="/ForCompanies/AeroMarket/Faq" class="submenu-item">Intrebari frecvente</a></li></ul></li></ul><ul class="fa-ul col-xs-3 list-unstyled"><li><a href="/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf" class="root-submenu">Materiale utile</a><ul class="fa-ul sublist"><li><a href="/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf" class="submenu-item">Ghidul privind raportarea ESG</a></li><li><a href="/juridic/files/RO CGC BVB 2025.pdf" class="submenu-item">Codul de Guvernanta Corporativa</a></li></ul></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/FinancialInstruments">Instrumente Financiare</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/FinancialInstruments/Markets/Shares#" class="root-submenu">Piete</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/Markets/Shares" class="submenu-item">Actiuni </a></li><li><a href="/FinancialInstruments/Markets/Bonds" class="submenu-item">Obligatiuni </a></li><li><a href="/FinancialInstruments/Markets/FundUnits" class="submenu-item">Unitati de fond</a></li><li><a href="/FinancialInstruments/Markets/Certificates" class="submenu-item">Certificate</a></li><li><a href="/FinancialInstruments/Markets/Warrants" class="submenu-item">Warrants</a></li><li><a href="/FinancialInstruments/Markets/AdvancedSearch" class="submenu-item">Cautare avansata</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/FinancialInstruments/Indices/Overview#" class="root-submenu">Indici</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/Indices/Overview" class="submenu-item">Privire generala</a></li><li><a href="/FinancialInstruments/Indices/IndicesProfiles" class="submenu-item">Profile indici</a></li><li><a href="/FinancialInstruments/Indices/Factsheets" class="submenu-item">Factsheets indici</a></li><li><a href="/FinancialInstruments/Indices/IndicesPerformance" class="submenu-item">Performanta indici</a></li><li><a href="/FinancialInstruments/Indices/BMRInformation" class="submenu-item">Informatii BMR</a></li></ul></li><li><a href="/FinancialInstruments/CorporateActions/InfoDividend#" class="root-submenu">Operatiuni corporative</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/CorporateActions/InfoDividend" class="submenu-item">Info dividend</a></li><li><a href="/FinancialInstruments/CorporateActions/ShareCapitalChanges" class="submenu-item">Modificari capital social</a></li><li><a href="/FinancialInstruments/CorporateActions/SpinOffResultedCompanies" class="submenu-item">Societati provenite din divizari</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/FinancialInstruments/SelectedData/CurrentReports#" class="root-submenu">Informatii selective</a><ul class="fa-ul sublist"><li><a href="/FinancialInstruments/SelectedData/CurrentReports" class="submenu-item">Rapoarte curente </a></li><li><a href="/FinancialInstruments/SelectedData/FinancialResults" class="submenu-item">Rezultate financiare </a></li><li><a href="/FinancialInstruments/SelectedData/Indicators" class="submenu-item">Indicatori</a></li><li><a href="/FinancialInstruments/SelectedData/FinancialCalendar" class="submenu-item">Calendar Financiar</a></li><li><a href="/FinancialInstruments/SelectedData/GMSCalendar" class="submenu-item">Calendar Adunari Generale</a></li><li><a href="/FinancialInstruments/SelectedData/MarketOperations" class="submenu-item">Operatiuni de piata</a></li><li><a href="/FinancialInstruments/SelectedData/ReportedShareholders" class="submenu-item">Raportari actionari</a></li><li><a href="/FinancialInstruments/SelectedData/MonitoringList" class="submenu-item">Lista monitorizare</a></li></ul></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/TradingAndStatistics">Tranzactionare si Statistici</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/TradingAndStatistics/Trading/MarketsToday#" class="root-submenu">Tranzactionare</a><ul class="fa-ul sublist"><li><a href="/TradingAndStatistics/Trading/MarketsToday" class="submenu-item">Pietele astazi </a></li><li><a href="/TradingAndStatistics/Trading/CurrentTradingDay" class="submenu-item">Ziua curenta</a></li><li><a href="/TradingAndStatistics/Trading/MarketsStatistics" class="submenu-item">Statistici toate pietele</a></li><li><a href="/TradingAndStatistics/Trading/HistoricalTradingInfo" class="submenu-item">Sumare tranzactionare</a></li><li><a href="/TradingAndStatistics/Trading/PublicOffers" class="submenu-item">Oferte publice in derulare</a></li><li><a href="/TradingAndStatistics/Trading/SpecialSellingMethod" class="submenu-item">Vanzari speciale la ordin</a></li><li><a href="/TradingAndStatistics/Trading/MiFIDIIData" class="submenu-item">Date MiFiD II</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/TradingAndStatistics/Statistics/GeneralStatistics#" class="root-submenu">Statistici </a><ul class="fa-ul sublist"><li><a href="/TradingAndStatistics/Statistics/GeneralStatistics" class="submenu-item">Statistici generale</a></li><li><a href="/TradingAndStatistics/Statistics/MarketEvolution" class="submenu-item">Evolutia pietei (actiuni)</a></li><li><a href="/TradingAndStatistics/Statistics/Top10ByTradingData" class="submenu-item">Top tranzactionare</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/TradingAndStatistics/Publications/DailyReport#" class="root-submenu">Publicatii</a><ul class="fa-ul sublist"><li><a href="/TradingAndStatistics/Publications/DailyReport" class="submenu-item">Rapoarte zilnice</a></li><li><a href="/TradingAndStatistics/Publications/MonthlyReports" class="submenu-item">Rapoarte lunare</a></li></ul></li><li><a href="/TradingAndStatistics/TradingSessionSchedule" class="root-submenu">Program de tranzactionare</a></li><li><a href="/TradingAndStatistics/MarketsLive" class="root-submenu">Bursa in direct</a></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/Intermediaries">Intermediari</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Intermediaries/ListOfIntermediaries/GeneralIndex#" class="root-submenu">Liste intermediari</a><ul class="fa-ul sublist"><li><a href="/Intermediaries/ListOfIntermediaries/GeneralIndex" class="submenu-item">Toti intermediarii</a></li><li><a href="/Intermediaries/ListOfIntermediaries/TopOfIntermediaries" class="submenu-item">Top intermediari</a></li><li><a href="/Intermediaries/ListOfIntermediaries/MarketMakersList" class="submenu-item">Lista Market Makeri</a></li><li><a href="/Intermediaries/ListOfIntermediaries/LiquidityProvidersList" class="submenu-item">Lista Furnizori Lichiditate</a></li><li><a href="/Intermediaries/ListOfIntermediaries/MMAndLPPerformance" class="submenu-item">Performanta MM si LP</a></li><li><a href="/Intermediaries/ListOfIntermediaries/ListOfTiedAgents" class="submenu-item">Lista Agenti Delegati</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Intermediaries/HowToBecomeAMember" class="root-submenu">Cum devin intermediar</a></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle active-dropdown" data-toggle="dropdown" href="/Services">Servicii</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Services/DataVending/ForDataVendors#" class="root-submenu">Vanzare date</a><ul class="fa-ul sublist"><li><a href="/Services/DataVending/ForDataVendors" class="submenu-item">Pentru distribuitori de date</a></li><li><a href="/Services/DataVending/ForProfessionals" class="submenu-item">Pentru profesionisti</a></li><li><a href="/Services/DataVending/ForInvestors" class="submenu-item">Pentru investitori</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Services/IndexLicensing/HowDoILicenseAnIndex#" class="root-submenu">Licentiere indici</a><ul class="fa-ul sublist"><li><a href="/Services/IndexLicensing/HowDoILicenseAnIndex" class="submenu-item">Cum licentiez un indice BVB?</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Services/Connectivity/ArenaSystem#" class="root-submenu">Conectivitate</a><ul class="fa-ul sublist"><li><a href="/Services/Connectivity/ArenaSystem" class="submenu-item">Sistemul de tranzactionare Arena</a></li><li><a href="/Services/Connectivity/BrokerageSystem/ArenaXTPlatform#?" class="submenu-item active-dropdown submenu-itemActive" style="border-bottom: none !important;padding: 0px !important;">Sistem de brokeraj</a></li></ul></li></ul></div></div></li></ul></li><li class="dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="/Regulations">Reglementari</a><ul class="dropdown-menu yamm-fw  mLeft0 mRight0"><li><div class="row pTop10"><div class="col-xs-12"><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Regulations/LegalFramework/BvbRegulations#" class="root-submenu">Legislatie</a><ul class="fa-ul sublist"><li><a href="/Regulations/LegalFramework/LawsAndRegulations" class="submenu-item">Legi si regulamente</a></li><li><a href="/Regulations/LegalFramework/BvbRegulations" class="submenu-item">Reglementari BVB</a></li><li><a href="/Regulations/LegalFramework/MiFIRReports" class="submenu-item">Raportari MiFID II / MiFIR</a></li><li><a href="/Regulations/LegalFramework/ArbitrationChamber" class="submenu-item">Camera Arbitrala</a></li></ul></li></ul><ul class="fa-ul col-xs-4 list-unstyled"><li><a href="/Regulations/Tools/UsefulLinks#" class="root-submenu">Utile</a><ul class="fa-ul sublist"><li><a href="/Regulations/Tools/UsefulLinks" class="submenu-item">Link-uri utile</a></li><li><a href="/Regulations/Tools/CapitalMarketInstitutions" class="submenu-item">Institutiile pietei de capital</a></li></ul></li></ul></div></div></li></ul></li></ul>
+</div>
+</nav>
+
+
+
+
+            </div>
+
+        </header>
+        <div class="container main-content min-vh75">
+            
+    <div class="col-lg-12 d-inline-flex p-0">
+        <div class="col-lg-3 min-vh75 p-0">
+            
+    <style>
+        .popover {
+            padding: 10px;
+            max-width: 200px;
+        }
+    </style>
+    
+
+
+
+<div class="navbar-default sidebar">
+    <div class="sidebar-nav navbar-collapse">
+        <div id="ctl00_ctl00_body_leftMenuPlaceHolder_LeftMenuControl_LeftMenuPanel">
+	
+        <ul class="nav" id="side-menu"><li><a href="/Services/DataVending/ForDataVendors#" style="border-left: none !important;">Vanzare date<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li><a href="/Services/DataVending/ForDataVendors">Pentru distribuitori de date</a></li><li><a href="/Services/DataVending/ForProfessionals">Pentru profesionisti</a></li><li><a href="/Services/DataVending/ForInvestors">Pentru investitori</a></li></ul></li><li><a href="/Services/IndexLicensing/HowDoILicenseAnIndex#" style="border-left: none !important;">Licentiere indici<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li><a href="/Services/IndexLicensing/HowDoILicenseAnIndex">Cum licentiez un indice BVB?</a></li></ul></li><li class="active"><a href="/Services/Connectivity/ArenaSystem#" style="border-left: none !important;">Conectivitate<span class="fa arrow"></span></a><ul class="nav nav-level collapse in"><li><a href="/Services/Connectivity/ArenaSystem">Sistemul de tranzactionare Arena</a></li><li class="active"><a href="/Services/Connectivity/BrokerageSystem/ArenaXTPlatform#?">Sistem de brokeraj<span class="fa arrow"></span></a><ul class="nav nav-level collapse"><li class="active active-li-sidemenu"><a href="/Services/Connectivity/BrokerageSystem/ArenaXTPlatform">Arena XT Platforma</a><div class="active-line"></div></li><li><a href="/Services/Connectivity/BrokerageSystem/ArenaXTerminal">Arena XT Terminal</a></li><li><a href="/Services/Connectivity/BrokerageSystem/BVBMobileTrading">BVB Mobile Trading</a></li></ul></li></ul></li></ul>
+</div>
+    </div>
+    
+</div>
+<script>
+    function setSideBarHeight() {
+        //$('.navbar-default.sidebar').height(0);
+        //$('.navbar-default.sidebar').height($('.main-content .row').height());
+    }
+</script>
+
+
+
+
+
+
+        </div>
+        <div class="col-lg-9 col-body-content p-0 pBot15">
+            
+    <div class="col-lg-12 mBot20 right-side">
+        <h1>Platforma Arena XT</h1>
+
+        <div class="col-lg-12 p-0">
+            <div class="col-lg-7 pLeft0">
+                
+                
+
+                <p class="text-justify">
+                    Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB pentru intermediari. Platforma dispune de toate functiile necesare unei firme de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, managementul portofoliilor clientilor, module de risk management pentru piata la vedere si la termen, facilitati de tranzactionare prin internet pentru clienti. Arena XT se bazeaza intr-o buna masura pe tehnologia si arhitectura ARENA-AUTOMATED EXCHANGE PLATFORM la care s-au adaugat module functionale care tin de specificul activitatii de brokeraj.
+                </p>
+                <p class="text-justify">
+                    Arena XT transfera spre utilizatori siguranta, performanta si fiabilitatea sistemului de baza, parametri obtinuti – de aceasta data - pe infrastructuri hardware si software care o pozitioneaza ca eficienta pe piata serviciilor de profil.
+                </p>
+
+                
+            </div>
+            <div class="col-lg-5" style="margin-top: -70px;">
+                <div class="panel panel-info">
+                    <div class="panel-heading" style="margin-top: -1px;">
+                        Invata sa tranzactionezi online la BVB cu <br/> Arena XT/Demo
+                    </div>
+                    <div class="panel-body">
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="https://demo.arenaxt.ro/boa/demo/">Deschidere cont demo</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="https://demo.arenaxt.ro/boa/demo/?r=1">Recuperare parola cont existent</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="https://demo.arenaxt.ro">Acceseaza platforma demo</a><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="panel panel-info">
+                    <div class="panel-heading" style="margin-top: -1px;">
+                        Intermediarii care utilizeaza platforma <br/> Arena XT
+                    </div>
+                    <div class="panel-body">
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.brm.ro/">BURSA ROMANA DE MARFURI</a><br />
+                        
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.estinvest.ro/">ESTINVEST</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.goldring.ro/">GOLDRING</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://interdealer.ro/">INTERDEALER CAPITAL INVEST</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.interfinbrok.ro/">INTERFINBROK CORPORATION</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="https://www.investimental.ro/">INVESTIMENTAL</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.rainvest.ro/">MUNTENIA GLOBAL INVEST</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.primet.ro/">PRIME TRANSACTION</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.shareinvest.ro/">SHARE INVEST</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="http://www.bluerock.ro">S.S.I.F. BLUE ROCK FINANCIAL SERVICES S.A.</a><br />
+                        <i class="fa fa-check-square-o">&nbsp;</i><a href="https://www.brkfinancialgroup.ro/">SSIF BRK FINANCIAL GROUP S.A.</a><br />
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 p-0">
+            <div class="col-lg-12">
+                
+                
+
+                <h2 class="large styledDarkCyan mBot15">
+                    <a data-toggle="collapse" href="#arena-eXTended">De ce ArenaXT?
+                    </a>
+                </h2>
+                <div class="inner-tab collapse pRight30 mBot20" id="arena-eXTended">
+                    <div class="col-lg-6 col-lg-6 pLeft0">
+                        <h2 class="large mBot20 black">10 avantaje pentru investitori</h2>
+
+                        <div class="inner-tab">
+                            <article>
+                                <h3 class="black bold">1. Accesibilitate
+                                </h3>
+                                <p class="info">
+                                    Sistemul este accesibil din Internet, utilizand un calculator cu sistem de operare Windows pe care se instaleaza o aplicatie de dimensiuni reduse. Inglobarea tehnicii “ClickOnce“ permite instalarea si actualizarea cu un numar minimal de interactiuni. Clientul se conecteaza la sistemul Arena XT al intermediarului pe baza datelor de acces furnizate de broker.	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">2. Configurabilitate
+                                </h3>
+                                <p class="info">
+                                    Fiecare client/utilizator isi poate personaliza mediul de lucru al aplicatiei Arena XT terminal prin pozitionarea ferestrelor si panel-urilor de lucru. Toate rapoartele au coloane configurabile ca dimensiune, vizibilitate, ordine de afisare sau directie de sortare a informatiei. Selectia este facilitata de utilizarea filtrelor, care pot fi editate de catre utilizator sau se pot selecta din liste derulante. Profilul grafic astfel obtinut se poate salva si reutiliza la urmatoarea conectare.	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">3. Piata in timp real
+                                </h3>
+                                <p class="info">
+                                    Utilizatorul Arena XT terminal dispune de sisteme de monitorizare in timp real de tip “market-watch” in care poate vizualiza cele mai bune preturi de vanzare si cumparare, variatii, preturi de inchidere, totaluri de tranzactionare etc. (date de piata de nivel 1), precum si sisteme de monitorizare adancime de piata (date de piata de nivel 2 – toate nivelele de pret). Fereastra „Market Watch” consolideaza simboluri din diferite clase de produse (actiuni, derivate, obligatiuni etc), permitand astfel utilizatorului sa-si grupeze simbolurile de interes dupa criteriile dorite.		
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">4. Operatii cu ordine
+                                </h3>
+                                <p class="info">
+                                    Tipurile de ordine pentru Arena XT sunt cele disponibile pe piata pe care o deservesc. Spre exemplu, pentru sistemul curent al BVB, sunt disponibile ordine de tip limit, market, if touched, stop, FOK, GTD, Day etc.		
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">5. Portofolii
+                                </h3>
+                                <p class="info">
+                                    Functia Portofoliu ofera o viziune consolidata asupra pozitiilor de instrumente si a pozitiilor de bani pentru fiecare din conturile gestionate de utilizatorul curent. Portofoliul este evaluat in timp real in functie de preturile din piata si sunt evidentiate profitul sau pierderea realizate si nerealizate.		
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">6. Monitorizare activitate
+                                </h3>
+                                <p class="info">
+                                    Clientul utilizator dispune de functii de monitorizare a tuturor instructiunilor executate pe conturile sale, avand la dispozitie un instrument de vizualizare in detaliu a ordinelor si tranzactiilor, precum si pentru monitorizarea operatiunilor de gestiune la nivel de cont.	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">7. Analiza tehnica
+                                </h3>
+                                <p class="info">
+                                    Modulul de analiza tehnica da posibilitatea utilizatorilor sa-si stabileasca strategii investitionale pe baza informatiilor de tranzactionare si a unor indicatori specifici acestui tip de instrument. Solutia de charting furnizata de <b><a href="https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/">TradingView</a></b>.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">8. Integrator de stiri
+                                </h3>
+                                <p class="info">
+                                    Aplicatia contine un integrator de canale de stiri (RSS reader), prin care se pot urmari cele mai recente stiri bursiere – rapoarte ale emitentilor, publicarea de date financiare, comunicate ale operatorului – sau publicate de agentii de stiri specializate.	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">9. Siguranta
+                                </h3>
+                                <p class="info">
+                                    Siguranta platformei si a comunicatiei dintre aplicatia terminal si platforma Arena XT, in ceea ce priveste autentificarea, filtrarea si monitorizarea accesului, criptarea traficului sunt asigurate la nivelul celor mai bune practici din domeniul financiar.	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">10. Performanta
+                                </h3>
+                                <p class="info">
+                                    Viteza de executie a instructiunilor si, in special, a ordinelor este asigurata prin implementarea la nivelul platformei de tranzactionare online a tehnologiei ARENA-AUTOMATED EXCHANGE PLATFORM.	
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-lg-6 pRight0">
+                        <h2 class="large mBot20 black">10 avantaje pentru brokeri</h2>
+
+                        <div class="inner-tab">
+                            <article>
+                                <h3 class="black bold">1. Alinierea la arhitectura pietei
+                                </h3>
+                                <p class="info">
+                                    Arhitectura pietei este in plin proces de transformare: structuri de conturi, mecanisme de risk management, noi instrumente. Arena XT ofera intermediarilor cea mai rapida cale de adaptare la aceste schimbari.	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">2. Solutie de online-trading prin internet
+                                </h3>
+                                <p class="info">
+                                    Intermediarul poate oferi clientilor sai acces la date de piata, monitorizare portofoliu, istoricul activitatii pe cont, functii de gestiune pentru ordinele proprii printr-o solutie completa de acces prin internet la un sistem de tranzactionare.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">3. Virtual Trading Floor
+                                </h3>
+                                <p class="info">
+                                    Pentru intermediarii care opereaza prin sucursale si agentii, Arena XT este solutia “la cheie” pentru integrarea unitara a fluxurilor de date, controlul accesului traderilor la conturi diferite, diferentierea rolurilor traderilor etc.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">4. Solutie multi-engines/multi-assets
+                                </h3>
+                                <p class="info">
+                                    Platforma se poate conecta si opera cu mai multe sisteme de tranzactionare simultan si acomodeaza mai multe tipuri de instrumente.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">5. Adaptabilitate OMS la structurile de conturi
+                                </h3>
+                                <p class="info">
+                                    Arena XT gestioneaza ordinele clientilor pe conturile interne ale societatii de brokeraj, precum si in relatie cu conturile de executie ale acestora in diferite sisteme de tranzactionare. Executia unui ordin este monitorizata de la initiere si pana la decontarea tranzactiei, indiferent de tipurile de conturi utilizate (individuale, globale, mixte).
+	
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">6. Risk-management
+                                </h3>
+                                <p class="info">
+                                    Operatiunile de gestiune de ordine sunt validate intr-un modul special in acord cu disponibilitatile banesti sau de instrumente precum si cu limita de tranzactionare. Contul de marja se poate configura la nivel de client, iar apelurile in marja sunt monitorizate, captate si transmise catre client.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">7. Flexibilitate
+                                </h3>
+                                <p class="info">
+                                    Conturi de tranzactionare multiple pentru client, utilizatori cu diferite roluri (traderi, controlleri, supervizori, clienti remote), drepturi de acces diferentiate pe piete si instrumente, operatiuni standard (predefinite), dar si “custom-defined”.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">8. Performanta
+                                </h3>
+                                <p class="info">
+                                    Performantele Arena XT sunt derivate din caracteristicile sistemului de tranzactionare al BVB, Arena – Automated Exchange Platform. Am pastrat fiabilitatea, stabilitatea si am marit viteza de procesare.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">9. Integrabilitate 
+                                </h3>
+                                <p class="info">
+                                    Arena XT ofera diverse posibilitati de integrare in infrastructura existenta a unui broker, fie prin interfete programabile, fie prin schimburi de fisiere cu aplicatii de tip back-office, CRM etc.
+                                </p>
+                            </article>
+                            <article>
+                                <h3 class="black bold">10. White label branding
+                                </h3>
+                                <p class="info">
+                                    Intermediarul poate insera propria identitate corporativa in aplicatia terminal distribuita clientului.
+                                </p>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h2 class="large styledDarkCyan mBot15">
+                    <a data-toggle="collapse" href="#caracteristici">Caracteristici
+                    </a>
+                </h2>
+                <div class="inner-tab collapse pRight30 mBot20" id="caracteristici">
+                    <p>
+                        Arena XT este o solutie complexa de tranzactionare ce ofera clientilor finali si brokerilor posibilitati de interconectare cu sistemul de tranzactionare al BVB avand urmatoarele caracteristici: 
+                    </p>
+                    <ul class="default-ul">
+                        <li><strong>solutie multi-engine</strong> – se poate conecta si opera cu mai multe sisteme de tranzactionare simultan </li>
+                        <li><strong>solutie multi-assets</strong> – acomodeaza mai multe tipuri de instrumente financiare: actiuni, drepturi, unitati de fond, obligatiuni  si titluri de stat, produse structurate si instrumente financiare derivate (contracte futures)</li>
+                        <li>opereaza cu <strong>conturi individuale si globale</strong>, precum si cu <strong>ordine cu sau fara prevalidare</strong></li>
+                        <li><strong>informatii in timp real</strong> din piata (real-time market data)</li>
+                        <li><strong>solutie completa de management al ordinelor si tranzactiilor</strong></li>
+                        <li><strong>flux de ordine  integrat  in timp real cu managementul de pozitii</strong> (order flow integrated in position keeping)</li>
+                        <li><strong>managementul de pozitii</strong> de bani (cashflow management) si de pozitii financiare (position keeping) </li>
+                        <li>modul de <strong>risk management</strong>  pentru riscul de piata (market risk) atat pentru piata la vedere cat si pentru piata de derivate, a riscului de credit prin evaluarea in timp real a detinerilor banesti</li>
+                        <li><strong>verificarea validitatii ordinelor</strong> de tranzactionare inainte de a fi trimise catre sistemul de tranzactionare </li>
+                        <li>facilitate de <strong>introducere/corectie de tranzactii</strong></li>
+                        <li><strong>gestionarea apelurior in marja</strong> (manage exposure to market risk)</li>
+                        <li><strong>accesul utilizatorilor la functiile aplicatiei este diferentiat</strong> in functie de drepturile acordate</li>
+                    </ul>
+
+                </div>
+
+                <h2 class="large styledDarkCyan mBot15">
+                    <a data-toggle="collapse" href="#arhitectura-functionala">Arhitectura functionala
+                    </a>
+                </h2>
+                <div class="inner-tab collapse pRight30 mBot20" id="arhitectura-functionala">
+                    <div class="col-lg-12 pLeft0 pRight0" style="height: 450px;">
+                        <div class="col-lg-2 box-arena-xt first-col-lg-12" style="height: 100%;">
+                            <table class="arenta-xt-arhitecture">
+                                <tr>
+                                    <th>Trading venue aggregator</th>
+                                </tr>
+                                <tr>
+                                    <td data-content="Agrega datele de piata din mai multe surse (market data), atat primul nivel de pret cat si adancimea de piata.">
+                                        <span>Market data L1</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Agrega datele de piata din mai multe surse (market data), atat primul nivel de pret cat si adancimea de piata.">
+                                        <span>Market data L2</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-2 box-arena-xt second-col-lg-12" style="height: 100%;">
+                            <table class="arenta-xt-arhitecture">
+                                <tr>
+                                    <th>Order Management System</th>
+                                </tr>
+                                <tr>
+                                    <td data-content="Permite accesul catre diferite sisteme de tranzactionare in vederea rutarii ordinelor si prelucrarii executiilor primate din siste.">
+                                        <span>Order & Executions Capture</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-2 box-arena-xt third-col-lg-12" style="height: 100%;">
+                            <table class="arenta-xt-arhitecture">
+                                <tr>
+                                    <th>Middle & Back office</th>
+                                </tr>
+                                <tr>
+                                    <td data-content="Acopera functionalitati specifice modulelor de gestiune a pozitiilor de instrumente financiare si de bani.">
+                                        <span>Position keeping</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Gestioneaza operatii de compensare-decontare.">
+                                        <span>Settlement & Operation</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Asigura furnizare rapoartelor catre investitori, export date.">
+                                        <span>Reporter</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-2 box-arena-xt fourth-col-lg-12" style="height: 100%;">
+                            <table class="arenta-xt-arhitecture">
+                                <tr>
+                                    <th>Middle & Back office</th>
+                                </tr>
+                                <tr>
+                                    <td data-content="Evalueaza riscul de piata pe baza  preturilor in timp real si calculeaza in tip real  profitul sau pirderea realizate sau in curs de realizare. Pentru pozitiile deschise in piata  la termen, monitorizeaza, capteaza si transmite catre client apelurile in marja 
+                                Introducerea de ordine si executia tranzactiilor este validate in acord cu disponibilitatile in cont atat in contul de disponibilitati banesti cat si  in contul de instrumente.">
+                                        <span>Settlement & Operation</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Evalueaza riscul de piata pe baza  preturilor in timp real si calculeaza in tip real  profitul sau pirderea realizate sau in curs de realizare. Pentru pozitiile deschise in piata  la termen, monitorizeaza, capteaza si transmite catre client apelurile in marja 
+                                Introducerea de ordine si executia tranzactiilor este validate in acord cu disponibilitatile in cont atat in contul de disponibilitati banesti cat si  in contul de instrumente.">
+                                        <span>Trading Limit</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-2 box-arena-xt fifth-col-lg-12" style="height: 100%;">
+                            <table class="arenta-xt-arhitecture">
+                                <tr>
+                                    <th>Risk Management</th>
+                                </tr>
+                                <tr>
+                                    <td data-content="Managementul tututor setarilor specifice implementarii aplicatiei ( definirea  de  utilizatori precum si a  datelor de autentificare si autorizarea ale acestora, configurari specifice, definitii, urmarire loguri).">
+                                        <span>User management</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Managementul tututor setarilor specifice implementarii aplicatiei ( definirea  de  utilizatori precum si a  datelor de autentificare si autorizarea ale acestora, configurari specifice, definitii, urmarire loguri).">
+                                        <span>Configuration</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Managementul tututor setarilor specifice implementarii aplicatiei ( definirea  de  utilizatori precum si a  datelor de autentificare si autorizarea ale acestora, configurari specifice, definitii, urmarire loguri).">
+                                        <span>Logging</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-2 box-arena-xt sixeth-col-lg-12" style="height: 100%;">
+                            <table class="arenta-xt-arhitecture">
+                                <tr>
+                                    <th>Integration</th>
+                                </tr>
+                                <tr>
+                                    <td data-content="Acopera integrabilitatea cu sisteme externe prin API,  FIX, Web Services sau functii de import/export date.">
+                                        <span>API</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Acopera integrabilitatea cu sisteme externe prin API,  FIX, Web Services sau functii de import/export date.">
+                                        <span>JSON</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Acopera integrabilitatea cu sisteme externe prin API,  FIX, Web Services sau functii de import/export date.">
+                                        <span>FIX</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-content="Acopera integrabilitatea cu sisteme externe prin API,  FIX, Web Services sau functii de import/export date.">
+                                        <span>Batch file processing</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="large styledDarkCyan mBot15">
+                    <a data-toggle="collapse" href="#tehnologie">Tehnologie
+                    </a>
+                </h2>
+                <div class="inner-tab collapse pRight30 mBot20" id="tehnologie">
+                    <p>
+                        Deoarece institutiile financiare au structuri si infrastructuri existente diferite, Arena XT este construita pe tehnologii care sunt caracterizate in primul rand prin extensibilitate.  
+                    </p>
+                    <ul class="default-ul">
+                        <li><strong>Arhitectura modulara</strong> separata pe mai multe nivele: in nivel de date, nivel de business si nivel de prezentare</li>
+                        <li><strong>Extensibilitate:</strong> arhitectura permite connectarea cu mai multe sisteme de tranzactionare (Exchange, MTF, OTC)</li>
+                        <li><strong>Performante:</strong>
+                            <ul>
+                                <li>Comunicare asincrona intre module. Componentele comunica intre ele prin exportul de servicii si functii, inlaturand timpii de asteptare.</li>
+                                <li>Trafic de date optimizat folosind mecanismele de subscriere si de “diferential update”</li>
+                                <li>Viteza de raspuns mare in conexiunea cu BVB</li>
+                            </ul>
+                        </li>
+                        <li><strong>Adaptabilitate:</strong> configurare customizata a aplicatiei la cerintele de business ale clientului </li>
+                        <li><strong>Integrabilitate:</strong> integrarea aplicatiei Arena XT cu aplicatii externe existente ale clientului (back office, risk management etc)</li>
+                        <li><strong>Scalabilitate:</strong> architectura scalabila de la 2-3 utilizatori pana la sute de utilizatori</li>
+                    </ul>
+                    <img class="img-responsive" src="/Content/img/tehnologie.jpg" />
+
+                    <div class="col-lg-12-info-styled mTop20">
+                        <div class="col-lg-12-info">
+                            <p class="date">
+                                <strong>Exchange Access Point Manager (XAP)
+                                </strong>
+                            </p>
+                            <p class="paragraph-body">
+                                Permite conectivitatea cu mai multe sisteme de tranzactionare. Prelucreaza fluxul de date in timp real (market data) si executiile, si le integreaza in Arena XT. Printr-un nivel ridicat de interoperablitate si extensibilitate, pot fi adaugate oricate surse de date si consolidate in Arena XT.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12-info-styled mTop20">
+                        <div class="col-lg-12-info">
+                            <p class="date">
+                                <strong>COMM Server
+                                </strong>
+                            </p>
+                            <p class="paragraph-body">
+                                Permite comunicarea dintre Arena XT Core si terminalele de tranzactionare Arena XT. De asemenea, poate asigura integrabilitatea cu sisteme externe prin API sau WS. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12-info-styled mTop20">
+                        <div class="col-lg-12-info">
+                            <p class="date">
+                                <strong>Business Services
+                                </strong>
+                            </p>
+                            <p class="paragraph-body">
+                                Acopera functionalitati specifice modulelor de managemnetul ordinelor, de gestiune pozitiilor de instrumente financiare si de bani, precum si gestiunea riscului de piata.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12-info-styled mTop20">
+                        <div class="col-lg-12-info">
+                            <p class="date">
+                                <strong>Arena XT
+                                </strong>
+                            </p>
+                            <p class="paragraph-body">
+                                Teminal de tranzactionare care permite managementul ordinelor proprii precum si vizualizarea datelor de piata. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12-info-styled mTop20">
+                        <div class="col-lg-12-info">
+                            <p class="date">
+                                <strong>Administrare
+                                </strong>
+                            </p>
+                            <p class="paragraph-body">
+                                Interfata de administrare si configurare a aplicatiei; poate fi accesata numai de utilizatori cu privilegii apropiate. Permite configurarea parametrilor aplicatiei cat si rularea unor taskuri specifice (settlement, generare apeluri in marja).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12-info-styled mTop20">
+                        <div class="col-lg-12-info">
+                            <p class="date">
+                                <strong>Integration 
+                                </strong>
+                            </p>
+                            <p class="paragraph-body">
+                                Acopera integrabilitatea cu sisteme externe prin API, Web Services sau functii de import/export date.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="large styledDarkCyan mBot15">
+                    <a data-toggle="collapse" href="#software-serviciu">Software ca serviciu
+                    </a>
+                </h2>
+                <div class="inner-tab collapse pRight30 mBot20" id="software-serviciu">
+                    <p>
+                        Software as a Service (Saas) este un model de distributie de software in care acesta este gazduit de furnizor, fiind accesibil pentru client de obicei prin interfetele specifice aplicatiei. Accesul la aplicatie se face pe baza unui abonament lunar/anual. Saas este modelul viitorului, oferind fiabilitate crescuta printr-un mediu de gazduire controlat si reducand astfel posibilitatea de a avea probleme cu serverul local.
+                    </p>
+                    <p>
+                        <strong>Avantaje:</strong>
+                    </p>
+                    <ul class="default-ul mBot20">
+                        <li>Focus pe avantaje competitive nu pe infrastructura complexa </li>
+                        <li>Costuri reduse prin
+                    <br>
+                            <ul>
+                                <li>Reducerea cheltuielilor ca urmare a unui mediul IT simplificat </li>
+                                <li>Cost redus cu setarea intiala </li>
+                                <li>Cost redus de reglementare </li>
+                                <li>Cost redus de intretinere si securitatea datelor </li>
+                            </ul>
+                        </li>
+                        <li>Securitate prin integrarea in infrastructura BVB </li>
+                        <li>Siguranta prin includerea in programele de salvare si restaurare in caz de dezastru </li>
+                        <li>Performata: viteza de raspuns mare </li>
+                        <li>Accelerare time-to-value prin implementare rapida </li>
+                        <li>Actualizarile automate </li>
+                    </ul>
+                    <img class="img-rounded" src="/Content/img/arenaXT/saas(1).png" />
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.arenta-xt-arhitecture td, .boxed-panel a').each(function () {
+                var $elem = $(this);
+                $elem.popover({
+                    placement: 'auto',
+                    trigger: 'click | hover',
+                    html: false,
+                    container: 'body',
+                    animation: true,
+                    delay: { "show": 50, "hide": 10 }
+                });
+            });
+        });
+
+    </script>
+
+        </div>
+    </div>
+
+        </div>
+
+        <footer class="container ">
+            
+
+
+<div class="column">
+    <h2 class="bold">Pentru Companii</h2>
+    <ul>
+        <li><a href="/ForCompanies/WhyBvb/Overview">Prezentare generala</a></li>
+        <li><a href="/ForCompanies/WhyBvb/FinancingInstruments">Instrumente pentru finantare</a></li>
+        <li><a href="/ForCompanies/WhyBvb/ListingBenefits">Beneficiile listarii</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: -25px;">
+    <h2 class="bold">Pentru Investitori</h2>
+    <ul>
+        <li><a href="/ForInvestors/IWantToKnow/GettingStarted">Pentru inceput </a></li>
+        <li><a href="/ForInvestors/IWantToTrade/BecomeAnInvestor">Devino Investitor La Bursa</a></li>
+        
+        
+    <li><a href="https://youtu.be/OaZ_MV3gqaY" target="_blank" >Exchange Live 2.0</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: -25px;">
+    <h2 class="bold">Tranzactionare si Statistici</h2>
+    <ul>
+        <li><a href="/TradingAndStatistics/Trading/MarketsToday">Pietele astazi </a></li>
+        <li><a href="/TradingAndStatistics/Statistics/GeneralStatistics">Statistici generale</a></li>
+        <li><a href="/TradingAndStatistics/Statistics/Top10ByTradingData">Top tranzactionare</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: 30px;">
+    <h2 class="bold">Despre noi si Guvernanta</h2>
+    <ul>
+        <li><a href="/AboutUs/Overview">Descriere generala</a></li>
+        <li><a href="/AboutUs/ManagementStructure">Structura de conducere</a></li>
+        <li><a href="/AboutUs/MediaCenter/PressReleases">Comunicate de presa</a></li>
+        <li><a href="/AboutUs/Careers">Cariere</a></li>
+    </ul>
+</div>
+<div class="column" style="margin-left: 20px;">
+    <h2 class="bold">Relatia cu Investitorii</h2>
+    <ul>
+        <li><a href="/InvestorRelations/Overview">Privire generala</a></li>
+        <li><a href="/InvestorRelations/GeneralShareholdersMeetings">Adunari Generale ale Actionarilor</a></li>
+        <li><a href="/InvestorRelations/FinancialFigures/FinancialReports">Raportari financiare</a></li>
+    </ul>
+</div>
+
+<div class="column" style="margin-left: 0px;">
+    <h2 class="bold">Site-uri din Grupul BVB</h2>
+    <ul>
+        <li><a href="http://www.depozitarulcentral.ro/home/index.aspx">Depozitarul Central</a></li>
+        
+    </ul>
+</div>
+
+
+<p class="copyright" style="font-size: 12px;">
+    <a href="https://m.bvb.ro" target="_parent" class="whiteCyanLink" style="height:27px;">Website mobile</a> <span class="mLeft5 mRight5 white">|</span>
+    <a href="/Disclaimer.aspx" class="whiteCyanLink" style="height:27px;">Termeni de Utilizare</a> <span class="mLeft5 mRight5 white">|</span>
+    
+    <a href="/AboutUs/Contact" class="whiteCyanLink" style="height:27px;">Contact</a><span class="mLeft5 mRight5 white">|</span>
+    <span class="white">© 2026 Bursa de Valori Bucuresti</span>
+</p>
+
+<div id="footer-tools" class="d-none col-lg-12">
+    
+    
+
+  
+    <div class="col-lg-12 col-xs-12 p-0 text-right mTop20">
+        <div class="col-lg-12 col-xs-12">
+        Distribuie: 
+        <a id="mail-share" class="cyanLink" href="mailto:?subject=Recomandare site: https://www.bvb.ro/Services/Connectivity/BrokerageSystem/ArenaXTPlatform &body=Am gasit aceasta pagina pe www.bvb.ro si cred ca te-ar interesa.%0A%0APentru a vedea pagina viziteaza: https://www.bvb.ro/Services/Connectivity/BrokerageSystem/ArenaXTPlatform%0A%0ABursa de Valori Bucuresti (BVB) construieste in prezent o piata competitiva in Europa Centrala si de Est. BVB ofera oportunitati de finantare pentru companiile care vor sa atraga investitii din piata de capital din Romania. In ultima perioada, BVB a inregistrat o crestere a fluxurilor de capital, din partea investitorilor institutionali si de retail, atat din Romania, cat si internationali. Piata de capital din Romania s-a pozitionat pe o traiectorie ambitioasa spre dezvoltare, iar perspectivele de crestere sunt optimiste">
+            <i class="fa fa-envelope-o fa-lg"></i>
+        </a>
+        <a id="linkedin-share" class="cyanLink" href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.bvb.ro/Services/Connectivity/BrokerageSystem/ArenaXTPlatform&title=Bursa de Valori Bucuresti&summary=Bursa de Valori Bucuresti (BVB) construieste in prezent o piata competitiva in Europa Centrala si de Est. BVB ofera oportunitati de finantare pentru companiile care vor sa atraga investitii din piata de capital din Romania. In ultima perioada, BVB a inregistrat o crestere a fluxurilor de capital, din partea investitorilor institutionali si de retail, atat din Romania, cat si internationali. Piata de capital din Romania s-a pozitionat pe o traiectorie ambitioasa spre dezvoltare, iar perspectivele de crestere sunt optimiste..">
+            <i class="fa fa-linkedin-square fa-lg"></i>
+        </a>
+
+        <a id="twitter-share" class="cyanLink" href="https://twitter.com/intent/tweet?text=Bursa de Valori Bucuresti %0A&url=https://www.bvb.ro/Services/Connectivity/BrokerageSystem/ArenaXTPlatform">
+            <i class="fa fa-twitter fa-lg"></i>
+        </a>
+
+        <a id="facebook-share" class="cyanLink" href="https://www.facebook.com/sharer.php?u=https://www.bvb.ro/Services/Connectivity/BrokerageSystem/ArenaXTPlatform">
+            <i class="fa fa-facebook-square fa-lg"></i>
+        </a>
+            </div>
+    </div>
+
+    
+</div>
+
+        </footer>
+
+
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+ $('#statusMarket').addClass('white');//]]>
+</script>
+</form>
+
+
+
+    <script type="text/javascript">
+        // init tab functionality in popover
+        $('.tooltip-tabs ul li').click(function () {
+            $(this).siblings('li').removeClass('active disabled_effect');
+            $(this).addClass('active disabled_effect');
+        });
+
+        $('.serverTabs ul li').click(function () {
+            $(this).siblings('li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        
+        function customDropDown() {
+            $('.selectpicker').each(function () {
+                $(this).selectpicker();
+            });
+        }
+        $(document).ready(customDropDown);
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(customDropDown);
+
+        $(document).ready(function () {
+            var _style = 'height: 75px;width:173px;margin: 8px 10px 0px 10px;';
+            $('#LogBVB').attr('style', _style);
+
+            $('.col-body-content').append($('#footer-tools').html());
+            $('.financial-instrument-details').append($('#footer-tools').html());
+            $('.home-page').append($('#footer-tools').html());
+            $('.press-item').append($('#footer-tools').html());
+
+            $("#lang-checkbox").bootstrapSwitch('size', 'small');
+            $('.bootstrap-switch-id-lang-checkbox').click(function () {
+                $.cookie("BVBCulturePref", 'en-US', { path: '/' });
+            });
+
+            $('.bootstrap-switch-label').text('RO');
+
+            $('#lang-checkbox').on("switchChange.bootstrapSwitch", function (event, state) {
+                location.reload(true);
+            });
+
+            ApplyIconsAttr();
+        });
+        function ApplyIconsAttr() {
+            $('.realTimeImg').attr({
+                'src': '/Images/icons/realtime.png'
+                , 'width': '16px'
+                , 'data-original-title': 'Date in timp real'
+                , 'data-toggle': 'tooltip'
+                , 'data-container': 'body'
+                , 'data-placement': 'auto top'
+            });
+            $('.delayedTimeImg').attr({
+                'src': '/Images/icons/delayed.png'
+                , 'width': '16px'
+                , 'data-original-title': 'Date de tranzactionare intarziate cu 15 min  '
+                , 'data-toggle': 'tooltip'
+                , 'data-container': 'body'
+                , 'data-placement': 'auto top'
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(ApplyIconsAttr);
+
+        startTime = new Date('10/12/2026 12:35:05 PM');
+        document.addEventListener('DOMContentLoaded', startTimerNew);
+
+
+
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+    function EndRequestHandler(sender, args){
+        if (args.get_error() != undefined){
+            console.log(args.get_error().message);
+            args.set_errorHandled(true);
+        }
+    }
+    </script>
+
+
+
+
+    <!-- Google tag (gtag.min.js) -->
+  asp:PlaceHolder runat="server">
+    
+        <script async src="/Scripts/gtag.min.js?id=G-4V2E2WRQG8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+            gtag('config', 'G-4V2E2WRQG8');
+        </script>
+    
+</asp:PlaceHolder>
+
+
+    <!-- Google Code for Remarketing Tag -->
+    <!-- ------------------------------------------------
+    Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+    ------------------------------------------------- -->
+   <!-- comentez pt localhost -->
+
+
+</body>
+</html>
