@@ -1,0 +1,2841 @@
+
+<!DOCTYPE html>
+
+<html id="htmlElement" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+        <!-- OneTrust Cookies Consent Notice start for www.centralbank.ie -->
+        <script type="text/javascript" src="https://cdn.cookielaw.org/consent/01926dd3-236b-7534-88ac-fc26a707b641/OtAutoBlock.js"></script>
+        <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="01926dd3-236b-7534-88ac-fc26a707b641"></script>
+        <script type="text/javascript">
+            delete_cookie();
+            var now = new Date();
+            now.setTime(now.getTime() + 1 * 3600 * 1000 * 24 * 365);
+            function delete_cookie() {
+                document.cookie = "OptanonAlertBoxClosed=; path=/; domain=.www.centralbank.ie; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+                document.cookie = "OptanonConsent=; path=/; domain=.www.centralbank.ie; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+            }
+
+            function cookieExists(cookieName) {
+                var value = '; ' + document.cookie;
+                var parts = value.split('; ' + cookieName + '=');
+                if (parts.length == 2) {
+                    return true;
+                }
+            }
+            function OptanonWrapper() {
+                //Start - Change Optanon Cookie Expiry
+                var bannerAcceptButton = document.getElementById("onetrust-accept-btn-handler");
+                var pcAllowAllButton = document.getElementById("accept-recommended-btn-handler");
+                var pcCloseButton = document.getElementById("close-pc-btn-handler");
+                var pcSaveButton = document.getElementsByClassName("save-preference-btn-handler")[0];
+
+                //Allowed all via Banner
+                if (bannerAcceptButton) {
+                    bannerAcceptButton.addEventListener('click', function () {
+                        CookieSettingsUpdated();
+                        location.reload();
+                    });
+                }
+
+                //Allowed all via Preference Center
+                if (pcAllowAllButton) {
+                    pcAllowAllButton.addEventListener('click', function () {
+                        CookieSettingsUpdated();
+                        location.reload();
+                    });
+                }
+
+                //Set custom settings via Preference Center
+                if (pcCloseButton) {
+                    pcCloseButton.addEventListener('click', function () {
+                        CookieSettingsUpdated();
+                    });
+                }
+
+                //Set custom settings via Preference Center
+                if (pcSaveButton) {
+                    pcSaveButton.addEventListener('click', function () {
+                        CookieSettingsUpdated();
+                        location.reload();
+                    });
+                }
+            }
+            function CookieSettingsUpdated() {
+                setTimeout(function () {
+                    toggle_iFrames();
+                }, 300);
+            }
+
+            function optanonCategoryEnabled(name, cat) {
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length == 2) {
+                    var cookieValue = parts.pop().split(";").shift();
+                    var cookieDetails = cookieValue.split('&');
+                    for (i = 0; i < cookieDetails.length; i++) {
+                        var details = cookieDetails[i].split("=");
+                        if (details[0] == "groups") {
+                            var categories = decodeURIComponent(details[1]).split(",");
+                            for (c = 0; c < categories.length; c++) {
+                                var category = categories[c].split(":");
+                                if (category[0] == cat && category[1] == "1") {
+                                    return true
+                                }
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+            //# sourceURL=browsertools://custom/inline-script-1.js
+        </script>
+        <!-- OneTrust Cookies Consent Notice end -->
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M4KRX7C');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>
+	Single Euro Payments Area | Central Bank of Ireland
+</title><meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="format-detection" content="telephone=no" /><meta name="viewport" content="width=device-width, maximum-scale=2" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet" />
+        <link href="../../Theme/css/styles.min.css?v=1791304727493" rel="stylesheet" />
+        <link href="../../Theme/css/imgs/favicon.ico" type="image/png" rel="icon" />
+        <link href="https://customer.cludo.com/assets/3127/13322/css/css.css?v=1791304727493" rel="stylesheet">
+        <link href="https://customer.cludo.com/assets/3127/13322/cludo-search.min.css?v=1791304727493" type="text/css" rel="stylesheet">
+    
+    <script>
+        /*!
+         * enquire.js v2.1.2 - Awesome Media Queries in JavaScript
+         * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/enquire.js
+         * License: MIT (http://www.opensource.org/licenses/mit-license.php)
+         */
+        !function (a, b, c) { var d = window.matchMedia; "undefined" != typeof module && module.exports ? module.exports = c(d) : "function" == typeof define && define.amd ? define(function () { return b[a] = c(d) }) : b[a] = c(d) }("enquire", this, function (a) { "use strict"; function b(a, b) { var c, d = 0, e = a.length; for (d; e > d && (c = b(a[d], d), c !== !1); d++); } function c(a) { return "[object Array]" === Object.prototype.toString.apply(a) } function d(a) { return "function" == typeof a } function e(a) { this.options = a, !a.deferSetup && this.setup() } function f(b, c) { this.query = b, this.isUnconditional = c, this.handlers = [], this.mql = a(b); var d = this; this.listener = function (a) { d.mql = a, d.assess() }, this.mql.addListener(this.listener) } function g() { if (!a) throw new Error("matchMedia not present, legacy browsers require a polyfill"); this.queries = {}, this.browserIsIncapable = !a("only all").matches } return e.prototype = { setup: function () { this.options.setup && this.options.setup(), this.initialised = !0 }, on: function () { !this.initialised && this.setup(), this.options.match && this.options.match() }, off: function () { this.options.unmatch && this.options.unmatch() }, destroy: function () { this.options.destroy ? this.options.destroy() : this.off() }, equals: function (a) { return this.options === a || this.options.match === a } }, f.prototype = { addHandler: function (a) { var b = new e(a); this.handlers.push(b), this.matches() && b.on() }, removeHandler: function (a) { var c = this.handlers; b(c, function (b, d) { return b.equals(a) ? (b.destroy(), !c.splice(d, 1)) : void 0 }) }, matches: function () { return this.mql.matches || this.isUnconditional }, clear: function () { b(this.handlers, function (a) { a.destroy() }), this.mql.removeListener(this.listener), this.handlers.length = 0 }, assess: function () { var a = this.matches() ? "on" : "off"; b(this.handlers, function (b) { b[a]() }) } }, g.prototype = { register: function (a, e, g) { var h = this.queries, i = g && this.browserIsIncapable; return h[a] || (h[a] = new f(a, i)), d(e) && (e = { match: e }), c(e) || (e = [e]), b(e, function (b) { d(b) && (b = { match: b }), h[a].addHandler(b) }), this }, unregister: function (a, b) { var c = this.queries[a]; return c && (b ? c.removeHandler(b) : (c.clear(), delete this.queries[a])), this } }, new g });
+    </script>
+    
+        <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js?v=1791304727493"></script>
+    <meta property="og:title" content="Single Euro Payments Area | Central Bank of Ireland" /><meta property="og:type" content="website" /><meta property="og:url" content="https://www.centralbank.ie/financial-system/payments-and-securities-settlements/single-euro-payments-overview" /><meta property="og:site_name" content="Central Bank of Ireland - English" /><link rel="canonical" href="https://www.centralbank.ie/financial-system/payments-and-securities-settlements/single-euro-payments-overview" /><link href="/Telerik.Web.UI.WebResource.axd?d=PMrIT5dOWaVYIcpFWUE4nLMondQKT06rXaYKkrkmgIA8U6HILVhpXLNRyzM-lIWJ8BX-z660YcQRxI2gOMva4XEE0eho4ecSkzb-HevxJ3gtKU39f0z9ObqAiNMy_AcI0&amp;t=639161105072557280&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d15.4.8636.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3ae3c1f54b-3ea5-4781-8854-7c87826645f0%3a7a90d6a" type="text/css" rel="stylesheet" /><meta name="description" content="Page describing all aspects of the Single Euro Payments Area (SEPA) initiative for pan-European retail payments (credit transfers and direct debits). " /></head>
+<body id="sBody">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4KRX7C"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <form method="post" action="./single-euro-payments-overview" id="form1">
+<input type="hidden" name="ctl07_TSM" id="ctl07_TSM" value="" />
+<input type="hidden" name="ctl08_TSSM" id="ctl08_TSSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="GbEcXWuh3zZ3APIKoU552+hB8ZmdsbX4YWN3cbW5NdkWlzkGw1FU6dXyp3kyvqjFp46x5TwJIEx5HWlKh22bZdJpaP1pCnI7ENkWsUjPEJg=" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"en","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"$","NaNSymbol":"NaN","CurrencyNegativePattern":0,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"M/d/yyyy","ShortTimePattern":"h:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl07_TSM&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen%3a44715eca-1ae9-42ec-b817-38b6cdd5d2ea%3aea597d4b" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F5357157" /><input type="hidden" name="ctl00$ctl07" id="ctl07" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("ctl07", "ctl00$ctl07");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        
+            <script type="text/javascript">
+                var els = document.querySelectorAll('link[href^="/Telerik.Web.UI.WebResource.axd"]');
+                if (els.length) {
+                    els[0].parentNode.removeChild(els[0]);
+                }
+            </script>
+        
+        
+            <noscript>
+                <div class="js-notification">
+                    <div class="container">
+                        <p>
+                            <span class="fa fa-info-circle" aria-hidden="true"></span>It appears JavaScript is disabled. To get the most out of the
+                website we recommend enabling JavaScript in your browser.
+                        </p>
+                        <a href="#" class="close-notification"><span class="fa fa-times" aria-hidden="true"></span><span
+                            class="sr-only">Close</span></a>
+                    </div>
+                </div>
+            </noscript>
+
+        
+
+        <header id="cbi_header" class="hide-on-print">
+            
+
+
+
+<div class="alert-bar closed" data-publish-date="8/11/2026 9:09:10 AM">
+    <div class="container">
+        <p>
+            <b>
+                Access To Cash
+            </b>
+            Do you have sufficient
+                <a class="alert-link" href="/financial-system/access-to-cash/public-information">
+                    access to cash in your locality?
+                </a>
+
+            <button class="alert-close">
+                Dismiss
+            </button>
+        </p>
+    </div>
+</div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        
+
+
+    <a href="/home">
+                <img loading="lazy" src="/images/default-source/logos/logo.png?sfvrsn=3dff671a_5" title="Central Bank of Ireland" alt="Central Bank homepage"
+         
+          />
+
+    </a>
+
+                            <button type="button" id="toggleMenu" tabindex="0" class="hidden-sm hidden-md hidden-lg"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i><i class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></i>Menu</button>
+                        
+                    </div>
+                    
+<nav id="plhMenus_TAFC558EA054_megaMenu" class="sf_colsIn col-sm-9 cls-megamenu-nav" aria-labelledby="gnsheading" data-placeholder-label="Menus">
+
+
+<h2 class="sr-only" id="gnsheading">Main menu</h2>
+
+<div id="tns">
+    <ul>
+        
+    <li class=""><a href="/about" target="_self" >About</a></li>
+    <li class=""><a href="/news-media" target="_self" >News &amp; Media</a></li>
+    <li class=""><a href="/events" target="_self" >Events</a></li>
+    <li class=""><a href="/careers" target="_self" >Careers</a></li>
+    <li class=""><a href="/contact-us" target="_self" >Contact</a></li>
+        <li> <a lang="ga" href ="/ga/home">Gaeilge</a> </li>
+        <li class="inner-addon right-addon active">
+            <label for="megaMenuSearchBox" class="sr-only">Search in site</label>
+            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+
+            <div id="cludo-search-form-top">                
+                <input type="text" class="form-control search-input" placeholder="Search" name="megaMenuSearchBox" id="megaMenuSearchBox">
+                <button type="submit" class="search-button" id="search-button" aria-label="search"></button>
+            </div>
+
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<ul class="mega-menu" aria-label="Main menu">
+        <li>
+            <button type="button" id="item-financial-system" class="active" aria-expanded="false"
+                    aria-controls="menu-financial-system" >
+                <span>Financial System</span>
+            </button>
+            <div id="menu-financial-system" class="grey-box">
+                <div class="container">
+                    <div class="navbtn row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-dark-blue button-text-small">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Back
+                            </button>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="title">ACS</p>
+                        </div>
+                    </div>
+                    <div class="row heading-bar">
+                        <div class="col-sm-6"><h3>Financial System</h3></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 first">
+<p>How we identify risk and take actions to ensure financial stability.</p>
+<p><a href="/financial-system" class="btn-reg">Financial System Overview</a></p><hr><ul><li><a href="/consumer-hub/notes-and-coins/exchange-old-or-damaged-money">Money, notes and coins</a></li><li><a href="/financial-system/financial-stability/macro-prudential-policy">Macroprudential Policy</a></li><li><a href="/macro-prudential-policies-for-bank-capital/countercyclical-capital-buffer">Countercyclical Capital Buffer</a></li></ul>
+                        </div>
+                        <div class="col-sm-9 sub-menu ">
+                            <ul aria-label="second level menu">
+
+                                    <li class="">
+        <a tabindex="0" href="/financial-system" >Financial System Overview</a>
+    </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Financial Stability
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/financial-system/financial-stability" >Financial Stability Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/financial-stability/macro-prudential-policy" >Macroprudential Policy </a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/financial-stability/financial-stability-research" >Financial Stability Research</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/financial-stability/risks-for-financial-stability" >Risks for Financial Stability</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/financial-stability/market-based-finance-monitor" >Market Based Finance Monitor</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/financial-stability/financial-stability-committee" >Financial Stability Committee&#160;</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Payments and Securities Settlements
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/financial-system/payments-and-securities-settlements" >Payments and Securities Settlements Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/catalyst" >Catalyst&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/national-competent-authority" >National Competent Authority</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/national-stakeholder-groups" >National Stakeholder Groups </a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/oversight" >Oversight</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/target-services" >TARGET Services</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/payment-system-approval-process" >Payments Systems Approval Process</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/single-euro-payments-overview" aria-current="page">Single Euro Payments Area</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/payments-and-securities-settlements/irish-retail-payments-forum" >Irish Retail Payments Forum</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/resolution" >Resolution </a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/foreign-exchange-global-code-of-conduct" >Foreign Exchange Global Code of Conduct</a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Operational Resilience and Cyber
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/financial-system/operational-resilience-and-cyber" >Operational Resilience and Cyber Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/operational-resilience-and-cyber/operational-resilience" >Operational Resilience </a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/operational-resilience-and-cyber/cyber-resilience" >Cyber Resilience</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Climate Change&#160;
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/financial-system/climate-change" >Climate Change&#160; Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/climate-change/economic-and-financial-interlinkages" >Economic &amp; Financial Interlinkages</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/climate-change/financial-regulation-and-supervision" >Financial Regulation &amp; Supervision</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/climate-change/international-engagement" >International Engagement&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/climate-change/the-central-bank-and-sustainability" >The Central Bank &amp; Sustainability</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/climate-change/planning-for-transition-to-net-zero" >Planning for Transition to Net Zero</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/climate-change/training-directory" >Training Directory</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/a-digital-euro" >A Digital Euro</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/financial-system/access-to-cash" >Access to Cash</a>
+
+            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="close-megamenu" aria-label="Close menu">Close <span class="fa fa-times" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <button type="button" id="item-monetary-policy" class="" aria-expanded="false"
+                    aria-controls="menu-monetary-policy" >
+                <span>Monetary Policy</span>
+            </button>
+            <div id="menu-monetary-policy" class="grey-box">
+                <div class="container">
+                    <div class="navbtn row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-dark-blue button-text-small">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Back
+                            </button>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="title">ACS</p>
+                        </div>
+                    </div>
+                    <div class="row heading-bar">
+                        <div class="col-sm-6"><h3>Monetary Policy</h3></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 first">
+<p>Maintaining price stability as part of the Eurosystem.</p>
+<p><a href="/monetary-policy" class="btn-reg">Monetary Policy Overview</a></p><hr>
+                        </div>
+                        <div class="col-sm-9 sub-menu ">
+                            <ul aria-label="second level menu">
+
+                                    <li class="">
+        <a tabindex="0" href="/monetary-policy" >Monetary Policy Overview</a>
+    </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Policy Setting
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/monetary-policy/policy-setting" >Policy Setting Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-setting/monetary-policy-role" >Monetary Policy Role</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-setting/ecb-governing-council-and-monetary-policy-decisions" >ECB Governing Council and Monetary Policy Decisions</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Policy Implementation
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/monetary-policy/policy-implementation" >Policy Implementation Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/open-market-operations" >Open Market Operations</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/standing-facilities" >Standing Facilities</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/counter-party-eligibility" >Counterparty Eligibility </a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/legal-documentation" >Legal Documentation</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/collateral-framework" >Collateral Framework</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/asset-purchase-programmes" >Asset Purchase Programmes</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/policy-implementation/collateral-management-provision-of-liquidity-to-banks" >Collateral Management &amp; Provision of Liquidity to Banks </a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Management of Investment Assets
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/monetary-policy/management-of-investment-assets" >Management of Investment Assets Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/management-of-investment-assets/banks-investment-assets" >Central Bank&#39;s Investment Assets</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/management-of-investment-assets/ecb-pooled-reserves" >ECB’s US Dollar Reserve Assets</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/risk-management" >Risk Management</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/monetary-policy/european-central-bank-strategy-review" >European Central Bank Strategy Review </a>
+
+            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="close-megamenu" aria-label="Close menu">Close <span class="fa fa-times" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <button type="button" id="item-regulation" class="" aria-expanded="false"
+                    aria-controls="menu-regulation" >
+                <span>Regulation</span>
+            </button>
+            <div id="menu-regulation" class="grey-box">
+                <div class="container">
+                    <div class="navbtn row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-dark-blue button-text-small">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Back
+                            </button>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="title">ACS</p>
+                        </div>
+                    </div>
+                    <div class="row heading-bar">
+                        <div class="col-sm-6"><h3>Regulation</h3></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 first">
+<p>How we regulate financial services in Ireland. </p>
+<p><a href="/regulation" class="btn-reg">Regulation Overview</a></p><hr><ul><li><a href="/regulation/how-we-regulate/international-financial-sanctions/EU-restrictive-measures-relating-to-actions-in-Ukraine">Changes to the Russia/Ukraine Regulations</a></li><li><a href="/regulation/how-we-regulate/fitness-probity">Fitness and Probity</a></li><li><a href="/regulation/innovation-hub" title="Innovation Hub">Innovation Hub</a></li><li><a href="https://portal.centralbank.ie/" title="This link will open in a new tab or window" target="_blank" rel="noopener" data-sf-ec-immutable="">Log in to Central Bank Portal</a></li><li><a href="https://onlinereporting.cbfsai.ie/" target="_blank" title="This link will open in a new tab or window" rel="noopener" data-sf-ec-immutable="">Log in to Credit Union Auditor Reporting</a></li><li><a href="https://orion.centralbank.ie/" title="This link will open in a new tab or window" target="_blank" rel="noopener" data-sf-ec-immutable="">Log in to ORION</a></li><li><a href="http://registers.centralbank.ie/" title="This link will open in a new tab or window" target="_blank" rel="noopener" data-sf-ec-immutable="">Registers</a></li></ul>
+                        </div>
+                        <div class="col-sm-9 sub-menu ">
+                            <ul aria-label="second level menu">
+
+                                    <li class="">
+        <a tabindex="0" href="/regulation" >Regulation Overview</a>
+    </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Innovation Hub
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/innovation-hub" >Innovation Hub Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/engaging-with-the-innovation-hub" >Engaging with the Innovation Hub</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/how-to-engage-with-the-innovation-hub" >How to Engage with the Innovation Hub</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/innovation-sandbox-programme" >Innovation Sandbox Programme</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/our-approach-to-innovation" >Our Approach to Innovation</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/speeches-and-publications" >Speeches and Publications</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/eu-international-innovation-forums" >EU/International Innovation Forums</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/consultation-paper-on-innovation-engagement---cp156" >Consultation Paper on Innovation Engagement - CP156</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/innovation-hub/innovation-insights" >Innovation Insights</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Central Bank of Ireland Portal
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/central-bank-portal" >Central Bank of Ireland Portal Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/central-bank-portal/returns-guidance" >Returns Guidance</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/central-bank-portal/help" >Help</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/central-bank-portal/legal-information" >Portal Legal Information</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/central-bank-portal/contact-us" >Contact Us</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    How We Regulate
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/how-we-regulate" >How We Regulate Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/authorisation" >Authorisation</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/fitness-probity" >Fitness &amp; Probity</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/individual-accountability-framework" >Individual Accountability Framework&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/brexit-faq" >Brexit FAQ – Financial Services Firms</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/policy" >Policy</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/supervision" >Supervision</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/fees-levies" >Fees &amp; Levies</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/regulatory-decisions-unit" >Regulatory Decisions Unit</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/enforcement" >Enforcement</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/resolution-framework" >Resolution Framework</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/international-financial-sanctions" >International Financial Sanctions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/codes" >Codes</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/how-we-regulate/diversity-and-inclusion-in-regulated-firms" >Diversity and Inclusion in Regulated Firms</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Industry &amp; Market Sectors
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/industry-market-sectors" >Industry &amp; Market Sectors Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/brokers-retail-intermediaries" >Brokers / Retail Intermediaries</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/bureaux-de-change" >Bureaux de Change</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/client-assets" >Client Assets / Investor Money</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/credit-institutions" >Credit Institutions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/credit-servicing-firms-credit-servicers" >Credit Servicing Firms / Credit Servicers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/credit-unions" >Credit Unions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/crowdfunding-service-providers" > Crowdfunding Service Providers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/debt-management-firms" >Debt Management Firms</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/electronic-money-institutions" >Electronic Money Institutions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/funds-service-providers" >Funds Service Providers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/funds" >Funds</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/high-cost-credit-providers" >High Cost Credit Providers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/insurance-reinsurance" >Insurance &amp; Reinsurance</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/investment-firms" >Investment Firms</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/money-transmission-businesses" >Money Transmission Businesses</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/payment-institutions" >Payment Institutions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/pepp-provider" >PEPP Provider</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/retail-credit-home-reversion-firms" >Retail Credit &amp; Home Reversion Firms</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/industry-market-sectors/securities-markets" >Securities Markets</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Anti-Money Laundering and Countering the Financing of Terrorism
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism" >Anti-Money Laundering and Countering the Financing of Terrorism Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/legislation" >Correspondence with Industry</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/eu-international" >EU and International</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/events" >Events</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/countering-the-financing-of-terrorism" >Financial Sanctions and Terrorist Financing - additional obligations</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/registration---cheque-cashing-offices" >Registration - Cheque Cashing Offices</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/schedule2-registration" >Registration - Schedule 2 Firms</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/virtual-asset-service-providers" >Virtual Asset Service Providers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/regulatory-requirements-guidance" >Regulation&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/guidance-on-risk" >Risk and Guidance</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/sector-specific-ml-tf-risk-evaluation-questionnaire" >Sector specific ML/TF Risk Evaluation Questionnaire</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/risk-based-approach-to-aml-supervision" >Supervision</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/tcsp-authorisation" >TCSP Authorisation</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/beneficial-ownership-register" >Beneficial Ownership Register</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/fund-transfer-regulations-notification-requirement-for-payment-service-providers" >Fund Transfer Regulations Notification Requirement for Payment Service Providers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/anti-money-laundering-and-countering-the-financing-of-terrorism/ireland-safe-deposit-box-bank-and-payment-accounts-register-isbar" >Ireland Safe Deposit Box Bank and Payment Accounts Register (ISBAR)</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Consumer Protection
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/consumer-protection" >Consumer Protection Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/compliance-monitoring" >Compliance Monitoring</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/legislation" >Legislation for Consumer Protection</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/advisory-groups" >Advisory Groups</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/central-credit-register" >Central Credit Register</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/consumer-protection-outlook-report" >Consumer Protection Outlook Report</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/european-supervisory-authority-guidelines" >European Supervisory Authority Guidelines</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/contact-us" >Consumer Protection Directorate - Contact Us</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/consumer-protection-research" >Consumer Protection Research</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/consumer-protection-code" >Consumer Protection Code 2025</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/consumer-protection/consumer-protection-codes-regulations" >Consumer Protection Codes and Regulations</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Markets Update
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/markets-update" >Markets Update Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-update/iosco" >IOSCO</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-update/esma-guidelines-and-recommendations" >ESMA Guidelines and Recommendations</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-update/markets-update-archive" >Markets Update Archive</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Protected Disclosures &amp; Whistleblowing
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/protected-disclosures-whistleblowing" >Protected Disclosures &amp; Whistleblowing Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/protected-disclosures-whistleblowing/2025-report-on-protected-disclosures" >2025 Report on Protected Disclosures</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/protected-disclosures-whistleblowing/2024-report-on-protected-disclosures" >2024 Report on Protected Disclosures</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Markets in Crypto Assets Regulation (MiCAR)&#160;
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/markets-in-crypto-assets-regulation" >Markets in Crypto Assets Regulation (MiCAR)&#160; Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-in-crypto-assets-regulation/micar---frequently-asked-questions" >MiCAR - frequently asked questions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-in-crypto-assets-regulation/communications-publications" >Communications &amp; Publications&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-in-crypto-assets-regulation/regulatory-reporting" >Regulatory Reporting</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/markets-in-crypto-assets-regulation/suspicious-transaction-and-order-report" >Suspicious Transaction and Order Report</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Digital Operational Resilience Act (DORA)&#160;
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/digital-operational-resilience-act-dora" >Digital Operational Resilience Act (DORA)&#160; Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/digital-operational-resilience-act-dora/communications-and-publications" >Communications and Publications</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/digital-operational-resilience-act-dora/dora---frequently-asked-questions" >DORA - Frequently Asked Questions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/digital-operational-resilience-act-dora/reporting-major-ict-related-incidents-and-significant-cyber-threats" >Reporting Major ICT-related Incidents and Significant Cyber Threats</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/digital-operational-resilience-act-dora/reporting-registers-of-information" >Reporting Registers of Information</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Unauthorised Firms
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/unauthorised-firms" >Unauthorised Firms Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/unauthorised-firms/pages" >Warnings - Unauthorised Firms&#160;</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/enforcement" >Enforcement</a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    PSD2 
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/regulation/psd2-overview" >PSD2  Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/psd2-overview/psd2" >PSD2 - Reporting Requirements</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/psd2-overview/faq" >PSD2 - Frequently Asked Questions</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/central-securities-depository-regulation-csdr" >Central Securities Depository Regulation (CSDR)</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/outsourcing-registers-submission-requirements" >Outsourcing Registers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/regulation/transforming-regulation-and-supervision" >Transforming Regulation and Supervision</a>
+
+            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="close-megamenu" aria-label="Close menu">Close <span class="fa fa-times" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <button type="button" id="item-publication" class="" aria-expanded="false"
+                    aria-controls="menu-publication" >
+                <span>Publications</span>
+            </button>
+            <div id="menu-publication" class="grey-box">
+                <div class="container">
+                    <div class="navbtn row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-dark-blue button-text-small">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Back
+                            </button>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="title">ACS</p>
+                        </div>
+                    </div>
+                    <div class="row heading-bar">
+                        <div class="col-sm-6"><h3>Publications</h3></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 first">
+<p>What we publish on the economy and about ourselves.</p><p><a href="/publication" class="btn-reg">Publications Overview</a></p><p>A forum for research engagement.</p><p><a href="/research-exchange" class="btn-reg">Research Exchange</a></p><hr><ul><li><a href="/news-media/blog">Governor's Blog</a></li></ul>
+                        </div>
+                        <div class="col-sm-9 sub-menu ">
+                            <ul aria-label="second level menu">
+
+                                    <li class="">
+        <a tabindex="0" href="/publication" >Publications Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/publication/behind-the-data" >Behind the Data</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/climate-observatory" >Climate Observatory&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/consultation-papers" >Consultation Papers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/consumer-protection-research" >Consumer Protection Research</a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Corporate Reports
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/publication/corporate-reports" >Corporate Reports Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/publication/corporate-reports/central-bank-annual-report-and-annual-performance-statement-2025" >Central Bank Annual Report and Annual Performance Statement 2025</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/corporate-reports/our-new-strategy-2028-2032-have-your-say" >Our New Strategy 2028 – 2032: Have Your Say</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/corporate-reports/strategic-plan" >Our Strategy&#160; (September 2024)</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/corporate-reports/annual-reports" >Annual Reports Archive</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/corporate-reports/annual-performance-statement" >Annual Performance Statements Archive</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Correspondence
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/publication/correspondence" >Correspondence Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/publication/correspondence/oireachtas-correspondence" >Oireachtas Correspondence</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/correspondence/department-of-finance-correspondence" >Department of Finance Correspondence</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/correspondence/general-correspondence" >General Correspondence</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/discussion-papers" >Discussion Papers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-crime-bulletin" >Financial Crime Bulletin</a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Financial Stability Review 
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/publication/financial-stability-review" >Financial Stability Review  Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2026-i" >Financial Stability Review 2026 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2025-ii" >Financial Stability Review 2025 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2025-i" >Financial Stability Review 2025 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2024-ii" >Financial Stability Review 2024 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2024-i" >Financial Stability Review 2024 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2023-ii" >Financial Stability Review 2023 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2023-i" >Financial Stability Review 2023 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2022-ii" >Financial Stability Review 2022 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2022-i" >Financial Stability Review 2022 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2021-ii" >Financial Stability Review 2021 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2021-i" >Financial Stability Review 2021 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2020-ii" >Financial Stability Review 2020 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2020-i" >Financial Stability Review 2020 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2019-ii" >Financial Stability Review 2019 II</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-2019-i" >Financial Stability Review 2019 I</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/financial-stability-review-list" >Financial Stability Review Archive</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/macro-financial-reviews" >Macro Financial Reviews</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/financial-stability-review/2025" >Financial Stability Review 2025 I</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/insurance-compensation-fund" >Insurance Compensation Fund </a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Quarterly Bulletins
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/publication/quarterly-bulletins" >Quarterly Bulletins Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/signed-articles" >Signed Articles</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletins-list" >Quarterly Bulletins Archive</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-q3-2026" >Quarterly Bulletin Q3 2026</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-q2-2026" >Quarterly Bulletin Q2 2026</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-q1-2026" >Quarterly Bulletin Q1 2026</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-q2-2025" >Quarterly Bulletin Q2 2025</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-q3-2025" >Quarterly Bulletin Q3 2025</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-q4-2025" >Quarterly Bulletin Q4 2025</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/quarterly-bulletins/quarterly-bulletin-quarter-1-2025" >Quarterly Bulletin Q1 2025</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/research-publications" >Research Publications</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/sme-market-reports" >SME Market Reports&#160;</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/systemic-risk-pack" >Systemic Risk Pack</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/regulatory---supervisory-outlook-report" >Regulatory &amp; Supervisory Outlook Report</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/research-exchange" >Research Exchange</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/retail-investor-participation-in-ireland---consumer-research-and-analysis" >Retail Investor Participation in Ireland – Consumer Research and Analysis</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/publication/trusted-flagger-frauds-scams" >Trusted Flagger – Frauds &amp; Scams</a>
+
+            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="close-megamenu" aria-label="Close menu">Close <span class="fa fa-times" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <button type="button" id="item-statistics" class="" aria-expanded="false"
+                    aria-controls="menu-statistics" >
+                <span>Statistics</span>
+            </button>
+            <div id="menu-statistics" class="grey-box">
+                <div class="container">
+                    <div class="navbtn row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-dark-blue button-text-small">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Back
+                            </button>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="title">ACS</p>
+                        </div>
+                    </div>
+                    <div class="row heading-bar">
+                        <div class="col-sm-6"><h3>Statistics</h3></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 first">
+<p>Our role as the leading compiler of Irish financial statistics.</p><p><a href="/statistics" class="btn-reg">Statistics Overview</a></p><p>Making data accessible for all. </p><p><a href="/statistics/open-data-portal" class="btn-reg" data-sf-ec-immutable="">Open Data Portal</a></p><p>Innovative insights using frontier methods.</p><p><a href="/statistics/frontierstatistics" class="btn-reg" data-sf-ec-immutable="">Frontier Statistics</a></p><p>&nbsp;</p><hr>
+                        </div>
+                        <div class="col-sm-9 sub-menu ">
+                            <ul aria-label="second level menu">
+
+                                    <li class="">
+        <a tabindex="0" href="/statistics" >Statistics Overview</a>
+    </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Statistical Publications
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/statistics/statistical-publications" >Statistical Publications Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-publications/behind-the-data" >Behind the Data</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/release-calendar" >Statistical Tables Publication Calendar</a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Data &amp; Analysis
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/statistics/data-and-analysis" >Data &amp; Analysis Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/credit-and-banking-statistics" >Credit and Banking Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/monthly-card-payment-statistics" >Monthly Card Payment Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/bis-triennial-derivatives-survey" >BIS Triennial Derivatives Survey</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/other-financial-sector-statistics" >Non-Bank Financial Sector Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/financial-accounts" >Quarterly Financial Accounts</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/household-wealth" >Household Wealth</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/securities-statistics" >Securities Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/competitiveness-reserves-and-national-debt" >Competitiveness, Reserves and National Debt</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/euro-area-statistics" >Euro Area Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/insurance-corporations-statistics" >Insurance Corporations Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/payments-services-statistics" >Payment Statistics</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/pension-fund-statistics" >Pension Fund Statistics </a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/national-claims-information-database" >National Claims Information Database</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/data-and-analysis/payment-fraud-statistics" >Payment Fraud Statistics</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Statistical Reporting Requirements
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/statistics/statistical-reporting-requirements" >Statistical Reporting Requirements Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/schedule-of-dates" >Schedule of Dates</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/credit-institutions" >Credit Institutions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/targeted-longer-term-refinancing-operations-tltros" >Targeted Longer-Term Refinancing Operations (TLTROs)</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/financial-vehicle-corporations" >Financial Vehicle Corporations</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/securities-reporting-custodians" >Securities Reporting Custodians</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/fund-administrators" >Fund Administrators</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/insurance-corporations" >Insurance Corporations</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/special-purpose-vehicles" >Special Purpose Vehicles</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/classification-of-entities-by-institutional-sector" >Classification of Entities by Institutional Sector</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/payment-service-providers" >Payment Service Providers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/anacredit-in-ireland" >AnaCredit in Ireland</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/statistical-reporting-requirements/pension-funds" >Pension Funds</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Exchange Rates and Interest Rates
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/statistics/interest-rates-exchange-rates" >Exchange Rates and Interest Rates Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/interest-rates-exchange-rates/exchange-rates" >Exchange Rates</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/interest-rates-exchange-rates/ecb-interest-rates" >ECB Interest Rates</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/open-data-portal" >Open Data Portal</a>
+
+            </li>
+            <li class="sub">
+                <button type="button" aria-expanded="false" tabindex="0" >
+                    Frontier Statistics
+                </button>
+                <ul aria-label="third level menu">
+                        <li class="">
+        <a tabindex="0" href="/statistics/frontierstatistics" >Frontier Statistics Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/what-are-frontier-statistics" >What are Frontier Statistics?</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/total-domestic-credit" >Total Domestic Credit</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/mortgage-interest-rate-distributions" >Mortgage Interest Rate Distributions</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/non-bank-new-lending-to-irish-enterprises" >Non-Bank New Lending to Irish Enterprises</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/household-debt" >Household Debt</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/investment-and-money-market-funds" >Investment and Money Market Funds</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/overdue-loan-balances" >Overdue Loan Balances</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/frontierstatistics/non-bank-mortgage-interest-rates" >Non-bank Mortgage Interest Rates</a>
+
+            </li>
+
+                </ul>
+            </li>
+            <li>
+
+                <a tabindex="0" href="/statistics/contact-us" >Contact Us</a>
+
+            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="close-megamenu" aria-label="Close menu">Close <span class="fa fa-times" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <button type="button" id="item-consumer-hub" class="" aria-expanded="false"
+                    aria-controls="menu-consumer-hub" >
+                <span>Consumer Hub</span>
+            </button>
+            <div id="menu-consumer-hub" class="grey-box">
+                <div class="container">
+                    <div class="navbtn row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-dark-blue button-text-small">
+                                <span class="glyphicon glyphicon-chevron-left"></span>Back
+                            </button>
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="title">ACS</p>
+                        </div>
+                    </div>
+                    <div class="row heading-bar">
+                        <div class="col-sm-6"><h3>Consumer Hub</h3></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 first">
+<p>Our work in protecting you.</p>
+<p><a href="/consumer-hub" class="btn-reg">Consumer Hub Overview</a></p><hr><ul><li><a href="https://www.centralcreditregister.ie/" data-sf-ec-immutable="">Central Credit Register</a></li><li><a href="https://www.centralbank.ie/consumer-hub/european-accessibility-act" data-sf-ec-immutable="">European Accessibility Act</a></li><li><a href="http://registers.centralbank.ie/" title="This link will open in a new tab or window" target="_blank" rel="noopener" data-sf-ec-immutable="">Check if a firm is regulated</a><a href="/regulation/how-we-regulate/authorisation/unauthorised-firms/search-unauthorised-firms"></a></li></ul>
+                        </div>
+                        <div class="col-sm-9 sub-menu ">
+                            <ul aria-label="second level menu">
+
+                                    <li class="">
+        <a tabindex="0" href="/consumer-hub" >Consumer Hub Overview</a>
+    </li>
+            <li>
+
+                <a tabindex="0" href="/consumer-hub/notes-and-coins" >Banknotes &amp; Coins</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/consumer-hub/consumer-protection-code" >Consumer Protection Code</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/consumer-hub/explainers" >Explainers</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/consumer-hub/managing-your-money" >Managing Your Money</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/consumer-hub/mortgages" >Mortgages</a>
+
+            </li>
+            <li>
+
+                <a tabindex="0" href="/consumer-hub/scams-fraud" >Scams &amp; Fraud</a>
+
+            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="close-megamenu" aria-label="Close menu">Close <span class="fa fa-times" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </li>
+</ul>
+
+<div id="tnsMobile" class="hidden-md hidden-sm hidden-lg"></div>
+
+
+
+
+
+
+
+
+
+    
+</nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <img src="/Theme/css/imgs/pdf-banner.jpg" class="print-only" alt="cropped image" />
+            
+<div class="breadcrumbs">
+    <nav aria-label="Breadcrumb" class="container">
+
+        <ol>
+                        <li><a href="/">Home </a></li>
+                        <li><a href="/financial-system">Financial System </a></li>
+                        <li><a href="/financial-system/payments-and-securities-settlements">Payments and Securities Settlements </a></li>
+                        <li class="active">Single Euro Payments Area</li>
+
+        </ol>
+
+        
+    </nav>
+</div>
+
+
+
+
+
+
+
+<div class="container standard-content">
+    <div class="sf_cols row">
+
+        <div class="col-sm-8 main-content">
+            <article id="MainContentPlaceholder_T225F410C003_Col00" class="sf_colsIn" data-placeholder-label="Main Content"><h1>Introducing the Single Euro Payments Area (SEPA)</h1>
+
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-What-is-SEPA-464f64e2-7c43-462e-8715-542812d5d618">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#What-is-SEPA-464f64e2-7c43-462e-8715-542812d5d618" aria-expanded="false" aria-controls="What-is-SEPA-464f64e2-7c43-462e-8715-542812d5d618">
+                <strong class="gtm-expanding">What is SEPA?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="What-is-SEPA-464f64e2-7c43-462e-8715-542812d5d618" class="panel-collapse collapse " aria-labelledby="heading-What-is-SEPA-464f64e2-7c43-462e-8715-542812d5d618">
+        <div class="panel-body">
+            <p>SEPA covers all of the EU member states, together with Iceland, Liechtenstein, Norway, Switzerland and Monaco.</p><p>SEPA, created a single market for euro-denominated retail payments, allowing payment services users to make cashless, euro-denominated payments to payees located anywhere in the area that it covers under the same basic terms and conditions, using just
+    one payment account and a single set of payment instruments.</p><p>In simple terms, anyone who holds a payment account with a bank or other payment service provider (PSP) located in the countries covered by SEPA will be able to send and receive euro-denominated payments from, accounts anywhere else in SEPA.</p><p>The European Central Bank (ECB) has published some useful general background information on SEPA, including&nbsp;<a target="_blank" href="https://www.ecb.europa.eu/pub/pdf/other/sepa_brochure_2009en.pdf">Single Euro Payments Area SEPA &ndash; An integrated retail payment market brochure</a>&nbsp;and <a target="_blank" href="https://www.youtube.com/watch?v=c7B_fAYpEvM">SEPA video overview</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-What-does-SEPA-cover-b30b0f66-d8b9-4366-9f3e-59e27dfc7dea">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#What-does-SEPA-cover-b30b0f66-d8b9-4366-9f3e-59e27dfc7dea" aria-expanded="false" aria-controls="What-does-SEPA-cover-b30b0f66-d8b9-4366-9f3e-59e27dfc7dea">
+                <strong class="gtm-expanding">What does SEPA cover?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="What-does-SEPA-cover-b30b0f66-d8b9-4366-9f3e-59e27dfc7dea" class="panel-collapse collapse " aria-labelledby="heading-What-does-SEPA-cover-b30b0f66-d8b9-4366-9f3e-59e27dfc7dea">
+        <div class="panel-body">
+            <p>Retail payments are the normal, 'everyday' payments that we are all familiar with. They are generally of relatively low value, are usually not time-critical and can be made by either companies or consumers. For example, payments made by consumers to retailers or to utility or media providers are examples of retail payments.</p>
+<p>One of the main objectives of SEPA is to be able to make payments in euro with a single payment account and a set of harmonised payment instruments, anywhere in the European Union.&nbsp; The SEPA Regulation prevents any payee within the Single Euro Payments Area (SEPA) wishing to initiate a SEPA direct debit transaction from specifying where the payer must maintain their payment account; e.g., an Irish company initiating a SEPA direct debit payment cannot insist that the payer open or maintain an Irish bank account for this purpose.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-Who-provides-access-to-SEPA-b56b4c7c-0f2d-4632-8bfe-36b129b879b6">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#Who-provides-access-to-SEPA-b56b4c7c-0f2d-4632-8bfe-36b129b879b6" aria-expanded="false" aria-controls="Who-provides-access-to-SEPA-b56b4c7c-0f2d-4632-8bfe-36b129b879b6">
+                <strong class="gtm-expanding">Who provides access to SEPA?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="Who-provides-access-to-SEPA-b56b4c7c-0f2d-4632-8bfe-36b129b879b6" class="panel-collapse collapse " aria-labelledby="heading-Who-provides-access-to-SEPA-b56b4c7c-0f2d-4632-8bfe-36b129b879b6">
+        <div class="panel-body">
+            <h2>European Payments Council (EPC)</h2>
+<p>The EPC manages five payment schemes</p>
+<ul>
+    <li>The SEPA Credit Transfer scheme.</li>
+    <li>The SEPA Instant Credit Transfer scheme.</li>
+    <li>The SEPA Direct Debit Core scheme.</li>
+    <li>The SEPA Direct Debit Business-to-Business scheme.</li>
+    <li>The One-Leg Out Instant Credit Transfer scheme.</li>
+</ul>
+<p>The EPC designs and manages euro payment and payment-related schemes that contribute to the creation of a single payments market in Europe and facilitate economic exchanges in the Single Euro Payments Area (SEPA).</p>
+<p><a target="_blank" href="https://www.europeanpaymentscouncil.eu/about-us/epc-and-sepa-process">Find out more about EPC and their involvement in SEPA</a></p>
+<h2>EBA Clearing</h2>
+<p>EBA CLEARING is a provider of pan-European payment infrastructure solutions, including:</p>
+<ul>
+    <li>STEP2-T: SEPA mass payment system for credit transfers and direct debits</li>
+    <li>RT1: SEPA instant payments system for euro real-time payments</li>
+    <li>R2P: SEPA request to pay messaging service</li>
+</ul>
+<p><a target="_blank" href="https://www.ebaclearing.eu/at-a-glance/the-company/">Find out more about EBA Clearing and their involvement in SEPA</a><br /><br /></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-What-are-the-different-ways-to-pay-with-SEPA-4657fc51-93df-460e-823b-bc2249c03533">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#What-are-the-different-ways-to-pay-with-SEPA-4657fc51-93df-460e-823b-bc2249c03533" aria-expanded="false" aria-controls="What-are-the-different-ways-to-pay-with-SEPA-4657fc51-93df-460e-823b-bc2249c03533">
+                <strong class="gtm-expanding">What are the different ways to pay with SEPA?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="What-are-the-different-ways-to-pay-with-SEPA-4657fc51-93df-460e-823b-bc2249c03533" class="panel-collapse collapse " aria-labelledby="heading-What-are-the-different-ways-to-pay-with-SEPA-4657fc51-93df-460e-823b-bc2249c03533">
+        <div class="panel-body">
+            <h3>Credit Transfers</h3><p>A credit transfer is a payment initiated by the payer. The payer issues a payment instruction to their payment service provider (PSP). The payer&rsquo;s PSP then moves the specified amount to the payee&rsquo;s PSP. A PSP can be a bank, a credit union,
+    a payment institution, or an e-money institution. A credit transfer can be &lsquo;standard&rsquo;, also known as &lsquo;classic&rsquo;, or it can be &lsquo;instant&rsquo;. A standard credit transfer takes upwards of 24 hours to settle, while an instant
+    credit transfer must settle within 10 seconds.</p><h3>Direct Debits</h3><p>Direct debits are typically used for recurring payments such as utility bills. A direct debit payment is initiated by the payee via its PSP. A direct debit requires the consent of the payer, given to the payee in the form of a mandate. Direct debits can also be used to make &lsquo;one-off&rsquo; payments, but this practice is not widespread in Ireland.</p><h3>Request to Pay</h3><p>The SEPA Request-to-Pay (SRTP) scheme covers the set of operating rules and technical elements (including messages) that allow a payee to request the initiation of a payment from a payer in a wide range of physical or online use cases. While not prevalent in Ireland this functionality is available through this messaging function. The scheme can be considered as a complement to the payment flow because it supports the end-to-end process and lies between an underlying commercial transaction and the payment
+    itself. An RTP as such can be seen as an enabler for digital payments.</p><h3>SEPA Proxy Look Up</h3><p>The SEPA Proxy Lookup (SPL) service makes it considerably easier for end users to make mobile person-to-person (P2P) payments securely and highly comfortable across borders and communities. Customers can use their mobile device to transfer money from
+    their bank account to another individual&rsquo;s account across Europe without manually exchanging payment information, such as IBAN. The European Payments Council (EPC) created and manages the <a target="_blank" href="https://www.europeanpaymentscouncil.eu/sites/default/files/infographic/2019-02/SPL_Updated_final.pdf">SPL scheme</a>, as this solution builds interoperable European (mobile) P2P payment solutions. While not prevalent in Ireland, this functionality is available.</p>
+        </div>
+    </div>
+</div>
+
+    
+    <h2>Understanding SEPA Instant Payments</h2>
+    
+   
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-What-are-SEPA-Instant-Payments-40ae0036-e312-4a75-b090-330e1a8b6b37">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#What-are-SEPA-Instant-Payments-40ae0036-e312-4a75-b090-330e1a8b6b37" aria-expanded="false" aria-controls="What-are-SEPA-Instant-Payments-40ae0036-e312-4a75-b090-330e1a8b6b37">
+                <strong class="gtm-expanding">What are SEPA Instant Payments?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="What-are-SEPA-Instant-Payments-40ae0036-e312-4a75-b090-330e1a8b6b37" class="panel-collapse collapse " aria-labelledby="heading-What-are-SEPA-Instant-Payments-40ae0036-e312-4a75-b090-330e1a8b6b37">
+        <div class="panel-body">
+            <p><a target="_blank" href="https://eur-lex.europa.eu/eli/reg/2024/886/oj">Regulation (EU) 2024/886</a>, also known as the Instant Payments Regulation (IPR), entered into force in April 2024, bringing significant changes to the SEPA Regulation. It introduced mandatory requirements for instant credit transfers in euros.</p><p>SEPA instant credit transfer (SCT-Inst) allows you to send or receive euro-denominated payments within ten seconds. Instant payments can be made through all the channels that can be used to place non-instant credit transfers, such as online, in store
+    and at a bank branch, and they can be made electronically at any time.</p><p>The ability to receive SEPA instant credit transfers in euro became mandatory for euro area PSPs on 9 January 2025, and the ability to send these transfers became mandatory on 9 October 2025.<br /></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-Who-is-responsible-for-enforcing-the-Instant-Payments-Regulation-309da38a-9190-4e83-8cbb-a6d41c1f3cae">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#Who-is-responsible-for-enforcing-the-Instant-Payments-Regulation-309da38a-9190-4e83-8cbb-a6d41c1f3cae" aria-expanded="false" aria-controls="Who-is-responsible-for-enforcing-the-Instant-Payments-Regulation-309da38a-9190-4e83-8cbb-a6d41c1f3cae">
+                <strong class="gtm-expanding">Who is responsible for enforcing the Instant Payments Regulation?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="Who-is-responsible-for-enforcing-the-Instant-Payments-Regulation-309da38a-9190-4e83-8cbb-a6d41c1f3cae" class="panel-collapse collapse " aria-labelledby="heading-Who-is-responsible-for-enforcing-the-Instant-Payments-Regulation-309da38a-9190-4e83-8cbb-a6d41c1f3cae">
+        <div class="panel-body">
+            <p>In Ireland,&nbsp;Central Bank of Ireland&nbsp;is the competent authority for the purposes of the SEPA Regulation, including the amendments introduced by the Instant Payments Regulation.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-How-do-you-report-suspected-cases-of-noncompliance-with-the-Instant-Payments-Regulation-35c461a0-5f1f-4f60-b736-95a874be3a31">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#How-do-you-report-suspected-cases-of-noncompliance-with-the-Instant-Payments-Regulation-35c461a0-5f1f-4f60-b736-95a874be3a31" aria-expanded="false" aria-controls="How-do-you-report-suspected-cases-of-noncompliance-with-the-Instant-Payments-Regulation-35c461a0-5f1f-4f60-b736-95a874be3a31">
+                <strong class="gtm-expanding">How do you report suspected cases of non-compliance with the Instant Payments Regulation?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="How-do-you-report-suspected-cases-of-noncompliance-with-the-Instant-Payments-Regulation-35c461a0-5f1f-4f60-b736-95a874be3a31" class="panel-collapse collapse " aria-labelledby="heading-How-do-you-report-suspected-cases-of-noncompliance-with-the-Instant-Payments-Regulation-35c461a0-5f1f-4f60-b736-95a874be3a31">
+        <div class="panel-body">
+            <p>Email&nbsp;<ahref="mailto:paymentsystemspolicy@centralbank.ie"><a href="mailto:FMIoversight@centralbank.ie">FMIoversight@centralbank.ie</a> with Instant Payments Regulation &ndash; Non-Compliance in the title</ahref="mailto:paymentsystemspolicy@centralbank.ie"></p>
+        </div>
+    </div>
+</div>
+
+    
+    <h2>Understanding International Bank Account Numbers (IBANs)</h2>
+    
+   
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-What-is-an-IBAN-and-how-does-it-support-SEPA-payments-174bd994-5958-488c-aa8b-416073346fc4">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#What-is-an-IBAN-and-how-does-it-support-SEPA-payments-174bd994-5958-488c-aa8b-416073346fc4" aria-expanded="false" aria-controls="What-is-an-IBAN-and-how-does-it-support-SEPA-payments-174bd994-5958-488c-aa8b-416073346fc4">
+                <strong class="gtm-expanding">What is an IBAN and how does it support SEPA payments?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="What-is-an-IBAN-and-how-does-it-support-SEPA-payments-174bd994-5958-488c-aa8b-416073346fc4" class="panel-collapse collapse " aria-labelledby="heading-What-is-an-IBAN-and-how-does-it-support-SEPA-payments-174bd994-5958-488c-aa8b-416073346fc4">
+        <div class="panel-body">
+            <p>Under the SEPA Regulation, all PSPs are required to enable all users to unambiguously identify a payment account solely by its International Bank Account Number (IBAN). IBAN means an international payment account number identifier, which unambiguously identifies an individual payment account in a European Union Member State.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-What-is-IBAN-discrimination-004bc821-eeaa-4506-af36-3a813ff6321b">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#What-is-IBAN-discrimination-004bc821-eeaa-4506-af36-3a813ff6321b" aria-expanded="false" aria-controls="What-is-IBAN-discrimination-004bc821-eeaa-4506-af36-3a813ff6321b">
+                <strong class="gtm-expanding">What is "IBAN discrimination"?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="What-is-IBAN-discrimination-004bc821-eeaa-4506-af36-3a813ff6321b" class="panel-collapse collapse " aria-labelledby="heading-What-is-IBAN-discrimination-004bc821-eeaa-4506-af36-3a813ff6321b">
+        <div class="panel-body">
+            <p>IBAN discrimination is where an IBAN from another SEPA country is not accepted by either the payer or the payee for a direct debit or a credit transfer payment. IBAN discrimination is a barrier to the smooth functioning of SEPA, undermining its benefits,
+such as the freedom to pay from anywhere within the SEPA area and the freedom to use only one payment account. All such cases are in breach of SEPA Regulations. For more information, please see our <a href="https://www.centralbank.ie/consumer-hub/explainers/what-is-iban-discrimination-and-what-can-i-do-about-it">Explainer: What is &lsquo;IBAN discrimination&rsquo;
+and what can I do about it?</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-Who-is-responsible-for-enforcing-IBAN-requirements-under-the-SEPA-Regulation-79f0bab0-5f26-464c-af33-fbf09e5df041">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#Who-is-responsible-for-enforcing-IBAN-requirements-under-the-SEPA-Regulation-79f0bab0-5f26-464c-af33-fbf09e5df041" aria-expanded="false" aria-controls="Who-is-responsible-for-enforcing-IBAN-requirements-under-the-SEPA-Regulation-79f0bab0-5f26-464c-af33-fbf09e5df041">
+                <strong class="gtm-expanding">Who is responsible for enforcing IBAN requirements under the SEPA Regulation?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="Who-is-responsible-for-enforcing-IBAN-requirements-under-the-SEPA-Regulation-79f0bab0-5f26-464c-af33-fbf09e5df041" class="panel-collapse collapse " aria-labelledby="heading-Who-is-responsible-for-enforcing-IBAN-requirements-under-the-SEPA-Regulation-79f0bab0-5f26-464c-af33-fbf09e5df041">
+        <div class="panel-body">
+            <p>In Ireland, Central Bank of Ireland is the competent authority in the State for the purposes of the SEPA Regulation, for cases including, but not limited to:</p><ul><li>employers</li><li>payment service providers (e.g. banks)<br /></li><li>trader-trader relationships (e.g. where the payee is a vendor and the payer is a business)</li></ul><p>Central Bank of Ireland monitors compliance with the SEPA Regulation and takes all necessary measures to ensure compliance.The Competition and Consumer Protection Commission (CCPC) is the competent authority regarding cases involving consumers and traders (for example, utility or telecommunications providers).</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-How-do-you-report-suspected-cases-of-IBAN-discrimination-0ce20193-454f-458f-aeca-d569c8a8b33b">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#How-do-you-report-suspected-cases-of-IBAN-discrimination-0ce20193-454f-458f-aeca-d569c8a8b33b" aria-expanded="false" aria-controls="How-do-you-report-suspected-cases-of-IBAN-discrimination-0ce20193-454f-458f-aeca-d569c8a8b33b">
+                <strong class="gtm-expanding">How do you report suspected cases of IBAN discrimination?</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="How-do-you-report-suspected-cases-of-IBAN-discrimination-0ce20193-454f-458f-aeca-d569c8a8b33b" class="panel-collapse collapse " aria-labelledby="heading-How-do-you-report-suspected-cases-of-IBAN-discrimination-0ce20193-454f-458f-aeca-d569c8a8b33b">
+        <div class="panel-body">
+            <p>If you wish to report a suspected IBAN discrimination please contact the relevant competent authority:<br />You can contact the Central Bank at ibandiscrimination@centralbank.ie. Please include the following information where possible:</p><ul><li>if your SEPA IBAN is being outright refused or if it is being accepted under certain conditions</li><li>the name of the entity/employer which is refusing to facilitate payment to or from your SEPA IBAN</li><li>relevant contact details for the entity/employer</li><li>the rationale provided by the entity/employer for refusing to accept your SEPA IBAN, or accepting your IBAN under certain conditions<br /></li><li>the country code (first two digits) of your SEPA IBAN</li></ul><p>Please refer to the CCPC in cases involving consumers and traders (for example, utility or telecommunications providers): <a target="_blank" href="https://www.ccpc.ie/consumers/">Competition and Consumer Protection Commission (CCPC)</a>.<br /></p>
+        </div>
+    </div>
+</div>
+
+    
+    <h2>Supplementary Information</h2>
+    
+   
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-TARGET2-Closure-on-1-May--FAQ-0c0f154e-f1b9-440d-ac64-9dc0e7f3c39f">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#TARGET2-Closure-on-1-May--FAQ-0c0f154e-f1b9-440d-ac64-9dc0e7f3c39f" aria-expanded="false" aria-controls="TARGET2-Closure-on-1-May--FAQ-0c0f154e-f1b9-440d-ac64-9dc0e7f3c39f">
+                <strong class="gtm-expanding">TARGET2 Closure on 1 May - FAQ</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="TARGET2-Closure-on-1-May--FAQ-0c0f154e-f1b9-440d-ac64-9dc0e7f3c39f" class="panel-collapse collapse " aria-labelledby="heading-TARGET2-Closure-on-1-May--FAQ-0c0f154e-f1b9-440d-ac64-9dc0e7f3c39f">
+        <div class="panel-body">
+            <h2>What is happening?</h2>
+<p>The Single Euro Payments Area (SEPA) initiative in Ireland came into force in 2014, creating a single market for euro-denominated retail payments, which changed the processing of retail electronic payments. Therefore, as a result of the change in processing an issue has arisen with some retail payments due to be received into personal and business bank accounts on 1 May. This issue arises because 1 May is a normal business day in Ireland on which the banks here are open. However, the European-wide system in which euro interbank transactions are settled is closed, as this date is a Bank Holiday in most EU member states.</p>
+<h2>How will this impact me?</h2>
+<p>Some euro payments will not be credited to / debited from customer accounts on that date. This will mean that if you are due to receive a payment into your account or if you are due to make an automated payment on that date the payment may not be made
+    until the next normal working day after 1 May.</p>
+<h2>Are there any payments that will not be affected?</h2>
+<p>Where both the payer&rsquo;s account and the beneficiary&rsquo;s payee&rsquo;s account are held with the same bank payments will settle as normal.</p>
+<h2>What has been done about this?</h2>
+<p>Banks have advised their business customers that to avoid any issues arising with payees, payers should either make their payments one normal working day early (i.e., on 30 April) or else advise payees that payments due on 1 May might not be received
+    until the next normal working day after 1 May.</p>
+<h2>Is Ireland the only country in eurozone affected by this issue?</h2>
+<p>No, customers in the Netherlands will be similarly affected.</p>
+<h2>Will this happen every year?</h2>
+<p>As things stand, this issue will recur where 1 May does not coincide with the Irish May Bank Holiday (i.e. first Monday in May).</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="panel panel-default standard-accordion">
+    <div class="panel-heading" id="heading-Legal-background-to-SEPA-87f87c20-8303-47fc-8628-9ee164b90537">
+        <div class="panel-title">
+            <a class="collapsed gtm-expanding" role="button" data-toggle="collapse" href="#Legal-background-to-SEPA-87f87c20-8303-47fc-8628-9ee164b90537" aria-expanded="false" aria-controls="Legal-background-to-SEPA-87f87c20-8303-47fc-8628-9ee164b90537">
+                <strong class="gtm-expanding">Legal background to SEPA</strong>
+
+            </a>
+        </div>
+    </div>
+    <div id="Legal-background-to-SEPA-87f87c20-8303-47fc-8628-9ee164b90537" class="panel-collapse collapse " aria-labelledby="heading-Legal-background-to-SEPA-87f87c20-8303-47fc-8628-9ee164b90537">
+        <div class="panel-body">
+            <p>Implementation of the SEPA concept required a common legal framework covering retail payments to be put in place in all participating countries. This legal framework ensures that the terms and conditions applicable to SEPA payments are the same regardless
+    of the countries in which the parties involved in any transaction are located. The legal framework underlying SEPA takes the form of EU Directives and EU Regulations.</p><p>The principal EU legislation covering SEPA is <a target="_blank" href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:094:0022:0037:en:PDF">Regulation (EU) No. 260/2012</a> (its full title is Regulation (EU) No. 260/2012 of the European Parliament and of the Council establishing technical and business requirements for credit transfers and direct debits
+    in euro and amending Regulation (EC) No 924/2009), which set 1 February 2014 as the deadline in the euro area for replacement of national credit transfer and direct debit payments with SEPA equivalents (although this was subsequently postponed to
+    1 August 2016); the deadline for non-euro area member states was 31 October 2016.</p><p>Regulation (EU) No. 260/2012 also requires the use of common standards and technical requirements, such as the use of IBAN and the ISO 20022 XML financial services messaging standard for credit transfer and direct debit payments in euro. In addition,
+    Regulation (EU) No. 260/2012 amends and replaces some of the provisions contained in the earlier Regulation No 924/2009, for instance by extending that Regulation&rsquo;s equal charging principle for cross-border and national payments in euro to all
+    transactions, irrespective of the payment amount.</p><p>The <a target="_blank" href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32007L0064&amp;from=EN">Payment Services Directive</a> (generally referred to as the PSD &ndash; the full title is Directive 2007/64/EC of the European Parliament and of the Council of 13 November 2007 on payment services in the internal market amending Directives 97/7/EC, 2002/65/EC,
+    2005/60/EC and 2006/48/EC and repealing Directive 97/5/EC) is also relevant in the context of SEPA. The purpose of this Directive was to harmonise the laws covering payment services in EU member states, particularly with regard to (a) the rights and
+    obligations of PSPs and consumers and (b) facilitating greater pan-European competition and participation in the payments industry.<br /></p>
+        </div>
+    </div>
+</div>
+
+    
+    <h2>Relevant Resources</h2><ul><li><a href="https://eur-lex.europa.eu/EN/legal-content/summary/single-euro-payments-area-regulation.html?fromSummary=14" data-sf-ec-immutable="">SEPA Regulation</a></li><li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400886" data-sf-ec-immutable="">Instant Payments Regulation</a></li><li><a href="https://www.europeanpaymentscouncil.eu/about-sepa" data-sf-ec-immutable="">European Payment Council: About SEPA</a></li><li><a href="https://www.ecb.europa.eu/paym/integration/retail/instant_payments/html/index.en.html" data-sf-ec-immutable="">ECB &ndash; What are instant payments?</a></li><li><a href="/consumer-hub/explainers/what-is-iban-discrimination-and-what-can-i-do-about-it">Explainer: What is "IBAN discrimination" and what can I do about it?</a></li><li><a href="/consumer-hub/explainers/how-can-i-send-a-payment-from-my-bank">Explainer: How can I send a payment from my bank instantly to another bank?</a></li><li><a href="https://www.centralbank.ie/news/article/press-release-central-bank-calls-on-firms-to-prevent-iban-discrimination-17-june-2022" data-sf-ec-immutable="">Central Bank calls on firms to prevent IBAN discrimination</a></li></ul>
+    
+   
+
+            
+            </article>
+        </div>
+        <div id="MainContentPlaceholder_T225F410C003_Col01" class="sf_colsIn col-sm-4 rhs" data-placeholder-label="General Righ hand side">
+
+
+
+
+
+
+
+
+<nav aria-labelledby="rhsheadingtwo">
+    <h3 class="sidebar-heading-icon icon-bars hidden-xs" id="rhsheadingtwo">
+        In this Section
+    </h3>
+    <div class="right-sidebar hidden-xs">
+        <ul class="left-nav">
+            
+                            <li class="">
+                                <a href="/financial-system/financial-stability">Financial Stability</a>
+
+                            </li>
+                        
+                            <li class="first-level-child active">
+                                <a href="/financial-system/payments-and-securities-settlements">Payments and Securities Settlements</a>
+                                <ul id="MainContentPlaceholder_T225F410C009_ctl00_ctl00_ctl03_ctl01_childNodesContainer">
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/catalyst">Catalyst </a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/national-competent-authority">National Competent Authority</a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/national-stakeholder-groups">National Stakeholder Groups </a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/oversight">Oversight</a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/target-services">TARGET Services</a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/payment-system-approval-process">Payments Systems Approval Process</a>
+
+                            </li>
+                        
+                            <li class=" active">
+                                <a href="/financial-system/payments-and-securities-settlements/single-euro-payments-overview">Single Euro Payments Area</a>
+                                
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/payments-and-securities-settlements/irish-retail-payments-forum">Irish Retail Payments Forum</a>
+
+                            </li>
+                        </ul>
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/resolution">Resolution </a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/foreign-exchange-global-code-of-conduct">Foreign Exchange Global Code of Conduct</a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/operational-resilience-and-cyber">Operational Resilience and Cyber</a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/climate-change">Climate Change </a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/a-digital-euro">A Digital Euro</a>
+
+                            </li>
+                        
+                            <li class="">
+                                <a href="/financial-system/access-to-cash">Access to Cash</a>
+
+                            </li>
+                        
+        </ul>
+    </div>
+</nav>
+<aside id="MainContentPlaceholder_T225F410C012_Col00" class="sf_colsIn aside-sec" data-placeholder-label="Aside widgets">
+
+</aside>
+        </div>
+    </div> 
+</div>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <nav aria-labelledby="fnsheading" class="columns-row">
+                    
+                        <h2 class="sr-only" id="fnsheading">Footer Navigation</h2>
+                    
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="footer-header">
+                                
+<h3>Site Information</h3>
+
+
+                            </div>
+                            
+<ul>
+    <li><a href="/fns/privacy-statement">Data Protection Privacy Notice</a></li>
+    <li><a href="/fns/disclaimer">Disclaimer</a></li>
+    <li><a href="/fns/legislation">Legislation</a></li>
+    <li><a href="/fns/accessibility-statement">Accessibility</a></li>
+    <li><a href="/fns/sitemap">Sitemap</a></li>
+    <li><a href="#" class="optanon-toggle-display">Cookie Settings</a></li>
+    <li><a href="/fns/cookie-policy">Cookie Policy</a></li>
+</ul>
+
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="footer-header">
+                                
+<h3>Useful Links</h3>
+
+
+                            </div>
+                            
+<ul>
+    <li><a href="/about/customer-charter">Customer Charter</a></li>
+    <li><a href="/fns/glossary">Glossary</a></li>
+    <li><a href="/fns/freedom-of-information">Freedom of Information</a></li>
+    <li><a href="https://www.centralbank.ie/fns/irish-language-scheme">Irish Language Scheme</a></li>
+    <li><a href="/fns/re-use-of-public-sector-information">Re-use of Public Sector Information</a></li>
+    <li><a href="https://registers.centralbank.ie/">Registers</a></li>
+    <li><a href="https://www.centralbank.ie/fns/access-to-information-on-the-environment">Information on the Environment</a></li>
+</ul>
+
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="footer-header">
+                                
+<h3>Follow Us</h3>
+
+
+                            </div>
+                            
+<ul style="border-bottom-color: currentColor !important; border-bottom-width: medium !important; border-bottom-style: none !important;">
+    <li><a href="http://www.twitter.com/centralbank_ie" title="This link will open in a new tab or window" class="twitter" target="_blank" rel="noopener">X</a></li>
+    <li><a href="https://www.youtube.com/user/centralbankireland" title="This link will open in a new tab or window" class="youtube" target="_blank" rel="noopener">YouTube</a></li>
+    <li><a href="https://www.linkedin.com/company/central-bank-of-ireland" title="This link will open in a new tab or window" class="linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://www.instagram.com/centralbankofireland/" title="This link will open in a new tab or window" class="instagram" target="_blank" rel="noopener">Instagram</a></li>
+</ul>
+
+
+                        </div>
+                        <div class="col-sm-3">
+                            
+
+
+        <img loading="lazy" src="/images/default-source/logos/footer-logo.png?sfvrsn=dfff671a_2" title="footer-logo" alt="Central Bank of Ireland"
+         
+          />
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            
+                                <p>&copy;2026 Central Bank of Ireland</p>
+                            
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl07_TSM');;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl08_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Sitefinity.Resources, Version=15.4.8636.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:e3c1f54b-3ea5-4781-8854-7c87826645f0:7a90d6a';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();//]]>
+</script>
+</form>
+    <script>
+        function toggle_iFrames() {
+            try {
+                var videosAllowed = optanonCategoryEnabled("OptanonConsent", "C0004");
+                var iFrames = Array.from(document.querySelectorAll("main iframe:not(#map iframe)"));
+                var langAttr = document.documentElement.lang.toLowerCase();
+                var englishMarkup = '<span class="c-prompt">This feature requires cookies <button type="button" class="review-cookie-settings">Open your cookie settings</button></span>';
+                var irishMarkup = '<span class="c-prompt">Tá fianáin ag teastáil don ghné seo <button type="button" class="review-cookie-settings">Oscail na socruithe fianán</button></span>';
+                for (var f = 0; f < iFrames.length; f++) {
+                    if (videosAllowed) {
+                        iFrames[f].parentNode.classList.remove("no-c0004");
+                    } else {
+                        var nextSiblingClassName = "";
+                        if (iFrames[f].nextSibling) {
+                            if (iFrames[f].nextSibling.nextElementSibling) {
+                                nextSiblingClassName = iFrames[f].nextSibling.nextElementSibling.className;
+                            }
+                        }
+                        if (nextSiblingClassName == "") {
+                            var markup = irishMarkup;
+                            if (langAttr === "en") {
+                                markup = englishMarkup;
+                            }
+                            var node = document.createElement("span");
+                            node.innerHTML = markup;
+                            node.classList.add("c-prompt-box");
+                            iFrames[f].parentNode.appendChild(node);
+                        }
+                        iFrames[f].parentNode.classList.add("no-c0004");
+                    }
+                }//end for
+                if (document.querySelectorAll(".no-c0004").length > 0) {
+                    document.querySelectorAll(".no-c0004 iframe:not(#map iframe)").forEach(function (iframe) {
+                        iframe.setAttribute("tabindex", "-1");
+                    });
+                } else {
+                    document.querySelectorAll("iframe:not(#map iframe)").forEach(function (iframe) {
+                        iframe.removeAttribute("tabindex");
+                    });
+                    }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        function hasClass(elem, className) {
+            return elem.className.split(' ').indexOf(className) > -1;
+        }
+        document.addEventListener('click', function (e) {
+            var hasClass = e.target.className.split(' ').indexOf('review-cookie-settings') > -1;
+            if (hasClass) {
+                e.preventDefault();
+                //Show OneTrust banner
+                OneTrust.ToggleInfoDisplay()
+            }
+        }, false);
+        toggle_iFrames();
+        //# sourceURL=browsertools://custom/inline-script-2.js
+    </script>
+
+    
+
+    
+        <script type="text/javascript" src="/Theme/js/scripts.min.js?v=1791304727493"></script>
+        <script type="text/javascript">
+
+            var isGulped = true;
+            // Add a script element as a child of the body
+            function initJS() {
+                'use strict';
+                //load jQuery
+                //if browser is ie9 or older then returm document.addEventListener
+                if (document.all && !window.atob) {
+                    return;
+                }
+                var jqTimer = setInterval(function () {
+                    if (window.jQuery) {
+                        //Conditional load of vue js for module listing tables
+                        if (typeof loadVue != 'undefined' && loadVue == true) {
+                            downloadJS("/Theme/js/vue/vue.js", function () {
+                                downloadJS("/Theme/js/vue/" + appFileName + "?v=1791304727493", function () { });
+                            });
+                        }
+
+                        //Conditional load of form validation js
+                        if (typeof loadFormValidation != 'undefined' && typeof Page_Validators != 'undefined' && loadFormValidation == true) {
+                            downloadJS("/Theme/js/form-validation.js", function () { });
+                        }
+                        onPageReady();
+                        clearInterval(jqTimer);
+                    }
+                }, 50);
+            }
+            $(document).ready(function () {
+                if ($('#__EVENTTARGET').length <= 0 && $('#__EVENTARGUMENT').length <= 0) {
+                    $('#form1').prepend('<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""/> <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value = "" / > ');
+                }
+
+                if (typeof __doPostBack == 'undefined') {
+                    __doPostBack = function (eventTarget, eventArgument) {
+                        var theForm = document.forms['form1'];
+                        if (!theForm) {
+                            theForm = document.form1;
+                        }
+                        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                            theForm.__EVENTTARGET.value = eventTarget;
+                            theForm.__EVENTARGUMENT.value = eventArgument;
+                            theForm.submit();
+                        }
+                    };
+                }
+            });
+            //# sourceURL=browsertools://custom/inline-script-4.js
+        </script>
+    
+
+    
+        <script type="text/javascript">
+            //# sourceURL=js-setup.js // This allows for debugging in the Chrome inspector
+            var mobileSize = 640;
+            var desktop = true;
+            var mobile = false;
+            function downloadJS(scriptSrc, callback) {
+                'use strict';
+                var element = document.createElement("script");
+                element.src = scriptSrc;
+                element.onload = function () {
+                    callback();
+                };
+                document.body.appendChild(element);
+            }
+
+            // Check for browser support of event handling capability
+            if (window.addEventListener) {
+                window.addEventListener("load", initJS, false);
+            } else if (window.attachEvent) {
+                window.attachEvent("onload", initJS);
+            } else {
+                window.onload = initJS;
+            }
+
+            function onPageReady() {
+                enquire.register("screen and (min-width: " + (mobileSize + 1) + "px)", {
+                    match: function () {
+                        desktop = true;
+                        mobile = false;
+                        screenChange_global();
+                    },
+                    unmatch: function () {
+                        desktop = false;
+                    }
+                });
+                enquire.register("screen and (max-width: " + mobileSize + "px)", {
+                    match: function () {
+                        mobile = true;
+                        desktop = false;
+                        screenChange_global();
+                    },
+                    unmatch: function () {
+                        mobile = false;
+                    }
+                });
+                enquire.register("screen and (orientation: portrait)", {
+                    match() {
+                        handleOrientation();
+                    },
+                    unmatch() {
+                        handleOrientation();
+                    }
+                });
+                //call page ready from all loaded files
+                if (typeof (page_ready_megamenu_drill_down_cta_left) == "function") {
+                    page_ready_megamenu_drill_down_cta_left();
+                }
+                if (typeof (page_ready_image_spotlight) == "function") {
+                    page_ready_image_spotlight();
+                }
+                if (typeof (page_ready_multi_item_carousel) == "function") {
+                    page_ready_multi_item_carousel();
+                }
+                if (typeof (page_ready_default) == "function") {
+                    page_ready_default();
+                }
+                if (typeof (downloadMapJs) == "function") {
+                    downloadMapJs();
+                }
+            }
+
+            function screenChange_global() {
+                //call screen_change from all loaded files
+                if (typeof (screen_change_megamenu_drill_down_cta_left) == "function") {
+                    screen_change_megamenu_drill_down_cta_left();
+                }
+                if (typeof (screen_change_latest_tweets) == "function") {
+                    screen_change_latest_tweets();
+                }
+                if (typeof (screen_change_image_spotlight) == "function") {
+                    screen_change_image_spotlight();
+                }
+                if (typeof (screen_change_multi_item_carousel) == "function") {
+                    screen_change_multi_item_carousel();
+                }
+                if (typeof (screen_change_default) == "function") {
+                    screen_change_default();
+                }
+            }
+            function handleOrientation() {
+                $('.close-megamenu').click();
+            }
+            //# sourceURL=browsertools://custom/inline-script-5.js
+        </script>
+        <script>
+            //# sourceURL=publication-nav.js // This allows for debugging in the Chrome inspector
+            const parser = new DOMParser();
+
+            function createlink(text, link) {
+                var anchor = "<li><a href='" + link + "'>" + text + "</a></li>";
+                const a = parser.parseFromString(anchor, "text/html");
+                document.getElementById('publicationLinks').appendChild(a.body.firstChild);
+            }
+
+            function prepareNav() {
+                var index = 1;
+                $('.publication-content h2:not(.H2exclude)').each(function () {
+                    $(this)
+                        .nextUntil("h2")
+                        .addBack()
+                        .wrapAll('<div id="content' + index + '" />');
+
+                    createlink($(this).html(), '#content' + index);
+                    index++;
+                });
+                var innerIndex = 0;
+                $("#publicationLinks a").each(function () {
+                    var targetContent = $(this).attr("href");
+                    var h3Count = $(targetContent + " h3:not(.H3exclude)").length;
+                    if (h3Count > 0) {
+                        var subLinks = "";
+                        $('.publication-content ' + targetContent + ' h3:not(.H3exclude)').each(function () {
+                            $(this)
+                                .nextUntil("h3")
+                                .addBack()
+                                .wrapAll('<div id="subContent' + innerIndex + '" />');
+
+                            subLinks += "<li><a href='#subContent" + innerIndex + "'>" + $(this).html() + "</a></li>"
+                            innerIndex++;
+                        });
+                        subLinks = "<ul>" + subLinks + "</ul>"
+                        const subUL = parser.parseFromString(subLinks, "text/html");
+                        document.querySelector("a[href='" + targetContent + "']").parentNode.appendChild(subUL.body.firstChild);
+                    }
+                });
+
+                $("#publicationLinks a").click(function () {
+                    $("#publicationLinks li").removeClass('active');
+                    $(this).parent().addClass('active');
+                    $("#publicationLinks .active").parent().parents('li').addClass('active');
+                    $("#collapsePublicationNav").collapse('hide');
+                });
+
+                var sectionIds = $('#publicationLinks a');
+                $(document).scroll(function () {
+                    sectionIds.each(function () {
+                        var container = $(this).attr('href');
+                        var containerOffset = $(container).offset().top - 75;
+                        var containerHeight = $(container).outerHeight();
+                        var containerBottom = containerOffset + containerHeight;
+                        var scrollPosition = $(document).scrollTop();
+
+                        if (scrollPosition < containerBottom && scrollPosition >= containerOffset) {
+                            $(this).parent().addClass('active');
+                        } else {
+                            $(this).parent().removeClass('active');
+                        }
+                    });
+                });
+            }
+            document.addEventListener('DOMContentLoaded', prepareNav());
+            //# sourceURL=browsertools://custom/inline-script-6.js
+        </script>
+    
+    
+    
+        <script>
+            var CludoSearch;
+            (function () {
+                var cludoSettings = {
+                    customerId: 3127 ,
+                    engineId: 13638 ,
+                    searchUrl: '/search-results',
+                    language: 'en',
+                    searchInputs: ['cludo-search-form', "cludo-search-form-top", "cludo-search-form-hero-banner" ],
+                    template: 'InlineBasic',
+                    focusOnResultsAfterSearch: true,
+                    type: 'inline',
+                    disableAutocomplete: true
+                };
+
+                CludoSearch = new Cludo(cludoSettings);
+
+
+                var isIrishSearch = false ;
+                if (isIrishSearch) {
+                    CludoSearch.translateProvider.translations["en"]["did_you_mean"] = "An é <a href='' aria-label='A bhí i gceist agat {{value}}'><b>{{value}}</b></a> a bhí i gceist agat?";
+                    CludoSearch.translateProvider.translations["en"]["your_search_on"] = " Torthaí cuardaigh ar '<b>{{value}}</b>': ";
+                    CludoSearch.translateProvider.translations["en"]["total_results"] = "<b>{{value}}</b>";
+                    CludoSearch.translateProvider.translations["en"]["total_result"] = "<b>{{value}}</b>";
+                    CludoSearch.translateProvider.translations["en"]["in_category"] = " sa chatagóir  <b>{{value}}</b>";
+                    CludoSearch.translateProvider.translations["en"]["and"] = " agus";
+                    CludoSearch.translateProvider.translations["en"]["searched_instead"] = "<br />Torthaí ar <b>{{term}}</b> á léiriú ina ionad";
+                    CludoSearch.translateProvider.translations["en"]["searched_instead_found"] = "agus fuarthas <b>{{value}}</b> toradh";
+                    CludoSearch.translateProvider.translations["en"]["error"] = "<p style='color: red' class='cludo-error-message'>Ár leithscéal, tharla earráid.</p>";
+                    CludoSearch.translateProvider.translations["en"]["no_search_term"] = "<div class='cludo-no-search-term'>Téarma cuardaigh de dhíth</div>";
+                    CludoSearch.translateProvider.translations["en"]["overlay_close_button"] = "ESC nó";
+                    CludoSearch.translateProvider.translations["en"]["load_more"] = "Taispeáin tuilleadh";
+                    CludoSearch.translateProvider.translations["en"]["poweredBy_title"] = " Cuardaigh ar do shuíomh gréasáin - Cludo";
+                    CludoSearch.translateProvider.translations["en"]["backToTop"] = "Ar ais go barr";
+                    CludoSearch.translateProvider.translations["en"]["search_input_label"] = "Cuardaigh";
+                    CludoSearch.translateProvider.translations["en"]["search_button_text"] = "Cuardaigh";
+                    CludoSearch.translateProvider.translations["en"]["overlay_close_button_title"] = "Scoir an cuardach";
+                    CludoSearch.translateProvider.translations["en"]["template_all_results"] = "Torthaí uile";
+                    CludoSearch.translateProvider.translations["en"]["template_suggestions"] = "Moltaí";
+                    CludoSearch.translateProvider.translations["en"]["template_search_results"] = " Torthaí Cuardaigh";
+                    CludoSearch.translateProvider.translations["en"]["template_autocomplete_hint"] = "Moltaí uathchríochnaithe ar fáil. Úsáid na saigheada suas agus síos chun breathnú orthu agus úsáid an eochair iontrála chun ceann a roghnú.";
+                    CludoSearch.translateProvider.translations["en"]["related_searches_title"] = "Cuardaigh Ghaolmhara";
+                }
+                CludoSearch.init();
+            })();
+            //# sourceURL=browsertools://custom/inline-script-7.js
+        </script>
+        <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+    
+    
+    <!-- health check -->
+</body>
+</html>

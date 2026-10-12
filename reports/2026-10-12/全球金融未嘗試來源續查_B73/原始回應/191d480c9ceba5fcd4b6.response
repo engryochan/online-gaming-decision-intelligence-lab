@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>上場会社通信</title>
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://www.nse.or.jp/tsushin/assets/js/viewportextra.js"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="og:site_name" content="site_name">
+    <meta property="og:url" content="url">
+    <meta property="og:description" content="description">
+    <meta property="og:image" content="image">
+
+    <link rel="canonical" href="canonical">
+    <link rel="stylesheet" href="https://www.nse.or.jp/tsushin/assets/css/common.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+
+<body>
+    <noscript>JavascriptがOFFのため正しく表示されない可能性があります。</noscript>
+    <!-- [ WRAP ] -->
+    <div id="l-wrap">
+        <!-- [ GLOBAL HEADER ] -->
+        <header id="l-header" class="header-simple">
+            <div class="header-inner">
+                <div class="header-logo"><img src="https://www.nse.or.jp/tsushin/assets/images/logo_nse.png" alt="名古屋証券取引所"></div>
+            </div>
+        </header>
+        <!-- [ /GLOBAL HEADER ] -->
+
+        <!-- [ CONTENT ] -->
+        <main id="l-content">
+            <div class="content-page page-simple">
+                <div class="page-content">
+                    <div class="content-main">
+                                                                                                <div class="main-edit">
+    <h1>上場会社通信</h1>
+    <p>ユーザーIDとパスワードを入力して下さい。</p>
+    <form method="POST" action="https://www.nse.or.jp/tsushin/login">
+        <input type="hidden" name="_token" value="qx3auebL9Mrkv5emClNtyrsPlHFflBGutTmufFC6">
+        <div class="m-box-form">
+            <dl>
+                <dt>ユーザーID</dt>
+                <dd>
+                    <input type="text" class="form-input" name="uid" value="" maxlength="1000" required>
+                                    </dd>
+            </dl>
+            <dl>
+                <dt>パスワード</dt>
+                <dd>
+                    <input type="password" class="form-input" name="password" maxlength="1000" required>
+                                    </dd>
+            </dl>
+        </div>
+
+        <p class="t_center"><strong>必ずチェックを入れてください</strong></p>
+        <p class="t_center">
+            <label><input type="checkbox" id="nobot" name="nobot" onchange="change()">私はロボットではありません</label>
+        </p>
+        <p class="t_center mb30">
+            <input type="hidden" id="remember" name="remember" value="0">
+            <input type="submit" id="loginbtn" name="login" class="m-btn-check" disabled value=" ログイン ">
+        </p>
+        <script type="text/javascript">
+        function change() {
+            var element;
+            if(document.getElementById("nobot").checked) {
+                element = document.getElementById("loginbtn");
+                element.disabled = false;
+            }else {
+                element = document.getElementById("loginbtn");
+                element.disabled = true;
+            }
+        }
+        </script>
+    </form>
+    <ol>
+        <li>このホームページは名古屋証券取引所が運営する上場会社専用サイトです。<br>（事前にご通知したユーザーID・パスワードが必要になります。）</li>
+        <li>当サイトには以下の機能があります。<br>(1)上場会社宛通知文のダウンロード<br>(2)規則集・ガイドブックのダウンロード<br>(3)提出書類の様式のダウンロード<br>(4)各種書類の提出と確認</li>
+    </ol>
+    <h2>問合せ先</h2>
+    <p>自主規制グループ（上場監理担当）<br>TEL：052-262-3174<br>FAX：052-264-4702<br><a href="/inquiry/index.php?cat=3" target="_blank">お問合せ受付フォーム</a></p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- [ /CONTENT ] -->
+
+        <!-- [ GLOBAL FOOTER ] -->
+        <footer id="l-footer" class="footer-simple">
+            <div class="simple-inner">
+                <div class="footer-inner">
+                    <p class="footer-copy">Copyright © Nagoya Stock Exchange,Inc. All rights reserved.</p>
+                    <div class="inner-ptop">
+                        <a href="#l-wrap">ページの先頭へ</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- [ /GLOBAL FOOTER ] -->
+
+    </div>
+    <!-- [ WRAP ] -->
+
+    <script src="https://www.nse.or.jp/tsushin/assets/js/library.js"></script>
+    <script src="https://www.nse.or.jp/tsushin/assets/js/setting.js"></script>
+    <script src="https://www.nse.or.jp/tsushin/assets/js/function.js"></script>
+    <script src="https://www.nse.or.jp/tsushin/assets/js/common.js"></script>
+</body>
+
+</html>
