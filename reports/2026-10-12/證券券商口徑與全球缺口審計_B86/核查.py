@@ -11,6 +11,7 @@ for a in summary['來源取得']:
 assert len(allrows)==13294
 url='https://www.nasdaqtrader.com/dynamic/SymDir/mpidlist.txt';receipt={'來源':'納斯達克市場參與者名冊','網址':url,'取得日期':'2026-10-12'};participants=[]
 try:
+ if '--離線審計' in sys.argv:raise RuntimeError('離線審計不啟動下載，保留來源取得缺口')
  code="import urllib.request,sys; r=urllib.request.urlopen(urllib.request.Request(sys.argv[1],headers={'User-Agent':'MarketRegistryResearch/1.0'}),timeout=10);sys.stdout.buffer.write(r.read())"
  b=subprocess.run([sys.executable,'-c',code,url],capture_output=True,check=True,timeout=25).stdout;(W/'市場參與者.response').write_bytes(b);lines=b.decode('utf-8-sig').splitlines();data=list(csv.DictReader(io.StringIO('\n'.join(x for x in lines if not x.startswith('File Creation Time:'))),delimiter='|'));assert data and 'MPID' in data[0]
  for i,x in enumerate(data,1):participants.append(dict(來源行=i,市場參與者代碼=x['MPID'],名稱原值=x.get('Name',''),名稱中譯='待逐項中譯',全部原始欄位JSON=json.dumps(x,ensure_ascii=False),券商法人核定='UNKNOWN（未知）：分支、類型與監管登記須另核',來源網址=url))
@@ -28,6 +29,8 @@ for s in paths:
  rows=list(csv.DictReader(p.open(encoding='utf-8-sig')));write(p.name,rows);gaps.append(dict(來源路徑=s,原檔SHA256=hashlib.sha256(p.read_bytes()).hexdigest(),保留記錄=len(rows),狀態='完整保留原表；來源取得不等於法人名冊完整'))
 write('接續清單審計.csv',gaps)
 result={'原檔重核證券記錄':len(allrows),'基金旗標Y':sum(x['基金旗標Y'] for x in audit),'測試旗標Y':sum(x['測試旗標Y'] for x in audit),'非基金且非測試證券':sum(x['非基金且非測試證券'] for x in audit),'新增市場參與者觀察':len(participants),'全球券商法人總數':'UNKNOWN（未知）','全球上市公司法人總數':'UNKNOWN（未知）'}
+result['實際審計日期']='2026-10-13';result['執行模式']='離線審計' if '--離線審計' in sys.argv else '含新來源取得';receipt['取得日期']='2026-10-13'
+write('官方取得收據.csv',[receipt])
 (W/'結果.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
 q=R/'Reference/證券券商口徑與全球缺口審計_B86_20261012.qmd';text='---\ntitle: "證券、券商口徑與全球缺口審計：第八十六批"\nlang: zh-Hant\nformat: html\n---\n\n13,294不是全球券商數，亦不是全球公司數，是B85兩份美國市場證券來源的資料行。已逐檔重算及核對SHA256，原始證據未改動。此前回答未直接列明兩份來源數量及旗標構成，容易造成誤解，本輪補齊可重現證據。\n\n'
 text+='```json\n'+json.dumps(result,ensure_ascii=False,indent=2)+'\n```\n\n'
