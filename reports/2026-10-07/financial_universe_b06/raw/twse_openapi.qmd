@@ -2,12 +2,12 @@
 format: html
 execute:
   enabled: false
-recovery-kind: lossless-html-snapshot
+recovery-kind: html-snapshot-with-markdown-appendix
 original-html: "reports/2026-10-07/financial_universe_b06/raw/twse_openapi.html"
 original-sha256: bb9928afd0ea8c12e124c42fef58fb080f36770389684badb2a4dcf548624eeb
 ---
 
-<!-- Byte-exact renderer: reports/2026-10-07/git_publish_and_html_recovery/recover_html.py --render. Quarto default rendering is not byte-exact. -->
+<!-- Renderer: reports/2026-10-15/qmd_render_audit/audit_render.py. Render the preserved snapshot and its static Markdown appendix together. -->
 
 ````````{=html}
 <!-- HTML for static distribution bundle build -->
@@ -31,3 +31,162 @@ original-sha256: bb9928afd0ea8c12e124c42fef58fb080f36770389684badb2a4dcf548624ee
 </html>
 
 ````````
+
+
+<!-- STATIC_API_APPENDIX_20261015 -->
+
+# 臺灣證券交易所 OpenAPI：離線端點索引
+
+原 HTML 是 Swagger UI 的頁面殼，所需腳本及樣式沒有隨該快照保存；單純還原 HTML 不會顯示 API 清單。本節直接從同批保存的 `twse_swagger.json` 產生靜態索引，離線閱讀不依賴 Swagger JavaScript。
+
+這是歷史批次的接口規格，不代表本輪已重新呼叫全部端點，也不是最新公司名冊、證券普查或交易資料。方法及路徑按保存的 JSON 原樣列示，錯誤回應、授權、資料時效和現行可用性仍須逐端點核實。
+
+- 保存規格 SHA256：`06e1cea82448361e733a0ad1ae16e52f5d5d6b71905acd078472f852c32c0eb0`
+- 規格基址：[https://openapi.twse.com.tw/v1](https://openapi.twse.com.tw/v1)
+- 本地規格記錄：143 個 HTTP 方法／路徑組合。
+
+| 方法 | 路徑 | 規格摘要 | 分類 |
+|---|---|---|---|
+| GET | `/opendata/t187ap46_L_21` | 上市公司企業ESG資訊揭露彙總資料-職業安全衛生 | 公司治理 |
+| GET | `/opendata/t187ap45_L` | 上市公司股利分派情形 | 公司治理 |
+| GET | `/opendata/t187ap46_L_20` | 上市公司企業ESG資訊揭露彙總資料-反競爭行為法律訴訟 | 公司治理 |
+| GET | `/opendata/t187ap46_L_19` | 上市公司企業ESG資訊揭露彙總資料-風險管理政策 | 公司治理 |
+| GET | `/opendata/t187ap46_L_18` | 上市公司企業ESG資訊揭露彙總資料-持股及控制力 | 公司治理 |
+| GET | `/opendata/t187ap46_L_17` | 上市公司企業ESG資訊揭露彙總資料-普惠金融 | 公司治理 |
+| GET | `/opendata/t187ap46_L_16` | 上市公司企業ESG資訊揭露彙總資料-資訊安全 | 公司治理 |
+| GET | `/opendata/t187ap46_L_15` | 上市公司企業ESG資訊揭露彙總資料-社區關係 | 公司治理 |
+| GET | `/opendata/t187ap46_L_14` | 上市公司企業ESG資訊揭露彙總資料-產品品質與安全 | 公司治理 |
+| GET | `/opendata/t187ap46_L_13` | 上市公司企業ESG資訊揭露彙總資料-供應鏈管理 | 公司治理 |
+| GET | `/opendata/t187ap46_L_12` | 上市公司企業ESG資訊揭露彙總資料-食品安全 | 公司治理 |
+| GET | `/opendata/t187ap46_L_11` | 上市公司企業ESG資訊揭露彙總資料-產品生命週期 | 公司治理 |
+| GET | `/opendata/t187ap46_L_10` | 上市公司企業ESG資訊揭露彙總資料-燃料管理 | 公司治理 |
+| GET | `/opendata/t187ap46_L_9` | 上市公司企業ESG資訊揭露彙總資料-功能性委員會 | 公司治理 |
+| GET | `/opendata/t187ap46_L_8` | 上市公司企業ESG資訊揭露彙總資料-氣候相關議題管理 | 公司治理 |
+| GET | `/opendata/t187ap47_L` | 基金基本資料彙總表 | 其他 |
+| GET | `/opendata/t187ap05_P` | 公開發行公司每月營業收入彙總表 | 公司治理 |
+| GET | `/opendata/t187ap46_L_7` | 上市公司企業ESG資訊揭露彙總資料-投資人溝通 | 公司治理 |
+| GET | `/opendata/t187ap46_L_6` | 上市公司企業ESG資訊揭露彙總資料-董事會 | 公司治理 |
+| GET | `/opendata/t187ap46_L_5` | 上市公司企業ESG資訊揭露彙總資料-人力發展 | 公司治理 |
+| GET | `/opendata/t187ap46_L_4` | 上市公司企業ESG資訊揭露彙總資料-廢棄物管理 | 公司治理 |
+| GET | `/opendata/t187ap46_L_3` | 上市公司企業ESG資訊揭露彙總資料-水資源管理 | 公司治理 |
+| GET | `/opendata/t187ap46_L_2` | 上市公司企業ESG資訊揭露彙總資料-能源管理 | 公司治理 |
+| GET | `/opendata/t187ap46_L_1` | 上市公司企業ESG資訊揭露彙總資料-溫室氣體排放 | 公司治理 |
+| GET | `/ETFReport/ETFRank` | 定期定額交易戶數統計排行月報表 | 券商資料 |
+| GET | `/brokerService/secRegData` | 開辦定期定額業務證券商名單 | 券商資料 |
+| GET | `/opendata/t187ap07_X_ci` | 公發公司資產負債表-一般業 | 財務報表 |
+| GET | `/opendata/t187ap07_X_mim` | 公發公司資產負債表-異業 | 財務報表 |
+| GET | `/opendata/t187ap06_X_basi` | 公發公司綜合損益表-金融業 | 財務報表 |
+| GET | `/opendata/t187ap06_X_bd` | 公發公司綜合損益表-證券期貨業 | 財務報表 |
+| GET | `/opendata/t187ap06_X_ci` | 公發公司綜合損益表-一般業 | 財務報表 |
+| GET | `/opendata/t187ap06_X_fh` | 公發公司綜合損益表-金控業 | 財務報表 |
+| GET | `/opendata/t187ap06_X_ins` | 公發公司綜合損益表-保險業 | 財務報表 |
+| GET | `/opendata/t187ap06_X_mim` | 公發公司綜合損益表-異業 | 財務報表 |
+| GET | `/news/eventList` | 證交所活動訊息 | 其他 |
+| GET | `/company/applylistingForeign` | 外國公司向證交所申請第一上市之公司 | 公司治理 |
+| GET | `/company/newlisting` | 最近上市公司 | 公司治理 |
+| GET | `/company/suspendListingCsvAndHtml` | 終止上市公司 | 公司治理 |
+| GET | `/brokerService/brokerList` | 證券商總公司基本資料 | 券商資料 |
+| GET | `/news/newsList` | 證交所新聞 | 其他 |
+| GET | `/exchangeReport/BWIBBU_ALL` | 上市個股日本益比、殖利率及股價淨值比（依代碼查詢） | 證券交易 |
+| GET | `/exchangeReport/STOCK_DAY_AVG_ALL` | 上市個股日收盤價及月平均價 | 證券交易 |
+| GET | `/exchangeReport/STOCK_DAY_ALL` | 上市個股日成交資訊 | 證券交易 |
+| GET | `/exchangeReport/FMSRFK_ALL` | 上市個股月成交資訊 | 證券交易 |
+| GET | `/exchangeReport/FMNPTK_ALL` | 上市個股年成交資訊 | 證券交易 |
+| GET | `/exchangeReport/MI_INDEX` | 每日收盤行情-大盤統計資訊 | 證券交易 |
+| GET | `/company/applylistingLocal` | 申請上市之本國公司 | 公司治理 |
+| GET | `/fund/MI_QFIIS_cat` | 集中市場外資及陸資投資類股持股比率表 | 證券交易 |
+| GET | `/fund/MI_QFIIS_sort_20` | 集中市場外資及陸資持股前 20 名彙總表 | 證券交易 |
+| GET | `/exchangeReport/BFI61U` | 中央登錄公債補息資料表 | 其他 |
+| GET | `/exchangeReport/TWT88U` | 上市個股首五日無漲跌幅 | 證券交易 |
+| GET | `/Announcement/BFZFZU_T` | 投資理財節目異常推介個股 | 證券交易 |
+| GET | `/exchangeReport/TWTB4U` | 上市股票每日當日沖銷交易標的及統計 | 證券交易 |
+| GET | `/exchangeReport/TWTBAU1` | 集中市場暫停先賣後買當日沖銷交易標的預告表 | 證券交易 |
+| GET | `/exchangeReport/TWTBAU2` | 集中市場暫停先賣後買當日沖銷交易歷史查詢 | 證券交易 |
+| GET | `/exchangeReport/MI_INDEX4` | 每日上市上櫃跨市場成交資訊 | 指數 |
+| GET | `/indicesReport/FRMSA` | 寶島股價指數歷史資料 | 指數 |
+| GET | `/indicesReport/TAI50I` | 臺灣 50 指數歷史資料 | 指數 |
+| GET | `/exchangeReport/MI_5MINS` | 每 5 秒委託成交統計 | 證券交易 |
+| GET | `/exchangeReport/FMTQIK` | 集中市場每日市場成交資訊 | 證券交易 |
+| GET | `/exchangeReport/MI_INDEX20` | 集中市場每日成交量前二十名證券 | 證券交易 |
+| GET | `/exchangeReport/TWT53U` | 集中市場零股交易行情單 | 證券交易 |
+| GET | `/exchangeReport/TWTAWU` | 集中市場暫停交易證券 | 證券交易 |
+| GET | `/exchangeReport/BFT41U` | 集中市場盤後定價交易 | 證券交易 |
+| GET | `/exchangeReport/BFI84U` | 集中市場停資停券預告表 | 證券交易 |
+| GET | `/exchangeReport/MI_MARGN` | 集中市場融資融券餘額 | 證券交易 |
+| GET | `/indicesReport/MI_5MINS_HIST` | 發行量加權股價指數歷史資料 | 指數 |
+| GET | `/block/BFIAUU_d` | 集中市場鉅額交易日成交量值統計 | 證券交易 |
+| GET | `/block/BFIAUU_m` | 集中市場鉅額交易月成交量值統計 | 證券交易 |
+| GET | `/block/BFIAUU_y` | 集中市場鉅額交易年成交量值統計 | 證券交易 |
+| GET | `/exchangeReport/STOCK_FIRST` | 每日第一上市外國股票成交量值 | 證券交易 |
+| GET | `/exchangeReport/TWT85U` | 集中市場證券變更交易 | 證券交易 |
+| GET | `/holidaySchedule/holidaySchedule` | 有價證券集中交易市場開（休）市日期 | 證券交易 |
+| GET | `/exchangeReport/BWIBBU_d` | 上市個股日本益比、殖利率及股價淨值比（依日期查詢） | 證券交易 |
+| GET | `/indicesReport/MFI94U` | 發行量加權股價報酬指數 | 指數 |
+| GET | `/SBL/TWT96U` | 上市上櫃股票當日可借券賣出股數 | 證券交易 |
+| GET | `/exchangeReport/TWT84U` | 上市個股股價升降幅度 | 證券交易 |
+| GET | `/opendata/twtazu_od` | 集中市場漲跌證券數統計表 | 證券交易 |
+| GET | `/opendata/t187ap04_L` | 上市公司每日重大訊息 | 公司治理 |
+| GET | `/opendata/t187ap03_L` | 上市公司基本資料 | 公司治理 |
+| GET | `/opendata/t187ap05_L` | 上市公司每月營業收入彙總表 | 財務報表 |
+| GET | `/opendata/t187ap01` | 券商業務別人員數 | 券商資料 |
+| GET | `/opendata/t187ap02_L` | 上市公司持股逾 10% 大股東名單 | 公司治理 |
+| GET | `/opendata/t187ap14_L` | 上市公司各產業EPS統計資訊 | 公司治理 |
+| GET | `/opendata/t187ap15_L` | 上市公司截至各季綜合損益財測達成情形(簡式) | 財務報表 |
+| GET | `/opendata/t187ap16_L` | 上市公司當季綜合損益經會計師查核(核閱)數與當季預測數差異達百分之十以上者，或截至當季累計差異達百分之二十以上者(簡式) | 財務報表 |
+| GET | `/opendata/t187ap17_L` | 上市公司營益分析查詢彙總表(全體公司彙總報表) | 財務報表 |
+| GET | `/opendata/t187ap20` | 各券商每月月計表 | 券商資料 |
+| GET | `/opendata/t187ap21` | 各券商收支概況表資料 | 券商資料 |
+| GET | `/opendata/t187ap18` | 證券商基本資料 | 券商資料 |
+| GET | `/opendata/t187ap19` | 電子式交易統計資訊 | 證券交易 |
+| GET | `/opendata/t187ap08_L` | 上市公司董事、監察人持股不足法定成數彙總表 | 公司治理 |
+| GET | `/opendata/t187ap11_L` | 上市公司董監事持股餘額明細資料 | 公司治理 |
+| GET | `/opendata/t187ap12_L` | 上市公司每日內部人持股轉讓事前申報表-持股轉讓日報表 | 公司治理 |
+| GET | `/opendata/t187ap13_L` | 上市公司每日內部人持股轉讓事前申報表-持股未轉讓日報表 | 公司治理 |
+| GET | `/opendata/t187ap22_L` | 上市公司金管會證券期貨局裁罰案件專區 | 公司治理 |
+| GET | `/opendata/t187ap30_L` | 上市公司獨立董監事兼任情形彙總表 | 公司治理 |
+| GET | `/opendata/t187ap29_A_L` | 上市公司董事酬金相關資訊  | 公司治理 |
+| GET | `/opendata/t187ap29_B_L` | 上市公司監察人酬金相關資訊  | 公司治理 |
+| GET | `/opendata/t187ap29_C_L` | 上市公司合併報表董事酬金相關資訊  | 公司治理 |
+| GET | `/opendata/t187ap29_D_L` | 上市公司合併報表監察人酬金相關資訊  | 公司治理 |
+| GET | `/opendata/t187ap23_L` | 上市公司違反資訊申報、重大訊息及說明記者會規定專區 | 公司治理 |
+| GET | `/opendata/t187ap31_L` | 上市公司財務報告經監察人承認情形 | 財務報表 |
+| GET | `/opendata/t187ap36_L` | 上市認購(售)權證年度發行量概況統計表 | 權證 |
+| GET | `/opendata/t187ap03_P` | 公開發行公司基本資料 | 公司治理 |
+| GET | `/opendata/t187ap43_L` | 上市認購(售)權證交易人數檔 | 權證 |
+| GET | `/opendata/t187ap42_L` | 上市認購(售)權證每日成交資料檔 | 權證 |
+| GET | `/announcement/punish` | 集中市場公布處置股票 | 公司治理 |
+| GET | `/opendata/t187ap10_L` | 上市公司董事、監察人持股不足法定成數連續達3個月以上彙總表 | 公司治理 |
+| GET | `/opendata/t187ap38_L` | 上市公司股東會公告-召集股東常(臨時)會公告資料彙總表(95年度起適用) | 公司治理 |
+| GET | `/opendata/t187ap24_L` | 上市公司經營權及營業範圍異(變)動專區-經營權異動公司 | 公司治理 |
+| GET | `/opendata/t187ap37_L` | 上市權證基本資料彙總表 | 證券交易 |
+| GET | `/opendata/t187ap26_L` | 上市公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更停止買賣公司 | 公司治理 |
+| GET | `/opendata/t187ap41_L` | 上市公司召開股東常 (臨時) 會日期、地點及採用電子投票情形等資料彙總表 | 公司治理 |
+| GET | `/announcement/notetrans` | 集中市場公布注意累計次數可能達處置標準資訊 | 證券交易 |
+| GET | `/announcement/notice` | 集中市場當日公布注意股票 | 證券交易 |
+| GET | `/opendata/t187ap25_L` | 上市公司經營權及營業範圍異(變)動專區-營業範圍重大變更公司 | 公司治理 |
+| GET | `/opendata/t187ap27_L` | 上市公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更列為變更交易公司 | 公司治理 |
+| GET | `/opendata/t187ap32_L` | 上市公司公司治理之相關規程規則 | 公司治理 |
+| GET | `/opendata/t187ap33_L` | 上市公司董事長是否兼任總經理 | 公司治理 |
+| GET | `/opendata/t187ap09_L` | 上市公司董事、監察人質權設定占董事及監察人實際持有股數彙總表 | 公司治理 |
+| GET | `/opendata/OpenData_BRK01` | 證券商營業員男女人數統計資料 | 券商資料 |
+| GET | `/opendata/OpenData_BRK02` | 證券商分公司基本資料 | 券商資料 |
+| GET | `/opendata/t187ap34_L` | 上市公司採累積投票制、全額連記法、候選人提名制選任董監事及當選資料彙總表 | 公司治理 |
+| GET | `/opendata/t187ap35_L` | 上市公司股東行使提案權情形彙總表 | 公司治理 |
+| GET | `/exchangeReport/TWT48U_ALL` | 上市股票除權除息預告表 | 證券交易 |
+| GET | `/opendata/t187ap06_L_bd` | 上市公司綜合損益表(證券期貨業) | 財務報表 |
+| GET | `/opendata/t187ap06_L_ci` | 上市公司綜合損益表(一般業) | 財務報表 |
+| GET | `/opendata/t187ap06_L_fh` | 上市公司綜合損益表(金控業) | 財務報表 |
+| GET | `/opendata/t187ap06_L_ins` | 上市公司綜合損益表(保險業) | 財務報表 |
+| GET | `/opendata/t187ap06_L_mim` | 上市公司綜合損益表(異業) | 財務報表 |
+| GET | `/opendata/t187ap07_L_bd` | 上市公司資產負債表(證券期貨業) | 財務報表 |
+| GET | `/opendata/t187ap07_L_ci` | 上市公司資產負債表(一般業) | 財務報表 |
+| GET | `/opendata/t187ap07_L_fh` | 上市公司資產負債表(金控業) | 財務報表 |
+| GET | `/opendata/t187ap07_L_ins` | 上市公司資產負債表(保險業) | 財務報表 |
+| GET | `/opendata/t187ap07_L_mim` | 上市公司資產負債表(異業) | 財務報表 |
+| GET | `/opendata/t187ap07_X_basi` | 公發公司資產負債表-金融業 | 財務報表 |
+| GET | `/opendata/t187ap07_X_bd` | 公發公司資產負債表-證券期貨業 | 財務報表 |
+| GET | `/opendata/t187ap07_X_fh` | 公發公司資產負債表-金控業 | 財務報表 |
+| GET | `/opendata/t187ap07_X_ins` | 公發公司資產負債表-保險業 | 財務報表 |
+| GET | `/opendata/t187ap11_P` | 公發公司董監事持股餘額明細 | 財務報表 |
+| GET | `/opendata/t187ap06_L_basi` | 上市公司綜合損益表(金融業) | 財務報表 |
+| GET | `/opendata/t187ap07_L_basi` | 上市公司資產負債表(金融業) | 財務報表 |

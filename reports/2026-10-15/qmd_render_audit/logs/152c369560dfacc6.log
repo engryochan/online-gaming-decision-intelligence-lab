@@ -1,0 +1,35 @@
+pandoc 
+  to: html
+  output-file: CONTRIBUTING.html
+  standalone: true
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  
+metadata
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  recovery-kind: lossless-html-snapshot
+  original-html: CONTRIBUTING.html
+  original-sha256: 8836938fcc92493d4b618cfc15580cf978a7975a5e668ee3284aded4407ed146
+  
+[33mWARNING (C:/work/tools/share/filters/main.lua:9929) Unable to parse table from raw html block: skipping.
+[39m[33mWARNING (C:/work/tools/share/filters/main.lua:9929) Unable to parse table from raw html block: skipping.
+[39m[33mWARNING (C:/work/tools/share/filters/main.lua:9929) Unable to parse table from raw html block: skipping.
+[39m[33mWARNING (C:/work/tools/share/filters/main.lua:9929) Unable to parse table from raw html block: skipping.
+[39mERROR: 另一个程序正在使用此文件，进程无法访问。 (os error 32): remove 'C:\Users\PPCCpcpc\Documents\GitHub\online-gaming-decision-intelligence-lab\reports\2026-10-15\qmd_render_audit\staging\.quarto'
+
+Stack trace:
+    at Object.removeSync (ext:deno_fs/30_fs.js:250:3)
+    at safeRemoveSync (file:///C:/work/tools/bin/quarto.js:3229:10)
+    at renderProject (file:///C:/work/tools/bin/quarto.js:137898:7)
+    at async _Command.actionHandler (file:///C:/work/tools/bin/quarto.js:142901:24)
+    at async _Command.execute (file:///C:/work/tools/bin/quarto.js:102249:7)
+    at async _Command.parseCommand (file:///C:/work/tools/bin/quarto.js:102126:14)
+    at async quarto4 (file:///C:/work/tools/bin/quarto.js:188304:5)
+    at async file:///C:/work/tools/bin/quarto.js:188333:5
+    at async file:///C:/work/tools/bin/quarto.js:188187:14
+    at async mainRunner (file:///C:/work/tools/bin/quarto.js:188189:5)

@@ -1,0 +1,44 @@
+# QMD 檢查、修復、渲染與事實查證（2026-10-15）
+
+從 [index.html](index.html) 開始閱讀。原有 357 份加工作期間新增 1 份，共 358 份 QMD 已生成 HTML；外部事實逐條查證仍未完成。並行新增文件另記於 `late_inputs.json`，不刷新原始基線、不改寫其內容。
+
+本輪有 290 份 Quarto HTML、64 份保留位元組的 HTML 快照、4 份「HTML 快照＋Markdown 增補」輸出。全部停用計算執行；未宣稱 R／Python 範例通過執行驗證、PDF 已生成、全部遠端依賴可離線使用或已完成逐頁視覺驗收。
+
+## 源文件修改與保留
+
+9 份既有 QMD 有針對性修改，詳見 `source_changes.json`：
+
+- 地緣戰略主報告及百家樂《冊一》加入有來源、有限定範圍的事實裁決。
+- B86 修正 ETF 與所有基金的分類差異，保留原始數量，補充逐行重算的旗標重疊數。
+- 兩份大型稿僅調整 YAML，使用靜態 Markdown 引擎並關閉程式碼摺疊、工具及語法高亮，避免長路徑與記憶體問題；正文位元組保留。
+- 兩份原有快照增補稿修正渲染模式，讓既有 Markdown 增補不再被快照抽取器遺漏。
+- 兩份 Swagger UI 快照保留原始 HTML，另從同批保存的 JSON 產生 143／225 個 HTTP 方法與路徑組合的離線索引；不宣稱已重新呼叫接口。
+
+`Reference/Aerospace_Ecosystem_Report.qmd` 沒有改動，`Interlligence` 檔名沒有改名。原有 HTML、資產、歷史 CSV／JSON 及生成器基線沒有覆寫；沒有從 HEAD 恢復刪除文件。修改前的源文件位元組另存於 `original_bytes/`，以 SHA256 命名。
+
+## 驗證回執
+
+- `before.json`：渲染前的 QMD、HTML 與相關資源清單、雜湊及 Git 狀態；CSV 僅記錄路徑及大小，其他類型未全部納入。不是全項目全部文件內容的實質核實。
+- `results.json`：逐文件實際渲染結果及源文件雜湊。
+- `after_delta.json`：前述基線範圍內的源文件差異。
+- `snapshot_acceptance.json`：64 份純快照輸出與源 HTML 區塊一致；4 份混合快照保留原 HTML，另顯示 Markdown 增補。
+- `output_validation.json`：生成 HTML 的雜湊及樣式、腳本等資源檢查。
+- `delivery_link_repairs.json`：只修改新生成 Quarto HTML 的導覽，不修改原 HTML 快照。QMD 引用導向生成的 HTML，既存資料附件連回同一工作區。歷史副本的部分缺失相對引用，在同名正式稿標題一致且目標確實存在時，使用正式稿的 Reference 目錄解析；不把當期文件冒充凍結的歷史附件。
+- `b86_recomputed_counts.json`：兩份原始證券檔共 13,294 行；ETF=Y 5,773 行，Test Issue=Y 37 行，兩者均 Y 2 行，兩者均 N 7,486 行。已與原取得收據的 SHA256 比對。
+- `b89_recomputed_counts.json`：4,849 項歷史進度、40 份回應的雜湊及原報告各項數量重新核對一致；不是即時網路重驗或完整名冊證明。
+
+仍有三份歷史網頁快照的 15 個原站資源參照未保存；兩份 API 快照有可讀靜態索引，嫦娥五號頁面正文保留但原站版式不能保證。原文仍有未找到目標的本地引用，逐項列在引用台帳；未虛構缺失附件或把引用缺口當作事實驗收通過。
+
+## 外部事實工作狀態
+
+`verified_facts.json` 逐項記錄本輪讀到的一手來源、具體主張、裁決與適用邊界；某一主張獲支持，不連帶驗證整份文件、所有數值、部署案例、現時股權、認證或國家排名。
+
+`fact_candidates.json` 與 `external_urls.json` 是初步啟發式清單：18,272 段候選文字及 5,067 個網址，並非完整原子主張清單，也不是已核實數量。純 HTML 快照、程式碼及超長行未完整抽成原子主張。其餘逐條外部核實仍待完成，`summary.json` 明確保留 `external_fact_check_complete: false`。
+
+## 重現
+
+使用可用 Python 執行 `audit_render.py`；本機 Quarto 為 1.10.19。腳本隔離源文件，使用停用計算及非自包含 HTML 模式，並將本機 `QUARTO_ESBUILD` 指向現有的 `C:/work/tools/bin/tools/x86_64/esbuild.exe`。失敗的大型稿可用 `retry_large.py` 以短路徑和靜態程式碼版式重試。
+
+之後依序執行 `repair_delivery_links.py`、`check_outputs.py`、`build_index.py`。快照與增補使用 `audit_render.py` 的對應模式，不能把單獨抽取原 HTML 當作混合文件完整渲染。
+
+`apply_addenda.py`、`add_static_api.py` 是本輪增補操作的保留腳本，日常渲染不需要重複套用。所有輸出都在本目錄；大型資料附件保留於原工作區，不能只搬走 `rendered/` 便宣稱交付包完整。

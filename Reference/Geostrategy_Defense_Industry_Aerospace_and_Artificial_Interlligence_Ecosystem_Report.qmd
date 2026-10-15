@@ -18,6 +18,25 @@ execute:
   echo: false
 ---
 
+<!-- FACT_CHECK_20261015_BEGIN -->
+## 2026-10-15 外部事實續核（有界增補） {#sec-fact-check-20261015}
+
+本節只裁決下表的具體主張。歷史問答、來源附錄、全部機構登記及原有 VERIFIED 標籤尚未由本輪逐條重驗；不得把本節理解為全報告事實驗收。原宇航數據栈比較報告及歷史批次原文保留。
+
+| 核對項 | 本輪裁決與適用邊界 | 一手來源 |
+|---|---|---|
+| NASA cFS | 確認為飛行軟體架構框架。公開 GitHub demo bundle 明示並非可直接飛行的發行版，任務方仍須負責按任務要求驗證；框架存在不等於本項目已取得任務認證。 | [NASA cFS README](https://github.com/nasa/cFS) |
+| Open MCT | 確認為網頁式任務運作資料視覺化框架；不據此推論與 cFS 已整合或具有飛行控制認證。 | [NASA Open MCT](https://nasa.github.io/openmct/) |
+| Apollo 連線設定 | 官方文件的 No connection expected 模式不發出 Plans；Relayed from another Hub 以 bundles 匯入回報狀態。不能把唯讀轉送說成由該 Hub 發出部署計畫。 | [Apollo connection settings](https://www.palantir.com/docs/apollo/managing-environments/environment-connection-settings) |
+| Open-Meteo API | 免費 API 限非商業使用；customer API 包含商業使用授權。API 服務方案與底層資料授權仍須分別核對。 | [官方定價與 FAQ](https://open-meteo.com/en/pricing) |
+| Athea 成立公告 | 2021-05-27 公告的合資雙方為 Thales 與 Atos；這項歷史公告不能證明現時股權，也不能改寫成 Helsing 與 Saab 合資。 | [Thales 原公告](https://www.thalesgroup.com/fr/group/journaliste/press-release/thales-et-atos-creent-le-champion-europeen-du-big-data-et) |
+| Saab 與 Helsing | 2023-09-14 公告支持戰略合作及 7,500 萬歐元取得 5% 股份的當期交易條件；不當作現時持股比例。 | [Saab 原公告](https://www.saab.com/newsroom/press-releases/2023/saab-signs-strategic-cooperation-agreement-and-makes-investment-in-helsing) |
+| Synopsys 與 Ansys | 2025-07-17 官方公告支持完成收購；不據此判定後續所有產品、法人及剝離交易。 | [Synopsys 完成收購公告](https://investor.synopsys.com/news/news-details/2025/Synopsys-Completes-Acquisition-of-Ansys/default.aspx) |
+| MAGE 開發方 | NGA 的專案說明支持由 NGA 與 BIT Systems 合作開發；不與 Esri ArcGIS 合併為同一產品。 | [NGA MAGE About](https://ngageoint.github.io/MAGE/about/) |
+
+本輪細項證據與未核清單位於 `../reports/2026-10-15/qmd_render_audit/`。文件渲染與外部事實驗收分開記錄。
+<!-- FACT_CHECK_20261015_END -->
+
 <!-- INTEGRATION_20261007_BEGIN -->
 ## 2026-10-07 整合與審校說明
 

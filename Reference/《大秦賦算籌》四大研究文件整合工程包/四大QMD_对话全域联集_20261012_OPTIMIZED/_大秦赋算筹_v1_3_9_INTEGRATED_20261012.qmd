@@ -10,8 +10,10 @@ date-format: "YYYY[年]M[月]D[日]"
 
 lang: zh-CN
 
+engine: markdown
 format:
   html:
+    syntax-highlighting: none
     theme: cosmo
     toc: true
     toc-depth: 3
@@ -22,8 +24,8 @@ format:
     number-sections: false
     embed-resources: true
     page-layout: full
-    code-fold: true
-    code-tools: true
+    code-fold: false
+    code-tools: false
     code-summary: "查看代碼"
   pdf:
     toc: true

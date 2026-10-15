@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>寰宇輿圖 · 大秦賦算籌 — 地球策略原型</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.13.0/dist/maplibre-gl.css">
+<style>
+:root { color-scheme: dark; font-family: 'Noto Serif TC','Noto Serif CJK TC',serif; --gold:#d5b676; --muted:#b9c2ce; }
+*{box-sizing:border-box} html,body{height:100%;margin:0;background:#09121d;color:#e9e6dc} #map{position:absolute;inset:0}
+#veil{pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,20,.93) 0,rgba(5,12,20,.72) 280px,transparent 48%),linear-gradient(0deg,rgba(5,12,20,.72),transparent 20%)}
+.panel{position:absolute;top:20px;left:20px;bottom:20px;width:305px;overflow:auto;padding:24px 20px;background:rgba(10,20,32,.86);border:1px solid rgba(213,182,118,.35);border-radius:16px;box-shadow:0 14px 45px #0009;backdrop-filter:blur(14px)}
+h1{font-size:25px;font-weight:500;letter-spacing:.18em;color:var(--gold);margin:2px 0 7px}h2{font-size:13px;letter-spacing:.15em;color:var(--gold);margin:23px 0 9px;border-bottom:1px solid #586476;padding-bottom:8px}.subtitle{font-size:12px;line-height:1.7;color:var(--muted)}
+button,select,a.action{display:block;width:100%;padding:10px 13px;margin:6px 0;background:#182536;color:#e9e6dc;border:1px solid #465264;border-radius:7px;font:inherit;font-size:13px;cursor:pointer;text-align:left;text-decoration:none}button:hover,a.action:hover{border-color:var(--gold);background:#24364b}button.active{border-color:var(--gold);background:#3a3227;color:#ffe2a7}
+small,.note{font-size:11px;line-height:1.7;color:var(--muted)}.small-head{font-size:10px;letter-spacing:.2em;color:#8ea7b4}.status{position:absolute;bottom:21px;left:340px;right:16px;background:rgba(9,19,28,.79);padding:10px 15px;border-radius:9px;font-size:11px;color:#ddd6c4;z-index:2;max-width:760px}
+.spot{height:14px;width:14px;border:2px solid #e9cf8b;border-radius:50%;background:#7d5b2d;box-shadow:0 0 0 5px #c59a4540;cursor:pointer}.maplibregl-popup-content{background:#132439;color:#ece6d8;border:1px solid #a78c5c;font-family:inherit;border-radius:9px}.maplibregl-popup-tip{border-top-color:#132439!important}
+@media (max-width:700px){.panel{width:calc(100vw - 24px);left:12px;top:12px;bottom:auto;max-height:48vh;padding:13px 16px}.panel h1{font-size:20px}.status{left:12px;right:12px;bottom:12px}.panel h2{margin:10px 0 5px}}
+</style>
+</head><body>
+<div id="map" role="application" aria-label="可互動地球地圖"></div><div id="veil"></div>
+<aside class="panel"><div class="small-head">華夏 · 寰宇策略工程／技術示範</div><h1>寰宇輿圖</h1><div class="subtitle">大秦賦算籌 · 地球—星海研究入口<br>地理背景：現代地圖；非歷史疆域圖。</div>
+<h2>觀測視角</h2>
+<button id="globe" class="active">◉ 三維地球（Globe）</button><button id="flat">▤ 平面地圖（2D）</button><button id="home">⌖ 天下全局</button>
+<h2>城池定位（僅地理示範）</h2><button data-place="changan">長安（今西安附近）</button><button data-place="luoyang">洛陽</button><button data-place="jianye">建業（今南京附近）</button><button data-place="kyoto">京都</button><button data-place="rome">羅馬</button>
+<h2>朝代／時代檢索（佔位功能）</h2>
+<select id="period"><option value="modern">現代基圖</option><option value="warring">戰國（待接可信歷史資料）</option><option value="han">秦漢（待接可信歷史資料）</option><option value="three">三國（待接可信歷史資料）</option><option value="edo">日本戰國（待接可信歷史資料）</option></select>
+<div id="periodNote" class="note">現在只演示地球旋轉、縮放與位置標記；切換時代不改變現代地圖。</div>
+<h2>地球之外</h2>
+<a class="action" href="https://www.openspaceproject.com/" target="_blank" rel="noopener">↗ OpenSpace · 太陽系至宇宙</a>
+<a class="action" href="https://trek.jpl.nasa.gov/" target="_blank" rel="noopener">↗ NASA · 月球與火星地形</a>
+<div class="note" style="margin-top:13px">行星連結會開啟另一應用／網頁；尚非同一渲染器的無縫跨天體導航。</div>
+<h2>資料及倫理</h2><div class="note">城池座標僅作技術示例。未載入真人、族群資料、個人能力分數、作戰資料或歷史邊界。地圖由 MapLibre 及其官方示範底圖服務提供；此網址不適合作為商業 SLA。</div>
+</aside>
+<div class="status" id="status">正在載入地圖……需要網絡以下載 MapLibre 與示範圖磚。</div>
+<script type="module">
+import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.13.0/dist/maplibre-gl.mjs';
+const locations = {
+  changan:{name:'長安（今西安附近）',coord:[108.94,34.34],zoom:7},
+  luoyang:{name:'洛陽',coord:[112.45,34.62],zoom:7},
+  jianye:{name:'建業（今南京附近）',coord:[118.80,32.06],zoom:7},
+  kyoto:{name:'京都',coord:[135.77,35.01],zoom:7},
+  rome:{name:'羅馬',coord:[12.50,41.90],zoom:7},
+};
+const map = new maplibregl.Map({container:'map',style:'https://demotiles.maplibre.org/style.json',center:[103,27],zoom:1.75,attributionControl:true});
+map.addControl(new maplibregl.NavigationControl(),'top-right');
+map.on('style.load',()=>{map.setProjection({type:'globe'});document.getElementById('status').textContent='三維地球已載入 · 可拖曳旋轉、滾輪縮放。地名與邊界為現代資料，不代表任何歷史時期。';});
+map.on('error',(err)=>{const el=document.getElementById('status');el.textContent='地圖載入可能失敗：請確認網絡、WebGL 支援及示範圖磚服務。';console.warn('map error',err);});
+for(const place of Object.values(locations)) {
+ const el=document.createElement('button');el.className='spot';el.title=place.name;el.setAttribute('aria-label',place.name);
+ new maplibregl.Marker({element:el}).setLngLat(place.coord).setPopup(new maplibregl.Popup({offset:15}).setText(place.name+'；只表示現代地理位置，非歷史都城邊界。')).addTo(map);
+}
+const proj = (type)=> {map.setProjection({type});document.getElementById('globe').classList.toggle('active',type==='globe');document.getElementById('flat').classList.toggle('active',type==='mercator');};
+document.getElementById('globe').onclick=()=>proj('globe');document.getElementById('flat').onclick=()=>proj('mercator');
+document.getElementById('home').onclick=()=>map.flyTo({center:[103,27],zoom:1.75,pitch:0,bearing:0,duration:1400});
+for(const b of document.querySelectorAll('[data-place]')) b.onclick=()=>{const p=locations[b.dataset.place];map.flyTo({center:p.coord,zoom:p.zoom,pitch:20,duration:1700});};
+document.getElementById('period').onchange=()=>{document.getElementById('periodNote').textContent='已選擇「'+document.getElementById('period').selectedOptions[0].text+'」：目前僅變更選單狀態；歷史資料庫、朝代邊界及時間查詢尚未實作。';};
+</script></body></html>

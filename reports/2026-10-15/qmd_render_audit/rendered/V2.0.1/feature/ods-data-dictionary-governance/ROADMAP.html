@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ROADMAP</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ROADMAP</h1>
+</header>
+<h1 id="ogdil-路线图">OGDIL 路线图</h1>
+<h2 id="版本策略">版本策略</h2>
+<p>采用<strong>语义化版本</strong>（Semantic
+Versioning）：<code>v0.1.0 → v1.0.0</code></p>
+<hr />
+<h2 id="阶段总览">阶段总览</h2>
+<table>
+<thead>
+<tr class="header">
+<th>阶段</th>
+<th>重点</th>
+<th>预计周期</th>
+<th>目标版本</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>第一阶段</td>
+<td>数据底座建设</td>
+<td>4 周</td>
+<td>v0.3</td>
+</tr>
+<tr class="even">
+<td>第二阶段</td>
+<td>特征存储</td>
+<td>4 周</td>
+<td>v0.4</td>
+</tr>
+<tr class="odd">
+<td>第三阶段</td>
+<td>统计实验室</td>
+<td>6 周</td>
+<td>v0.5</td>
+</tr>
+<tr class="even">
+<td>第四阶段</td>
+<td>机器学习</td>
+<td>6 周</td>
+<td>v0.6</td>
+</tr>
+<tr class="odd">
+<td>第五阶段</td>
+<td>决策智能</td>
+<td>8 周</td>
+<td>v1.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="详细路线图">详细路线图</h2>
+<h3 id="第一阶段--数据底座建设v02--v03">第一阶段 —— 数据底座建设（v0.2 →
+v0.3）</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />完成 ODS → DWD → DWS → ADS
+架构</label></li>
+<li><label><input type="checkbox" />实现
+<code>ads_customer360</code></label></li>
+<li><label><input type="checkbox" />数据质量规则与数据契约</label></li>
+<li><label><input type="checkbox" />基础 ETL 管道</label></li>
+</ul>
+<h3 id="第二阶段--特征存储v04">第二阶段 —— 特征存储（v0.4）</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />特征字典（初期不少于 300
+个特征，目标 500+）</label></li>
+<li><label><input type="checkbox" />特征存储实现</label></li>
+<li><label><input type="checkbox" />时点正确（Point-in-time
+correct）特征</label></li>
+<li><label><input type="checkbox" />特征文档与责任归属</label></li>
+</ul>
+<h3 id="第三阶段--统计实验室v05">第三阶段 —— 统计实验室（v0.5）</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />贝叶斯模型（brms /
+Stan）</label></li>
+<li><label><input type="checkbox" />生存分析（Cox 模型、随机生存森林
+RSF、联合模型）</label></li>
+<li><label><input type="checkbox" />分层线性模型（HLM /
+GLMM）</label></li>
+<li><label><input type="checkbox" />时间序列</label></li>
+<li><label><input type="checkbox" />因果推断</label></li>
+<li><label><input type="checkbox" />A/B 测试框架</label></li>
+</ul>
+<h3 id="第四阶段--机器学习实验室v06">第四阶段 ——
+机器学习实验室（v0.6）</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />XGBoost / LightGBM /
+CatBoost</label></li>
+<li><label><input type="checkbox" />深度学习基线模型</label></li>
+<li><label><input type="checkbox" />图神经网络（GNN）</label></li>
+<li><label><input type="checkbox" />AutoML 管道</label></li>
+<li><label><input type="checkbox" />模型注册与监控</label></li>
+</ul>
+<h3 id="第五阶段--决策智能平台v10">第五阶段 —— 决策智能平台（v1.0）</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Shiny / Positron
+决策平台</label></li>
+<li><label><input
+type="checkbox" />实验注册表（完整科学实验流程）</label></li>
+<li><label><input type="checkbox" />知识图谱</label></li>
+<li><label><input type="checkbox" />Docker 一键部署</label></li>
+<li><label><input type="checkbox" />GitHub Pages 官方网站</label></li>
+<li><label><input type="checkbox" />API 服务</label></li>
+<li><label><input type="checkbox" />生产级监控</label></li>
+</ul>
+<hr />
+<h2 id="ogdil-v10-成功标准">OGDIL v1.0 成功标准</h2>
+<ul>
+<li>✅ 企业级数据仓库（ODS → ADS）</li>
+<li>✅ 客户360（Customer360）</li>
+<li>✅ 特征存储（不少于 500 个特征）</li>
+<li>✅ R 包 + Python SDK</li>
+<li>✅ Positron 项目</li>
+<li>✅ Shiny 决策平台</li>
+<li>✅ Docker 部署</li>
+<li>✅ 实验管理系统</li>
+<li>✅ 决策智能能力</li>
+</ul>
+<hr />
+<h2 id="当前状态">当前状态</h2>
+<p><strong>v0.1.0</strong> —— 项目初始化与章程（当前阶段）</p>
+<p>下一步：<strong>v0.2</strong> —— 完整项目基础设施 + 开发规范 + CI
+骨架。</p>
+</body>
+</html>

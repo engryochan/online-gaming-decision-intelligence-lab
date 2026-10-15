@@ -1,0 +1,38 @@
+pandoc --embed-resources=false --resource-path C:\Users\PPCCpcpc\Documents\GitHub\online-gaming-decision-intelligence-lab\reports\2026-10-15\qmd_render_audit\staging\reports\2026-10-07\financial_universe_b06\originals
+  to: html
+  output-file: Global_Technology_ISO249_Registry.html
+  standalone: true
+  embed-resources: false
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  
+metadata
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: zh-Hant
+  title: 全球科技登記：ISO 3166-1 249 國家／地區
+  subtitle: 有來源的機構、產品、工具與神經科技；2026-10-06 首輪
+  theme: cosmo
+  
+[WARNING] Could not fetch resource https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap: HttpExceptionRequest Request {
+    host                 = "fonts.googleapis.com"
+    port                 = 443
+    secure               = True
+    requestHeaders       = [("User-Agent","pandoc/3.10")]
+    path                 = "/css2"
+    queryString          = "?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+    method               = "GET"
+    proxy                = Nothing
+    rawBody              = False
+    redirectCount        = 10
+    responseTimeout      = ResponseTimeoutDefault
+    requestVersion       = HTTP/1.1
+    proxySecureMode      = ProxySecureWithConnect
+  }
+   (ConnectionFailure user error (Network.Socket.gai_strerror not supported: 11001))
+Output created: Global_Technology_ISO249_Registry.html
+
