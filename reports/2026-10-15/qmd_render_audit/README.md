@@ -1,12 +1,14 @@
 # QMD 檢查、修復、渲染與事實查證（2026-10-15）
 
+最新續輪：外部事實台帳已增至70項（69項在限定範圍獲支持、1項證據不足），新增22項軟件／規範用途核對，見 `software_review_receipt.json`。STAC 與 BCI2000 新取得可讀官方正文，僅在有日期的增補中記錄，不回寫歷史 UNKNOWN。Orekit 與 Gazebo 仍待查。另修正40處指向指定「归档」目錄中完全同名歷史版本的閱讀版連結，未解析引用由830降至790，逐項依據見 `delivery_link_repairs.json` 的 `archive_resolutions`；未修改原快照、未以新版本替代舊版。下文48項及830處為上一輪狀態；現行數量以 `summary.json` 及 `current_acceptance.json` 為準。
+
 從 [index.html](index.html) 開始閱讀。原有 357 份加工作期間新增 1 份，共 358 份 QMD 已生成 HTML；外部事實逐條查證仍未完成。並行新增文件另記於 `late_inputs.json`，不刷新原始基線、不改寫其內容。
 
 本輪有 290 份 Quarto HTML、64 份保留位元組的 HTML 快照、4 份「HTML 快照＋Markdown 增補」輸出。全部停用計算執行；未宣稱 R／Python 範例通過執行驗證、PDF 已生成、全部遠端依賴可離線使用或已完成逐頁視覺驗收。
 
 ## 源文件修改與保留
 
-9 份既有 QMD 有針對性修改，詳見 `source_changes.json`：
+10 份既有 QMD 有針對性修改，詳見 `source_changes.json`；首輪為 9 份，續輪追加全球科技登記的有界增補：
 
 - 地緣戰略主報告及百家樂《冊一》加入有來源、有限定範圍的事實裁決。
 - B86 修正 ETF 與所有基金的分類差異，保留原始數量，補充逐行重算的旗標重疊數。
@@ -42,3 +44,13 @@
 之後依序執行 `repair_delivery_links.py`、`check_outputs.py`、`build_index.py`。快照與增補使用 `audit_render.py` 的對應模式，不能把單獨抽取原 HTML 當作混合文件完整渲染。
 
 `apply_addenda.py`、`add_static_api.py` 是本輪增補操作的保留腳本，日常渲染不需要重複套用。所有輸出都在本目錄；大型資料附件保留於原工作區，不能只搬走 `rendered/` 便宣稱交付包完整。
+
+## 最新重新掃描與續核
+
+以使用者最新提交 `d1f93f3` 為掃描基準，保留《冊二》及原 HTML 的已提交更新。全文件雜湊快照見 [rescan20261015b_summary.json](../../2026-10-06/workspace_change_audit/rescan20261015b_summary.json)：14,023 個一般文件、7,219,018,882 位元組，無讀取期間變動；一個 RStudio 工作階段鎖檔因權限無法讀取。掃描器依設計排除其自身回執，並排除 Git 內部與符號連結。這些雜湊不是所有文件內容的實質核實。
+
+`rescan_diagnostics.json` 另列文件類型、358 份獨立 QMD、文字編碼及 JSON 格式候選；暫存鏡像只計入文件類型，不冒充額外源稿。三份 RStudio 日誌為逐行 JSON，逐行通過；無 YAML 的附錄為可渲染引用片段，見 `rescan_candidate_dispositions.json`。診斷不包含所有二進位格式的內部語義驗證。
+
+《冊二》及全球科技登記已重新渲染，其餘沿用源稿雜湊一致的成功結果。最新狀態以 `current_acceptance.json` 為準；`final_acceptance.json` 保留首輪歷史回執。源稿與358份結果雜湊全部一致，歷史資源缺口仍15處、未解析本地引用仍830處。
+
+外部事實台帳現為48項：本次新增14項，47項在限定範圍獲支持、1項證據不足。量子機構與四家科研／半導體機構僅核對公開描述；Layer 7-T 三項核對來自 FDA K242618 特定器材文件，不延伸至長期無線 BCI 系統獲准。Xanadu 主頁本次沒有可讀正文，保留待查。歷史登記 CSV、原196筆、使用者原 HTML 與原宇航報告均未因本次續核而改寫。全量外部事實核實仍未完成。

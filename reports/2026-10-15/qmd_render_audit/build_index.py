@@ -38,6 +38,8 @@ page+=f'''<div class="notice"><strong>外部事實逐條查證尚未完成。</s
 <h2>文件索引</h2><input id="search" placeholder="搜尋路徑、檔名或警告"><select id="state"><option value="">全部結果</option><option>成功</option><option>失敗</option></select>
 <table id="documents"><thead><tr><th>文件／HTML 閱讀版</th><th>結果</th><th>渲染方式</th><th>警告</th></tr></thead><tbody>'''
 page+=''.join(table)+'</tbody></table><h2>已逐項對照來源的主張</h2><table><thead><tr><th>編號</th><th>具體主張</th><th>裁決</th><th>來源與邊界</th></tr></thead><tbody>'+fact_rows+'</tbody></table>'
+if (OUT/'current_acceptance.json').exists():
+    page+='<p>最新重新掃描及驗收：<a href="current_acceptance.json">現行驗收回執</a> · <a href="rescan_diagnostics.json">格式與渲染一致性診斷</a> · <a href="rescan_candidate_dispositions.json">診斷候選判讀</a>。首輪 final_acceptance.json 為歷史回執。本輪以使用者最新提交 d1f93f3 為基準，保留其《冊二》及原 HTML 更新。</p>'
 page+='''<script>const search=document.querySelector('#search'),state=document.querySelector('#state');function filter(){for(const row of document.querySelectorAll('#documents tbody tr'))row.hidden=!(row.textContent.toLowerCase().includes(search.value.toLowerCase())&&(!state.value||row.dataset.state===state.value));}search.addEventListener('input',filter);state.addEventListener('change',filter);</script></html>'''
 (OUT/'index.html').write_text(page,encoding='utf-8')
 summary=dict(original_qmd_count=total,late_added_qmd_count=late_qmd,current_qmd_count=current_total,recorded=len(results),successful=ok,failed=len(results)-ok,

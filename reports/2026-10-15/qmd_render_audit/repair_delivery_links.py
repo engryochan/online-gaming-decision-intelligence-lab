@@ -9,6 +9,7 @@ DELIVERY=OUT/'rendered'
 rows=json.loads((OUT/'results.json').read_text(encoding='utf-8'))
 prior=json.loads((OUT/'delivery_link_repairs.json').read_text(encoding='utf-8')) if (OUT/'delivery_link_repairs.json').exists() else {}
 changed=prior.get('changed_documents',[]);missing=[];origins=[]
+archive_resolutions=prior.get('archive_resolutions',[])
 for row in rows:
     if row.get('renderer') in {'lossless-html-snapshot','html-snapshot-with-markdown-appendix'}:continue
     p=DELIVERY/Path(row['path']).with_suffix('.html')
@@ -36,6 +37,17 @@ for row in rows:
         elif (ROOT/rel).is_file():
             # Linked datasets remain in the same workspace; no duplicate large archives.
             replacement=os.path.relpath(ROOT/rel,p.parent).replace('\\','/')
+        elif (len(Path(unquote(parts.path)).parts)==1 and Path(unquote(parts.path)).name.startswith('_大秦赋算筹_v')
+              and Path(unquote(parts.path)).suffix=='.qmd'
+              and (ROOT/'归档'/Path(unquote(parts.path)).name).is_file()):
+            # Exact versioned basename in the designated archive; never substitute a later version.
+            archived=ROOT/'归档'/Path(unquote(parts.path)).name
+            rendered=DELIVERY/archived.relative_to(ROOT).with_suffix('.html')
+            if not rendered.is_file():
+                missing.append(dict(document=row['path'],href=ref));return match[0]
+            replacement=os.path.relpath(rendered,p.parent).replace('\\','/')
+            archive_resolutions.append(dict(document=row['path'],href=ref,target=archived.relative_to(ROOT).as_posix(),
+                                            evidence='Exact versioned QMD basename exists in designated archive and has rendered output'))
         elif origin:
             candidate=(origin/unquote(parts.path)).resolve()
             if candidate.is_relative_to(ROOT) and candidate.is_file():
@@ -60,6 +72,6 @@ for row in rows:
 merged={}
 for entry in changed:merged.setdefault(entry['document'],[]).extend(entry['edits'])
 changed=[dict(document=doc,edits=edits) for doc,edits in sorted(merged.items())]
-(OUT/'delivery_link_repairs.json').write_text(json.dumps(dict(changed_documents=changed,validated_reference_origins=origins,unresolved_links=missing,
+(OUT/'delivery_link_repairs.json').write_text(json.dumps(dict(changed_documents=changed,validated_reference_origins=origins,archive_resolutions=archive_resolutions,unresolved_links=missing,
     scope='Newly generated Quarto HTML only. QMD links lead to rendered HTML; existing data/document links lead back to the original workspace. Snapshots remain byte-preserved.'),ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(dict(changed_documents=len(changed),link_repairs=sum(len(x['edits']) for x in changed),unresolved_links=len(missing))))

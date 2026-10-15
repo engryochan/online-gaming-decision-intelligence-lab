@@ -1,4 +1,4 @@
-pandoc --embed-resources=false
+pandoc --embed-resources=false --resource-path C:\Users\PPCCpcpc\Documents\GitHub\online-gaming-decision-intelligence-lab\reports\2026-10-15\qmd_render_audit\staging\Reference
   to: html
   output-file: 春秋戰國諸子百家之頂級在線百家樂平臺_冊二.html
   standalone: true
@@ -24,6 +24,7 @@ metadata
   toc-location: left
   page-layout: full
   code-summary: 查看代碼
+  engine: markdown
   
 [WARNING] Could not load translations for zh-TW
   translations/zh.yaml: 
@@ -35,6 +36,22 @@ metadata
     requestHeaders       = [("User-Agent","pandoc/3.10")]
     path                 = "/css2"
     queryString          = "?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+    method               = "GET"
+    proxy                = Nothing
+    rawBody              = False
+    redirectCount        = 10
+    responseTimeout      = ResponseTimeoutDefault
+    requestVersion       = HTTP/1.1
+    proxySecureMode      = ProxySecureWithConnect
+  }
+   (ConnectionFailure user error (Network.Socket.gai_strerror not supported: 11001))
+[WARNING] Could not fetch resource https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6: HttpExceptionRequest Request {
+    host                 = "cdnjs.cloudflare.com"
+    port                 = 443
+    secure               = True
+    requestHeaders       = [("User-Agent","pandoc/3.10")]
+    path                 = "/polyfill/v3/polyfill.min.js"
+    queryString          = "?features=es6"
     method               = "GET"
     proxy                = Nothing
     rawBody              = False
