@@ -1,5 +1,11 @@
 # QMD 檢查、修復、渲染與事實查證（2026-10-15）
 
+2026-10-16 續核：台帳累計86項（85項在限定範圍獲支持、1項證據不足），本次新增16項，見 `hardware_review_20261016_receipt.json`。Gazebo 官方子文件已能支持模擬器用途；Orekit 官方頁仍遇存取挑戰。具名產品僅核對官方用途與類型，未將臨床研究宣傳當作監管許可或療效證明。`rendered_passages_20261016_manifest.json` 與相應壓縮 JSONL 另擴充358份閱讀版（含 HTML 快照）的段落／表格列待查清單；不以段落數冒充事實數，不宣稱完整原子主張抽取。最新查證日期與驗收在索引及 `current_acceptance.json` 顯示。
+
+該閱讀版清單收錄308,239次段落／表格列／標題出現，包含歷史副本的重複內容，全部標為 `UNREVIEWED_PASSAGE`；不能用86除以此數計算查證完成率。壓縮資料約30.46 MB，清單記錄每份 HTML 與源稿雜湊及 XPath。連結統計亦已釐清：`repaired_local_links` 是包含重渲染重做的累計操作數，索引改顯示 `unique_navigation_repair_mappings`（按文件、原引用、新引用去重）；790處未解析引用與15處歷史資源缺口仍保留。
+
+358份文件均經清單處理，其中356份抽到所選元素；`Reference/Baccarat-Ai-Automation-Report.qmd` 與 `reports/2026-10-07/currency_broker_b03/raw/six_index.qmd` 未抽到這些元素，另在 manifest 明列。這兩份仍需以其他正文／動態內容方式判讀，不能因抽取為零便視為沒有外部事實。
+
 最新續輪：外部事實台帳已增至70項（69項在限定範圍獲支持、1項證據不足），新增22項軟件／規範用途核對，見 `software_review_receipt.json`。STAC 與 BCI2000 新取得可讀官方正文，僅在有日期的增補中記錄，不回寫歷史 UNKNOWN。Orekit 與 Gazebo 仍待查。另修正40處指向指定「归档」目錄中完全同名歷史版本的閱讀版連結，未解析引用由830降至790，逐項依據見 `delivery_link_repairs.json` 的 `archive_resolutions`；未修改原快照、未以新版本替代舊版。下文48項及830處為上一輪狀態；現行數量以 `summary.json` 及 `current_acceptance.json` 為準。
 
 從 [index.html](index.html) 開始閱讀。原有 357 份加工作期間新增 1 份，共 358 份 QMD 已生成 HTML；外部事實逐條查證仍未完成。並行新增文件另記於 `late_inputs.json`，不刷新原始基線、不改寫其內容。

@@ -29,10 +29,12 @@ results=read('results.json'); mismatches=[]
 for r in results:
     if hashlib.sha256((ROOT/r['path']).read_bytes()).hexdigest()!=r['source_sha256']:mismatches.append(r['path'])
 accept=dict(head_at_rescan='d1f93f37b433aea74c722f49ff28161046f0dd2b',
+    head_at_validation=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+    latest_fact_review_date=ledger.get('last_updated',ledger.get('checked_on')),
     successful_render_records=sum(r['exit_code']==0 and r['html_exists'] for r in results),
     source_hash_mismatches=mismatches,source_change_records=len(changes),
     external_fact_checks=len(ledger['facts']),external_fact_review_complete=False,
-    original_registry_bytes_preserved=change['original_bytes_preserved'],
+    original_registry_bytes_preserved=(ROOT/change['source']).read_bytes().startswith((OUT/'original_bytes'/(change['before_sha256']+'.bin')).read_bytes()),
     full_file_scan='../'+'../2026-10-06/workspace_change_audit/rescan20261015b_summary.json',
     earlier_final_acceptance='final_acceptance.json is the first-pass historical receipt; this receipt supersedes its current-state assertions',
     caveats=['One RStudio session lock could not be read','Scan records file hashes, not semantic certification of every file','Xanadu page had no readable body','Historical resource and unresolved-link gaps remain'])
