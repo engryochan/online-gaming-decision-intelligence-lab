@@ -1,20 +1,22 @@
 # QMD 檢查、修復、渲染與事實查證（2026-10-15）
 
+最新裁決：累計90項，其中87項在限定範圍獲支持、1項與所讀來源矛盾、2項證據不足。百家樂 AI 自動化報告另加有來源的首發品類、B2B推出與排他名單裁決；保留原 HTML 全部位元組，以快照＋Markdown增補模式顯示。詳見 `ai_dealer_20261016_receipt.json`。以下86項為前一批進度，不代表本輪最終數量。
+
 2026-10-16 續核：台帳累計86項（85項在限定範圍獲支持、1項證據不足），本次新增16項，見 `hardware_review_20261016_receipt.json`。Gazebo 官方子文件已能支持模擬器用途；Orekit 官方頁仍遇存取挑戰。具名產品僅核對官方用途與類型，未將臨床研究宣傳當作監管許可或療效證明。`rendered_passages_20261016_manifest.json` 與相應壓縮 JSONL 另擴充358份閱讀版（含 HTML 快照）的段落／表格列待查清單；不以段落數冒充事實數，不宣稱完整原子主張抽取。最新查證日期與驗收在索引及 `current_acceptance.json` 顯示。
 
-該閱讀版清單收錄308,239次段落／表格列／標題出現，包含歷史副本的重複內容，全部標為 `UNREVIEWED_PASSAGE`；不能用86除以此數計算查證完成率。壓縮資料約30.46 MB，清單記錄每份 HTML 與源稿雜湊及 XPath。連結統計亦已釐清：`repaired_local_links` 是包含重渲染重做的累計操作數，索引改顯示 `unique_navigation_repair_mappings`（按文件、原引用、新引用去重）；790處未解析引用與15處歷史資源缺口仍保留。
+閱讀版清單包含歷史副本的重複內容，全部標為 `UNREVIEWED_PASSAGE`；不能以台帳數除以段落數計算查證完成率。清單記錄每份 HTML 與源稿雜湊及 XPath，現行數量與壓縮資料雜湊見 manifest。連結統計亦已釐清：`repaired_local_links` 是包含重渲染重做的累計操作數，索引改顯示 `unique_navigation_repair_mappings`（按文件、原引用、新引用去重）；790處未解析引用與15處歷史資源缺口仍保留。
 
-358份文件均經清單處理，其中356份抽到所選元素；`Reference/Baccarat-Ai-Automation-Report.qmd` 與 `reports/2026-10-07/currency_broker_b03/raw/six_index.qmd` 未抽到這些元素，另在 manifest 明列。這兩份仍需以其他正文／動態內容方式判讀，不能因抽取為零便視為沒有外部事實。
+初次清單有兩份抽取為零，現已補足：百家樂報告的正文是 `<pre>` 中的 Markdown，已以明示類型納入；SIX 快照的 `<main>` 位於未閉合的外層導覽之下，已優先保留正文。沒有更改原快照的 DOM 或位元組。此修正擴大待查文字覆蓋，不代表這些文字已核實。
 
 最新續輪：外部事實台帳已增至70項（69項在限定範圍獲支持、1項證據不足），新增22項軟件／規範用途核對，見 `software_review_receipt.json`。STAC 與 BCI2000 新取得可讀官方正文，僅在有日期的增補中記錄，不回寫歷史 UNKNOWN。Orekit 與 Gazebo 仍待查。另修正40處指向指定「归档」目錄中完全同名歷史版本的閱讀版連結，未解析引用由830降至790，逐項依據見 `delivery_link_repairs.json` 的 `archive_resolutions`；未修改原快照、未以新版本替代舊版。下文48項及830處為上一輪狀態；現行數量以 `summary.json` 及 `current_acceptance.json` 為準。
 
 從 [index.html](index.html) 開始閱讀。原有 357 份加工作期間新增 1 份，共 358 份 QMD 已生成 HTML；外部事實逐條查證仍未完成。並行新增文件另記於 `late_inputs.json`，不刷新原始基線、不改寫其內容。
 
-本輪有 290 份 Quarto HTML、64 份保留位元組的 HTML 快照、4 份「HTML 快照＋Markdown 增補」輸出。全部停用計算執行；未宣稱 R／Python 範例通過執行驗證、PDF 已生成、全部遠端依賴可離線使用或已完成逐頁視覺驗收。
+目前有 290 份 Quarto HTML、63 份保留位元組的 HTML 快照、5 份「HTML 快照＋Markdown 增補」輸出。全部停用計算執行；未宣稱 R／Python 範例通過執行驗證、PDF 已生成、全部遠端依賴可離線使用或已完成逐頁視覺驗收。
 
 ## 源文件修改與保留
 
-10 份既有 QMD 有針對性修改，詳見 `source_changes.json`；首輪為 9 份，續輪追加全球科技登記的有界增補：
+11 份既有 QMD 有針對性修改，詳見 `source_changes.json`；首輪為9份，續輪追加全球科技登記與百家樂 AI 自動化報告的有界增補：
 
 - 地緣戰略主報告及百家樂《冊一》加入有來源、有限定範圍的事實裁決。
 - B86 修正 ETF 與所有基金的分類差異，保留原始數量，補充逐行重算的旗標重疊數。

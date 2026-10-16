@@ -6,6 +6,7 @@ import json,collections
 OUT=Path(__file__).resolve().parent
 results=json.loads((OUT/'results.json').read_text(encoding='utf-8'))
 facts=json.loads((OUT/'verified_facts.json').read_text(encoding='utf-8'))['facts']
+verdict_counts=collections.Counter(f['status'] for f in facts)
 baseline=json.loads((OUT/'before.json').read_text(encoding='utf-8'))
 validation=json.loads((OUT/'output_validation.json').read_text(encoding='utf-8'))
 links=json.loads((OUT/'delivery_link_repairs.json').read_text(encoding='utf-8'))
@@ -36,7 +37,7 @@ page+=f'<p>最近外部事實續核日期：{escape(ledger.get("last_updated",le
 if (OUT/'rendered_passages_20261016_manifest.json').exists():
     page+='<p><a href="rendered_passages_20261016_manifest.json">含 HTML 快照的閱讀版段落清單</a> · <a href="rendered_passages_20261016.jsonl.gz">壓縮段落資料</a>。這些段落全部標為待審文字，不是已核實數量，也不是完整原子主張清單。</p>'
 page+=f'<p>新生成 HTML 已記錄 {unique_mappings} 組不重複的本地導覽修復映射；仍有 {len(links["unresolved_links"])} 處原始引用未找到目標。映射以文件、原引用與新引用去重，避免重新渲染後重複計數。詳見 <a href="delivery_link_repairs.json">引用修復與缺口台帳</a>。資料附件連回同一工作區的原文件，交付目錄不是可任意搬移的獨立資料包。</p>'
-page+=f'''<div class="notice"><strong>外部事實逐條查證尚未完成。</strong>本輪人工對照一手來源的具體主張共 {len(facts)} 項，其中一項證據不足。18,272 段候選文字與 5,067 個網址是初步抽取清單，並非已核實事實數量，亦非完整原子主張清單。渲染成功只表示對應模式產生 HTML，不代表事實正確、程式碼可執行、所有遠端資源可離線使用或已完成視覺驗收。</div>
+page+=f'''<div class="notice"><strong>外部事實逐條查證尚未完成。</strong>本輪對照一手來源的具體主張共 {len(facts)} 項：{verdict_counts['SUPPORTED']} 項在限定範圍獲支持、{verdict_counts['CONTRADICTED']} 項與所讀來源矛盾、{verdict_counts['INSUFFICIENT_EVIDENCE']} 項證據不足。18,272 段候選文字與 5,067 個網址是初步抽取清單，並非已核實事實數量，亦非完整原子主張清單。渲染成功只表示對應模式產生 HTML，不代表事實正確、程式碼可執行、所有遠端資源可離線使用或已完成視覺驗收。</div>
 <p>原有 HTML 與資產保留；Quarto 輸出使用停用計算、保留外部依賴的 HTML 交付模式。純 HTML 快照直接保留原 HTML；帶 Markdown 增補的快照另行渲染增補段並插入頁面。Windows 長路徑文件使用短暫存路徑。查證增補與快照模式修正逐項記錄於 <a href="source_changes.json">源文件變更台帳</a>。</p>
 <p>資源限制：三份歷史網頁快照有 15 個未隨原快照保存的腳本、樣式或圖示參照。兩份 Swagger 頁已補入離線可讀的接口索引；嫦娥五號頁面保留正文，但原站版式不能保證。沒有把外部資源缺失當作正文或外部事實已驗收。</p>
 <p><a href="results.json">逐文件結果</a> · <a href="output_validation.json">輸出與資源檢查</a> · <a href="before.json">渲染前基線</a> · <a href="after_delta.json">源文件差異</a> · <a href="fact_candidates.json">候選文字</a> · <a href="external_urls.json">網址清單</a> · <a href="verified_facts.json">具體查證證據</a></p>
@@ -49,6 +50,7 @@ page+='''<script>const search=document.querySelector('#search'),state=document.q
 (OUT/'index.html').write_text(page,encoding='utf-8')
 summary=dict(original_qmd_count=total,late_added_qmd_count=late_qmd,current_qmd_count=current_total,recorded=len(results),successful=ok,failed=len(results)-ok,
              external_fact_checks=len(facts),external_fact_check_complete=False,
+             external_fact_status_counts=dict(verdict_counts),
              missing_historical_resource_references=len(validation['missing_dependencies']),
              repaired_local_links=sum(len(x['edits']) for x in links['changed_documents']),
              repaired_local_links_metric='Cumulative repair operations, including repeated repairs after re-render; not unique occurrences',
