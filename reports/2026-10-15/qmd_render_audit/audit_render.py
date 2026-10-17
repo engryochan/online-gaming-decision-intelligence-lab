@@ -1,13 +1,25 @@
 """Inventory and render all existing QMDs in an isolated workspace mirror."""
 from pathlib import Path
 import concurrent.futures as cf
-import hashlib, json, os, re, shutil, subprocess, time
+import hashlib, json, os, re, shutil, subprocess, time, tempfile
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 STAGE = OUT / 'staging'
 RESULT = OUT / 'rendered'
 PYTHON = __import__('sys').executable
+
+def atomic_json(path, value):
+    """Publish complete receipts only, with bounded retries for Windows file locks."""
+    with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',newline='',dir=path.parent,
+                                     prefix='.'+path.name+'.',suffix='.tmp',delete=False) as f:
+        json.dump(value,f,ensure_ascii=False,indent=2);temporary=Path(f.name)
+    for attempt in range(8):
+        try:
+            os.replace(temporary,path);return
+        except OSError:
+            if attempt==7:raise
+            time.sleep(0.2*(attempt+1))
 
 def digest(p):
     h=hashlib.sha256()
@@ -138,14 +150,14 @@ def main():
     with cf.ThreadPoolExecutor(max_workers=3) as pool:
         for result in pool.map(render,sources):
             results.append(result)
-            (OUT/'results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
             if len(results)%50==0 or len(results)==len(sources) or cached.get(result['path'],{}).get('source_sha256')!=result['source_sha256']:
                 print(json.dumps({'done':len(results),'total':len(sources),'path':result['path'],
                                   'code':result['exit_code'],'warnings':len(result['warnings'])},ensure_ascii=True),flush=True)
+    atomic_json(OUT/'results.json',results)
     after=inventory(); old={r['path']:r for r in rows};new={r['path']:r for r in after}
     delta=[{'path':p,'state':'added' if p not in old else 'deleted' if p not in new else 'modified'}
            for p in sorted(old.keys()|new.keys()) if p not in old or p not in new or old[p]['sha256']!=new[p]['sha256']]
-    (OUT/'after_delta.json').write_text(json.dumps(delta,ensure_ascii=False,indent=2),encoding='utf-8')
+    atomic_json(OUT/'after_delta.json',delta)
     print('COMPLETE',len(results),'FAILED',sum(r['exit_code']!=0 or not r['html_exists'] for r in results),flush=True)
 
 if __name__=='__main__': main()

@@ -995,7 +995,97 @@
       "boundary": "結構性判讀：不能只因博彩、聊天或個人化等詞便一概判高風險；個案、適用期限與其他義務仍需依正式法規及具體用途另查。",
       "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
       "checked_on": "2026-10-16"
+    },
+    {
+      "id": "F102",
+      "claim": "Playtech 官網自述 BetBuddy 被歐洲及美洲17個司法管轄區的運營商使用。",
+      "status": "SUPPORTED",
+      "source": "https://www.playtech.com/services/",
+      "locator": "Player Protection Services with BetBuddy",
+      "boundary": "單位是司法管轄區，不是17家運營商、17份許可或獨立療效／干預驗證。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F103",
+      "claim": "Evolution 2024年報描述以自動與人工控制共同監控桌台、遊戲及行為以防範欺詐。",
+      "status": "SUPPORTED",
+      "source": "https://www.evolution.com/wp-content/uploads/2025/04/Evolution-Annual-Report-2024.pdf",
+      "locator": "Mission Control Room / responsible gambling section",
+      "boundary": "採官方PDF搜尋索引摘錄；直接PDF讀取失敗。只支持公司描述的混合控制，不證明特定AI模型認證或無人荷官。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F104",
+      "claim": "Evolution 2025年報自報約三分之一的疑似問題博彩個案由AI工具發現。",
+      "status": "SUPPORTED",
+      "source": "https://www.evolution.com/wp-content/uploads/2026/04/Annual_Report_English_2026_04_01.pdf",
+      "locator": "Printed page 64 / Uncertainty in the correlation",
+      "boundary": "採官方PDF搜尋索引摘錄；直接PDF讀取失敗。分母為疑似個案，非全部玩家、欺詐確診率、模型準確率或實際傷害減少率。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F105",
+      "claim": "原文將 Biometric Dealer Authentication 列為已獲 Evolution 官方證實的具體技術。",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "source": "https://www.evolution.com/wp-content/uploads/2026/04/Annual_Report_English_2026_04_01.pdf",
+      "locator": "Reviewed official indexed monitoring and AI descriptions",
+      "boundary": "已讀官方監控摘錄不支持此具名生物識別實作；原列第三方連結不足以代替官方技術證據。不是斷言該功能不存在。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F106",
+      "claim": "EZ Baccarat 官方品牌頁自述其以每小時手數衡量為市場最快。",
+      "status": "SUPPORTED",
+      "source": "https://ezbaccarat.com/",
+      "locator": "We Didn’t Invent Baccarat — We Made It Better!",
+      "boundary": "只核對品牌方確有此宣稱，未獨立驗證樣本、比較範圍或實際發牌速度。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F107",
+      "claim": "EZ Baccarat 市場最快的宣稱足以構成獨立性能驗證。",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "source": "https://ezbaccarat.com/",
+      "locator": "Brand speed claim",
+      "boundary": "所讀頁面未提供可重現的跨產品同條件測試；應寫品牌自述，不作已驗證排名。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F108",
+      "claim": "所引 AI Personalization 論文明示未直接觀測或隔離AI干預，也沒有平台演算法投放日誌。",
+      "status": "SUPPORTED",
+      "source": "https://www.mdpi.com/2076-328X/15/6/779",
+      "locator": "Sections 2.1, 3 and limitations",
+      "boundary": "2016／2021行為比較為探索性與推論性；本次核對方法限制，不等於重算模型或認同所有論文解釋。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F109",
+      "claim": "所引論文足以直接驗證特定RL發獎降低玩家控制的因果效果。",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "source": "https://www.mdpi.com/2076-328X/15/6/779",
+      "locator": "Abstract; limitations; no causal claims",
+      "boundary": "論文明示不能對AI影響作因果推論；可討論風險假說，不能由此驗證特定RL部署或因果效果。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
+    },
+    {
+      "id": "F110",
+      "claim": "原文已證實 Octane／Sentient 個別遊戲具已認證 RNG 與可證明公平驗證。",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "source": "https://octanestudios.ai/",
+      "locator": "Reviewed vendor product page; Sentient product page also reviewed",
+      "boundary": "未取得對應遊戲版本的認證編號、測試報告或可重現證明；產品定位不等同技術認證，兩家廠商須分別查驗。",
+      "document": "Reference/Baccarat-Ai-Automation-Report.qmd",
+      "checked_on": "2026-10-17"
     }
   ],
-  "last_updated": "2026-10-16"
+  "last_updated": "2026-10-17"
 }

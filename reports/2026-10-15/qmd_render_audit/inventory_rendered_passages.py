@@ -45,6 +45,7 @@ with target.open('wb') as raw, gzip.GzipFile(fileobj=raw,mode='wb',mtime=0) as s
             current_source_hash_matches=hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['source_sha256'],
             rendered_sha256=hashlib.sha256(data).hexdigest(),renderer=row.get('renderer','Quarto HTML')))
 manifest=dict(created_on='2026-10-16',documents=documents,document_count=len(documents),passage_occurrences=total,
+    updated_on=json.loads((OUT/'verified_facts.json').read_text(encoding='utf-8')).get('last_updated','2026-10-16'),
     documents_with_extracted_passages=sum(d['passages']>0 for d in documents),
     documents_without_selected_passages=[d['path'] for d in documents if not d['passages']],
     compressed_bytes=target.stat().st_size,compressed_sha256=hashlib.sha256(target.read_bytes()).hexdigest(),
